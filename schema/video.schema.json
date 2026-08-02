@@ -1,0 +1,312 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:adventure-riding-video-guide:schema:video:1.0",
+  "title": "Adventure Riding Video Record",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "youtube_video_id",
+    "youtube_url",
+    "thumbnail_url",
+    "title_original",
+    "title_he",
+    "channel_name",
+    "channel_url",
+    "published_date",
+    "duration_seconds",
+    "language",
+    "subtitle_languages",
+    "domain",
+    "primary_category",
+    "secondary_categories",
+    "tags",
+    "skill_level",
+    "risk_level",
+    "motorcycle_types",
+    "motorcycle_weight_classes",
+    "terrain_types",
+    "road_conditions",
+    "summary_he",
+    "learning_points_he",
+    "fit_for_he",
+    "why_watch_he",
+    "exercises_he",
+    "equipment_he",
+    "safety_warnings_he",
+    "common_mistakes_he",
+    "chapters",
+    "quality_score",
+    "quality_reason_he",
+    "source_type",
+    "contains_marketing",
+    "related_video_ids",
+    "verification",
+    "last_checked"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^yt-[A-Za-z0-9_-]{11}$"
+    },
+    "youtube_video_id": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9_-]{11}$"
+    },
+    "youtube_url": {
+      "type": "string",
+      "pattern": "^https://www\\.youtube\\.com/watch\\?v=[A-Za-z0-9_-]{11}$"
+    },
+    "thumbnail_url": {
+      "type": "string",
+      "format": "uri"
+    },
+    "title_original": {
+      "type": "string",
+      "minLength": 1
+    },
+    "title_he": {
+      "type": "string",
+      "minLength": 1
+    },
+    "channel_name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "channel_url": {
+      "type": "string",
+      "format": "uri"
+    },
+    "published_date": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date"
+    },
+    "duration_seconds": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "minimum": 0
+    },
+    "language": {
+      "type": "string"
+    },
+    "subtitle_languages": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "domain": {
+      "type": "string"
+    },
+    "primary_category": {
+      "type": "string"
+    },
+    "secondary_categories": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true,
+      "minItems": 2
+    },
+    "skill_level": {
+      "type": "string"
+    },
+    "risk_level": {
+      "type": "string"
+    },
+    "motorcycle_types": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true,
+      "minItems": 1
+    },
+    "motorcycle_weight_classes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true,
+      "minItems": 1
+    },
+    "terrain_types": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "road_conditions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "summary_he": {
+      "type": "string",
+      "minLength": 40
+    },
+    "learning_points_he": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 8
+      },
+      "minItems": 3,
+      "maxItems": 6
+    },
+    "fit_for_he": {
+      "type": "string",
+      "minLength": 10
+    },
+    "why_watch_he": {
+      "type": "string",
+      "minLength": 10
+    },
+    "exercises_he": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "equipment_he": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "safety_warnings_he": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true,
+      "minItems": 1
+    },
+    "common_mistakes_he": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "chapters": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "start_seconds",
+          "end_seconds",
+          "title"
+        ],
+        "properties": {
+          "start_seconds": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "end_seconds": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "title": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    },
+    "quality_score": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 5
+    },
+    "quality_reason_he": {
+      "type": "string",
+      "minLength": 20
+    },
+    "source_type": {
+      "type": "string"
+    },
+    "contains_marketing": {
+      "type": "boolean"
+    },
+    "related_video_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "verification": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "link_status",
+        "metadata_verified",
+        "content_evidence_types",
+        "classification_confidence",
+        "notes_he"
+      ],
+      "properties": {
+        "link_status": {
+          "enum": [
+            "active_public",
+            "unavailable",
+            "private",
+            "unknown"
+          ]
+        },
+        "metadata_verified": {
+          "type": "boolean"
+        },
+        "content_evidence_types": {
+          "type": "array",
+          "items": {
+            "enum": [
+              "description",
+              "chapters",
+              "transcript",
+              "visual_review"
+            ]
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "classification_confidence": {
+          "enum": [
+            "low",
+            "medium",
+            "high"
+          ]
+        },
+        "notes_he": {
+          "type": "string",
+          "minLength": 10
+        }
+      }
+    },
+    "last_checked": {
+      "type": "string",
+      "format": "date"
+    }
+  }
+}

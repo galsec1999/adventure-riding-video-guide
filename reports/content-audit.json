@@ -1,0 +1,90 @@
+{
+  "generated_at": "2026-08-02",
+  "total_videos": 60,
+  "unique_youtube_video_ids": 60,
+  "wave1_research_bucket": {
+    "offroad_adventure": 30,
+    "road": 20,
+    "mixed_practice_safety_recovery": 10
+  },
+  "duplicates": [],
+  "missing_required_fields": [],
+  "broken_or_unverified_links": [],
+  "by_language": {
+    "en": 51,
+    "he": 9
+  },
+  "by_domain": {
+    "mixed": 1,
+    "offroad_adventure": 27,
+    "practice": 6,
+    "road": 18,
+    "safety_recovery": 8
+  },
+  "by_skill_level": {
+    "advanced_beginner": 16,
+    "beginner": 25,
+    "intermediate": 19
+  },
+  "by_primary_category": {
+    "balance_slow_control": 2,
+    "controls_coordination": 3,
+    "descents": 4,
+    "drills": 1,
+    "emergency_braking": 2,
+    "ergonomics": 1,
+    "fatigue_management": 1,
+    "gravel_dirt": 4,
+    "hills": 1,
+    "lifting": 3,
+    "loose_rock": 1,
+    "mud_wet": 2,
+    "obstacles": 1,
+    "offroad_basics": 3,
+    "offroad_braking": 3,
+    "offroad_turning": 1,
+    "passenger_riding": 1,
+    "protective_gear": 1,
+    "recovery": 2,
+    "riding_position": 2,
+    "road_braking": 3,
+    "road_cornering": 9,
+    "road_strategy": 1,
+    "ruts": 2,
+    "sand": 2,
+    "solo_group_safety": 1,
+    "u_turns_low_speed": 1,
+    "water_crossings": 1,
+    "wet_weather": 1
+  },
+  "by_evidence_type": {
+    "chapters": 31,
+    "description": 60,
+    "transcript": 53
+  },
+  "classification_confidence": {
+    "high": 54,
+    "medium": 6
+  },
+  "contains_marketing": 41,
+  "quality_scores": {
+    "4": 19,
+    "5": 41
+  },
+  "thin_categories": [
+    "drills",
+    "ergonomics",
+    "fatigue_management",
+    "hills",
+    "loose_rock",
+    "obstacles",
+    "offroad_turning",
+    "passenger_riding",
+    "protective_gear",
+    "road_strategy",
+    "solo_group_safety",
+    "u_turns_low_speed",
+    "water_crossings",
+    "wet_weather"
+  ]
+}

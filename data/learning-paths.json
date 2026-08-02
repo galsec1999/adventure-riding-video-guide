@@ -1,0 +1,252 @@
+[
+  {
+    "id": "beginner-offroad-adventure",
+    "name_he": "מתחילים בשטח ואדוונצ'ר",
+    "description_he": "מסלול מהיסודות ועד עלייה, ירידה וחילוץ בסיסי.",
+    "skill_level": "beginner",
+    "steps": [
+      {
+        "order": 1,
+        "goal_he": "להבין תנוחת עמידה",
+        "explanation_he": "מתחילים בתנוחה ניטרלית וידיים רפויות.",
+        "primary_video_ids": [
+          "yt-UsOGqaTH3d0",
+          "yt-lFGwRIP21OU"
+        ],
+        "alternative_video_ids": [
+          "yt--XhyYOfp7zg"
+        ]
+      },
+      {
+        "order": 2,
+        "goal_he": "לפתח שיווי משקל",
+        "explanation_he": "מתרגלים לאט ובסביבה סגורה.",
+        "primary_video_ids": [
+          "yt-Ykxd14ynecQ",
+          "yt-EJNSrWDQYUY"
+        ],
+        "alternative_video_ids": [
+          "yt-njzovd5FuZU"
+        ]
+      },
+      {
+        "order": 3,
+        "goal_he": "לתאם מצמד וגז",
+        "explanation_he": "מחברים פקדים לפני מעבר לשטח מורכב.",
+        "primary_video_ids": [
+          "yt-fqm0Oj9G8QU",
+          "yt-EJNSrWDQYUY"
+        ],
+        "alternative_video_ids": [
+          "yt-KmCPtVARyS0"
+        ]
+      },
+      {
+        "order": 4,
+        "goal_he": "לבלום בשטח",
+        "explanation_he": "בונים לחץ בלימה בהדרגה על עפר צפוי.",
+        "primary_video_ids": [
+          "yt-hN0vylh__lo",
+          "yt-4RxEvSkgJdc"
+        ],
+        "alternative_video_ids": [
+          "yt-RmOMjoe8G1g"
+        ]
+      },
+      {
+        "order": 5,
+        "goal_he": "לרכוב על עפר וחצץ",
+        "explanation_he": "משלבים מבט, קצב וקו בדרך רחבה.",
+        "primary_video_ids": [
+          "yt-7b5FPbTxfs8",
+          "yt-GqfRGMw8gvQ"
+        ],
+        "alternative_video_ids": [
+          "yt-eL4i6SmQbxU"
+        ]
+      },
+      {
+        "order": 6,
+        "goal_he": "לתרגל פנייה איטית",
+        "explanation_he": "מתחילים במשטח קל לפני חול.",
+        "primary_video_ids": [
+          "yt-UuoceB8wp4Q"
+        ],
+        "alternative_video_ids": [
+          "yt-njzovd5FuZU"
+        ]
+      },
+      {
+        "order": 7,
+        "goal_he": "להכיר עלייה בסיסית",
+        "explanation_he": "לומדים קו, הילוך ותנופה לפני ניסיון.",
+        "primary_video_ids": [
+          "yt-UHkVHDFNUqU"
+        ],
+        "alternative_video_ids": [
+          "yt-FQp-0v2ddQ0"
+        ]
+      },
+      {
+        "order": 8,
+        "goal_he": "לנהל ירידה",
+        "explanation_he": "מתרגלים ירידה קלה לפני דרדרת או חריצים.",
+        "primary_video_ids": [
+          "yt-HevLOY3Bzdg",
+          "yt--rQwIXp4Zu8"
+        ],
+        "alternative_video_ids": [
+          "yt-jg9I-H_ZY2s"
+        ]
+      },
+      {
+        "order": 9,
+        "goal_he": "להכיר קרקע רכה",
+        "explanation_he": "צופים לפני תרגול חול, בוץ או חריצים.",
+        "primary_video_ids": [
+          "yt-TDCajc6HYRE",
+          "yt-h4hw5mEBxIE"
+        ],
+        "alternative_video_ids": [
+          "yt-1cHdv7grbts"
+        ]
+      },
+      {
+        "order": 10,
+        "goal_he": "להתכונן לנפילה וחילוץ",
+        "explanation_he": "לומדים הרמה בטוחה ותכנית התאוששות.",
+        "primary_video_ids": [
+          "yt-_fddOX-CZXI",
+          "yt-dRvofOL3eaI"
+        ],
+        "alternative_video_ids": [
+          "yt-45iv6pdogLo"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "beginner-road",
+    "name_he": "מתחילים בכביש",
+    "description_he": "מסלול מתפעול בסיסי ועד פניות, חירום, גשם ועייפות.",
+    "skill_level": "beginner",
+    "steps": [
+      {
+        "order": 1,
+        "goal_he": "לשלוט בתפעול הבסיסי",
+        "explanation_he": "מתאמים הילוכים ובלימה בצורה חלקה.",
+        "primary_video_ids": [
+          "yt-CDACd-6_4E4",
+          "yt-jHhRZLHA-cA"
+        ],
+        "alternative_video_ids": [
+          "yt-_ej7WCZeFhQ"
+        ]
+      },
+      {
+        "order": 2,
+        "goal_he": "לפתח שליטה איטית",
+        "explanation_he": "מתרגלים במגרש סגור.",
+        "primary_video_ids": [
+          "yt-824lwgKbv-M",
+          "yt-7Ix1B9MjKOQ"
+        ],
+        "alternative_video_ids": [
+          "yt-njzovd5FuZU"
+        ]
+      },
+      {
+        "order": 3,
+        "goal_he": "לבנות בלימה רגילה",
+        "explanation_he": "לומדים חלוקת בלמים והעברת משקל.",
+        "primary_video_ids": [
+          "yt-jHhRZLHA-cA",
+          "yt-_ej7WCZeFhQ"
+        ],
+        "alternative_video_ids": [
+          "yt-CDACd-6_4E4"
+        ]
+      },
+      {
+        "order": 4,
+        "goal_he": "להתכונן לעצירת חירום",
+        "explanation_he": "צופים ואז מתרגלים בהדרגה במגרש.",
+        "primary_video_ids": [
+          "yt-nsklKzXl2Ws",
+          "yt-18eqTsDfzDU"
+        ],
+        "alternative_video_ids": [
+          "yt-jHhRZLHA-cA"
+        ]
+      },
+      {
+        "order": 5,
+        "goal_he": "להבין רצף פנייה",
+        "explanation_he": "מחברים מהירות, מבט והיגוי.",
+        "primary_video_ids": [
+          "yt-0dGYLXIvoeg",
+          "yt-Dtuy4qxkZ6M"
+        ],
+        "alternative_video_ids": [
+          "yt-doVLIwQbnWs"
+        ]
+      },
+      {
+        "order": 6,
+        "goal_he": "לבחור קו בטוח",
+        "explanation_he": "משאירים ראות ומרווח לתיקון.",
+        "primary_video_ids": [
+          "yt-fuoYUYFNkGI",
+          "yt-yBjN7N_n_Ww"
+        ],
+        "alternative_video_ids": [
+          "yt-NVW3lk0_SKY"
+        ]
+      },
+      {
+        "order": 7,
+        "goal_he": "לזהות סכנות",
+        "explanation_he": "מפתחים סריקה, מיקום ונתיב מילוט.",
+        "primary_video_ids": [
+          "yt-1s4fDOyb3YA"
+        ],
+        "alternative_video_ids": [
+          "yt-Dtuy4qxkZ6M"
+        ]
+      },
+      {
+        "order": 8,
+        "goal_he": "להבין רכיבה בגשם",
+        "explanation_he": "מתאימים אחיזה, ראות ומרווח.",
+        "primary_video_ids": [
+          "yt-DY7OFizK_eo"
+        ],
+        "alternative_video_ids": [
+          "yt-18eqTsDfzDU"
+        ]
+      },
+      {
+        "order": 9,
+        "goal_he": "להיערך לרכיבה עם מורכב",
+        "explanation_he": "מתאמים תקשורת ומרחקי בלימה.",
+        "primary_video_ids": [
+          "yt-y5vUZouBNgE"
+        ],
+        "alternative_video_ids": [
+          "yt-jHhRZLHA-cA"
+        ]
+      },
+      {
+        "order": 10,
+        "goal_he": "לנהל עייפות",
+        "explanation_he": "מתכננים הפסקות ומזהים ירידה בערנות.",
+        "primary_video_ids": [
+          "yt-2XP_qr9NNcc"
+        ],
+        "alternative_video_ids": [
+          "yt-1s4fDOyb3YA"
+        ]
+      }
+    ]
+  }
+]
