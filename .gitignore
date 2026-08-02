@@ -4,6 +4,9 @@ node_modules/
 .venv/
 __pycache__/
 *.pyc
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
 .env
 .env.*
 coverage/
@@ -11,3 +14,8 @@ playwright-report/
 test-results/
 .tmp/
 .cache/
+cache/
+reports/runtime/
+*.log
+*.tmp
+*.temp

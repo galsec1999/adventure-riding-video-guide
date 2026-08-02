@@ -1,0 +1,529 @@
+<!doctype html>
+<html lang="he" dir="rtl" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="ספריית וידאו מקצועית בעברית ללימוד רכיבת אדוונצ'ר, שטח וכביש.">
+  <meta name="theme-color" content="#f4f1e8">
+  <title>מדריך הווידאו לרכיבת אדוונצ'ר</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script type="module" src="assets/js/app.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">דלגו לתוכן הראשי</a>
+
+  <header class="site-header" id="site-header" data-menu-open="false">
+    <div class="site-header__inner shell">
+      <a class="brand" href="#home" data-route="home" data-view="home" aria-label="מדריך הווידאו לרכיבת אדוונצ'ר — דף הבית">
+        <span class="brand__mark" aria-hidden="true"><span></span></span>
+        <span class="brand__copy">
+          <strong data-site-name>מדריך הווידאו</strong>
+          <small>אדוונצ'ר · שטח · כביש</small>
+        </span>
+      </a>
+
+      <button class="icon-button menu-toggle" id="mobile-menu-toggle" type="button"
+              aria-controls="primary-nav" aria-expanded="false" aria-label="פתיחת תפריט הניווט">
+        <span class="menu-toggle__lines" aria-hidden="true"><i></i><i></i><i></i></span>
+      </button>
+
+      <nav class="primary-nav" id="primary-nav" aria-label="ניווט ראשי">
+        <a href="#home" data-route="home" data-view="home" aria-current="page">דף הבית</a>
+        <a href="#library" data-route="library" data-view="library">ספריית הסרטונים</a>
+        <a href="#paths" data-route="paths" data-view="paths">מסלולי לימוד</a>
+        <a href="#safety" data-route="safety" data-view="safety">בטיחות</a>
+      </nav>
+
+      <button class="theme-toggle" id="theme-toggle" type="button" aria-label="הפעלת מצב כהה" aria-pressed="false">
+        <span class="theme-toggle__icon" aria-hidden="true">◐</span>
+        <span class="theme-toggle__label" data-theme-label>מצב כהה</span>
+      </button>
+    </div>
+  </header>
+
+  <noscript>
+    <div class="noscript-notice" role="alert">כדי לחפש, לסנן ולשמור התקדמות יש להפעיל JavaScript בדפדפן.</div>
+  </noscript>
+
+  <main id="main-content" tabindex="-1">
+    <div class="app-status shell" id="app-status" role="status" aria-live="polite">
+      <span class="app-status__spinner" aria-hidden="true"></span>
+      <span>טוען את ספריית הווידאו…</span>
+    </div>
+    <div class="visually-hidden" id="live-region" role="status" aria-live="polite" aria-atomic="true"></div>
+
+    <section class="app-error shell" id="app-error" role="alert" hidden>
+      <div>
+        <p class="eyebrow">לא הצלחנו לטעון את הספרייה</p>
+        <h2>נדרש שרת מקומי פשוט</h2>
+        <p>פתחו את האתר באמצעות קובץ ההפעלה המקומי ונסו שוב.</p>
+      </div>
+      <button class="button button--primary" type="button" data-action="reload-app">נסו שוב</button>
+    </section>
+
+    <div id="app" hidden>
+      <section class="view view--home" id="home-view" aria-labelledby="home-title">
+        <div class="hero">
+          <div class="hero__terrain" aria-hidden="true"></div>
+          <div class="hero__inner shell">
+            <div class="hero__content">
+              <p class="eyebrow eyebrow--accent">לומדים נכון. מתרגלים בהדרגה. רוכבים רחוק.</p>
+              <h1 id="home-title">הדרך שלך לרכיבה<br><span>בטוחה ומדויקת יותר</span></h1>
+              <p class="hero__lead">ספריית הדרכה מקצועית בעברית, המבוססת על סרטוני YouTube אמיתיים ומאומתים לרכיבת שטח, כביש וכל מה שביניהם.</p>
+
+              <form class="hero-search" id="hero-search-form" role="search" action="./" method="get">
+                <label class="visually-hidden" for="hero-search">מה תרצו ללמוד?</label>
+                <input type="hidden" name="view" value="library">
+                <span class="search-icon" aria-hidden="true"></span>
+                <input id="hero-search" name="q" type="search" autocomplete="off"
+                       placeholder="חפשו חול, בלימת חירום, cornering…">
+                <button class="button button--primary" type="submit">מצאו הדרכה</button>
+              </form>
+
+              <div class="hero__actions">
+                <a class="button button--primary" href="#paths" data-route="paths" data-view="paths">התחילו במסלול לימוד</a>
+                <a class="button button--ghost" href="#library" data-route="library" data-view="library">עיינו בכל הסרטונים</a>
+              </div>
+
+              <dl class="hero__stats" aria-label="נתוני הספרייה">
+                <div><dt data-stat="videos">60</dt><dd>סרטונים מאומתים</dd></div>
+                <div><dt data-stat="domains">5</dt><dd>תחומי לימוד</dd></div>
+                <div><dt data-stat="paths">2</dt><dd>מסלולים מסודרים</dd></div>
+              </dl>
+            </div>
+
+            <aside class="hero__guide" aria-label="גישה מומלצת ללמידה">
+              <p class="hero__guide-kicker">רוכבים מתחילים כאן</p>
+              <ol class="trail-steps">
+                <li><span>01</span><div><strong>בוחרים יעד</strong><small>מיומנות אחת בכל פעם</small></div></li>
+                <li><span>02</span><div><strong>צופים ומבינים</strong><small>תקציר, דגשים ואזהרות</small></div></li>
+                <li><span>03</span><div><strong>מתרגלים בטוח</strong><small>בהדרגה ובסביבה מבוקרת</small></div></li>
+              </ol>
+              <a href="#paths" data-route="paths" data-view="paths" class="text-link">למסלולים המלאים <span aria-hidden="true">←</span></a>
+            </aside>
+          </div>
+        </div>
+
+        <section class="section shell" aria-labelledby="domains-title">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">בחרו את השטח שלכם</p>
+              <h2 id="domains-title">מה תרצו לשפר היום?</h2>
+            </div>
+            <a class="text-link text-link--desktop" href="#library" data-route="library" data-view="library">לכל הספרייה <span aria-hidden="true">←</span></a>
+          </div>
+
+          <div class="domain-grid" id="domain-grid">
+            <a class="domain-card domain-card--offroad" href="#library?domain=offroad_adventure" data-action="filter-domain" data-domain="offroad_adventure">
+              <span class="domain-card__index" aria-hidden="true">01</span>
+              <div><h3>אדוונצ'ר ושטח</h3><p>עמידה, עפר, חול, בוץ, עליות, ירידות ומכשולים.</p></div>
+              <span class="domain-card__meta"><b data-domain-count="offroad_adventure">—</b> סרטונים <i aria-hidden="true">←</i></span>
+            </a>
+            <a class="domain-card domain-card--road" href="#library?domain=road" data-action="filter-domain" data-domain="road">
+              <span class="domain-card__index" aria-hidden="true">02</span>
+              <div><h3>רכיבת כביש</h3><p>פניות, בלימה, אסטרטגיה, גשם ורכיבה בטוחה.</p></div>
+              <span class="domain-card__meta"><b data-domain-count="road">—</b> סרטונים <i aria-hidden="true">←</i></span>
+            </a>
+            <a class="domain-card domain-card--mixed" href="#library?domain=mixed" data-action="filter-domain" data-domain="mixed">
+              <span class="domain-card__index" aria-hidden="true">03</span>
+              <div><h3>רכיבה משולבת</h3><p>מחברים בין האספלט, המגרש והשביל.</p></div>
+              <span class="domain-card__meta"><b data-domain-count="mixed">—</b> סרטונים <i aria-hidden="true">←</i></span>
+            </a>
+            <a class="domain-card domain-card--practice" href="#library?domain=practice" data-action="filter-domain" data-domain="practice">
+              <span class="domain-card__index" aria-hidden="true">04</span>
+              <div><h3>תרגול ואימון</h3><p>תרגילים מובנים לפיתוח איזון, דיוק וביטחון.</p></div>
+              <span class="domain-card__meta"><b data-domain-count="practice">—</b> סרטונים <i aria-hidden="true">←</i></span>
+            </a>
+            <a class="domain-card domain-card--safety" href="#library?domain=safety_recovery" data-action="filter-domain" data-domain="safety_recovery">
+              <span class="domain-card__index" aria-hidden="true">05</span>
+              <div><h3>בטיחות וחילוץ</h3><p>תכנון, עייפות, הרמת אופנוע והתאוששות.</p></div>
+              <span class="domain-card__meta"><b data-domain-count="safety_recovery">—</b> סרטונים <i aria-hidden="true">←</i></span>
+            </a>
+          </div>
+        </section>
+
+        <section class="section section--tinted" id="continue-section" aria-labelledby="continue-title" hidden>
+          <div class="shell">
+            <div class="section-heading">
+              <div><p class="eyebrow">ההתקדמות נשמרה במכשיר</p><h2 id="continue-title">המשיכו מהמקום שבו עצרתם</h2></div>
+            </div>
+            <div class="continue-content" id="continue-content"></div>
+          </div>
+        </section>
+
+        <section class="section shell" aria-labelledby="featured-title">
+          <div class="section-heading">
+            <div><p class="eyebrow">נקודת פתיחה טובה</p><h2 id="featured-title">מומלצים להתחלה</h2></div>
+            <a class="text-link text-link--desktop" href="#library" data-route="library" data-view="library">הציגו עוד <span aria-hidden="true">←</span></a>
+          </div>
+          <div class="video-grid video-grid--featured" id="featured-grid" aria-live="polite">
+            <div class="skeleton-card" aria-hidden="true"><i></i><b></b><b></b><span></span></div>
+            <div class="skeleton-card" aria-hidden="true"><i></i><b></b><b></b><span></span></div>
+            <div class="skeleton-card" aria-hidden="true"><i></i><b></b><b></b><span></span></div>
+          </div>
+        </section>
+
+        <section class="safety-banner shell" aria-labelledby="home-safety-title">
+          <div class="safety-banner__mark" aria-hidden="true">!</div>
+          <div>
+            <p class="eyebrow">לפני שיוצאים לתרגל</p>
+            <h2 id="home-safety-title">וידאו מעשיר ידע — הדרכה מעשית בונה מיומנות</h2>
+            <p>תרגלו בהדרגה, במקום בטוח, עם ציוד מיגון ובהתאם ליכולת, לחוק ולתנאי הדרך.</p>
+          </div>
+          <a class="button button--ghost" href="#safety" data-route="safety" data-view="safety">עקרונות הבטיחות</a>
+        </section>
+      </section>
+
+      <section class="view view--library" id="library-view" aria-labelledby="library-title" hidden>
+        <header class="page-hero page-hero--library">
+          <div class="shell page-hero__inner">
+            <div>
+              <p class="eyebrow eyebrow--accent">60 סרטונים. מידע מאומת. חיפוש אחד.</p>
+              <h1 id="library-title">ספריית הסרטונים</h1>
+              <p>חפשו בעברית או באנגלית ושלבו מסננים כדי להגיע במהירות להדרכה הנכונה.</p>
+            </div>
+            <form class="library-search" id="library-search-form" role="search">
+              <label for="library-search">חיפוש בספרייה</label>
+              <div class="search-field">
+                <span class="search-icon" aria-hidden="true"></span>
+                <input id="library-search" name="q" type="search" autocomplete="off" enterkeyhint="search"
+                       placeholder="לדוגמה: חול, rain, הרמת אופנוע">
+                <button class="search-field__clear" type="button" data-action="clear-search" aria-label="ניקוי החיפוש" hidden>×</button>
+              </div>
+              <p class="search-hint">החיפוש מזהה גם מילים נרדפות בעברית ובאנגלית.</p>
+            </form>
+          </div>
+        </header>
+
+        <div class="library-shell shell">
+          <button class="button button--filter" id="mobile-filter-toggle" type="button" aria-controls="filter-panel" aria-expanded="false">
+            <span aria-hidden="true">≡</span> סינון תוצאות <b id="mobile-filter-count" hidden>0</b>
+          </button>
+
+          <aside class="filter-panel" id="filter-panel" data-open="false" aria-labelledby="filters-title">
+            <button class="filter-panel__backdrop" type="button" data-action="close-filters" tabindex="-1" aria-hidden="true"></button>
+            <form class="filter-form" id="filter-form">
+              <div class="filter-form__header">
+                <div><p class="eyebrow">דיוק בתוצאות</p><h2 id="filters-title">מסננים</h2></div>
+                <button class="icon-button filter-close" type="button" data-action="close-filters" aria-label="סגירת המסננים">×</button>
+              </div>
+
+              <div class="filter-form__body">
+                <fieldset class="filter-group">
+                  <legend>סיווג</legend>
+                  <label for="filter-domain">תחום</label>
+                  <select id="filter-domain" name="domain"><option value="">כל התחומים</option></select>
+                  <label for="filter-category">נושא ראשי</label>
+                  <select id="filter-category" name="category"><option value="">כל הנושאים</option></select>
+                  <label for="filter-language">שפת הסרטון</label>
+                  <select id="filter-language" name="language"><option value="">כל השפות</option></select>
+                </fieldset>
+
+                <fieldset class="filter-group">
+                  <legend>רמת הרכיבה</legend>
+                  <label for="filter-skill">רמה</label>
+                  <select id="filter-skill" name="skill"><option value="">כל הרמות</option></select>
+                  <label for="filter-risk">סיכון בתרגול</label>
+                  <select id="filter-risk" name="risk"><option value="">כל רמות הסיכון</option></select>
+                  <label for="filter-duration">משך הסרטון</label>
+                  <select id="filter-duration" name="duration">
+                    <option value="">כל משך</option>
+                    <option value="short">קצר — עד 5 דקות</option>
+                    <option value="medium">בינוני — 5 עד 15 דקות</option>
+                    <option value="long">ארוך — מעל 15 דקות</option>
+                  </select>
+                </fieldset>
+
+                <fieldset class="filter-group">
+                  <legend>האופנוע והסביבה</legend>
+                  <label for="filter-motorcycle">סוג אופנוע</label>
+                  <select id="filter-motorcycle" name="motorcycle"><option value="">כל סוגי האופנוע</option></select>
+                  <label for="filter-weight">משקל אופנוע</label>
+                  <select id="filter-weight" name="weight"><option value="">כל המשקלים</option></select>
+                  <label for="filter-terrain">סוג קרקע</label>
+                  <select id="filter-terrain" name="terrain"><option value="">כל סוגי הקרקע</option></select>
+                  <label for="filter-road-condition">תנאי דרך</label>
+                  <select id="filter-road-condition" name="roadCondition"><option value="">כל תנאי הדרך</option></select>
+                </fieldset>
+
+                <fieldset class="filter-group filter-group--checks">
+                  <legend>מאפיינים</legend>
+                  <label class="check-row"><input id="filter-subtitles" name="subtitles" type="checkbox"><span>כולל כתוביות</span></label>
+                  <label class="check-row"><input id="filter-professional" name="professional" type="checkbox"><span>מקור מקצועי</span></label>
+                  <label class="check-row"><input id="filter-no-marketing" name="noMarketing" type="checkbox"><span>ללא תוכן שיווקי</span></label>
+                  <label class="check-row"><input id="filter-practical" name="practical" type="checkbox"><span>כולל תרגול מעשי</span></label>
+                  <label class="check-row"><input id="filter-safety" name="safety" type="checkbox"><span>כולל אזהרות בטיחות</span></label>
+                  <label class="check-row"><input id="filter-beginner" name="beginner" type="checkbox"><span>מתאים למתחילים</span></label>
+                  <label class="check-row"><input id="filter-favorites" name="favorites" type="checkbox"><span>מועדפים בלבד</span></label>
+                  <label class="check-row"><input id="filter-watched" name="watched" type="checkbox"><span>סרטונים שנצפו</span></label>
+                  <label class="check-row"><input id="filter-unwatched" name="unwatched" type="checkbox"><span>טרם נצפו</span></label>
+                </fieldset>
+              </div>
+
+              <div class="filter-form__footer">
+                <button class="button button--quiet" type="reset" data-action="reset-filters">איפוס הכול</button>
+                <button class="button button--primary" type="button" data-action="apply-filters">הציגו <span data-filter-result-count>60</span> סרטונים</button>
+              </div>
+            </form>
+          </aside>
+
+          <div class="library-results">
+            <div class="result-toolbar">
+              <div>
+                <p class="result-count" id="result-count" role="status" aria-live="polite"><strong>60</strong> סרטונים נמצאו</p>
+                <div class="active-filters" id="active-filters" aria-label="מסננים פעילים"></div>
+              </div>
+              <div class="sort-control">
+                <label for="sort-select">מיון</label>
+                <select id="sort-select" name="sort">
+                  <option value="recommended">מומלצים תחילה</option>
+                  <option value="beginner">מתאים למתחילים</option>
+                  <option value="skill">לפי רמת קושי</option>
+                  <option value="duration-asc">משך: קצר לארוך</option>
+                  <option value="duration-desc">משך: ארוך לקצר</option>
+                  <option value="date-desc">חדש ביותר</option>
+                  <option value="date-asc">ישן ביותר</option>
+                  <option value="channel">שם הערוץ</option>
+                  <option value="quality">דירוג איכות</option>
+                </select>
+              </div>
+              <button class="button button--quiet reset-toolbar" id="reset-filters" type="button" data-action="reset-filters">איפוס מסננים</button>
+            </div>
+
+            <div class="video-grid" id="video-grid" aria-live="polite" aria-busy="true">
+              <div class="skeleton-card" aria-hidden="true"><i></i><b></b><b></b><span></span></div>
+              <div class="skeleton-card" aria-hidden="true"><i></i><b></b><b></b><span></span></div>
+              <div class="skeleton-card" aria-hidden="true"><i></i><b></b><b></b><span></span></div>
+              <div class="skeleton-card" aria-hidden="true"><i></i><b></b><b></b><span></span></div>
+              <div class="skeleton-card" aria-hidden="true"><i></i><b></b><b></b><span></span></div>
+              <div class="skeleton-card" aria-hidden="true"><i></i><b></b><b></b><span></span></div>
+            </div>
+
+            <section class="empty-state" id="empty-state" aria-labelledby="empty-title" hidden>
+              <span aria-hidden="true">⌕</span>
+              <h2 id="empty-title">לא נמצאו סרטונים מתאימים</h2>
+              <p>נסו מונח רחב יותר או הסירו אחד מהמסננים הפעילים.</p>
+              <button class="button button--primary" type="button" data-action="reset-filters">איפוס החיפוש והמסננים</button>
+            </section>
+
+            <div class="load-more-wrap" id="load-more-wrap" hidden>
+              <button class="button button--ghost" id="load-more" type="button" data-action="load-more">טענו סרטונים נוספים</button>
+              <p id="load-progress"></p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="view view--paths" id="paths-view" aria-labelledby="paths-title" hidden>
+        <header class="page-hero page-hero--paths">
+          <div class="shell page-hero__inner">
+            <div>
+              <p class="eyebrow eyebrow--accent">צפייה לפי סדר. תרגול לפי יכולת.</p>
+              <h1 id="paths-title">מסלולי לימוד</h1>
+              <p>בכל שלב מחכה לכם מטרה ברורה, סרטונים מרכזיים וחלופות. ההתקדמות נשמרת במכשיר.</p>
+            </div>
+            <div class="overall-progress" id="overall-progress" aria-label="התקדמות כוללת">
+              <div class="overall-progress__ring" data-progress="0"><span>0%</span></div>
+              <div><strong>ההתקדמות שלכם</strong><small><span data-completed-steps>0</span> מתוך <span data-total-steps>20</span> שלבים</small></div>
+            </div>
+          </div>
+        </header>
+
+        <div class="section shell">
+          <nav class="path-switcher" id="path-switcher" aria-label="מעבר מהיר בין מסלולים"></nav>
+          <div class="paths-container" id="paths-container" aria-live="polite" aria-busy="true">
+            <div class="path-skeleton" aria-hidden="true"><i></i><b></b><span></span><span></span><span></span></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="view view--safety" id="safety-view" aria-labelledby="safety-title" hidden>
+        <header class="page-hero page-hero--safety">
+          <div class="shell page-hero__inner">
+            <div>
+              <p class="eyebrow eyebrow--accent">ידע, שיקול דעת והתקדמות מדורגת</p>
+              <h1 id="safety-title">רוכבים כדי לחזור בשלום</h1>
+              <p>הספרייה נועדה לעזור לכם להבין טכניקה. היא אינה תחליף להדרכה מעשית ולהערכת התנאים בשטח.</p>
+            </div>
+          </div>
+        </header>
+
+        <div class="safety-layout shell section">
+          <article class="safety-statement">
+            <p class="eyebrow">הבהרת בטיחות</p>
+            <h2>הסרטונים במדריך נועדו להעשרה ולמידה בלבד</h2>
+            <p>צפייה בווידאו אינה מחליפה הדרכה מעשית של מדריך מוסמך. יש לתרגל בהדרגה, במקום בטוח, עם ציוד מיגון מתאים ובהתאם לחוק, לתנאי הדרך ולרמת הרוכב.</p>
+          </article>
+
+          <section aria-labelledby="safety-principles-title">
+            <div class="section-heading"><div><p class="eyebrow">לפני כל תרגול</p><h2 id="safety-principles-title">חמישה עקרונות פשוטים</h2></div></div>
+            <ol class="principle-grid">
+              <li><span>01</span><div><h3>מתחילים קל</h3><p>בחרו משטח, מהירות ומיומנות שמתאימים לרמה הנוכחית.</p></div></li>
+              <li><span>02</span><div><h3>מגנים על הגוף</h3><p>קסדה תקנית, כפפות, מגפיים ומיגון שמתאים לסוג הרכיבה.</p></div></li>
+              <li><span>03</span><div><h3>בודקים את הסביבה</h3><p>ללא תנועה, מכשולים נסתרים או אנשים בתוך אזור התרגול.</p></div></li>
+              <li><span>04</span><div><h3>עוצרים בזמן</h3><p>עייפות, כאב, לחץ או שינוי בתנאים הם סיבה להפסקה ולהערכה מחדש.</p></div></li>
+              <li><span>05</span><div><h3>מבקשים הדרכה</h3><p>מיומנויות בסיכון גבוה מתרגלים עם מדריך ובתנאים מבוקרים.</p></div></li>
+            </ol>
+          </section>
+
+          <aside class="safety-actions">
+            <div><p class="eyebrow">מידע שקוף</p><h2>מקורות, זכויות ודיווח</h2><p>כל הסרטונים נשארים בבעלות היוצרים והערוצים המקוריים. המדריך מקשר ומסווג בלבד.</p></div>
+            <button class="button button--ghost" type="button" data-action="open-rights">מקורות וזכויות</button>
+          </aside>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell site-footer__grid">
+      <div class="site-footer__brand">
+        <span class="brand__mark brand__mark--footer" aria-hidden="true"><span></span></span>
+        <div><strong data-site-name>מדריך הווידאו לרכיבת אדוונצ'ר</strong><p>מרכזים ידע חיצוני איכותי כדי שתוכלו ללמוד, לבחור ולתרגל בצורה אחראית.</p></div>
+      </div>
+      <nav aria-label="ניווט תחתון">
+        <h2>ניווט מהיר</h2>
+        <a href="#home" data-route="home" data-view="home">דף הבית</a>
+        <a href="#library" data-route="library" data-view="library">ספריית הסרטונים</a>
+        <a href="#paths" data-route="paths" data-view="paths">מסלולי לימוד</a>
+        <a href="#safety" data-route="safety" data-view="safety">בטיחות</a>
+      </nav>
+      <div>
+        <h2>שקיפות</h2>
+        <button class="footer-link" type="button" data-action="open-rights">מקורות וזכויות</button>
+        <p>נתקלתם בקישור שבור? ניתן לדווח מתוך חלון פרטי הסרטון.</p>
+      </div>
+    </div>
+    <div class="shell site-footer__bottom">
+      <p>© <span data-current-year></span> <span data-author-name>אילן נחמן</span>. התקצירים והסיווגים נכתבו עבור מדריך זה.</p>
+      <p>YouTube ושמות הערוצים הם סימנים של בעליהם.</p>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="back-to-top" type="button" data-action="back-to-top" aria-label="חזרה לראש העמוד" hidden>
+    <span aria-hidden="true">↑</span>
+  </button>
+
+  <dialog class="modal video-dialog" id="video-dialog" aria-labelledby="video-dialog-shell-title">
+    <div class="modal__surface video-dialog__surface">
+      <header class="modal__header">
+        <div>
+          <p class="eyebrow" id="video-dialog-kicker">פרטי הסרטון</p>
+          <h2 id="video-dialog-shell-title">סרטון הדרכה</h2>
+        </div>
+        <button class="icon-button modal__close" type="button" data-action="close-video" aria-label="סגירת חלון הסרטון">×</button>
+      </header>
+      <div class="video-dialog__body" id="video-dialog-content">
+        <div class="video-player-slot" id="video-player-slot" data-player-state="idle"></div>
+        <div class="video-dialog__details" id="video-details-content"></div>
+        <section class="related-section" id="related-section" aria-labelledby="related-title" hidden>
+          <div class="section-heading section-heading--compact"><h3 id="related-title">סרטונים קשורים</h3></div>
+          <div class="related-grid" id="related-grid"></div>
+        </section>
+      </div>
+    </div>
+  </dialog>
+
+  <dialog class="modal rights-dialog" id="rights-dialog" aria-labelledby="rights-title">
+    <div class="modal__surface rights-dialog__surface">
+      <header class="modal__header">
+        <div><p class="eyebrow">שקיפות וכבוד ליוצרים</p><h2 id="rights-title">מקורות וזכויות</h2></div>
+        <form method="dialog" class="modal__close-form"><button class="icon-button modal__close" type="submit" aria-label="סגירת חלון הזכויות">×</button></form>
+      </header>
+      <div class="rights-dialog__body">
+        <section>
+          <h3>הסרטונים נשארים אצל היוצרים</h3>
+          <p>המדריך אינו מוריד או מאחסן סרטוני YouTube. הצפייה מתבצעת באמצעות הטמעה של YouTube או בקישור למקור, ושם הערוץ מוצג לצד כל סרטון.</p>
+        </section>
+        <section>
+          <h3>התקצירים מקוריים</h3>
+          <p>התקצירים, הסיווגים ונקודות הלמידה נכתבו עבור המדריך על בסיס ראיות התוכן שתועדו. אין כאן העתקה של תמלולים או תיאורים מלאים.</p>
+        </section>
+        <section>
+          <h3>דיווח על קישור או בקשת הסרה</h3>
+          <p>בחלון הפרטים של כל סרטון ניתן לבחור „דיווח על קישור” ולהעתיק הודעה הכוללת את מזהה הסרטון והמקור. כך ניתן להעביר דיווח מדויק למפעיל המדריך.</p>
+        </section>
+        <div class="rights-dialog__note">כל הזכויות בסרטונים, בתמונות התצוגה ובשמות הערוצים שייכות ליוצרים ולבעלי הזכויות המקוריים.</div>
+      </div>
+    </div>
+  </dialog>
+
+  <div class="toast-region" id="toast-region" role="status" aria-live="polite" aria-atomic="true"></div>
+
+  <template id="video-card-template">
+    <article class="video-card" data-video-id="">
+      <div class="video-card__media">
+        <button class="video-card__image-button" type="button" data-action="open-video" aria-label="פתיחת פרטי הסרטון">
+          <img width="480" height="360" loading="lazy" decoding="async" alt="">
+          <span class="video-card__play" aria-hidden="true">▶</span>
+        </button>
+        <span class="video-card__duration" data-field="duration" hidden></span>
+        <button class="favorite-button" type="button" data-action="toggle-favorite" aria-label="הוספה למועדפים" aria-pressed="false"><span aria-hidden="true">♡</span></button>
+      </div>
+      <div class="video-card__body">
+        <div class="badge-row">
+          <span class="badge badge--domain" data-field="domain"></span>
+          <span class="badge" data-field="skill"></span>
+          <span class="badge badge--language" data-field="language"></span>
+        </div>
+        <button class="video-card__title-button" type="button" data-action="open-video"><h3 data-field="title-he"></h3></button>
+        <p class="video-card__original" data-field="title-original" dir="auto"></p>
+        <p class="video-card__channel"><span data-field="channel"></span><span aria-hidden="true">·</span><span data-field="category"></span></p>
+        <p class="video-card__summary" data-field="summary"></p>
+        <div class="video-card__learn"><strong>מה נלמד</strong><p data-field="learning-point"></p></div>
+        <ul class="tag-list" data-field="tags" aria-label="תגיות"></ul>
+      </div>
+      <footer class="video-card__footer">
+        <button class="button button--primary button--compact" type="button" data-action="watch-video"><span aria-hidden="true">▶</span> צפייה</button>
+        <button class="button button--quiet button--compact" type="button" data-action="open-video">פרטים</button>
+        <a class="icon-button video-card__youtube" data-action="open-youtube" target="_blank" rel="noopener noreferrer" aria-label="פתיחה ב-YouTube">↗</a>
+        <button class="watched-button" type="button" data-action="toggle-watched" aria-label="סימון כנצפה" aria-pressed="false"><span aria-hidden="true">✓</span><span>נצפה</span></button>
+      </footer>
+    </article>
+  </template>
+
+  <template id="path-template">
+    <article class="learning-path" data-path-id="" role="tabpanel">
+      <header class="learning-path__header">
+        <div><p class="eyebrow" data-field="skill-level"></p><h2 data-field="name"></h2><p data-field="description"></p></div>
+        <div class="path-progress"><span><b data-field="completed">0</b>/<span data-field="total">10</span></span><div class="progress-track" aria-hidden="true"><i></i></div><small>שלבים הושלמו</small></div>
+      </header>
+      <ol class="path-steps" data-field="steps"></ol>
+    </article>
+  </template>
+
+  <template id="path-step-template">
+    <li class="path-step" data-step-order="">
+      <div class="path-step__rail"><span data-field="order"></span><i aria-hidden="true"></i></div>
+      <div class="path-step__content">
+        <header><div><p class="path-step__label">שלב <span data-field="order-label"></span></p><h3 data-field="goal"></h3><p data-field="explanation"></p></div><label class="step-complete"><input type="checkbox" data-action="toggle-path-step"><span>סיימתי</span></label></header>
+        <section class="path-step__videos"><h4>סרטונים מרכזיים</h4><div class="path-video-list" data-field="primary-videos"></div></section>
+        <details class="path-step__alternatives"><summary>הציגו סרטונים חלופיים</summary><div class="path-video-list" data-field="alternative-videos"></div></details>
+      </div>
+    </li>
+  </template>
+
+  <template id="path-video-template">
+    <button class="path-video" type="button" data-action="open-video" data-video-id="">
+      <img width="160" height="90" loading="lazy" decoding="async" alt="">
+      <span><strong data-field="title"></strong><small><span data-field="channel"></span> · <span data-field="duration"></span></small></span>
+      <i aria-hidden="true">←</i>
+    </button>
+  </template>
+
+  <template id="related-card-template">
+    <button class="related-card" type="button" data-action="open-video" data-video-id="">
+      <img width="160" height="90" loading="lazy" decoding="async" alt="">
+      <span><strong data-field="title"></strong><small data-field="channel"></small></span>
+    </button>
+  </template>
+
+  <template id="filter-chip-template">
+    <button class="filter-chip" type="button" data-action="remove-filter"><span data-field="label"></span><i aria-hidden="true">×</i></button>
+  </template>
+
+  <template id="skeleton-card-template">
+    <div class="skeleton-card" aria-hidden="true"><i></i><b></b><b></b><span></span></div>
+  </template>
+</body>
+</html>

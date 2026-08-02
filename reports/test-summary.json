@@ -1,0 +1,21 @@
+{
+  "generated_at": "2026-08-02T23:51:00+03:00",
+  "status": "pass",
+  "totals": {
+    "passed": 4412,
+    "failed": 0
+  },
+  "counting_method": "סכום בדיקות ייחודיות בלבד; בדיקות legacy וחזרות חופפות אינן נספרות פעמיים",
+  "breakdown": [
+    { "suite": "tools/validate_data.py", "passed": 4277, "failed": 0 },
+    { "suite": "node:test", "passed": 29, "failed": 0 },
+    { "suite": "Python unittest", "passed": 4, "failed": 0 },
+    { "suite": "בדיקת זמינות YouTube מקוונת", "passed": 60, "failed": 0 },
+    { "suite": "בדיקות קבלה בדפדפן", "passed": 42, "failed": 0 }
+  ],
+  "additional_commands_not_added_to_total": [
+    { "command": "python tools/validate_wave1.py", "status": "pass", "reason": "חופף לבדיקות validate_data" },
+    { "command": "python tools/build_audit.py", "status": "pass", "reason": "מפיק דוחות ומריץ שוב את validate_data" },
+    { "command": "python tools/check_links.py --online --report reports/link-check.json", "status": "pass", "reason": "60 בדיקות ה-URL המקומיות חופפות לאימות הנתונים; 60 בדיקות הזמינות המקוונות כן נכללו" }
+  ]
+}

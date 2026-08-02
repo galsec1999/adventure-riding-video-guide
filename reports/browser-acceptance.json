@@ -1,0 +1,61 @@
+{
+  "generated_at": "2026-08-02T23:51:00+03:00",
+  "site_url": "http://127.0.0.1:4173/",
+  "tool": "Codex in-app Browser",
+  "configured_viewports": {
+    "desktop": "1440x900",
+    "mobile": "390x844"
+  },
+  "captured_image_dimensions": {
+    "desktop": "1425x891",
+    "mobile": "375x812"
+  },
+  "summary": {
+    "checks_passed": 42,
+    "checks_failed": 0
+  },
+  "checks": [
+    { "id": "local_server_http_200", "status": "pass", "evidence": "השרת המקומי החזיר HTTP 200" },
+    { "id": "app_loaded_60_records", "status": "pass", "evidence": "היישום סיים טעינה והציג 60 סרטונים" },
+    { "id": "hebrew_rtl_document", "status": "pass", "evidence": "html lang=he ו-dir=rtl" },
+    { "id": "desktop_home_screenshot", "status": "pass", "evidence": "reports/screenshots/desktop-home.png" },
+    { "id": "desktop_library_screenshot", "status": "pass", "evidence": "reports/screenshots/desktop-library.png" },
+    { "id": "desktop_video_dialog_screenshot", "status": "pass", "evidence": "reports/screenshots/desktop-video-dialog.png" },
+    { "id": "desktop_learning_path_screenshot", "status": "pass", "evidence": "reports/screenshots/desktop-learning-path.png" },
+    { "id": "mobile_home_screenshot", "status": "pass", "evidence": "reports/screenshots/mobile-home.png" },
+    { "id": "mobile_library_screenshot", "status": "pass", "evidence": "reports/screenshots/mobile-library.png" },
+    { "id": "mobile_video_dialog_screenshot", "status": "pass", "evidence": "reports/screenshots/mobile-video-dialog.png" },
+    { "id": "mobile_learning_path_screenshot", "status": "pass", "evidence": "reports/screenshots/mobile-learning-path.png" },
+    { "id": "desktop_console_clean", "status": "pass", "evidence": "0 הודעות error/warn" },
+    { "id": "mobile_console_clean", "status": "pass", "evidence": "0 הודעות error/warn" },
+    { "id": "mobile_no_horizontal_overflow", "status": "pass", "evidence": "דף הבית, ספרייה, חלון סרטון ומסלול לא חרגו מרוחב התצוגה" },
+    { "id": "mobile_menu", "status": "pass", "evidence": "aria-expanded, תווית וכיווץ/פתיחה עודכנו" },
+    { "id": "mobile_filter_drawer", "status": "pass", "evidence": "החלונית נפתחה בתוך התצוגה במידות 375x844 וסגרה את עצמה" },
+    { "id": "keyboard_search_input", "status": "pass", "evidence": "שדה החיפוש קיבל מיקוד וקלט תו באמצעות פעולת מקלדת" },
+    { "id": "dialog_accessible_name", "status": "pass", "evidence": "ה-dialog נחשף בשם כותרת הסרטון וכפתור הסגירה נשא שם נגיש" },
+    { "id": "no_duplicate_dom_ids", "status": "pass", "evidence": "לא נמצאו מזהי DOM כפולים בתצוגה שנבדקה" },
+    { "id": "search_he_sand", "status": "pass", "evidence": "חול: 4 תוצאות; ראשונה yt-UuoceB8wp4Q" },
+    { "id": "search_he_mud", "status": "pass", "evidence": "בוץ: 3 תוצאות; ראשונה yt-rlcGpTJl16U" },
+    { "id": "search_he_road_cornering", "status": "pass", "evidence": "פניות בכביש: 19 תוצאות; ראשונה yt-yBjN7N_n_Ww" },
+    { "id": "search_he_emergency_braking", "status": "pass", "evidence": "בלימת חירום: 3 תוצאות; ראשונה yt-nsklKzXl2Ws" },
+    { "id": "search_he_lifting", "status": "pass", "evidence": "הרמת אופנוע: 3 תוצאות; ראשונה yt-dRvofOL3eaI" },
+    { "id": "search_he_rain", "status": "pass", "evidence": "גשם: תוצאה אחת; yt-DY7OFizK_eo" },
+    { "id": "search_he_steep_hill", "status": "pass", "evidence": "עלייה תלולה: 2 תוצאות; ראשונה yt-UHkVHDFNUqU" },
+    { "id": "search_he_slow_riding", "status": "pass", "evidence": "רכיבה איטית: 7 תוצאות; ראשונה yt-824lwgKbv-M" },
+    { "id": "search_en_sand", "status": "pass", "evidence": "sand: 4 תוצאות; ראשונה yt-UuoceB8wp4Q" },
+    { "id": "search_en_rain_whole_word", "status": "pass", "evidence": "rain: תוצאה אחת בלבד; yt-DY7OFizK_eo" },
+    { "id": "search_en_emergency_braking", "status": "pass", "evidence": "emergency braking: 3 תוצאות; ראשונה yt-nsklKzXl2Ws" },
+    { "id": "triple_filter", "status": "pass", "evidence": "offroad_adventure + en + sand החזירו בדיוק yt-UuoceB8wp4Q, yt-_yZRZN_X9sQ, yt-TDCajc6HYRE" },
+    { "id": "iframe_absent_before_consent", "status": "pass", "evidence": "0 iframe לפני לחיצה" },
+    { "id": "privacy_enhanced_embed", "status": "pass", "evidence": "לאחר לחיצה נוצר iframe אחד מ-youtube-nocookie.com" },
+    { "id": "no_embed_autoplay", "status": "pass", "evidence": "כתובת הנגן לא כללה autoplay=1" },
+    { "id": "iframe_removed_on_close", "status": "pass", "evidence": "לאחר סגירת החלון נותרו 0 iframe" },
+    { "id": "favorites_persist", "status": "pass", "evidence": "yt-UuoceB8wp4Q נשאר במועדפים לאחר רענון" },
+    { "id": "watched_persists", "status": "pass", "evidence": "yt-UuoceB8wp4Q נשאר מסומן כנצפה לאחר רענון" },
+    { "id": "theme_persists", "status": "pass", "evidence": "מצב בהיר נשמר לאחר רענון" },
+    { "id": "path_progress_persists", "status": "pass", "evidence": "שלב 1 במסלול השטח נשמר; 1 מתוך 20, 5 אחוזים" },
+    { "id": "history_back_resets_view", "status": "pass", "evidence": "Back מהספרייה לכתובת ללא view החזיר את ה-UI לדף הבית" },
+    { "id": "path_control_focus_restored", "status": "pass", "evidence": "לאחר רינדור המסלול המיקוד חזר ל-checkbox של שלב 1" },
+    { "id": "both_learning_paths_render", "status": "pass", "evidence": "הוצגו 2 מסלולים, 10 שלבים בכל אחד, כולל סרטונים מרכזיים וחלופות" }
+  ]
+}
