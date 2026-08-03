@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="ספריית וידאו מקצועית בעברית ללימוד רכיבת אדוונצ'ר, שטח וכביש.">
+  <meta name="description" data-site-description content="ספריית וידאו מקצועית בעברית ללימוד רכיבת אדוונצ'ר, שטח וכביש.">
   <meta name="theme-color" content="#f4f1e8">
   <title>מדריך הווידאו לרכיבת אדוונצ'ר</title>
   <link rel="stylesheet" href="assets/css/styles.css">
@@ -14,11 +14,15 @@
 
   <header class="site-header" id="site-header" data-menu-open="false">
     <div class="site-header__inner shell">
-      <a class="brand" href="#home" data-route="home" data-view="home" aria-label="מדריך הווידאו לרכיבת אדוונצ'ר — דף הבית">
-        <span class="brand__mark" aria-hidden="true"><span></span></span>
+      <a class="brand" href="#home" data-route="home" data-view="home" data-site-home-link aria-label="מדריך הווידאו לרכיבת אדוונצ'ר — דף הבית">
+        <span class="brand__visual" data-site-logo-container>
+          <span class="brand__mark" data-logo-fallback aria-hidden="true"><span></span></span>
+          <img class="brand__logo" data-site-logo alt="" hidden>
+        </span>
         <span class="brand__copy">
           <strong data-site-name>מדריך הווידאו</strong>
           <small>אדוונצ'ר · שטח · כביש</small>
+          <small class="brand__community" data-community-name hidden></small>
         </span>
       </a>
 
@@ -86,9 +90,9 @@
               </div>
 
               <dl class="hero__stats" aria-label="נתוני הספרייה">
-                <div><dt data-stat="videos">60</dt><dd>סרטונים מאומתים</dd></div>
-                <div><dt data-stat="domains">5</dt><dd>תחומי לימוד</dd></div>
-                <div><dt data-stat="paths">2</dt><dd>מסלולים מסודרים</dd></div>
+                <div><dt data-stat="videos">—</dt><dd>סרטונים מאומתים</dd></div>
+                <div><dt data-stat="domains">—</dt><dd>תחומי לימוד</dd></div>
+                <div><dt data-stat="paths">—</dt><dd>מסלולים מסודרים</dd></div>
               </dl>
             </div>
 
@@ -178,7 +182,7 @@
         <header class="page-hero page-hero--library">
           <div class="shell page-hero__inner">
             <div>
-              <p class="eyebrow eyebrow--accent">60 סרטונים. מידע מאומת. חיפוש אחד.</p>
+              <p class="eyebrow eyebrow--accent"><span data-stat="videos">—</span> סרטונים. מידע מאומת. חיפוש אחד.</p>
               <h1 id="library-title">ספריית הסרטונים</h1>
               <p>חפשו בעברית או באנגלית ושלבו מסננים כדי להגיע במהירות להדרכה הנכונה.</p>
             </div>
@@ -262,7 +266,7 @@
 
               <div class="filter-form__footer">
                 <button class="button button--quiet" type="reset" data-action="reset-filters">איפוס הכול</button>
-                <button class="button button--primary" type="button" data-action="apply-filters">הציגו <span data-filter-result-count>60</span> סרטונים</button>
+                <button class="button button--primary" type="button" data-action="apply-filters">הציגו <span data-filter-result-count>—</span> סרטונים</button>
               </div>
             </form>
           </aside>
@@ -270,7 +274,7 @@
           <div class="library-results">
             <div class="result-toolbar">
               <div>
-                <p class="result-count" id="result-count" role="status" aria-live="polite"><strong>60</strong> סרטונים נמצאו</p>
+                <p class="result-count" id="result-count" role="status" aria-live="polite"><strong>—</strong> סרטונים נמצאו</p>
                 <div class="active-filters" id="active-filters" aria-label="מסננים פעילים"></div>
               </div>
               <div class="sort-control">
@@ -352,7 +356,7 @@
           <article class="safety-statement">
             <p class="eyebrow">הבהרת בטיחות</p>
             <h2>הסרטונים במדריך נועדו להעשרה ולמידה בלבד</h2>
-            <p>צפייה בווידאו אינה מחליפה הדרכה מעשית של מדריך מוסמך. יש לתרגל בהדרגה, במקום בטוח, עם ציוד מיגון מתאים ובהתאם לחוק, לתנאי הדרך ולרמת הרוכב.</p>
+            <p data-safety-warning>צפייה בווידאו אינה מחליפה הדרכה מעשית של מדריך מוסמך. יש לתרגל בהדרגה, במקום בטוח, עם ציוד מיגון מתאים ובהתאם לחוק, לתנאי הדרך ולרמת הרוכב.</p>
           </article>
 
           <section aria-labelledby="safety-principles-title">
@@ -378,8 +382,11 @@
   <footer class="site-footer">
     <div class="shell site-footer__grid">
       <div class="site-footer__brand">
-        <span class="brand__mark brand__mark--footer" aria-hidden="true"><span></span></span>
-        <div><strong data-site-name>מדריך הווידאו לרכיבת אדוונצ'ר</strong><p>מרכזים ידע חיצוני איכותי כדי שתוכלו ללמוד, לבחור ולתרגל בצורה אחראית.</p></div>
+        <span class="brand__visual" data-site-logo-container>
+          <span class="brand__mark brand__mark--footer" data-logo-fallback aria-hidden="true"><span></span></span>
+          <img class="brand__logo brand__logo--footer" data-site-logo alt="" hidden>
+        </span>
+        <div><strong data-site-name>מדריך הווידאו לרכיבת אדוונצ'ר</strong><p>מרכזים ידע חיצוני איכותי כדי שתוכלו ללמוד, לבחור ולתרגל בצורה אחראית.</p><p data-community-name hidden></p></div>
       </div>
       <nav aria-label="ניווט תחתון">
         <h2>ניווט מהיר</h2>
@@ -395,7 +402,7 @@
       </div>
     </div>
     <div class="shell site-footer__bottom">
-      <p>© <span data-current-year></span> <span data-author-name>אילן נחמן</span>. התקצירים והסיווגים נכתבו עבור מדריך זה.</p>
+      <p data-author-block>© <span data-current-year></span> <span data-author-name>אילן נחמן</span>. התקצירים והסיווגים נכתבו עבור מדריך זה.</p>
       <p>YouTube ושמות הערוצים הם סימנים של בעליהם.</p>
     </div>
   </footer>
@@ -443,6 +450,10 @@
           <h3>דיווח על קישור או בקשת הסרה</h3>
           <p>בחלון הפרטים של כל סרטון ניתן לבחור „דיווח על קישור” ולהעתיק הודעה הכוללת את מזהה הסרטון והמקור. כך ניתן להעביר דיווח מדויק למפעיל המדריך.</p>
         </section>
+        <section data-contact-block hidden>
+          <h3>יצירת קשר</h3>
+          <p data-contact></p>
+        </section>
         <div class="rights-dialog__note">כל הזכויות בסרטונים, בתמונות התצוגה ובשמות הערוצים שייכות ליוצרים ולבעלי הזכויות המקוריים.</div>
       </div>
     </div>
@@ -457,7 +468,7 @@
           <img width="480" height="360" loading="lazy" decoding="async" alt="">
           <span class="video-card__play" aria-hidden="true">▶</span>
         </button>
-        <span class="video-card__duration" data-field="duration" hidden></span>
+        <span class="video-card__duration" data-field="duration" dir="ltr" hidden></span>
         <button class="favorite-button" type="button" data-action="toggle-favorite" aria-label="הוספה למועדפים" aria-pressed="false"><span aria-hidden="true">♡</span></button>
       </div>
       <div class="video-card__body">
@@ -468,7 +479,7 @@
         </div>
         <button class="video-card__title-button" type="button" data-action="open-video"><h3 data-field="title-he"></h3></button>
         <p class="video-card__original" data-field="title-original" dir="auto"></p>
-        <p class="video-card__channel"><span data-field="channel"></span><span aria-hidden="true">·</span><span data-field="category"></span></p>
+        <p class="video-card__channel"><bdi data-field="channel" dir="auto"></bdi><span aria-hidden="true">·</span><bdi data-field="category" dir="auto"></bdi></p>
         <p class="video-card__summary" data-field="summary"></p>
         <div class="video-card__learn"><strong>מה נלמד</strong><p data-field="learning-point"></p></div>
         <ul class="tag-list" data-field="tags" aria-label="תגיות"></ul>
@@ -506,7 +517,7 @@
   <template id="path-video-template">
     <button class="path-video" type="button" data-action="open-video" data-video-id="">
       <img width="160" height="90" loading="lazy" decoding="async" alt="">
-      <span><strong data-field="title"></strong><small><span data-field="channel"></span> · <span data-field="duration"></span></small></span>
+      <span><strong data-field="title"></strong><small><bdi data-field="channel" dir="auto"></bdi> <span aria-hidden="true">·</span> <span data-field="duration" dir="ltr"></span></small></span>
       <i aria-hidden="true">←</i>
     </button>
   </template>
@@ -514,7 +525,7 @@
   <template id="related-card-template">
     <button class="related-card" type="button" data-action="open-video" data-video-id="">
       <img width="160" height="90" loading="lazy" decoding="async" alt="">
-      <span><strong data-field="title"></strong><small data-field="channel"></small></span>
+      <span><strong data-field="title"></strong><small><bdi data-field="channel" dir="auto"></bdi></small></span>
     </button>
   </template>
 

@@ -1,5 +1,16 @@
 import { applySearchAndFilters, prepareVideos } from "./search.js";
 import { browserStorage } from "./storage.js";
+import {
+  INITIAL_VISIBLE_LIMIT,
+  LOAD_MORE_BATCH_SIZE,
+  clampVisibleLimit,
+  nextVisibleLimit,
+} from "./pagination.js";
+
+const MOBILE_OVERLAY_QUERY = "(max-width: 59.999rem)";
+const DEFAULT_SITE_NAME = "מדריך הווידאו לרכיבת אדוונצ'ר";
+const DEFAULT_SAFETY_WARNING = "יש לתרגל בהדרגה, במקום בטוח ועם ציוד מיגון מתאים.";
+const SAFE_LOGO_EXTENSION = /\.(?:avif|gif|jpe?g|png|svg|webp)$/i;
 
 const DATA_FILES = Object.freeze({
   videos: "data/videos.json",
@@ -51,15 +62,136 @@ const state = {
   watched: new Set(),
   pathProgress: {},
   currentView: "home",
-  visibleLimit: 60,
+  visibleLimit: INITIAL_VISIBLE_LIMIT,
   activeVideoId: null,
-  restoreFocus: null,
-  closingVideoDialog: false,
   ready: false,
 };
 
 const $ = (selector, root = document) => root.querySelector(selector);
 const $$ = (selector, root = document) => [...root.querySelectorAll(selector)];
+
+function createOverlayManager() {
+  const active = new Map();
+  const mobileMedia = window.matchMedia(MOBILE_OVERLAY_QUERY);
+  let scrollLock = null;
+
+  function setInertOutside(root) {
+    if (!(root instanceof HTMLElement)) return [];
+    const records = [];
+    let current = root;
+    while (current?.parentElement && current !== document.body) {
+      const parent = current.parentElement;
+      [...parent.children].forEach((sibling) => {
+        if (!(sibling instanceof HTMLElement) || sibling === current || sibling.id === "toast-region") return;
+        records.push({
+          element: sibling,
+          hadInert: sibling.hasAttribute("inert"),
+          inertValue: sibling.inert,
+          ariaHidden: sibling.getAttribute("aria-hidden"),
+        });
+        if ("inert" in sibling) sibling.inert = true;
+        else sibling.setAttribute("aria-hidden", "true");
+        sibling.dataset.overlayInert = "true";
+      });
+      current = parent;
+    }
+    return records;
+  }
+
+  function restoreInert(records = []) {
+    records.forEach(({ element, hadInert, inertValue, ariaHidden }) => {
+      if (!element.isConnected) return;
+      if ("inert" in element) element.inert = inertValue;
+      if (hadInert) element.setAttribute("inert", "");
+      else element.removeAttribute("inert");
+      if (ariaHidden == null) element.removeAttribute("aria-hidden");
+      else element.setAttribute("aria-hidden", ariaHidden);
+      delete element.dataset.overlayInert;
+    });
+  }
+
+  function locksScroll(name) {
+    return name === "video" || name === "rights" || mobileMedia.matches;
+  }
+
+  function syncBody() {
+    const modalOpen = active.has("video") || active.has("rights");
+    const filtersOpen = active.has("filters");
+    const menuOpen = active.has("menu");
+    document.body.dataset.modalOpen = String(modalOpen);
+    document.body.dataset.filtersOpen = String(filtersOpen);
+    document.body.dataset.menuOpen = String(menuOpen);
+    const shouldLock = [...active.keys()].some(locksScroll);
+    if (shouldLock && !scrollLock) {
+      scrollLock = { x: window.scrollX, y: window.scrollY };
+      document.body.style.setProperty("--overlay-scroll-y", `${scrollLock.y}px`);
+      document.body.dataset.scrollLocked = "true";
+    } else if (!shouldLock && scrollLock) {
+      const position = scrollLock;
+      scrollLock = null;
+      document.body.dataset.scrollLocked = "false";
+      document.body.style.removeProperty("--overlay-scroll-y");
+      const previousBehavior = document.documentElement.style.scrollBehavior;
+      document.documentElement.style.scrollBehavior = "auto";
+      window.scrollTo(position.x, position.y);
+      document.documentElement.style.scrollBehavior = previousBehavior;
+    }
+  }
+
+  function close(name, { restoreFocus = true } = {}) {
+    const entry = active.get(name);
+    if (!entry) return false;
+    active.delete(name);
+    entry.onClose?.();
+    restoreInert(entry.inertRecords);
+    syncBody();
+    if (restoreFocus && entry.opener instanceof HTMLElement && entry.opener.isConnected) {
+      entry.opener.focus({ preventScroll: true });
+    }
+    return true;
+  }
+
+  function open(name, { root, opener = document.activeElement, firstFocus, inertBackground = false, onClose } = {}) {
+    if (active.has(name)) return active.get(name);
+    if (name === "menu") close("filters", { restoreFocus: false });
+    if (name === "filters") close("menu", { restoreFocus: false });
+    if (name === "video" || name === "rights") {
+      close("menu", { restoreFocus: false });
+      close("filters", { restoreFocus: false });
+    }
+    const entry = {
+      opener: opener instanceof HTMLElement && opener !== document.body ? opener : null,
+      inertRecords: inertBackground ? setInertOutside(root) : [],
+      onClose,
+    };
+    active.set(name, entry);
+    syncBody();
+    const focusTarget = () => {
+      const target = typeof firstFocus === "function" ? firstFocus() : firstFocus;
+      if (target instanceof HTMLElement && target.isConnected) target.focus({ preventScroll: true });
+    };
+    focusTarget();
+    window.requestAnimationFrame(focusTarget);
+    window.setTimeout(() => {
+      if (active.get(name) === entry) focusTarget();
+    }, 250);
+    return entry;
+  }
+
+  function closeTransient({ restoreFocus = false } = {}) {
+    close("filters", { restoreFocus });
+    close("menu", { restoreFocus });
+  }
+
+  function handleBreakpoint() {
+    if (!mobileMedia.matches) closeTransient({ restoreFocus: false });
+  }
+
+  mobileMedia.addEventListener?.("change", handleBreakpoint);
+  return { active: (name) => active.has(name), close, closeTransient, mobileMedia, open, syncBody };
+}
+
+const overlayManager = createOverlayManager();
 
 function createElement(tag, options = {}) {
   const element = document.createElement(tag);
@@ -83,6 +215,168 @@ function createButton(text, action, attrs = {}) {
   return button;
 }
 
+function cleanConfigText(value) {
+  return typeof value === "string" ? value.trim() : "";
+}
+
+function normalizeSiteConfig(config) {
+  if (!config || Array.isArray(config) || typeof config !== "object") {
+    throw new Error("קובץ הגדרות האתר חייב להיות אובייקט JSON תקין.");
+  }
+  const language = cleanConfigText(config.default_language);
+  const direction = cleanConfigText(config.direction);
+  return {
+    site_name_he: cleanConfigText(config.site_name_he) || DEFAULT_SITE_NAME,
+    author_name: cleanConfigText(config.author_name),
+    community_name: cleanConfigText(config.community_name),
+    contact: cleanConfigText(config.contact),
+    logo_path: cleanConfigText(config.logo_path),
+    safety_warning_he: cleanConfigText(config.safety_warning_he) || DEFAULT_SAFETY_WARNING,
+    meta_description_he: cleanConfigText(config.meta_description_he || config.description_he),
+    default_language: /^[a-z]{2,3}(?:-[a-z0-9]{2,8})*$/i.test(language) ? language : "he",
+    direction: direction === "ltr" || direction === "rtl" ? direction : "rtl",
+  };
+}
+
+function resolveSafeLogoUrl(path) {
+  const raw = cleanConfigText(path);
+  if (!raw || raw.startsWith("/") || raw.startsWith("\\") || raw.includes("\\") || raw.includes("?") || raw.includes("#")) return null;
+  if (/^[a-z][a-z0-9+.-]*:/i.test(raw) || raw.startsWith("//")) return null;
+  let decoded;
+  try {
+    decoded = decodeURIComponent(raw);
+  } catch {
+    return null;
+  }
+  if (decoded.includes("\\") || decoded.startsWith("/") || decoded.split("/").some((segment) => segment === "." || segment === "..")) return null;
+  if (!decoded.startsWith("assets/")) return null;
+  if (!SAFE_LOGO_EXTENSION.test(decoded)) return null;
+  const base = new URL(".", document.baseURI);
+  const resolved = new URL(raw, base);
+  if (resolved.protocol !== base.protocol || resolved.origin !== base.origin || !resolved.pathname.startsWith(base.pathname)) return null;
+  return resolved.href;
+}
+
+function applyLogoConfig(config) {
+  const logoUrl = resolveSafeLogoUrl(config.logo_path);
+  $$('[data-site-logo-container]').forEach((container) => {
+    const image = $("[data-site-logo]", container);
+    const fallback = $("[data-logo-fallback]", container);
+    if (!image || !fallback) return;
+    const showFallback = () => {
+      image.onerror = null;
+      image.hidden = true;
+      image.removeAttribute("src");
+      fallback.hidden = false;
+    };
+    image.onerror = showFallback;
+    if (!logoUrl) {
+      showFallback();
+      return;
+    }
+    image.alt = `לוגו ${config.site_name_he}`;
+    fallback.hidden = true;
+    image.hidden = false;
+    image.src = logoUrl;
+  });
+}
+
+function applySiteConfig(config) {
+  document.documentElement.lang = config.default_language;
+  document.documentElement.dir = config.direction;
+  document.title = config.site_name_he;
+  const description = $('meta[name="description"]');
+  const descriptionText = config.meta_description_he
+    || `${config.site_name_he} — ספריית וידאו מקצועית בעברית ללימוד רכיבת אדוונצ'ר, שטח וכביש.`;
+  if (description) description.setAttribute("content", descriptionText);
+  $$('[data-site-name]').forEach((node) => { node.textContent = config.site_name_he; });
+  $$('[data-site-home-link]').forEach((node) => {
+    node.setAttribute("aria-label", `${config.site_name_he} — דף הבית`);
+  });
+  $$('[data-author-name]').forEach((node) => { node.textContent = config.author_name; });
+  $$('[data-author-block]').forEach((node) => { node.hidden = !config.author_name; });
+  $$('[data-community-name]').forEach((node) => {
+    node.textContent = config.community_name;
+    node.hidden = !config.community_name;
+  });
+  $$('[data-contact]').forEach((node) => {
+    node.textContent = config.contact;
+    node.dir = "auto";
+  });
+  $$('[data-contact-block]').forEach((node) => { node.hidden = !config.contact; });
+  $$('[data-safety-warning]').forEach((node) => { node.textContent = config.safety_warning_he; });
+  $$('[data-current-year]').forEach((node) => { node.textContent = String(new Date().getFullYear()); });
+  applyLogoConfig(config);
+}
+
+function validateRuntimeVideos(videos) {
+  if (!Array.isArray(videos)) throw new Error("נתוני הסרטונים חייבים להיות מערך JSON.");
+  if (videos.length === 0) throw new Error("ספריית הסרטונים ריקה. נדרשת לפחות רשומה תקינה אחת.");
+  const requiredStrings = [
+    "id", "youtube_video_id", "youtube_url", "thumbnail_url", "title_he", "title_original",
+    "channel_name", "channel_url", "summary_he", "fit_for_he", "why_watch_he", "quality_reason_he",
+    "domain", "primary_category", "skill_level", "risk_level", "language", "source_type", "last_checked",
+  ];
+  const requiredArrays = [
+    "secondary_categories", "tags", "learning_points_he", "exercises_he", "equipment_he",
+    "safety_warnings_he", "common_mistakes_he", "subtitle_languages", "motorcycle_types",
+    "motorcycle_weight_classes", "terrain_types", "road_conditions", "chapters", "related_video_ids",
+  ];
+  const ids = new Set();
+  const youtubeIds = new Set();
+  videos.forEach((video, index) => {
+    if (!video || Array.isArray(video) || typeof video !== "object") {
+      throw new Error(`רשומת הסרטון ${index + 1} אינה אובייקט תקין.`);
+    }
+    requiredStrings.forEach((field) => {
+      if (typeof video[field] !== "string" || !video[field].trim()) {
+        throw new Error(`רשומת הסרטון ${index + 1} חסרה ערך טקסט תקין בשדה ${field}.`);
+      }
+    });
+    requiredArrays.forEach((field) => {
+      if (!Array.isArray(video[field])) throw new Error(`רשומת הסרטון ${video.id} חייבת לכלול מערך בשדה ${field}.`);
+    });
+    if (!video.verification || typeof video.verification !== "object"
+      || typeof video.verification.notes_he !== "string"
+      || typeof video.verification.classification_confidence !== "string"
+      || !Array.isArray(video.verification.content_evidence_types)) {
+      throw new Error(`רשומת הסרטון ${video.id} חסרה תיעוד אימות תקין.`);
+    }
+    if (!Number.isFinite(video.quality_score) || (video.duration_seconds != null && !Number.isFinite(video.duration_seconds))) {
+      throw new Error(`רשומת הסרטון ${video.id} כוללת ערך מספרי לא תקין.`);
+    }
+    if (ids.has(video.id)) throw new Error(`מזהה הסרטון ${video.id} מופיע יותר מפעם אחת.`);
+    if (youtubeIds.has(video.youtube_video_id)) throw new Error(`YouTube Video ID ${video.youtube_video_id} מופיע יותר מפעם אחת.`);
+    ids.add(video.id);
+    youtubeIds.add(video.youtube_video_id);
+  });
+}
+
+function appendSeparatedParts(container, parts) {
+  parts.filter(Boolean).forEach((part, index) => {
+    if (index > 0) container.append(createElement("span", { text: "·", attrs: { "aria-hidden": "true" } }));
+    container.append(createElement(part.tag || "span", {
+      text: part.text,
+      attrs: { dir: part.dir || "auto", ...part.attrs },
+    }));
+  });
+  return container;
+}
+
+function createVideoMeta(video, { includeCategory = false, includeDate = false, className = "" } = {}) {
+  const parts = [
+    { tag: "bdi", text: video.channel_name, dir: "auto", attrs: { class: "mixed-meta__channel" } },
+    { text: formatDuration(video.duration_seconds), dir: "ltr", attrs: { class: "mixed-meta__duration" } },
+  ];
+  if (includeCategory) parts.push({ tag: "bdi", text: label(video.primary_category), dir: "auto", attrs: { class: "mixed-meta__category" } });
+  if (includeDate) {
+    parts.push(video.published_date
+      ? { tag: "time", text: formatDate(video.published_date), dir: "ltr", attrs: { datetime: video.published_date, class: "mixed-meta__date" } }
+      : { text: "תאריך לא זמין", dir: "auto", attrs: { class: "mixed-meta__date" } });
+  }
+  return appendSeparatedParts(createElement("p", { className: `mixed-meta ${className}`.trim() }), parts);
+}
+
 function formatDuration(seconds) {
   if (!Number.isFinite(seconds)) return "משך לא זמין";
   const hours = Math.floor(seconds / 3600);
@@ -96,9 +390,8 @@ function formatDuration(seconds) {
 function formatDate(value) {
   if (!value) return "תאריך לא זמין";
   const date = new Date(`${value}T00:00:00Z`);
-  return Number.isNaN(date.valueOf()) ? value : new Intl.DateTimeFormat("he-IL", {
-    year: "numeric", month: "long", day: "numeric", timeZone: "UTC",
-  }).format(date);
+  if (Number.isNaN(date.valueOf())) return value;
+  return `${String(date.getUTCDate()).padStart(2, "0")}.${String(date.getUTCMonth() + 1).padStart(2, "0")}.${date.getUTCFullYear()}`;
 }
 
 function label(id) {
@@ -263,8 +556,65 @@ function updateUrl({ push = false, includeVideo = true } = {}) {
   window.history[push ? "pushState" : "replaceState"]({}, "", url);
 }
 
+function reflectMenuState(open) {
+  const button = $("#mobile-menu-toggle");
+  if (button) {
+    button.setAttribute("aria-expanded", String(open));
+    button.setAttribute("aria-label", open ? "סגירת תפריט הניווט" : "פתיחת תפריט הניווט");
+  }
+  $("#primary-nav")?.classList.toggle("is-open", open);
+  if ($("#site-header")) $("#site-header").dataset.menuOpen = String(open);
+}
+
+function setMenuOpen(open, { restoreFocus = true } = {}) {
+  if (!open) {
+    const closed = overlayManager.close("menu", { restoreFocus });
+    if (!closed) reflectMenuState(false);
+    return;
+  }
+  if (!overlayManager.mobileMedia.matches) return;
+  reflectMenuState(true);
+  overlayManager.open("menu", {
+    root: $("#primary-nav"),
+    opener: $("#mobile-menu-toggle"),
+    firstFocus: () => $("#primary-nav a"),
+    inertBackground: true,
+    onClose: () => reflectMenuState(false),
+  });
+}
+
+function reflectFilterState(open) {
+  $("#filter-panel")?.setAttribute("data-open", String(open));
+  $("#mobile-filter-toggle")?.setAttribute("aria-expanded", String(open));
+}
+
+function setFiltersOpen(open, { restoreFocus = true } = {}) {
+  if (!open) {
+    const closed = overlayManager.close("filters", { restoreFocus });
+    if (!closed) reflectFilterState(false);
+    return;
+  }
+  if (!overlayManager.mobileMedia.matches) return;
+  reflectFilterState(true);
+  overlayManager.open("filters", {
+    root: $("#filter-panel"),
+    opener: $("#mobile-filter-toggle"),
+    firstFocus: () => $(".filter-close", $("#filter-panel")) || $("#filter-domain"),
+    inertBackground: true,
+    onClose: () => reflectFilterState(false),
+  });
+}
+
+function closeTransientOverlays({ restoreFocus = false } = {}) {
+  setFiltersOpen(false, { restoreFocus });
+  setMenuOpen(false, { restoreFocus });
+}
+
 function navigate(view, { updateHistory = true, focus = false } = {}) {
   if (!["home", "library", "paths", "safety"].includes(view)) view = "home";
+  closeTransientOverlays({ restoreFocus: false });
+  if ($("#video-dialog")?.open) closeVideo({ updateHistory: false, restoreFocus: false });
+  if ($("#rights-dialog")?.open) closeRights({ restoreFocus: false });
   state.currentView = view;
   $$('[id$="-view"]').forEach((section) => {
     const active = section.id === `${view}-view`;
@@ -276,10 +626,6 @@ function navigate(view, { updateHistory = true, focus = false } = {}) {
     if (active) item.setAttribute("aria-current", "page");
     else item.removeAttribute("aria-current");
   });
-  $("#primary-nav")?.classList.remove("is-open");
-  $("#mobile-menu-toggle")?.setAttribute("aria-expanded", "false");
-  $("#mobile-menu-toggle")?.setAttribute("aria-label", "פתיחת תפריט הניווט");
-  if ($("#site-header")) $("#site-header").dataset.menuOpen = "false";
   if (view === "library") renderLibrary({ syncUrl: false });
   if (view === "paths") renderPaths();
   if (view === "home") renderContinue();
@@ -315,6 +661,7 @@ function renderDomainCards() {
   container.replaceChildren(...cards);
 
   $$('[data-stat="videos"]').forEach((node) => { node.textContent = String(state.videos.length); });
+  $$('[data-stat="domains"]').forEach((node) => { node.textContent = String((state.taxonomy.domains || []).length); });
   $$('[data-stat="paths"]').forEach((node) => { node.textContent = String(state.paths.length); });
   $$('[data-stat="channels"]').forEach((node) => {
     node.textContent = String(new Set(state.videos.map((video) => video.channel_name)).size);
@@ -368,10 +715,7 @@ function createVideoCard(video, { compact = false } = {}) {
 
   const title = createElement("h3", { className: "video-card__title", text: video.title_he });
   const original = createElement("p", { className: "video-card__original", text: video.title_original, attrs: { dir: "auto" } });
-  const meta = createElement("p", {
-    className: "video-card__meta",
-    text: `${video.channel_name} · ${formatDuration(video.duration_seconds)} · ${label(video.primary_category)}`,
-  });
+  const meta = createVideoMeta(video, { includeCategory: true, className: "video-card__meta" });
   const summary = createElement("p", { className: "video-card__summary", text: video.summary_he });
   const learning = createElement("p", { className: "video-card__learning" });
   learning.append(
@@ -452,7 +796,7 @@ function renderLibrary({ syncUrl = true } = {}) {
   const empty = $("#empty-state");
   const loadMore = $("#load-more");
   if (!grid) return;
-  const limit = results.length <= 80 ? results.length : Math.min(state.visibleLimit, results.length);
+  const limit = clampVisibleLimit(results.length, state.visibleLimit);
   grid.replaceChildren(...results.slice(0, limit).map((video) => createVideoCard(video)));
   grid.setAttribute("aria-busy", "false");
   if (empty) empty.hidden = results.length !== 0;
@@ -462,6 +806,8 @@ function renderLibrary({ syncUrl = true } = {}) {
     const wrap = $("#load-more-wrap");
     if (wrap) wrap.hidden = limit >= results.length;
   }
+  const progress = $("#load-progress");
+  if (progress) progress.textContent = `מוצגים ${limit} מתוך ${results.length} סרטונים`;
   announce(`${results.length} סרטונים נמצאו`);
   if (syncUrl) updateUrl();
 }
@@ -482,7 +828,7 @@ function renderContinue() {
     block.append(
       createElement("span", { className: "eyebrow", text: "הסרטון האחרון" }),
       createElement("h3", { text: lastVideo.title_he }),
-      createElement("p", { text: lastVideo.channel_name }),
+      createElement("p", { text: lastVideo.channel_name, attrs: { dir: "auto" } }),
       createButton("המשך לפרטים", "open-video", { "data-video-id": lastVideo.id, className: "button button--primary" }),
     );
     blocks.push(block);
@@ -631,7 +977,7 @@ function createDialogVideoContent(video) {
     badges,
     createElement("h2", { text: video.title_he, attrs: { id: "video-detail-title" } }),
     createElement("p", { className: "video-detail__original", text: video.title_original, attrs: { dir: "auto" } }),
-    createElement("p", { className: "video-detail__meta", text: `${video.channel_name} · ${formatDuration(video.duration_seconds)} · ${formatDate(video.published_date)}` }),
+    createVideoMeta(video, { includeDate: true, className: "video-detail__meta" }),
   );
 
   const player = createElement("div", { className: "video-player-slot", attrs: { id: "video-player-slot", "data-video-id": video.id } });
@@ -681,13 +1027,13 @@ function createDialogVideoContent(video) {
   const filteredChapters = video.chapters.filter((chapter) => !isPlaceholderChapter(chapter));
   const chaptersSection = filteredChapters.length ? createElement("section", { className: "detail-section" }) : null;
   if (chaptersSection) {
-    chaptersSection.append(createElement("h3", { text: "פרקים מאומתים" }));
+    chaptersSection.append(createElement("h3", { text: "פרקים / נקודות זמן מתועדות" }));
     const list = createElement("ol", { className: "chapters" });
     filteredChapters.forEach((chapter) => {
       const item = createElement("li");
       item.append(
-        createElement("span", { text: formatDuration(chapter.start_seconds) }),
-        createElement("span", { text: chapter.title, attrs: { dir: "auto" } }),
+        createElement("time", { text: formatDuration(chapter.start_seconds), attrs: { dir: "ltr", datetime: `PT${chapter.start_seconds}S` } }),
+        createElement("bdi", { text: chapter.title, attrs: { dir: "auto" } }),
       );
       list.append(item);
     });
@@ -695,6 +1041,10 @@ function createDialogVideoContent(video) {
   }
 
   const facts = createElement("dl", { className: "video-facts" });
+  const qualityScore = createElement("span", { text: `${video.quality_score} מתוך 5`, attrs: { dir: "ltr" } });
+  const lastChecked = video.last_checked
+    ? createElement("time", { text: formatDate(video.last_checked), attrs: { dir: "ltr", datetime: video.last_checked } })
+    : createElement("span", { text: "תאריך לא זמין" });
   [
     ["קטגוריה", label(video.primary_category)],
     ["שפה", video.language === "he" ? "עברית" : "אנגלית"],
@@ -705,17 +1055,28 @@ function createDialogVideoContent(video) {
     ["תנאי דרך", video.road_conditions.length ? video.road_conditions.map(label).join(", ") : "לא רלוונטי"],
     ["סוג מקור", label(video.source_type)],
     ["תוכן שיווקי", video.contains_marketing ? "כן — מסומן בשקיפות" : "לא"],
-    ["דירוג פנימי", `${video.quality_score} מתוך 5`],
-    ["נבדק לאחרונה", formatDate(video.last_checked)],
+    ["דירוג פנימי", qualityScore],
+    ["נבדק לאחרונה", lastChecked],
   ].forEach(([term, description]) => {
-    facts.append(createElement("dt", { text: term }), createElement("dd", { text: description }));
+    const value = createElement("dd");
+    if (description instanceof Node) value.append(description);
+    else value.textContent = description;
+    facts.append(createElement("dt", { text: term }), value);
   });
 
   const verification = createElement("section", { className: "detail-section detail-section--verification" });
+  const verificationMeta = createElement("p", { className: "mixed-inline" });
+  verificationMeta.append(
+    document.createTextNode("בסיס הסיווג: "),
+    createElement("bdi", { text: video.verification.content_evidence_types.join(", "), attrs: { dir: "ltr" } }),
+    createElement("span", { text: "·", attrs: { "aria-hidden": "true" } }),
+    document.createTextNode("ביטחון: "),
+    createElement("bdi", { text: video.verification.classification_confidence, attrs: { dir: "ltr" } }),
+  );
   verification.append(
     createElement("h3", { text: "תיעוד אימות" }),
     createElement("p", { text: video.verification.notes_he }),
-    createElement("p", { text: `בסיס הסיווג: ${video.verification.content_evidence_types.join(", ")} · ביטחון: ${video.verification.classification_confidence}` }),
+    verificationMeta,
     createElement("p", { text: video.quality_reason_he }),
   );
 
@@ -729,9 +1090,11 @@ function createDialogVideoContent(video) {
   related.append(relatedGrid);
 
   const source = createElement("section", { className: "source-credit" });
+  const channelLink = createElement("a", { attrs: { href: video.channel_url, target: "_blank", rel: "noopener noreferrer" } });
+  channelLink.append(document.createTextNode("לערוץ "), createElement("bdi", { text: video.channel_name, attrs: { dir: "auto" } }));
   source.append(
     createElement("p", { text: "הסרטון שייך ליוצר ולערוץ המקורי. המדריך מרכז מידע וקישורים לצורכי למידה." }),
-    createElement("a", { text: `לערוץ ${video.channel_name}`, attrs: { href: video.channel_url, target: "_blank", rel: "noopener noreferrer" } }),
+    channelLink,
     createButton("דיווח על קישור שבור או בקשת הסרה", "copy-report", {
       className: "button button--text",
       "data-video-id": video.id,
@@ -751,27 +1114,50 @@ function openVideo(videoId, { play = false, updateHistory = true } = {}) {
   const dialog = $("#video-dialog");
   const content = $("#video-dialog-content");
   if (!video || !dialog || !content) return;
-  state.restoreFocus = document.activeElement;
+  const wasOpen = dialog.open;
+  const opener = document.activeElement;
+  if (!wasOpen) closeTransientOverlays({ restoreFocus: false });
   state.activeVideoId = videoId;
   browserStorage.setLastVideo(videoId);
   content.replaceChildren(createDialogVideoContent(video));
   const dialogTitle = $("#video-dialog-shell-title");
   if (dialogTitle) dialogTitle.textContent = video.title_he;
-  if (!dialog.open) dialog.showModal();
+  if (!wasOpen) dialog.showModal();
+  overlayManager.open("video", {
+    root: dialog,
+    opener,
+    firstFocus: () => $("[data-action='close-video']", dialog),
+  });
   if (play) loadPlayer(videoId);
-  if (updateHistory) updateUrl({ push: true });
+  if (updateHistory) updateUrl({ push: !wasOpen });
   renderContinue();
 }
 
-function closeVideo({ updateHistory = true } = {}) {
-  const dialog = $("#video-dialog");
-  state.closingVideoDialog = true;
-  if (dialog?.open) dialog.close();
-  $("#video-dialog-content")?.replaceChildren();
-  state.closingVideoDialog = false;
+function clearVideoDialogContent() {
+  const content = $("#video-dialog-content");
+  content?.querySelectorAll("iframe").forEach((iframe) => {
+    iframe.src = "about:blank";
+    iframe.remove();
+  });
+  content?.replaceChildren();
+}
+
+function finalizeVideoClose({ updateHistory = true, restoreFocus = true } = {}) {
+  const hadActiveVideo = Boolean(state.activeVideoId);
+  clearVideoDialogContent();
   state.activeVideoId = null;
-  if (updateHistory) updateUrl({ push: true, includeVideo: false });
-  if (state.restoreFocus instanceof HTMLElement) state.restoreFocus.focus();
+  overlayManager.close("video", { restoreFocus });
+  if (updateHistory && hadActiveVideo) updateUrl({ includeVideo: false });
+}
+
+function closeVideo({ updateHistory = true, restoreFocus = true } = {}) {
+  const dialog = $("#video-dialog");
+  const hadActiveVideo = Boolean(state.activeVideoId);
+  state.activeVideoId = null;
+  clearVideoDialogContent();
+  if (updateHistory && hadActiveVideo) updateUrl({ includeVideo: false });
+  if (dialog?.open) dialog.close();
+  overlayManager.close("video", { restoreFocus });
 }
 
 function loadPlayer(videoId) {
@@ -785,6 +1171,7 @@ function loadPlayer(videoId) {
       allow: "accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share",
       allowfullscreen: "",
       referrerpolicy: "strict-origin-when-cross-origin",
+      loading: "lazy",
     },
   });
   slot.replaceChildren(iframe);
@@ -872,20 +1259,21 @@ async function shareVideo(videoId) {
 
 function openRights() {
   const dialog = $("#rights-dialog");
-  if (!dialog) return;
-  const content = $("#rights-dialog-content") || $(".rights-dialog__content", dialog);
-  if (content && !content.dataset.rendered) {
-    const contactText = state.config.contact
-      ? `לפניות הסרה או תיקון: ${state.config.contact}`
-      : "לא הוגדר איש קשר בפרויקט. ניתן להעתיק מדף הסרטון נוסח דיווח הכולל את מזהה המקור.";
-    content.append(
-      createElement("p", { text: "המדריך אינו מארח סרטונים. ההטמעה והקישורים מובילים ל־YouTube, וכל הזכויות שייכות ליוצרים ולערוצים המקוריים." }),
-      createElement("p", { text: "תמונות התצוגה נטענות משרתי YouTube. התקצירים נכתבו עבור המדריך ואינם תמלול של הסרטון." }),
-      createElement("p", { text: contactText }),
-    );
-    content.dataset.rendered = "true";
-  }
+  if (!dialog || dialog.open) return;
+  const opener = document.activeElement;
+  closeTransientOverlays({ restoreFocus: false });
   dialog.showModal();
+  overlayManager.open("rights", {
+    root: dialog,
+    opener,
+    firstFocus: () => $(".modal__close", dialog),
+  });
+}
+
+function closeRights({ restoreFocus = true } = {}) {
+  const dialog = $("#rights-dialog");
+  if (dialog?.open) dialog.close();
+  overlayManager.close("rights", { restoreFocus });
 }
 
 function copyReport(videoId) {
@@ -898,7 +1286,7 @@ function copyReport(videoId) {
 function clearFilter(key) {
   state.filters[key] = "";
   syncControlsFromFilters();
-  state.visibleLimit = 60;
+  state.visibleLimit = INITIAL_VISIBLE_LIMIT;
   renderLibrary();
 }
 
@@ -906,7 +1294,7 @@ function resetFilters() {
   state.filters = { sort: "recommended" };
   $("#filter-form")?.reset();
   syncControlsFromFilters();
-  state.visibleLimit = 60;
+  state.visibleLimit = INITIAL_VISIBLE_LIMIT;
   renderLibrary();
   $("#library-search")?.focus();
   showToast("כל המסננים אופסו");
@@ -924,7 +1312,7 @@ function bindEvents() {
     window.clearTimeout(debounceTimer);
     debounceTimer = window.setTimeout(() => {
       state.filters = { ...state.filters, ...getFiltersFromControls() };
-      state.visibleLimit = 60;
+      state.visibleLimit = INITIAL_VISIBLE_LIMIT;
       renderLibrary();
     }, 180);
   });
@@ -932,7 +1320,7 @@ function bindEvents() {
     if (event.target.id === "filter-watched" && event.target.checked && $("#filter-unwatched")) $("#filter-unwatched").checked = false;
     if (event.target.id === "filter-unwatched" && event.target.checked && $("#filter-watched")) $("#filter-watched").checked = false;
     state.filters = { ...state.filters, ...getFiltersFromControls() };
-    state.visibleLimit = 60;
+    state.visibleLimit = INITIAL_VISIBLE_LIMIT;
     renderLibrary();
   });
   $("#sort-select")?.addEventListener("change", () => renderLibrary());
@@ -971,8 +1359,7 @@ function bindEvents() {
     }
     else if (action === "reload-app") window.location.reload();
     else if (action === "apply-filters" || action === "close-filters") {
-      $("#filter-panel")?.setAttribute("data-open", "false");
-      $("#mobile-filter-toggle")?.setAttribute("aria-expanded", "false");
+      setFiltersOpen(false, { restoreFocus: true });
       if (action === "apply-filters") renderLibrary();
     }
     else if (action === "open-rights") openRights();
@@ -986,7 +1373,7 @@ function bindEvents() {
     else if (action === "back-to-top") window.scrollTo({ top: 0, behavior: "smooth" });
     else if (action === "close-video") closeVideo();
     else if (action === "close-video-dialog") closeVideo();
-    else if (action === "close-rights") $("#rights-dialog")?.close();
+    else if (action === "close-rights") closeRights();
   });
 
   document.addEventListener("change", (event) => {
@@ -994,20 +1381,8 @@ function bindEvents() {
   });
 
   $("#theme-toggle")?.addEventListener("click", toggleTheme);
-  $("#mobile-menu-toggle")?.addEventListener("click", (event) => {
-    const button = event.currentTarget;
-    const open = button.getAttribute("aria-expanded") !== "true";
-    button.setAttribute("aria-expanded", String(open));
-    button.setAttribute("aria-label", open ? "סגירת תפריט הניווט" : "פתיחת תפריט הניווט");
-    $("#primary-nav")?.classList.toggle("is-open", open);
-    if ($("#site-header")) $("#site-header").dataset.menuOpen = String(open);
-  });
-  $("#mobile-filter-toggle")?.addEventListener("click", (event) => {
-    const button = event.currentTarget;
-    const open = button.getAttribute("aria-expanded") !== "true";
-    button.setAttribute("aria-expanded", String(open));
-    $("#filter-panel")?.setAttribute("data-open", String(open));
-  });
+  $("#mobile-menu-toggle")?.addEventListener("click", () => setMenuOpen(!overlayManager.active("menu")));
+  $("#mobile-filter-toggle")?.addEventListener("click", () => setFiltersOpen(!overlayManager.active("filters")));
   $("#hero-search-form")?.addEventListener("submit", (event) => {
     event.preventDefault();
     const query = $("#hero-search")?.value.trim() || "";
@@ -1022,24 +1397,48 @@ function bindEvents() {
   });
   $("#reset-filters")?.addEventListener("click", resetFilters);
   $("#load-more")?.addEventListener("click", () => {
-    state.visibleLimit += 48;
+    const total = applySearchAndFilters(state.videos, state.filters, {
+      favorites: state.favorites,
+      watched: state.watched,
+      synonymIndex: state.synonymIndex,
+    }).length;
+    state.visibleLimit = nextVisibleLimit(state.visibleLimit, total, LOAD_MORE_BATCH_SIZE);
     renderLibrary();
   });
 
   $("#video-dialog")?.addEventListener("close", () => {
-    $("#video-dialog-content")?.replaceChildren();
-    if (state.closingVideoDialog) return;
-    if (state.activeVideoId) {
-      state.activeVideoId = null;
-      updateUrl({ includeVideo: false });
-    }
-    if (state.restoreFocus instanceof HTMLElement) state.restoreFocus.focus();
+    finalizeVideoClose();
+  });
+  $("#video-dialog")?.addEventListener("cancel", (event) => {
+    event.preventDefault();
+    closeVideo();
   });
   $("#video-dialog")?.addEventListener("click", (event) => {
     if (event.target === event.currentTarget) closeVideo();
   });
+  $("#rights-dialog")?.addEventListener("close", () => overlayManager.close("rights"));
+  $("#rights-dialog")?.addEventListener("cancel", (event) => {
+    event.preventDefault();
+    closeRights();
+  });
   $("#rights-dialog")?.addEventListener("click", (event) => {
-    if (event.target === event.currentTarget) event.currentTarget.close();
+    if (event.target === event.currentTarget) closeRights();
+  });
+  document.addEventListener("keydown", (event) => {
+    if (event.key !== "Escape") return;
+    if ($("#video-dialog")?.open) {
+      event.preventDefault();
+      closeVideo();
+    } else if ($("#rights-dialog")?.open) {
+      event.preventDefault();
+      closeRights();
+    } else if (overlayManager.active("filters")) {
+      event.preventDefault();
+      setFiltersOpen(false, { restoreFocus: true });
+    } else if (overlayManager.active("menu")) {
+      event.preventDefault();
+      setMenuOpen(false, { restoreFocus: true });
+    }
   });
   window.addEventListener("popstate", () => {
     hydrateFromUrl();
@@ -1056,21 +1455,13 @@ function bindEvents() {
 }
 
 function renderSafety() {
-  $$('[data-safety-warning]').forEach((node) => {
-    node.textContent = state.config.safety_warning_he || "יש לתרגל בהדרגה, במקום בטוח ועם ציוד מיגון מתאים.";
-  });
-  $$('[data-site-name]').forEach((node) => { node.textContent = state.config.site_name_he || "מדריך הווידאו לרכיבת אדוונצ'ר"; });
-  $$('[data-author-name]').forEach((node) => { node.textContent = state.config.author_name || ""; });
-  $$('[data-community-name]').forEach((node) => {
-    node.textContent = state.config.community_name || "קהילת הרוכבים";
-    node.hidden = !state.config.community_name;
-  });
-  $$('[data-current-year]').forEach((node) => { node.textContent = String(new Date().getFullYear()); });
+  applySiteConfig(state.config);
 }
 
 async function initialize() {
   applyTheme();
   bindEvents();
+  overlayManager.syncBody();
   try {
     const [videos, taxonomy, paths, synonyms, config] = await Promise.all([
       fetchJson(DATA_FILES.videos),
@@ -1079,10 +1470,8 @@ async function initialize() {
       fetchJson(DATA_FILES.synonyms),
       fetchJson(DATA_FILES.config),
     ]);
-    if (!Array.isArray(videos) || videos.length !== 60) {
-      throw new Error(`נדרשו 60 רשומות מאושרות, אך נטענו ${Array.isArray(videos) ? videos.length : 0}.`);
-    }
-    state.config = config;
+    validateRuntimeVideos(videos);
+    state.config = normalizeSiteConfig(config);
     state.taxonomy = taxonomy;
     state.paths = paths;
     setLabels();

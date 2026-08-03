@@ -1,9 +1,15 @@
 {
   "status": "pass",
-  "checks_passed": 4277,
+  "checks_passed": 4279,
   "checks_failed": 0,
   "errors": [],
   "warnings": [],
+  "count_expectation": {
+    "mode": "expected",
+    "value": 60,
+    "actual": 60,
+    "satisfied": true
+  },
   "stats": {
     "learning_paths": 2,
     "learning_path_steps": 20,

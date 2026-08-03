@@ -21,11 +21,11 @@ function ids(collection) {
 }
 
 
-test("dataset has exactly 60 unique records with matching YouTube URLs", () => {
-  assert.equal(videos.length, 60);
-  assert.equal(videoIds.size, 60);
-  assert.equal(new Set(videos.map((video) => video.youtube_video_id)).size, 60);
-  assert.equal(new Set(videos.map((video) => video.youtube_url)).size, 60);
+test("non-empty dataset has unique records with matching YouTube URLs", () => {
+  assert.ok(videos.length > 0);
+  assert.equal(videoIds.size, videos.length);
+  assert.equal(new Set(videos.map((video) => video.youtube_video_id)).size, videos.length);
+  assert.equal(new Set(videos.map((video) => video.youtube_url)).size, videos.length);
 
   videos.forEach((video) => {
     assert.equal(video.id, `yt-${video.youtube_video_id}`);

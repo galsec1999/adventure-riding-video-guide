@@ -40,7 +40,7 @@ test("three simultaneous filters return only matching real records", () => {
 });
 
 
-test("logical reset to empty filters restores all 60 records", () => {
+test("logical reset to empty filters restores the complete dataset", () => {
   const filtered = applySearchAndFilters(
     prepared.videos,
     { domain: "road", category: "emergency_braking", professional: "yes" },
@@ -49,7 +49,7 @@ test("logical reset to empty filters restores all 60 records", () => {
   assert.ok(filtered.length > 0 && filtered.length < prepared.videos.length);
 
   const reset = applySearchAndFilters(prepared.videos, { sort: "recommended" }, context);
-  assert.equal(reset.length, 60);
+  assert.equal(reset.length, prepared.videos.length);
   assert.deepEqual(new Set(reset.map((video) => video.id)), new Set(prepared.videos.map((video) => video.id)));
 });
 
@@ -76,10 +76,13 @@ test("duration filters follow the labels shown in the UI", () => {
   const medium = applySearchAndFilters(prepared.videos, { duration: "medium" }, context);
   const long = applySearchAndFilters(prepared.videos, { duration: "long" }, context);
 
-  assert.equal(short.length, 14);
-  assert.equal(medium.length, 41);
-  assert.equal(long.length, 5);
   assert.ok(short.every((video) => video.duration_seconds <= 300));
   assert.ok(medium.every((video) => video.duration_seconds > 300 && video.duration_seconds <= 900));
   assert.ok(long.every((video) => video.duration_seconds > 900));
+  const knownDurations = prepared.videos.filter((video) => video.duration_seconds != null);
+  assert.equal(short.length + medium.length + long.length, knownDurations.length);
+  assert.equal(
+    new Set([...short, ...medium, ...long].map((video) => video.id)).size,
+    knownDurations.length,
+  );
 });

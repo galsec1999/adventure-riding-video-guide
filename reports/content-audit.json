@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-02T20:50:54+00:00",
+  "generated_at": "2026-08-03T10:25:14+00:00",
   "generator": "tools/build_audit.py",
   "source_files_sha256": {
     "data/videos.json": "4bda3bddeac5cd6f7684f262fe739b3a3d1cfaeeebf2536c3f3dc21f4a171bc0",
@@ -11,10 +11,16 @@
   },
   "validation": {
     "status": "pass",
-    "checks_passed": 4277,
+    "checks_passed": 4278,
     "checks_failed": 0,
     "errors": [],
     "warnings": [],
+    "count_expectation": {
+      "mode": "none",
+      "value": null,
+      "actual": 60,
+      "satisfied": true
+    },
     "stats": {
       "learning_paths": 2,
       "learning_path_steps": 20,

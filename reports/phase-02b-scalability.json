@@ -1,0 +1,59 @@
+{
+  "generated_on": "2026-08-03",
+  "status": "pass",
+  "production_dataset_modified": false,
+  "fixture_strategy": "Temporary in-memory/on-disk clones generated from verified production records with unique technical IDs; never written to data/videos.json.",
+  "fixtures": {
+    "130": {
+      "status": "pass",
+      "node": {
+        "prepare_and_index_ms": 31.74,
+        "search_filter_sort_count_pagination_ms": 23.69,
+        "search": "pass",
+        "triple_filter": "pass",
+        "sort": "pass",
+        "result_count": "pass",
+        "pagination": "pass",
+        "unique_ids": 130
+      },
+      "python_validator": {
+        "status": "pass",
+        "elapsed_ms": 125.47
+      },
+      "browser": {
+        "status": "pass",
+        "observed_navigation_and_initial_render_ms": 3457,
+        "visible_sequence": [48, 96, 130],
+        "final_unique_ids": 130,
+        "console_errors_or_warnings": 0,
+        "horizontal_overflow": false
+      }
+    },
+    "300": {
+      "status": "pass",
+      "node": {
+        "prepare_and_index_ms": 62.48,
+        "search_filter_sort_count_pagination_ms": 19.51,
+        "search": "pass",
+        "triple_filter": "pass",
+        "sort": "pass",
+        "result_count": "pass",
+        "pagination": "pass",
+        "unique_ids": 300
+      },
+      "python_validator": {
+        "status": "pass",
+        "elapsed_ms": 265.38
+      },
+      "browser": {
+        "status": "pass",
+        "observed_navigation_and_initial_render_ms": 6144,
+        "visible_sequence": [48, 96, 144, 192, 240, 288, 300],
+        "final_unique_ids": 300,
+        "console_errors_or_warnings": 0,
+        "horizontal_overflow": false
+      }
+    }
+  },
+  "performance_policy": "Measurements are documented observations only; no hardware-dependent brittle threshold is enforced."
+}

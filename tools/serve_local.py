@@ -64,6 +64,9 @@ def parse_args() -> argparse.Namespace:
 
 
 def main() -> int:
+    for stream in (sys.stdout, sys.stderr):
+        if hasattr(stream, "reconfigure"):
+            stream.reconfigure(encoding="utf-8", errors="replace")
     args = parse_args()
     if not 0 <= args.port <= 65535:
         print("ERROR: --port must be between 0 and 65535.", file=sys.stderr)

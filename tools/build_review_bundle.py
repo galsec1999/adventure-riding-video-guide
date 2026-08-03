@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build the allow-listed phase-02 review bundle and its SHA-256 manifest."""
+"""Build the allow-listed phase-02B review bundle and its SHA-256 manifest."""
 
 from __future__ import annotations
 
@@ -11,7 +11,7 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
-DEFAULT_OUTPUT = ROOT / "reports" / "phase-02-review-bundle.zip"
+DEFAULT_OUTPUT = ROOT / "reports" / "phase-02b-review-bundle.zip"
 MANIFEST = ROOT / "REVIEW_BUNDLE_MANIFEST.md"
 
 ROOT_FILES = (
@@ -29,7 +29,10 @@ ROOT_FILES = (
     "DECISIONS.md",
     "NEXT_ACTION.md",
     "REVIEW_PACKET.md",
+    "PHASE_02_INDEPENDENT_REVIEW_HE.md",
+    "PROMPT_02B_CODEX_REPAIR_HE.md",
     "prompts/02_CODEX_BUILD_SITE_V1.md",
+    "prompts/03_WORK_WAVE_2.md",
 )
 
 TREE_ROOTS = (
@@ -38,7 +41,7 @@ TREE_ROOTS = (
     "schema",
     "tests",
     "tools",
-    "reports/screenshots",
+    "reports",
 )
 
 REPORT_FILES = (
@@ -49,6 +52,15 @@ REPORT_FILES = (
     "reports/link-check.json",
     "reports/browser-acceptance.json",
     "reports/test-summary.json",
+    "reports/content-findings-for-work.md",
+    "reports/phase-02b-baseline.md",
+    "reports/phase-02b-scalability.json",
+    "reports/phase-02b-browser-acceptance.json",
+    "reports/phase-02b-test-summary.json",
+    "reports/git-status.txt",
+    "reports/git-log.txt",
+    "reports/git-show-stat.txt",
+    "reports/git-diff-check.txt",
 )
 
 EXCLUDED_PARTS = {
@@ -70,6 +82,7 @@ EXCLUDED_NAMES = {
     "credentials.json",
     "secrets.json",
     "phase-02-review-bundle.zip",
+    "phase-02b-review-bundle.zip",
 }
 
 EXCLUDED_SUFFIXES = {
@@ -82,6 +95,7 @@ EXCLUDED_SUFFIXES = {
     ".bak",
     ".swp",
     ".pyc",
+    ".zip",
 }
 
 
@@ -137,7 +151,7 @@ def write_manifest(files: list[Path]) -> None:
         "",
         f"- Generated: `{generated_at}`",
         f"- Listed project files: **{len(files) + 1}**",
-        "- Archive path: `reports/phase-02-review-bundle.zip`",
+        "- Archive path: `reports/phase-02b-review-bundle.zip`",
         "- The archive is allow-listed; `.git/`, `node_modules/`, caches, temporary files and common secret/key files are excluded.",
         "",
         "| Path | Bytes | SHA-256 |",
@@ -194,7 +208,7 @@ def parse_args() -> argparse.Namespace:
         "--output",
         type=Path,
         default=DEFAULT_OUTPUT,
-        help="ZIP path inside the project (default: reports/phase-02-review-bundle.zip)",
+        help="ZIP path inside the project (default: reports/phase-02b-review-bundle.zip)",
     )
     return parser.parse_args()
 
@@ -203,7 +217,7 @@ def main() -> int:
     args = parse_args()
     output = args.output if args.output.is_absolute() else ROOT / args.output
     count, size, digest = build_bundle(output)
-    print("PASS: phase-02 review bundle")
+    print("PASS: phase-02B review bundle")
     print(f"Files: {count}")
     print(f"Bytes: {size}")
     print(f"SHA-256: {digest}")

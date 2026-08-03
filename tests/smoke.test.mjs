@@ -111,7 +111,7 @@ test("initial HTML has no iframe and app defers a privacy-enhanced player", asyn
 });
 
 
-test("local server returns the site and 60-record JSON without directory listings", { timeout: 15_000 }, async () => {
+test("local server returns the site and a non-empty video JSON array without directory listings", { timeout: 15_000 }, async () => {
   const { child, url } = await startLocalServer();
   try {
     const [indexResponse, dataResponse, directoryResponse] = await Promise.all([
@@ -125,7 +125,10 @@ test("local server returns the site and 60-record JSON without directory listing
     assert.match(await indexResponse.text(), /מדריך הווידאו לרכיבת אדוונצ'ר/);
 
     assert.equal(dataResponse.status, 200);
-    assert.equal((await dataResponse.json()).length, 60);
+    const videos = await dataResponse.json();
+    assert.ok(Array.isArray(videos));
+    assert.ok(videos.length > 0);
+    assert.equal(new Set(videos.map((video) => video.id)).size, videos.length);
     assert.equal(directoryResponse.status, 404);
   } finally {
     await stopLocalServer(child);

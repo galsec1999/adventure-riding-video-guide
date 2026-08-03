@@ -48,6 +48,14 @@ class ValidationAudit:
     errors: list[dict[str, Any]] = field(default_factory=list)
     warnings: list[dict[str, Any]] = field(default_factory=list)
     stats: dict[str, Any] = field(default_factory=dict)
+    count_expectation: dict[str, Any] = field(
+        default_factory=lambda: {
+            "mode": "none",
+            "value": None,
+            "actual": None,
+            "satisfied": False,
+        }
+    )
 
     def check(
         self,
@@ -83,6 +91,7 @@ class ValidationAudit:
             "checks_failed": self.checks_failed,
             "errors": self.errors,
             "warnings": self.warnings,
+            "count_expectation": self.count_expectation,
             "stats": self.stats,
         }
 
@@ -145,6 +154,48 @@ def duplicate_values(values: Iterable[Any]) -> list[Any]:
             duplicates.add(value)
         seen.add(value)
     return sorted(duplicates, key=str)
+
+
+def validate_count_options(
+    expected_count: int | None,
+    minimum_count: int | None,
+) -> None:
+    """Reject contradictory or nonsensical count policies for API callers."""
+
+    if expected_count is not None and minimum_count is not None:
+        raise ValueError("expected_count and minimum_count cannot be used together")
+    for name, value in (
+        ("expected_count", expected_count),
+        ("minimum_count", minimum_count),
+    ):
+        if value is not None and (isinstance(value, bool) or not isinstance(value, int) or value <= 0):
+            raise ValueError(f"{name} must be a positive integer")
+
+
+def describe_count_expectation(
+    *,
+    expected_count: int | None,
+    minimum_count: int | None,
+    actual: int | None,
+) -> dict[str, Any]:
+    if expected_count is not None:
+        mode = "expected"
+        value = expected_count
+        satisfied = actual == expected_count
+    elif minimum_count is not None:
+        mode = "minimum"
+        value = minimum_count
+        satisfied = actual is not None and actual >= minimum_count
+    else:
+        mode = "none"
+        value = None
+        satisfied = actual is not None and actual > 0
+    return {
+        "mode": mode,
+        "value": value,
+        "actual": actual,
+        "satisfied": satisfied,
+    }
 
 
 def walk_strings(value: Any, path: str) -> Iterator[tuple[str, str]]:
@@ -239,10 +290,27 @@ def validate_videos(
     audit: ValidationAudit,
     videos: Any,
     allowed: dict[str, set[str]],
+    *,
+    expected_count: int | None = None,
+    minimum_count: int | None = None,
 ) -> set[str]:
     if not audit.check(isinstance(videos, list), "videos.array", "videos.json must contain an array", path="data/videos.json"):
         return set()
-    audit.check(len(videos) == 60, "videos.count", f"Expected exactly 60 videos; found {len(videos)}", path="data/videos.json")
+    audit.check(bool(videos), "videos.nonempty", "videos.json must contain at least one video", path="data/videos.json")
+    if expected_count is not None:
+        audit.check(
+            len(videos) == expected_count,
+            "videos.expected_count",
+            f"Expected exactly {expected_count} videos; found {len(videos)}",
+            path="data/videos.json",
+        )
+    elif minimum_count is not None:
+        audit.check(
+            len(videos) >= minimum_count,
+            "videos.minimum_count",
+            f"Expected at least {minimum_count} videos; found {len(videos)}",
+            path="data/videos.json",
+        )
     mappings = {
         "domain": allowed["domains"],
         "primary_category": allowed["categories"],
@@ -422,24 +490,45 @@ def validate_synonyms(audit: ValidationAudit, synonyms: Any) -> None:
 
 
 def validate_site_config(audit: ValidationAudit, config: Any, languages: set[str]) -> None:
-    keys = ("site_name_he", "author_name", "community_name", "contact", "logo_path", "default_language", "direction")
+    keys = (
+        "site_name_he",
+        "author_name",
+        "community_name",
+        "contact",
+        "logo_path",
+        "safety_warning_he",
+        "default_language",
+        "direction",
+    )
     if not require_keys(audit, config, keys, "data/site-config.json"):
         return
     audit.check(has_hebrew(config["site_name_he"]), "config.site_name", "Site name must contain Hebrew", path="data/site-config.json.site_name_he")
-    audit.check(is_nonempty_string(config["author_name"]), "config.author", "Author name must be non-empty", path="data/site-config.json.author_name")
-    for key in ("community_name", "contact", "logo_path"):
+    for key in ("author_name", "community_name", "contact", "logo_path"):
         audit.check(isinstance(config[key], str), "config.optional_string", f"{key} must be a string (empty is allowed)", path=f"data/site-config.json.{key}")
+    audit.check(has_hebrew(config["safety_warning_he"]), "config.safety_warning", "Safety warning must contain Hebrew text", path="data/site-config.json.safety_warning_he")
     audit.check(config["default_language"] in languages, "config.language", "Default language must exist in taxonomy", path="data/site-config.json.default_language")
     audit.check(config["direction"] == "rtl", "config.direction", "The Hebrew V1 interface must use rtl", path="data/site-config.json.direction")
 
 
-def run_validation(root: Path = ROOT) -> dict[str, Any]:
+def run_validation(
+    root: Path = ROOT,
+    *,
+    expected_count: int | None = None,
+    minimum_count: int | None = None,
+) -> dict[str, Any]:
+    validate_count_options(expected_count, minimum_count)
     audit = ValidationAudit()
     files = {name: root / path.relative_to(ROOT) for name, path in DATA_FILES.items()}
     loaded = {name: load_json(path, audit, str(path.relative_to(root)).replace("\\", "/")) for name, path in files.items()}
     taxonomy_allowed = validate_taxonomy(audit, loaded["taxonomy"])
     validate_video_schema(audit, loaded["video_schema"], loaded["videos"])
-    internal_ids = validate_videos(audit, loaded["videos"], taxonomy_allowed)
+    internal_ids = validate_videos(
+        audit,
+        loaded["videos"],
+        taxonomy_allowed,
+        expected_count=expected_count,
+        minimum_count=minimum_count,
+    )
     validate_learning_paths(audit, loaded["learning_paths"], internal_ids, taxonomy_allowed["skill_levels"])
     validate_synonyms(audit, loaded["synonyms"])
     validate_site_config(audit, loaded["site_config"], taxonomy_allowed["languages"])
@@ -451,6 +540,12 @@ def run_validation(root: Path = ROOT) -> dict[str, Any]:
                 placeholder_hits.append({"path": value_path, "match": match.group(0)})
     audit.check(not placeholder_hits, "content.placeholder", "Placeholder-like content was found", path="data", details=placeholder_hits or None)
     videos = loaded["videos"] if isinstance(loaded["videos"], list) else []
+    actual_count = len(videos) if isinstance(loaded["videos"], list) else None
+    audit.count_expectation = describe_count_expectation(
+        expected_count=expected_count,
+        minimum_count=minimum_count,
+        actual=actual_count,
+    )
     audit.stats.update(
         {
             "videos": len(videos),
@@ -468,6 +563,16 @@ def write_json_report(path: Path, report: dict[str, Any]) -> None:
     path.write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
 
+def positive_int(value: str) -> int:
+    try:
+        parsed = int(value)
+    except ValueError as exc:
+        raise argparse.ArgumentTypeError("must be a positive integer") from exc
+    if parsed <= 0:
+        raise argparse.ArgumentTypeError("must be a positive integer")
+    return parsed
+
+
 def main(argv: list[str] | None = None) -> int:
     for stream in (sys.stdout, sys.stderr):
         if hasattr(stream, "reconfigure"):
@@ -475,8 +580,14 @@ def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--json", action="store_true", help="Print the complete machine-readable result to stdout")
     parser.add_argument("--report", type=Path, help="Also write the machine-readable JSON result to this path")
+    count_group = parser.add_mutually_exclusive_group()
+    count_group.add_argument("--expected-count", type=positive_int, help="Require exactly this many videos")
+    count_group.add_argument("--minimum-count", type=positive_int, help="Require at least this many videos")
     args = parser.parse_args(argv)
-    result = run_validation()
+    result = run_validation(
+        expected_count=args.expected_count,
+        minimum_count=args.minimum_count,
+    )
     if args.report:
         write_json_report(args.report, result)
     if args.json:
@@ -486,6 +597,10 @@ def main(argv: list[str] | None = None) -> int:
         print(f"Checks passed: {result['checks_passed']}")
         print(f"Checks failed: {result['checks_failed']}")
         print(f"Warnings: {len(result['warnings'])}")
+        expectation = result["count_expectation"]
+        requested = "none" if expectation["mode"] == "none" else f"{expectation['mode']}={expectation['value']}"
+        satisfied = "yes" if expectation["satisfied"] else "no"
+        print(f"Count expectation: {requested}; actual={expectation['actual']}; satisfied={satisfied}")
         print("Stats: " + ", ".join(f"{key}={value}" for key, value in result["stats"].items()))
         for issue in result["errors"]:
             location = f" ({issue['path']})" if issue.get("path") else ""
