@@ -1,42 +1,42 @@
 {
-  "generated_at": "2026-08-03T10:25:14+00:00",
+  "generated_at": "2026-08-03T13:44:19+00:00",
   "generator": "tools/build_audit.py",
   "source_files_sha256": {
-    "data/videos.json": "4bda3bddeac5cd6f7684f262fe739b3a3d1cfaeeebf2536c3f3dc21f4a171bc0",
-    "data/categories.json": "35ebb7a1888403f89915ddc8af2bf8fcf1f07c8aa74102eadc3fa65130310e93",
-    "data/learning-paths.json": "bcedfd2a5e3651d6bcf8c95dfd7b7f793d285b258b3ae522ac168c02a5eae9ca",
-    "data/synonyms.json": "2d6e38e8b560c17d6301b1210ef9291824c435e6881b0ea59da6e448e2dd810d",
+    "data/videos.json": "0566de2fff01721b0e8e3507d81fb3a83f691271a05aa229190618f83bdd27b2",
+    "data/categories.json": "03e27ae40a183d6746a9492e3a17d492b10ba1461519e0e2e79964168f424b83",
+    "data/learning-paths.json": "261b20cf3d1012c5efe21362cba1ac4b8c365764f32f0ea5ed8081e0f001d23e",
+    "data/synonyms.json": "290e9f40729de732d051bbfa776462a77bde944d11eff4db7033fd4229d7746f",
     "data/site-config.json": "1ec3c4aa0c1127486fccea0c860ce9261a624fb4931d5d2002be2a08abb2e63e",
     "schema/video.schema.json": "2c12b0550e2293e9a9ee702c236982a206dbbafc4742d5aa9fcb1eb2bcccc187"
   },
   "validation": {
     "status": "pass",
-    "checks_passed": 4278,
+    "checks_passed": 8050,
     "checks_failed": 0,
     "errors": [],
     "warnings": [],
     "count_expectation": {
       "mode": "none",
       "value": null,
-      "actual": 60,
+      "actual": 130,
       "satisfied": true
     },
     "stats": {
       "learning_paths": 2,
       "learning_path_steps": 20,
-      "learning_path_video_references": 54,
-      "synonym_concepts": 31,
-      "videos": 60,
-      "unique_internal_ids": 60,
-      "unique_youtube_video_ids": 60,
-      "taxonomy_categories": 29,
-      "taxonomy_tags": 73
+      "learning_path_video_references": 85,
+      "synonym_concepts": 36,
+      "videos": 130,
+      "unique_internal_ids": 130,
+      "unique_youtube_video_ids": 130,
+      "taxonomy_categories": 33,
+      "taxonomy_tags": 83
     }
   },
-  "total_videos": 60,
-  "unique_youtube_video_ids": 60,
-  "unique_internal_ids": 60,
-  "unique_youtube_urls": 60,
+  "total_videos": 130,
+  "unique_youtube_video_ids": 130,
+  "unique_internal_ids": 130,
+  "unique_youtube_urls": 130,
   "duplicates": [],
   "missing_required_fields": [],
   "broken_or_unverified_links": [],
@@ -45,14 +45,14 @@
   "link_check": {
     "available": true,
     "stale": false,
-    "generated_at": "2026-08-02T20:50:49+00:00",
+    "generated_at": "2026-08-03T13:37:19+00:00",
     "mode": "online_oembed",
     "network_performed": true,
     "summary": {
-      "total": 60,
-      "local_valid": 60,
+      "total": 130,
+      "local_valid": 130,
       "local_invalid": 0,
-      "online_active_public": 60,
+      "online_active_public": 130,
       "online_unavailable": 0,
       "online_indeterminate": 0,
       "online_not_checked": 0,
@@ -60,94 +60,90 @@
     }
   },
   "by_language": {
-    "en": 51,
-    "he": 9
+    "en": 119,
+    "he": 9,
+    "ja": 2
   },
   "by_domain": {
-    "mixed": 1,
-    "offroad_adventure": 27,
-    "practice": 6,
-    "road": 18,
-    "safety_recovery": 8
+    "mixed": 7,
+    "offroad_adventure": 50,
+    "practice": 12,
+    "road": 40,
+    "safety_recovery": 21
   },
   "by_skill_level": {
-    "advanced_beginner": 16,
-    "beginner": 25,
-    "intermediate": 19
+    "advanced_beginner": 45,
+    "beginner": 40,
+    "intermediate": 45
   },
   "by_primary_category": {
-    "balance_slow_control": 2,
+    "balance_slow_control": 5,
     "controls_coordination": 3,
-    "descents": 4,
-    "drills": 1,
-    "emergency_braking": 2,
+    "descents": 6,
+    "drills": 2,
+    "electronic_aids": 2,
+    "emergency_braking": 3,
     "ergonomics": 1,
-    "fatigue_management": 1,
-    "gravel_dirt": 4,
-    "hills": 1,
+    "fatigue_management": 4,
+    "gravel_dirt": 5,
+    "hills": 5,
     "lifting": 3,
-    "loose_rock": 1,
+    "loose_rock": 2,
     "mud_wet": 2,
-    "obstacles": 1,
-    "offroad_basics": 3,
+    "obstacles": 6,
+    "offroad_basics": 4,
     "offroad_braking": 3,
     "offroad_turning": 1,
-    "passenger_riding": 1,
+    "passenger_riding": 5,
     "protective_gear": 1,
-    "recovery": 2,
+    "recovery": 6,
     "riding_position": 2,
-    "road_braking": 3,
-    "road_cornering": 9,
-    "road_strategy": 1,
-    "ruts": 2,
-    "sand": 2,
-    "solo_group_safety": 1,
+    "road_braking": 4,
+    "road_cornering": 11,
+    "road_strategy": 12,
+    "ruts": 3,
+    "sand": 7,
+    "solo_group_safety": 4,
+    "suspension_setup": 3,
+    "tires_setup": 2,
+    "trip_preparation": 2,
     "u_turns_low_speed": 1,
-    "water_crossings": 1,
-    "wet_weather": 1
+    "water_crossings": 4,
+    "wet_weather": 6
   },
   "by_evidence_type": {
-    "chapters": 31,
-    "description": 60,
+    "chapters": 82,
+    "description": 130,
     "transcript": 53
   },
   "classification_confidence": {
-    "high": 54,
-    "medium": 6
+    "high": 108,
+    "medium": 22
   },
-  "contains_marketing": 41,
+  "contains_marketing": 91,
   "quality_scores": {
-    "4": 19,
-    "5": 41
+    "3": 2,
+    "4": 44,
+    "5": 84
   },
   "thin_categories": [
-    "drills",
     "ergonomics",
-    "fatigue_management",
-    "hills",
-    "loose_rock",
-    "obstacles",
     "offroad_turning",
-    "passenger_riding",
     "protective_gear",
-    "road_strategy",
-    "solo_group_safety",
-    "u_turns_low_speed",
-    "water_crossings",
-    "wet_weather"
+    "u_turns_low_speed"
   ],
   "coverage": {
-    "with_published_date": 60,
-    "with_duration": 60,
-    "with_subtitles": 53,
-    "with_chapters": 31,
-    "with_related_videos": 60
+    "with_published_date": 130,
+    "with_duration": 130,
+    "with_subtitles": 116,
+    "with_chapters": 82,
+    "with_related_videos": 130
   },
   "learning_paths": {
     "count": 2,
     "steps": 20,
-    "primary_video_references": 34,
-    "alternative_video_references": 20,
+    "primary_video_references": 45,
+    "alternative_video_references": 40,
     "unknown_video_ids": []
   }
 }

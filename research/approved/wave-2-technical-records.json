@@ -1,0 +1,1279 @@
+[
+  {
+    "id": "yt-CI6h7XtyINY",
+    "youtube_video_id": "CI6h7XtyINY",
+    "youtube_url": "https://www.youtube.com/watch?v=CI6h7XtyINY",
+    "thumbnail_url": "https://i.ytimg.com/vi/CI6h7XtyINY/hqdefault.jpg",
+    "title_original": "Motorcycle Suspension adjustments: Basic tutorial (T7) 1/3",
+    "title_he": "מבוא לכיוון מתלים באופנוע אדוונצ'ר",
+    "channel_name": "OFFroad-OFFcourse",
+    "channel_url": "https://www.youtube.com/channel/UCY-2LRC6ztSORRJs4Ipr2GA",
+    "published_date": "2021-02-27",
+    "duration_seconds": 324,
+    "language": "en",
+    "subtitle_languages": [
+      "en"
+    ],
+    "domain": "mixed",
+    "primary_category": "suspension_setup",
+    "secondary_categories": [
+      "ergonomics"
+    ],
+    "tags": [
+      "suspension",
+      "preload",
+      "damping",
+      "controls_setup"
+    ],
+    "skill_level": "advanced_beginner",
+    "risk_level": "medium",
+    "motorcycle_types": [
+      "adventure",
+      "dual_sport"
+    ],
+    "motorcycle_weight_classes": [
+      "medium",
+      "heavy"
+    ],
+    "terrain_types": [
+      "dirt",
+      "gravel"
+    ],
+    "road_conditions": [
+      "dry_pavement"
+    ],
+    "summary_he": "מבוא קצר המשתמש ב־Yamaha Ténéré 700 כדי להציג את שלושת כיווני היסוד שהיוצר מתאר: קדם־עומס, שיכוך דחיסה ושיכוך החזרה, ואת תפקידם הכללי במתלה.",
+    "learning_points_he": [
+      "להבדיל בין קדם־עומס לבין כיוון שיכוך",
+      "לזהות את ההפרדה בין שיכוך דחיסה לשיכוך החזרה",
+      "להשתמש בספר הרכב כדי לאתר את הכיוונים הספציפיים לדגם",
+      "להבין שזהו מבוא קהילתי ולא תחליף לכיוון מקצועי"
+    ],
+    "fit_for_he": "מתאים לרוכבי אדוונצ'ר בתחילת ההיכרות הטכנית שרוצים מילון מושגים בסיסי לפני קריאת ספר הרכב או פנייה לאיש מתלים.",
+    "why_watch_he": "ארבעת הפרקים מחלקים את המבוא לקדם־עומס, דחיסה והחזרה, והיוצר מצהיר בשקיפות שאינו מומחה—מגבלה שחשוב לשמור לצד הערך ההסברי.",
+    "exercises_he": [],
+    "equipment_he": [
+      "ספר רכב",
+      "כלי כיוון שמאושר לדגם",
+      "דף רישום של מצב הכיוון המקורי"
+    ],
+    "safety_warnings_he": [
+      "אין לשנות כיוון מתלים מעבר לטווח היצרן או בלי לתעד את מצב המוצא; לאחר שינוי יש לבדוק את האופנוע בהדרגה ובסביבה בטוחה."
+    ],
+    "common_mistakes_he": [
+      "בלבול בין קדם־עומס לקשיחות הקפיץ",
+      "שינוי כמה כיוונים יחד בלי רישום",
+      "העתקת כיוון של רוכב או דגם אחר"
+    ],
+    "chapters": [
+      {
+        "start_seconds": 0,
+        "end_seconds": 94,
+        "title": "Intro"
+      },
+      {
+        "start_seconds": 94,
+        "end_seconds": 150,
+        "title": "Preload"
+      },
+      {
+        "start_seconds": 150,
+        "end_seconds": 211,
+        "title": "Compression"
+      },
+      {
+        "start_seconds": 211,
+        "end_seconds": 324,
+        "title": "Rebound"
+      }
+    ],
+    "quality_score": 3,
+    "quality_reason_he": "תיאור מפורט וארבעה פרקים מאמתים את שלושת מושגי הכיוון; הציון מוגבל ל־3 מפני שהיוצר מצהיר שאינו מומחה והסרטון כולל קישורי שותפים.",
+    "source_type": "community_educator",
+    "contains_marketing": true,
+    "related_video_ids": [
+      "yt-CCCl2KBpP5g",
+      "yt-sJg_rAPp0Rg"
+    ],
+    "verification": {
+      "link_status": "active_public",
+      "metadata_verified": true,
+      "content_evidence_types": [
+        "description",
+        "chapters"
+      ],
+      "classification_confidence": "high",
+      "notes_he": "ב־2026-08-03 נפתח מקור YouTube ונבדקו זמינות ציבורית, כותרת, ערוץ, תאריך, משך ותיאור. נשמרו 4 פרקי YouTube שנשלפו מן המקור. נמצאו כתוביות אוטומטיות באנגלית."
+    },
+    "last_checked": "2026-08-03"
+  },
+  {
+    "id": "yt-QXl542xFnhU",
+    "youtube_video_id": "QXl542xFnhU",
+    "youtube_url": "https://www.youtube.com/watch?v=QXl542xFnhU",
+    "thumbnail_url": "https://i.ytimg.com/vi/QXl542xFnhU/hqdefault.jpg",
+    "title_original": "How to pick the best air pressures for adventure/dual sport riding︱Cross Training Adventure",
+    "title_he": "בחירת לחץ אוויר לצמיגי אדוונצ'ר ודו־שימושי",
+    "channel_name": "Cross Training Adventure",
+    "channel_url": "https://www.youtube.com/channel/UCc32Jp7u-1ANgy64s_54eDw",
+    "published_date": "2021-08-05",
+    "duration_seconds": 340,
+    "language": "en",
+    "subtitle_languages": [
+      "he",
+      "en"
+    ],
+    "domain": "mixed",
+    "primary_category": "tires_setup",
+    "secondary_categories": [
+      "gravel_dirt",
+      "sand"
+    ],
+    "tags": [
+      "tire_pressure",
+      "traction",
+      "planning",
+      "heavy_bike"
+    ],
+    "skill_level": "advanced_beginner",
+    "risk_level": "medium",
+    "motorcycle_types": [
+      "adventure",
+      "dual_sport"
+    ],
+    "motorcycle_weight_classes": [
+      "light",
+      "medium",
+      "heavy"
+    ],
+    "terrain_types": [
+      "dirt",
+      "gravel",
+      "sand"
+    ],
+    "road_conditions": [
+      "dry_pavement"
+    ],
+    "summary_he": "השוואה בין שלוש דרכים לקביעת לחץ אוויר: טווחים כלליים לפי משקל האופנוע, הוראות היצרן וכיוון מדורג לפי עומס, צמיג, גלגל, טמפרטורה ותוואי.",
+    "learning_points_he": [
+      "להתחיל מהמלצת יצרן האופנוע והצמיג ולא ממספר אוניברסלי",
+      "להבין כיצד משקל, מורכב, מטען וחום משנים את נקודת המוצא",
+      "לזהות את פשרות האחיזה, החום, השחיקה והגנת החישוק",
+      "להחזיר לחץ מיד לאחר קטע קצר שבו הופחת לצורך אחיזה מיוחדת"
+    ],
+    "fit_for_he": "מתאים לרוכבי אדוונצ'ר ודו־שימושי שרוצים להבין כיצד לבחור נקודת מוצא שמרנית ללחץ אוויר לפני כביש, שביל או חול.",
+    "why_watch_he": "הסרטון אינו נותן מספר קסם בלבד; הוא מפרק את המשתנים ואת הנזקים האפשריים מלחץ נמוך או גבוה מדי, ומדגיש מדידה וניפוח מחדש.",
+    "exercises_he": [
+      "רשום את ערכי היצרן לעומס הרגיל שלך והשווה אותם למדידה קרה במד לחץ תקין, בלי לשנות לחץ לפני עיון בספר האופנוע."
+    ],
+    "equipment_he": [
+      "מד לחץ אוויר תקין",
+      "משאבה מתאימה",
+      "ספר רכב או מדבקת לחצים",
+      "ציוד מיגון מלא"
+    ],
+    "safety_warnings_he": [
+      "אין להעתיק ערכי PSI מסרטון לאופנוע אחר; לחץ נמוך מדי עלול לגרום לתקר, נזק לחישוק או אובדן אטימה."
+    ],
+    "common_mistakes_he": [
+      "התעלמות ממשקל מטען או מורכב",
+      "הפחתת לחץ בלי אפשרות לנפח מחדש",
+      "מדידה מיד לאחר התחממות הצמיג"
+    ],
+    "chapters": [
+      {
+        "start_seconds": 0,
+        "end_seconds": 17,
+        "title": "Intro"
+      },
+      {
+        "start_seconds": 17,
+        "end_seconds": 60,
+        "title": "Types of bikes"
+      },
+      {
+        "start_seconds": 60,
+        "end_seconds": 136,
+        "title": "Manufacturers recommendation"
+      },
+      {
+        "start_seconds": 136,
+        "end_seconds": 156,
+        "title": "Custom pressures"
+      },
+      {
+        "start_seconds": 156,
+        "end_seconds": 188,
+        "title": "Why is air pressure important"
+      },
+      {
+        "start_seconds": 188,
+        "end_seconds": 211,
+        "title": "How low can you go"
+      },
+      {
+        "start_seconds": 211,
+        "end_seconds": 257,
+        "title": "Very low pressures"
+      },
+      {
+        "start_seconds": 257,
+        "end_seconds": 340,
+        "title": "Extra tips"
+      }
+    ],
+    "quality_score": 5,
+    "quality_reason_he": "תיאור מפורט ושמונה פרקים מאמתים שלוש שיטות בחירה, משתני עומס וסיכונים מכניים; ההמלצות המספריות מוצגות כטווחים ולא כתחליף להוראות היצרן.",
+    "source_type": "training_channel",
+    "contains_marketing": true,
+    "related_video_ids": [
+      "yt-oW7eVgdCC58",
+      "yt-CCCl2KBpP5g"
+    ],
+    "verification": {
+      "link_status": "active_public",
+      "metadata_verified": true,
+      "content_evidence_types": [
+        "description",
+        "chapters"
+      ],
+      "classification_confidence": "high",
+      "notes_he": "ב־2026-08-03 נפתח מקור YouTube ונבדקו זמינות ציבורית, כותרת, ערוץ, תאריך, משך ותיאור. נשמרו 8 פרקי YouTube שנשלפו מן המקור. נמצאו כתוביות אוטומטיות באנגלית."
+    },
+    "last_checked": "2026-08-03"
+  },
+  {
+    "id": "yt-CCCl2KBpP5g",
+    "youtube_video_id": "CCCl2KBpP5g",
+    "youtube_url": "https://www.youtube.com/watch?v=CCCl2KBpP5g",
+    "thumbnail_url": "https://i.ytimg.com/vi/CCCl2KBpP5g/hqdefault.jpg",
+    "title_original": "SPRING PRELOAD & SAG - Adventure Motorcycle Suspension Part 1",
+    "title_he": "קדם־עומס ושקיעת מתלים באופנוע אדוונצ'ר",
+    "channel_name": "MOTOTREK",
+    "channel_url": "https://www.youtube.com/channel/UCWh6PvzNVeOmEU065h-8kUw",
+    "published_date": "2018-09-26",
+    "duration_seconds": 990,
+    "language": "en",
+    "subtitle_languages": [],
+    "domain": "mixed",
+    "primary_category": "suspension_setup",
+    "secondary_categories": [
+      "ergonomics"
+    ],
+    "tags": [
+      "suspension",
+      "preload",
+      "sag",
+      "heavy_bike"
+    ],
+    "skill_level": "intermediate",
+    "risk_level": "medium",
+    "motorcycle_types": [
+      "adventure",
+      "touring",
+      "sport_touring"
+    ],
+    "motorcycle_weight_classes": [
+      "medium",
+      "heavy"
+    ],
+    "terrain_types": [
+      "dirt",
+      "gravel"
+    ],
+    "road_conditions": [
+      "dry_pavement",
+      "rural_twisty"
+    ],
+    "summary_he": "שיחה טכנית עם מומחה מתלים על תפקיד הקפיץ, קדם־עומס ושקיעה שלילית, ועל הקשר בין קצב הקפיץ, טווח הכיוון והתחושה שהרוכב מקבל מן האופנוע.",
+    "learning_points_he": [
+      "להבחין בין שינוי קדם־עומס לבין שינוי קצב הקפיץ עצמו",
+      "להבין מדוע נדרש מהלך שלילי כדי שהגלגל יוכל לעקוב אחר שקע",
+      "לקשר בין עומס הרוכב והמטען לבין טווח הכיוון הזמין",
+      "לזהות מתי כיוון קיצוני מעיד שהקפיץ אינו מתאים לעומס"
+    ],
+    "fit_for_he": "מיועד לרוכבים בעלי בסיס טכני שמעמיסים ציוד או מורכב ורוצים להבין את מדידת השקיעה לפני שינויי מתלים.",
+    "why_watch_he": "הערך המרכזי הוא ההפרדה הברורה בין קפיץ, קדם־עומס ומהלך מתלה, בעזרת פרקים ייעודיים על טווח, תחושה והתאמה.",
+    "exercises_he": [],
+    "equipment_he": [
+      "ספר רכב",
+      "כלי כיוון ייעודי ליצרן",
+      "סרט מדידה",
+      "אדם נוסף לסיוע במדידה"
+    ],
+    "safety_warnings_he": [
+      "אין לשנות קדם־עומס או חלקי מתלה מעבר לטווח היצרן; כיוון שגוי עלול לפגוע ביציבות ובמרווח המהלך."
+    ],
+    "common_mistakes_he": [
+      "התייחסות לקדם־עומס כאילו הוא מקשיח את קצב הקפיץ",
+      "כיוון לפי תחושה בלבד בלי למדוד עומס ושקיעה"
+    ],
+    "chapters": [
+      {
+        "start_seconds": 0,
+        "end_seconds": 43,
+        "title": "Intro"
+      },
+      {
+        "start_seconds": 43,
+        "end_seconds": 112,
+        "title": "What is suspension"
+      },
+      {
+        "start_seconds": 112,
+        "end_seconds": 250,
+        "title": "Negative travel"
+      },
+      {
+        "start_seconds": 250,
+        "end_seconds": 319,
+        "title": "Spring rates"
+      },
+      {
+        "start_seconds": 319,
+        "end_seconds": 450,
+        "title": "Minimum and maximum"
+      },
+      {
+        "start_seconds": 450,
+        "end_seconds": 802,
+        "title": "Feel"
+      },
+      {
+        "start_seconds": 802,
+        "end_seconds": 874,
+        "title": "Will it work"
+      },
+      {
+        "start_seconds": 874,
+        "end_seconds": 990,
+        "title": "Final thoughts"
+      }
+    ],
+    "quality_score": 5,
+    "quality_reason_he": "שמונה פרקים ותיאור מקור ממוקד מאמתים דיון שיטתי בקפיץ, מהלך שלילי, טווחי כיוון ותחושה, בהשתתפות מומחה מתלים מזוהה.",
+    "source_type": "professional_instructor",
+    "contains_marketing": true,
+    "related_video_ids": [
+      "yt-sJg_rAPp0Rg",
+      "yt-QXl542xFnhU"
+    ],
+    "verification": {
+      "link_status": "active_public",
+      "metadata_verified": true,
+      "content_evidence_types": [
+        "description",
+        "chapters"
+      ],
+      "classification_confidence": "high",
+      "notes_he": "ב־2026-08-03 נפתח מקור YouTube ונבדקו זמינות ציבורית, כותרת, ערוץ, תאריך, משך ותיאור. נשמרו 8 פרקי YouTube שנשלפו מן המקור. נמצאו כתוביות אוטומטיות באנגלית."
+    },
+    "last_checked": "2026-08-03"
+  },
+  {
+    "id": "yt-sJg_rAPp0Rg",
+    "youtube_video_id": "sJg_rAPp0Rg",
+    "youtube_url": "https://www.youtube.com/watch?v=sJg_rAPp0Rg",
+    "thumbnail_url": "https://i.ytimg.com/vi/sJg_rAPp0Rg/hqdefault.jpg",
+    "title_original": "SHOCK ABSORBERS - Adventure Motorcycle Suspension Part 2",
+    "title_he": "בולמי זעזועים ושיכוך באופנוע אדוונצ'ר",
+    "channel_name": "MOTOTREK",
+    "channel_url": "https://www.youtube.com/channel/UCWh6PvzNVeOmEU065h-8kUw",
+    "published_date": "2018-10-04",
+    "duration_seconds": 748,
+    "language": "en",
+    "subtitle_languages": [
+      "en"
+    ],
+    "domain": "mixed",
+    "primary_category": "suspension_setup",
+    "secondary_categories": [
+      "ergonomics"
+    ],
+    "tags": [
+      "suspension",
+      "damping",
+      "heavy_bike",
+      "planning"
+    ],
+    "skill_level": "intermediate",
+    "risk_level": "medium",
+    "motorcycle_types": [
+      "adventure",
+      "touring",
+      "sport_touring"
+    ],
+    "motorcycle_weight_classes": [
+      "medium",
+      "heavy"
+    ],
+    "terrain_types": [
+      "dirt",
+      "gravel",
+      "loose_rock"
+    ],
+    "road_conditions": [
+      "dry_pavement",
+      "rural_twisty"
+    ],
+    "summary_he": "המשך טכני לסדרת המתלים, המתמקד בבולם ובשיכוך: כיוון החזרה, השפעת חום ולחץ, מבני בולם שונים והצורך להתאים את החומרה לסוג השימוש.",
+    "learning_points_he": [
+      "להבין מה עושה שיכוך החזרה לאחר דחיסת הקפיץ",
+      "לזהות כיצד חימום הבולם עשוי לשנות את התנהגותו",
+      "להכיר את תפקיד המאגר והבוכנה המפרידה בבולם",
+      "לבחור מתלה לפי עומס ויישום ולא לפי שם מוצר בלבד"
+    ],
+    "fit_for_he": "מתאים לרוכבים בינוניים שרוצים להבין את רכיבי הבולם לפני פנייה למכוון מקצועי או לפני הערכת התנהגות תחת עומס.",
+    "why_watch_he": "הסרטון מחבר בין מושגי שיכוך לבין חום, לחץ ומבנה פנימי, וכך מסביר מדוע בולם שמתאים לטיול קל אינו בהכרח מתאים לעומס או שטח ממושך.",
+    "exercises_he": [],
+    "equipment_he": [
+      "ספר רכב",
+      "דף רישום לכיווני המתלה",
+      "ציוד מיגון מלא"
+    ],
+    "safety_warnings_he": [
+      "פתיחת בולם או שינוי פנימי דורשים איש מקצוע; אין לעבוד על רכיב בלחץ או לבצע כיוון שאינו מתועד בספר היצרן."
+    ],
+    "common_mistakes_he": [
+      "שינוי כמה כיוונים בבת אחת בלי תיעוד",
+      "בחירת בולם ללא התאמה לעומס ולסוג הרכיבה"
+    ],
+    "chapters": [
+      {
+        "start_seconds": 96,
+        "end_seconds": 153,
+        "title": "Rebound Damping Adjustment"
+      },
+      {
+        "start_seconds": 153,
+        "end_seconds": 173,
+        "title": "Thermal Expansion"
+      },
+      {
+        "start_seconds": 173,
+        "end_seconds": 187,
+        "title": "Vapor Pressure"
+      },
+      {
+        "start_seconds": 187,
+        "end_seconds": 250,
+        "title": "Rear Shock Temperature Gauge"
+      },
+      {
+        "start_seconds": 250,
+        "end_seconds": 343,
+        "title": "Buy Suspension That Suits the Application"
+      },
+      {
+        "start_seconds": 343,
+        "end_seconds": 432,
+        "title": "Internal Floating Piston Shocks"
+      },
+      {
+        "start_seconds": 432,
+        "end_seconds": 443,
+        "title": "Anti Bottoming Valve"
+      },
+      {
+        "start_seconds": 443,
+        "end_seconds": 478,
+        "title": "Pds Valve"
+      },
+      {
+        "start_seconds": 478,
+        "end_seconds": 748,
+        "title": "Reservoir Shocks"
+      }
+    ],
+    "quality_score": 5,
+    "quality_reason_he": "תשעה פרקים מאמתים כיסוי מפורט של שיכוך החזרה, חום, לחץ, בוכנה מפרידה ומאגר; מומחה מתלים מזוהה משתתף בהסבר.",
+    "source_type": "professional_instructor",
+    "contains_marketing": true,
+    "related_video_ids": [
+      "yt-CCCl2KBpP5g",
+      "yt-QXl542xFnhU"
+    ],
+    "verification": {
+      "link_status": "active_public",
+      "metadata_verified": true,
+      "content_evidence_types": [
+        "description",
+        "chapters"
+      ],
+      "classification_confidence": "high",
+      "notes_he": "ב־2026-08-03 נפתח מקור YouTube ונבדקו זמינות ציבורית, כותרת, ערוץ, תאריך, משך ותיאור. נשמרו 9 פרקי YouTube שנשלפו מן המקור. נמצאו כתוביות אוטומטיות באנגלית."
+    },
+    "last_checked": "2026-08-03"
+  },
+  {
+    "id": "yt-zsKLdi_nYYQ",
+    "youtube_video_id": "zsKLdi_nYYQ",
+    "youtube_url": "https://www.youtube.com/watch?v=zsKLdi_nYYQ",
+    "thumbnail_url": "https://i.ytimg.com/vi/zsKLdi_nYYQ/hqdefault.jpg",
+    "title_original": "When I Do and Don’t Want ABS and Traction Control",
+    "title_he": "מתי להשתמש ב־ABS ובבקרת אחיזה",
+    "channel_name": "RIDE Adventures",
+    "channel_url": "https://www.youtube.com/channel/UCWdo6fbG2ZMRfhxEoAc4NnA",
+    "published_date": "2023-04-16",
+    "duration_seconds": 619,
+    "language": "en",
+    "subtitle_languages": [],
+    "domain": "mixed",
+    "primary_category": "electronic_aids",
+    "secondary_categories": [
+      "road_braking",
+      "offroad_braking"
+    ],
+    "tags": [
+      "abs",
+      "traction_control",
+      "braking",
+      "traction",
+      "safety"
+    ],
+    "skill_level": "intermediate",
+    "risk_level": "high",
+    "motorcycle_types": [
+      "adventure",
+      "dual_sport",
+      "street"
+    ],
+    "motorcycle_weight_classes": [
+      "medium",
+      "heavy",
+      "general"
+    ],
+    "terrain_types": [
+      "dirt",
+      "gravel",
+      "sand"
+    ],
+    "road_conditions": [
+      "dry_pavement",
+      "wet_pavement"
+    ],
+    "summary_he": "דיון מובנה בהבדל בין שימוש ב־ABS ובבקרת אחיזה על אספלט לבין מצבים מחוץ לכביש, ובחשיבות הכרת מצבי הרכיבה והאפשרויות הספציפיות של האופנוע.",
+    "learning_points_he": [
+      "להפריד בין דרישות בלימה על אספלט לבין משטח רופף",
+      "להבין שמצבי אלקטרוניקה שונים מתנהגים אחרת בין דגמים",
+      "לבדוק מראש אילו מערכות חוזרות לברירת מחדל לאחר התנעה",
+      "לא להשתמש בכיבוי מערכת כתחליף למיומנות בלימה ורגישות בגז"
+    ],
+    "fit_for_he": "מיועד לרוכבי אדוונצ'ר שכבר שולטים בבלימה בסיסית ורוצים לקבל מסגרת החלטה לפני מעבר בין כביש לשטח.",
+    "why_watch_he": "ארבעת הפרקים מפרידים במפורש בין מצבי כביש ושטח ומציגים את מערכות העזר ככלי תלוי הקשר, לא ככלל גורף של תמיד להפעיל או תמיד לכבות.",
+    "exercises_he": [],
+    "equipment_he": [
+      "ספר רכב",
+      "ציוד מיגון מלא",
+      "מגרש או שטח הדרכה סגור"
+    ],
+    "safety_warnings_he": [
+      "אין לכבות ABS או בקרת אחיזה בכביש ציבורי בעקבות המלצה כללית; יש לפעול לפי ספר היצרן והדין המקומי."
+    ],
+    "common_mistakes_he": [
+      "הנחה שכל דגמי ה־ABS פועלים באותה צורה",
+      "שינוי מצב אלקטרוני תוך כדי תרחיש לחץ בלי להכיר את הבקרות"
+    ],
+    "chapters": [
+      {
+        "start_seconds": 0,
+        "end_seconds": 98,
+        "title": "Introduction"
+      },
+      {
+        "start_seconds": 98,
+        "end_seconds": 292,
+        "title": "ON PAVEMENT SITUATIONS"
+      },
+      {
+        "start_seconds": 292,
+        "end_seconds": 549,
+        "title": "OFF PAVEMENT SITUATIONS"
+      },
+      {
+        "start_seconds": 549,
+        "end_seconds": 619,
+        "title": "SUMMARY & FINAL THOUGHTS"
+      }
+    ],
+    "quality_score": 4,
+    "quality_reason_he": "התיאור וארבעה פרקים מאמתים חלוקה מפורשת לכביש ולשטח והצגת שיקולים בעד ונגד; קיימת מעטפת מסחרית נרחבת ולכן ההדרכה נבחנת בנפרד.",
+    "source_type": "riding_school",
+    "contains_marketing": true,
+    "related_video_ids": [
+      "yt-_zQoFML9xPk",
+      "yt-18eqTsDfzDU"
+    ],
+    "verification": {
+      "link_status": "active_public",
+      "metadata_verified": true,
+      "content_evidence_types": [
+        "description",
+        "chapters"
+      ],
+      "classification_confidence": "high",
+      "notes_he": "ב־2026-08-03 נפתח מקור YouTube ונבדקו זמינות ציבורית, כותרת, ערוץ, תאריך, משך ותיאור. נשמרו 4 פרקי YouTube שנשלפו מן המקור. נמצאו כתוביות אוטומטיות באנגלית."
+    },
+    "last_checked": "2026-08-03"
+  },
+  {
+    "id": "yt-_zQoFML9xPk",
+    "youtube_video_id": "_zQoFML9xPk",
+    "youtube_url": "https://www.youtube.com/watch?v=_zQoFML9xPk",
+    "thumbnail_url": "https://i.ytimg.com/vi/_zQoFML9xPk/hqdefault.jpg",
+    "title_original": "Offroad ABS",
+    "title_he": "בחינת התנהגות ABS בשטח",
+    "channel_name": "Bret Tkacs ADV",
+    "channel_url": "https://www.youtube.com/channel/UCdCzEBaIZQy3JXzc06ByNAg",
+    "published_date": "2021-09-01",
+    "duration_seconds": 833,
+    "language": "en",
+    "subtitle_languages": [],
+    "domain": "offroad_adventure",
+    "primary_category": "electronic_aids",
+    "secondary_categories": [
+      "offroad_braking"
+    ],
+    "tags": [
+      "abs",
+      "offroad_braking",
+      "braking",
+      "gravel",
+      "safety"
+    ],
+    "skill_level": "intermediate",
+    "risk_level": "high",
+    "motorcycle_types": [
+      "adventure",
+      "dual_sport"
+    ],
+    "motorcycle_weight_classes": [
+      "medium",
+      "heavy"
+    ],
+    "terrain_types": [
+      "dirt",
+      "gravel"
+    ],
+    "road_conditions": [],
+    "summary_he": "בחינה של העצה הגורפת לכבות ABS בשטח, באמצעות השוואת מצבי האלקטרוניקה בשני אופנועי אדוונצ'ר; המיקוד הוא בהתנהגות המערכת ולא בהשוואת הדגמים עצמם.",
+    "learning_points_he": [
+      "להטיל ספק בכלל הגורף של כיבוי ABS בכל יציאה לשטח",
+      "להבחין בין ABS כביש למצב ABS ייעודי לשטח",
+      "לבדוק את הגדרות האופנוע לפני ירידה ממשטח סלול",
+      "להעריך את תגובת המערכת על משטח צפוי ורק במסגרת הדרכה"
+    ],
+    "fit_for_he": "מתאים לרוכבים בינוניים על אופנועי אדוונצ'ר מודרניים, לאחר שליטה בבלימה בשטח והיכרות עם ספר הרכב.",
+    "why_watch_he": "במקום לחזור על עצת רוכבים נפוצה, הסרטון מגדיר ניסוי השוואתי בין מערכות קיימות ומדגיש שהאלקטרוניקה תלויה בדגם ובמצב הנבחר.",
+    "exercises_he": [],
+    "equipment_he": [
+      "ספר רכב",
+      "ציוד מיגון מלא",
+      "מתחם הדרכה סגור עם מדריך"
+    ],
+    "safety_warnings_he": [
+      "בדיקת מרחקי עצירה על עפר היא תרגול בסיכון גבוה; אין לבצע אותה בכביש ציבורי או ללא מרחב ומדריך מתאימים."
+    ],
+    "common_mistakes_he": [
+      "כיבוי אוטומטי של ABS בלי לבדוק אם קיים מצב שטח",
+      "הסקת מסקנה מאופנוע אחד לכל הדגמים"
+    ],
+    "chapters": [],
+    "quality_score": 4,
+    "quality_reason_he": "תיאור המקור מגדיר במדויק את שאלת הבדיקה, שני אופנועי הניסוי ומגבלת ההשוואה; אין פרקי YouTube ולכן הסיווג נשמר ברמת ביטחון בינונית.",
+    "source_type": "professional_instructor",
+    "contains_marketing": true,
+    "related_video_ids": [
+      "yt-zsKLdi_nYYQ",
+      "yt-hN0vylh__lo"
+    ],
+    "verification": {
+      "link_status": "active_public",
+      "metadata_verified": true,
+      "content_evidence_types": [
+        "description"
+      ],
+      "classification_confidence": "medium",
+      "notes_he": "ב־2026-08-03 נפתח מקור YouTube ונבדקו זמינות ציבורית, כותרת, ערוץ, תאריך, משך ותיאור. לא נמצאו פרקי YouTube לשמירה. נמצאו כתוביות אוטומטיות באנגלית."
+    },
+    "last_checked": "2026-08-03"
+  },
+  {
+    "id": "yt-oW7eVgdCC58",
+    "youtube_video_id": "oW7eVgdCC58",
+    "youtube_url": "https://www.youtube.com/watch?v=oW7eVgdCC58",
+    "thumbnail_url": "https://i.ytimg.com/vi/oW7eVgdCC58/hqdefault.jpg",
+    "title_original": "Motorcycle Tire Pressure - Everything you Need to Know",
+    "title_he": "לחץ אוויר בצמיגי אופנוע: עקרונות ויישומים",
+    "channel_name": "Big Rock Moto",
+    "channel_url": "https://www.youtube.com/channel/UCYeaheuGXIv0UhpSBfPiJiA",
+    "published_date": "2020-12-05",
+    "duration_seconds": 1047,
+    "language": "en",
+    "subtitle_languages": [],
+    "domain": "mixed",
+    "primary_category": "tires_setup",
+    "secondary_categories": [
+      "gravel_dirt"
+    ],
+    "tags": [
+      "tire_pressure",
+      "traction",
+      "planning",
+      "long_distance"
+    ],
+    "skill_level": "intermediate",
+    "risk_level": "medium",
+    "motorcycle_types": [
+      "adventure",
+      "dual_sport",
+      "street",
+      "general_motorcycle"
+    ],
+    "motorcycle_weight_classes": [
+      "light",
+      "medium",
+      "heavy",
+      "general"
+    ],
+    "terrain_types": [
+      "dirt",
+      "gravel"
+    ],
+    "road_conditions": [
+      "dry_pavement",
+      "highway"
+    ],
+    "summary_he": "שיעור רחב על לחץ אוויר, משינויי טמפרטורה ונשיאת עומס ועד כתם המגע, שחיקה, אחיזה בכביש והפחתת לחץ מבוקרת לרכיבת דו־שימושי ושטח.",
+    "learning_points_he": [
+      "להבין כיצד טמפרטורה משנה את מדידת הלחץ",
+      "לקשר בין לחץ, נשיאת עומס וכתם המגע של הצמיג",
+      "להפריד בין דרישות כביש לבין סיבה להפחתת לחץ בשטח",
+      "להשתמש בהמלצות יצרן כנקודת מוצא לפני התאמה זהירה"
+    ],
+    "fit_for_he": "מתאים לרוכבים שרוצים בסיס טכני רחב לפני קביעת שגרת בדיקה לאופנוע כביש, דו־שימושי או אדוונצ'ר.",
+    "why_watch_he": "שמונה הפרקים בונים רצף מן הפיזיקה הבסיסית ועד טווחי שימוש בכביש ובשטח, ולכן מאפשרים להבין את הפשרה ולא רק לזכור מספר לחץ.",
+    "exercises_he": [
+      "מדוד ורשום לחץ כשהצמיג קר, ואז השווה לערך היצרן; אין לשנות את הערך בלי להבין את העומס והתנאים."
+    ],
+    "equipment_he": [
+      "מד לחץ תקין",
+      "משאבה",
+      "ספר רכב",
+      "ציוד מיגון מלא"
+    ],
+    "safety_warnings_he": [
+      "ערכי לחץ שאינם מתאימים לעומס, לצמיג ולמהירות עלולים לפגוע ביציבות, באטימה וביכולת נשיאת העומס."
+    ],
+    "common_mistakes_he": [
+      "השוואת מדידה חמה לערך קר",
+      "העתקת לחץ מאופנוע בעל משקל וצמיג שונים",
+      "התעלמות ממטען ומהירות כביש"
+    ],
+    "chapters": [
+      {
+        "start_seconds": 0,
+        "end_seconds": 29,
+        "title": "Intro"
+      },
+      {
+        "start_seconds": 29,
+        "end_seconds": 157,
+        "title": "What Is Pressure?"
+      },
+      {
+        "start_seconds": 157,
+        "end_seconds": 282,
+        "title": "Temperature & Pressure"
+      },
+      {
+        "start_seconds": 282,
+        "end_seconds": 428,
+        "title": "Pressure Guidelines"
+      },
+      {
+        "start_seconds": 428,
+        "end_seconds": 603,
+        "title": "Street Pressure / Traction"
+      },
+      {
+        "start_seconds": 603,
+        "end_seconds": 717,
+        "title": "Why Air Down?"
+      },
+      {
+        "start_seconds": 717,
+        "end_seconds": 998,
+        "title": "Recommended Pressures DS/AVD/Dirt"
+      },
+      {
+        "start_seconds": 998,
+        "end_seconds": 1047,
+        "title": "Conclusion"
+      }
+    ],
+    "quality_score": 4,
+    "quality_reason_he": "תיאור מפורט ושמונה פרקים מאמתים כיסוי של טמפרטורה, עומס, אחיזה והבדלי כביש־שטח; ריבוי קישורי שותפים מסחריים מחייב להפרידם מן ההסבר.",
+    "source_type": "experienced_rider",
+    "contains_marketing": true,
+    "related_video_ids": [
+      "yt-QXl542xFnhU",
+      "yt-CCCl2KBpP5g"
+    ],
+    "verification": {
+      "link_status": "active_public",
+      "metadata_verified": true,
+      "content_evidence_types": [
+        "description",
+        "chapters"
+      ],
+      "classification_confidence": "high",
+      "notes_he": "ב־2026-08-03 נפתח מקור YouTube ונבדקו זמינות ציבורית, כותרת, ערוץ, תאריך, משך ותיאור. נשמרו 8 פרקי YouTube שנשלפו מן המקור. נמצאו כתוביות אוטומטיות באנגלית."
+    },
+    "last_checked": "2026-08-03"
+  },
+  {
+    "id": "yt-YlseO0ceUcw",
+    "youtube_video_id": "YlseO0ceUcw",
+    "youtube_url": "https://www.youtube.com/watch?v=YlseO0ceUcw",
+    "thumbnail_url": "https://i.ytimg.com/vi/YlseO0ceUcw/hqdefault.jpg",
+    "title_original": "Pack YOUR MOTORCYCLE Travel Luggage Like a Pro!",
+    "title_he": "מיון ואריזת ציוד למסע אופנוע",
+    "channel_name": "Motorcycle Adventures",
+    "channel_url": "https://www.youtube.com/channel/UC0NfCCms5KosfsdbYQunFEQ",
+    "published_date": "2025-10-13",
+    "duration_seconds": 894,
+    "language": "en",
+    "subtitle_languages": [],
+    "domain": "safety_recovery",
+    "primary_category": "trip_preparation",
+    "secondary_categories": [],
+    "tags": [
+      "luggage",
+      "planning",
+      "long_distance",
+      "safety"
+    ],
+    "skill_level": "beginner",
+    "risk_level": "medium",
+    "motorcycle_types": [
+      "adventure",
+      "touring",
+      "sport_touring"
+    ],
+    "motorcycle_weight_classes": [
+      "medium",
+      "heavy"
+    ],
+    "terrain_types": [],
+    "road_conditions": [
+      "dry_pavement",
+      "highway"
+    ],
+    "summary_he": "הצגה מעשית של תכולת מטען למסעות ארוכים ושל תהליך הפריסה והמיון לפני יציאה, על בסיס משקל כולל מדווח של תיקי האוכף ותיק המכל.",
+    "learning_points_he": [
+      "לפרוס את כל הציוד לפני האריזה כדי לזהות כפילויות",
+      "למדוד את משקל המטען בפועל במקום להסתמך על תחושה",
+      "להפריד בין ציוד נגיש במהלך היום לבין ציוד למחנה",
+      "לבחון כל פריט לפי צורך חוזר במסע ולא לפי רשימת קניות"
+    ],
+    "fit_for_he": "מתאים לרוכבי טיולים שמגבשים רשימת ציוד אישית ורוצים לראות דוגמה מתועדת של מטען מצומצם יחסית למסע ארוך.",
+    "why_watch_he": "הסרטון מציג את הציוד בפועל ואת משקלו ולא מסתפק ברשימה כללית, אך יש להתאים את הבחירות לאקלים, למסלול ולמגבלות היצרן.",
+    "exercises_he": [
+      "פרוס את ציוד המסע, שקול כל תיק ורשום ליד כל פריט מתי השתמשת בו במסע האחרון; אין להעמיס על האופנוע בשלב התרגיל."
+    ],
+    "equipment_he": [
+      "משקל ביתי או משקל מזוודות",
+      "רשימת ציוד",
+      "תיקים מאושרים לאופנוע",
+      "רצועות תקינות"
+    ],
+    "safety_warnings_he": [
+      "הסרטון מציג תכולה אישית ואינו מאמת מגבלות עומס; יש לבדוק משקל מותר, חלוקה ועיגון לפי יצרן האופנוע והתיקים."
+    ],
+    "common_mistakes_he": [
+      "העתקת רשימת ציוד בלי להתאים למסלול",
+      "אי־שקילת התיקים",
+      "הוספת פריטים בלי לבדוק מגבלת עומס"
+    ],
+    "chapters": [],
+    "quality_score": 3,
+    "quality_reason_he": "התיאור מאמת תהליך פריסה, תכולה ומשקלים מדווחים מניסיון מסעות רב; אין פרקים, והסרטון כולל קידום קורסים וקישורי תמיכה רבים.",
+    "source_type": "experienced_rider",
+    "contains_marketing": true,
+    "related_video_ids": [
+      "yt-dPmq8jpUL5s",
+      "yt-2XP_qr9NNcc"
+    ],
+    "verification": {
+      "link_status": "active_public",
+      "metadata_verified": true,
+      "content_evidence_types": [
+        "description"
+      ],
+      "classification_confidence": "medium",
+      "notes_he": "ב־2026-08-03 נפתח מקור YouTube ונבדקו זמינות ציבורית, כותרת, ערוץ, תאריך, משך ותיאור. לא נמצאו פרקי YouTube לשמירה. נמצאו כתוביות אוטומטיות באנגלית."
+    },
+    "last_checked": "2026-08-03"
+  },
+  {
+    "id": "yt-dPmq8jpUL5s",
+    "youtube_video_id": "dPmq8jpUL5s",
+    "youtube_url": "https://www.youtube.com/watch?v=dPmq8jpUL5s",
+    "thumbnail_url": "https://i.ytimg.com/vi/dPmq8jpUL5s/hqdefault.jpg",
+    "title_original": "ADV Emergency Gear- Tools of my Trade as a guide/instructor",
+    "title_he": "ציוד חירום של מדריך ומוביל רכיבות אדוונצ'ר",
+    "channel_name": "Bret Tkacs ADV",
+    "channel_url": "https://www.youtube.com/channel/UCdCzEBaIZQy3JXzc06ByNAg",
+    "published_date": "2021-07-18",
+    "duration_seconds": 511,
+    "language": "en",
+    "subtitle_languages": [],
+    "domain": "safety_recovery",
+    "primary_category": "trip_preparation",
+    "secondary_categories": [
+      "recovery"
+    ],
+    "tags": [
+      "emergency_kit",
+      "first_aid",
+      "hydration",
+      "planning",
+      "recovery"
+    ],
+    "skill_level": "advanced_beginner",
+    "risk_level": "medium",
+    "motorcycle_types": [
+      "adventure",
+      "dual_sport"
+    ],
+    "motorcycle_weight_classes": [
+      "medium",
+      "heavy"
+    ],
+    "terrain_types": [
+      "dirt",
+      "gravel"
+    ],
+    "road_conditions": [
+      "rural_twisty"
+    ],
+    "summary_he": "סיור בציוד שהמדריך נושא בהובלת קבוצות: מים ומזון, מענה רפואי, כלי עבודה, סדים ומשאבה, תוך הדגשת ההבדל בין ערכת מדריך לצרכים של רוכב יחיד.",
+    "learning_points_he": [
+      "לחלק את ערכת החירום בין צורכי גוף לתקלות מכניות",
+      "לכלול מים ומזון כחלק מן המוכנות ולא כתוספת נוחות",
+      "להבין מדוע מדריך קבוצה נושא ציוד רפואי וכלים נוספים",
+      "להתאים נפח ומשקל לתרחישים וליכולת השימוש האמיתית"
+    ],
+    "fit_for_he": "מתאים לרוכבי אדוונצ'ר ולמובילי קבוצה שבונים רשימת מוכנות בסיסית, תוך התאמה להכשרה, למסלול ולמספר המשתתפים.",
+    "why_watch_he": "חמשת הפרקים חושפים ערכה אמיתית של מדריך ומפרידים בין כלי עבודה, סדים ומשאבה, כך שאפשר לבחון צרכים ולא לקנות רשימה עיוורת.",
+    "exercises_he": [
+      "ערוך ביקורת שולחן לערכה הקיימת וסמן לכל פריט תרחיש שימוש, תאריך תפוגה ומי בקבוצה יודע להשתמש בו."
+    ],
+    "equipment_he": [
+      "מים ומזון חירום",
+      "ערכת עזרה ראשונה בהתאם להכשרה",
+      "ערכת כלים מותאמת לאופנוע",
+      "משאבה",
+      "אמצעי תקשורת"
+    ],
+    "safety_warnings_he": [
+      "ציוד רפואי אינו מחליף הכשרה; אין להשתמש בסד, תרופה או כלי שאינך מוסמך ומיומן להפעיל."
+    ],
+    "common_mistakes_he": [
+      "נשיאת ציוד ללא ידע שימוש",
+      "התעלמות מתוקף ציוד רפואי",
+      "ערכת כלים שאינה מתאימה לברגים ולאביזרים באופנוע"
+    ],
+    "chapters": [
+      {
+        "start_seconds": 51,
+        "end_seconds": 84,
+        "title": "31 Liter Bag"
+      },
+      {
+        "start_seconds": 84,
+        "end_seconds": 207,
+        "title": "Tool Roll"
+      },
+      {
+        "start_seconds": 207,
+        "end_seconds": 305,
+        "title": "Drone"
+      },
+      {
+        "start_seconds": 305,
+        "end_seconds": 381,
+        "title": "Splints"
+      },
+      {
+        "start_seconds": 381,
+        "end_seconds": 511,
+        "title": "Air Pump"
+      }
+    ],
+    "quality_score": 4,
+    "quality_reason_he": "התיאור וחמישה פרקים מאמתים כיסוי של מים, מזון, תקלות, סדים ומשאבה מתוך עבודת מדריך; קישורי מוצרים מסומנים כשיווק.",
+    "source_type": "professional_instructor",
+    "contains_marketing": true,
+    "related_video_ids": [
+      "yt-YlseO0ceUcw",
+      "yt-dRvofOL3eaI"
+    ],
+    "verification": {
+      "link_status": "active_public",
+      "metadata_verified": true,
+      "content_evidence_types": [
+        "description",
+        "chapters"
+      ],
+      "classification_confidence": "high",
+      "notes_he": "ב־2026-08-03 נפתח מקור YouTube ונבדקו זמינות ציבורית, כותרת, ערוץ, תאריך, משך ותיאור. נשמרו 5 פרקי YouTube שנשלפו מן המקור. נמצאו כתוביות אוטומטיות באנגלית."
+    },
+    "last_checked": "2026-08-03"
+  },
+  {
+    "id": "yt-KC0Rv0aM7OI",
+    "youtube_video_id": "KC0Rv0aM7OI",
+    "youtube_url": "https://www.youtube.com/watch?v=KC0Rv0aM7OI",
+    "thumbnail_url": "https://i.ytimg.com/vi/KC0Rv0aM7OI/hqdefault.jpg",
+    "title_original": "Top 3 BIGGEST Adventure Motorcycle Off Road Mistakes | How To Correct Them",
+    "title_he": "שלוש טעויות יסוד ברכיבת אדוונצ'ר בשטח",
+    "channel_name": "SoCal Off-Road School",
+    "channel_url": "https://www.youtube.com/channel/UCzZDGVaWa91YCH-MZHOGWLQ",
+    "published_date": "2023-01-24",
+    "duration_seconds": 523,
+    "language": "en",
+    "subtitle_languages": [
+      "en"
+    ],
+    "domain": "offroad_adventure",
+    "primary_category": "offroad_basics",
+    "secondary_categories": [
+      "riding_position",
+      "controls_coordination"
+    ],
+    "tags": [
+      "common_mistakes",
+      "standing",
+      "throttle",
+      "balance",
+      "beginner"
+    ],
+    "skill_level": "beginner",
+    "risk_level": "medium",
+    "motorcycle_types": [
+      "adventure",
+      "dual_sport"
+    ],
+    "motorcycle_weight_classes": [
+      "medium",
+      "heavy"
+    ],
+    "terrain_types": [
+      "dirt",
+      "gravel",
+      "sand"
+    ],
+    "road_conditions": [],
+    "summary_he": "שיעור תיקון טעויות לרוכבי אדוונצ'ר חדשים: תנוחת עמידה, גז לא עקבי והורדת רגליים מן הרגליות, עם הדגמות על שביל חולי ובכניסה לשטח משתנה.",
+    "learning_points_he": [
+      "לבנות תנוחת עמידה שמאפשרת לאופנוע לנוע מתחת לרוכב",
+      "לשמור פקודת גז צפויה במקום פתיחה וסגירה חדות",
+      "להשאיר את הרגליים על הרגליות כל עוד אפשר לשלוט באופנוע",
+      "להיכנס לשינוי תוואי עם מבט ותכנית ולא בתגובה מאוחרת"
+    ],
+    "fit_for_he": "מתאים למתחילים שיוצאים לדרך עפר על אופנוע אדוונצ'ר ורוצים לזהות הרגלים שמערערים יציבות עוד לפני תוואי מורכב.",
+    "why_watch_he": "הסרטון קושר כל טעות לתיקון נראה לעין, ושבעת הפרקים כוללים הדגמות בשביל חולי ולא רק הסבר תיאורטי.",
+    "exercises_he": [],
+    "equipment_he": [
+      "קסדה תקנית",
+      "מגפי רכיבה",
+      "מיגון גוף",
+      "שטח אימון רחב וצפוי"
+    ],
+    "safety_warnings_he": [
+      "אין לתרגל בחול עמוק לפני שליטה בעמידה ובגז על עפר שטוח; יש להתקדם עם מדריך ובמהירות נמוכה."
+    ],
+    "common_mistakes_he": [
+      "עמידה נוקשה",
+      "סגירת גז פתאומית",
+      "הורדת שתי רגליים מן הרגליות בתנועה"
+    ],
+    "chapters": [
+      {
+        "start_seconds": 0,
+        "end_seconds": 59,
+        "title": "Intro"
+      },
+      {
+        "start_seconds": 59,
+        "end_seconds": 180,
+        "title": "Standing Up"
+      },
+      {
+        "start_seconds": 180,
+        "end_seconds": 206,
+        "title": "Example"
+      },
+      {
+        "start_seconds": 206,
+        "end_seconds": 334,
+        "title": "Sandy Trail"
+      },
+      {
+        "start_seconds": 334,
+        "end_seconds": 357,
+        "title": "Sandpit"
+      },
+      {
+        "start_seconds": 357,
+        "end_seconds": 456,
+        "title": "Riding Into Terrain"
+      },
+      {
+        "start_seconds": 456,
+        "end_seconds": 523,
+        "title": "Bonus Tip"
+      }
+    ],
+    "quality_score": 5,
+    "quality_reason_he": "תיאור המקור מונה במפורש שלוש טעויות ושבעת הפרקים מאמתים עמידה, שביל חולי וכניסה לתוואי; המקור הוא בית ספר לרכיבת שטח.",
+    "source_type": "riding_school",
+    "contains_marketing": true,
+    "related_video_ids": [
+      "yt-UsOGqaTH3d0",
+      "yt-fqm0Oj9G8QU",
+      "yt-uscjPZXNyMc"
+    ],
+    "verification": {
+      "link_status": "active_public",
+      "metadata_verified": true,
+      "content_evidence_types": [
+        "description",
+        "chapters"
+      ],
+      "classification_confidence": "high",
+      "notes_he": "ב־2026-08-03 נפתח מקור YouTube ונבדקו זמינות ציבורית, כותרת, ערוץ, תאריך, משך ותיאור. נשמרו 7 פרקי YouTube שנשלפו מן המקור. נמצאו כתוביות אוטומטיות באנגלית."
+    },
+    "last_checked": "2026-08-03"
+  },
+  {
+    "id": "yt-uscjPZXNyMc",
+    "youtube_video_id": "uscjPZXNyMc",
+    "youtube_url": "https://www.youtube.com/watch?v=uscjPZXNyMc",
+    "thumbnail_url": "https://i.ytimg.com/vi/uscjPZXNyMc/hqdefault.jpg",
+    "title_original": "3 Offroad skills you should practice",
+    "title_he": "שלוש מיומנויות שטח שכדאי לתרגל",
+    "channel_name": "Adam Riemann",
+    "channel_url": "https://www.youtube.com/channel/UCY3mZIqfQh71JZBiWTQ3I7A",
+    "published_date": "2024-03-27",
+    "duration_seconds": 785,
+    "language": "en",
+    "subtitle_languages": [],
+    "domain": "practice",
+    "primary_category": "drills",
+    "secondary_categories": [
+      "offroad_turning",
+      "obstacles",
+      "hills"
+    ],
+    "tags": [
+      "practice_drill",
+      "cornering",
+      "obstacle",
+      "hill_climb",
+      "body_position"
+    ],
+    "skill_level": "intermediate",
+    "risk_level": "high",
+    "motorcycle_types": [
+      "adventure",
+      "dual_sport"
+    ],
+    "motorcycle_weight_classes": [
+      "light",
+      "medium",
+      "heavy"
+    ],
+    "terrain_types": [
+      "dirt",
+      "hill",
+      "obstacle"
+    ],
+    "road_conditions": [],
+    "summary_he": "שלושה נושאי תרגול מודגמים על אופנוע אדוונצ'ר: פנייה אינסטינקטיבית, ספיגת מכשולים באמצעות הגוף ומיקום גוף בעלייה, כחלק מבניית שליטה בטוחה בשטח.",
+    "learning_points_he": [
+      "לתרגל פנייה בשטח עד שהמבט ותנועת הגוף מתחברים",
+      "לאפשר לרגליים ולמתלים לספוג שינויי גובה ומכשול",
+      "להתאים את מיקום הגוף לשיפוע העלייה ולשמירת אחיזה",
+      "לבודד כל מיומנות לפני שמחברים אותה למסלול מלא"
+    ],
+    "fit_for_he": "מיועד לרוכבים בינוניים שכבר שולטים בעמידה, מצמד וגז ורוצים לבנות אימון מדורג לפנייה, מכשול ועלייה.",
+    "why_watch_he": "חמשת הפרקים מחלקים את ההדגמה לאיזון, סחף קרקע ועלייה, ומציגים שלושה תרגולים נפרדים במקום רצף רכיבה בלתי מוסבר.",
+    "exercises_he": [
+      "בחר מיומנות אחת בלבד ובנה לה אזור תרגול פשוט עם מדריך; אל תחבר מכשול ועלייה באותו סבב ראשון."
+    ],
+    "equipment_he": [
+      "קסדה תקנית",
+      "מגפי שטח",
+      "מיגון גוף",
+      "אופנוע עם מגני מנוע מתאימים"
+    ],
+    "safety_warnings_he": [
+      "תרגול מכשולים ועליות הוא בסיכון גבוה; יש לבצעו בתוואי סגור, עם מדריך ועם נתיב מילוט ברור."
+    ],
+    "common_mistakes_he": [
+      "ניסיון של שלוש המיומנויות יחד לפני שליטה בכל אחת",
+      "מבט על המכשול",
+      "תנוחת גוף קבועה שאינה משתנה עם השיפוע"
+    ],
+    "chapters": [
+      {
+        "start_seconds": 0,
+        "end_seconds": 278,
+        "title": "Intro"
+      },
+      {
+        "start_seconds": 278,
+        "end_seconds": 403,
+        "title": "Balance"
+      },
+      {
+        "start_seconds": 403,
+        "end_seconds": 527,
+        "title": "Erosion"
+      },
+      {
+        "start_seconds": 527,
+        "end_seconds": 659,
+        "title": "Hill Climb"
+      },
+      {
+        "start_seconds": 659,
+        "end_seconds": 785,
+        "title": "Outro"
+      }
+    ],
+    "quality_score": 5,
+    "quality_reason_he": "התיאור וחמישה פרקים מאמתים במפורש פנייה, ספיגת מכשול ומיקום גוף בעלייה; ההדגמות מחולקות לנושאי תרגול ברורים.",
+    "source_type": "professional_instructor",
+    "contains_marketing": true,
+    "related_video_ids": [
+      "yt-KC0Rv0aM7OI",
+      "yt-UHkVHDFNUqU",
+      "yt-Z4G8NxyI4I8"
+    ],
+    "verification": {
+      "link_status": "active_public",
+      "metadata_verified": true,
+      "content_evidence_types": [
+        "description",
+        "chapters"
+      ],
+      "classification_confidence": "high",
+      "notes_he": "ב־2026-08-03 נפתח מקור YouTube ונבדקו זמינות ציבורית, כותרת, ערוץ, תאריך, משך ותיאור. נשמרו 5 פרקי YouTube שנשלפו מן המקור. נמצאו כתוביות אוטומטיות באנגלית."
+    },
+    "last_checked": "2026-08-03"
+  }
+]

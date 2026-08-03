@@ -1,139 +1,83 @@
-# מסירה ל־Codex — Phase 02B
+# מסירה ל־Codex — לאחר Phase 03
 
-## מצב הסבב
+## גבול הסבב
 
-Phase 02B הוא תיקון מוכנות להתרחבות, אמינות ו־UX לאתר V1. הוא אינו סבב 03 ולא נוספו בו סרטונים חדשים.
+Phase 03 הושלם. אין להתחיל את Phase 04 בלי אישור מפורש של `reports/phase-03-review-bundle.zip`. קובץ המשימה הבא הוא `prompts/04_CODEX_INTEGRATE_AND_QA_V2.md`, בהתאם ל־`NEXT_ACTION.md`.
 
-Snapshot התוכן נשאר ללא שינוי:
+## מצב הנתונים המאושר
 
-- 60 רשומות מאושרות ב־`data/videos.json`.
-- 60 מזהי YouTube ייחודיים ו־60 IDs פנימיים ייחודיים.
-- שני מסלולי לימוד תקינים:
-  - `beginner-offroad-adventure` — 10 שלבים.
-  - `beginner-road` — 10 שלבים.
-- 20 שלבים ו־54 הפניות לסרטונים בסך הכול; כל ההפניות מפנות ל־IDs קיימים.
+- `data/videos.json`: בדיוק 130 רשומות.
+- 130 IDs פנימיים, 130 YouTube Video IDs ו־130 כתובות YouTube ייחודיים.
+- שפות: 9 עברית, 119 אנגלית ו־2 יפנית.
+- 46 ערוצים ייחודיים.
+- 82 רשומות עם Chapters, בסך הכול 589 אובייקטים.
+- בדיוק שני מסלולי למידה, 20 צעדים ו־85 הפניות תקינות.
+- אין Placeholder, נתוני דמה, הפניות שבורות או כפילויות פעילות.
 
-אין להציג את הפרויקט כאילו סבב 03 בוצע. המעבר ל־Work מותר רק לאחר אישור חבילת Phase 02B.
+## Trust Audit של Wave 1
 
-## מקורות אמת
+כל 60 דפי המקור נבדקו מחדש לפני הוספת רשומה חדשה. ארבעת השדות `quality_reason_he`, `why_watch_he`, `exercises_he`, `fit_for_he` עודכנו על בסיס ראיות; 50 רשומות נשארו עם `exercises_he=[]` משום שלא נמצא תרגיל מפורש. ב־`yt-DY7OFizK_eo` הוסרו שישה פרקים שהוכחו כהפניות לסרטונים אחרים. כל 60 הרשומות נשמרו, ושער 60 עבר עם 4,261/0. פירוט השינויים נמצא ב־`research/reports/wave-1-corrections.md`.
 
-סדר העדיפויות נשאר:
+## Wave 2
 
-1. `MASTER_SPEC.md`.
-2. קובץ המשימה הפעיל מתוך `prompts/`.
-3. `DECISIONS.md`.
-4. `QUALITY_GATES.md`.
-5. הנתונים והקוד הקיימים.
+- נוספו בדיוק 70 רשומות; 0 רשומות Wave 1 הוסרו.
+- האצווה החדשה כוללת 68 סרטונים באנגלית ושני סרטוני JAF ביפנית.
+- החלוקה החדשה לפי תחום: 23 שטח/אדוונצ'ר, 22 כביש, 13 בטיחות וחילוץ, 6 משולב ו־6 תרגול.
+- 52 מן הרשומות החדשות כוללות 400 פרקים מדויקים; 18 מבוססות תיאור ללא פרקים.
+- כל `why_watch_he`, ‏`fit_for_he` ו־`quality_reason_he` באצווה החדשה ייחודיים.
+- לא נשמרו וידאו, שמע, תמלול, כתוביות או תיאור YouTube מלא.
 
-`data/categories.json` הוא מילון הסיווג, `schema/video.schema.json` מגדיר רשומת וידאו, `data/videos.json` מכיל רק תוכן מאושר, ו־`data/learning-paths.json` רשאי להפנות רק למזהים קיימים.
+ראיות המחקר:
 
-## Runtime מוכן להתרחבות
+- `research/approved/wave-2-approved-ids.txt`
+- `research/approved/wave-2-youtube-metadata.json`
+- `research/approved/wave-2-offroad-records.json`
+- `research/approved/wave-2-road-records.json`
+- `research/approved/wave-2-technical-records.json`
+- `research/rejected/wave-2-rejected.csv`
+- `research/reports/wave-2-report.md`
 
-האתר אינו מחייב עוד מספר קשיח של 60 רשומות. בזמן טעינה הוא מקבל מערך סרטונים לא־ריק בעל מבנה תקין; הוא מציג שגיאה ברורה עבור נתונים ריקים או לא תקינים, אך לא עבור מאגר שמספרו שונה מ־60.
+## חריג הקישור שטופל
 
-- כל ספירות התוכן והתוצאות נגזרות מהנתונים בפועל.
-- ערכי HTML התחלתיים אינם מציגים 60 כעובדה לפני טעינת הנתונים.
-- גודל התצוגה מופרד ממספר הסרטונים הכולל.
-- `INITIAL_VISIBLE_LIMIT` ו־`LOAD_MORE_BATCH_SIZE` מוגדרים ב־`assets/js/pagination.js`.
-- “טען עוד” משתמש במספר התוצאות ובגבולות העמוד, ולכן מיועד לעבוד גם עם 130 ו־300 רשומות בלי כפילות DOM.
+בריצת הקישורים הראשונה `5SlHGlyzF7w` החזיר HTTP 401 מ־YouTube oEmbed, אף שדף הצפייה והמטא־דאטה נשארו public. מאחר שהאתר משתמש בנגן מוטמע, הרשומה הועברה לדחיות והוחלפה ב־`CI6h7XtyINY`, שעבר Full Metadata ו־oEmbed. התוצאה הסופית היא 130 active, ‏0 unavailable ו־0 indeterminate.
 
-אין להחזיר תנאי Runtime מהסוג `videos.length === 60` או להשתמש ב־60 כגודל עמוד.
+## הרחבות טקסונומיה
 
-## כלי אימות ומדיניות ספירה
+נוספו ארבע קטגוריות בלבד: `tires_setup`, `suspension_setup`, `electronic_aids`, `trip_preparation`; עשר תגיות תואמות; השפה `ja`; וחמישה מושגי חיפוש. אין לשנות מזהים אלה בלי migration מתועד של כל ההפניות.
 
-`tools/validate_data.py` מאמת כברירת מחדל מאגר לא־ריק בלי מכסת ספירה קבועה. שערי תוכן מפעילים מדיניות מפורשת:
+## כלי תחזוקה שנוספו או הורחבו
 
-```bash
-python tools/validate_data.py --expected-count 60
-python tools/validate_data.py --expected-count 130
-python tools/validate_data.py --minimum-count 200
+- `tools/youtube_research.py` — מחקר מטא־דאטה בלבד; `yt-dlp` הוא תלות מחקר אופציונלית ואינו נדרש ל־runtime.
+- `tools/apply_phase03_wave1.py` — תיקון Trust Audit עם guard ל־hash של בסיס 60.
+- `tools/prepare_phase03_technical_records.py` — הפקת הרשומות הטכניות מתוך מטא־דאטה שנבדק.
+- `tools/apply_phase03_wave2.py` — מיזוג חד־פעמי מוגן של האצווה המאושרת.
+- `tools/replace_phase03_unembeddable.py` — תיעוד החלפת חריג oEmbed.
+- `tools/build_audit.py` — תומך ב־`--link-report` תוך שמירת התנהגות קודמת.
+- `tools/build_phase03_review_bundle.py` — בונה ומאמת ZIP עם allow-list, מניפסט ו־SHA-256.
+
+## בדיקות סופיות
+
+```powershell
+python tools/validate_data.py --expected-count 130 --report reports/phase-03-data-validation.json
+python tools/check_links.py --online --report reports/phase-03-link-check.json
+python tools/build_audit.py
+python tools/build_audit.py --link-report reports/phase-03-link-check.json
+npm test
+python -m unittest discover -s tests -p "test_*.py" -v
 ```
 
-- `--expected-count` ו־`--minimum-count` הדדיים ואינם מותרים יחד.
-- מדיניות הספירה, הערך שנדרש, הכמות בפועל והתוצאה נרשמים בפלט הטקסט וב־JSON.
-- כל בדיקות הסכמה, IDs, URLs, טקסונומיה, הפניות ומסלולים ממשיכות לפעול בכל מדיניות.
-- `tools/validate_wave1.py` הוא כלי Legacy לשער Wave 1 בלבד ומקבל `--expected-count`; אין להשתמש בו כבדיקת Release אחרי סבב 03.
+תוצאות סופיות:
 
-## בדיקות Scalability ו־Fixtures
+- Data: ‏8,051 עברו, ‏0 נכשלו, ‏0 אזהרות.
+- Node: ‏35 עברו, ‏0 נכשלו.
+- Python: ‏15 עברו, ‏0 נכשלו.
+- סך ייחודי ללא ספירה כפולה: 8,101 עברו, ‏0 נכשלו.
+- Online links: ‏130 עברו, ‏0 נכשלו.
+- Content Audit: PASS, ‏8,050 בדיקות חופפות עברו.
 
-בדיקות הסקלביליות אינן מכניסות נתוני דמה ל־Production:
+## מגבלות שנותרו
 
-- `tests/scalability.test.mjs` יוצר בזיכרון Fixtures של 130 ושל 300 רשומות ובודק אינדוקס, חיפוש, מסננים, מיון, ספירות, Pagination/Load more והיעדר IDs כפולים בתצוגה.
-- `tests/test_tools.py` יוצר עותקי פרויקט זמניים של 130 ושל 300 רשומות ובודק את מדיניות המאמת, לרבות `--minimum-count 200` על Fixture של 300.
-- `tools/serve_acceptance_fixture.py` יוצר אתר זמני ומבודד לבדיקות דפדפן של גודל מאגר ושל Config מותאם. הוא אינו משנה את `data/videos.json` ואינו משאיר Fixture בקובצי Production.
-- ה־Fixture תומך בתרחישי Config עם לוגו מקומי, לוגו חסר ו־fallback.
-
-יש להסתמך על `reports/test-summary.json` ועל `reports/browser-acceptance.json` העדכניים לתוצאות ההרצה הסופית, ולא לדווח על Fixture או בדיקת דפדפן שלא הורצו בפועל.
-
-## Site Config
-
-`data/site-config.json` מחובר ל־Runtime:
-
-- `site_name_he` מעדכן את שם המותג, `document.title` וכל אלמנט `data-site-name`.
-- `author_name` מוצג במיקום הקיים ומוסתר נקי כאשר הוא ריק.
-- `community_name` מחובר לאלמנט ממשי ומוסתר כאשר אינו מוגדר.
-- `logo_path` מקבל רק נתיב יחסי בטוח תחת `assets/`; נתיב חיצוני, מוחלט, `data:`, `javascript:` או מעבר `..` נדחה. ערך ריק או כשל טעינה מחזירים את סמל ה־fallback המובנה.
-- `contact` אינו מציג כתובת מומצאת כאשר הוא ריק.
-- `safety_warning_he`, השפה וה־RTL ממשיכים להיגזר מה־Config.
-
-אין להוסיף ערך Config מומצא כדי למלא שדה ריק.
-
-## Overlay, נגישות ו־Bidi
-
-מנהל Overlay מרכזי מטפל בחלון הסרטון, חלון הזכויות, תפריט המובייל ומגירת המסננים:
-
-- נעילת גלילת הרקע ושמירת מיקום הגלילה בזמן Overlay פעיל.
-- החזרת הגלילה והמיקוד לפקד הפותח בעת סגירה.
-- סגירה ב־Escape.
-- סגירת תפריט ומסננים במעבר תצוגה וניקוי State מתאים.
-- מניעת אינטראקציה עם הרקע באמצעות `inert` או fallback שקול.
-- הסרת iframe של YouTube בעת סגירת חלון הסרטון.
-- תפריט Desktop רגיל אינו נועל גלילה.
-
-שם ערוץ, משך ותאריך מוצגים כרכיבי DOM מבודדים באמצעות `bdi`/כיוון מתאים, ולא כמחרוזת RTL/LTR מעורבת אחת.
-
-בדיקות דפדפן נדרשות ב־1440×900 וב־390×844, לרבות Scroll lock, Escape, Focus return, היעדר גלילה אופקית, Config מותאם, Fixture של 130 ושל 300, והיעדר שגיאות או אזהרות Console. הראיות המחייבות נמצאות בדוח הקבלה ובצילומי Phase 02B.
-
-## ממצאי אמינות תוכן
-
-הדוח המחייב ל־Work הוא:
-
-`reports/content-findings-for-work.md`
-
-הממצאים המרכזיים:
-
-- 31 מתוך 60 הרשומות מכילות מערך Chapters לא־ריק; קיימים 195 אובייקטי Chapter בסך הכול.
-- ברשומה `yt-DY7OFizK_eo` קיים חוסר־עקביות פנימי בין סרטון רכיבה בגשם לבין כותרות Chapters של סקירות אופנועים ו־Life Hacks.
-- `quality_reason_he`, `why_watch_he`, `exercise_suggestions_he` ו־`fit_for_he` כוללים דפוסים תבניתיים המחייבים בדיקה מחדש מול ראיות.
-- קיים ריכוז מקורות, שיעור תוכן שיווקי גבוה יחסית, תשעה סרטונים בלבד בעברית וקטגוריות דקות.
-
-Codex אינו רשאי להמציא תיקון לתקציר, סיווג, דירוג, תרגיל או Chapter. אין להסיר או להחליף נקודת זמן בלי מקור ברור. עד להשלמת ביקורת Work, כותרת ה־UI היא:
-
-`פרקים / נקודות זמן מתועדות`
-
-ולא `פרקים מאומתים`.
-
-## שער חובה לפני סבב 03
-
-`prompts/03_WORK_WAVE_2.md` מחייב `Wave 1 Trust Audit` לפני הוספת 70 סרטונים:
-
-1. לקרוא את `reports/content-findings-for-work.md`.
-2. לבדוק מחדש את כל 31 מערכי ה־Chapters מול YouTube Chapters, תמלול או צפייה ידנית.
-3. להסיר רק מידע שאינו מתאים או שאין לו בסיס; לא להמציא עובדות או Provenance.
-4. לתקן את השדות התבניתיים רק על סמך ראיות.
-5. לתעד כל שינוי ב־`research/reports/wave-1-corrections.md`.
-6. ליצור `research/rejected/wave-1-corrections.csv` רק אם רשומת וידאו שלמה נדחתה או הוסרה; אין ליצור שורת דמה.
-7. אם רשומה שלמה הוסרה, להחזיר תחילה את בסיס Wave 1 ל־60 באמצעות רשומה חלופית מאומתת ומתועדת.
-8. להריץ בהצלחה `python tools/validate_data.py --expected-count 60`.
-9. רק לאחר מעבר השער להוסיף בדיוק 70 רשומות חדשות ולהגיע ל־130.
-10. להריץ בהצלחה `python tools/validate_data.py --expected-count 130`.
-
-לאחר השלמת סבב 03 יש להעביר ל־Codex את `prompts/04_CODEX_INTEGRATE_AND_QA_V2.md`. אין להתחיל את סבב 04 כחלק מסבב Work.
-
-## איסורים למסירה הבאה
-
-- אין לשנות תוכן מאומת כדי להתאים UI או בדיקה.
-- אין ליצור fallback של נתוני דמה.
-- אין להוסיף Provenance לשדה Chapter בלי שינוי סכמה מאושר; עד אז המקור מתועד בדוח המחקר.
-- אין להצהיר שבדיקת רשת, דפדפן, Fixture או צילום בוצעו בלי ראיה בפועל.
-- אין להתחיל את סבב 03 לפני אישור Phase 02B.
+- זהו Snapshot של 130 ולא Release 1.0; יעד המפרט הוא לפחות 200.
+- לא נוסף סרטון עברי חדש ב־Wave 2 משום שלא נמצא מועמד שעמד בשער הראיות בלי להוריד איכות; תשע הרשומות העבריות הקיימות נשמרו.
+- זמינות YouTube עשויה להשתנות, ולכן יש להריץ בדיקת קישורים מקוונת מחדש לפני שחרור או לאחר שינוי נתונים.
+- Phase 04 לא בוצע ולא נבדק במסגרת מסירה זו.

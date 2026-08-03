@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "updated": "2026-08-02",
+  "updated": "2026-08-03",
   "terms": [
     {
       "concept_id": "countersteering",
@@ -328,6 +328,67 @@
         "מערכת למניעת נעילה",
         "anti-lock braking",
         "איי בי אס"
+      ]
+    },
+    {
+      "concept_id": "tire_pressure",
+      "preferred_he": "לחץ אוויר בצמיג",
+      "preferred_en": "tire pressure",
+      "variants": [
+        "לחץ בצמיגים",
+        "לחץ אוויר",
+        "לחצי אוויר",
+        "tyre pressure",
+        "air pressure"
+      ]
+    },
+    {
+      "concept_id": "suspension",
+      "preferred_he": "מתלים",
+      "preferred_en": "suspension",
+      "variants": [
+        "בולם",
+        "בולמים",
+        "שיכוך",
+        "קדם עומס",
+        "preload",
+        "sag",
+        "damping"
+      ]
+    },
+    {
+      "concept_id": "luggage",
+      "preferred_he": "מטען",
+      "preferred_en": "luggage",
+      "variants": [
+        "אריזה",
+        "ציוד למסע",
+        "תיקי צד",
+        "packing",
+        "motorcycle luggage"
+      ]
+    },
+    {
+      "concept_id": "night_riding",
+      "preferred_he": "רכיבת לילה",
+      "preferred_en": "night riding",
+      "variants": [
+        "רכיבה בלילה",
+        "לילה",
+        "night ride",
+        "riding at night"
+      ]
+    },
+    {
+      "concept_id": "crosswind",
+      "preferred_he": "רוח צד",
+      "preferred_en": "crosswind",
+      "variants": [
+        "רוחות צד",
+        "רכיבה ברוח",
+        "משבי רוח",
+        "crosswinds",
+        "wind riding"
       ]
     }
   ]

@@ -1,0 +1,24 @@
+{
+  "status": "pass",
+  "checks_passed": 4261,
+  "checks_failed": 0,
+  "errors": [],
+  "warnings": [],
+  "count_expectation": {
+    "mode": "expected",
+    "value": 60,
+    "actual": 60,
+    "satisfied": true
+  },
+  "stats": {
+    "learning_paths": 2,
+    "learning_path_steps": 20,
+    "learning_path_video_references": 54,
+    "synonym_concepts": 31,
+    "videos": 60,
+    "unique_internal_ids": 60,
+    "unique_youtube_video_ids": 60,
+    "taxonomy_categories": 29,
+    "taxonomy_tags": 73
+  }
+}

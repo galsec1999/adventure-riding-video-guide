@@ -52,10 +52,14 @@ def duplicates(values: Iterable[Any], field: str) -> list[dict[str, Any]]:
     ]
 
 
-def current_link_check(videos_hash: str, output_dir: Path) -> dict[str, Any]:
-    path = output_dir / "link-check.json"
+def current_link_check(
+    videos_hash: str,
+    output_dir: Path,
+    link_report: Path | None = None,
+) -> dict[str, Any]:
+    path = link_report if link_report is not None else output_dir / "link-check.json"
     if not path.exists():
-        return {"available": False, "reason": "reports/link-check.json does not exist"}
+        return {"available": False, "reason": f"{path.as_posix()} does not exist"}
     try:
         report = read_json(path)
     except (OSError, UnicodeError, json.JSONDecodeError) as exc:
@@ -73,7 +77,10 @@ def current_link_check(videos_hash: str, output_dir: Path) -> dict[str, Any]:
     }
 
 
-def build_audit(output_dir: Path = DEFAULT_OUTPUT_DIR) -> dict[str, Any]:
+def build_audit(
+    output_dir: Path = DEFAULT_OUTPUT_DIR,
+    link_report: Path | None = None,
+) -> dict[str, Any]:
     videos = read_json(ROOT / "data" / "videos.json")
     paths = read_json(ROOT / "data" / "learning-paths.json")
     schema = read_json(ROOT / "schema" / "video.schema.json")
@@ -130,7 +137,7 @@ def build_audit(output_dir: Path = DEFAULT_OUTPUT_DIR) -> dict[str, Any]:
         "broken_or_unverified_links": broken_or_unverified,
         "broken_or_unverified_links_recorded": broken_or_unverified,
         "broken_or_unverified_links_basis": "recorded verification.link_status and metadata_verified fields; not a live network claim",
-        "link_check": current_link_check(videos_hash, output_dir),
+        "link_check": current_link_check(videos_hash, output_dir, link_report),
         "by_language": counts(item["language"] for item in videos),
         "by_domain": counts(item["domain"] for item in videos),
         "by_skill_level": counts(item["skill_level"] for item in videos),
@@ -269,8 +276,16 @@ def main(argv: list[str] | None = None) -> int:
             stream.reconfigure(encoding="utf-8", errors="replace")
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--output-dir", type=Path, default=DEFAULT_OUTPUT_DIR, help=f"Report directory (default: {DEFAULT_OUTPUT_DIR})")
+    parser.add_argument(
+        "--link-report",
+        type=Path,
+        help="Link-check JSON to embed (default: <output-dir>/link-check.json)",
+    )
     args = parser.parse_args(argv)
-    report = build_audit(args.output_dir)
+    link_report = args.link_report
+    if link_report is not None and not link_report.is_absolute():
+        link_report = ROOT / link_report
+    report = build_audit(args.output_dir, link_report=link_report)
     paths = write_reports(args.output_dir, report)
     print(f"Audit status: {report['validation']['status']}")
     print(f"Validation checks: {report['validation']['checks_passed']} passed, {report['validation']['checks_failed']} failed")

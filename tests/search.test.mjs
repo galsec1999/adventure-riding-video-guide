@@ -62,8 +62,19 @@ test("one-character English typo still finds emergency braking", () => {
 test("English search matches whole words instead of unrelated substrings", () => {
   const results = search("rain");
   assert.ok(results.length > 0);
-  assert.ok(results.length < 10, "rain must not match the substring in training");
   assert.equal(results[0].primary_category, "wet_weather");
+
+  const trainingOnly = prepareVideos(
+    [{ id: "training-only", title_original: "Advanced training drills" }],
+    {},
+    {},
+  );
+  const falsePositives = applySearchAndFilters(
+    trainingOnly.videos,
+    { q: "rain", sort: "recommended" },
+    { synonymIndex: trainingOnly.synonymIndex },
+  );
+  assert.deepEqual(falsePositives, [], "rain must not match the substring in training");
 });
 
 

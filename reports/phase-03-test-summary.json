@@ -1,0 +1,86 @@
+{
+  "status": "pass",
+  "generated_at": "2026-08-03",
+  "final_unique_test_checks": {
+    "passed": 8101,
+    "failed": 0,
+    "calculation": "8051 final validate_data checks + 35 Node tests + 15 Python unit tests"
+  },
+  "commands": [
+    {
+      "command": "python tools/validate_data.py --expected-count 130 --report reports/phase-03-data-validation.json",
+      "status": "pass",
+      "passed": 8051,
+      "failed": 0,
+      "warnings": 0,
+      "expected_count": 130,
+      "actual_count": 130
+    },
+    {
+      "command": "python tools/check_links.py --online --report reports/phase-03-link-check.json",
+      "status": "pass",
+      "local_passed": 130,
+      "local_failed": 0,
+      "online_active": 130,
+      "online_unavailable": 0,
+      "online_indeterminate": 0,
+      "counted_separately_from_tests": true
+    },
+    {
+      "command": "python tools/build_audit.py",
+      "status": "pass",
+      "validation_passed": 8050,
+      "validation_failed": 0,
+      "counted_in_unique_total": false,
+      "reason": "Overlaps the final validate_data run"
+    },
+    {
+      "command": "python tools/build_audit.py --link-report reports/phase-03-link-check.json",
+      "status": "pass",
+      "validation_passed": 8050,
+      "validation_failed": 0,
+      "counted_in_unique_total": false,
+      "reason": "Explicit Phase 03 report selection; overlaps the final validate_data run"
+    },
+    {
+      "command": "npm test",
+      "status": "pass",
+      "passed": 35,
+      "failed": 0
+    },
+    {
+      "command": "python -m unittest discover -s tests -p \"test_*.py\" -v",
+      "status": "pass",
+      "passed": 15,
+      "failed": 0
+    }
+  ],
+  "gates_and_iterations": [
+    {
+      "name": "Wave 1 gate at 60",
+      "status": "pass",
+      "passed": 4261,
+      "failed": 0,
+      "counted_in_final_unique_total": false
+    },
+    {
+      "name": "First 130-link run",
+      "status": "fail",
+      "online_active": 129,
+      "online_unavailable": 1,
+      "resolution": "5SlHGlyzF7w returned HTTP 401 from YouTube oEmbed and was replaced by fully verified CI6h7XtyINY, which returned HTTP 200"
+    },
+    {
+      "name": "First npm test after expansion",
+      "status": "fail",
+      "passed": 34,
+      "failed": 1,
+      "resolution": "Removed incidental mud terrain classification from the tire-pressure record so the mud query again ranks a directly relevant mud lesson first"
+    },
+    {
+      "name": "Final reruns",
+      "status": "pass",
+      "failed": 0
+    }
+  ]
+}

@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "updated": "2026-08-02",
+  "updated": "2026-08-03",
   "domains": [
     {
       "id": "offroad_adventure",
@@ -207,6 +207,30 @@
       "name_he": "ציוד מיגון",
       "name_en": "Protective gear",
       "description_he": "מיגון ולבוש לרכיבה."
+    },
+    {
+      "id": "tires_setup",
+      "name_he": "צמיגים ולחצי אוויר",
+      "name_en": "Tires and pressures",
+      "description_he": "בחירת צמיג, לחץ אוויר והתאמה לעומס ולתוואי."
+    },
+    {
+      "id": "suspension_setup",
+      "name_he": "כיוון מתלים",
+      "name_en": "Suspension setup",
+      "description_he": "קפיצים, שקיעה, קדם־עומס ושיכוך בהתאם לעומס."
+    },
+    {
+      "id": "electronic_aids",
+      "name_he": "מערכות עזר אלקטרוניות",
+      "name_en": "Electronic rider aids",
+      "description_he": "ABS, בקרת אחיזה ומצבי רכיבה בכביש ובשטח."
+    },
+    {
+      "id": "trip_preparation",
+      "name_he": "הכנה למסע",
+      "name_en": "Trip preparation",
+      "description_he": "תכנון מטען, ציוד חירום ומוכנות לפני יציאה."
     }
   ],
   "subcategories": [
@@ -543,6 +567,12 @@
       "name_he": "אנגלית",
       "name_en": "English",
       "description_he": "תוכן מדובר בעיקר באנגלית."
+    },
+    {
+      "id": "ja",
+      "name_he": "יפנית",
+      "name_en": "Japanese",
+      "description_he": "תוכן מדובר בעיקר ביפנית."
     }
   ],
   "controlled_tags": [
@@ -983,6 +1013,66 @@
       "name_he": "כננת",
       "name_en": "Winch",
       "description_he": "תג מבוקר: כננת."
+    },
+    {
+      "id": "damping",
+      "name_he": "שיכוך",
+      "name_en": "Damping",
+      "description_he": "תג מבוקר: שיכוך מתלים."
+    },
+    {
+      "id": "emergency_kit",
+      "name_he": "ערכת חירום",
+      "name_en": "Emergency kit",
+      "description_he": "תג מבוקר: ערכת חירום לרכיבה."
+    },
+    {
+      "id": "first_aid",
+      "name_he": "עזרה ראשונה",
+      "name_en": "First aid",
+      "description_he": "תג מבוקר: עזרה ראשונה."
+    },
+    {
+      "id": "luggage",
+      "name_he": "מטען",
+      "name_en": "Luggage",
+      "description_he": "תג מבוקר: מטען ואריזה."
+    },
+    {
+      "id": "offroad_braking",
+      "name_he": "בלימה בשטח",
+      "name_en": "Off-road braking",
+      "description_he": "תג מבוקר: בלימה בשטח."
+    },
+    {
+      "id": "preload",
+      "name_he": "קדם־עומס",
+      "name_en": "Preload",
+      "description_he": "תג מבוקר: קדם־עומס במתלה."
+    },
+    {
+      "id": "sag",
+      "name_he": "שקיעת מתלה",
+      "name_en": "Suspension sag",
+      "description_he": "תג מבוקר: שקיעת מתלה."
+    },
+    {
+      "id": "suspension",
+      "name_he": "מתלים",
+      "name_en": "Suspension",
+      "description_he": "תג מבוקר: מערכת המתלים."
+    },
+    {
+      "id": "tire_pressure",
+      "name_he": "לחץ אוויר בצמיג",
+      "name_en": "Tire pressure",
+      "description_he": "תג מבוקר: לחץ אוויר בצמיג."
+    },
+    {
+      "id": "traction_control",
+      "name_he": "בקרת אחיזה",
+      "name_en": "Traction control",
+      "description_he": "תג מבוקר: בקרת אחיזה אלקטרונית."
     }
   ]
 }

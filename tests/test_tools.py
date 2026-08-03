@@ -5,11 +5,13 @@ import json
 import tempfile
 import time
 import unittest
+import zipfile
 from contextlib import redirect_stderr, redirect_stdout
 from pathlib import Path
 
 from tools import (
     build_audit,
+    build_phase03_review_bundle,
     check_links,
     serve_acceptance_fixture,
     validate_data,
@@ -210,6 +212,105 @@ class MaintenanceToolsTests(unittest.TestCase):
             paths = build_audit.write_reports(output, report)
             self.assertEqual({".json", ".csv", ".html"}, {path.suffix for path in paths})
             self.assertTrue(all(path.exists() and path.stat().st_size > 0 for path in paths))
+
+    def test_audit_accepts_an_explicit_link_report_and_keeps_default_behavior(self) -> None:
+        videos_hash = build_audit.digest(validate_data.ROOT / "data" / "videos.json")
+        good_report = {
+            "generated_at": "2026-08-03T00:00:00+00:00",
+            "mode": "online",
+            "network_performed": True,
+            "source": {"sha256": videos_hash},
+            "summary": {"online_active": SOURCE_COUNT, "online_unavailable": 0},
+        }
+        with tempfile.TemporaryDirectory() as temp_dir:
+            output = Path(temp_dir)
+            default_report = output / "link-check.json"
+            phase_report = output / "phase-03-link-check.json"
+            default_report.write_text(
+                json.dumps({**good_report, "source": {"sha256": "stale"}}),
+                encoding="utf-8",
+            )
+            phase_report.write_text(json.dumps(good_report), encoding="utf-8")
+
+            explicit = build_audit.build_audit(output, link_report=phase_report)
+            default = build_audit.build_audit(output)
+            with redirect_stdout(io.StringIO()):
+                cli_exit = build_audit.main(
+                    [
+                        "--output-dir",
+                        str(output),
+                        "--link-report",
+                        str(phase_report),
+                    ]
+                )
+            cli_report = load_json(output / "content-audit.json")
+
+        self.assertTrue(explicit["link_check"]["available"])
+        self.assertEqual("online", explicit["link_check"]["mode"])
+        self.assertEqual(SOURCE_COUNT, explicit["link_check"]["summary"]["online_active"])
+        self.assertFalse(default["link_check"]["available"])
+        self.assertTrue(default["link_check"]["stale"])
+        self.assertEqual(0, cli_exit)
+        self.assertTrue(cli_report["link_check"]["available"])
+        self.assertEqual("online", cli_report["link_check"]["mode"])
+
+    def test_phase03_bundle_is_complete_hashed_and_excludes_unsafe_artifacts(self) -> None:
+        with tempfile.TemporaryDirectory() as temp_dir:
+            root = Path(temp_dir)
+            for relative_name in build_phase03_review_bundle.REQUIRED_FILES:
+                path = root / relative_name
+                path.parent.mkdir(parents=True, exist_ok=True)
+                path.write_text(f"fixture for {relative_name}\n", encoding="utf-8")
+            for relative_name in build_phase03_review_bundle.TREE_ROOTS:
+                (root / relative_name).mkdir(parents=True, exist_ok=True)
+
+            safe_files = {
+                "data/videos.json": "[]\n",
+                "schema/video.schema.json": "{}\n",
+                "research/reports/wave-2-report.md": "# evidence\n",
+                "reports/phase-03-link-check.json": "{}\n",
+                "tools/helper.py": "# safe\n",
+                "tests/fixtures/safe-fixture.json": "{}\n",
+                "assets/logo.svg": "<svg/>\n",
+            }
+            for relative_name, content in safe_files.items():
+                path = root / relative_name
+                path.parent.mkdir(parents=True, exist_ok=True)
+                path.write_text(content, encoding="utf-8")
+
+            excluded_files = {
+                "reports/older-review.zip": b"zip",
+                "reports/cache/stale.json": b"{}",
+                "research/full-transcript.txt": b"transcript",
+                "assets/youtube-download.webm": b"media",
+                "tools/client_secret.json": b"secret",
+                "tests/__pycache__/helper.pyc": b"cache",
+            }
+            for relative_name, content in excluded_files.items():
+                path = root / relative_name
+                path.parent.mkdir(parents=True, exist_ok=True)
+                path.write_bytes(content)
+
+            output = root / "reports" / "phase-03-review-bundle.zip"
+            result = build_phase03_review_bundle.build_bundle(output, root)
+            verified = build_phase03_review_bundle.verify_bundle(output)
+
+            with zipfile.ZipFile(output) as archive:
+                names = set(archive.namelist())
+                manifest = build_phase03_review_bundle.parse_manifest(
+                    archive.read(build_phase03_review_bundle.MANIFEST_NAME)
+                )
+
+        self.assertEqual("pass", result["status"])
+        self.assertEqual(result, verified)
+        self.assertEqual(
+            set(manifest) | {build_phase03_review_bundle.MANIFEST_NAME},
+            names,
+        )
+        self.assertTrue(set(safe_files).issubset(names))
+        self.assertTrue(set(build_phase03_review_bundle.REQUIRED_FILES).issubset(names))
+        self.assertFalse(set(excluded_files) & names)
+        self.assertFalse(any(".." in Path(name).parts for name in names))
 
 
 if __name__ == "__main__":
