@@ -1,0 +1,22 @@
+{
+  "generated_at": "2026-08-04T11:17:38.947295+00:00",
+  "status": "applied",
+  "removed_id": "yt-CI6h7XtyINY",
+  "added_id": "yt-oW1fVY2m7JI",
+  "record_count": 250,
+  "candidate_totals": {
+    "checked": 504,
+    "approved": 127,
+    "rejected": 337,
+    "reserve": 40
+  },
+  "chapter_decisions": {
+    "keep_verified": 881,
+    "remove_generic": 143,
+    "remove_with_record": 3
+  },
+  "chapters_in_production": 881,
+  "videos_sha256_before_replacement": "fe4404cba2444255fd04bcdb37eb2c0b8864a0fa8c15b11c7e468d81c9f30c06",
+  "videos_sha256_at_this_run_start": "6b3ec440eb3b6d1c1a6a9a1d178e417c4f2dc9626e9664837c40809842c24a45",
+  "videos_sha256_after": "6b3ec440eb3b6d1c1a6a9a1d178e417c4f2dc9626e9664837c40809842c24a45"
+}

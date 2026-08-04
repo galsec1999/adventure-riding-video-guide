@@ -1,0 +1,79 @@
+{
+  "reviewed_at": "2026-08-04T14:00:00+03:00",
+  "remove_id": "yt-CI6h7XtyINY",
+  "remove_reason_he": "רשומת מתלים בציון 3 הוחלפה משום שהמאגר כבר כולל כיסוי מתלים עמוק ואיכותי יותר, בעוד שבדיקת החיפוש הסופית הוכיחה שחסר סרטון שלישי ישיר ל־ABS בשטח.",
+  "record": {
+    "id": "yt-oW1fVY2m7JI",
+    "youtube_video_id": "oW1fVY2m7JI",
+    "youtube_url": "https://www.youtube.com/watch?v=oW1fVY2m7JI",
+    "thumbnail_url": "https://i.ytimg.com/vi/oW1fVY2m7JI/hqdefault.jpg",
+    "title_original": "ABS when off road = BAD!!!     Conclusive Proof using KTM 790 adventure R",
+    "title_he": "השוואת ABS ובלמים בשטח בשבע עצירות",
+    "channel_name": "Adventure Warehouse",
+    "channel_url": "https://www.youtube.com/channel/UCyqJEC7145tn1hQl_fmn5TQ",
+    "published_date": "2020-09-13",
+    "duration_seconds": 206,
+    "language": "en",
+    "subtitle_languages": ["en"],
+    "domain": "offroad_adventure",
+    "primary_category": "electronic_aids",
+    "secondary_categories": ["offroad_braking"],
+    "tags": ["abs", "offroad_braking", "front_brake", "rear_brake", "braking", "traction"],
+    "skill_level": "intermediate",
+    "risk_level": "medium",
+    "motorcycle_types": ["adventure", "dual_sport"],
+    "motorcycle_weight_classes": ["medium", "heavy"],
+    "terrain_types": ["dirt", "gravel"],
+    "road_conditions": [],
+    "summary_he": "השוואה מצולמת של שבע עצירות על KTM 790 Adventure R בודקת בלם אחורי בלבד, קדמי בלבד, שני הבלמים ושלושה מצבי ABS. המדידות מדגימות מדוע הסתמכות על האחורי בלבד מאריכה את העצירה, ומהו ההבדל בין ABS כביש, מצב שטח וכיבוי מלא. זו הדגמה על אופנוע ומשטח מסוימים, לא כלל אוניברסלי לכל מערכת.",
+    "learning_points_he": [
+      "להשוות בין אחורי בלבד, קדמי בלבד ושני הבלמים",
+      "להבין מה משנה מצב ABS לשטח בין הגלגל הקדמי לאחורי",
+      "לקרוא מרחקי עצירה כהדגמה תלוית משטח ואופנוע",
+      "להעדיף תרגול הדרגתי על פני כיבוי מערכת בלי היכרות"
+    ],
+    "fit_for_he": "מתאים לרוכב אדוונצ'ר ברמת ביניים שרוצה להבין את פשרת ה־ABS בשטח. לפני שינוי מצב יש לקרוא את ספר האופנוע ולוודא מה המערכת הספציפית עושה בכל גלגל.",
+    "why_watch_he": "הסרטון מציג באותו משטח סדרת עצירות מובנית, ולכן מאפשר להשוות בין בחירת בלמים ומצבי ABS במקום להסתפק בסיסמה כללית של 'לכבות תמיד'.",
+    "exercises_he": [
+      "במגרש עפר סגור ובהשגחת מדריך, לסמן נקודת התחלה קבועה ולתרגל עצירות איטיות עם שני הבלמים; שינוי מצב ABS יתבצע רק לפי הוראות היצרן."
+    ],
+    "equipment_he": ["קסדה ומיגון מלא", "קונוסים", "מגרש עפר סגור", "ספר האופנוע"],
+    "safety_warnings_he": [
+      "אין לכבות ABS בכביש ציבורי או להניח שמצב שטח פועל זהה בכל אופנוע; מרחק העצירה תלוי בצמיג, במשטח, במהירות ובמיומנות."
+    ],
+    "common_mistakes_he": [
+      "שימוש בבלם אחורי בלבד מתוך פחד מהקדמי",
+      "העתקת תוצאת הניסוי לאופנוע או משטח אחרים",
+      "כיבוי ABS בלי להבין אם ההגדרה מתאפסת לאחר התנעה"
+    ],
+    "chapters": [
+      {"start_seconds": 119, "end_seconds": 167, "title": "You Should Only Use Your Rear Brake When off-Road"},
+      {"start_seconds": 167, "end_seconds": 182, "title": "Stopping Distance of the Off-Road Abs"}
+    ],
+    "quality_score": 4,
+    "quality_reason_he": "מטא־דאטה חי, תיאור, ארבעה פרקי מקור וכתוביות אנגלית ידניות מאמתים שבע עצירות ותוצאות ההשוואה; הציון נשאר 4 משום שהניסוי נערך על אופנוע ומשטח יחידים והערוץ מסחרי.",
+    "source_type": "training_channel",
+    "contains_marketing": true,
+    "related_video_ids": [],
+    "verification": {
+      "link_status": "active_public",
+      "metadata_verified": true,
+      "content_evidence_types": ["description", "chapters", "transcript"],
+      "classification_confidence": "high",
+      "notes_he": "ב־2026-08-04 נבדקו מטא־דאטה חי, תיאור, ארבעה פרקי YouTube וכתוביות אנגלית ידניות. שני פרקים כלליים הוסרו, וקובץ הכתוביות הזמני אינו חלק מהשחרור."
+    },
+    "last_checked": "2026-08-04"
+  },
+  "source_chapters": [
+    {"start_seconds": 0, "end_seconds": 119, "title": "<Untitled Chapter 1>", "decision": "remove_generic"},
+    {"start_seconds": 119, "end_seconds": 167, "title": "You Should Only Use Your Rear Brake When off-Road", "decision": "keep_verified"},
+    {"start_seconds": 167, "end_seconds": 182, "title": "Stopping Distance of the Off-Road Abs", "decision": "keep_verified"},
+    {"start_seconds": 182, "end_seconds": 206, "title": "Conclusion", "decision": "remove_generic"}
+  ],
+  "late_candidates": [
+    {"youtube_video_id": "oW1fVY2m7JI", "decision": "approved", "reason": "כתוביות ידניות, פרקים והשוואת ABS ישירה בשטח."},
+    {"youtube_video_id": "_RyS9JOMSGk", "decision": "rejected", "reason": "עוסק בבלימה בשטח אך לא ב־ABS; חופף לכיסוי קיים."},
+    {"youtube_video_id": "O_E3-zsDSDI", "decision": "rejected", "reason": "עוסק ב־ABS בשטח אך ללא כתוביות ידניות; המועמד המאושר מספק ראיות חזקות יותר."},
+    {"youtube_video_id": "NV-OpqoYizo", "decision": "rejected", "reason": "עוסק ב־ABS בשטח אך ללא פרקים או כתוביות ידניות; המועמד המאושר מספק ראיות חזקות יותר."}
+  ]
+}

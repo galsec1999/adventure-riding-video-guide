@@ -1,282 +1,1274 @@
 [
   {
-    "id": "beginner-offroad-adventure",
-    "name_he": "מתחילים בשטח ואדוונצ'ר",
-    "description_he": "מסלול מהיסודות ועד עלייה, ירידה וחילוץ בסיסי.",
+    "id": "beginner-adventure-foundations",
+    "name_he": "יסודות אדוונצ'ר למתחילים",
+    "description_he": "מהיכרות עם תנוחה ופקדים עד חצץ, עליות, ירידות והרמה בטוחה.",
     "skill_level": "beginner",
     "steps": [
       {
         "order": 1,
-        "goal_he": "להבין תנוחת עמידה",
-        "explanation_he": "מתחילים בתנוחה ניטרלית וידיים רפויות.",
+        "goal_he": "לבנות תנוחת עמידה",
+        "explanation_he": "מתחילים במרכז האופנוע, רגליים פעילות וידיים רפויות.",
         "primary_video_ids": [
-          "yt-UsOGqaTH3d0",
-          "yt-lFGwRIP21OU"
+          "yt-3nwR3t6-Ftg",
+          "yt-DhtzQXjS8kA"
         ],
         "alternative_video_ids": [
-          "yt--XhyYOfp7zg",
-          "yt-KC0Rv0aM7OI"
-        ]
+          "yt-_FzURX3rpyM"
+        ],
+        "equipment_he": [
+          "מיגון שטח",
+          "מגפי שטח",
+          "מגן מנוע"
+        ],
+        "risk_level": "low",
+        "warning_he": "תרגלו תחילה על משטח ישר ועם משגיח."
       },
       {
         "order": 2,
-        "goal_he": "לפתח שיווי משקל",
-        "explanation_he": "מתרגלים לאט ובסביבה סגורה.",
+        "goal_he": "לפתח איזון ומצמד",
+        "explanation_he": "מחברים אזור חיכוך, בלם אחורי ומבט במהירות הליכה.",
         "primary_video_ids": [
-          "yt-Ykxd14ynecQ",
-          "yt-EJNSrWDQYUY"
+          "yt-S36MgsVsHsA",
+          "yt-_5-fh-qmqMg"
         ],
         "alternative_video_ids": [
-          "yt-njzovd5FuZU",
-          "yt-sqhJXK1wKsM"
-        ]
+          "yt-Ykxd14ynecQ"
+        ],
+        "equipment_he": [
+          "קונוסים",
+          "מגרש סגור",
+          "מיגון מלא"
+        ],
+        "risk_level": "low",
+        "warning_he": "אין לתרגל בין כלי רכב חונים."
       },
       {
         "order": 3,
-        "goal_he": "לתאם מצמד וגז",
-        "explanation_he": "מחברים פקדים לפני מעבר לשטח מורכב.",
+        "goal_he": "להכיר את יסודות השטח",
+        "explanation_he": "משלבים עמידה, ישיבה, מבט ופנייה לפני תוואי מורכב.",
         "primary_video_ids": [
-          "yt-fqm0Oj9G8QU",
-          "yt-EJNSrWDQYUY"
+          "yt-3QNTu2pzRfg",
+          "yt-nM4y8J-5ZCA"
         ],
         "alternative_video_ids": [
-          "yt-KmCPtVARyS0"
-        ]
+          "yt-7b5FPbTxfs8"
+        ],
+        "equipment_he": [
+          "מיגון שטח",
+          "מגרש עפר קל"
+        ],
+        "risk_level": "medium",
+        "warning_he": "אל תדלגו מתרגול מגרש ישר לשביל טכני."
       },
       {
         "order": 4,
-        "goal_he": "לבלום בשטח",
-        "explanation_he": "בונים לחץ בלימה בהדרגה על עפר צפוי.",
+        "goal_he": "לבלום על עפר",
+        "explanation_he": "בונים לחץ בהדרגה ומכירים את חלוקת הקדמי והאחורי.",
         "primary_video_ids": [
           "yt-hN0vylh__lo",
-          "yt-4RxEvSkgJdc"
+          "yt-3nwR3t6-Ftg"
         ],
         "alternative_video_ids": [
-          "yt-RmOMjoe8G1g",
-          "yt-_zQoFML9xPk"
-        ]
+          "yt-7b5FPbTxfs8"
+        ],
+        "equipment_he": [
+          "מיגון שטח",
+          "קונוסים",
+          "משטח עפר נקי"
+        ],
+        "risk_level": "medium",
+        "warning_he": "בלימה חזקה מתרגלים רק בקו ישר ובשטח סגור."
       },
       {
         "order": 5,
-        "goal_he": "לרכוב על עפר וחצץ",
-        "explanation_he": "משלבים מבט, קצב וקו בדרך רחבה.",
+        "goal_he": "להיכנס לחצץ",
+        "explanation_he": "מקבלים תנועה קלה של האופנוע ושומרים קו, מבט וקצב.",
         "primary_video_ids": [
-          "yt-7b5FPbTxfs8",
-          "yt-GqfRGMw8gvQ",
-          "yt-187PCpqGp74"
+          "yt-vQo1kb3kL60",
+          "yt-GqfRGMw8gvQ"
         ],
         "alternative_video_ids": [
-          "yt-eL4i6SmQbxU"
-        ]
+          "yt-vVBdOqqKt-A"
+        ],
+        "equipment_he": [
+          "מיגון שטח",
+          "שותף",
+          "צמיגים תקינים"
+        ],
+        "risk_level": "medium",
+        "warning_he": "בחרו דרך רחבה ורדודה ללא תנועה."
       },
       {
         "order": 6,
-        "goal_he": "לתרגל פנייה איטית",
-        "explanation_he": "מתחילים במשטח קל לפני חול.",
+        "goal_he": "לעלות בשיפוע מתון",
+        "explanation_he": "מתכננים הילוך, קו, תנופה ונוהל לכישלון.",
         "primary_video_ids": [
-          "yt-UuoceB8wp4Q"
-        ],
-        "alternative_video_ids": [
-          "yt-njzovd5FuZU",
-          "yt-uscjPZXNyMc"
-        ]
-      },
-      {
-        "order": 7,
-        "goal_he": "להכיר עלייה בסיסית",
-        "explanation_he": "לומדים קו, הילוך ותנופה לפני ניסיון.",
-        "primary_video_ids": [
-          "yt-UHkVHDFNUqU",
+          "yt-fPBC3-rB994",
           "yt-Dv8cfbJ09Uw"
         ],
         "alternative_video_ids": [
-          "yt-FQp-0v2ddQ0",
-          "yt-fPBC3-rB994"
-        ]
+          "yt-iLqs-fA7RRk"
+        ],
+        "equipment_he": [
+          "מיגון מלא",
+          "שותף תצפית",
+          "נתיב חזרה"
+        ],
+        "risk_level": "high",
+        "warning_he": "אין לנסות עלייה בלי נתיב מילוט ותכנית עצירה."
+      },
+      {
+        "order": 7,
+        "goal_he": "לרדת בשליטה",
+        "explanation_he": "מתרגלים גוף, מבט ושני בלמים לפני ירידה תלולה.",
+        "primary_video_ids": [
+          "yt-sfNLSVghgRA",
+          "yt-HevLOY3Bzdg"
+        ],
+        "alternative_video_ids": [
+          "yt-sqWbMOZ4DOA"
+        ],
+        "equipment_he": [
+          "מיגון מלא",
+          "מדריך",
+          "שותף"
+        ],
+        "risk_level": "high",
+        "warning_he": "התחילו בירידה קצרה ומתונה; החלופה המתקדמת מיועדת לצפייה מאוחרת."
       },
       {
         "order": 8,
-        "goal_he": "לנהל ירידה",
-        "explanation_he": "מתרגלים ירידה קלה לפני דרדרת או חריצים.",
+        "goal_he": "להרים אופנוע שנפל",
+        "explanation_he": "מסיימים בהערכת סביבה ובהרמה דרך הרגליים, לא דרך הגב.",
         "primary_video_ids": [
-          "yt-HevLOY3Bzdg",
-          "yt--rQwIXp4Zu8",
-          "yt-AVbt7M2xHQ4"
+          "yt-uT-staOOo9w",
+          "yt-45iv6pdogLo"
         ],
         "alternative_video_ids": [
-          "yt-jg9I-H_ZY2s",
-          "yt-T-NlEZr1-ws"
-        ]
-      },
-      {
-        "order": 9,
-        "goal_he": "להכיר קרקע רכה",
-        "explanation_he": "צופים לפני תרגול חול, בוץ או חריצים.",
-        "primary_video_ids": [
-          "yt-TDCajc6HYRE",
-          "yt-h4hw5mEBxIE",
-          "yt-OrPiMSJWZ5o"
+          "yt-tkQ-s7PI5Ds"
         ],
-        "alternative_video_ids": [
-          "yt-1cHdv7grbts",
-          "yt-py2_NwJCzN0"
-        ]
-      },
-      {
-        "order": 10,
-        "goal_he": "להתכונן לנפילה וחילוץ",
-        "explanation_he": "לומדים הרמה בטוחה ותכנית התאוששות.",
-        "primary_video_ids": [
-          "yt-_fddOX-CZXI",
-          "yt-dRvofOL3eaI",
-          "yt-SXJZ_kYGLRY"
+        "equipment_he": [
+          "כפפות",
+          "מגפיים",
+          "משגיח"
         ],
-        "alternative_video_ids": [
-          "yt-45iv6pdogLo",
-          "yt-ZGS_MoW7yps",
-          "yt-qe-9xUK5V-c"
-        ]
+        "risk_level": "medium",
+        "warning_he": "אין להרים אם נפצעתם, יש דליפה או הקרקע משופעת."
       }
     ]
   },
   {
-    "id": "beginner-road",
-    "name_he": "מתחילים בכביש",
-    "description_he": "מסלול מתפעול בסיסי ועד פניות, חירום, גשם ועייפות.",
-    "skill_level": "beginner",
+    "id": "mototrek-heavy-adv-mastery",
+    "name_he": "שליטה באדוונצ'ר כבד עם MOTOTREK",
+    "description_he": "מסלול ממוקד המבוסס על סרטוני MOTOTREK הטובים לצד מדריכים משלימים.",
+    "skill_level": "intermediate",
     "steps": [
       {
         "order": 1,
-        "goal_he": "לשלוט בתפעול הבסיסי",
-        "explanation_he": "מתאמים הילוכים ובלימה בצורה חלקה.",
+        "goal_he": "להתאים אופנוע לגוף",
+        "explanation_he": "מתחילים מארגונומיה ושקיעה לפני רכישת אביזרים.",
         "primary_video_ids": [
-          "yt-CDACd-6_4E4",
-          "yt-jHhRZLHA-cA"
+          "yt-q58g03DSHIs",
+          "yt-OFWtuGVuA2I"
         ],
         "alternative_video_ids": [
-          "yt-_ej7WCZeFhQ",
-          "yt-60isWQSlMg0"
-        ]
+          "yt-5S4fHLYnjgM"
+        ],
+        "equipment_he": [
+          "ספר רכב",
+          "כלי מדידה",
+          "מפתח מומנט"
+        ],
+        "risk_level": "medium",
+        "warning_he": "שינויים במתלים ובפקדים נשארים בטווח היצרן."
       },
       {
         "order": 2,
-        "goal_he": "לפתח שליטה איטית",
-        "explanation_he": "מתרגלים במגרש סגור.",
+        "goal_he": "לשלוט במסה במהירות נמוכה",
+        "explanation_he": "איזון, אזור חיכוך ועלייה נכונה על אופנוע כבד.",
         "primary_video_ids": [
-          "yt-824lwgKbv-M",
-          "yt-7Ix1B9MjKOQ"
+          "yt-Ykxd14ynecQ",
+          "yt-S36MgsVsHsA"
         ],
         "alternative_video_ids": [
-          "yt-njzovd5FuZU",
           "yt-oOD9NnTevH0"
-        ]
+        ],
+        "equipment_he": [
+          "מגרש סגור",
+          "קונוסים",
+          "מגן מנוע"
+        ],
+        "risk_level": "medium",
+        "warning_he": "עבדו ברדיוס רחב לפני תרגילי נעילת היגוי."
       },
       {
         "order": 3,
-        "goal_he": "לבנות בלימה רגילה",
-        "explanation_he": "לומדים חלוקת בלמים והעברת משקל.",
+        "goal_he": "להחליק את הפקדים",
+        "explanation_he": "מתרגלים גז, מצמד ובלם אחורי ללא טלטול המסה.",
         "primary_video_ids": [
-          "yt-jHhRZLHA-cA",
-          "yt-_ej7WCZeFhQ"
+          "yt-EJNSrWDQYUY",
+          "yt-k6mUJ309W3k"
         ],
         "alternative_video_ids": [
-          "yt-CDACd-6_4E4",
-          "yt-aAybwTYH8YY"
-        ]
+          "yt-46iiFjZUEUA"
+        ],
+        "equipment_he": [
+          "מיגון מלא",
+          "מגרש סגור"
+        ],
+        "risk_level": "low",
+        "warning_he": "אין להביט בידיות בזמן תנועה."
       },
       {
         "order": 4,
-        "goal_he": "להתכונן לעצירת חירום",
-        "explanation_he": "צופים ואז מתרגלים בהדרגה במגרש.",
+        "goal_he": "לבנות ביטחון בחצץ",
+        "explanation_he": "משווים קו, קצב ותנוחה משלושה מקורות.",
         "primary_video_ids": [
-          "yt-nsklKzXl2Ws",
-          "yt-18eqTsDfzDU",
-          "yt-HxJPOQ_4L18"
+          "yt-GqfRGMw8gvQ",
+          "yt-vQo1kb3kL60"
         ],
         "alternative_video_ids": [
-          "yt-jHhRZLHA-cA"
-        ]
+          "yt-dh_YkU5jE8E"
+        ],
+        "equipment_he": [
+          "מיגון שטח",
+          "שותף",
+          "ערכת תקר"
+        ],
+        "risk_level": "medium",
+        "warning_he": "הימנעו מחצץ עמוק ביום התרגול הראשון."
       },
       {
         "order": 5,
-        "goal_he": "להבין רצף פנייה",
-        "explanation_he": "מחברים מהירות, מבט והיגוי.",
+        "goal_he": "לעבור אבנים ומכשולים",
+        "explanation_he": "נותנים לאופנוע לנוע ומנהלים מבט, תנופה ומגע בגלגלים.",
         "primary_video_ids": [
-          "yt-0dGYLXIvoeg",
-          "yt-Dtuy4qxkZ6M",
-          "yt-fl9mfnpJ1wo"
+          "yt-vWdFiGoTOBA",
+          "yt-sWj02x9PYdw"
         ],
         "alternative_video_ids": [
-          "yt-doVLIwQbnWs",
-          "yt-VFZoZLMZGqQ"
-        ]
+          "yt-NWHX807Xq9Y"
+        ],
+        "equipment_he": [
+          "מיגון שטח מלא",
+          "מגן מנוע",
+          "מגני ידיים"
+        ],
+        "risk_level": "high",
+        "warning_he": "התחילו במכשול נמוך ומקובע עם מדריך."
       },
       {
         "order": 6,
-        "goal_he": "לבחור קו בטוח",
-        "explanation_he": "משאירים ראות ומרווח לתיקון.",
+        "goal_he": "לנהל חול עמוק",
+        "explanation_he": "משלבים רפיון, משקל לאחור, מסלול וכוח חלק.",
         "primary_video_ids": [
-          "yt-fuoYUYFNkGI",
-          "yt-yBjN7N_n_Ww"
+          "yt-Fo75lHpLBOM",
+          "yt-pNDdOJsAslg"
         ],
         "alternative_video_ids": [
-          "yt-NVW3lk0_SKY",
-          "yt-_ZH6lgTmpCs"
-        ]
+          "yt-RQBTnhHzthU"
+        ],
+        "equipment_he": [
+          "מיגון מלא",
+          "רצועת חילוץ",
+          "שותף"
+        ],
+        "risk_level": "high",
+        "warning_he": "עייפות וחימום מצמד הם נקודת עצירה, לא יעד להתגבר עליו."
       },
       {
         "order": 7,
-        "goal_he": "לזהות סכנות",
-        "explanation_he": "מפתחים סריקה, מיקום ונתיב מילוט.",
+        "goal_he": "לרדת בחריצים",
+        "explanation_he": "קוראים קו ושומרים את המסה מאוזנת בירידה משובשת.",
         "primary_video_ids": [
-          "yt-1s4fDOyb3YA",
-          "yt-IS2mLzMgals"
+          "yt-sqWbMOZ4DOA",
+          "yt-HevLOY3Bzdg"
         ],
         "alternative_video_ids": [
-          "yt-Dtuy4qxkZ6M",
-          "yt-NN1twMtJrlA",
-          "yt-d89y0c0SP94"
-        ]
+          "yt-sfNLSVghgRA"
+        ],
+        "equipment_he": [
+          "מיגון מלא",
+          "מדריך",
+          "שותף"
+        ],
+        "risk_level": "high",
+        "warning_he": "אין להיכנס לירידה שאי אפשר לבדוק ולחזור ממנה."
       },
       {
         "order": 8,
-        "goal_he": "להבין רכיבה בגשם",
-        "explanation_he": "מתאימים אחיזה, ראות ומרווח.",
+        "goal_he": "להיחלץ מעלייה כושלת",
+        "explanation_he": "מתכננים מראש עצירה, סיבוב, הרמה וחילוץ.",
         "primary_video_ids": [
-          "yt-DY7OFizK_eo",
-          "yt-wdESPaOqd8I"
+          "yt-FQp-0v2ddQ0",
+          "yt-zMuVNBk9Ogw"
         ],
         "alternative_video_ids": [
-          "yt-18eqTsDfzDU",
-          "yt-wu01iLFdTE0",
-          "yt-glxMLJ1A6rk"
-        ]
+          "yt-45iv6pdogLo"
+        ],
+        "equipment_he": [
+          "רצועות חילוץ",
+          "כפפות",
+          "צוות"
+        ],
+        "risk_level": "high",
+        "warning_he": "אין לבצע חילוץ כבד לבד או מתחת לאופנוע שעלול להחליק."
+      }
+    ]
+  },
+  {
+    "id": "defensive-road-riding",
+    "name_he": "רכיבת כביש הגנתית",
+    "description_he": "מסלול כביש מן הפקדים והמבט עד בלימת חירום, גשם ולילה.",
+    "skill_level": "advanced_beginner",
+    "steps": [
+      {
+        "order": 1,
+        "goal_he": "לייצב פקדים בסיסיים",
+        "explanation_he": "מחברים תנוחת כביש, גז והילוכים לפני תנועה מורכבת.",
+        "primary_video_ids": [
+          "yt-GqUgDGd04XE",
+          "yt-iw9zeS0wLW8"
+        ],
+        "alternative_video_ids": [
+          "yt-CXMqS_gMOS0"
+        ],
+        "equipment_he": [
+          "מיגון כביש",
+          "מגרש סגור",
+          "מדריך"
+        ],
+        "risk_level": "low",
+        "warning_he": "למתחיל מוחלט נדרשת הדרכה חוקית ומעשית."
       },
       {
-        "order": 9,
-        "goal_he": "להיערך לרכיבה עם מורכב",
-        "explanation_he": "מתאמים תקשורת ומרחקי בלימה.",
+        "order": 2,
+        "goal_he": "לשלוט במהירות הליכה",
+        "explanation_he": "אזור חיכוך, פרסה ומבט מפחיתים טעויות חניה ותנועה.",
         "primary_video_ids": [
-          "yt-y5vUZouBNgE",
+          "yt-S36MgsVsHsA",
+          "yt-n13PAgtjaz0"
+        ],
+        "alternative_video_ids": [
+          "yt-FCTnaF_aZP0"
+        ],
+        "equipment_he": [
+          "קונוסים",
+          "מגרש סגור",
+          "מיגון מלא"
+        ],
+        "risk_level": "low",
+        "warning_he": "אין להשתמש בבלם קדמי כשהכידון מסובב."
+      },
+      {
+        "order": 3,
+        "goal_he": "להבין היגוי נגדי",
+        "explanation_he": "לומדים כיצד קלט קטן בכידון יוזם הטיה.",
+        "primary_video_ids": [
+          "yt-lP9Z1aw776A",
+          "yt--_a3Hk4Jeg8"
+        ],
+        "alternative_video_ids": [
+          "yt-bJkK-Z0eDq0"
+        ],
+        "equipment_he": [
+          "מיגון מלא",
+          "מגרש רחב"
+        ],
+        "risk_level": "medium",
+        "warning_he": "אין לבצע ניסויי היגוי בכביש פתוח."
+      },
+      {
+        "order": 4,
+        "goal_he": "לבחור קו ומבט בפנייה",
+        "explanation_he": "שומרים מרווח, שדה ראייה וקצב לפני הטיה.",
+        "primary_video_ids": [
+          "yt-bJkK-Z0eDq0",
+          "yt-aDybIOOaYzM"
+        ],
+        "alternative_video_ids": [
+          "yt-ShWc7D5HllY"
+        ],
+        "equipment_he": [
+          "מיגון כביש",
+          "מאמן"
+        ],
+        "risk_level": "high",
+        "warning_he": "טכניקת Trail Braking נלמדת בהדרגה ובסביבה מבוקרת."
+      },
+      {
+        "order": 5,
+        "goal_he": "לבלום בחירום",
+        "explanation_he": "מתרגלים בניית לחץ, אחיזה והמשך לנתיב מילוט.",
+        "primary_video_ids": [
+          "yt-eqbeqc2xeBc",
+          "yt-gJH1pn4Cq68"
+        ],
+        "alternative_video_ids": [
+          "yt-UILe5YDA4B8"
+        ],
+        "equipment_he": [
+          "מיגון מלא",
+          "קונוסים",
+          "מגרש סגור",
+          "מדריך"
+        ],
+        "risk_level": "high",
+        "warning_he": "אין לתרגל עצירה מרבית בתנועה."
+      },
+      {
+        "order": 6,
+        "goal_he": "לראות ולהיראות",
+        "explanation_he": "מיקום נתיב נשאר דינמי מול צמתים, שטחים מתים ומילוט.",
+        "primary_video_ids": [
+          "yt-bYIzeyCubcw",
+          "yt-SpEl45M02sI"
+        ],
+        "alternative_video_ids": [
+          "yt-l_vLv-Fds5g"
+        ],
+        "equipment_he": [
+          "מיגון כביש",
+          "תאורה תקינה"
+        ],
+        "risk_level": "medium",
+        "warning_he": "נראות אינה הוכחה שנהג זיהה אתכם."
+      },
+      {
+        "order": 7,
+        "goal_he": "לרכוב בגשם",
+        "explanation_he": "מנהלים תקציב אחיזה, ראות ומרווח על משטח רטוב.",
+        "primary_video_ids": [
+          "yt-ko70RgiF5OQ",
+          "yt-Qx6G0gkQ048"
+        ],
+        "alternative_video_ids": [
+          "yt-FNLUBBMypmI"
+        ],
+        "equipment_he": [
+          "מיגון עמיד למים",
+          "משקף נגד אדים",
+          "צמיגים תקינים"
+        ],
+        "risk_level": "high",
+        "warning_he": "אין לחפש גבול אחיזה בכביש רטוב."
+      },
+      {
+        "order": 8,
+        "goal_he": "להיערך לרכיבת לילה",
+        "explanation_he": "מתאימים תאורה, משקף, קצב ומרחק לטווח הראייה.",
+        "primary_video_ids": [
+          "yt-eTBshYyXrW0",
+          "yt-i1eqhcPC6g8"
+        ],
+        "alternative_video_ids": [
+          "yt-ov7AqO_51iI"
+        ],
+        "equipment_he": [
+          "משקף שקוף",
+          "מחזירי אור",
+          "תאורה תקינה"
+        ],
+        "risk_level": "medium",
+        "warning_he": "אין לרכב מהר יותר מן היכולת לעצור בתוך טווח הפנס."
+      }
+    ]
+  },
+  {
+    "id": "parking-lot-control-lab",
+    "name_he": "מעבדת שליטה במגרש",
+    "description_he": "שמונה יחידות תרגול מדורגות למצמד, שמיניות, פרסות, בלימה והסטה.",
+    "skill_level": "advanced_beginner",
+    "steps": [
+      {
+        "order": 1,
+        "goal_he": "למצוא אזור חיכוך",
+        "explanation_he": "מתחילים מתנועה של מילימטרים ומוסיפים אחורי רק לאחר עקביות.",
+        "primary_video_ids": [
+          "yt-S36MgsVsHsA",
+          "yt-n13PAgtjaz0"
+        ],
+        "alternative_video_ids": [
+          "yt-PMtBYt19pD4"
+        ],
+        "equipment_he": [
+          "מיגון מלא",
+          "מגרש סגור"
+        ],
+        "risk_level": "low",
+        "warning_he": "שמרו מרחב גדול לכיבוי ולעצירה."
+      },
+      {
+        "order": 2,
+        "goal_he": "לבצע שמיניות רחבות",
+        "explanation_he": "מחברים מבט, גז, מצמד, אחורי ומשקל נגדי.",
+        "primary_video_ids": [
+          "yt-_5-fh-qmqMg",
+          "yt-oZiD8uxH0hQ"
+        ],
+        "alternative_video_ids": [
+          "yt-domdIpzNKbc"
+        ],
+        "equipment_he": [
+          "קונוסים",
+          "מיגון מלא",
+          "מגן מנוע"
+        ],
+        "risk_level": "low",
+        "warning_he": "צמצמו רדיוס רק אחרי רצף נקי."
+      },
+      {
+        "order": 3,
+        "goal_he": "להדק פרסה",
+        "explanation_he": "מסיימים את הקשת לפני יישור ומביטים עד היציאה.",
+        "primary_video_ids": [
+          "yt-8RC4KpQmSBY",
+          "yt-PMtBYt19pD4"
+        ],
+        "alternative_video_ids": [
+          "yt-1LVSrs4HucI"
+        ],
+        "equipment_he": [
+          "קונוסים",
+          "מיגון מלא"
+        ],
+        "risk_level": "medium",
+        "warning_he": "פרסת הסמוראי היא חלופה מתקדמת בלבד."
+      },
+      {
+        "order": 4,
+        "goal_he": "לתרגל היגוי נגדי",
+        "explanation_he": "משתמשים בקלט קטן ובמהירות יציבה לשינוי קו.",
+        "primary_video_ids": [
+          "yt--_a3Hk4Jeg8",
+          "yt-lP9Z1aw776A"
+        ],
+        "alternative_video_ids": [
+          "yt-bJkK-Z0eDq0"
+        ],
+        "equipment_he": [
+          "מגרש רחב",
+          "מיגון מלא"
+        ],
+        "risk_level": "medium",
+        "warning_he": "אין להגדיל מהירות כדי להרגיש תגובה חזקה יותר."
+      },
+      {
+        "order": 5,
+        "goal_he": "למדוד עצירה",
+        "explanation_he": "קובעים קו ומהירות ומקבלים משוב ממרחק העצירה.",
+        "primary_video_ids": [
+          "yt-bO88ooYOLhw",
+          "yt-gJH1pn4Cq68"
+        ],
+        "alternative_video_ids": [
+          "yt-eqbeqc2xeBc"
+        ],
+        "equipment_he": [
+          "קונוסים",
+          "מגרש סגור",
+          "מדריך"
+        ],
+        "risk_level": "high",
+        "warning_he": "התקדמו בלחץ, לא בקפיצה במהירות."
+      },
+      {
+        "order": 6,
+        "goal_he": "לעבור לתמרון מילוט",
+        "explanation_he": "מפרידים בין בלימה להיגוי ומביטים דרך פתח הקונוסים.",
+        "primary_video_ids": [
+          "yt-JN8c-OWRPkY",
+          "yt-UILe5YDA4B8"
+        ],
+        "alternative_video_ids": [
+          "yt-FCTnaF_aZP0"
+        ],
+        "equipment_he": [
+          "קונוסים רכים",
+          "מגרש גדול",
+          "מדריך"
+        ],
+        "risk_level": "high",
+        "warning_he": "אין לשלב בלימה מרבית והסטה חדה בו־זמנית."
+      },
+      {
+        "order": 7,
+        "goal_he": "להוסיף מורכב לתרגול",
+        "explanation_he": "רק אחרי שליטה לבד מתרגלים עלייה, דחף וקו איטי עם משקל נוסף.",
+        "primary_video_ids": [
+          "yt-MwZSi-LHWuw",
+          "yt-6yE85BVYNKY"
+        ],
+        "alternative_video_ids": [
+          "yt-qt262cjyWAc"
+        ],
+        "equipment_he": [
+          "מיגון מלא לשני אנשים",
+          "מגרש סגור",
+          "מדריך"
+        ],
+        "risk_level": "high",
+        "warning_he": "אין להוסיף מורכב לפני שהמסלול עקבי ללא מורכב."
+      },
+      {
+        "order": 8,
+        "goal_he": "לחבר רצף מלא",
+        "explanation_he": "מסיימים בתרגול פקדים, קו איטי, פרסה, בלימה והסטה.",
+        "primary_video_ids": [
+          "yt-CXMqS_gMOS0",
+          "yt-iw9zeS0wLW8"
+        ],
+        "alternative_video_ids": [
+          "yt-GqUgDGd04XE"
+        ],
+        "equipment_he": [
+          "מיגון מלא",
+          "מגרש סגור",
+          "מדריך"
+        ],
+        "risk_level": "medium",
+        "warning_he": "שלב זה הוא סיכום מגרש, לא אישור לעבור לכביש ללא רישוי."
+      }
+    ]
+  },
+  {
+    "id": "advanced-offroad-terrain",
+    "name_he": "תוואי שטח מתקדם",
+    "description_he": "מסלול מתקדם לחול, בוץ, חריצים, סלעים, מים, עליות וירידות.",
+    "skill_level": "advanced",
+    "steps": [
+      {
+        "order": 1,
+        "goal_he": "לקרוא חול",
+        "explanation_he": "משקל, מסלול וכוח נבנים בחול רדוד לפני חול עמוק.",
+        "primary_video_ids": [
+          "yt-pNDdOJsAslg",
+          "yt-RQBTnhHzthU"
+        ],
+        "alternative_video_ids": [
+          "yt-Fo75lHpLBOM"
+        ],
+        "equipment_he": [
+          "מיגון שטח",
+          "רצועת חילוץ",
+          "שותף"
+        ],
+        "risk_level": "high",
+        "warning_he": "עצרו לפני תשישות או התחממות מצמד."
+      },
+      {
+        "order": 2,
+        "goal_he": "לנהל בוץ ורטיבות",
+        "explanation_he": "פקודות חלקות וקו ישר ככל האפשר שומרים אחיזה.",
+        "primary_video_ids": [
+          "yt-wsokPULhmv0",
+          "yt-rlcGpTJl16U"
+        ],
+        "alternative_video_ids": [
+          "yt-3QNTu2pzRfg"
+        ],
+        "equipment_he": [
+          "מיגון מלא",
+          "צמיגים מתאימים",
+          "שותף"
+        ],
+        "risk_level": "high",
+        "warning_he": "בדקו עומק ומכשולים ברגל לפני קטע בוץ."
+      },
+      {
+        "order": 3,
+        "goal_he": "לשרוד חריצים",
+        "explanation_he": "מתחילים בחריץ רדוד ומעלים מבט לפני יציאה או פנייה.",
+        "primary_video_ids": [
+          "yt-UbemLevjCHw",
+          "yt-py2_NwJCzN0"
+        ],
+        "alternative_video_ids": [
+          "yt-sqWbMOZ4DOA"
+        ],
+        "equipment_he": [
+          "מיגון אנדורו",
+          "שותף",
+          "אופנוע קל לתרגול"
+        ],
+        "risk_level": "high",
+        "warning_he": "חריץ עמוק עלול ללכוד רגל; אין לתרגל לבד."
+      },
+      {
+        "order": 4,
+        "goal_he": "לעבור אבנים משוחררות",
+        "explanation_he": "שומרים הילוך, מבט ורפיון ונותנים לאופנוע לנוע.",
+        "primary_video_ids": [
+          "yt-sWj02x9PYdw",
+          "yt-vWdFiGoTOBA"
+        ],
+        "alternative_video_ids": [
+          "yt-x10WJdhm0wU"
+        ],
+        "equipment_he": [
+          "מיגון מלא",
+          "מגן מנוע",
+          "מגני ידיים"
+        ],
+        "risk_level": "high",
+        "warning_he": "החלופה היא לניתוח בלבד ואינה שיעור לביצוע."
+      },
+      {
+        "order": 5,
+        "goal_he": "לעבור מכשול",
+        "explanation_he": "מכינים תנופה, מקלים קדמי ומנהלים את פגיעת האחורי.",
+        "primary_video_ids": [
+          "yt-NWHX807Xq9Y",
+          "yt-FUoXWECH40A"
+        ],
+        "alternative_video_ids": [
+          "yt-wrklB5UMWOU"
+        ],
+        "equipment_he": [
+          "מיגון מלא",
+          "מכשול מקובע",
+          "מדריך"
+        ],
+        "risk_level": "high",
+        "warning_he": "התחילו בשפה נמוכה; הרמת קדמי דורשת הדרכה."
+      },
+      {
+        "order": 6,
+        "goal_he": "לחצות מים",
+        "explanation_he": "בודקים עומק וקו ומכינים יכולת ויתור וחילוץ.",
+        "primary_video_ids": [
+          "yt-VKCEzq_fUNg",
+          "yt-n5d2muv5OtE"
+        ],
+        "alternative_video_ids": [
+          "yt-qwK6pdXY7rw"
+        ],
+        "equipment_he": [
+          "מקל בדיקה",
+          "רצועת חילוץ",
+          "שותפים"
+        ],
+        "risk_level": "high",
+        "warning_he": "מים זורמים, עמוקים או עכורים הם נקודת חזרה."
+      },
+      {
+        "order": 7,
+        "goal_he": "לעלות בתוואי טכני",
+        "explanation_he": "תנופה ואחיזה קודמות לזיגזג או העמסה מתקדמת.",
+        "primary_video_ids": [
+          "yt-eiRMikxU3Z4",
+          "yt-fPBC3-rB994"
+        ],
+        "alternative_video_ids": [
+          "yt-mCIxtcnmeYQ"
+        ],
+        "equipment_he": [
+          "מיגון מלא",
+          "מדריך",
+          "נתיב מילוט"
+        ],
+        "risk_level": "high",
+        "warning_he": "זיגזג והעמסת אחורי הן טכניקות מתקדמות בלבד."
+      },
+      {
+        "order": 8,
+        "goal_he": "לרדת בתוואי טכני",
+        "explanation_he": "משווים טכניקת אדוונצ'ר לטכניקת אנדורו ומיישמים לפי אופנוע.",
+        "primary_video_ids": [
+          "yt-sfNLSVghgRA",
+          "yt-bYhY-nzJnqY"
+        ],
+        "alternative_video_ids": [
+          "yt-HevLOY3Bzdg"
+        ],
+        "equipment_he": [
+          "מיגון מלא",
+          "מדריך",
+          "שותף"
+        ],
+        "risk_level": "high",
+        "warning_he": "אין להעתיק טכניקת אופנוע קל לאדוונצ'ר כבד ללא התאמה."
+      }
+    ]
+  },
+  {
+    "id": "trip-preparation-maintenance",
+    "name_he": "הכנה, תחזוקה ותיור",
+    "description_he": "מסלול שמכין את הרוכב והאופנוע ליום ארוך ולמסע רב־יומי.",
+    "skill_level": "advanced_beginner",
+    "steps": [
+      {
+        "order": 1,
+        "goal_he": "לבצע בדיקת טרום־רכיבה",
+        "explanation_he": "צמיגים, נזילות, תאורה, בלמים ופקדים נבדקים בסדר קבוע.",
+        "primary_video_ids": [
+          "yt-0Llcyhyh8vY",
+          "yt-HlZvuK_3kPQ"
+        ],
+        "alternative_video_ids": [
+          "yt-vFRDMa7gwIU"
+        ],
+        "equipment_he": [
+          "מד לחץ",
+          "פנס",
+          "ספר רכב"
+        ],
+        "risk_level": "low",
+        "warning_he": "ליקוי בבלמים, צמיג או היגוי מונע יציאה."
+      },
+      {
+        "order": 2,
+        "goal_he": "לנקות ולשמן שרשרת",
+        "explanation_he": "בודקים כשירות לפני ניקוי ומשתמשים בחומר מתאים.",
+        "primary_video_ids": [
+          "yt-i7vcL3L7750",
+          "yt-KRgG21OBjcE"
+        ],
+        "alternative_video_ids": [
+          "yt-XgPpLKCUlbA"
+        ],
+        "equipment_he": [
+          "כפפות",
+          "מברשת",
+          "מנקה ושמן מתאימים"
+        ],
+        "risk_level": "low",
+        "warning_he": "המנוע כבוי תמיד בזמן טיפול בשרשרת."
+      },
+      {
+        "order": 3,
+        "goal_he": "לבדוק ולכוון חופש שרשרת",
+        "explanation_he": "משווים בלאי, נקודה הדוקה ויישור לפני הידוק ציר.",
+        "primary_video_ids": [
+          "yt-CsCvU1qOAag",
+          "yt-dF9KY2w7dmY"
+        ],
+        "alternative_video_ids": [
+          "yt-_4KinOAw74Q"
+        ],
+        "equipment_he": [
+          "ספר שירות",
+          "מפתח מומנט",
+          "מדידה"
+        ],
+        "risk_level": "medium",
+        "warning_he": "הידוק ויישור שגויים הם סיכון בטיחותי; בספק פנו למוסך."
+      },
+      {
+        "order": 4,
+        "goal_he": "להתאים לחץ צמיג",
+        "explanation_he": "מתחילים מהיצרן ומשנים בצעד קטן בלבד לפי עומס ותוואי.",
+        "primary_video_ids": [
+          "yt-5pUSer1l8jI",
+          "yt-vVBdOqqKt-A"
+        ],
+        "alternative_video_ids": [
+          "yt-h5YrGuIGgVI"
+        ],
+        "equipment_he": [
+          "מד לחץ",
+          "משאבה",
+          "ערכת תקר"
+        ],
+        "risk_level": "medium",
+        "warning_he": "אין להעתיק מספר לחץ מסרטון ללא התאמה לדגם ולצמיג."
+      },
+      {
+        "order": 5,
+        "goal_he": "לכוון מתלים לעומס",
+        "explanation_he": "מודדים שקיעה לפני דחיסה והחזרה ומתעדים כל שינוי.",
+        "primary_video_ids": [
+          "yt-3tSkUdUYaA4",
+          "yt-DW0GVIvub44"
+        ],
+        "alternative_video_ids": [
+          "yt-CCCl2KBpP5g"
+        ],
+        "equipment_he": [
+          "סרט מדידה",
+          "ספר רכב",
+          "עוזרים"
+        ],
+        "risk_level": "medium",
+        "warning_he": "אל תחרגו מטווחי היצרן ואל תשנו כמה פרמטרים יחד."
+      },
+      {
+        "order": 6,
+        "goal_he": "לארוז ולחלק משקל",
+        "explanation_he": "כבד נמוך ומרכזי, איזון צדדי ובדיקה חוזרת לאחר יציאה.",
+        "primary_video_ids": [
+          "yt-fm88yhrX9bk",
+          "yt-jevfjCDOddA"
+        ],
+        "alternative_video_ids": [
+          "yt-ZCCxERsvQdw"
+        ],
+        "equipment_he": [
+          "רצועות תקינות",
+          "משקל",
+          "ספר רכב"
+        ],
+        "risk_level": "medium",
+        "warning_he": "אין לעבור את מגבלת העומס או להשאיר קצה רצועה חופשי."
+      },
+      {
+        "order": 7,
+        "goal_he": "לתכנן ניווט וגיבוי",
+        "explanation_he": "מפות לא מקוונות, GPX, דלק ודרך חלופית נבדקים לפני יציאה.",
+        "primary_video_ids": [
+          "yt-hDX4TBsPKLU",
+          "yt-kInjwfYnVYU"
+        ],
+        "alternative_video_ids": [
+          "yt-TujQZ4bRgjQ"
+        ],
+        "equipment_he": [
+          "GPS או טלפון",
+          "מטען",
+          "מפה גיבוי"
+        ],
+        "risk_level": "low",
+        "warning_he": "עצרו לפני כל שינוי יעד ואל תסמכו על מכשיר יחיד."
+      },
+      {
+        "order": 8,
+        "goal_he": "לנהל עייפות",
+        "explanation_he": "ארגונומיה, ציוד מוכר, הפסקות וסבולת הדרגתית סוגרים את תכנית המסע.",
+        "primary_video_ids": [
+          "yt-2HTa9iHvI6U",
+          "yt-J0ijNI0HhFA"
+        ],
+        "alternative_video_ids": [
+          "yt-GwXb1oEWeMY"
+        ],
+        "equipment_he": [
+          "מים",
+          "ערכת עזרה ראשונה",
+          "מיגון מותאם"
+        ],
+        "risk_level": "medium",
+        "warning_he": "פיהוק, כאב או ירידה בריכוז מחייבים עצירה."
+      }
+    ]
+  },
+  {
+    "id": "passenger-group-safety",
+    "name_he": "מורכב, קבוצה ובטיחות משותפת",
+    "description_he": "מסלול לתקשורת, עומס נוסף, מבנה קבוצה וקצב אישי.",
+    "skill_level": "advanced_beginner",
+    "steps": [
+      {
+        "order": 1,
+        "goal_he": "לתדרך מורכב",
+        "explanation_he": "מסכמים ציוד, אותות, עלייה, אחיזה ותנועה לפני הנעה.",
+        "primary_video_ids": [
+          "yt-qt262cjyWAc",
           "yt-U64nD-GHkik"
         ],
         "alternative_video_ids": [
-          "yt-jHhRZLHA-cA",
-          "yt-SQhttXPPOsU"
-        ]
+          "yt-6yE85BVYNKY"
+        ],
+        "equipment_he": [
+          "מיגון מלא לשני אנשים",
+          "רגליות תקינות"
+        ],
+        "risk_level": "medium",
+        "warning_he": "אין להרכיב ללא מושב, רגליות ועומס מאושרים."
       },
       {
-        "order": 10,
-        "goal_he": "לנהל עייפות",
-        "explanation_he": "מתכננים הפסקות ומזהים ירידה בערנות.",
+        "order": 2,
+        "goal_he": "להתאים את האופנוע לעומס",
+        "explanation_he": "בודקים לחץ, קדם־עומס ועלייה לפני תנועה.",
         "primary_video_ids": [
-          "yt-2XP_qr9NNcc",
-          "yt-PtRYyP96HHA"
+          "yt-6VjSNKBobko",
+          "yt-MwZSi-LHWuw"
         ],
         "alternative_video_ids": [
-          "yt-1s4fDOyb3YA",
-          "yt-HGU8gAIq9ME"
-        ]
+          "yt-qt262cjyWAc"
+        ],
+        "equipment_he": [
+          "ספר רכב",
+          "מד לחץ",
+          "מיגון לשניים"
+        ],
+        "risk_level": "medium",
+        "warning_he": "פעלו לפי מגבלת היצרן, לא לפי תחושה בלבד."
+      },
+      {
+        "order": 3,
+        "goal_he": "לבחור מבנה קבוצה",
+        "explanation_he": "מבנה מדורג וטור יחיד משתנים לפי כביש, ראות ומזג אוויר.",
+        "primary_video_ids": [
+          "yt-MBS_7UeiXnQ",
+          "yt-Kt3mVmoityo"
+        ],
+        "alternative_video_ids": [
+          "yt-GerHAGwhX9k"
+        ],
+        "equipment_he": [
+          "מיגון מלא",
+          "אמצעי תקשורת"
+        ],
+        "risk_level": "medium",
+        "warning_he": "מבנה הקבוצה אינו גובר על מרווח אישי או חוק."
+      },
+      {
+        "order": 4,
+        "goal_he": "להגדיר מוביל ומאסף",
+        "explanation_he": "תפקידים, איתות ונוהל המתנה נקבעים בתדריך.",
+        "primary_video_ids": [
+          "yt-GerHAGwhX9k",
+          "yt-Kt3mVmoityo"
+        ],
+        "alternative_video_ids": [
+          "yt-MBS_7UeiXnQ"
+        ],
+        "equipment_he": [
+          "רשימת משתתפים",
+          "ערכת עזרה ראשונה"
+        ],
+        "risk_level": "low",
+        "warning_he": "אל תצאו לפני שכל רוכב יודע מי המאסף ומהו נוהל אובדן קשר."
+      },
+      {
+        "order": 5,
+        "goal_he": "למקם קבוצה בכביש",
+        "explanation_he": "רואים ונראים בלי להסתיר נתיב מילוט או להיכנס לשטח מת.",
+        "primary_video_ids": [
+          "yt-l_vLv-Fds5g",
+          "yt-bYIzeyCubcw"
+        ],
+        "alternative_video_ids": [
+          "yt-SpEl45M02sI"
+        ],
+        "equipment_he": [
+          "תאורה תקינה",
+          "מיגון נראה"
+        ],
+        "risk_level": "medium",
+        "warning_he": "אל תניחו שנהג ראה את כל חברי הקבוצה."
+      },
+      {
+        "order": 6,
+        "goal_he": "לשמור קצב אישי",
+        "explanation_he": "לחץ חברתי, עייפות ואפקט אקורדיון מטופלים לפני שהם מצטברים.",
+        "primary_video_ids": [
+          "yt-GerHAGwhX9k",
+          "yt-GwXb1oEWeMY"
+        ],
+        "alternative_video_ids": [
+          "yt-hVnR2QeRxTI"
+        ],
+        "equipment_he": [
+          "מים",
+          "אמצעי תקשורת"
+        ],
+        "risk_level": "medium",
+        "warning_he": "אין לרדוף אחרי הקבוצה; המוביל והמאסף מתאימים את הקצב."
+      },
+      {
+        "order": 7,
+        "goal_he": "להתאים קבוצה למזג אוויר",
+        "explanation_he": "מרווח, טור יחיד ונראות משתנים בגשם או בחשכה.",
+        "primary_video_ids": [
+          "yt-Qx6G0gkQ048",
+          "yt-FNLUBBMypmI"
+        ],
+        "alternative_video_ids": [
+          "yt-eTBshYyXrW0"
+        ],
+        "equipment_he": [
+          "מיגון עמיד למים",
+          "משקפים נקיים",
+          "מחזירי אור"
+        ],
+        "risk_level": "high",
+        "warning_he": "קבוצה אינה סיבה להמשיך בתנאים שחורגים מרמת הרוכב החלש ביותר."
+      },
+      {
+        "order": 8,
+        "goal_he": "להכין תגובת חירום",
+        "explanation_he": "בלימה, מילוט ותקשורת לאחר אירוע מתורגלים במסגרת מסודרת.",
+        "primary_video_ids": [
+          "yt-UILe5YDA4B8",
+          "yt-eqbeqc2xeBc"
+        ],
+        "alternative_video_ids": [
+          "yt-bO88ooYOLhw"
+        ],
+        "equipment_he": [
+          "מדריך",
+          "מגרש סגור",
+          "קונוסים",
+          "ערכת עזרה ראשונה"
+        ],
+        "risk_level": "high",
+        "warning_he": "אין לתרגל עצירת חירום בתוך רכיבת קבוצה פעילה."
+      }
+    ]
+  },
+  {
+    "id": "recovery-emergency-readiness",
+    "name_he": "חילוץ ומוכנות לחירום",
+    "description_he": "מסלול הערכות, הרמה, חילוץ מעלייה ובוץ, מים, תקר וטיפול מונע.",
+    "skill_level": "intermediate",
+    "steps": [
+      {
+        "order": 1,
+        "goal_he": "לבדוק מוכנות לפני יציאה",
+        "explanation_he": "מונעים תקלה באמצעות T-CLOCS ובדיקה קצרה נוספת.",
+        "primary_video_ids": [
+          "yt-y1_j_49as9s",
+          "yt-HlZvuK_3kPQ"
+        ],
+        "alternative_video_ids": [
+          "yt-0Llcyhyh8vY"
+        ],
+        "equipment_he": [
+          "רשימת בדיקה",
+          "מד לחץ",
+          "פנס"
+        ],
+        "risk_level": "low",
+        "warning_he": "ליקוי לא מוסבר מחייב בדיקה מקצועית."
+      },
+      {
+        "order": 2,
+        "goal_he": "להרים בלי להיפצע",
+        "explanation_he": "מעריכים סביבה ובוחרים טכניקה לפי צד, שיפוע ומשקל.",
+        "primary_video_ids": [
+          "yt-uT-staOOo9w",
+          "yt-tkQ-s7PI5Ds"
+        ],
+        "alternative_video_ids": [
+          "yt-45iv6pdogLo"
+        ],
+        "equipment_he": [
+          "כפפות",
+          "מגפיים",
+          "משגיח"
+        ],
+        "risk_level": "medium",
+        "warning_he": "בפציעה, דליפה, תנועה או שיפוע מזמינים עזרה."
+      },
+      {
+        "order": 3,
+        "goal_he": "לצאת מכישלון בעלייה",
+        "explanation_he": "מכינים נוהל עצירה ושינוי כיוון לפני ניסיון השיפוע.",
+        "primary_video_ids": [
+          "yt-FQp-0v2ddQ0",
+          "yt-eiRMikxU3Z4"
+        ],
+        "alternative_video_ids": [
+          "yt-zMuVNBk9Ogw"
+        ],
+        "equipment_he": [
+          "מיגון מלא",
+          "רצועה",
+          "צוות"
+        ],
+        "risk_level": "high",
+        "warning_he": "אין לעמוד מתחת לאופנוע או לתרגל לבד."
+      },
+      {
+        "order": 4,
+        "goal_he": "לשחרר אופנוע מבוץ",
+        "explanation_he": "שוברים יניקה, חופרים ומשנים זווית בצעדים קטנים.",
+        "primary_video_ids": [
+          "yt-zMuVNBk9Ogw",
+          "yt-rlcGpTJl16U"
+        ],
+        "alternative_video_ids": [
+          "yt-wsokPULhmv0"
+        ],
+        "equipment_he": [
+          "את חפירה",
+          "רצועות",
+          "כפפות",
+          "צוות"
+        ],
+        "risk_level": "high",
+        "warning_he": "מאמץ יתר ושקיעה עמוקה מחייבים עצירה והזעקת עזרה."
+      },
+      {
+        "order": 5,
+        "goal_he": "להיערך לאירוע מים",
+        "explanation_he": "משווים מעבר מתוכנן למקרה נפילה ומכינים חילוץ.",
+        "primary_video_ids": [
+          "yt-VKCEzq_fUNg",
+          "yt-qwK6pdXY7rw"
+        ],
+        "alternative_video_ids": [
+          "yt-n5d2muv5OtE"
+        ],
+        "equipment_he": [
+          "רצועת חילוץ",
+          "שותפים",
+          "מקל בדיקה"
+        ],
+        "risk_level": "high",
+        "warning_he": "אין להיכנס למים שאי אפשר לבדוק או לחלץ מהם."
+      },
+      {
+        "order": 6,
+        "goal_he": "לתקן תקר בשטח",
+        "explanation_he": "מתרגלים בבית את הערכה והפעולות הנדרשות לגלגל ולפנימית.",
+        "primary_video_ids": [
+          "yt-dWkoJmTyrtI",
+          "yt-vfOO-xV02vo"
+        ],
+        "alternative_video_ids": [
+          "yt-tNUbI03Pw4I"
+        ],
+        "equipment_he": [
+          "כפות צמיג",
+          "משאבה",
+          "פנימית או טלאי",
+          "כלי ציר"
+        ],
+        "risk_level": "medium",
+        "warning_he": "גלגל, קליפר וציר חוזרים לפי סדר ומומנט היצרן."
+      },
+      {
+        "order": 7,
+        "goal_he": "למנוע כשל שרשרת",
+        "explanation_he": "בדיקה, ניקוי ושימון קודמים לכיוון או להחלפה.",
+        "primary_video_ids": [
+          "yt-i7vcL3L7750",
+          "yt-KRgG21OBjcE"
+        ],
+        "alternative_video_ids": [
+          "yt-CsCvU1qOAag"
+        ],
+        "equipment_he": [
+          "כפפות",
+          "מברשת",
+          "חומר מתאים",
+          "ספר שירות"
+        ],
+        "risk_level": "medium",
+        "warning_he": "לעולם אין להניע את הגלגל בזמן טיפול."
+      },
+      {
+        "order": 8,
+        "goal_he": "לשלב בלימה ומילוט",
+        "explanation_he": "מסיימים במיומנות שמונעת אירוע ומאפשרת יציאה לאחר עצירה.",
+        "primary_video_ids": [
+          "yt-UILe5YDA4B8",
+          "yt-bO88ooYOLhw"
+        ],
+        "alternative_video_ids": [
+          "yt-eqbeqc2xeBc"
+        ],
+        "equipment_he": [
+          "מיגון מלא",
+          "קונוסים",
+          "מגרש סגור",
+          "מדריך"
+        ],
+        "risk_level": "high",
+        "warning_he": "אין ללמוד תמרון חירום בכביש פתוח."
       }
     ]
   }

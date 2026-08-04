@@ -240,6 +240,157 @@ def fetch_command(input_path: Path, output: Path, *, workers: int, include_descr
     return 0 if report["failed"] == 0 else 1
 
 
+def search_one(query_spec: dict[str, Any]) -> dict[str, Any]:
+    """Run one metadata-only YouTube search and retain the query provenance."""
+
+    query = str(query_spec.get("query") or "").strip()
+    limit = int(query_spec.get("limit") or 12)
+    if not query:
+        return {"status": "fail", "query": query, "error": "Empty query", "entries": []}
+    if not 1 <= limit <= 50:
+        return {
+            "status": "fail",
+            "query": query,
+            "error": f"Search limit must be 1-50; found {limit}",
+            "entries": [],
+        }
+    yt_dlp = load_yt_dlp()
+    options = metadata_options(flat=True)
+    options.update({"playlistend": limit, "noplaylist": False})
+    try:
+        with yt_dlp.YoutubeDL(options) as downloader:
+            info = downloader.extract_info(f"ytsearch{limit}:{query}", download=False)
+        raw_entries = info.get("entries") if isinstance(info, dict) else []
+        entries: list[dict[str, Any]] = []
+        for rank, item in enumerate(raw_entries or [], start=1):
+            if not isinstance(item, dict) or not item.get("id"):
+                continue
+            video_id = str(item["id"])
+            entries.append(
+                {
+                    "youtube_video_id": video_id,
+                    "youtube_url": item.get("url")
+                    if str(item.get("url") or "").startswith("http")
+                    else f"https://www.youtube.com/watch?v={video_id}",
+                    "title_original": item.get("title"),
+                    "channel_name": item.get("channel") or item.get("uploader"),
+                    "channel_id": item.get("channel_id") or item.get("uploader_id"),
+                    "duration_seconds": item.get("duration"),
+                    "rank": rank,
+                }
+            )
+        return {
+            "status": "pass",
+            "query": query,
+            "language_hint": query_spec.get("language_hint"),
+            "topic": query_spec.get("topic"),
+            "requested": limit,
+            "returned": len(entries),
+            "entries": entries,
+        }
+    except Exception as exc:
+        return {
+            "status": "fail",
+            "query": query,
+            "language_hint": query_spec.get("language_hint"),
+            "topic": query_spec.get("topic"),
+            "requested": limit,
+            "returned": 0,
+            "entries": [],
+            "error": str(exc),
+        }
+
+
+def read_query_specs(path: Path) -> tuple[list[dict[str, Any]], list[str]]:
+    payload = read_json(path)
+    if isinstance(payload, list):
+        raw_queries = payload
+        seed_ids: list[str] = []
+    elif isinstance(payload, dict):
+        raw_queries = payload.get("queries", [])
+        seed_ids = [str(item).strip() for item in payload.get("seed_video_ids", []) if str(item).strip()]
+    else:
+        raise ValueError("Search input must be an array or object with a queries array")
+    specs: list[dict[str, Any]] = []
+    for item in raw_queries:
+        if isinstance(item, str):
+            specs.append({"query": item, "limit": 12})
+        elif isinstance(item, dict):
+            specs.append(dict(item))
+        else:
+            raise ValueError("Each search query must be a string or object")
+    return specs, list(dict.fromkeys(seed_ids))
+
+
+def discover_command(input_path: Path, output: Path, *, workers: int) -> int:
+    specs, seed_ids = read_query_specs(input_path)
+    completed: dict[int, dict[str, Any]] = {}
+    with ThreadPoolExecutor(max_workers=workers) as executor:
+        futures = {executor.submit(search_one, spec): index for index, spec in enumerate(specs)}
+        for future in as_completed(futures):
+            completed[futures[future]] = future.result()
+    searches = [completed[index] for index in range(len(specs))]
+
+    unique: dict[str, dict[str, Any]] = {}
+    for video_id in seed_ids:
+        unique[video_id] = {
+            "youtube_video_id": video_id,
+            "youtube_url": f"https://www.youtube.com/watch?v={video_id}",
+            "title_original": None,
+            "channel_name": None,
+            "channel_id": None,
+            "duration_seconds": None,
+            "search_matches": [
+                {"query": "required_seed", "language_hint": "he", "topic": "required_seed", "rank": 0}
+            ],
+        }
+    for search in searches:
+        for entry in search["entries"]:
+            video_id = entry["youtube_video_id"]
+            candidate = unique.setdefault(
+                video_id,
+                {
+                    key: entry.get(key)
+                    for key in (
+                        "youtube_video_id",
+                        "youtube_url",
+                        "title_original",
+                        "channel_name",
+                        "channel_id",
+                        "duration_seconds",
+                    )
+                }
+                | {"search_matches": []},
+            )
+            candidate["search_matches"].append(
+                {
+                    "query": search["query"],
+                    "language_hint": search.get("language_hint"),
+                    "topic": search.get("topic"),
+                    "rank": entry["rank"],
+                }
+            )
+
+    report = {
+        "generated_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
+        "network_performed": True,
+        "video_or_transcript_downloaded": False,
+        "queries_requested": len(specs),
+        "queries_passed": sum(item["status"] == "pass" for item in searches),
+        "queries_failed": sum(item["status"] != "pass" for item in searches),
+        "raw_results": sum(item["returned"] for item in searches),
+        "unique_candidates": len(unique),
+        "seed_video_ids": seed_ids,
+        "searches": searches,
+        "candidates": list(unique.values()),
+    }
+    write_json(output, report)
+    print(f"Queries: {report['queries_passed']}/{report['queries_requested']}")
+    print(f"Unique candidates: {report['unique_candidates']}")
+    print(f"Report: {output}")
+    return 0 if report["queries_failed"] == 0 else 1
+
+
 def parser() -> argparse.ArgumentParser:
     result = argparse.ArgumentParser(description=__doc__)
     subparsers = result.add_subparsers(dest="command", required=True)
@@ -253,6 +404,14 @@ def parser() -> argparse.ArgumentParser:
     fetch.add_argument("--output", type=Path, required=True)
     fetch.add_argument("--workers", type=int, default=4)
     fetch.add_argument("--include-description", action="store_true")
+
+    discover = subparsers.add_parser(
+        "discover",
+        help="Run metadata-only YouTube searches and deduplicate candidates",
+    )
+    discover.add_argument("--input", type=Path, required=True)
+    discover.add_argument("--output", type=Path, required=True)
+    discover.add_argument("--workers", type=int, default=2)
     return result
 
 
@@ -266,6 +425,8 @@ def main(argv: list[str] | None = None) -> int:
     try:
         if args.command == "audit-existing":
             return audit_existing(args.output, workers=args.workers)
+        if args.command == "discover":
+            return discover_command(args.input, args.output, workers=args.workers)
         return fetch_command(
             args.input,
             args.output,

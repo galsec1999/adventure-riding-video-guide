@@ -1,0 +1,6 @@
+PASS: validate_data
+Checks passed: 8051
+Checks failed: 0
+Warnings: 0
+Count expectation: expected=130; actual=130; satisfied=yes
+Stats: learning_paths=2, learning_path_steps=20, learning_path_video_references=85, synonym_concepts=36, videos=130, unique_internal_ids=130, unique_youtube_video_ids=130, taxonomy_categories=33, taxonomy_tags=83

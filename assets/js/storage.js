@@ -123,8 +123,14 @@ export function createStorage(candidate) {
   };
 }
 
-export const browserStorage = createStorage(
-  typeof window !== "undefined" ? window.localStorage : null,
-);
+function getWindowLocalStorage() {
+  try {
+    return typeof window !== "undefined" ? window.localStorage : null;
+  } catch {
+    return null;
+  }
+}
 
-export const storageInternals = Object.freeze({ safeParse, createMemoryStorage });
+export const browserStorage = createStorage(getWindowLocalStorage());
+
+export const storageInternals = Object.freeze({ safeParse, createMemoryStorage, getWindowLocalStorage });

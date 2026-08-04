@@ -75,15 +75,19 @@ test("all related-video references resolve to existing records", () => {
 });
 
 
-test("both learning paths have ordered stages and valid video choices", () => {
-  assert.equal(learningPaths.length, 2);
-  assert.equal(ids(learningPaths).size, 2);
+test("all eight learning paths have ordered stages, safety fields, and valid video choices", () => {
+  assert.equal(learningPaths.length, 8);
+  assert.equal(ids(learningPaths).size, 8);
 
   learningPaths.forEach((path) => {
-    assert.ok(path.steps.length > 0, `${path.id} has no steps`);
+    assert.ok(path.steps.length >= 8 && path.steps.length <= 12, `${path.id} must have 8-12 steps`);
     assert.deepEqual(path.steps.map((step) => step.order), path.steps.map((_, index) => index + 1));
     path.steps.forEach((step) => {
-      assert.ok(step.primary_video_ids.length > 0, `${path.id}/${step.order} has no primary video`);
+      assert.equal(step.primary_video_ids.length, 2, `${path.id}/${step.order} must have two primary videos`);
+      assert.equal(step.alternative_video_ids.length, 1, `${path.id}/${step.order} must have one alternative`);
+      assert.ok(Array.isArray(step.equipment_he) && step.equipment_he.length > 0, `${path.id}/${step.order} lacks equipment`);
+      assert.ok(["low", "medium", "high"].includes(step.risk_level), `${path.id}/${step.order} has invalid risk`);
+      assert.ok(typeof step.warning_he === "string" && step.warning_he.trim(), `${path.id}/${step.order} lacks warning`);
       const choices = [...step.primary_video_ids, ...step.alternative_video_ids];
       assert.ok(choices.length >= 2, `${path.id}/${step.order} must offer at least two choices`);
       assert.equal(new Set(choices).size, choices.length, `${path.id}/${step.order} repeats a video`);

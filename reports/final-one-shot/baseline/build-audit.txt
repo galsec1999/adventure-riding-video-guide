@@ -1,0 +1,5 @@
+Audit status: pass
+Validation checks: 8050 passed, 0 failed
+Wrote: D:\Michael2015\אופנוע\Adventure-Riding-Video-Guide-Starter\reports\content-audit.json
+Wrote: D:\Michael2015\אופנוע\Adventure-Riding-Video-Guide-Starter\reports\content-audit.csv
+Wrote: D:\Michael2015\אופנוע\Adventure-Riding-Video-Guide-Starter\reports\content-audit.html

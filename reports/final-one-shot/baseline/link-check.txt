@@ -1,0 +1,4 @@
+Report: reports\final-one-shot\baseline\link-check.json
+Mode: online_oembed
+Local checks: 130 passed, 0 failed
+Online checks: 130 active, 0 unavailable, 0 indeterminate

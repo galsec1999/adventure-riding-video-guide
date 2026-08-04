@@ -40,6 +40,30 @@ test("three simultaneous filters return only matching real records", () => {
 });
 
 
+test("five simultaneous filters remain conjunctive and shareable", () => {
+  const filters = {
+    domain: "road",
+    category: "road_strategy",
+    language: "en",
+    skill: "advanced_beginner",
+    risk: "high",
+  };
+  const results = applySearchAndFilters(prepared.videos, filters, context);
+
+  assert.equal(results.length, 9, "the release five-filter combination must stay deterministic");
+  results.forEach((video) => {
+    assert.equal(video.domain, filters.domain);
+    assert.equal(video.language, filters.language);
+    assert.equal(video.skill_level, filters.skill);
+    assert.equal(video.risk_level, filters.risk);
+    assert.ok(
+      video.primary_category === filters.category || video.secondary_categories.includes(filters.category),
+      `${video.id} must match the selected category`,
+    );
+  });
+});
+
+
 test("logical reset to empty filters restores the complete dataset", () => {
   const filtered = applySearchAndFilters(
     prepared.videos,

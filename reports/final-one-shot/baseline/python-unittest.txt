@@ -1,0 +1,22 @@
+test_300_record_fixture_satisfies_minimum_200_policy (test_tools.MaintenanceToolsTests.test_300_record_fixture_satisfies_minimum_200_policy) ... ok
+test_acceptance_fixture_site_is_ephemeral_and_supports_custom_config (test_tools.MaintenanceToolsTests.test_acceptance_fixture_site_is_ephemeral_and_supports_custom_config) ... ok
+test_audit_accepts_an_explicit_link_report_and_keeps_default_behavior (test_tools.MaintenanceToolsTests.test_audit_accepts_an_explicit_link_report_and_keeps_default_behavior) ... ok
+test_audit_matches_source_counts (test_tools.MaintenanceToolsTests.test_audit_matches_source_counts) ... ok
+test_audit_writes_all_three_formats (test_tools.MaintenanceToolsTests.test_audit_writes_all_three_formats) ... ok
+test_complete_data_validation_is_nonempty_and_count_agnostic_by_default (test_tools.MaintenanceToolsTests.test_complete_data_validation_is_nonempty_and_count_agnostic_by_default) ... ok
+test_count_policies_are_mutually_exclusive_for_api_and_cli (test_tools.MaintenanceToolsTests.test_count_policies_are_mutually_exclusive_for_api_and_cli) ... ok
+test_empty_dataset_fails_default_nonempty_requirement (test_tools.MaintenanceToolsTests.test_empty_dataset_fails_default_nonempty_requirement) ... ok
+test_expected_and_minimum_count_policies_pass_and_fail_explicitly (test_tools.MaintenanceToolsTests.test_expected_and_minimum_count_policies_pass_and_fail_explicitly) ... ok
+test_json_console_and_report_document_active_count_expectation (test_tools.MaintenanceToolsTests.test_json_console_and_report_document_active_count_expectation) ... ok
+test_legacy_wave1_wrapper_requires_an_explicit_count_and_delegates (test_tools.MaintenanceToolsTests.test_legacy_wave1_wrapper_requires_an_explicit_count_and_delegates) ... ok
+test_link_checker_is_local_by_default_and_uses_source_count (test_tools.MaintenanceToolsTests.test_link_checker_is_local_by_default_and_uses_source_count) ... ok
+test_phase03_bundle_is_complete_hashed_and_excludes_unsafe_artifacts (test_tools.MaintenanceToolsTests.test_phase03_bundle_is_complete_hashed_and_excludes_unsafe_artifacts) ... ok
+test_site_config_allows_empty_optional_identity_fields (test_tools.MaintenanceToolsTests.test_site_config_allows_empty_optional_identity_fields) ... ok
+test_validator_accepts_temporary_130_and_300_record_fixtures (test_tools.MaintenanceToolsTests.test_validator_accepts_temporary_130_and_300_record_fixtures) ... ok
+
+----------------------------------------------------------------------
+Ran 15 tests in 4.237s
+
+OK
+validator fixture 130: 174.04 ms (measurement only; no hardware threshold)
+validator fixture 300: 365.21 ms (measurement only; no hardware threshold)

@@ -1,0 +1,51 @@
+
+> adventure-riding-video-guide@0.3.0 test
+> node --test tests/search.test.mjs tests/filters.test.mjs tests/storage.test.mjs tests/data-integrity.test.mjs tests/scalability.test.mjs tests/smoke.test.mjs
+
+✔ non-empty dataset has unique records with matching YouTube URLs (1.0352ms)
+✔ all taxonomy fields reference controlled IDs (3.3713ms)
+✔ all related-video references resolve to existing records (0.3785ms)
+✔ both learning paths have ordered stages and valid video choices (1.4373ms)
+✔ three simultaneous filters return only matching real records (14.0774ms)
+✔ logical reset to empty filters restores the complete dataset (4.5762ms)
+✔ quality sorting is descending, deterministic, and does not mutate input (0.4739ms)
+✔ duration filters follow the labels shown in the UI (1.3305ms)
+✔ 130-record fixture prepares and indexes without runtime errors (40.8285ms)
+ℹ prepare/index 130: 35.36 ms (measurement only; no hardware threshold)
+✔ 130-record fixture supports search, combined filters, sorting, and exact result counts (61.1388ms)
+ℹ search/filter/sort 130: 23.46 ms (measurement only; no hardware threshold)
+✔ 130-record pagination loads every unique card identity without duplication (3.6569ms)
+✔ 300-record fixture prepares and indexes without runtime errors (77.4909ms)
+ℹ prepare/index 300: 69.52 ms (measurement only; no hardware threshold)
+✔ 300-record fixture supports search, combined filters, sorting, and exact result counts (107.7085ms)
+ℹ search/filter/sort 300: 23.46 ms (measurement only; no hardware threshold)
+✔ 300-record pagination loads every unique card identity without duplication (7.1591ms)
+✔ normalizeText normalizes English case and punctuation (1.2474ms)
+✔ normalizeText folds Hebrew final letters (0.1587ms)
+✔ Hebrew and English synonyms reach the same relevant sand records (37.254ms)
+✔ one-character English typo still finds emergency braking (9.7599ms)
+✔ English search matches whole words instead of unrelated substrings (4.7043ms)
+✔ acceptance search ranks a relevant result first: חול (8.0258ms)
+✔ acceptance search ranks a relevant result first: בוץ (8.2397ms)
+✔ acceptance search ranks a relevant result first: פניות בכביש (6.5103ms)
+✔ acceptance search ranks a relevant result first: בלימת חירום (11.7131ms)
+✔ acceptance search ranks a relevant result first: הרמת אופנוע (7.5552ms)
+✔ acceptance search ranks a relevant result first: גשם (4.085ms)
+✔ acceptance search ranks a relevant result first: עלייה תלולה (8.5561ms)
+✔ acceptance search ranks a relevant result first: רכיבה איטית (6.7066ms)
+✔ index is Hebrew RTL and all declared local assets exist (11.1351ms)
+✔ initial HTML has no iframe and app defers a privacy-enhanced player (3.1244ms)
+✔ local server returns the site and a non-empty video JSON array without directory listings (515.2675ms)
+✔ favorites persist across a recreated storage facade (1.9863ms)
+✔ watched state persists across a recreated storage facade (0.2731ms)
+✔ learning-path progress persists and remains sorted (1.7957ms)
+✔ theme persists and rejects unsupported values (0.3437ms)
+✔ last viewed video persists for continue-watching (1.662ms)
+ℹ tests 35
+ℹ suites 0
+ℹ pass 35
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1030.9748

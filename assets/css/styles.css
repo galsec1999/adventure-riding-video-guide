@@ -3075,6 +3075,35 @@ select:hover {
 .path-step.is-complete .path-step__number { border-color: var(--success); background: var(--success); color: #fff; }
 .path-step > p { color: var(--muted); font-size: 0.86rem; }
 
+.path-step__guardrails {
+  display: grid;
+  grid-template-columns: max-content minmax(0, 1fr);
+  gap: 0.35rem 0.7rem;
+  margin: 0.75rem 0 0;
+  padding: 0.75rem;
+  border-inline-start: 3px solid var(--accent);
+  border-radius: var(--radius-sm);
+  background: color-mix(in srgb, var(--accent) 7%, var(--surface));
+  font-size: 0.78rem;
+}
+
+.path-step__guardrails dt { color: var(--muted); font-weight: 900; }
+.path-step__guardrails dd { min-width: 0; margin: 0; overflow-wrap: anywhere; }
+
+.image-fallback {
+  display: grid;
+  min-height: 10rem;
+  place-items: center;
+  padding: 1rem;
+  background: var(--surface-soft);
+  color: var(--muted);
+  text-align: center;
+  font-size: 0.82rem;
+  font-weight: 750;
+}
+
+.image-fallback[hidden] { display: none; }
+
 .path-step__videos {
   display: grid;
   grid-template-columns: minmax(0, 1fr);

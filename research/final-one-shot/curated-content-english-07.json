@@ -1,0 +1,132 @@
+{
+  "tkQ-s7PI5Ds": {
+    "title_he": "שלוש שיטות להרמת אופנוע אדוונצ'ר", "domain": "safety_recovery", "primary_category": "lifting", "secondary_categories": ["recovery"], "tags": ["lifting", "heavy_bike", "body_mechanics", "recovery", "safety"],
+    "skill_level": "advanced_beginner", "risk_level": "medium", "motorcycle_types": ["adventure", "touring"], "motorcycle_weight_classes": ["medium", "heavy"], "terrain_types": ["dirt", "parking_lot"], "road_conditions": ["parking_lot"],
+    "summary_he": "הדגמה של הרמה מידית כידון, סקוואט עם הגב לאופנוע ודדליפט קדמי, כולל יציבת רגליים, ליבה ושימוש בכוח הרגליים.",
+    "learning_points_he": ["להעריך קרקע, פציעה ודליפה לפני מגע", "להצמיד מרפקים ולהפעיל ליבה", "לדחוף ברגליים בצעדים קטנים במקום למשוך בגב"],
+    "fit_for_he": "לבעלי אדוונצ'ר בינוני וכבד שרוצים להכיר חלופות ולבחור לפי כיוון הנפילה והקרקע.", "why_watch_he": "שלוש השיטות מאפשרות להשוות מנוף ויציבה במקום להניח שטכניקה אחת מתאימה לכל נפילה.",
+    "exercises_he": ["עם משגיח ועל משטח שטוח, תרגל שיטה אחת על אופנוע מוגן", "הפסק מיד אם אין יציבה בטוחה"],
+    "equipment_he": ["כפפות", "מגפיים", "משגיח", "מיגון לאופנוע"], "safety_warnings_he": ["אין להרים לבד בשיפוע, בתנועה, בדליפת דלק או לאחר פציעה; הזמן עזרה."],
+    "common_mistakes_he": ["משיכה בגב", "ניסיון מהיר בלי לייצב גלגלים"], "quality_score": 4, "quality_reason_he": "תיאור ותמלול מלא מאמתים שלוש טכניקות ומכניקת גוף; המקור מקדם תוכן וחסויות ואינו מחליף תרגול מפוקח.", "source_type": "training_channel", "contains_marketing": true
+  },
+  "qwK6pdXY7rw": {
+    "title_he": "ניתוח מעבר מים שהסתיים בנפילה", "domain": "offroad_adventure", "primary_category": "water_crossings", "secondary_categories": ["recovery"], "tags": ["water_crossing", "line_selection", "hazard_awareness", "recovery", "river_rock"],
+    "skill_level": "intermediate", "risk_level": "high", "motorcycle_types": ["adventure", "dual_sport"], "motorcycle_weight_classes": ["light", "medium", "heavy"], "terrain_types": ["water_crossing", "river_rock"], "road_conditions": [],
+    "summary_he": "תיעוד קבוצתי של כמה אופנועים במעבר מים, בחירת צד לסלע גדול, נפילה ועזרה — שימושי לניתוח קו ותקשורת, לא כהדרכה מלאה.",
+    "learning_points_he": ["לזהות סלעים ונתיב יציאה לפני כניסה", "להציב צופה במקום שמסוגל לסמן ולסייע", "לעצור ניסיון כשאין הסכמה על הקו"],
+    "fit_for_he": "לרוכבים בינוניים לצפייה ביקורתית בלבד, לצד מקור הדרכה מקצועי למעברי מים.", "why_watch_he": "הנפילה והתגובות נשארות בסרטון ומאפשרות לראות כיצד מידע חלקי וקו לא ברור מתפתחים לאירוע.",
+    "exercises_he": ["עצור לפני כל כניסה וסמן קו חלופי", "ערוך תדריך תקשורת עם צופה לפני מעבר אמיתי"],
+    "equipment_he": ["מיגון שטח", "רצועת חילוץ", "שותפים"], "safety_warnings_he": ["זהו תיעוד ולא שיעור; אין להיכנס למים לא בדוקים או לשחזר את האירוע."],
+    "common_mistakes_he": ["קו לא מוסכם", "כניסה בלי בדיקת עומק וסלעים"], "quality_score": 3, "quality_reason_he": "התמלול קצר ומאמת בעיקר את האירוע והסלע; הערך הוא Red-case לניתוח ולא הסבר טכני.", "source_type": "experienced_rider", "contains_marketing": true
+  },
+  "FCTnaF_aZP0": {
+    "title_he": "פנייה הדוקה מעמידה בכל אופנוע", "domain": "practice", "primary_category": "u_turns_low_speed", "secondary_categories": ["balance_slow_control", "drills"], "tags": ["slow_speed", "u_turn", "vision", "counterbalance", "clutch", "throttle"],
+    "skill_level": "advanced_beginner", "risk_level": "low", "motorcycle_types": ["general_motorcycle"], "motorcycle_weight_classes": ["general"], "terrain_types": ["parking_lot"], "road_conditions": ["parking_lot"],
+    "summary_he": "תרגיל קונוסים לפנייה הדוקה מזינוק המשלב ראש ומבט, הטיית כידון, משקל נגדי, אזור חיכוך וגז בשני הכיוונים.",
+    "learning_points_he": ["לקבוע גבולות כניסה ויציאה בקונוסים", "להפנות ראש לפני שחרור המצמד", "לשמור גוף חיצוני כשהאופנוע נוטה פנימה"],
+    "fit_for_he": "לרוכבים בעלי זינוק יציב שרוצים לפנות מיד מתוך חניה או עצירה.", "why_watch_he": "התרגיל משלב כמה מיומנויות איטיות בתנועה אחת ומראה כיצד להפוך את הפריסה לצד השני.",
+    "exercises_he": ["בנה תיבה רחבה ובצע ימינה בלבד", "הרחב שוב לפני מעבר לשמאל"],
+    "equipment_he": ["מיגון מלא", "קונוסים", "מגרש סגור"], "safety_warnings_he": ["השאר מרווח נפילה ואל תרגל בין מכוניות חונות."],
+    "common_mistakes_he": ["שחרור מצמד לפני הפניית ראש", "חוסר משקל נגדי"], "quality_score": 4, "quality_reason_he": "תמלול מלא תומך בפריסה ובקלטים; הסרטון מסחרי ומקדם מערכת אימון.", "source_type": "training_channel", "contains_marketing": true
+  },
+  "MBS_7UeiXnQ": {
+    "title_he": "מתי לרכב במבנה מדורג ומתי בטור", "domain": "safety_recovery", "primary_category": "solo_group_safety", "secondary_categories": ["road_strategy"], "tags": ["group_riding", "lane_position", "communication", "planning", "safety"],
+    "skill_level": "advanced_beginner", "risk_level": "medium", "motorcycle_types": ["touring", "street", "adventure"], "motorcycle_weight_classes": ["general"], "terrain_types": [], "road_conditions": ["highway", "rural_twisty", "urban"],
+    "summary_he": "הסבר על טור מדורג, טור יחיד ומעברים ביניהם, כולל מסלולי נתיב, מרווח, איתות ואיסור עקיפה בתוך המבנה ללא סימן.",
+    "learning_points_he": ["להשתמש במבנה מדורג רק כשיש רוחב וראות", "לעבור לטור יחיד בפניות או תנאים צרים", "לא לעקוף רוכב בקבוצה בלי נוהל מוסכם"],
+    "fit_for_he": "לרוכבים ומובילי קבוצה לפני תדריך כביש.", "why_watch_he": "הסרטון מוקדש רק למבנים ולכן מבהיר את הסיבות לשינוי במקום להציג מבנה אחד כקבוע.",
+    "exercises_he": ["ציירו את שני המבנים בתדריך", "תרגלו מעבר ביניהם בכביש ישר ורגוע לפי מוביל"],
+    "equipment_he": ["מיגון מלא", "אמצעי תקשורת מוסכם"], "safety_warnings_he": ["נוהל הקבוצה אינו גובר על החוק או על הצורך במרווח תגובה אישי."],
+    "common_mistakes_he": ["מבנה מדורג בפנייה צרה", "עקיפה פנימית ללא אישור"], "quality_score": 4, "quality_reason_he": "תיאור ותמלול מלא תומכים בסוגי המבנה; המקור קהילתי ומקדם תוכן נוסף.", "source_type": "experienced_rider", "contains_marketing": true
+  },
+  "zMuVNBk9Ogw": {
+    "title_he": "חילוץ אופנוע שטח שקוע בבוץ עם כריס בירץ'", "domain": "safety_recovery", "primary_category": "recovery", "secondary_categories": ["lifting", "mud_wet"], "tags": ["recovery", "mud", "lifting", "planning", "heavy_bike"],
+    "skill_level": "advanced", "risk_level": "high", "motorcycle_types": ["adventure", "dual_sport"], "motorcycle_weight_classes": ["medium", "heavy"], "terrain_types": ["mud", "wet_trail"], "road_conditions": [],
+    "summary_he": "כריס בירץ' מתעד חילוץ אופנוע ששקע עמוק: חפירה לשבירת יניקה, שינוי זווית, הרמה הדרגתית והבאתו לנקודה שמאפשרת פינוי.",
+    "learning_points_he": ["להקטין יניקת בוץ לפני משיכה בכוח", "לשנות מצב בצעדים קטנים ולחפש כל התקדמות", "להחליט מראש מהי נקודת החילוץ הנגישה"],
+    "fit_for_he": "לרוכבים מתקדמים לצפייה ותכנון צוות; חילוץ בוץ כבד דורש עזרה וכלים.", "why_watch_he": "התיעוד אינו חיתוך נקי של הצלחה; הוא מראה זמן, מאמץ ושינוי תכנית כאשר האופנוע אינו משתחרר.",
+    "exercises_he": ["תרגל קשרי רצועה ושימוש בנקודות עיגון מחוץ לבוץ", "בנה נוהל צוות לפני טיול"],
+    "equipment_he": ["מיגון", "את חפירה", "רצועות חילוץ", "כפפות", "צוות"], "safety_warnings_he": ["אין להיכנס לבוץ עמוק לבד; שקיעה, מאמץ יתר ונזק לאופנוע מחייבים צוות ותכנית נסיגה."],
+    "common_mistakes_he": ["משיכה לפני שבירת היניקה", "עבודה לבד ללא נקודת פינוי"], "quality_score": 5, "quality_reason_he": "תמלול מלא ממאמן שטח מוכר מתעד את החילוץ בפועל; יש קוד הנחה וקידום מסחרי.", "source_type": "professional_instructor", "contains_marketing": true
+  },
+  "6IybZ8hvuDk": {
+    "title_he": "טריק כידון להורדת אופנוע כבד מרגלית הצד", "domain": "practice", "primary_category": "balance_slow_control", "secondary_categories": ["lifting"], "tags": ["heavy_bike", "balance", "lifting", "handlebars", "body_mechanics"],
+    "skill_level": "beginner", "risk_level": "low", "motorcycle_types": ["touring", "adventure", "street"], "motorcycle_weight_classes": ["heavy"], "terrain_types": ["parking_lot"], "road_conditions": ["parking_lot"],
+    "summary_he": "טיפ שנלמד בקורס משטרה: סיבוב הכידון ימינה לפני הרמת אופנוע כבד מרגלית הצד כדי לשנות את המנוף ולהפחית מאמץ מורגש.",
+    "learning_points_he": ["לבדוק שהקרקע והרגלית יציבות", "לסובב כידון בכיוון המודגם לפני דחיפה", "להשוות תחושה בלי תנופה או משיכה בגב"],
+    "fit_for_he": "לרוכבים שמתקשים לזקוף אופנוע כבד מן הרגלית, בתרגול בחניה שטוחה.", "why_watch_he": "הסרטון קצר ומדגים שינוי יחיד שקל לבדוק באופן מבוקר על אותו אופנוע.",
+    "exercises_he": ["עם משגיח, השווה כידון ישר לכידון ימינה", "הפסק אם הרגלית או הקרקע נעות"],
+    "equipment_he": ["מגפיים", "משגיח", "קרקע ישרה"], "safety_warnings_he": ["אין לבצע בשיפוע או כאשר הרגלית אינה יציבה; שמור את הבלם נגיש לפי האופנוע."],
+    "common_mistakes_he": ["משיכה בגב", "ניסיון על קרקע משופעת"], "quality_score": 4, "quality_reason_he": "תמלול מלא מאמת את הטיפ ואת מקורו בקורס Ride Like a Pro; זהו טיפ יחיד ולא מדריך הרמה מלא.", "source_type": "training_channel", "contains_marketing": true
+  },
+  "KRgG21OBjcE": {
+    "title_he": "ניקוי ושימון שרשרת בדרך הנכונה", "domain": "mixed", "primary_category": "motorcycle_maintenance", "secondary_categories": ["trip_preparation"], "tags": ["chain", "inspection", "maintenance", "safety"],
+    "skill_level": "beginner", "risk_level": "low", "motorcycle_types": ["general_motorcycle"], "motorcycle_weight_classes": ["general"], "terrain_types": [], "road_conditions": [],
+    "summary_he": "Ari Henning מסביר מתי שרשרת זקוקה לטיפול, אילו ממסים בטוחים לאטמים, איך לנקות, לבדוק כשירות ולשמן בלי עודף.",
+    "learning_points_he": ["לטפל כשהשרשרת נראית או נשמעת יבשה", "להימנע מחומר חריף שפוגע באטמים", "לאשר שהשרשרת כשירה לפני שימון"],
+    "fit_for_he": "לבעלי אופנוע עם שרשרת אטומה שרוצים תחזוקה ביתית בסיסית.", "why_watch_he": "התמלול מסביר גם מה לא להשתמש ולמה, ומראה חתך שרשרת אטומה כדי להבהיר את תפקיד האטמים.",
+    "exercises_he": ["בדוק נקודות יבשות וחוליות תפוסות כשהמנוע כבוי", "נקה ושמן לפי ספר הרכב"],
+    "equipment_he": ["כפפות", "ממס מאושר", "מברשת", "חומר סיכה", "מעמד בטוח"], "safety_warnings_he": ["לעולם אין לנקות שרשרת כשהמנוע פועל או הגלגל מונע."],
+    "common_mistakes_he": ["שימוש בבנזין או מנקה בלמים", "עודף חומר על הצמיג"], "quality_score": 5, "quality_reason_he": "תמלול מלא ומפורט של The Shop Manual מאמת את כל שלבי הטיפול; הפתיחה כוללת מבצע מסחרי לצמיגים.", "source_type": "training_channel", "contains_marketing": true
+  },
+  "vfOO-xV02vo": {
+    "title_he": "החלפת צמיג ופנימית בזמן מסע", "domain": "safety_recovery", "primary_category": "tires_setup", "secondary_categories": ["recovery", "trip_preparation"], "tags": ["puncture", "tire_repair", "emergency_kit", "planning"],
+    "skill_level": "advanced", "risk_level": "medium", "motorcycle_types": ["dual_sport", "adventure"], "motorcycle_weight_classes": ["light", "medium"], "terrain_types": ["dirt"], "road_conditions": [],
+    "summary_he": "הדגמה של ערכת כלים, שבירת עקב, פירוק, הכנסת פנימית, יישור שסתום והרכבה מחדש בתנאי נסיעה מרוחקים.",
+    "learning_points_he": ["לשאת כלים שמתאימים בפועל לצירים ולאומים", "לתרגל שבירת עקב לפני הטיול", "למקם פנימית ושסתום בלי צביטה"],
+    "fit_for_he": "לרוכבים בעלי רקע מכני ומערכת פנימית; מומלץ לתרגל בבית ולשאת מדריך דגם.", "why_watch_he": "היוצרת מדגימה כלים שנכנסים למטען ומציעה פתרונות לשבירת עקב גם עם שותף.",
+    "exercises_he": ["בבית פרק והרכב לפי ספר השירות", "בדוק משאבה, מד לחץ ומפתח ציר"],
+    "equipment_he": ["כפות צמיג", "פנימית", "משאבה", "כלי ציר", "מפתח מומנט"], "safety_warnings_he": ["החזרת גלגל ובלמים דורשת סדר חלקים ומומנט יצרן; ספק מחייב מוסך."],
+    "common_mistakes_he": ["צביטת פנימית", "הרכבת שסתום עקום"], "quality_score": 4, "quality_reason_he": "תיאור ותמלול מלא מאמתים את התהליך; זהו ניסיון אישי ולכן נתוני מומנט נשארים לספר השירות.", "source_type": "experienced_rider", "contains_marketing": true
+  },
+  "DW0GVIvub44": {
+    "title_he": "כיוון שקיעת מתלה באדוונצ'ר עמוס", "domain": "mixed", "primary_category": "suspension_setup", "secondary_categories": ["trip_preparation"], "tags": ["sag", "preload", "suspension", "luggage", "heavy_bike"],
+    "skill_level": "intermediate", "risk_level": "medium", "motorcycle_types": ["adventure", "touring"], "motorcycle_weight_classes": ["heavy"], "terrain_types": ["dirt", "gravel"], "road_conditions": ["highway"],
+    "summary_he": "ביקור אצל מומחה מתלים למדידת שקיעה באופנוע KTM 1290 עם רוכב ומטען, התאמת קדם־עומס ולאחר מכן כוונון דחיסה והחזרה.",
+    "learning_points_he": ["למדוד מהלך ושקיעה עם העומס האמיתי", "להשתמש בקדם־עומס להשגת טווח היעד של היצרן", "להעריך שיכוך רק לאחר בסיס גובה נכון"],
+    "fit_for_he": "לבעלי אדוונצ'ר כבד עם מטען משתנה, רצוי בסיוע מומחה ושני מודדים.", "why_watch_he": "הדיאלוג עם הטכנאי מראה מדידה, שינוי ובדיקת תחושה במקום להציע מספר כללי לכל אופנוע.",
+    "exercises_he": ["מדוד שקיעה ללא עומס ועם ציוד מלא", "רשום קדם־עומס לכל מצב מטען"],
+    "equipment_he": ["סרט מדידה או כלי SAG", "ספר רכב", "עוזרים", "כלי כיוון"], "safety_warnings_he": ["הערך המספרי בסרטון מתאים לדגם ולמהלך המוצגים בלבד; פעל לפי היצרן."],
+    "common_mistakes_he": ["מדידה בלי מטען", "כיוון שיכוך לפני קביעת שקיעה"], "quality_score": 5, "quality_reason_he": "תמלול מלא עם מומחה מתלים מאמת מדידה והתאמות; הערכים סויגו לדגם הספציפי.", "source_type": "professional_instructor", "contains_marketing": true
+  },
+  "wrklB5UMWOU": {
+    "title_he": "הרמת גלגל קדמי למעבר מכשול פתאומי", "domain": "offroad_adventure", "primary_category": "obstacles", "secondary_categories": ["controls_coordination", "riding_position"], "tags": ["obstacle", "throttle", "weight_transfer", "traction", "body_position"],
+    "skill_level": "advanced", "risk_level": "high", "motorcycle_types": ["adventure", "dual_sport"], "motorcycle_weight_classes": ["medium", "heavy"], "terrain_types": ["obstacle", "mud", "dirt"], "road_conditions": [],
+    "summary_he": "אדם רימן מלמד העברת משקל מלאה לאחור יחד עם פעימת גז כדי להקל את הקדמי מעל שפה או מכשול, ולא לבצע ווילי מתמשך.",
+    "learning_points_he": ["להתחיל בתנועת גוף לפני פעימת הגז", "לייצר אחיזה באחורי במקום לסחרר", "להוריד את הקדמי בשליטה לאחר מעבר השפה"],
+    "fit_for_he": "לרוכבי שטח מתקדמים עם שליטת גז ועמידה, תחת הדרכה ובמכשול נמוך.", "why_watch_he": "חמשת הפרקים מבדילים בין הרמת קדמי פונקציונלית לבין ווילי ומראים יישום על אופנוע כבד.",
+    "exercises_he": ["תרגל נדנוד משקל בלי מכשול", "עם מדריך הוסף שפה נמוכה מאוד"],
+    "equipment_he": ["מיגון שטח מלא", "מגן מנוע", "מדריך"], "safety_warnings_he": ["פתיחת גז או משיכה מוגזמת עלולות להפוך את האופנוע; אין לתרגל לבד או בכביש."],
+    "common_mistakes_he": ["גז בלי העברת משקל", "משיכה חזקה בכידון"], "quality_score": 5, "quality_reason_he": "חמישה פרקים ותמלול מלא מאמתים את העיקרון והיישום; הסרטון כולל חסות.", "source_type": "experienced_rider", "contains_marketing": true
+  },
+  "jevfjCDOddA": {
+    "title_he": "מה לקחת למסע אופנוע וכיצד לארוז", "domain": "safety_recovery", "primary_category": "trip_preparation", "secondary_categories": ["fatigue_management"], "tags": ["luggage", "planning", "long_distance", "emergency_kit", "camping"],
+    "skill_level": "beginner", "risk_level": "low", "motorcycle_types": ["adventure", "touring"], "motorcycle_weight_classes": ["medium", "heavy"], "terrain_types": ["dirt", "gravel"], "road_conditions": ["highway"],
+    "summary_he": "סיור מפורט במטען למסע וקמפינג: תיק מיכל, מפות, חשמל, ביגוד, מזון, תיקים רכים, אוהל, ערכת צמיג, שינה ורצועות.",
+    "learning_points_he": ["לחלק ציוד לפי תדירות גישה", "לשמור תיקונים ומים נגישים", "לבחון כל פריט מול משקל, נפח וצורך אמיתי"],
+    "fit_for_he": "למתכנני מסע קמפינג ראשון שמבקשים נקודת התחלה לבניית רשימה אישית.", "why_watch_he": "שבעה־עשר פרקים מאפשרים לקפוץ לקטגוריה ולהשוות רשימה בלי להעתיק אותה בשלמות.",
+    "exercises_he": ["פרוס את כל הציוד והסר פריט שאינו משרת סיכון או צורך", "בצע לילה מבחן קרוב לבית"],
+    "equipment_he": ["תיקים מאובטחים", "ערכת צמיג", "מפה", "ערכת עזרה ראשונה"], "safety_warnings_he": ["אל תחרוג מעומס היצרן ואל תעמיס פריטים כבדים גבוה או רחוק מהמרכז."],
+    "common_mistakes_he": ["אריזת יתר", "ציוד חירום שקבור בתחתית"], "quality_score": 4, "quality_reason_he": "שבעה־עשר פרקים ותמלול מלא תומכים ברשימה; זהו ניסיון אישי עם מרצ'נדייז וקישורי שותפים.", "source_type": "experienced_rider", "contains_marketing": true
+  },
+  "OFWtuGVuA2I": {
+    "title_he": "כיוון בסיס מלא לאופנוע אדוונצ'ר", "domain": "mixed", "primary_category": "ergonomics", "secondary_categories": ["suspension_setup", "tires_setup", "controls_coordination"], "tags": ["controls_setup", "sag", "tire_pressure", "suspension", "ergonomics", "body_position"],
+    "skill_level": "advanced", "risk_level": "medium", "motorcycle_types": ["adventure", "dual_sport"], "motorcycle_weight_classes": ["medium", "heavy"], "terrain_types": ["dirt", "gravel"], "road_conditions": ["dry_pavement"],
+    "summary_he": "תהליך בסיס לכיוון שקיעה, כידון ומגביהים, פקדי רגל, תנוחה נמוכה וגבוהה, לחצי צמיג ומתלים לפני התאמה לבעיה ספציפית.",
+    "learning_points_he": ["ליצור הגדרת בסיס מתועדת לפני שיפור", "למדוד SAG עם העומס הרלוונטי", "לכוון פקדים כך שהם נגישים בישיבה ובעמידה"],
+    "fit_for_he": "לרוכבים מתקדמים או לטכנאי עם ספר הדגם, לפני שינוי אביזרים או מתלים.", "why_watch_he": "שלושה־עשר פרקים מסדרים את הכיוונים כתהליך ומצהירים שאין כיוון מושלם לכל שימוש.",
+    "exercises_he": ["תעד מצב נוכחי בתמונות ומדידות", "שנה רכיב אחד ובדוק במסלול קבוע"],
+    "equipment_he": ["ספר רכב", "כלי מדידה", "מפתח מומנט", "מד לחץ"], "safety_warnings_he": ["אין לשנות גובה מזלג, מתלים או פקדים מעבר לטווח היצרן ללא טכנאי מוסמך."],
+    "common_mistakes_he": ["שינויים מרובים יחד", "מגביהים כתחליף לתנוחה נכונה"], "quality_score": 5, "quality_reason_he": "שלושה־עשר פרקים ותמלול מלא תומכים בתהליך; הסרטון כולל חסות, Patreon וחנות.", "source_type": "training_channel", "contains_marketing": true
+  },
+  "vQo1kb3kL60": {
+    "title_he": "חמישה טיפים ראשונים לדרך חצץ", "domain": "offroad_adventure", "primary_category": "gravel_dirt", "secondary_categories": ["riding_position", "offroad_braking", "offroad_turning"], "tags": ["gravel", "beginner", "standing", "braking", "counterbalance", "relaxed_grip"],
+    "skill_level": "beginner", "risk_level": "medium", "motorcycle_types": ["adventure", "dual_sport"], "motorcycle_weight_classes": ["medium", "heavy"], "terrain_types": ["gravel", "dirt"], "road_conditions": [],
+    "summary_he": "מדריך למתחיל שמסביר מדוע חצץ מרגיש מתנדנד, כיצד לשמור קווים ישרים, לסמוך על הצמיג, לעמוד ולהטות את האופנוע מתחת לגוף.",
+    "learning_points_he": ["לקבל תנועה קלה של האופנוע בלי לתקן כל סטייה", "לבלום בקו ישר ככל האפשר", "לעמוד ולהשתמש בהטיה נגדית בפנייה"],
+    "fit_for_he": "לרוכבי אדוונצ'ר ביום החצץ הראשון, על דרך רחבה ורדודה ועם שותף.", "why_watch_he": "שבעת הפרקים מתייחסים לפחד מן התחושה המתנדנדת ומציגים התקדמות בקווים ישרים לפני פניות.",
+    "exercises_he": ["רכב קו ישר בחצץ רדוד בלי להדק ידיים", "בצע בלימה עדינה כשהאופנוע זקוף"],
+    "equipment_he": ["מיגון שטח", "מגפיים", "מגן מנוע", "שותף"], "safety_warnings_he": ["התחל במהירות נמוכה ובדרך ללא תנועה; נעילת גלגל אינה יעד לתרגול עצמאי."],
+    "common_mistakes_he": ["מתח בידיים", "בלימה כשהאופנוע מוטה"], "quality_score": 5, "quality_reason_he": "שבעה פרקים ותמלול מלא מספקים רצף מתחילים ברור; המקור כולל Patreon וקישורי שותפים.", "source_type": "experienced_rider", "contains_marketing": true
+  }
+}

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Serve an ephemeral 130/300-record acceptance fixture without changing production."""
+"""Serve an ephemeral 250/300-record acceptance fixture without changing production."""
 
 from __future__ import annotations
 
@@ -30,6 +30,7 @@ CONFIG_MODES = (
     "missing-logo",
     "empty-optionals",
     "unsafe-logo",
+    "broken-data",
 )
 FIXTURE_LOGO = """<svg xmlns="http://www.w3.org/2000/svg" width="96" height="96" viewBox="0 0 96 96" role="img" aria-label="לוגו בדיקת תצורה">
   <rect width="96" height="96" rx="20" fill="#173f35"/>
@@ -40,7 +41,7 @@ FIXTURE_LOGO = """<svg xmlns="http://www.w3.org/2000/svg" width="96" height="96"
 
 def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--count", type=positive_int, required=True, help="Ephemeral video count, normally 130 or 300")
+    parser.add_argument("--count", type=positive_int, required=True, help="Ephemeral video count, normally 250 or 300")
     parser.add_argument("--host", default="127.0.0.1", help="Bind address (default: 127.0.0.1)")
     parser.add_argument("--port", type=int, default=0, help="TCP port (default: 0, choose an available port)")
     parser.add_argument(
@@ -67,6 +68,10 @@ def prepare_site(root: Path, count: int, config_mode: str) -> None:
         encoding="utf-8",
     )
 
+    if config_mode == "broken-data":
+        (root / "data" / "videos.json").write_text("[]\n", encoding="utf-8")
+        return
+
     if config_mode == "production":
         return
     config_path = root / "data" / "site-config.json"
@@ -74,6 +79,10 @@ def prepare_site(root: Path, count: int, config_mode: str) -> None:
     config.update(
         {
             "site_name_he": "מדריך בדיקת תצורה",
+            "meta_title_he": "מדריך בדיקת תצורה",
+            "meta_description_he": "תיאור מטא מותאם לבדיקת קבלה מקומית.",
+            "og_title_he": "מדריך בדיקת תצורה",
+            "og_description_he": "תיאור Open Graph מותאם לבדיקת קבלה מקומית.",
             "author_name": "מחבר בדיקת קבלה",
             "community_name": "קהילת בדיקות מקומית",
             "contact": "",

@@ -1,0 +1,62 @@
+{
+  "generated_at": "2026-08-04T08:04:05Z",
+  "records": 130,
+  "internal_ids_unique": 130,
+  "youtube_ids_unique": 130,
+  "languages": {
+    "en": 119,
+    "he": 9,
+    "ja": 2
+  },
+  "domains": {
+    "mixed": 7,
+    "offroad_adventure": 50,
+    "practice": 12,
+    "road": 40,
+    "safety_recovery": 21
+  },
+  "primary_categories": {
+    "balance_slow_control": 5,
+    "controls_coordination": 3,
+    "descents": 6,
+    "drills": 2,
+    "electronic_aids": 2,
+    "emergency_braking": 3,
+    "ergonomics": 1,
+    "fatigue_management": 4,
+    "gravel_dirt": 5,
+    "hills": 5,
+    "lifting": 3,
+    "loose_rock": 2,
+    "mud_wet": 2,
+    "obstacles": 6,
+    "offroad_basics": 4,
+    "offroad_braking": 3,
+    "offroad_turning": 1,
+    "passenger_riding": 5,
+    "protective_gear": 1,
+    "recovery": 6,
+    "riding_position": 2,
+    "road_braking": 4,
+    "road_cornering": 11,
+    "road_strategy": 12,
+    "ruts": 3,
+    "sand": 7,
+    "solo_group_safety": 4,
+    "suspension_setup": 3,
+    "tires_setup": 2,
+    "trip_preparation": 2,
+    "u_turns_low_speed": 1,
+    "water_crossings": 4,
+    "wet_weather": 6
+  },
+  "channels_unique": 46,
+  "contains_marketing": 91,
+  "with_chapters": 82,
+  "chapters": 589.0,
+  "confidence": {
+    "high": 108,
+    "medium": 22
+  },
+  "source_sha256": "0566de2fff01721b0e8e3507d81fb3a83f691271a05aa229190618f83bdd27b2"
+}

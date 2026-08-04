@@ -1,0 +1,20 @@
+{
+  "status": "PASS",
+  "checked_at": "2026-08-04T15:50:00+03:00",
+  "browser_executable": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+  "url": "http://127.0.0.1:57503/",
+  "real_browser": true,
+  "headless": true,
+  "dom_bytes": 307009,
+  "checks": {
+    "browser_exit_zero": true,
+    "hebrew_rtl_document": true,
+    "configured_title": true,
+    "production_count_rendered": true,
+    "video_cards_rendered": true,
+    "eight_paths_rendered": true,
+    "no_eager_iframe": true,
+    "error_panel_hidden": true
+  },
+  "stderr_tail": ""
+}

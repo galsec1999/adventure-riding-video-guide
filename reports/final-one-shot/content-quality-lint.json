@@ -1,0 +1,2530 @@
+{
+  "status": "pass",
+  "policy": {
+    "summary_word_range": [
+      45,
+      100
+    ],
+    "near_duplicate_threshold": 0.88,
+    "allowed_languages": [
+      "he",
+      "en"
+    ],
+    "high_risk_evidence": "high confidence plus transcript or visual_review",
+    "audit_only": true
+  },
+  "stats": {
+    "videos": 250,
+    "unique_internal_ids": 250,
+    "unique_youtube_video_ids": 250,
+    "channels": 102,
+    "top_two_channel_share": 0.144,
+    "errors": 0,
+    "warnings": 249,
+    "findings": 249,
+    "findings_by_code": {
+      "summary.word_count": 249
+    }
+  },
+  "findings": [
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-UsOGqaTH3d0",
+      "field": "summary_he",
+      "message": "Summary has 18 words; expected 45-100",
+      "evidence": {
+        "word_count": 18
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-fqm0Oj9G8QU",
+      "field": "summary_he",
+      "message": "Summary has 17 words; expected 45-100",
+      "evidence": {
+        "word_count": 17
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-q58g03DSHIs",
+      "field": "summary_he",
+      "message": "Summary has 15 words; expected 45-100",
+      "evidence": {
+        "word_count": 15
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-GqfRGMw8gvQ",
+      "field": "summary_he",
+      "message": "Summary has 15 words; expected 45-100",
+      "evidence": {
+        "word_count": 15
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-RmOMjoe8G1g",
+      "field": "summary_he",
+      "message": "Summary has 16 words; expected 45-100",
+      "evidence": {
+        "word_count": 16
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt--rQwIXp4Zu8",
+      "field": "summary_he",
+      "message": "Summary has 16 words; expected 45-100",
+      "evidence": {
+        "word_count": 16
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt--XhyYOfp7zg",
+      "field": "summary_he",
+      "message": "Summary has 17 words; expected 45-100",
+      "evidence": {
+        "word_count": 17
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-PpjmdnYLqsU",
+      "field": "summary_he",
+      "message": "Summary has 16 words; expected 45-100",
+      "evidence": {
+        "word_count": 16
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-UuoceB8wp4Q",
+      "field": "summary_he",
+      "message": "Summary has 16 words; expected 45-100",
+      "evidence": {
+        "word_count": 16
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-UHkVHDFNUqU",
+      "field": "summary_he",
+      "message": "Summary has 15 words; expected 45-100",
+      "evidence": {
+        "word_count": 15
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-_yZRZN_X9sQ",
+      "field": "summary_he",
+      "message": "Summary has 15 words; expected 45-100",
+      "evidence": {
+        "word_count": 15
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-Ykxd14ynecQ",
+      "field": "summary_he",
+      "message": "Summary has 13 words; expected 45-100",
+      "evidence": {
+        "word_count": 13
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-EJNSrWDQYUY",
+      "field": "summary_he",
+      "message": "Summary has 14 words; expected 45-100",
+      "evidence": {
+        "word_count": 14
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-hN0vylh__lo",
+      "field": "summary_he",
+      "message": "Summary has 15 words; expected 45-100",
+      "evidence": {
+        "word_count": 15
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-7b5FPbTxfs8",
+      "field": "summary_he",
+      "message": "Summary has 17 words; expected 45-100",
+      "evidence": {
+        "word_count": 17
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-HevLOY3Bzdg",
+      "field": "summary_he",
+      "message": "Summary has 16 words; expected 45-100",
+      "evidence": {
+        "word_count": 16
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-sqWbMOZ4DOA",
+      "field": "summary_he",
+      "message": "Summary has 16 words; expected 45-100",
+      "evidence": {
+        "word_count": 16
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-dh_YkU5jE8E",
+      "field": "summary_he",
+      "message": "Summary has 16 words; expected 45-100",
+      "evidence": {
+        "word_count": 16
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-vWdFiGoTOBA",
+      "field": "summary_he",
+      "message": "Summary has 17 words; expected 45-100",
+      "evidence": {
+        "word_count": 17
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-rlcGpTJl16U",
+      "field": "summary_he",
+      "message": "Summary has 14 words; expected 45-100",
+      "evidence": {
+        "word_count": 14
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-7aNhswQC7tU",
+      "field": "summary_he",
+      "message": "Summary has 16 words; expected 45-100",
+      "evidence": {
+        "word_count": 16
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-eL4i6SmQbxU",
+      "field": "summary_he",
+      "message": "Summary has 15 words; expected 45-100",
+      "evidence": {
+        "word_count": 15
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-TDCajc6HYRE",
+      "field": "summary_he",
+      "message": "Summary has 16 words; expected 45-100",
+      "evidence": {
+        "word_count": 16
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-4RxEvSkgJdc",
+      "field": "summary_he",
+      "message": "Summary has 14 words; expected 45-100",
+      "evidence": {
+        "word_count": 14
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-h4hw5mEBxIE",
+      "field": "summary_he",
+      "message": "Summary has 16 words; expected 45-100",
+      "evidence": {
+        "word_count": 16
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-1cHdv7grbts",
+      "field": "summary_he",
+      "message": "Summary has 14 words; expected 45-100",
+      "evidence": {
+        "word_count": 14
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-Emksn0vHd6k",
+      "field": "summary_he",
+      "message": "Summary has 15 words; expected 45-100",
+      "evidence": {
+        "word_count": 15
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-jg9I-H_ZY2s",
+      "field": "summary_he",
+      "message": "Summary has 17 words; expected 45-100",
+      "evidence": {
+        "word_count": 17
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-lFGwRIP21OU",
+      "field": "summary_he",
+      "message": "Summary has 17 words; expected 45-100",
+      "evidence": {
+        "word_count": 17
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-Dtuy4qxkZ6M",
+      "field": "summary_he",
+      "message": "Summary has 15 words; expected 45-100",
+      "evidence": {
+        "word_count": 15
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-NVW3lk0_SKY",
+      "field": "summary_he",
+      "message": "Summary has 16 words; expected 45-100",
+      "evidence": {
+        "word_count": 16
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-18eqTsDfzDU",
+      "field": "summary_he",
+      "message": "Summary has 20 words; expected 45-100",
+      "evidence": {
+        "word_count": 20
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-1s4fDOyb3YA",
+      "field": "summary_he",
+      "message": "Summary has 15 words; expected 45-100",
+      "evidence": {
+        "word_count": 15
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-jHhRZLHA-cA",
+      "field": "summary_he",
+      "message": "Summary has 17 words; expected 45-100",
+      "evidence": {
+        "word_count": 17
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-7Ix1B9MjKOQ",
+      "field": "summary_he",
+      "message": "Summary has 14 words; expected 45-100",
+      "evidence": {
+        "word_count": 14
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-824lwgKbv-M",
+      "field": "summary_he",
+      "message": "Summary has 13 words; expected 45-100",
+      "evidence": {
+        "word_count": 13
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-doVLIwQbnWs",
+      "field": "summary_he",
+      "message": "Summary has 14 words; expected 45-100",
+      "evidence": {
+        "word_count": 14
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-ODaAhHgtM7w",
+      "field": "summary_he",
+      "message": "Summary has 15 words; expected 45-100",
+      "evidence": {
+        "word_count": 15
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-fuoYUYFNkGI",
+      "field": "summary_he",
+      "message": "Summary has 17 words; expected 45-100",
+      "evidence": {
+        "word_count": 17
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-M5ljhx0qTAM",
+      "field": "summary_he",
+      "message": "Summary has 17 words; expected 45-100",
+      "evidence": {
+        "word_count": 17
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-yBjN7N_n_Ww",
+      "field": "summary_he",
+      "message": "Summary has 15 words; expected 45-100",
+      "evidence": {
+        "word_count": 15
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-DY7OFizK_eo",
+      "field": "summary_he",
+      "message": "Summary has 17 words; expected 45-100",
+      "evidence": {
+        "word_count": 17
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-U1mSavQ_DXs",
+      "field": "summary_he",
+      "message": "Summary has 16 words; expected 45-100",
+      "evidence": {
+        "word_count": 16
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-y5vUZouBNgE",
+      "field": "summary_he",
+      "message": "Summary has 15 words; expected 45-100",
+      "evidence": {
+        "word_count": 15
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-CDACd-6_4E4",
+      "field": "summary_he",
+      "message": "Summary has 15 words; expected 45-100",
+      "evidence": {
+        "word_count": 15
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-4w9RHq5oohU",
+      "field": "summary_he",
+      "message": "Summary has 16 words; expected 45-100",
+      "evidence": {
+        "word_count": 16
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-_ej7WCZeFhQ",
+      "field": "summary_he",
+      "message": "Summary has 15 words; expected 45-100",
+      "evidence": {
+        "word_count": 15
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-0dGYLXIvoeg",
+      "field": "summary_he",
+      "message": "Summary has 15 words; expected 45-100",
+      "evidence": {
+        "word_count": 15
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-nsklKzXl2Ws",
+      "field": "summary_he",
+      "message": "Summary has 19 words; expected 45-100",
+      "evidence": {
+        "word_count": 19
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-njzovd5FuZU",
+      "field": "summary_he",
+      "message": "Summary has 14 words; expected 45-100",
+      "evidence": {
+        "word_count": 14
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-KmCPtVARyS0",
+      "field": "summary_he",
+      "message": "Summary has 14 words; expected 45-100",
+      "evidence": {
+        "word_count": 14
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-yE7N9ft_hMI",
+      "field": "summary_he",
+      "message": "Summary has 14 words; expected 45-100",
+      "evidence": {
+        "word_count": 14
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-2XP_qr9NNcc",
+      "field": "summary_he",
+      "message": "Summary has 14 words; expected 45-100",
+      "evidence": {
+        "word_count": 14
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-FQp-0v2ddQ0",
+      "field": "summary_he",
+      "message": "Summary has 17 words; expected 45-100",
+      "evidence": {
+        "word_count": 17
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-_fddOX-CZXI",
+      "field": "summary_he",
+      "message": "Summary has 15 words; expected 45-100",
+      "evidence": {
+        "word_count": 15
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-dRvofOL3eaI",
+      "field": "summary_he",
+      "message": "Summary has 14 words; expected 45-100",
+      "evidence": {
+        "word_count": 14
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-45iv6pdogLo",
+      "field": "summary_he",
+      "message": "Summary has 14 words; expected 45-100",
+      "evidence": {
+        "word_count": 14
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-2ng4QS_nGKM",
+      "field": "summary_he",
+      "message": "Summary has 14 words; expected 45-100",
+      "evidence": {
+        "word_count": 14
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-Dv8cfbJ09Uw",
+      "field": "summary_he",
+      "message": "Summary has 19 words; expected 45-100",
+      "evidence": {
+        "word_count": 19
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-WkeMWUDkqgc",
+      "field": "summary_he",
+      "message": "Summary has 19 words; expected 45-100",
+      "evidence": {
+        "word_count": 19
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-OrPiMSJWZ5o",
+      "field": "summary_he",
+      "message": "Summary has 22 words; expected 45-100",
+      "evidence": {
+        "word_count": 22
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-CD8zbN_lpHQ",
+      "field": "summary_he",
+      "message": "Summary has 23 words; expected 45-100",
+      "evidence": {
+        "word_count": 23
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-py2_NwJCzN0",
+      "field": "summary_he",
+      "message": "Summary has 19 words; expected 45-100",
+      "evidence": {
+        "word_count": 19
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-Z4G8NxyI4I8",
+      "field": "summary_he",
+      "message": "Summary has 21 words; expected 45-100",
+      "evidence": {
+        "word_count": 21
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-9og820RWDao",
+      "field": "summary_he",
+      "message": "Summary has 21 words; expected 45-100",
+      "evidence": {
+        "word_count": 21
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-T-NlEZr1-ws",
+      "field": "summary_he",
+      "message": "Summary has 16 words; expected 45-100",
+      "evidence": {
+        "word_count": 16
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-Fo75lHpLBOM",
+      "field": "summary_he",
+      "message": "Summary has 19 words; expected 45-100",
+      "evidence": {
+        "word_count": 19
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-AVbt7M2xHQ4",
+      "field": "summary_he",
+      "message": "Summary has 18 words; expected 45-100",
+      "evidence": {
+        "word_count": 18
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-SXJZ_kYGLRY",
+      "field": "summary_he",
+      "message": "Summary has 20 words; expected 45-100",
+      "evidence": {
+        "word_count": 20
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-yRY9-sKUUZ4",
+      "field": "summary_he",
+      "message": "Summary has 21 words; expected 45-100",
+      "evidence": {
+        "word_count": 21
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-oOD9NnTevH0",
+      "field": "summary_he",
+      "message": "Summary has 18 words; expected 45-100",
+      "evidence": {
+        "word_count": 18
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-fPBC3-rB994",
+      "field": "summary_he",
+      "message": "Summary has 21 words; expected 45-100",
+      "evidence": {
+        "word_count": 21
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-CI6h7XtyINY",
+      "field": "summary_he",
+      "message": "Summary has 23 words; expected 45-100",
+      "evidence": {
+        "word_count": 23
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-iLqs-fA7RRk",
+      "field": "summary_he",
+      "message": "Summary has 17 words; expected 45-100",
+      "evidence": {
+        "word_count": 17
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-QQfz2G4E1zo",
+      "field": "summary_he",
+      "message": "Summary has 18 words; expected 45-100",
+      "evidence": {
+        "word_count": 18
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-187PCpqGp74",
+      "field": "summary_he",
+      "message": "Summary has 19 words; expected 45-100",
+      "evidence": {
+        "word_count": 19
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-gOsYp0-dBuc",
+      "field": "summary_he",
+      "message": "Summary has 17 words; expected 45-100",
+      "evidence": {
+        "word_count": 17
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-fzzstihkRXI",
+      "field": "summary_he",
+      "message": "Summary has 20 words; expected 45-100",
+      "evidence": {
+        "word_count": 20
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-ZGS_MoW7yps",
+      "field": "summary_he",
+      "message": "Summary has 24 words; expected 45-100",
+      "evidence": {
+        "word_count": 24
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-x2Jy7TEAv7o",
+      "field": "summary_he",
+      "message": "Summary has 19 words; expected 45-100",
+      "evidence": {
+        "word_count": 19
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-2xksIqgdFaU",
+      "field": "summary_he",
+      "message": "Summary has 22 words; expected 45-100",
+      "evidence": {
+        "word_count": 22
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-ltq3ZbQlh-M",
+      "field": "summary_he",
+      "message": "Summary has 18 words; expected 45-100",
+      "evidence": {
+        "word_count": 18
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-c8_2rRxXmAc",
+      "field": "summary_he",
+      "message": "Summary has 21 words; expected 45-100",
+      "evidence": {
+        "word_count": 21
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-Q_XbCeHBkt4",
+      "field": "summary_he",
+      "message": "Summary has 21 words; expected 45-100",
+      "evidence": {
+        "word_count": 21
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-qrPj0Tr1r74",
+      "field": "summary_he",
+      "message": "Summary has 19 words; expected 45-100",
+      "evidence": {
+        "word_count": 19
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-soVOMETfYPA",
+      "field": "summary_he",
+      "message": "Summary has 20 words; expected 45-100",
+      "evidence": {
+        "word_count": 20
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-60isWQSlMg0",
+      "field": "summary_he",
+      "message": "Summary has 19 words; expected 45-100",
+      "evidence": {
+        "word_count": 19
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-_ZH6lgTmpCs",
+      "field": "summary_he",
+      "message": "Summary has 21 words; expected 45-100",
+      "evidence": {
+        "word_count": 21
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-wu01iLFdTE0",
+      "field": "summary_he",
+      "message": "Summary has 22 words; expected 45-100",
+      "evidence": {
+        "word_count": 22
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-uvPpdzE1ZZ0",
+      "field": "summary_he",
+      "message": "Summary has 22 words; expected 45-100",
+      "evidence": {
+        "word_count": 22
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-zVxVAUB8n78",
+      "field": "summary_he",
+      "message": "Summary has 20 words; expected 45-100",
+      "evidence": {
+        "word_count": 20
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-IS2mLzMgals",
+      "field": "summary_he",
+      "message": "Summary has 18 words; expected 45-100",
+      "evidence": {
+        "word_count": 18
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-wdESPaOqd8I",
+      "field": "summary_he",
+      "message": "Summary has 20 words; expected 45-100",
+      "evidence": {
+        "word_count": 20
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-LCYXUCRHzww",
+      "field": "summary_he",
+      "message": "Summary has 19 words; expected 45-100",
+      "evidence": {
+        "word_count": 19
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-NN1twMtJrlA",
+      "field": "summary_he",
+      "message": "Summary has 19 words; expected 45-100",
+      "evidence": {
+        "word_count": 19
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-fl9mfnpJ1wo",
+      "field": "summary_he",
+      "message": "Summary has 19 words; expected 45-100",
+      "evidence": {
+        "word_count": 19
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-PtRYyP96HHA",
+      "field": "summary_he",
+      "message": "Summary has 20 words; expected 45-100",
+      "evidence": {
+        "word_count": 20
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-U64nD-GHkik",
+      "field": "summary_he",
+      "message": "Summary has 18 words; expected 45-100",
+      "evidence": {
+        "word_count": 18
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-glxMLJ1A6rk",
+      "field": "summary_he",
+      "message": "Summary has 20 words; expected 45-100",
+      "evidence": {
+        "word_count": 20
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-PLH1U7SnnZA",
+      "field": "summary_he",
+      "message": "Summary has 17 words; expected 45-100",
+      "evidence": {
+        "word_count": 17
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-HxJPOQ_4L18",
+      "field": "summary_he",
+      "message": "Summary has 18 words; expected 45-100",
+      "evidence": {
+        "word_count": 18
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-SQhttXPPOsU",
+      "field": "summary_he",
+      "message": "Summary has 20 words; expected 45-100",
+      "evidence": {
+        "word_count": 20
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-PCrh2Jp0w_8",
+      "field": "summary_he",
+      "message": "Summary has 20 words; expected 45-100",
+      "evidence": {
+        "word_count": 20
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-aAybwTYH8YY",
+      "field": "summary_he",
+      "message": "Summary has 17 words; expected 45-100",
+      "evidence": {
+        "word_count": 17
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-VFZoZLMZGqQ",
+      "field": "summary_he",
+      "message": "Summary has 20 words; expected 45-100",
+      "evidence": {
+        "word_count": 20
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-nIBaSEVtkoM",
+      "field": "summary_he",
+      "message": "Summary has 19 words; expected 45-100",
+      "evidence": {
+        "word_count": 19
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-rntIL0OFaBE",
+      "field": "summary_he",
+      "message": "Summary has 18 words; expected 45-100",
+      "evidence": {
+        "word_count": 18
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-HGU8gAIq9ME",
+      "field": "summary_he",
+      "message": "Summary has 19 words; expected 45-100",
+      "evidence": {
+        "word_count": 19
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-iAtMCkCzmOE",
+      "field": "summary_he",
+      "message": "Summary has 22 words; expected 45-100",
+      "evidence": {
+        "word_count": 22
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-wSHXslQGg9A",
+      "field": "summary_he",
+      "message": "Summary has 21 words; expected 45-100",
+      "evidence": {
+        "word_count": 21
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-LWeMd7FBctk",
+      "field": "summary_he",
+      "message": "Summary has 19 words; expected 45-100",
+      "evidence": {
+        "word_count": 19
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-3J_iwYsggGM",
+      "field": "summary_he",
+      "message": "Summary has 22 words; expected 45-100",
+      "evidence": {
+        "word_count": 22
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-HbeehN-Ustk",
+      "field": "summary_he",
+      "message": "Summary has 21 words; expected 45-100",
+      "evidence": {
+        "word_count": 21
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-H7osB9Apaq8",
+      "field": "summary_he",
+      "message": "Summary has 22 words; expected 45-100",
+      "evidence": {
+        "word_count": 22
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-QXl542xFnhU",
+      "field": "summary_he",
+      "message": "Summary has 22 words; expected 45-100",
+      "evidence": {
+        "word_count": 22
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-CCCl2KBpP5g",
+      "field": "summary_he",
+      "message": "Summary has 23 words; expected 45-100",
+      "evidence": {
+        "word_count": 23
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-sJg_rAPp0Rg",
+      "field": "summary_he",
+      "message": "Summary has 21 words; expected 45-100",
+      "evidence": {
+        "word_count": 21
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-zsKLdi_nYYQ",
+      "field": "summary_he",
+      "message": "Summary has 22 words; expected 45-100",
+      "evidence": {
+        "word_count": 22
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-_zQoFML9xPk",
+      "field": "summary_he",
+      "message": "Summary has 22 words; expected 45-100",
+      "evidence": {
+        "word_count": 22
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-oW7eVgdCC58",
+      "field": "summary_he",
+      "message": "Summary has 21 words; expected 45-100",
+      "evidence": {
+        "word_count": 21
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-YlseO0ceUcw",
+      "field": "summary_he",
+      "message": "Summary has 23 words; expected 45-100",
+      "evidence": {
+        "word_count": 23
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-dPmq8jpUL5s",
+      "field": "summary_he",
+      "message": "Summary has 24 words; expected 45-100",
+      "evidence": {
+        "word_count": 24
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-KC0Rv0aM7OI",
+      "field": "summary_he",
+      "message": "Summary has 23 words; expected 45-100",
+      "evidence": {
+        "word_count": 23
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-uscjPZXNyMc",
+      "field": "summary_he",
+      "message": "Summary has 21 words; expected 45-100",
+      "evidence": {
+        "word_count": 21
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-3nwR3t6-Ftg",
+      "field": "summary_he",
+      "message": "Summary has 39 words; expected 45-100",
+      "evidence": {
+        "word_count": 39
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-lYBhzHlFmNU",
+      "field": "summary_he",
+      "message": "Summary has 42 words; expected 45-100",
+      "evidence": {
+        "word_count": 42
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-HWNbjhnBTMM",
+      "field": "summary_he",
+      "message": "Summary has 40 words; expected 45-100",
+      "evidence": {
+        "word_count": 40
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-GqUgDGd04XE",
+      "field": "summary_he",
+      "message": "Summary has 38 words; expected 45-100",
+      "evidence": {
+        "word_count": 38
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-6ynYOU6NQW4",
+      "field": "summary_he",
+      "message": "Summary has 42 words; expected 45-100",
+      "evidence": {
+        "word_count": 42
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-i7vcL3L7750",
+      "field": "summary_he",
+      "message": "Summary has 40 words; expected 45-100",
+      "evidence": {
+        "word_count": 40
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-CsCvU1qOAag",
+      "field": "summary_he",
+      "message": "Summary has 40 words; expected 45-100",
+      "evidence": {
+        "word_count": 40
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-GwXb1oEWeMY",
+      "field": "summary_he",
+      "message": "Summary has 38 words; expected 45-100",
+      "evidence": {
+        "word_count": 38
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-l_vLv-Fds5g",
+      "field": "summary_he",
+      "message": "Summary has 44 words; expected 45-100",
+      "evidence": {
+        "word_count": 44
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-Qx6G0gkQ048",
+      "field": "summary_he",
+      "message": "Summary has 39 words; expected 45-100",
+      "evidence": {
+        "word_count": 39
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-EPkNtdXkWpY",
+      "field": "summary_he",
+      "message": "Summary has 34 words; expected 45-100",
+      "evidence": {
+        "word_count": 34
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-qt262cjyWAc",
+      "field": "summary_he",
+      "message": "Summary has 39 words; expected 45-100",
+      "evidence": {
+        "word_count": 39
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-vHoAoVHkS64",
+      "field": "summary_he",
+      "message": "Summary has 41 words; expected 45-100",
+      "evidence": {
+        "word_count": 41
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-dF9KY2w7dmY",
+      "field": "summary_he",
+      "message": "Summary has 43 words; expected 45-100",
+      "evidence": {
+        "word_count": 43
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-dBdoSMm5N5s",
+      "field": "summary_he",
+      "message": "Summary has 42 words; expected 45-100",
+      "evidence": {
+        "word_count": 42
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-FUoXWECH40A",
+      "field": "summary_he",
+      "message": "Summary has 42 words; expected 45-100",
+      "evidence": {
+        "word_count": 42
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-YH48E19KF8o",
+      "field": "summary_he",
+      "message": "Summary has 42 words; expected 45-100",
+      "evidence": {
+        "word_count": 42
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-kYZQaPo2R7Q",
+      "field": "summary_he",
+      "message": "Summary has 37 words; expected 45-100",
+      "evidence": {
+        "word_count": 37
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-domdIpzNKbc",
+      "field": "summary_he",
+      "message": "Summary has 39 words; expected 45-100",
+      "evidence": {
+        "word_count": 39
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-SoxnKw9sv_0",
+      "field": "summary_he",
+      "message": "Summary has 42 words; expected 45-100",
+      "evidence": {
+        "word_count": 42
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-3uttfaaeYrA",
+      "field": "summary_he",
+      "message": "Summary has 43 words; expected 45-100",
+      "evidence": {
+        "word_count": 43
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-_5-fh-qmqMg",
+      "field": "summary_he",
+      "message": "Summary has 17 words; expected 45-100",
+      "evidence": {
+        "word_count": 17
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-bJkK-Z0eDq0",
+      "field": "summary_he",
+      "message": "Summary has 18 words; expected 45-100",
+      "evidence": {
+        "word_count": 18
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-hDX4TBsPKLU",
+      "field": "summary_he",
+      "message": "Summary has 20 words; expected 45-100",
+      "evidence": {
+        "word_count": 20
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-6hgkx7ZScqY",
+      "field": "summary_he",
+      "message": "Summary has 17 words; expected 45-100",
+      "evidence": {
+        "word_count": 17
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-sfNLSVghgRA",
+      "field": "summary_he",
+      "message": "Summary has 17 words; expected 45-100",
+      "evidence": {
+        "word_count": 17
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-eiRMikxU3Z4",
+      "field": "summary_he",
+      "message": "Summary has 18 words; expected 45-100",
+      "evidence": {
+        "word_count": 18
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-lP9Z1aw776A",
+      "field": "summary_he",
+      "message": "Summary has 20 words; expected 45-100",
+      "evidence": {
+        "word_count": 20
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt--blfunHiGzg",
+      "field": "summary_he",
+      "message": "Summary has 17 words; expected 45-100",
+      "evidence": {
+        "word_count": 17
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-5CfJENGn07s",
+      "field": "summary_he",
+      "message": "Summary has 19 words; expected 45-100",
+      "evidence": {
+        "word_count": 19
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-sWj02x9PYdw",
+      "field": "summary_he",
+      "message": "Summary has 18 words; expected 45-100",
+      "evidence": {
+        "word_count": 18
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-bYIzeyCubcw",
+      "field": "summary_he",
+      "message": "Summary has 17 words; expected 45-100",
+      "evidence": {
+        "word_count": 17
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-UILe5YDA4B8",
+      "field": "summary_he",
+      "message": "Summary has 19 words; expected 45-100",
+      "evidence": {
+        "word_count": 19
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-6yE85BVYNKY",
+      "field": "summary_he",
+      "message": "Summary has 16 words; expected 45-100",
+      "evidence": {
+        "word_count": 16
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-eqbeqc2xeBc",
+      "field": "summary_he",
+      "message": "Summary has 19 words; expected 45-100",
+      "evidence": {
+        "word_count": 19
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt--_a3Hk4Jeg8",
+      "field": "summary_he",
+      "message": "Summary has 18 words; expected 45-100",
+      "evidence": {
+        "word_count": 18
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-gJH1pn4Cq68",
+      "field": "summary_he",
+      "message": "Summary has 15 words; expected 45-100",
+      "evidence": {
+        "word_count": 15
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-n13PAgtjaz0",
+      "field": "summary_he",
+      "message": "Summary has 17 words; expected 45-100",
+      "evidence": {
+        "word_count": 17
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-ko70RgiF5OQ",
+      "field": "summary_he",
+      "message": "Summary has 20 words; expected 45-100",
+      "evidence": {
+        "word_count": 20
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-aDybIOOaYzM",
+      "field": "summary_he",
+      "message": "Summary has 18 words; expected 45-100",
+      "evidence": {
+        "word_count": 18
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-8RC4KpQmSBY",
+      "field": "summary_he",
+      "message": "Summary has 18 words; expected 45-100",
+      "evidence": {
+        "word_count": 18
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-JN8c-OWRPkY",
+      "field": "summary_he",
+      "message": "Summary has 20 words; expected 45-100",
+      "evidence": {
+        "word_count": 20
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt--4MAlj_S52Q",
+      "field": "summary_he",
+      "message": "Summary has 18 words; expected 45-100",
+      "evidence": {
+        "word_count": 18
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-8RsJvOk1FvQ",
+      "field": "summary_he",
+      "message": "Summary has 17 words; expected 45-100",
+      "evidence": {
+        "word_count": 17
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-PMtBYt19pD4",
+      "field": "summary_he",
+      "message": "Summary has 19 words; expected 45-100",
+      "evidence": {
+        "word_count": 19
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-hVnR2QeRxTI",
+      "field": "summary_he",
+      "message": "Summary has 19 words; expected 45-100",
+      "evidence": {
+        "word_count": 19
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-M6d1cWB-4gY",
+      "field": "summary_he",
+      "message": "Summary has 19 words; expected 45-100",
+      "evidence": {
+        "word_count": 19
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-ShWc7D5HllY",
+      "field": "summary_he",
+      "message": "Summary has 18 words; expected 45-100",
+      "evidence": {
+        "word_count": 18
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-NWHX807Xq9Y",
+      "field": "summary_he",
+      "message": "Summary has 18 words; expected 45-100",
+      "evidence": {
+        "word_count": 18
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-wsokPULhmv0",
+      "field": "summary_he",
+      "message": "Summary has 18 words; expected 45-100",
+      "evidence": {
+        "word_count": 18
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-bO88ooYOLhw",
+      "field": "summary_he",
+      "message": "Summary has 20 words; expected 45-100",
+      "evidence": {
+        "word_count": 20
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-0Llcyhyh8vY",
+      "field": "summary_he",
+      "message": "Summary has 17 words; expected 45-100",
+      "evidence": {
+        "word_count": 17
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-9hgXMIY4cbc",
+      "field": "summary_he",
+      "message": "Summary has 18 words; expected 45-100",
+      "evidence": {
+        "word_count": 18
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-FNLUBBMypmI",
+      "field": "summary_he",
+      "message": "Summary has 17 words; expected 45-100",
+      "evidence": {
+        "word_count": 17
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-5pUSer1l8jI",
+      "field": "summary_he",
+      "message": "Summary has 21 words; expected 45-100",
+      "evidence": {
+        "word_count": 21
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-Z4z0mCP8UPk",
+      "field": "summary_he",
+      "message": "Summary has 16 words; expected 45-100",
+      "evidence": {
+        "word_count": 16
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-iw9zeS0wLW8",
+      "field": "summary_he",
+      "message": "Summary has 17 words; expected 45-100",
+      "evidence": {
+        "word_count": 17
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-MwZSi-LHWuw",
+      "field": "summary_he",
+      "message": "Summary has 19 words; expected 45-100",
+      "evidence": {
+        "word_count": 19
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-51gsYMB2beQ",
+      "field": "summary_he",
+      "message": "Summary has 16 words; expected 45-100",
+      "evidence": {
+        "word_count": 16
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-SpEl45M02sI",
+      "field": "summary_he",
+      "message": "Summary has 16 words; expected 45-100",
+      "evidence": {
+        "word_count": 16
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-Rmd7mV_a_i8",
+      "field": "summary_he",
+      "message": "Summary has 18 words; expected 45-100",
+      "evidence": {
+        "word_count": 18
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-fm88yhrX9bk",
+      "field": "summary_he",
+      "message": "Summary has 16 words; expected 45-100",
+      "evidence": {
+        "word_count": 16
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-lcauMhznleg",
+      "field": "summary_he",
+      "message": "Summary has 19 words; expected 45-100",
+      "evidence": {
+        "word_count": 19
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-k6mUJ309W3k",
+      "field": "summary_he",
+      "message": "Summary has 18 words; expected 45-100",
+      "evidence": {
+        "word_count": 18
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-y1_j_49as9s",
+      "field": "summary_he",
+      "message": "Summary has 15 words; expected 45-100",
+      "evidence": {
+        "word_count": 15
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-3QNTu2pzRfg",
+      "field": "summary_he",
+      "message": "Summary has 18 words; expected 45-100",
+      "evidence": {
+        "word_count": 18
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-5S4fHLYnjgM",
+      "field": "summary_he",
+      "message": "Summary has 18 words; expected 45-100",
+      "evidence": {
+        "word_count": 18
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-5uiMlyOgjjg",
+      "field": "summary_he",
+      "message": "Summary has 18 words; expected 45-100",
+      "evidence": {
+        "word_count": 18
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-vFRDMa7gwIU",
+      "field": "summary_he",
+      "message": "Summary has 16 words; expected 45-100",
+      "evidence": {
+        "word_count": 16
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-eTBshYyXrW0",
+      "field": "summary_he",
+      "message": "Summary has 19 words; expected 45-100",
+      "evidence": {
+        "word_count": 19
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-i1eqhcPC6g8",
+      "field": "summary_he",
+      "message": "Summary has 20 words; expected 45-100",
+      "evidence": {
+        "word_count": 20
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-ZCCxERsvQdw",
+      "field": "summary_he",
+      "message": "Summary has 18 words; expected 45-100",
+      "evidence": {
+        "word_count": 18
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-oZiD8uxH0hQ",
+      "field": "summary_he",
+      "message": "Summary has 20 words; expected 45-100",
+      "evidence": {
+        "word_count": 20
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-ov7AqO_51iI",
+      "field": "summary_he",
+      "message": "Summary has 19 words; expected 45-100",
+      "evidence": {
+        "word_count": 19
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-h5YrGuIGgVI",
+      "field": "summary_he",
+      "message": "Summary has 21 words; expected 45-100",
+      "evidence": {
+        "word_count": 21
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-6tlSdNGLPkY",
+      "field": "summary_he",
+      "message": "Summary has 17 words; expected 45-100",
+      "evidence": {
+        "word_count": 17
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-HlZvuK_3kPQ",
+      "field": "summary_he",
+      "message": "Summary has 17 words; expected 45-100",
+      "evidence": {
+        "word_count": 17
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-bQws3UL3lSc",
+      "field": "summary_he",
+      "message": "Summary has 19 words; expected 45-100",
+      "evidence": {
+        "word_count": 19
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-2HTa9iHvI6U",
+      "field": "summary_he",
+      "message": "Summary has 17 words; expected 45-100",
+      "evidence": {
+        "word_count": 17
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-1LVSrs4HucI",
+      "field": "summary_he",
+      "message": "Summary has 17 words; expected 45-100",
+      "evidence": {
+        "word_count": 17
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-S36MgsVsHsA",
+      "field": "summary_he",
+      "message": "Summary has 18 words; expected 45-100",
+      "evidence": {
+        "word_count": 18
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-GerHAGwhX9k",
+      "field": "summary_he",
+      "message": "Summary has 20 words; expected 45-100",
+      "evidence": {
+        "word_count": 20
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-LvmXbZlf6M8",
+      "field": "summary_he",
+      "message": "Summary has 20 words; expected 45-100",
+      "evidence": {
+        "word_count": 20
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-6VjSNKBobko",
+      "field": "summary_he",
+      "message": "Summary has 18 words; expected 45-100",
+      "evidence": {
+        "word_count": 18
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-x10WJdhm0wU",
+      "field": "summary_he",
+      "message": "Summary has 19 words; expected 45-100",
+      "evidence": {
+        "word_count": 19
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-uT-staOOo9w",
+      "field": "summary_he",
+      "message": "Summary has 17 words; expected 45-100",
+      "evidence": {
+        "word_count": 17
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-CXMqS_gMOS0",
+      "field": "summary_he",
+      "message": "Summary has 16 words; expected 45-100",
+      "evidence": {
+        "word_count": 16
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-3tSkUdUYaA4",
+      "field": "summary_he",
+      "message": "Summary has 19 words; expected 45-100",
+      "evidence": {
+        "word_count": 19
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-UbemLevjCHw",
+      "field": "summary_he",
+      "message": "Summary has 19 words; expected 45-100",
+      "evidence": {
+        "word_count": 19
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-dWkoJmTyrtI",
+      "field": "summary_he",
+      "message": "Summary has 20 words; expected 45-100",
+      "evidence": {
+        "word_count": 20
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-46iiFjZUEUA",
+      "field": "summary_he",
+      "message": "Summary has 20 words; expected 45-100",
+      "evidence": {
+        "word_count": 20
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-J0ijNI0HhFA",
+      "field": "summary_he",
+      "message": "Summary has 17 words; expected 45-100",
+      "evidence": {
+        "word_count": 17
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-nM4y8J-5ZCA",
+      "field": "summary_he",
+      "message": "Summary has 17 words; expected 45-100",
+      "evidence": {
+        "word_count": 17
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-XgPpLKCUlbA",
+      "field": "summary_he",
+      "message": "Summary has 17 words; expected 45-100",
+      "evidence": {
+        "word_count": 17
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-vVBdOqqKt-A",
+      "field": "summary_he",
+      "message": "Summary has 15 words; expected 45-100",
+      "evidence": {
+        "word_count": 15
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-_4KinOAw74Q",
+      "field": "summary_he",
+      "message": "Summary has 17 words; expected 45-100",
+      "evidence": {
+        "word_count": 17
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-VKCEzq_fUNg",
+      "field": "summary_he",
+      "message": "Summary has 17 words; expected 45-100",
+      "evidence": {
+        "word_count": 17
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-bYhY-nzJnqY",
+      "field": "summary_he",
+      "message": "Summary has 19 words; expected 45-100",
+      "evidence": {
+        "word_count": 19
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-6_VlZuPDOSM",
+      "field": "summary_he",
+      "message": "Summary has 16 words; expected 45-100",
+      "evidence": {
+        "word_count": 16
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-tkQ-s7PI5Ds",
+      "field": "summary_he",
+      "message": "Summary has 18 words; expected 45-100",
+      "evidence": {
+        "word_count": 18
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-qwK6pdXY7rw",
+      "field": "summary_he",
+      "message": "Summary has 20 words; expected 45-100",
+      "evidence": {
+        "word_count": 20
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-FCTnaF_aZP0",
+      "field": "summary_he",
+      "message": "Summary has 17 words; expected 45-100",
+      "evidence": {
+        "word_count": 17
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-MBS_7UeiXnQ",
+      "field": "summary_he",
+      "message": "Summary has 19 words; expected 45-100",
+      "evidence": {
+        "word_count": 19
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-zMuVNBk9Ogw",
+      "field": "summary_he",
+      "message": "Summary has 18 words; expected 45-100",
+      "evidence": {
+        "word_count": 18
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-6IybZ8hvuDk",
+      "field": "summary_he",
+      "message": "Summary has 20 words; expected 45-100",
+      "evidence": {
+        "word_count": 20
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-KRgG21OBjcE",
+      "field": "summary_he",
+      "message": "Summary has 18 words; expected 45-100",
+      "evidence": {
+        "word_count": 18
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-vfOO-xV02vo",
+      "field": "summary_he",
+      "message": "Summary has 16 words; expected 45-100",
+      "evidence": {
+        "word_count": 16
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-DW0GVIvub44",
+      "field": "summary_he",
+      "message": "Summary has 19 words; expected 45-100",
+      "evidence": {
+        "word_count": 19
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-wrklB5UMWOU",
+      "field": "summary_he",
+      "message": "Summary has 23 words; expected 45-100",
+      "evidence": {
+        "word_count": 23
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-jevfjCDOddA",
+      "field": "summary_he",
+      "message": "Summary has 18 words; expected 45-100",
+      "evidence": {
+        "word_count": 18
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-OFWtuGVuA2I",
+      "field": "summary_he",
+      "message": "Summary has 18 words; expected 45-100",
+      "evidence": {
+        "word_count": 18
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-vQo1kb3kL60",
+      "field": "summary_he",
+      "message": "Summary has 20 words; expected 45-100",
+      "evidence": {
+        "word_count": 20
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-AWd4shge0qc",
+      "field": "summary_he",
+      "message": "Summary has 17 words; expected 45-100",
+      "evidence": {
+        "word_count": 17
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-rmWQKoN6yX0",
+      "field": "summary_he",
+      "message": "Summary has 18 words; expected 45-100",
+      "evidence": {
+        "word_count": 18
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-Kt3mVmoityo",
+      "field": "summary_he",
+      "message": "Summary has 17 words; expected 45-100",
+      "evidence": {
+        "word_count": 17
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-TujQZ4bRgjQ",
+      "field": "summary_he",
+      "message": "Summary has 18 words; expected 45-100",
+      "evidence": {
+        "word_count": 18
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-kInjwfYnVYU",
+      "field": "summary_he",
+      "message": "Summary has 18 words; expected 45-100",
+      "evidence": {
+        "word_count": 18
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-tNUbI03Pw4I",
+      "field": "summary_he",
+      "message": "Summary has 20 words; expected 45-100",
+      "evidence": {
+        "word_count": 20
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-n5d2muv5OtE",
+      "field": "summary_he",
+      "message": "Summary has 17 words; expected 45-100",
+      "evidence": {
+        "word_count": 17
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-mCIxtcnmeYQ",
+      "field": "summary_he",
+      "message": "Summary has 20 words; expected 45-100",
+      "evidence": {
+        "word_count": 20
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-RQBTnhHzthU",
+      "field": "summary_he",
+      "message": "Summary has 19 words; expected 45-100",
+      "evidence": {
+        "word_count": 19
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-pNDdOJsAslg",
+      "field": "summary_he",
+      "message": "Summary has 17 words; expected 45-100",
+      "evidence": {
+        "word_count": 17
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-DhtzQXjS8kA",
+      "field": "summary_he",
+      "message": "Summary has 21 words; expected 45-100",
+      "evidence": {
+        "word_count": 21
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-_FzURX3rpyM",
+      "field": "summary_he",
+      "message": "Summary has 21 words; expected 45-100",
+      "evidence": {
+        "word_count": 21
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "summary.word_count",
+      "record_id": "yt-eqcDXVEtW9Q",
+      "field": "summary_he",
+      "message": "Summary has 17 words; expected 45-100",
+      "evidence": {
+        "word_count": 17
+      }
+    }
+  ],
+  "generated_at": "2026-08-04T10:53:08.328140+00:00",
+  "source": {
+    "videos_path": "D:\\Michael2015\\אופנוע\\Adventure-Riding-Video-Guide-Starter\\data\\videos.json",
+    "videos_sha256_before": "fe4404cba2444255fd04bcdb37eb2c0b8864a0fa8c15b11c7e468d81c9f30c06",
+    "videos_sha256_after": "fe4404cba2444255fd04bcdb37eb2c0b8864a0fa8c15b11c7e468d81c9f30c06",
+    "unchanged": true,
+    "ledger_path": "D:\\Michael2015\\אופנוע\\Adventure-Riding-Video-Guide-Starter\\research\\final-one-shot\\evidence-ledger.csv",
+    "ledger_present": true
+  }
+}

@@ -1,0 +1,4 @@
+Fetched: 130/130
+Failed: 0
+Mismatches: 1
+Report: reports\final-one-shot\existing-youtube-audit.json

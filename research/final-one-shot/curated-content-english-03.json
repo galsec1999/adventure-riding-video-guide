@@ -1,0 +1,145 @@
+{
+  "ShWc7D5HllY": {
+    "title_he": "בלימה לתוך פנייה בשלוש דקות", "domain": "road", "primary_category": "road_cornering", "secondary_categories": ["road_braking"], "tags": ["trail_braking", "front_brake", "lean", "traction", "cornering"],
+    "skill_level": "intermediate", "risk_level": "high", "motorcycle_types": ["street", "sport_touring", "touring"], "motorcycle_weight_classes": ["general"], "terrain_types": [], "road_conditions": ["dry_pavement"],
+    "summary_he": "מאמן מסביר בלימה מדורגת אל תוך הפנייה כניהול עומס הצמיג הקדמי, עם הפחתת לחץ ככל שמתווספת זווית הטיה.",
+    "learning_points_he": ["להיכנס לפנייה כשהקדמי טעון באופן צפוי", "להפחית נקודות בלימה ככל שמוסיפים נקודות הטיה", "להתחיל בתרגול זעיר ורחוק ממגבלת האחיזה"],
+    "fit_for_he": "לרוכבי כביש בינוניים שכבר שולטים בבלימה ובקו; מומלץ כחלק מאימון מקצועי ולא כניסוי ראשון בכביש.",
+    "why_watch_he": "ההסבר הקצר מציג מודל ברור של החלפת בלימה בהטיה ומקשר אותו להרגל מוכר מנהיגה ברכב.",
+    "exercises_he": ["במגרש ובמהירות נמוכה, הפחת לחץ בלם בהדרגה לפני הטיה קלה", "תרגל תחילה עם מאמן וללא יעד מהירות"],
+    "equipment_he": ["מיגון כביש מלא", "מגרש סגור", "מדריך"], "safety_warnings_he": ["שילוב לחץ בלם והטיה עלול לחרוג מתקציב האחיזה; אין ללמוד זאת בכביש פתוח."],
+    "common_mistakes_he": ["שחרור פתאומי של הבלם", "הוספת הטיה בלי להפחית לחץ"], "quality_score": 5, "quality_reason_he": "תמלול מלא ממאמן ChampSchool מאמת את מודל העומס וההפחתה; הקיצור מועיל אך אינו מכסה מגוון משטחים.", "source_type": "riding_school", "contains_marketing": true
+  },
+  "NWHX807Xq9Y": {
+    "title_he": "מעבר בול עץ או מכשול נקודתי", "domain": "offroad_adventure", "primary_category": "obstacles", "secondary_categories": ["riding_position", "controls_coordination"], "tags": ["obstacle", "standing", "momentum", "throttle", "vision"],
+    "skill_level": "intermediate", "risk_level": "high", "motorcycle_types": ["dual_sport", "adventure"], "motorcycle_weight_classes": ["light", "medium", "heavy"], "terrain_types": ["obstacle", "dirt"], "road_conditions": [],
+    "summary_he": "מדריך מדגים גישה למכשול בעמידה, שחרור מתלים לפני המגע, דחף קצר לגלגל הקדמי והפחתת גז כשהאחורי פוגש בו.",
+    "learning_points_he": ["לעמוד ולשחרר את הגוף כדי לאפשר מהלך מתלים", "להגיע עם תנופה קטנה ולא עם בלמים סגורים", "להביט מעבר למכשול ולהפחית גז לפני פגיעת האחורי"],
+    "fit_for_he": "לרוכבי שטח בינוניים המתרגלים תחילה מכשול נמוך עם מדריך ומרחב יציאה.",
+    "why_watch_he": "המקור מציג שלושה גבהים ומסביר בנפרד את מגע הקדמי והאחורי, נקודה חשובה לשליטה בתגובה.",
+    "exercises_he": ["התחל בלוח שטוח או בול נמוך מקובע", "תרגל את רצף הדחף והפחתת הגז בהילוך נמוך"],
+    "equipment_he": ["מיגון שטח מלא", "מגן מנוע", "מגני ידיים", "מדריך"], "safety_warnings_he": ["המכשול חייב להיות יציב והגישה נקייה; אין לתרגל מול תנועה או מכשול חד."],
+    "common_mistakes_he": ["פגיעה עם בלמים מופעלים", "מבט ישירות בבול במקום ביציאה"], "quality_score": 5, "quality_reason_he": "התיאור ותמלול מלא ממפעיל בית ספר מאמתים את רצף התרגיל ואת התאמתו למכשולים בגבהים שונים.", "source_type": "professional_instructor", "contains_marketing": true
+  },
+  "wsokPULhmv0": {
+    "title_he": "בוץ וגשם: פקודות צפויות ואחיזה", "domain": "offroad_adventure", "primary_category": "mud_wet", "secondary_categories": ["offroad_braking", "riding_position"], "tags": ["mud", "wet_trail", "traction", "smooth_control", "body_position", "braking"],
+    "skill_level": "intermediate", "risk_level": "high", "motorcycle_types": ["dual_sport", "adventure"], "motorcycle_weight_classes": ["light", "medium"], "terrain_types": ["mud", "wet_trail"], "road_conditions": [],
+    "summary_he": "מאמן בשטח רטוב מדגים פניות רחבות, בלימה והאצה חלקות ושינוי תנוחת גוף שנועד להשאיר את תגובת האופנוע צפויה.",
+    "learning_points_he": ["להימנע מפקודות חדות כשהאחיזה נמוכה", "ליישר ככל האפשר לפני בלימה או האצה", "להתאים העברת משקל לתנאי הבוץ ולא להיצמד לכלל יבש"],
+    "fit_for_he": "לרוכבי שטח בעלי יסודות בלימה ועמידה לפני אימון מבוקר בתנאי רטיבות.",
+    "why_watch_he": "התמלול מראה כיצד עצה רגילה על גוף קדימה משתנה במשטח חלק ומקשר אותה לבלימה ופניות בפועל.",
+    "exercises_he": ["תרגל על קטע רטוב שטוח פתיחה וסגירה חלקות", "בצע פניות רחבות לפני צמצום הרדיוס"],
+    "equipment_he": ["מיגון שטח מלא", "מגפי שטח", "צמיגים מתאימים", "שותף"], "safety_warnings_he": ["בוץ מסתיר עומק ומכשולים; בדוק את הקטע ברגל והימנע מרכיבה לבד."],
+    "common_mistakes_he": ["בלם אחורי חד לשם החלקה", "תיקוני כידון פתאומיים"], "quality_score": 5, "quality_reason_he": "תיאור ותמלול מלא מבית ספר תומכים בעצות ובסייג לתנוחת הגוף; יש קידום קורסים והשכרה.", "source_type": "riding_school", "contains_marketing": true
+  },
+  "bO88ooYOLhw": {
+    "title_he": "בלימת חירום ישרה במהירות 20 מייל לשעה", "domain": "practice", "primary_category": "emergency_braking", "secondary_categories": ["drills", "road_braking"], "tags": ["emergency_braking", "front_brake", "braking", "traction", "practice_drill"],
+    "skill_level": "intermediate", "risk_level": "high", "motorcycle_types": ["general_motorcycle", "street"], "motorcycle_weight_classes": ["general"], "terrain_types": ["parking_lot"], "road_conditions": ["parking_lot", "dry_pavement"],
+    "summary_he": "קליפ אימון מדוד לעצירה ישרה: גז יציב עד הקו, עיניים למעלה, סחיטה חלקה, דחיסת המזלג ומדידת מרחק בתוך תיבת קונוסים.",
+    "learning_points_he": ["להתחיל בלימה בדיוק בקו קבוע", "לאפשר לצמיג הקדמי להיטען לפני הוספת כוח", "להשתמש ברעידות גלגל ובמרחק כתובנות לחזרה הבאה"],
+    "fit_for_he": "לרוכבים במסגרת מגרש סגור ומפוקח שמבקשים להפוך בלימה לתהליך מדיד וחוזר.",
+    "why_watch_he": "המקור משווה עצירות בפועל ומסביר כיצד להבדיל בין מעט מדי לחץ לבין חטיפה שגורמת לרעידה.",
+    "exercises_he": ["הצב קונוסים במרחקים ידועים ובצע סדרת עצירות מאותה מהירות", "שנה רק את קצב בניית הלחץ בין חזרות"],
+    "equipment_he": ["מיגון מלא", "קונוסים", "מגרש סגור", "מדריך"], "safety_warnings_he": ["המהירות והמרחקים אינם יעד אוניברסלי; התאימו אותם למשטח, לאופנוע ולמדריך."],
+    "common_mistakes_he": ["חטיפת הקדמי", "מבט אל קו הבלימה"], "quality_score": 5, "quality_reason_he": "תמלול מלא מציג תרגיל מדוד, חזרות ומשוב; המקור מזוהה כקליפ הכשרה מקצועי.", "source_type": "riding_school", "contains_marketing": false
+  },
+  "0Llcyhyh8vY": {
+    "title_he": "בדיקת טרום־רכיבה בזמן אמת", "domain": "safety_recovery", "primary_category": "trip_preparation", "secondary_categories": ["solo_group_safety"], "tags": ["pre_ride", "planning", "tires", "braking", "visibility", "safety"],
+    "skill_level": "beginner", "risk_level": "low", "motorcycle_types": ["general_motorcycle", "street"], "motorcycle_weight_classes": ["light", "medium"], "terrain_types": [], "road_conditions": ["urban", "highway"],
+    "summary_he": "מדריך מבצע ברצף בדיקת עצמי ותכנית, נזילות, צמיגים, ציוד, רצף נוריות, דלק, תאורה ותחושת בלמים לפני יציאה.",
+    "learning_points_he": ["לבדוק גם את מוכנות הרוכב והמסלול", "לחפש נזילות ונזק חזותי לפני הנעה", "לוודא נוריות, תאורה ובלמים לפני הצטרפות לתנועה"],
+    "fit_for_he": "למתחילים ולרוכבי קטנוע או אופנוע שרוצים הרגל קצר וקבוע לפני כל יציאה.",
+    "why_watch_he": "הבדיקה מוצגת בזמן אמת ולא כרשימה תאורטית, ולכן קל לראות מה ניתן להשלים בתוך דקות.",
+    "exercises_he": ["בצע את אותו סדר במשך שבוע עד שהוא קבוע", "פעם בשבוע מדוד לחץ צמיגים במד ולא בבעיטה"],
+    "equipment_he": ["מד לחץ אוויר", "טלפון טעון", "רישיון וציוד מיגון"], "safety_warnings_he": ["בעיטה בצמיג אינה מחליפה מדידת לחץ לפי ספר היצרן."],
+    "common_mistakes_he": ["בדיקת צמיג במגע בלבד", "התנעה לפני זיהוי נזילה"], "quality_score": 4, "quality_reason_he": "תיאור ותמלול מלא ממדריך מאמתים את הסדר; חלק מבדיקת הצמיג מהירה מדי ולכן נוסף סייג למדידה.", "source_type": "professional_instructor", "contains_marketing": true
+  },
+  "9hgXMIY4cbc": {
+    "title_he": "עמידה נוחה וחסכונית בשבילי שטח", "domain": "offroad_adventure", "primary_category": "riding_position", "secondary_categories": ["ergonomics", "offroad_basics"], "tags": ["standing", "body_position", "relaxed_grip", "ergonomics", "balance"],
+    "skill_level": "beginner", "risk_level": "medium", "motorcycle_types": ["dual_sport", "adventure"], "motorcycle_weight_classes": ["light", "medium"], "terrain_types": ["dirt", "gravel", "obstacle"], "road_conditions": [],
+    "summary_he": "הדרכה לתנוחת עמידה שמאפשרת להגיע למצמד, גז והילוכים בלי להעמיס על הידיים ובלי להתעייף ממשיכה ודחיפה של הכידון.",
+    "learning_points_he": ["לשאת משקל ברגליים, בליבה ובירכיים", "למקם גוף כך שאפשר לשחרר כמעט את הידיים", "להימנע גם מעמידה זקופה מדי וגם מהטיה קדימה"],
+    "fit_for_he": "למתחילים בשטח ולרוכבים גבוהים שמתקשים להפעיל פקדים בעמידה.",
+    "why_watch_he": "המקור קושר נוחות לשליטה ולהוצאה אנרגטית ומציע מבחן פשוט: יכולת לנוע בלי להישען על הכידון.",
+    "exercises_he": ["בעמידה סטטית מאובטחת, בדוק גישה לכל פקד", "במגרש שטוח רכב מספר מטרים עם אחיזה קלה מאוד"],
+    "equipment_he": ["מיגון שטח מלא", "מגפי שטח", "מגרש עפר"], "safety_warnings_he": ["אין לשחרר ידיים בתנועה; מבחן האיזון הסטטי דורש משגיח ואופנוע כבוי."],
+    "common_mistakes_he": ["משקל על הכידון", "עמידה גבוהה ונוקשה"], "quality_score": 4, "quality_reason_he": "התיאור ותמלול מלא תומכים במכניקת הגוף; המקור מקדם מדריך חינמי אך התוכן ההדרכתי ממוקד.", "source_type": "training_channel", "contains_marketing": true
+  },
+  "FNLUBBMypmI": {
+    "title_he": "רכיבת כביש בחשכה ובגשם יחד", "domain": "road", "primary_category": "wet_weather", "secondary_categories": ["road_strategy", "protective_gear"], "tags": ["rain", "night", "visibility", "wet_pavement", "lane_position", "hazard_awareness"],
+    "skill_level": "advanced_beginner", "risk_level": "high", "motorcycle_types": ["street", "touring", "general_motorcycle"], "motorcycle_weight_classes": ["general"], "terrain_types": [], "road_conditions": ["wet_pavement", "urban", "rural_twisty"],
+    "summary_he": "רכיבת פרשנות בתנאי חושך ורטיבות, עם דגש על לבוש נראה, סנוור, מראות, מרווח, שלוליות, מיקום ופקודות חלקות.",
+    "learning_points_he": ["לכוון מראות ולהפחית השפעת סנוור ככל האפשר", "להאט מוקדם כאשר רכב מאחור קרוב", "להימנע משלולית שעלולה להסתיר בור או פסולת"],
+    "fit_for_he": "לרוכבי כביש שכבר רכבו בנפרד בלילה ובגשם ורוצים להבין את שילוב הסיכונים.",
+    "why_watch_he": "הפרשנות בזמן אמת מראה כיצד תנאים מאחור, מלפנים ועל פני הדרך משנים החלטה ולא רק את המהירות.",
+    "exercises_he": ["בדוק בחניה את ניקיון המשקף, התאורה והמראות", "תכנן מסלול קצר ומואר עם נקודות עצירה"],
+    "equipment_he": ["מיגון עמיד למים", "פריטים מחזירי אור", "משקף נגד אדים", "תאורה תקינה"], "safety_warnings_he": ["חושך וגשם יחד מצמצמים ראות ואחיזה; דחה רכיבה אם אינך ערני או הציוד אינו מתאים."],
+    "common_mistakes_he": ["מבט אל פנס מסנוור", "כניסה לשלולית בלי אפשרות לראות את העומק"], "quality_score": 5, "quality_reason_he": "תיאור ותמלול מלא של גוף הדרכה מכסים ציוד, תפעול ומפגעים בזמן רכיבה ממשית; איכות הקול משתנה אך הראיות ברורות.", "source_type": "riding_school", "contains_marketing": true
+  },
+  "5pUSer1l8jI": {
+    "title_he": "לחץ אוויר לשטח באופנועי אדוונצ'ר", "domain": "mixed", "primary_category": "tires_setup", "secondary_categories": ["trip_preparation"], "tags": ["tire_pressure", "traction", "planning", "heavy_bike"],
+    "skill_level": "intermediate", "risk_level": "medium", "motorcycle_types": ["adventure", "dual_sport"], "motorcycle_weight_classes": ["light", "medium", "heavy"], "terrain_types": ["dirt", "gravel", "loose_rock"], "road_conditions": ["dry_pavement"],
+    "summary_he": "דיון בפשרה בין לחץ כביש ללחץ שטח, השפעת לחץ נמוך על התאמת הצמיג לקרקע והסיכון לנזק חישוק או צמיג באופנוע כבד.",
+    "learning_points_he": ["להתחיל מהמלצת היצרן ולתעד כל שינוי", "להבין שלחץ נמוך משפר התאמה אך מגדיל סיכון לנזק", "להחזיר לחץ מתאים לפני קטע אספלט מהיר"],
+    "fit_for_he": "לרוכבי אדוונצ'ר בינוניים שמודדים לחץ ומבינים שצמיג, חישוק, עומס ומהירות משנים את התוצאה.",
+    "why_watch_he": "היוצר מציג גם עמדה אחרת ומזמין ניסוי זהיר במקום להציג מספר יחיד כאמת לכל אופנוע.",
+    "exercises_he": ["רשום לחץ קר לפי היצרן והפחת רק בצעד קטן בשטח קל", "בדוק חימום ונזק והחזר לחץ לפני כביש"],
+    "equipment_he": ["מד לחץ מדויק", "משאבה", "ערכת תיקון", "ספר רכב"], "safety_warnings_he": ["אין לאמץ את המספרים בסרטון ללא הוראות היצרן והתאמה לצמיג, לעומס ולמהירות."],
+    "common_mistakes_he": ["לחץ נמוך מדי באופנוע כבד", "שכחת ניפוח מחדש לפני כביש"], "quality_score": 4, "quality_reason_he": "תיאור ותמלול מלא תומכים בטווח המוצע ובפשרות; המספרים אינם אוניברסליים ולכן נוסף סייג מחמיר.", "source_type": "experienced_rider", "contains_marketing": true
+  },
+  "Z4z0mCP8UPk": {
+    "title_he": "עקיפה מתוכננת בכביש דו־סטרי", "domain": "road", "primary_category": "road_strategy", "secondary_categories": ["controls_coordination"], "tags": ["overtaking", "planning", "vision", "gear_selection", "lane_position", "hazard_awareness"],
+    "skill_level": "advanced", "risk_level": "high", "motorcycle_types": ["street", "touring", "sport_touring"], "motorcycle_weight_classes": ["general"], "terrain_types": [], "road_conditions": ["rural_twisty", "dry_pavement"],
+    "summary_he": "מדריך מתקדם משווה עקיפה מיידית לעקיפה שמחייבת המתנה, ומפרק תצפית, מיקום, הילוך, בדיקה סופית וחזרה לנתיב.",
+    "learning_points_he": ["לתכנן אפשרויות לפני הגעה לרכב האיטי", "להביט מעבר לרכב ולא להתמקד רק בו", "לוותר מיד כאשר שדה הראייה או מרווח החוק אינם מספיקים"],
+    "fit_for_he": "לרוכבים מתקדמים בלבד ובהתאם לחוק המקומי; צפייה אינה תחליף לאימון כביש מוסמך.",
+    "why_watch_he": "ההדגמה הסטטית והדינמית מראה מתי להמתין בעמדת תצפית ומתי להשלים בדיקה ותנועה הצדה.",
+    "exercises_he": ["בניתוח וידאו בלבד, עצור לפני כל עקיפה ורשום אילו סכנות עוד לא נשללו", "בכביש עצמו תרגל ויתור ושמירת מרווח, לא ביצוע עקיפה"],
+    "equipment_he": ["מיגון כביש מלא", "אופנוע תקין"], "safety_warnings_he": ["עקיפה היא תמרון בסיכון גבוה ותלוי חוק; אין לבצע בלי ראות, מרחק ומהירות חוקיים לחלוטין."],
+    "common_mistakes_he": ["התקרבות צמודה שמעלימה שדה ראייה", "התמקדות ברכב במקום בתמונה הרחבה"], "quality_score": 5, "quality_reason_he": "תיאור ותמלול ממקור הדרכה מקצועי מאמתים שני תרחישים ורצף החלטות; ההקשר מחייב התאמה לחוק המקומי.", "source_type": "riding_school", "contains_marketing": true
+  },
+  "iw9zeS0wLW8": {
+    "title_he": "רכיבה ראשונה: פקדים, הילוכים ומעבר לכביש", "domain": "mixed", "primary_category": "offroad_basics", "secondary_categories": ["controls_coordination", "balance_slow_control", "road_strategy"], "tags": ["beginner", "clutch", "shifting", "braking", "slow_speed", "safety"],
+    "skill_level": "beginner", "risk_level": "medium", "motorcycle_types": ["street", "general_motorcycle"], "motorcycle_weight_classes": ["light", "medium"], "terrain_types": ["parking_lot"], "road_conditions": ["parking_lot", "urban"],
+    "summary_he": "מדריך ארוך למתחילים מהנעה וזיהוי פקדים, דרך מצמד והחלפת הילוכים ועד תרגול מגרש והתקדמות זהירה לסביבה ציבורית.",
+    "learning_points_he": ["לוודא ניטרל ופקדים לפני התנעה", "לשחרר מצמד ולהחליף הילוך בהדרגה", "לבנות ביטחון במגרש לפני חשיפה לצמתים ותנועה"],
+    "fit_for_he": "לרוכב חדש כסקירה משלימה לקורס מוסמך; לא ללימוד עצמי ראשון ללא השגחה.",
+    "why_watch_he": "התמלול הנרחב עוקב אחרי רצף הפעולות בפועל ומראה כיצד מגרש איטי משמש גשר לכביש.",
+    "exercises_he": ["במסגרת קורס, תרגל אזור חיכוך בקו ישר", "תרגל עצירה והעברה לניטרל לפני תרגילי פנייה"],
+    "equipment_he": ["מיגון מלא", "אופנוע הדרכה תקין", "מגרש סגור", "מדריך"], "safety_warnings_he": ["אין ללמוד רכיבה מאפס מסרטון בלבד; נדרשים רישוי והדרכה בהתאם לחוק."],
+    "common_mistakes_he": ["שחרור מצמד מהיר", "מעבר לכביש לפני שליטה עקבית במגרש"], "quality_score": 4, "quality_reason_he": "תמלול מלא מאוד מכסה את רצף המתחיל; המקור מקדם קורס מסחרי והסרטון אינו מחליף הדרכה חוקית.", "source_type": "training_channel", "contains_marketing": true
+  },
+  "MwZSi-LHWuw": {
+    "title_he": "שליטה איטית עם מורכב במסלול קונוסים", "domain": "practice", "primary_category": "passenger_riding", "secondary_categories": ["balance_slow_control", "drills"], "tags": ["pillion", "slow_speed", "balance", "clutch", "rear_brake", "communication"],
+    "skill_level": "advanced", "risk_level": "high", "motorcycle_types": ["touring", "street"], "motorcycle_weight_classes": ["heavy"], "terrain_types": ["parking_lot"], "road_conditions": ["parking_lot"],
+    "summary_he": "הדגמה של עלייה וירידה עם רגלית צד, ייצוב האופנוע והתאמת גז ושליטה איטית בעת מעבר מסלול קונוסים עם מורכב.",
+    "learning_points_he": ["לייצב על רגלית צד וכידון נעול שמאלה בזמן עלייה", "לתאם במפורש מתי המורכב עולה ויורד", "להתאים דחף מנוע למשקל הנוסף במסלול איטי"],
+    "fit_for_he": "לרוכבים מתקדמים על אופנוע כבד, לאחר שליטה במסלול ללא מורכב ובהשגחת מדריך.",
+    "why_watch_he": "המקור מדגים את אותה מיומנות עם משקל אמיתי ומראה כיצד סדר העלייה והדחף משתנים.",
+    "exercises_he": ["תרגלו עלייה וירידה כשהמנוע כבוי", "הרוכב ישלים מסלול לבד לפני הוספת מורכב"],
+    "equipment_he": ["מיגון מלא לשני אנשים", "מגרש סגור", "קונוסים", "מדריך"], "safety_warnings_he": ["אין להכניס מורכב לתרגיל עד שהרוכב יציב לבדו והאופנוע מאושר לעומס."],
+    "common_mistakes_he": ["עלייה כשהכידון והרגלית אינם מייצבים", "שימוש באותו גז כמו ללא מורכב"], "quality_score": 4, "quality_reason_he": "תמלול מלא ממקור אימון מתקדם מאמת את העלייה והמסלול; הסרטון קצר ומקדם חברות בתשלום.", "source_type": "riding_school", "contains_marketing": true
+  },
+  "51gsYMB2beQ": {
+    "title_he": "עקיפה באופנוע: מרווח ראייה ותכנון", "domain": "road", "primary_category": "road_strategy", "secondary_categories": ["controls_coordination"], "tags": ["overtaking", "vision", "planning", "gear_selection", "speed_management"],
+    "skill_level": "advanced", "risk_level": "high", "motorcycle_types": ["street", "touring"], "motorcycle_weight_classes": ["general"], "terrain_types": [], "road_conditions": ["rural_twisty", "dry_pavement"],
+    "summary_he": "יוצר מנתח דוגמאות עקיפה ומדגיש התרחקות מרכב גדול לשיפור הראות, בחירת הילוך והשלמת התאוצה במסגרת החוק.",
+    "learning_points_he": ["לשמור מרווח שמאפשר לראות מעבר לרכב", "להכין הילוך וקצב לפני יציאה", "להפריד בין איתות נוכחות לבין הנחה שהנהג ראה"],
+    "fit_for_he": "לרוכבים מתקדמים כניתוח ביקורתי נוסף, אחרי הדרכה מקצועית ובהתאם לחוק המקומי.",
+    "why_watch_he": "הסרטון משווה לדוגמה חיצונית ומסביר מדוע הצמדות לרכב מפחיתה אפשרויות במקום לזרז עקיפה.",
+    "exercises_he": ["נתח קטעי וידאו ורשום נקודת ויתור בכל עקיפה", "תרגל שמירת מרווח בלבד בכביש"],
+    "equipment_he": ["מיגון כביש מלא", "אופנוע תקין"], "safety_warnings_he": ["אין ליישם עקיפה מסרטון בלבד; פעולה זו תלויה בחוק, בראות ובפער מהירות בטוח."],
+    "common_mistakes_he": ["היצמדות לרכב גדול", "הנחה שהבהוב פנס מבטיח זיהוי"], "quality_score": 3, "quality_reason_he": "התמלול תומך בנקודות המרווח וההילוך, אך המקור קהילתי והדיון כולל דעות על ערוץ אחר, לכן הביטחון נמוך יותר.", "source_type": "community_educator", "contains_marketing": true
+  },
+  "SpEl45M02sI": {
+    "title_he": "מיקום דינמי בנתיב לרוכב לומד", "domain": "road", "primary_category": "road_strategy", "secondary_categories": ["road_cornering"], "tags": ["lane_position", "visibility", "vision", "hazard_awareness", "escape_route"],
+    "skill_level": "advanced_beginner", "risk_level": "medium", "motorcycle_types": ["street", "touring", "general_motorcycle"], "motorcycle_weight_classes": ["general"], "terrain_types": [], "road_conditions": ["urban", "rural_twisty", "dry_pavement"],
+    "summary_he": "הדגמת כביש שמציגה מיקום משתנה כדי לראות ולהיראות, להתרחק מתנועה נגדית ולצמצם חפיפה עם שטחים מתים.",
+    "learning_points_he": ["לנוע בנתיב רק מסיבה ברורה", "לשפר ראות קדימה בלי לפגוע במרווח מתנועה נגדית", "לזהות ששדה ראייה חסום פירושו שגם אחרים מתקשים לראות אותך"],
+    "fit_for_he": "ללומדים ולרוכבי כביש חדשים שמוכנים לנתח מיקום ולא לאמץ כלל קבוע.",
+    "why_watch_he": "הפרשנות מחברת כל שינוי מיקום לסיבה מיידית ומראה כיצד לחזור כשמופיע רכב נגדי.",
+    "exercises_he": ["ברכיבה רגועה, תן שם לסיבה לפני כל שינוי מיקום", "אם אין יתרון ברור, שמור קו יציב"],
+    "equipment_he": ["מיגון כביש מלא", "תאורה תקינה"], "safety_warnings_he": ["מיקום לעולם אינו גובר על החוק, סימון כביש או מרווח מתנועה נגדית."],
+    "common_mistakes_he": ["תנועה אקראית בנתיב", "מיקום חיצוני בלי לבדוק רכב נגדי"], "quality_score": 4, "quality_reason_he": "תיאור ותמלול מלא מאמתים את עקרון לראות ולהיראות; המקור קהילתי ולכן אינו מוצג כסטנדרט רשמי.", "source_type": "community_educator", "contains_marketing": true
+  }
+}

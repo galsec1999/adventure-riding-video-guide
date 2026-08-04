@@ -1,42 +1,43 @@
 # מצב הפרויקט
 
-- **גרסה:** 0.3.0
-- **שלב נוכחי:** Phase 03 הושלם; Trust Audit ל־Wave 1 עבר, נוספו 70 רשומות מאומתות והמאגר הגיע בדיוק ל־130
-- **הושלם:** 3 מתוך 8 סבבים
-- **אחוז כולל:** 37.5%
-- **סרטונים מאושרים ב־Production:** 130
-- **יעד מינימלי:** 200
-- **יעד רצוי:** 250–300
-- **סרטונים בעברית:** 9
-- **סרטונים באנגלית:** 119
-- **סרטונים ביפנית:** 2
-- **ערוצים ייחודיים:** 46
-- **כפילויות פעילות:** 0
-- **קישורים כושלים:** 0 מתוך 130 בבדיקה מקוונת של YouTube oEmbed ב־2026-08-03
-- **Chapters:** ‏82 רשומות עם Chapters; ‏589 אובייקטי Chapter
-- **מסלולי למידה:** 2 מסלולים, 20 צעדים ו־85 הפניות תקינות
-- **בדיקות סופיות ייחודיות:** 8,101 עברו, 0 נכשלו
-- **בדיקת אתר:** ‏35 בדיקות Node, לרבות Integrity, חיפוש, שלושה מסננים, טעינה מדורגת, Smoke, iframe דחוי ושמירת מצב, עברו על מאגר 130
-- **שער שחרור 1.0:** טרם עבר — נדרשים לפחות 200 סרטונים והשלמת סבבים 4–8
-- **הפעולה הבאה:** ראו `NEXT_ACTION.md`; סבב 04 לא הופעל במסגרת עבודה זו
+- **גרסה:** 1.0.0
+- **מצב:** Release 1.0 הושלם ומוכן לפרסום
+- **הושלם:** 8 מתוך 8
+- **אחוז כולל:** 100%
+- **סרטונים ב־Production:** בדיוק 250
+- **שפות:** 31 עברית, 219 אנגלית, 0 שפות אחרות
+- **ערוצים ייחודיים:** 102
+- **נוכחות MOTOTREK:** ‏20 סרטונים לצד 101 ערוצים נוספים
+- **כפילויות ו־Placeholder:** ‏0
+- **קישורים:** 250/250 פעילים בבדיקת YouTube oEmbed חיה; 0 unavailable, ‏0 indeterminate, ‏0 rate-limited
+- **Chapters:** ‏897 מאומתים; ‏143 כלליים הוסרו ו־9 הוסרו עם רשומות שהוחלפו
+- **מסלולי למידה:** 8 מסלולים, 64 שלבים ו־192 הפניות תקינות
+- **Confidence:** ‏250 high, ‏0 medium, ‏0 low
+- **בדיקות סופיות ייחודיות:** 14,201 עברו, 0 נכשלו
+- **Browser Acceptance:** ‏38/38, ‏16 צילומי מסך, 0 שגיאות Console
+- **Red Team:** ‏0 P0, ‏0 P1, ‏0 P2, ‏0 P3
+- **שערי Release:** נתונים, איכות, קישורים, חיפוש, מסננים, Storage, נגן, נגישות, מובייל, Red Team, Manifest ו־ZIP עברו
+- **שלב נוסף:** אין
 
 ## אבני דרך
 
-- [x] 1. Taxonomy, Schema ואצווה ראשונה — 60 סרטונים
-- [x] 2. אתר V1 על נתוני אמת — כולל תיקון 02B
-- [x] 3. אצווה שנייה — Trust Audit ל־60 ותוספת 70, סך הכול 130
-- [ ] 4. שילוב, QA ושיפור V2
-- [ ] 5. אצווה שלישית — תוספת 70 סרטונים, סך הכול 200
-- [ ] 6. גרסת Beta מלאה עם 200 סרטונים
-- [ ] 7. אצווה רביעית — תוספת עד 250 סרטונים והשלמת פערים
-- [ ] 8. גרסה 1.0 מוכנה לפרסום
+- [x] 1. Taxonomy ו־Schema
+- [x] 2. אתר V1 על נתוני אמת
+- [x] 3. ביקורת אמינות לבסיס הקיים
+- [x] 4. הרחבת מחקר עברי ואנגלי
+- [x] 5. השלמת מאגר ל־250 סרטונים
+- [x] 6. השלמת חיפוש, מסננים ומסלולי למידה
+- [x] 7. QA בדפדפן ו־Red Team כפול
+- [x] 8. Release 1.0 חתום ומאומת
 
-## ראיות מרכזיות לסבב 03
+## ראיות מרכזיות
 
-- `research/reports/wave-1-corrections.md`
-- `research/reports/wave-2-report.md`
-- `reports/phase-03-id-diff.json`
-- `reports/phase-03-data-validation.json`
-- `reports/phase-03-link-check.json`
-- `reports/phase-03-test-summary.json`
-- `reports/content-audit.json`
+- `reports/final-one-shot/final-data-validation.json`
+- `reports/final-one-shot/final-content-quality-lint.json`
+- `reports/final-one-shot/final-link-check.json`
+- `reports/final-one-shot/browser-acceptance.json`
+- `reports/final-one-shot/red-team-content.md`
+- `reports/final-one-shot/red-team-technical.md`
+- `research/final-one-shot/evidence-ledger.csv`
+- `research/final-one-shot/chapter-curation.csv`
+- `release/Adventure-Riding-Video-Guide-v1.0.0-FINAL.zip`

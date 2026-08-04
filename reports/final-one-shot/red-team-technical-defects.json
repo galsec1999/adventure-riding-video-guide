@@ -1,0 +1,63 @@
+{
+  "reviewer": "B - code, UX, security, and release",
+  "status": "pass",
+  "reviewed_at": "2026-08-04T15:41:23+03:00",
+  "scope": {
+    "master_spec_site_requirements_reviewed": true,
+    "security": true,
+    "accessibility": true,
+    "performance_250_and_300": true,
+    "mobile_viewports": [
+      360,
+      390
+    ],
+    "desktop_and_tablet": true,
+    "search_queries": 25,
+    "combined_filters": 5,
+    "storage_states": [
+      "favorites",
+      "watched",
+      "path_progress",
+      "theme",
+      "continue_watching",
+      "memory_fallback"
+    ],
+    "deep_links": [
+      "video",
+      "filters",
+      "back",
+      "forward",
+      "reload"
+    ],
+    "player": [
+      "on_demand",
+      "youtube_nocookie",
+      "no_autoplay",
+      "cleanup"
+    ],
+    "rights_safety_reporting": true,
+    "readme": true,
+    "static_publish": true,
+    "git_branch": "final-one-shot-release-v1",
+    "git_diff_check": "pass",
+    "version": "1.0.0",
+    "release_verification": "PASS",
+    "zip_entries": 235
+  },
+  "evidence": [
+    "reports/final-one-shot/final-test-summary.json",
+    "reports/final-one-shot/browser-acceptance.json",
+    "reports/final-one-shot/browser-smoke-after-red-team.json",
+    "reports/final-one-shot/search-acceptance.json",
+    "reports/final-one-shot/release-verification.json",
+    "release/Adventure-Riding-Video-Guide-v1.0.0/FINAL_RELEASE_MANIFEST.md",
+    "release/Adventure-Riding-Video-Guide-v1.0.0-FINAL.zip.sha256"
+  ],
+  "defect_counts": {
+    "P0": 0,
+    "P1": 0,
+    "P2": 0,
+    "P3": 0
+  },
+  "defects": []
+}

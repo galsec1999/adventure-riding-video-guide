@@ -65,3 +65,25 @@ test("last viewed video persists for continue-watching", () => {
   assert.equal(lastVideo.id, "yt-last-video");
   assert.ok(Number.isFinite(Date.parse(lastVideo.updatedAt)));
 });
+
+
+test("blocked window.localStorage getter falls back without throwing", () => {
+  const originalDescriptor = Object.getOwnPropertyDescriptor(globalThis, "window");
+  Object.defineProperty(globalThis, "window", {
+    configurable: true,
+    get() {
+      const error = new Error("localStorage blocked");
+      error.name = "SecurityError";
+      throw error;
+    },
+  });
+  try {
+    assert.equal(storageInternals.getWindowLocalStorage(), null);
+    const storage = createStorage(storageInternals.getWindowLocalStorage());
+    storage.toggleFavorite("yt-memory-only", true);
+    assert.deepEqual(storage.getFavorites(), new Set(["yt-memory-only"]));
+  } finally {
+    if (originalDescriptor) Object.defineProperty(globalThis, "window", originalDescriptor);
+    else delete globalThis.window;
+  }
+});

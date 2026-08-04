@@ -1,8 +1,11 @@
 #!/usr/bin/env python3
-"""Build the ten curated Phase 03 technical records from live YouTube metadata.
+"""HISTORICAL ONE-TIME MIGRATION. DO NOT USE TO AUTHOR OR AUDIT CONTENT.
+
+Build the ten curated Phase 03 technical records from live YouTube metadata.
 
 The script is intentionally metadata-only: it consumes the compact yt-dlp research
 report produced by ``youtube_research.py`` and never downloads media or transcripts.
+The file remains only as provenance for that completed migration.
 """
 
 from __future__ import annotations

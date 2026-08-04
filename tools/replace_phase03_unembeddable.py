@@ -1,5 +1,9 @@
 #!/usr/bin/env python3
-"""Replace the single Wave 2 record that failed YouTube oEmbed verification."""
+"""HISTORICAL ONE-TIME MIGRATION. DO NOT USE TO AUTHOR OR AUDIT CONTENT.
+
+Replace the single Wave 2 record that failed YouTube oEmbed verification. The
+script is retained only as provenance for the completed replacement.
+"""
 
 from __future__ import annotations
 

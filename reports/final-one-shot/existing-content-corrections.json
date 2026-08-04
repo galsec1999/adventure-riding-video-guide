@@ -1,0 +1,12 @@
+{
+  "generated_at": "2026-08-04T10:52:06.449979+00:00",
+  "status": "applied_explicit_corrections",
+  "records_corrected": 58,
+  "transcript_evidence_attached": 48,
+  "visual_reviews_scheduled_and_recorded": 7,
+  "generic_wrap_up_chapters_removed": 2,
+  "channel_metadata_updates": 6,
+  "videos_sha256_before": "d9367ef400d74b82711068f08a5bcea70a6dc38a6fb30a74eb17dfc5f04713c4",
+  "videos_sha256_after": "fe4404cba2444255fd04bcdb37eb2c0b8864a0fa8c15b11c7e468d81c9f30c06",
+  "full_transcripts_persisted": false
+}

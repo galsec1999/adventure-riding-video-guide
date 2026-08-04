@@ -1,0 +1,20 @@
+{
+  "project_root": "D:\\Michael2015\\אופנוע\\Adventure-Riding-Video-Guide-Starter",
+  "started_at": "2026-08-04T08:04:05Z",
+  "current_stage": "release_1_0_complete",
+  "current_batch": 20,
+  "records_before": 130,
+  "records_current": 250,
+  "approved_new": 127,
+  "rejected_candidates": 339,
+  "existing_records_evidence_processed": 130,
+  "existing_evidence_batches_completed": 3,
+  "candidate_metadata_checked": 504,
+  "selected_candidate_evidence_processed": 127,
+  "last_successful_gate": "release_1_0_all_gates_passed",
+  "pending_actions": [],
+  "last_updated": "2026-08-04T12:50:00+00:00",
+  "status": "complete",
+  "final_record_count": 250,
+  "reserve_candidates": 38
+}

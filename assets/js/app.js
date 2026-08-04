@@ -232,7 +232,10 @@ function normalizeSiteConfig(config) {
     contact: cleanConfigText(config.contact),
     logo_path: cleanConfigText(config.logo_path),
     safety_warning_he: cleanConfigText(config.safety_warning_he) || DEFAULT_SAFETY_WARNING,
+    meta_title_he: cleanConfigText(config.meta_title_he) || cleanConfigText(config.site_name_he) || DEFAULT_SITE_NAME,
     meta_description_he: cleanConfigText(config.meta_description_he || config.description_he),
+    og_title_he: cleanConfigText(config.og_title_he || config.meta_title_he) || cleanConfigText(config.site_name_he) || DEFAULT_SITE_NAME,
+    og_description_he: cleanConfigText(config.og_description_he || config.meta_description_he || config.description_he),
     default_language: /^[a-z]{2,3}(?:-[a-z0-9]{2,8})*$/i.test(language) ? language : "he",
     direction: direction === "ltr" || direction === "rtl" ? direction : "rtl",
   };
@@ -284,11 +287,19 @@ function applyLogoConfig(config) {
 function applySiteConfig(config) {
   document.documentElement.lang = config.default_language;
   document.documentElement.dir = config.direction;
-  document.title = config.site_name_he;
+  document.title = config.meta_title_he;
   const description = $('meta[name="description"]');
   const descriptionText = config.meta_description_he
     || `${config.site_name_he} — ספריית וידאו מקצועית בעברית ללימוד רכיבת אדוונצ'ר, שטח וכביש.`;
   if (description) description.setAttribute("content", descriptionText);
+  const ogTitle = $('meta[property="og:title"]');
+  const ogDescription = $('meta[property="og:description"]');
+  const twitterTitle = $('meta[name="twitter:title"]');
+  const twitterDescription = $('meta[name="twitter:description"]');
+  if (ogTitle) ogTitle.setAttribute("content", config.og_title_he || config.meta_title_he);
+  if (ogDescription) ogDescription.setAttribute("content", config.og_description_he || descriptionText);
+  if (twitterTitle) twitterTitle.setAttribute("content", config.og_title_he || config.meta_title_he);
+  if (twitterDescription) twitterDescription.setAttribute("content", config.og_description_he || descriptionText);
   $$('[data-site-name]').forEach((node) => { node.textContent = config.site_name_he; });
   $$('[data-site-home-link]').forEach((node) => {
     node.setAttribute("aria-label", `${config.site_name_he} — דף הבית`);
@@ -681,6 +692,21 @@ function createBadge(text, kind = "neutral") {
   return createElement("span", { className: `badge badge--${kind}`, text });
 }
 
+function createImageFallback(message) {
+  return createElement("span", {
+    className: "image-fallback",
+    text: message,
+    attrs: { role: "status", hidden: "" },
+  });
+}
+
+function connectImageFallback(image, fallback) {
+  image.addEventListener("error", () => {
+    image.hidden = true;
+    fallback.hidden = false;
+  }, { once: true });
+}
+
 function createVideoCard(video, { compact = false } = {}) {
   const article = createElement("article", {
     className: `video-card${compact ? " video-card--compact" : ""}`,
@@ -702,7 +728,9 @@ function createVideoCard(video, { compact = false } = {}) {
     "data-video-id": video.id,
     "aria-label": `צפייה בסרטון: ${video.title_he}`,
   });
-  media.append(image, play);
+  const imageFallback = createImageFallback("תמונת התצוגה אינה זמינה. אפשר לפתוח את הסרטון או לעבור ל־YouTube.");
+  connectImageFallback(image, imageFallback);
+  media.append(image, imageFallback, play);
 
   const body = createElement("div", { className: "video-card__body" });
   const badges = createElement("div", { className: "badge-row" });
@@ -900,6 +928,15 @@ function renderPaths() {
       );
       top.append(checkbox, labelNode);
       const explanation = createElement("p", { text: step.explanation_he });
+      const guardrails = createElement("dl", { className: "path-step__guardrails" });
+      guardrails.append(
+        createElement("dt", { text: "ציוד" }),
+        createElement("dd", { text: step.equipment_he.join(" · ") }),
+        createElement("dt", { text: "רמת סיכון" }),
+        createElement("dd", { text: label(step.risk_level) }),
+        createElement("dt", { text: "אזהרה" }),
+        createElement("dd", { text: step.warning_he }),
+      );
       const primary = createElement("div", { className: "path-step__videos" });
       primary.append(createElement("span", { className: "path-step__label", text: "סרטונים מרכזיים" }));
       step.primary_video_ids.forEach((id) => {
@@ -912,7 +949,7 @@ function renderPaths() {
         const link = videoLink(id, null, "alternative");
         if (link) alternatives.append(link);
       });
-      item.append(top, explanation, primary, alternatives);
+      item.append(top, explanation, guardrails, primary, alternatives);
       steps.append(item);
     });
     card.append(header, steps);
@@ -988,7 +1025,9 @@ function createDialogVideoContent(video) {
     className: "button button--primary video-player-slot__button",
     "data-video-id": video.id,
   });
-  player.append(poster, loadPlayer);
+  const posterFallback = createImageFallback("תמונת התצוגה אינה זמינה. ניתן עדיין לטעון את הנגן או לפתוח את המקור ב־YouTube.");
+  connectImageFallback(poster, posterFallback);
+  player.append(poster, posterFallback, loadPlayer);
 
   const actions = createElement("div", { className: "video-detail__actions" });
   actions.append(

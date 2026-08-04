@@ -1,5 +1,9 @@
 #!/usr/bin/env python3
-"""Apply the reviewed Phase 03 Wave 2 records and learning-path additions once."""
+"""HISTORICAL ONE-TIME MIGRATION. DO NOT USE TO AUTHOR OR AUDIT CONTENT.
+
+Apply the reviewed Phase 03 Wave 2 records and learning-path additions once.
+Retained solely as provenance for the historical Wave 2 migration.
+"""
 
 from __future__ import annotations
 

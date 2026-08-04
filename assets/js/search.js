@@ -172,6 +172,27 @@ export function buildSearchText(video, taxonomyLookup = new Map()) {
   return normalizeText(flattenText(searchable).join(" "));
 }
 
+function buildSearchFacetText(video, taxonomyLookup = new Map()) {
+  const taxonomyValues = [
+    video.domain,
+    video.primary_category,
+    ...asArray(video.secondary_categories),
+    ...asArray(video.tags),
+    video.skill_level,
+    video.risk_level,
+    ...asArray(video.motorcycle_types),
+    ...asArray(video.motorcycle_weight_classes),
+    ...asArray(video.terrain_types),
+    ...asArray(video.road_conditions),
+  ].flatMap((id) => taxonomyLookup.get(id) || [id]);
+
+  return normalizeText(flattenText([
+    video.title_he,
+    video.title_original,
+    taxonomyValues,
+  ]).join(" "));
+}
+
 export function prepareVideos(videos, taxonomy, synonyms) {
   const taxonomyLookup = createTaxonomyLookup(taxonomy);
   const synonymIndex = createSynonymIndex(synonyms);
@@ -179,11 +200,13 @@ export function prepareVideos(videos, taxonomy, synonyms) {
     synonymIndex,
     videos: videos.map((video, sourceIndex) => {
       const searchText = buildSearchText(video, taxonomyLookup);
+      const searchFacetText = buildSearchFacetText(video, taxonomyLookup);
       return {
         ...video,
         _sourceIndex: sourceIndex,
         _searchText: searchText,
         _searchWords: new Set(searchText.split(" ").filter(Boolean)),
+        _searchFacetText: searchFacetText,
       };
     }),
   };
@@ -194,12 +217,15 @@ export function scoreSearchMatch(video, query, synonymIndex) {
   if (!normalized) return 0;
   const text = video._searchText || normalizeText(flattenText(video).join(" "));
   const words = video._searchWords || new Set(text.split(" ").filter(Boolean));
+  const facetText = video._searchFacetText || text;
   const expansions = expandQuery(normalized, synonymIndex);
   let score = 0;
 
   if (containsPhrase(text, normalized)) score += 120;
+  if (containsPhrase(facetText, normalized)) score += 80;
   expansions.forEach((phrase) => {
     if (phrase !== normalized && phrase.length >= 3 && containsPhrase(text, phrase)) score += 30;
+    if (phrase.length >= 3 && containsPhrase(facetText, phrase)) score += 24;
   });
 
   const queryTokens = normalized.split(" ").flatMap(searchTokenForms);

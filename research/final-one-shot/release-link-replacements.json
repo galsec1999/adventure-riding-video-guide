@@ -1,0 +1,257 @@
+{
+  "generated_at": "2026-08-04T12:00:34+00:00",
+  "purpose": "החלפה סופית של שני קישורים שנמצאו לא זמינים בבדיקת Release חיה.",
+  "network_performed": true,
+  "video_or_audio_downloaded": false,
+  "final_candidate_counts": {
+    "checked": 504,
+    "approved": 127,
+    "rejected": 339,
+    "reserve": 38
+  },
+  "removed": [
+    {
+      "youtube_video_id": "6hgkx7ZScqY",
+      "youtube_url": "https://www.youtube.com/watch?v=6hgkx7ZScqY",
+      "title_original": "How to climb hills on dirt bikes ∣ Cross Training Enduro",
+      "decision": "replace_unavailable",
+      "reason_he": "בדיקת הקישורים הסופית החזירה HTTP 401 ו־YouTube oEmbed לא אישר את הסרטון; הרשומה הוסרה ולא הושאר קישור שאינו זמין."
+    },
+    {
+      "youtube_video_id": "M6d1cWB-4gY",
+      "youtube_url": "https://www.youtube.com/watch?v=M6d1cWB-4gY",
+      "title_original": "Riding with a Passenger - Nobody Talks About This",
+      "decision": "replace_unavailable",
+      "reason_he": "בדיקת הקישורים הסופית החזירה HTTP 401 ו־YouTube oEmbed לא אישר את הסרטון; הרשומה הוסרה ולא הושאר קישור שאינו זמין."
+    }
+  ],
+  "reviewed_not_promoted": [
+    {
+      "youtube_video_id": "xpc9FiHYMeA",
+      "youtube_url": "https://www.youtube.com/watch?v=xpc9FiHYMeA",
+      "title_original": "Why I avoid carrying passengers on my bike",
+      "decision": "remain_reserve",
+      "reason_he": "הקישור פעיל אך זהו סרטון דעה קהילתי ללא פרקי מקור או כתוביות ידניות; הוא אינו חלופה חזקה דיה להדרכת מורכב ולכן נשאר ברשימת העתודה."
+    }
+  ],
+  "replacements": [
+    {
+      "replaces_youtube_video_id": "6hgkx7ZScqY",
+      "record": {
+        "id": "yt-nBhWbHKCkks",
+        "youtube_video_id": "nBhWbHKCkks",
+        "youtube_url": "https://www.youtube.com/watch?v=nBhWbHKCkks",
+        "thumbnail_url": "https://i.ytimg.com/vi/nBhWbHKCkks/hqdefault.jpg",
+        "title_original": "GS Exercises: Competition & Off-Road Motorcycle Skills",
+        "title_he": "16 תרגילי שליטה לאופנוע אדוונצ'ר",
+        "channel_name": "ADVMotoSkillZ",
+        "channel_url": "https://www.youtube.com/channel/UCAhh41POT6froY75PsUl-MA",
+        "published_date": "2021-06-27",
+        "duration_seconds": 743,
+        "language": "en",
+        "subtitle_languages": [
+          "en"
+        ],
+        "summary_he": "מסלול אימון בן 16 תחנות לאופנוע אדוונצ'ר כבד, מפרסת פיל וסיבוב בנעילת היגוי ועד בלימת מטרה, סלאלום, שמיניות, רכיבה על קרש, מסדרון בולי עץ, עמידה על רגלית אחת ומרוץ איטי. בכל תחנה מוצגים יעד, טעויות נפוצות ומפתחות להצלחה, עם דגש על תיאום מצמד, גז, בלמים ואיזון פעיל ועל הגדלת המסלול לפי רמת הרוכב.",
+        "learning_points_he": [
+          "לבנות כל תחנה בגודל שמתאים לרמה ולהקטין אותה רק לאחר הצלחה עקבית",
+          "לתאם אזור חיכוך, גז ובלם עם מבט ואיזון פעיל במקום להילחם בכידון",
+          "להשתמש ביעד מדיד לכל תרגיל ולבחון טעות אחת לפני הניסיון הבא",
+          "להתקדם מתמרוני פנייה ובלימה בסיסיים לתרגילי דיוק ואיזון מורכבים"
+        ],
+        "fit_for_he": "לרוכבי אדוונצ'ר ברמת ביניים שכבר שולטים באזור החיכוך ובבלימה בסיסית ורוצים לבנות מגרש אימון שיטתי; אפשר להרחיב את התחנות לאופנוע כבד ולצמצמן בהדרגה.",
+        "why_watch_he": "זהו מאגר תרגילים מעשי ומדיד, לא אוסף טיפים: פרקי המקור מאפשרים לבחור תחנה אחת, להבין את היעד ואת הטעויות ולחזור אליה באימון הבא.",
+        "exercises_he": [
+          "בחר תחנה אחת, בנה אותה רחבה וסמן מראש מדד הצלחה כגון עצירה בתוך תיבה או שמירת קו",
+          "צלם או בקש משותף לזהות טעות אחת בלבד, תקן אותה וחזור על שלושה ניסיונות איטיים",
+          "הוסף קושי רק לאחר רצף הצלחות וללא עייפות, נפילות חוזרות או התחממות מצמד"
+        ],
+        "equipment_he": [
+          "מיגון שטח מלא",
+          "מגפי שטח",
+          "מגני מנוע וידיים",
+          "קונוסים או סימונים רכים",
+          "מגרש סגור ושותף תצפית"
+        ],
+        "safety_warnings_he": [
+          "התרגילים כוללים סיכון להפלת האופנוע; יש להתחיל במסלול רחב, להשתמש במיגון מתאים ולעצור בעת עייפות או חימום חריג של המצמד."
+        ],
+        "common_mistakes_he": [
+          "הקטנת המסלול לפני שנבנתה שליטה עקבית",
+          "מבט לסימון הקרוב במקום ליציאה מן התרגיל",
+          "ניסיון לתקן כמה משתנים בבת אחת"
+        ],
+        "quality_score": 5,
+        "quality_reason_he": "תיאור מפורט, 16 פרקי לימוד וכתוביות אנגלית ידניות מאמתים את התחנות, היעדים, הטעויות והנחיות ההתקדמות; פרק ה־Bloopers הוסר מן הניווט.",
+        "skill_level": "intermediate",
+        "risk_level": "high",
+        "domain": "practice",
+        "primary_category": "drills",
+        "secondary_categories": [
+          "balance_slow_control",
+          "offroad_braking",
+          "u_turns_low_speed"
+        ],
+        "tags": [
+          "balance",
+          "slow_speed",
+          "clutch",
+          "rear_brake",
+          "counterbalance",
+          "vision",
+          "u_turn",
+          "emergency_braking",
+          "standing",
+          "body_position"
+        ],
+        "motorcycle_types": [
+          "adventure"
+        ],
+        "motorcycle_weight_classes": [
+          "heavy"
+        ],
+        "terrain_types": [
+          "parking_lot"
+        ],
+        "road_conditions": [],
+        "chapters": [
+          {"start_seconds": 15, "end_seconds": 54, "title": "Strong Side Elephant Turn"},
+          {"start_seconds": 54, "end_seconds": 88, "title": "Balance The GS"},
+          {"start_seconds": 88, "end_seconds": 144, "title": "Rope Around A “Tree”"},
+          {"start_seconds": 144, "end_seconds": 176, "title": "Hit The Target"},
+          {"start_seconds": 176, "end_seconds": 203, "title": "Brake To A Stop"},
+          {"start_seconds": 203, "end_seconds": 260, "title": "Full Lock U – Turn"},
+          {"start_seconds": 260, "end_seconds": 292, "title": "Park The GS"},
+          {"start_seconds": 292, "end_seconds": 344, "title": "Cone Slalom/Weave"},
+          {"start_seconds": 344, "end_seconds": 412, "title": "Tennis Ball Slalom"},
+          {"start_seconds": 412, "end_seconds": 483, "title": "Figure 8"},
+          {"start_seconds": 483, "end_seconds": 537, "title": "GS Garage"},
+          {"start_seconds": 537, "end_seconds": 546, "title": "Ride On A Plank"},
+          {"start_seconds": 546, "end_seconds": 587, "title": "Ride Between The “Logs”"},
+          {"start_seconds": 587, "end_seconds": 637, "title": "Ride on 1 Peg"},
+          {"start_seconds": 637, "end_seconds": 677, "title": "Slow Race"},
+          {"start_seconds": 677, "end_seconds": 707, "title": "Stand Up – Pull Away"}
+        ],
+        "source_type": "training_channel",
+        "contains_marketing": true,
+        "related_video_ids": [],
+        "verification": {
+          "link_status": "active_public",
+          "metadata_verified": true,
+          "content_evidence_types": [
+            "description",
+            "chapters",
+            "transcript"
+          ],
+          "classification_confidence": "high",
+          "notes_he": "ב־2026-08-04 נבדקו מטא־דאטה חיה, תיאור מלא, 17 פרקי YouTube וכתוביות אנגלית ידניות זמניות שנמחקו לאחר האוצרות; נשמרו 16 פרקי לימוד ופרק Bloopers הוסר."
+        },
+        "last_checked": "2026-08-04"
+      }
+    },
+    {
+      "replaces_youtube_video_id": "M6d1cWB-4gY",
+      "record": {
+        "id": "yt-cM4YrRjKVUc",
+        "youtube_video_id": "cM4YrRjKVUc",
+        "youtube_url": "https://www.youtube.com/watch?v=cM4YrRjKVUc",
+        "thumbnail_url": "https://i.ytimg.com/vi/cM4YrRjKVUc/hqdefault.jpg",
+        "title_original": "Making U-Turns Easy on Big Adventure Motorcycles",
+        "title_he": "פרסות הדוקות על אופנוע אדוונצ'ר כבד",
+        "channel_name": "Bret Tkacs ADV",
+        "channel_url": "https://www.youtube.com/channel/UCdCzEBaIZQy3JXzc06ByNAg",
+        "published_date": "2020-10-16",
+        "duration_seconds": 617,
+        "language": "en",
+        "subtitle_languages": [
+          "en"
+        ],
+        "summary_he": "Bret Tkacs מפרק פרסה הדוקה על אופנוע גדול לשלושה יסודות: הפניית הראש עד מעבר לכתף, הטיית האופנוע מתחת לפלג גוף עליון מאוזן ושליטה מדויקת באזור החיכוך. הוא מדגים תרגיל Dip and Go, מסביר כיצד לכוון מנופי מצמד וגז, ומוסיף בדיקת בטיחות חשובה לכבל גז כדי לוודא שסיבוב הכידון עד הנעילה אינו מעלה סל״ד.",
+        "learning_points_he": [
+          "להפנות את הראש מוקדם ולהביט אל היציאה, לא אל קדמת האופנוע",
+          "לאפשר לאופנוע להיטה מתחת לרוכב תוך איזון פלג הגוף העליון",
+          "לשמור כוח חלק בעזרת אזור החיכוך ולבחור שימוש מתאים בבלם",
+          "לבדוק שכבל הגז אינו נמתח ומעלה סל״ד כשהכידון בנעילה מלאה"
+        ],
+        "fit_for_he": "לרוכב מתחיל מתקדם שכבר נוסע ביציבות במהירות הליכה ורוצה לצמצם רדיוס על אופנוע אדוונצ'ר בינוני או כבד במגרש סגור.",
+        "why_watch_he": "ההדרכה מחברת מבט, הטיה ומצמד לתרגיל אחד, ומוסיפה כיוון פקדים ובדיקת בטיחות מכנית שרבים מדלגים עליה לפני תרגול בנעילת היגוי.",
+        "exercises_he": [
+          "סמן מעגל רחב במגרש, הפנה ראש אל היציאה ושמור מהירות הליכה יציבה",
+          "תרגל Dip and Go ברדיוס גדול לפני ניסיון בנעילת היגוי מלאה",
+          "כשהאופנוע עומד, בדוק בשני הכיוונים שסיבוב הכידון אינו משנה את סל״ד הסרק"
+        ],
+        "equipment_he": [
+          "מיגון רכיבה מלא",
+          "מגני מנוע",
+          "קונוסים רכים",
+          "מגרש סגור וישר",
+          "שותף תצפית"
+        ],
+        "safety_warnings_he": [
+          "אין לתרגל פרסה הדוקה בתנועה ציבורית; אם סיבוב הכידון משנה סל״ד, מפסיקים ומתקנים את כיוון או ניתוב כבל הגז לפני רכיבה."
+        ],
+        "common_mistakes_he": [
+          "מבט קדימה או מטה במקום מעבר לכתף",
+          "הזזת הישבן בלבד בלי לאזן את פלג הגוף העליון",
+          "כיבוי מנוע בעקבות שחרור מצמד חד"
+        ],
+        "quality_score": 5,
+        "quality_reason_he": "מדריך ותיק מזוהה, תיאור, חמישה פרקי מקור וכתוביות אנגלית ידניות מאמתים את טכניקת המבט, Dip and Go, כיוון הפקדים ובדיקת כבל הגז.",
+        "skill_level": "advanced_beginner",
+        "risk_level": "medium",
+        "domain": "practice",
+        "primary_category": "u_turns_low_speed",
+        "secondary_categories": [
+          "balance_slow_control",
+          "controls_coordination",
+          "riding_position"
+        ],
+        "tags": [
+          "u_turn",
+          "slow_speed",
+          "vision",
+          "counterbalance",
+          "clutch",
+          "rear_brake",
+          "body_position"
+        ],
+        "motorcycle_types": [
+          "adventure",
+          "general_motorcycle"
+        ],
+        "motorcycle_weight_classes": [
+          "medium",
+          "heavy"
+        ],
+        "terrain_types": [
+          "parking_lot"
+        ],
+        "road_conditions": [
+          "dry_pavement"
+        ],
+        "chapters": [
+          {"start_seconds": 33, "end_seconds": 92, "title": "Ground Rules"},
+          {"start_seconds": 92, "end_seconds": 405, "title": "Vision"},
+          {"start_seconds": 405, "end_seconds": 454, "title": "The Dip and Go"},
+          {"start_seconds": 454, "end_seconds": 536, "title": "Set Your Controls Up"},
+          {"start_seconds": 536, "end_seconds": 617, "title": "Pro Tip"}
+        ],
+        "source_type": "professional_instructor",
+        "contains_marketing": true,
+        "related_video_ids": [],
+        "verification": {
+          "link_status": "active_public",
+          "metadata_verified": true,
+          "content_evidence_types": [
+            "description",
+            "chapters",
+            "transcript"
+          ],
+          "classification_confidence": "high",
+          "notes_he": "ב־2026-08-04 נבדקו מטא־דאטה חיה, תיאור, חמישה פרקי YouTube וכתוביות אנגלית ידניות זמניות שנמחקו לאחר האוצרות; קטעי קידום סומנו באמצעות contains_marketing."
+        },
+        "last_checked": "2026-08-04"
+      }
+    }
+  ]
+}

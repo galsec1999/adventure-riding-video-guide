@@ -413,10 +413,11 @@ def validate_learning_paths(
     paths: Any,
     internal_ids: set[str],
     skill_levels: set[str],
+    risk_levels: set[str],
 ) -> None:
     if not audit.check(isinstance(paths, list), "paths.array", "learning-paths.json must contain an array", path="data/learning-paths.json"):
         return
-    audit.check(len(paths) == 2, "paths.count", f"Expected exactly two learning paths; found {len(paths)}", path="data/learning-paths.json")
+    audit.check(len(paths) >= 8, "paths.count", f"Expected at least eight learning paths; found {len(paths)}", path="data/learning-paths.json")
     path_ids = [item.get("id") for item in paths if isinstance(item, dict)]
     duplicates = duplicate_values(path_ids)
     audit.check(not duplicates, "paths.duplicate_id", f"Duplicate learning-path IDs: {duplicates}", path="data/learning-paths.json", details=duplicates or None)
@@ -433,15 +434,19 @@ def validate_learning_paths(
         steps = learning_path["steps"]
         if not audit.check(isinstance(steps, list) and bool(steps), "paths.steps", "Learning path must contain steps", path=f"{path_name}.steps"):
             continue
+        audit.check(8 <= len(steps) <= 12, "paths.step_count", f"Learning path must contain 8-12 steps; found {len(steps)}", path=f"{path_name}.steps")
         total_steps += len(steps)
         orders = [step.get("order") for step in steps if isinstance(step, dict)]
         audit.check(orders == list(range(1, len(steps) + 1)), "paths.step_order", "Step order must be consecutive and match array order", path=f"{path_name}.steps")
         for step_index, step in enumerate(steps):
             step_path = f"{path_name}.steps[{step_index}]"
-            if not require_keys(audit, step, ("order", "goal_he", "explanation_he", "primary_video_ids", "alternative_video_ids"), step_path):
+            if not require_keys(audit, step, ("order", "goal_he", "explanation_he", "primary_video_ids", "alternative_video_ids", "equipment_he", "risk_level", "warning_he"), step_path):
                 continue
             audit.check(has_hebrew(step["goal_he"]), "paths.hebrew", "Step goal must contain Hebrew", path=f"{step_path}.goal_he")
             audit.check(has_hebrew(step["explanation_he"]), "paths.hebrew", "Step explanation must contain Hebrew", path=f"{step_path}.explanation_he")
+            audit.check(isinstance(step["equipment_he"], list) and bool(step["equipment_he"]) and all(has_hebrew(item) for item in step["equipment_he"]), "paths.equipment", "Step equipment must be a non-empty Hebrew array", path=f"{step_path}.equipment_he")
+            audit.check(step["risk_level"] in risk_levels, "paths.risk_level", "Unknown step risk level", path=f"{step_path}.risk_level")
+            audit.check(has_hebrew(step["warning_he"]), "paths.warning", "Step warning must contain Hebrew", path=f"{step_path}.warning_he")
             primary = step["primary_video_ids"]
             alternatives = step["alternative_video_ids"]
             arrays_ok = isinstance(primary, list) and isinstance(alternatives, list)
@@ -452,6 +457,7 @@ def validate_learning_paths(
             audit.check(bool(primary), "paths.primary", "Every step must include at least one primary video", path=f"{step_path}.primary_video_ids")
             audit.check(bool(alternatives), "paths.alternative", "Every step must include at least one alternative video", path=f"{step_path}.alternative_video_ids")
             all_refs = primary + alternatives
+            audit.check(2 <= len(all_refs) <= 5, "paths.video_count", f"Every step must reference 2-5 videos; found {len(all_refs)}", path=step_path)
             unknown = sorted(set(all_refs) - internal_ids)
             audit.check(not unknown, "paths.reference", f"Unknown video IDs: {unknown}", path=step_path, details=unknown or None)
             duplicate_refs = duplicate_values(all_refs)
@@ -492,6 +498,11 @@ def validate_synonyms(audit: ValidationAudit, synonyms: Any) -> None:
 def validate_site_config(audit: ValidationAudit, config: Any, languages: set[str]) -> None:
     keys = (
         "site_name_he",
+        "meta_title_he",
+        "meta_description_he",
+        "og_title_he",
+        "og_description_he",
+        "release_version",
         "author_name",
         "community_name",
         "contact",
@@ -503,6 +514,9 @@ def validate_site_config(audit: ValidationAudit, config: Any, languages: set[str
     if not require_keys(audit, config, keys, "data/site-config.json"):
         return
     audit.check(has_hebrew(config["site_name_he"]), "config.site_name", "Site name must contain Hebrew", path="data/site-config.json.site_name_he")
+    for key in ("meta_title_he", "meta_description_he", "og_title_he", "og_description_he"):
+        audit.check(has_hebrew(config[key]), "config.metadata", f"{key} must contain Hebrew text", path=f"data/site-config.json.{key}")
+    audit.check(config["release_version"] == "1.0.0", "config.release_version", "Release version must be 1.0.0", path="data/site-config.json.release_version")
     for key in ("author_name", "community_name", "contact", "logo_path"):
         audit.check(isinstance(config[key], str), "config.optional_string", f"{key} must be a string (empty is allowed)", path=f"data/site-config.json.{key}")
     audit.check(has_hebrew(config["safety_warning_he"]), "config.safety_warning", "Safety warning must contain Hebrew text", path="data/site-config.json.safety_warning_he")
@@ -529,7 +543,7 @@ def run_validation(
         expected_count=expected_count,
         minimum_count=minimum_count,
     )
-    validate_learning_paths(audit, loaded["learning_paths"], internal_ids, taxonomy_allowed["skill_levels"])
+    validate_learning_paths(audit, loaded["learning_paths"], internal_ids, taxonomy_allowed["skill_levels"], taxonomy_allowed["risk_levels"])
     validate_synonyms(audit, loaded["synonyms"])
     validate_site_config(audit, loaded["site_config"], taxonomy_allowed["languages"])
     placeholder_hits: list[dict[str, str]] = []

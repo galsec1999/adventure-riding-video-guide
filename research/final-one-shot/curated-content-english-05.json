@@ -1,0 +1,132 @@
+{
+  "ov7AqO_51iI": {
+    "title_he": "מדריך לילה: קצב, סנוור והיערכות חירום", "domain": "road", "primary_category": "road_strategy", "secondary_categories": ["fatigue_management", "trip_preparation"], "tags": ["night", "visibility", "fatigue", "speed_management", "hazard_awareness", "planning"],
+    "skill_level": "beginner", "risk_level": "medium", "motorcycle_types": ["general_motorcycle", "street"], "motorcycle_weight_classes": ["general"], "terrain_types": [], "road_conditions": ["urban", "highway", "rural_twisty"],
+    "summary_he": "סקירה למעבר מרכיבת יום ללילה: ניקיון תאורה, הימנעות מסנוור, מהירות בתוך טווח הראייה, מרווח, עייפות ועצירה לפני תפעול ניווט.",
+    "learning_points_he": ["להאט לפני פנייה או צומת שאינם מוארים", "לא להביט ישירות באור גבוה מתקרב", "להשלים ניווט לפני יציאה ולעצור כדי לשנותו"],
+    "fit_for_he": "לרוכבים מתחילים שמתכננים נסיעת לילה ראשונה על מסלול מוכר.", "why_watch_he": "המקור מחבר בדיקות אופנוע והרגלי רכיבה לשינוי ביכולת לאמוד מרחק ולהגיב בחשכה.",
+    "exercises_he": ["בצע בדיקת תאורה מלאה לפני שקיעה", "תכנן נקודת הפסקה לפני עייפות"], "equipment_he": ["משקף שקוף", "מיגון מלא", "מחזירי אור", "ערכת חירום"],
+    "safety_warnings_he": ["עייפות וסנוור הם סיבה לעצור; אין להמשיך בתקווה שהראות תשתפר."], "common_mistakes_he": ["בהייה באור נגדי", "תפעול טלפון בתנועה"],
+    "quality_score": 4, "quality_reason_he": "תיאור ותמלול מלא מכסים הכנה, קצב וחירום; המקור הכללי אינו בית ספר ולכן מוצג כמבוא בלבד.", "source_type": "community_educator", "contains_marketing": true
+  },
+  "h5YrGuIGgVI": {
+    "title_he": "שבע תובנות מאימון אדוונצ'ר עם כריס בירץ'", "domain": "offroad_adventure", "primary_category": "offroad_basics", "secondary_categories": ["ergonomics", "tires_setup", "riding_position"], "tags": ["body_position", "tire_pressure", "fitness", "controls_setup", "standing", "heavy_bike"],
+    "skill_level": "intermediate", "risk_level": "medium", "motorcycle_types": ["adventure", "dual_sport"], "motorcycle_weight_classes": ["medium", "heavy"], "terrain_types": ["dirt", "gravel"], "road_conditions": [],
+    "summary_he": "סיכום יומיים עם כריס בירץ' סביב כושר, כיוון אופנוע, לחץ צמיג, תנוחת גוף, מתי לשבת או לעמוד ואילו שינויים באמת מועילים.",
+    "learning_points_he": ["לשמור אנרגיה בישיבה כשאין צורך לעמוד", "לכוון פקדים כך שמנופים נשארים מוגנים ונגישים", "להתייחס ללחץ צמיג לפי דגם, עומס ושטח ולא כמספר קבוע"],
+    "fit_for_he": "לרוכבי אדוונצ'ר בינוניים שמבקשים לבחון מיתוסים אחרי קורס או לקראת שדרוג אופנוע.", "why_watch_he": "היוצר מפריד בין שיעורי המאמן להתרשמות אישית ומקדיש פרקים לכושר, כיוון, תנוחה ושינויים.",
+    "exercises_he": ["רשום אילו התאמות אפשר לבדוק בלי לקנות חלקים", "במסלול קל השווה ישיבה לעמידה מבחינת אנרגיה ושליטה"],
+    "equipment_he": ["מיגון שטח מלא", "מד לחץ", "ספר רכב"], "safety_warnings_he": ["אין להעתיק לחצי צמיג מן הסרטון; פעל לפי הצמיג, החישוק, העומס והיצרן."],
+    "common_mistakes_he": ["עמידה תמידית שמעייפת", "שינוי לחץ קיצוני בלי מדידה"], "quality_score": 5, "quality_reason_he": "תשעה פרקים ותמלול מלא תומכים בשבע התובנות ומזהים את כריס בירץ' כמאמן; יש חסות וקישורים מסחריים.", "source_type": "professional_instructor", "contains_marketing": true
+  },
+  "6tlSdNGLPkY": {
+    "title_he": "כללי תמיד, רק ולעולם לא — בבדיקה ביקורתית", "domain": "road", "primary_category": "road_strategy", "secondary_categories": ["road_cornering", "road_braking"], "tags": ["traction", "countersteering", "trail_braking", "cornering", "focus", "safety"],
+    "skill_level": "intermediate", "risk_level": "high", "motorcycle_types": ["street", "sport_touring", "touring"], "motorcycle_weight_classes": ["general"], "terrain_types": [], "road_conditions": ["dry_pavement", "rural_twisty"],
+    "summary_he": "ניתוח ביקורתי של כללים מוחלטים ברכיבה דרך העברת משקל, היגוי נגדי, אפקס בכביש, שילוב גז־בלם ושמירת ריכוז.",
+    "learning_points_he": ["להבין את התוצאה לפני אימוץ כלל מוחלט", "לא לחפש אפקס שמצמצם שדה ראייה בכביש ציבורי", "לנהל אחיזה כשבלימה, הטיה והאצה מתחלפות"],
+    "fit_for_he": "לרוכבי כביש בינוניים שכבר מכירים את המונחים ורוצים לבחון מתי כלל הוא הקשרי.", "why_watch_he": "חמשת הפרקים מציגים מקורות ומפרקים כמה קלישאות נפוצות במקום להוסיף רשימת איסורים נוספת.",
+    "exercises_he": ["בחר כלל אחד ורשום את מטרתו ואת החריגים שלו", "נתח קו פנייה מוכר לפי שדה ראייה ולא לפי אפקס"],
+    "equipment_he": ["מיגון כביש מלא", "מחברת לניתוח"], "safety_warnings_he": ["דיון מתקדם אינו אישור לנסות גבולות אחיזה בכביש ציבורי."],
+    "common_mistakes_he": ["יישום כלל בלי להבין הקשר", "חיפוש זווית הטיה מיותרת"], "quality_score": 5, "quality_reason_he": "חמישה פרקים ותמלול מלא עם הפניות למקורות הדרכה תומכים בניתוח; הערוץ כולל חברות וחסויות.", "source_type": "training_channel", "contains_marketing": true
+  },
+  "HlZvuK_3kPQ": {
+    "title_he": "חמש בדיקות קצרות לפני יציאה", "domain": "safety_recovery", "primary_category": "trip_preparation", "secondary_categories": ["tires_setup"], "tags": ["pre_ride", "tire_pressure", "chain", "inspection", "visibility"],
+    "skill_level": "beginner", "risk_level": "low", "motorcycle_types": ["general_motorcycle"], "motorcycle_weight_classes": ["general"], "terrain_types": [], "road_conditions": [],
+    "summary_he": "בדיקה מהירה אך מדודה של לחץ צמיג, שמן ונזילות, שרשרת, רישוי או תגיות, חיווט, איתותים ונוזל בלמים.",
+    "learning_points_he": ["למדוד לחץ במקום לבעוט בצמיג", "לחפש נזילות סביב מנוע ומסנן", "להפעיל את כל האיתותים ולבדוק חיווט גלוי"],
+    "fit_for_he": "לכל רוכב כגרסה יומית קצרה, לצד בדיקה תקופתית מלאה לפי ספר הרכב.", "why_watch_he": "היוצר מדגים את הבדיקות על האופנוע ומסביר מהו סימן שמחייב עצירה ובירור.",
+    "exercises_he": ["בצע את חמש הבדיקות לפני שלוש נסיעות רצופות", "הוסף ערכים ספציפיים לדגם מכרטיס היצרן"],
+    "equipment_he": ["מד לחץ", "פנס", "ספר רכב"], "safety_warnings_he": ["נזילה, חוט חשוף או לחץ חריג מחייבים תיקון לפני רכיבה."],
+    "common_mistakes_he": ["בדיקת צמיג במגע", "דחיית החלפת פריט שפג תוקפו"], "quality_score": 4, "quality_reason_he": "שישה פרקים ותמלול מלא מאמתים כל בדיקה; הסרטון כולל קידום קורסים וקישורי הנחה.", "source_type": "training_channel", "contains_marketing": true
+  },
+  "bQws3UL3lSc": {
+    "title_he": "חמישה מפגעי דרך מתוך מקרי אמת", "domain": "road", "primary_category": "road_strategy", "secondary_categories": ["wet_weather"], "tags": ["hazard_awareness", "gravel_on_pavement", "snow", "construction", "animals", "vision"],
+    "skill_level": "advanced_beginner", "risk_level": "medium", "motorcycle_types": ["general_motorcycle", "street"], "motorcycle_weight_classes": ["general"], "terrain_types": [], "road_conditions": ["urban", "rural_twisty", "gravel_on_pavement"],
+    "summary_he": "ניתוח קטעי רכיבה סביב אזורי עבודות, שלג, חצץ, שינויי גובה ובעלי חיים, עם דגש על זיהוי מוקדם ויצירת מרחב.",
+    "learning_points_he": ["להאט לפני שינוי מרקם או גובה", "לבחור קו מעבר לפני שהמפגע ממלא את שדה הראייה", "להשאיר מרווח לבעל חיים או למפגע נע"],
+    "fit_for_he": "לרוכבי כביש מתחילים־מתקדמים שרוצים לתרגל חיזוי מתוך דוגמאות מצולמות.", "why_watch_he": "קטעי אמת מאפשרים לעצור לפני האירוע ולבחון אילו סימנים הופיעו מוקדם יותר.",
+    "exercises_he": ["עצור כל דוגמה לפני המפגע ורשום נתיב אפשרי", "ברכיבה רגועה הכרז על שינויי משטח מראש"],
+    "equipment_he": ["מיגון כביש מלא"], "safety_warnings_he": ["ניתוח תאונות אינו מבטיח תגובה; האטה ומרווח קודמים לתמרון חד."],
+    "common_mistakes_he": ["בלימה פתאומית על חצץ", "מבט למפגע בלי חיפוש יציאה"], "quality_score": 4, "quality_reason_he": "שבעה פרקים ותמלול מלא מספקים דוגמאות מגוונות; פרק הגרלה שיווקי יוסר מן הפרקים.", "source_type": "training_channel", "contains_marketing": true
+  },
+  "2HTa9iHvI6U": {
+    "title_he": "חמש דרכים לשמור נוחות במסע ארוך", "domain": "safety_recovery", "primary_category": "fatigue_management", "secondary_categories": ["ergonomics", "protective_gear"], "tags": ["fatigue", "long_distance", "ergonomics", "breaks", "hydration"],
+    "skill_level": "beginner", "risk_level": "low", "motorcycle_types": ["adventure", "touring", "sport_touring"], "motorcycle_weight_classes": ["general"], "terrain_types": [], "road_conditions": ["highway", "rural_twisty"],
+    "summary_he": "עצות למסע ארוך סביב ארגונומיה, ציוד שכבר הורגל, שינוי תנוחה, זרימת אוויר והפסקות יזומות לפני ירידה בריכוז.",
+    "learning_points_he": ["לכוון נקודות מגע לפני יום ארוך", "לא לצאת עם מיגון או מגפיים חדשים לחלוטין", "לשלב תנועה, אוורור והפסקות בלוח הזמנים"],
+    "fit_for_he": "לרוכבי תיור ואדוונצ'ר המתכננים יום רכיבה ארוך ראשון.", "why_watch_he": "הפרקים מכסים גם את האופנוע וגם את גוף הרוכב ומדגישים שמניעת עייפות מתחילה לפני היציאה.",
+    "exercises_he": ["בצע נסיעת מבחן עם כל הציוד", "קבע הפסקות ביומן המסלול"],
+    "equipment_he": ["מיגון מותאם", "מים", "ערכת עזרה ראשונה"], "safety_warnings_he": ["כאשר מופיעים פיהוק, כאב או ירידה בריכוז — עצור; ציוד נוחות אינו תחליף למנוחה."],
+    "common_mistakes_he": ["ציוד חדש ביום היציאה", "דילוג על הפסקה כדי לעמוד בלוח זמנים"], "quality_score": 5, "quality_reason_he": "שישה פרקים ותמלול מלא תומכים בכל חמש העצות; יש ספר, Patreon וקישורי שותפים.", "source_type": "experienced_rider", "contains_marketing": true
+  },
+  "1LVSrs4HucI": {
+    "title_he": "פרסת סמוראי בנעילת היגוי", "domain": "practice", "primary_category": "u_turns_low_speed", "secondary_categories": ["balance_slow_control", "drills"], "tags": ["u_turn", "slow_speed", "countersteering", "clutch", "rear_brake", "balance"],
+    "skill_level": "advanced", "risk_level": "high", "motorcycle_types": ["street", "general_motorcycle"], "motorcycle_weight_classes": ["light", "medium"], "terrain_types": ["parking_lot"], "road_conditions": ["parking_lot"],
+    "summary_he": "תרגיל מתקדם לפרסה מהירה וקומפקטית המשלבת הטיה יזומה, נעילת כידון, תפיסת האופנוע באזור החיכוך ואיזון בגז ובבלם.",
+    "learning_points_he": ["לשלוט קודם בפרסה רגילה בנעילה מלאה", "ליזום הטיה בקלט קטן ולתפוס אותה במצמד", "לשמור מהירות יציבה בלי להפעיל כוח גדול בכידון"],
+    "fit_for_he": "לרוכבים מתקדמים בלבד לאחר עקביות בפרסות רגילות ובהשגחת מדריך.", "why_watch_he": "שמונה הפרקים מפרידים בין פרסה רגילה לגרסה המתקדמת ומראים את התנהגות הכידון בהילוך איטי.",
+    "exercises_he": ["תרגל פרסה רגילה בנעילה מלאה", "הוסף הטיה מוקדמת רק עם מדריך ומרחב גדול"],
+    "equipment_he": ["מיגון מלא", "קונוסים", "מגרש סגור", "מדריך"], "safety_warnings_he": ["התמרון המתקדם עלול להפיל את האופנוע במהירות; אין להתחיל ממנו או לתרגל בכביש."],
+    "common_mistakes_he": ["דחיפה חזקה בכידון", "ניסיון לפני שליטה באזור החיכוך"], "quality_score": 5, "quality_reason_he": "שמונה פרקים ותמלול מלא מאמתים את ההשוואה והתרגיל; הסרטון מקדם קורסים וחסות.", "source_type": "training_channel", "contains_marketing": true
+  },
+  "S36MgsVsHsA": {
+    "title_he": "מציאת אזור החיכוך ושליטה במצמד", "domain": "practice", "primary_category": "controls_coordination", "secondary_categories": ["balance_slow_control", "drills"], "tags": ["clutch", "slow_speed", "rear_brake", "balance", "practice_drill"],
+    "skill_level": "beginner", "risk_level": "low", "motorcycle_types": ["general_motorcycle", "street"], "motorcycle_weight_classes": ["general"], "terrain_types": ["parking_lot"], "road_conditions": ["parking_lot"],
+    "summary_he": "הסבר לאזור שבו המצמד מתחיל להעביר כוח, עם תרגילי איתור נקודת החיבור, תנועה באינצ'ים והוספת בלם אחורי לייצוב.",
+    "learning_points_he": ["לאתר את נקודת החיבור בתנועה של מילימטרים", "לשמור רגליים על הרגליות לאחר היציאה", "להוסיף בלם אחורי רק אחרי שליטה במצמד"],
+    "fit_for_he": "למתחילים במסגרת מגרש סגור ולרוכבים שרוצים ללטש תפעול איטי.", "why_watch_he": "ששת הפרקים בונים רצף מהגדרה לתרגול ומסבירים מדוע אין לגרור רגליים כהרגל איזון.",
+    "exercises_he": ["תרגל נדנוד קצר קדימה ואחורה באזור החיכוך", "התקדם בקו ישר באיטיות והוסף אחורי קל"],
+    "equipment_he": ["מיגון מלא", "מגרש סגור", "מדריך למתחיל מוחלט"], "safety_warnings_he": ["אל תתרגל ליד קירות או תנועה; שמור מרחב לכיבוי מנוע ועצירה."],
+    "common_mistakes_he": ["שחרור מצמד גדול מדי", "גרירת רגליים"], "quality_score": 5, "quality_reason_he": "שישה פרקים ותמלול מלא תומכים בשלבי הלימוד ובאזהרת הרגליים; יש קורסים וחסות.", "source_type": "training_channel", "contains_marketing": true
+  },
+  "GerHAGwhX9k": {
+    "title_he": "חמישה־עשר כללים לרכיבה בקבוצה", "domain": "safety_recovery", "primary_category": "solo_group_safety", "secondary_categories": ["road_strategy", "trip_preparation"], "tags": ["group_riding", "communication", "planning", "lane_position", "safety", "pre_ride"],
+    "skill_level": "advanced_beginner", "risk_level": "medium", "motorcycle_types": ["touring", "street", "adventure"], "motorcycle_weight_classes": ["general"], "terrain_types": [], "road_conditions": ["highway", "rural_twisty", "urban"],
+    "summary_he": "רשימת תדריך לקבוצה: סימני יד, זמן יציאה, מאסף, קצב אישי, מרווח, מבנה מדורג, מעקב אחר הרוכב מאחור ואיסור עקיפות פנימיות.",
+    "learning_points_he": ["להגדיר מוביל ומאסף לפני יציאה", "לרכב בקצב אישי בלי לרדוף אחרי הקבוצה", "לשמור מרווח ומבנה שמתאים לתנאים"],
+    "fit_for_he": "למארגני טיול ולרוכבים חדשים בקבוצה לפני תדריך משותף.", "why_watch_he": "שישה־עשר פרקים מאפשרים להפוך את הסרטון לצ'קליסט תדריך ולדון בנקודות מחלוקת מראש.",
+    "exercises_he": ["ערכו תדריך של חמש דקות עם מוביל ומאסף", "קבעו נוהל המתנה בצומת לפני יציאה"],
+    "equipment_he": ["אמצעי תקשורת מוסכם", "ערכת עזרה ראשונה", "מיגון מלא"], "safety_warnings_he": ["מבנה מדורג אינו מתאים לכל כביש או מזג אוויר; עברו לטור יחיד כשהתנאים דורשים."],
+    "common_mistakes_he": ["לחץ לעמוד בקצב גבוה מדי", "מרווח קטן שגורם אפקט אקורדיון"], "quality_score": 4, "quality_reason_he": "פרקים ותמלול מלא מכסים 15 עצות; זהו מקור מנוסה אך לא בית ספר, ויש קישורי שותפים וחברות.", "source_type": "experienced_rider", "contains_marketing": true
+  },
+  "LvmXbZlf6M8": {
+    "title_he": "טכניקות מסלול של רוכב מקצועי", "domain": "practice", "primary_category": "road_cornering", "secondary_categories": ["road_braking", "controls_coordination"], "tags": ["body_position", "braking", "shifting", "vision", "throttle", "rear_brake"],
+    "skill_level": "advanced", "risk_level": "high", "motorcycle_types": ["sport_touring", "street"], "motorcycle_weight_classes": ["general"], "terrain_types": [], "road_conditions": ["dry_pavement"],
+    "summary_he": "רוכב מרוצים מסביר תנוחת גוף לפני ובתוך פנייה, בלימה, הורדת הילוכים, מיקום ראש, מבט, פתיחת גז, נשימה ושימוש מתקדם באחורי.",
+    "learning_points_he": ["להכין תנוחת גוף לפני ההטיה", "להתאים הורדת הילוכים למערכות האופנוע", "לבנות פתיחת גז בהדרגה תוך נשימה ורפיון"],
+    "fit_for_he": "לרוכבי מסלול מתקדמים עם מאמן; רק העקרונות הכלליים רלוונטיים לכביש ובקצב שמרני.", "why_watch_he": "עשרת הפרקים מסדרים רצף שלם מפעולת גוף ועד נשימה, והיוצר מדגים מניסיון מרוצים מקצועי.",
+    "exercises_he": ["בפיט או בחניה תרגל מעבר תנוחה לפני פנייה", "על מסלול סגור עבוד עם מאמן על נושא יחיד"],
+    "equipment_he": ["ציוד מסלול מלא", "אופנוע תקין", "מסלול סגור", "מאמן"], "safety_warnings_he": ["טכניקות ומהירויות מסלול אינן מיועדות לניסוי בכביש ציבורי."],
+    "common_mistakes_he": ["שינוי תנוחה באמצע הפנייה", "פתיחת גז אגרסיבית מוקדם"], "quality_score": 5, "quality_reason_he": "עשרה פרקים ותמלול מלא מרוכב מרוצים מקצועי מאמתים את הנושאים; התוכן מסחרי ומוכוון מסלול.", "source_type": "professional_instructor", "contains_marketing": true
+  },
+  "6VjSNKBobko": {
+    "title_he": "התאמת אופנוע ותנוחה לנשיאת מורכב", "domain": "safety_recovery", "primary_category": "passenger_riding", "secondary_categories": ["protective_gear"], "tags": ["pillion", "balance", "communication", "protective_gear"],
+    "skill_level": "beginner", "risk_level": "medium", "motorcycle_types": ["touring", "street"], "motorcycle_weight_classes": ["medium", "heavy"], "terrain_types": [], "road_conditions": ["dry_pavement"],
+    "summary_he": "רוכב ומכונאי מסביר שאופנוע חייב להיות מצויד במושב וברגליות למורכב, ושעל המורכב לשבת יציב בלי ליזום הטיה עצמאית.",
+    "learning_points_he": ["לוודא שהאופנוע מורשה ומצויד לשני אנשים", "לשבת במרכז ולנוע יחד עם הרוכב", "לתאם מראש אחיזה ועלייה"],
+    "fit_for_he": "לרוכב ולמורכב כמבוא קצר לפני תדריך מלא ובדיקת ספר הרכב.", "why_watch_he": "הסרטון משווה סוגי אופנועים וממחיש שלא כל מושב או אופנוע מתאימים לנשיאת אדם נוסף.",
+    "exercises_he": ["בדוק רגליות, מושב וידיות אחיזה", "תרגל עלייה כשהמנוע כבוי"],
+    "equipment_he": ["מיגון מלא לשני אנשים", "רגליות ומושב מאושרים"], "safety_warnings_he": ["אין להרכיב על אופנוע שאינו מאושר או חסר רגליות; פעל לפי עומס היצרן."],
+    "common_mistakes_he": ["מורכב שמטה נגד הפנייה", "שימוש במושב שאינו מיועד לכך"], "quality_score": 4, "quality_reason_he": "תיאור ותמלול קצר מאמתים התאמת אופנוע ותנוחה; העומק מוגבל ולכן הסרטון משמש מבוא בלבד.", "source_type": "experienced_rider", "contains_marketing": false
+  },
+  "x10WJdhm0wU": {
+    "title_he": "קריאת קו במדרגות סלע מתקדמות", "domain": "offroad_adventure", "primary_category": "obstacles", "secondary_categories": ["loose_rock", "ruts"], "tags": ["obstacle", "loose_rock", "ruts", "line_selection", "advanced"],
+    "skill_level": "advanced", "risk_level": "high", "motorcycle_types": ["dual_sport"], "motorcycle_weight_classes": ["light"], "terrain_types": ["loose_rock", "obstacle", "ruts"], "road_conditions": [],
+    "summary_he": "תיעוד אימון מתקדם בקטע תלול עם מדרגות סלע, חצץ משוחרר וחריצים צדיים, שימושי בעיקר לניתוח קו ולא כהדרכת טכניקה.",
+    "learning_points_he": ["לסרוק את כל רצף המכשולים לפני כניסה", "לזהות שמדרגה ראשונה משפיעה על הקו לשנייה", "להכיר מתי התוואי חורג מרמת הרוכב"],
+    "fit_for_he": "לרוכבים מתקדמים לצפייה וניתוח בלבד; אינו חומר תרגול למתחילים.", "why_watch_he": "היוצרת מציגה את השיפוע, גובה המדרגות והחצץ בין השלבים ללא הצגת התוואי כקל.",
+    "exercises_he": ["עצור את הווידאו לפני המעבר וסמן שלוש אפשרויות קו", "השווה את הניתוח לתוצאת המעבר"],
+    "equipment_he": ["מיגון אנדורו מלא", "אופנוע שטח", "שותפים ומחלצים"], "safety_warnings_he": ["זהו תיעוד רכיבה, לא שיעור; אין לשחזר את המכשול ללא הכשרה ואתר מאושר."],
+    "common_mistakes_he": ["כניסה בלי לראות את המדרגה השנייה", "בחירת קו מעל לרמה האישית"], "quality_score": 3, "quality_reason_he": "התמלול הקצר מאמת את מבנה התוואי אך כמעט אינו מלמד טכניקה; נשמר רק כניתוח מתקדם ומסומן בבירור.", "source_type": "experienced_rider", "contains_marketing": false
+  },
+  "uT-staOOo9w": {
+    "title_he": "הרמת אופנוע שנפל בבטחה", "domain": "safety_recovery", "primary_category": "lifting", "secondary_categories": ["recovery"], "tags": ["lifting", "recovery", "body_mechanics", "safety", "heavy_bike"],
+    "skill_level": "beginner", "risk_level": "medium", "motorcycle_types": ["general_motorcycle", "touring", "adventure"], "motorcycle_weight_classes": ["medium", "heavy"], "terrain_types": ["dirt", "parking_lot"], "road_conditions": ["parking_lot", "dry_pavement"],
+    "summary_he": "מדריכת Team Oregon מדגימה הערכת פציעה וסביבה, כיבוי, שילוב הילוך, הורדת רגלית והרמה בגב ישר באמצעות הרגליים.",
+    "learning_points_he": ["לבדוק קודם את הגוף, התנועה והדליפה", "למנוע גלגול ולהכין רגלית תמיכה", "להצמיד אגן למושב ולהתקדם בצעדים קטנים עם הרגליים"],
+    "fit_for_he": "לכל רוכב, בתרגול סטטי עם משגיח לפני צורך אמיתי.", "why_watch_he": "הרצף מתחיל בבטיחות ולא בהרמה ומראה כיצד להכין את צד התמיכה לפני הפעלת כוח.",
+    "exercises_he": ["עם מדריך ועל משטח שטוח, תרגל על אופנוע מוגן", "עצור מיד אם הגב או הברך כואבים"],
+    "equipment_he": ["כפפות", "נעליים יציבות", "משגיח", "מיגון לאופנוע"], "safety_warnings_he": ["אין להרים אם נפצעת, יש תנועה, דלק דולף או שהאופנוע בשיפוע; הזמן עזרה."],
+    "common_mistakes_he": ["הרמה עם הגב", "שכחת הילוך או רגלית"], "quality_score": 5, "quality_reason_he": "תיאור ותמלול מלא מזהים מדריכת Team Oregon ומאמתים את רצף ההערכה וההרמה.", "source_type": "riding_school", "contains_marketing": false
+  }
+}

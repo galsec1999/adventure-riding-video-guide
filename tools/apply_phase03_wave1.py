@@ -1,5 +1,9 @@
 #!/usr/bin/env python3
-"""Apply the evidence-bounded Phase 03 Wave 1 trust corrections once."""
+"""HISTORICAL ONE-TIME MIGRATION. DO NOT USE TO AUTHOR OR AUDIT CONTENT.
+
+Apply the evidence-bounded Phase 03 Wave 1 trust corrections once. Retained
+only as an immutable provenance record for the historical 60-record migration.
+"""
 
 from __future__ import annotations
 

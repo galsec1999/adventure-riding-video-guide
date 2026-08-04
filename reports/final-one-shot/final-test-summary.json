@@ -1,0 +1,49 @@
+{
+  "status": "PASS",
+  "completed_at": "2026-08-04T12:21:59+00:00",
+  "unique_test_totals": {
+    "passed": 14201,
+    "failed": 0,
+    "counting_policy": "Data Validation + Node + Python + Browser Acceptance; Search Acceptance is already included in Node and is not double-counted."
+  },
+  "suites": [
+    {
+      "name": "Data Validation",
+      "command": "python tools/validate_data.py --expected-count 250 --report reports/final-one-shot/final-data-validation.json",
+      "passed": 14084,
+      "failed": 0
+    },
+    {
+      "name": "Node tests",
+      "command": "npm test",
+      "passed": 55,
+      "failed": 0
+    },
+    {
+      "name": "Python tests",
+      "command": "python -m unittest discover -s tests -p test_*.py -v",
+      "passed": 24,
+      "failed": 0
+    },
+    {
+      "name": "Browser Acceptance",
+      "evidence": "reports/final-one-shot/browser-acceptance.json",
+      "passed": 38,
+      "failed": 0
+    }
+  ],
+  "additional_gates": {
+    "search_acceptance": {"passed": 25, "failed": 0, "included_in_node_total": true},
+    "content_quality_lint": {"records": 250, "errors": 0, "warnings": 246},
+    "online_link_check": {"active": 250, "unavailable": 0, "indeterminate": 0, "rate_limited": 0},
+    "node_syntax_check": {"passed": 1, "failed": 0, "included_in_unique_total": false},
+    "post_red_team_real_browser_smoke": {"passed": 1, "failed": 0, "included_in_unique_total": false, "evidence": "reports/final-one-shot/browser-smoke-after-red-team.json"}
+  },
+  "performance_measurements_ms": {
+    "prepare_index_250": 89.99,
+    "search_filter_sort_250": 37.44,
+    "prepare_index_300": 102.09,
+    "search_filter_sort_300": 31.38,
+    "note": "Measurement only; no hardware-dependent pass threshold."
+  }
+}

@@ -7,6 +7,7 @@ import {
   normalizeText,
   prepareVideos,
 } from "../assets/js/search.js";
+import { searchAcceptanceCases } from "../tools/search_acceptance.mjs";
 
 
 async function loadJson(relativeUrl) {
@@ -78,22 +79,17 @@ test("English search matches whole words instead of unrelated substrings", () =>
 });
 
 
-const acceptanceQueries = [
-  ["חול", (video) => video.primary_category === "sand" || video.tags.includes("sand")],
-  ["בוץ", (video) => video.primary_category === "mud_wet" || video.tags.includes("mud")],
-  ["פניות בכביש", (video) => video.domain === "road" && video.tags.includes("cornering")],
-  ["בלימת חירום", (video) => video.primary_category === "emergency_braking" || video.tags.includes("emergency_braking")],
-  ["הרמת אופנוע", (video) => video.domain === "safety_recovery" && video.tags.includes("lifting")],
-  ["גשם", (video) => video.primary_category === "wet_weather" || video.tags.includes("rain")],
-  ["עלייה תלולה", (video) => video.primary_category === "hills" || video.tags.includes("hill_climb")],
-  ["רכיבה איטית", (video) => video.tags.includes("slow_speed") || video.primary_category === "balance_slow_control"],
-];
+test("release search acceptance defines all 25 required queries", () => {
+  assert.equal(searchAcceptanceCases.length, 25);
+});
 
 
-for (const [query, isRelevant] of acceptanceQueries) {
-  test(`acceptance search ranks a relevant result first: ${query}`, () => {
+for (const [query, isRelevant] of searchAcceptanceCases) {
+  test(`acceptance search ranks three relevant results first: ${query}`, () => {
     const results = search(query);
-    assert.ok(results.length > 0, `no results for ${query}`);
-    assert.ok(isRelevant(results[0]), `top result ${results[0].id} is not relevant to ${query}`);
+    assert.ok(results.length >= 3, `fewer than three results for ${query}`);
+    results.slice(0, 3).forEach((video, index) => {
+      assert.ok(isRelevant(video), `result ${index + 1} (${video.id}) is not relevant to ${query}`);
+    });
   });
 }

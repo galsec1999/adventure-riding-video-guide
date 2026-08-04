@@ -1,0 +1,52 @@
+{
+  "status": "applied_and_final_link_check_passed",
+  "checked_at": "2026-08-04T12:00:34+00:00",
+  "removed": [
+    {
+      "youtube_video_id": "6hgkx7ZScqY",
+      "youtube_url": "https://www.youtube.com/watch?v=6hgkx7ZScqY",
+      "title_original": "How to climb hills on dirt bikes ∣ Cross Training Enduro",
+      "decision": "replace_unavailable",
+      "reason_he": "בדיקת הקישורים הסופית החזירה HTTP 401 ו־YouTube oEmbed לא אישר את הסרטון; הרשומה הוסרה ולא הושאר קישור שאינו זמין."
+    },
+    {
+      "youtube_video_id": "M6d1cWB-4gY",
+      "youtube_url": "https://www.youtube.com/watch?v=M6d1cWB-4gY",
+      "title_original": "Riding with a Passenger - Nobody Talks About This",
+      "decision": "replace_unavailable",
+      "reason_he": "בדיקת הקישורים הסופית החזירה HTTP 401 ו־YouTube oEmbed לא אישר את הסרטון; הרשומה הוסרה ולא הושאר קישור שאינו זמין."
+    }
+  ],
+  "promoted_ids": [
+    "nBhWbHKCkks",
+    "cM4YrRjKVUc"
+  ],
+  "final_records": 250,
+  "languages": {
+    "en": 219,
+    "he": 31
+  },
+  "unique_channels": 102,
+  "mototrek_records": 20,
+  "learning_paths": 8,
+  "chapters_before": 589,
+  "chapters_after": 897,
+  "chapter_decisions": {
+    "remove_generic": 143,
+    "keep_verified": 897,
+    "remove_with_record": 9
+  },
+  "final_link_check": {
+    "checked": 250,
+    "active": 250,
+    "unavailable": 0,
+    "indeterminate": 0,
+    "rate_limited": 0
+  },
+  "candidate_counts": {
+    "checked": 504,
+    "approved": 127,
+    "rejected": 339,
+    "reserve": 38
+  }
+}

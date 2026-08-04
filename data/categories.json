@@ -231,6 +231,12 @@
       "name_he": "הכנה למסע",
       "name_en": "Trip preparation",
       "description_he": "תכנון מטען, ציוד חירום ומוכנות לפני יציאה."
+    },
+    {
+      "id": "motorcycle_maintenance",
+      "name_he": "תחזוקת אופנוע",
+      "name_en": "Motorcycle maintenance",
+      "description_he": "בדיקות, ניקוי, שימון וכיוון בסיסי לפי הוראות היצרן."
     }
   ],
   "subcategories": [
@@ -567,12 +573,6 @@
       "name_he": "אנגלית",
       "name_en": "English",
       "description_he": "תוכן מדובר בעיקר באנגלית."
-    },
-    {
-      "id": "ja",
-      "name_he": "יפנית",
-      "name_en": "Japanese",
-      "description_he": "תוכן מדובר בעיקר ביפנית."
     }
   ],
   "controlled_tags": [
@@ -1073,6 +1073,174 @@
       "name_he": "בקרת אחיזה",
       "name_en": "Traction control",
       "description_he": "תג מבוקר: בקרת אחיזה אלקטרונית."
+    },
+    {
+      "id": "advanced",
+      "name_he": "מתקדם",
+      "name_en": "Advanced",
+      "description_he": "תג מבוקר: טכניקה או תרגול למתקדמים."
+    },
+    {
+      "id": "animals",
+      "name_he": "בעלי חיים",
+      "name_en": "Animals",
+      "description_he": "תג מבוקר: מפגש עם בעלי חיים בדרך."
+    },
+    {
+      "id": "camping",
+      "name_he": "קמפינג",
+      "name_en": "Camping",
+      "description_he": "תג מבוקר: ציוד ולינה במסע."
+    },
+    {
+      "id": "chain",
+      "name_he": "שרשרת הינע",
+      "name_en": "Drive chain",
+      "description_he": "תג מבוקר: בדיקה ותחזוקת שרשרת הינע."
+    },
+    {
+      "id": "construction",
+      "name_he": "עבודות דרך",
+      "name_en": "Road works",
+      "description_he": "תג מבוקר: מפגעים באזורי עבודות."
+    },
+    {
+      "id": "countersteering",
+      "name_he": "היגוי נגדי",
+      "name_en": "Countersteering",
+      "description_he": "תג מבוקר: ייזום הטיה באמצעות היגוי נגדי."
+    },
+    {
+      "id": "deep_sand",
+      "name_he": "חול עמוק",
+      "name_en": "Deep sand",
+      "description_he": "תג מבוקר: רכיבה בחול עמוק."
+    },
+    {
+      "id": "fitness",
+      "name_he": "כושר",
+      "name_en": "Fitness",
+      "description_he": "תג מבוקר: מוכנות גופנית לרכיבה."
+    },
+    {
+      "id": "focus",
+      "name_he": "ריכוז",
+      "name_en": "Focus",
+      "description_he": "תג מבוקר: שמירת קשב וריכוז."
+    },
+    {
+      "id": "gpx",
+      "name_he": "GPX",
+      "name_en": "GPX",
+      "description_he": "תג מבוקר: קובץ מסלול GPX."
+    },
+    {
+      "id": "gravel_on_pavement",
+      "name_he": "חצץ על אספלט",
+      "name_en": "Gravel on pavement",
+      "description_he": "תג מבוקר: חצץ או פסולת על כביש סלול."
+    },
+    {
+      "id": "group_riding",
+      "name_he": "רכיבה בקבוצה",
+      "name_en": "Group riding",
+      "description_he": "תג מבוקר: מבנה, תפקידים ותקשורת בקבוצה."
+    },
+    {
+      "id": "handlebars",
+      "name_he": "כידון",
+      "name_en": "Handlebars",
+      "description_he": "תג מבוקר: שימוש או כיוון כידון."
+    },
+    {
+      "id": "heat",
+      "name_he": "חום",
+      "name_en": "Heat",
+      "description_he": "תג מבוקר: חום ואוורור ברכיבה."
+    },
+    {
+      "id": "inspection",
+      "name_he": "בדיקה",
+      "name_en": "Inspection",
+      "description_he": "תג מבוקר: בדיקה מכנית או חזותית."
+    },
+    {
+      "id": "maintenance",
+      "name_he": "תחזוקה",
+      "name_en": "Maintenance",
+      "description_he": "תג מבוקר: תחזוקת אופנוע שגרתית."
+    },
+    {
+      "id": "navigation",
+      "name_he": "ניווט",
+      "name_en": "Navigation",
+      "description_he": "תג מבוקר: תכנון וניווט במסלול."
+    },
+    {
+      "id": "crosswind",
+      "name_he": "רוח צד",
+      "name_en": "Crosswind",
+      "description_he": "תג מבוקר: רכיבה ברוח צד ובמשבים."
+    },
+    {
+      "id": "night",
+      "name_he": "לילה",
+      "name_en": "Night",
+      "description_he": "תג מבוקר: רכיבה בתנאי חשכה."
+    },
+    {
+      "id": "offline_maps",
+      "name_he": "מפות לא מקוונות",
+      "name_en": "Offline maps",
+      "description_he": "תג מבוקר: מפות זמינות ללא קליטה."
+    },
+    {
+      "id": "overtaking",
+      "name_he": "עקיפה",
+      "name_en": "Overtaking",
+      "description_he": "תג מבוקר: תכנון וביצוע עקיפה לפי חוק."
+    },
+    {
+      "id": "pre_ride",
+      "name_he": "טרום־רכיבה",
+      "name_en": "Pre-ride",
+      "description_he": "תג מבוקר: בדיקה והכנה לפני יציאה."
+    },
+    {
+      "id": "puncture",
+      "name_he": "תקר",
+      "name_en": "Puncture",
+      "description_he": "תג מבוקר: אבחון ותיקון תקר."
+    },
+    {
+      "id": "route_sharing",
+      "name_he": "שיתוף מסלול",
+      "name_en": "Route sharing",
+      "description_he": "תג מבוקר: שמירה ושיתוף של מסלול."
+    },
+    {
+      "id": "snow",
+      "name_he": "שלג",
+      "name_en": "Snow",
+      "description_he": "תג מבוקר: תנאי שלג או קרח בדרך."
+    },
+    {
+      "id": "target_fixation",
+      "name_he": "קיבוע מטרה",
+      "name_en": "Target fixation",
+      "description_he": "תג מבוקר: קיבוע מבט במפגע."
+    },
+    {
+      "id": "tire_repair",
+      "name_he": "תיקון צמיג",
+      "name_en": "Tire repair",
+      "description_he": "תג מבוקר: תיקון צמיג או פנימית."
+    },
+    {
+      "id": "tires",
+      "name_he": "צמיגים",
+      "name_en": "Tires",
+      "description_he": "תג מבוקר: בדיקת צמיגים כללית."
     }
   ]
 }

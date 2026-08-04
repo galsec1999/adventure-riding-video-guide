@@ -8,6 +8,8 @@ import unittest
 import zipfile
 from contextlib import redirect_stderr, redirect_stdout
 from pathlib import Path
+from unittest.mock import MagicMock, patch
+from urllib.error import HTTPError, URLError
 
 from tools import (
     build_audit,
@@ -131,8 +133,8 @@ class MaintenanceToolsTests(unittest.TestCase):
         self.assertEqual(SOURCE_COUNT, payload["count_expectation"]["actual"])
         self.assertIn("legacy phase-specific wrapper", stderr.getvalue())
 
-    def test_validator_accepts_temporary_130_and_300_record_fixtures(self) -> None:
-        for target_count in (130, 300):
+    def test_validator_accepts_temporary_250_and_300_record_fixtures(self) -> None:
+        for target_count in (250, 300):
             with self.subTest(target_count=target_count), tempfile.TemporaryDirectory() as temp_dir:
                 root = Path(temp_dir)
                 materialize_project_fixture(validate_data.ROOT, root, target_count)
@@ -148,14 +150,14 @@ class MaintenanceToolsTests(unittest.TestCase):
                 self.assertEqual(target_count, result["stats"]["unique_internal_ids"])
                 self.assertEqual(target_count, result["stats"]["unique_youtube_video_ids"])
 
-    def test_300_record_fixture_satisfies_minimum_200_policy(self) -> None:
+    def test_300_record_fixture_satisfies_minimum_250_policy(self) -> None:
         with tempfile.TemporaryDirectory() as temp_dir:
             root = Path(temp_dir)
             materialize_project_fixture(validate_data.ROOT, root, 300)
-            result = validate_data.run_validation(root, minimum_count=200)
+            result = validate_data.run_validation(root, minimum_count=250)
         self.assertEqual("pass", result["status"], result["errors"])
         self.assertEqual(
-            {"mode": "minimum", "value": 200, "actual": 300, "satisfied": True},
+            {"mode": "minimum", "value": 250, "actual": 300, "satisfied": True},
             result["count_expectation"],
         )
 
@@ -164,16 +166,25 @@ class MaintenanceToolsTests(unittest.TestCase):
         self.assertFalse(production_logo.exists())
         with tempfile.TemporaryDirectory() as temp_dir:
             root = Path(temp_dir)
-            serve_acceptance_fixture.prepare_site(root, 130, "custom-logo")
+            serve_acceptance_fixture.prepare_site(root, 250, "custom-logo")
             videos = load_json(root / "data" / "videos.json")
             config = load_json(root / "data" / "site-config.json")
-            self.assertEqual(130, len(videos))
-            self.assertEqual(130, len({video["id"] for video in videos}))
+            self.assertEqual(250, len(videos))
+            self.assertEqual(250, len({video["id"] for video in videos}))
             self.assertEqual("מדריך בדיקת תצורה", config["site_name_he"])
             self.assertEqual("קהילת בדיקות מקומית", config["community_name"])
+            self.assertEqual("מדריך בדיקת תצורה", config["meta_title_he"])
+            self.assertEqual("מדריך בדיקת תצורה", config["og_title_he"])
             self.assertEqual("assets/acceptance-fixture-logo.svg", config["logo_path"])
             self.assertTrue((root / config["logo_path"]).is_file())
         self.assertFalse(production_logo.exists())
+
+    def test_acceptance_fixture_can_expose_a_safe_empty_data_error_state(self) -> None:
+        with tempfile.TemporaryDirectory() as temp_dir:
+            root = Path(temp_dir)
+            serve_acceptance_fixture.prepare_site(root, 250, "broken-data")
+            self.assertEqual([], load_json(root / "data" / "videos.json"))
+            self.assertTrue((root / "index.html").is_file())
 
     def test_site_config_allows_empty_optional_identity_fields(self) -> None:
         config = load_json(validate_data.ROOT / "data" / "site-config.json")
@@ -197,12 +208,46 @@ class MaintenanceToolsTests(unittest.TestCase):
         self.assertEqual(len(videos), report["summary"]["local_valid"])
         self.assertEqual(0, report["summary"]["local_invalid"])
 
+    def test_link_checker_retries_transient_error_then_reports_active(self) -> None:
+        result = check_links.local_results([SOURCE_VIDEOS[0]])[0]
+        response = MagicMock()
+        response.getcode.return_value = 200
+        response.read.return_value = json.dumps(
+            {"provider_name": "YouTube", "title": "Verified", "author_name": "Channel"}
+        ).encode("utf-8")
+        context = MagicMock()
+        context.__enter__.return_value = response
+        delays: list[float] = []
+        with patch.object(check_links, "urlopen", side_effect=[URLError("temporary"), context]):
+            checked = check_links.check_oembed(result, 1.0, retries=2, backoff=0.25, sleep=delays.append)
+        self.assertEqual("active_public", checked["online_status"])
+        self.assertEqual(2, checked["attempt_count"])
+        self.assertEqual([0.25], delays)
+
+    def test_link_checker_distinguishes_unavailable_and_rate_limited(self) -> None:
+        result = check_links.local_results([SOURCE_VIDEOS[0]])[0]
+        unavailable = HTTPError(result["expected_url"], 404, "Not Found", None, None)
+        with patch.object(check_links, "urlopen", side_effect=unavailable):
+            checked_unavailable = check_links.check_oembed(result, 1.0, retries=2, sleep=lambda _delay: None)
+        self.assertEqual("unavailable", checked_unavailable["online_status"])
+        self.assertEqual(1, checked_unavailable["attempt_count"])
+        unavailable.close()
+
+        limited = HTTPError(result["expected_url"], 429, "Too Many Requests", None, None)
+        delays: list[float] = []
+        with patch.object(check_links, "urlopen", side_effect=limited):
+            checked_limited = check_links.check_oembed(result, 1.0, retries=2, backoff=0.5, sleep=delays.append)
+        self.assertEqual("rate_limited", checked_limited["online_status"])
+        self.assertEqual(3, checked_limited["attempt_count"])
+        self.assertEqual([0.5, 1.0], delays)
+        limited.close()
+
     def test_audit_matches_source_counts(self) -> None:
         with tempfile.TemporaryDirectory() as temp_dir:
             report = build_audit.build_audit(Path(temp_dir))
         self.assertEqual(SOURCE_COUNT, report["total_videos"])
         self.assertEqual(report["total_videos"], report["unique_youtube_video_ids"])
-        self.assertGreaterEqual(report["learning_paths"]["count"], 2)
+        self.assertEqual(report["learning_paths"]["count"], 8)
         self.assertEqual("pass", report["validation"]["status"])
 
     def test_audit_writes_all_three_formats(self) -> None:
