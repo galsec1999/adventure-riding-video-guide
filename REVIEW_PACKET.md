@@ -1,76 +1,72 @@
-# חבילת ביקורת — Release 1.0
+# חבילת ביקורת — v2.3.0 PWA ו־GitHub Pages
 
 ## 1. מה הושלם
 
-- **ענף:** `final-one-shot-release-v1`
-- **גרסה:** 1.0.0
-- **תוצאה:** PASS
-- הושלם מאגר Production של בדיוק 250 סרטונים פעילים, ייחודיים ומאומתים.
-- הושלמו אתר סטטי עברי RTL, חיפוש דו־לשוני, מסננים משולבים, 8 מסלולי למידה, מועדפים, נצפה, התקדמות, Deep Links ונגן פרטיות לפי דרישה.
-- נבנתה חבילת Release אחת עם `site/`, ‏`source/`, ‏`reports/`, דוח סופי ומניפסט SHA-256.
-- `NEXT_ACTION.md` נסגר ומסירת Phase 03 הועברה לארכיון; אין שלב המשך.
+- נבחרה במפורש חבילת המקור `Adventure-Riding-Video-Guide-v2.2.1-Bilingual-Web-Package.zip` ונשמרו נתוני המקור ללא המצאה או החלפה.
+- האתר הדו־לשוני הוסב ל־PWA ניתנת להתקנה עם Manifest, אייקונים, Service Worker, app shell לא מקוון, מסך 404, הודעת עדכון בהסכמה ועזרת התקנה.
+- נוצר Repository ציבורי, נוספו שני GitHub Actions ונפרס האתר ב־GitHub Pages תחת נתיב המשנה של ה־Repository.
+- בוצעו בדיקות מקומיות ובדיקות Chrome חיות בעברית ובאנגלית, במובייל ובמחשב שולחני.
+- הוכן Tag ו־GitHub Release בשם `v2.3.0-pwa` עם חבילת Web, HTML עצמאי וקובץ SHA-256.
 
 ## 2. מספרים מדויקים
 
 | מדד | תוצאה |
 |---|---:|
-| רשומות לפני / אחרי | 130 / 250 |
-| עברית / אנגלית / שפות אחרות | 31 / 219 / 0 |
-| IDs, ‏YouTube IDs וכתובות ייחודיים | 250 / 250 / 250 |
-| ערוצים ייחודיים | 102 |
-| MOTOTREK | 20 |
-| מועמדים שנבדקו / אושרו / נדחו / עתודה | 504 / 127 / 339 / 38 |
-| מועמדים עבריים שנבדקו | 227 |
-| רשומות בסיס שתוקנו / הוחלפו | 58 / 7 |
-| Chapters לפני / אחרי | 589 / 897 |
-| Chapters שהוסרו ככלליים / עם רשומה | 143 / 9 |
-| מסלולים / צעדים / הפניות | 8 / 64 / 192 |
-| Confidence high / medium / low | 250 / 0 / 0 |
-| Quality 5 / 4 / 3 | 151 / 93 / 6 |
-| Marketing=true | 119 |
-| תחומים — שטח / כביש / תרגול / בטיחות / משולב | 85 / 62 / 35 / 49 / 19 |
+| סרטונים | 450 |
+| עברית / אנגלית | 66 / 384 |
+| IDs ייחודיים / YouTube IDs ייחודיים | 450 / 450 |
+| ערוצים ייחודיים | 175 |
+| מסלולי למידה | 17 |
+| אייקוני PWA | 5 |
+| צילומי Chrome מקומיים | 4 |
+| צילומי Chrome חיים | 4 |
+| בדיקות PWA סטטיות | 957 עברו, 0 נכשלו |
+| בדיקות Node | 62 עברו, 0 נכשלו |
+| כתובות אתר חי שנבדקו | 8, כולן HTTP 200 |
+| Workflows ירוקים שנבדקו | 2 |
 
 ## 3. קבצים שנוצרו או שונו
 
-- אתר: `index.html`, ‏`assets/css/styles.css`, ‏`assets/js/app.js`, ‏`assets/js/search.js`, ‏`assets/js/storage.js`.
-- נתונים: `data/videos.json`, ‏`data/categories.json`, ‏`data/learning-paths.json`, ‏`data/site-config.json`.
-- כלים: מאמת הנתונים, בדיקת הקישורים עם Retry/Backoff, Quality Lint, שער החיפוש, כלי האוצרות, שתי ביקורות Red Team ובונה ה־Release.
-- בדיקות: חיפוש, חמישה מסננים, Storage חסום, 250/300 רשומות, מצב שגיאה, קישורים וכלי תחזוקה.
-- מחקר: `research/final-one-shot/`, לרבות Evidence Ledger, ‏Chapter Curation, מאושרים, דחויים ועתודה.
-- דוחות: `reports/final-one-shot/`, לרבות Baseline, אימות, קישורים, Audit, דפדפן, צילומי מסך, Red Team, Git ו־Release.
-- תיעוד: `README.md`, ‏`DECISIONS.md`, ‏`PROJECT_STATUS.md`, ‏`NEXT_ACTION.md`, ‏`CHANGELOG.md`, מסמך מסירה היסטורי זה וארכיון Phase 03.
+- PWA: `site/manifest.webmanifest`, ‏`site/service-worker.js`, ‏`site/offline.html`, ‏`site/404.html`, ‏`site/assets/js/pwa.js` וחמישה אייקונים תחת `site/assets/icons/`.
+- אתר: `site/index.html`, ‏`site/assets/js/app.js`, ‏`site/assets/css/styles.css`, ‏`site/data/site-config.json`.
+- CI/CD: `.github/workflows/validate.yml`, ‏`.github/workflows/deploy-pages.yml`, ‏`requirements-ci.txt`.
+- בדיקות וכלים: `tools/validate_pwa.py`, ‏`tests/pwa.test.mjs`, ‏`package.json`.
+- קהילה ותיעוד: `README.md`, ‏`README.en.md`, ‏`CONTRIBUTING.md`, ‏`SECURITY.md`, ‏`CODE_OF_CONDUCT.md`, ‏`DEPLOYMENT_REPORT.md` ומסמכי הסטטוס.
+- ראיות: `reports/pwa-validation.json`, ‏`reports/pwa-local-test.*`, ‏`reports/live-site-test.*` ושמונה צילומי מסך.
 
-## 4. בדיקות שהורצו ותוצאות
+## 4. בדיקות שהורצו ותוצאותיהן
 
-| שער | עברו | נכשלו | תוצאה |
-|---|---:|---:|---|
-| Data Validation — בדיוק 250 | 14,084 | 0 | PASS |
-| Node tests | 55 | 0 | PASS |
-| Python tests | 24 | 0 | PASS |
-| Browser Acceptance | 38 | 0 | PASS |
-| **סך סופי ייחודי** | **14,201** | **0** | **PASS** |
-| Search Acceptance | 25/25 | 0 | PASS; כל 25 כלולות בבדיקות Node ואינן נספרות שוב |
-| Content Quality Lint | 250 רשומות, 0 errors | 0 | PASS; ‏246 אזהרות אורך לא חוסמות |
-| Link Check חי | 250 active | 0 | PASS |
-| Node syntax check | 1 קובץ | 0 | PASS; אינו נספר בסך הבדיקות |
-| Red Team A / B | 2 ביקורות | 0 ממצאים שנותרו | PASS |
+| בדיקה | תוצאה |
+|---|---|
+| `python tools/validate_pwa.py` | PASS — 957/957 |
+| `npm test` | PASS — 62/62 |
+| תחביר JavaScript ו־Service Worker | PASS |
+| YAML של שני Workflows | PASS |
+| `git diff --check` | PASS |
+| Chrome מקומי, נתיב משנה | PASS — 450 רשומות, RTL/LTR, בהיר/כהה, Mobile/Desktop, 0 גלישה אופקית |
+| Service Worker ועדכון | PASS — activated/controlled, waiting update בהסכמה ורענון יחיד |
+| Offline app shell | PASS — האתר והנתונים נטענו לאחר עצירת שרת המקור; YouTube נשאר תלוי רשת |
+| Chrome חי ב־GitHub Pages | PASS — 450 רשומות, אירוע `beforeinstallprompt`, RTL/LTR, Mobile/Desktop |
+| GitHub Validate run `31008965959` | success |
+| GitHub Pages run `31008966092` | success |
+| בדיקת HTTP חיה | PASS — 8/8 כתובות החזירו 200 |
 
 ## 5. בעיות, מגבלות וסיכונים
 
-- זמינות YouTube יכולה להשתנות לאחר מועד הבדיקה; לכן כלי הקישורים והוראות התחזוקה נשארים חלק מן המקור.
-- 246 תקצירים קצרים מן הטווח המומלץ 45–100 מילים נשמרו בכוונה כאשר הרחבה לא הייתה נתמכת בראיות; אלו אזהרות Audit בלבד ולא תוכן חסר או תבנית.
-- האתר שומר מצב משתמש מקומית בלבד ואינו מסנכרן בין מכשירים; זו החלטת ארכיטקטורה ללא Backend.
-- אין וידאו, שמע, תמלול מלא, API Key או Secret בפרויקט או בחבילת השחרור.
-- שני קישורים שנכשלו בשער החי הוחלפו לפני השחרור וכל הבדיקות הורצו שוב.
+- סרטוני YouTube אינם נשמרים במטמון ודורשים אינטרנט; זו מגבלה מכוונת של זכויות, פרטיות וגודל.
+- זמינות סרטונים ושירותי צד שלישי יכולה להשתנות לאחר השחרור.
+- Chrome הציג אירוע התקנה אמיתי וכפתור התקנה, אך לא דווח אירוע `appinstalled`; לכן הדוח אינו טוען שהאפליקציה הותקנה בפרופיל המשתמש.
+- צילום אחד הציג לרגע frame ריק בזמן repaint לאחר החלפת שפה; ה־DOM נשאר מלא, והצילום החוזר לאחר repaint היה תקין. אין ממצא Runtime מתמשך.
+- פעולת CI ראשונה נכשלה מפני ש־pip cache לא מצא קובץ dependencies. נוסף `requirements-ci.txt`, ושתי הריצות הסופיות עברו.
 
 ## 6. מה נשאר
 
-אין משימת פיתוח או תוכן פתוחה ל־Release 1.0. תחזוקה עתידית היא בדיקת זמינות תקופתית בלבד או גרסה חדשה שתאושר בנפרד.
+אין משימת פיתוח או פריסה פתוחה לגרסה זו. תחזוקה עתידית היא בדיקת זמינות מקורות או גרסה חדשה שתאושר בנפרד.
 
 ## 7. שער האיכות
 
-הסבב עבר את שער Release 1.0: בדיוק 250 רשומות, 250/250 קישורים פעילים, 31 סרטונים בעברית, 8 מסלולים, 0 P0/P1/P2/P3, ‏0 שגיאות Console, Manifest תקין ו־ZIP שניתן לחלץ ולאמת.
+PASS. כל דרישות השחרור שניתנות לאימות אוטומטי וב־Chrome עברו: 450 רשומות, קישורי PWA יחסיים, Manifest ואייקונים תקינים, Service Worker פעיל, Offline app shell, התקנה זמינה, GitHub Actions ירוקים, אתר חי וארבעת נתיבי התצוגה.
 
-## 8. המלצה
+## 8. המלצה לשלב הבא
 
-לפרסם את תוכן `site/` מתוך `release/Adventure-Riding-Video-Guide-v1.0.0-FINAL.zip` באחסון סטטי. אין לפתוח Phase נוסף ואין להעביר עבודה ל־Work או ל־Codex.
+לשמור את `v2.3.0-pwa` כגרסת הייחוס הציבורית. אין לפתוח שלב נוסף באותו סבב.

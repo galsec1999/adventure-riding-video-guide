@@ -1,0 +1,42 @@
+{
+  "release": "2.3.0",
+  "tested_at": "2026-08-05",
+  "repository": "https://github.com/galsec1999/adventure-riding-video-guide",
+  "live_url": "https://galsec1999.github.io/adventure-riding-video-guide/",
+  "result": "PASS",
+  "content": {
+    "videos": 450,
+    "unique_ids": 450,
+    "unique_youtube_ids": 450,
+    "hebrew": 66,
+    "english": 384,
+    "channels": 175,
+    "learning_paths": 17
+  },
+  "http": {
+    "checked_urls": 8,
+    "status_200": 8,
+    "mixed_content_references": 0,
+    "root_absolute_asset_paths": 0
+  },
+  "chrome": {
+    "desktop": "1440x900",
+    "mobile": "390x844",
+    "hebrew_rtl": true,
+    "english_ltr": true,
+    "horizontal_overflow": false,
+    "beforeinstallprompt_observed": true,
+    "install_button_visible": true,
+    "appinstalled_observed": false,
+    "service_worker_activated": true,
+    "service_worker_controlled": true,
+    "offline_app_shell": true,
+    "youtube_offline": false
+  },
+  "github_actions": {
+    "validate_run_id": 31008965959,
+    "validate_conclusion": "success",
+    "pages_run_id": 31008966092,
+    "pages_conclusion": "success"
+  }
+}
