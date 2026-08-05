@@ -33,6 +33,24 @@ test("HTML links the PWA surface with relative paths", async () => {
   assert.match(html, /apple-mobile-web-app-capable/);
 });
 
+test("public author credit uses a first name without a personal copyright claim", async () => {
+  const [html, config, translations, standalone, license, packagedLicense, contentLicense] = await Promise.all([
+    read("site/index.html"),
+    read("site/data/site-config.json"),
+    read("site/assets/js/i18n.js"),
+    read("site/downloads/Adventure-Riding-Video-Guide-v2.2.1-Standalone.html"),
+    read("LICENSE"),
+    read("documentation/LICENSE.md"),
+    read("documentation/COMMUNITY_CONTENT_LICENSE.md"),
+  ]);
+  for (const source of [html, config, translations, standalone, license, packagedLicense, contentLicense]) {
+    assert.doesNotMatch(source, /אילן נחמן|Ilan Nachman/);
+  }
+  assert.match(html, /data-author-name="">אילן<\/span>\. התקצירים והסיווגים/);
+  assert.doesNotMatch(html, /data-author-block="">©/);
+  assert.match(html, /פרויקט קהילתי — קוד ורכיבים מקוריים בלבד/);
+});
+
 test("install button only appears after beforeinstallprompt and success waits for appinstalled", async () => {
   const pwa = await read("site/assets/js/pwa.js");
   assert.match(pwa, /beforeinstallprompt/);
