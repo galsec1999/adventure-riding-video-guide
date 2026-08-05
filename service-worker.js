@@ -1,6 +1,6 @@
-// PWA release build: 2026-08-05-r3
+// PWA release build: 2026-08-05-r4
 const CACHE_PREFIX = "adventure-guide-";
-const CACHE_NAME = "adventure-guide-v2.3.0-privacy";
+const CACHE_NAME = "adventure-guide-v2.3.1";
 const BASE_URL = new URL("./", self.registration.scope);
 const APP_SHELL = [
   "./",
