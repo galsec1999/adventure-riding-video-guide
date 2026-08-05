@@ -1,4 +1,4 @@
-# MIT License — קוד האתר
+# MIT License — קוד האתר — גרסת מסמך 2.3.1
 
 Copyright (c) 2026 Ilan and community contributors
 

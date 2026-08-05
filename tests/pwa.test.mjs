@@ -38,7 +38,7 @@ test("public author credit uses a first name without a personal copyright claim"
     read("site/index.html"),
     read("site/data/site-config.json"),
     read("site/assets/js/i18n.js"),
-    read("site/downloads/Adventure-Riding-Video-Guide-v2.2.1-Standalone.html"),
+    read("site/downloads/Adventure-Riding-Video-Guide-v2.3.1-Standalone.html"),
     read("LICENSE"),
     read("documentation/LICENSE.md"),
     read("documentation/COMMUNITY_CONTENT_LICENSE.md"),
@@ -62,7 +62,7 @@ test("install button only appears after beforeinstallprompt and success waits fo
 
 test("service worker activates updates only after an explicit message", async () => {
   const worker = await read("site/service-worker.js");
-  assert.match(worker, /adventure-guide-v2\.3\.0/);
+  assert.match(worker, /adventure-guide-v2\.3\.1/);
   assert.match(worker, /event\.data\?\.type === "SKIP_WAITING"/);
   assert.doesNotMatch(worker, /addEventListener\("install"[\s\S]{0,180}skipWaiting/);
   assert.match(worker, /clients\.claim/);

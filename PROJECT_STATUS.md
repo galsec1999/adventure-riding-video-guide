@@ -1,6 +1,6 @@
-# מצב הפרויקט
+# מצב הפרויקט — גרסת מסמך 2.3.1
 
-- **גרסה:** 2.3.0 PWA
+- **גרסה:** 2.3.1 PWA
 - **מצב:** פורסם ונבדק ב־GitHub Pages
 - **תוצאה:** PASS
 - **Repository ציבורי:** <https://github.com/galsec1999/adventure-riding-video-guide>
@@ -15,8 +15,8 @@
 - **בדיקות Chrome:** עברית RTL, אנגלית LTR, Desktop ‏1440×900, Mobile ‏390×844, מצב כהה/בהיר, 0 גלישה אופקית
 - **PWA:** Manifest תקין, Service Worker פעיל ושולט, אירוע התקנה אמיתי זמין, עדכון בהסכמה ו־offline app shell עברו
 - **GitHub Actions:** Validate run `31032256366` ו־Pages run `31032254407` עברו עבור עדכון הפרטיות
-- **אימות חי:** מקור GitHub Pages מציג „אילן” בלבד, שורת זכויות קהילתית ומטמון `adventure-guide-v2.3.0-privacy`
-- **Tag/Release:** `v2.3.0-pwa`
+- **אימות חי:** מקור GitHub Pages מציג „אילן” בלבד ושורת זכויות קהילתית; אימות גרסה 2.3.1 יושלם לאחר הפרסום
+- **Tag/Release:** `v2.3.1`
 - **משימת המשך:** אין
 
 ## ראיות מרכזיות

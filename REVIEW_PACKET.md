@@ -1,4 +1,4 @@
-# חבילת ביקורת — עדכון פרטיות לקרדיט הציבורי
+# חבילת ביקורת — פרטיות ומספור גרסאות — גרסת מסמך 2.3.1
 
 ## 1. מה הושלם
 
@@ -9,28 +9,31 @@
 - תרגומי האנגלית עודכנו ל־`Ilan` ול־`Community project`.
 - מפתח מטמון ה־Service Worker הוחלף כדי שמשתמשים חוזרים יקבלו את העדכון.
 - נוספה בדיקת נסיגה שמונעת החזרת `אילן נחמן` או `Ilan Nachman` לקבצי הפרסום.
+- גרסת המוצר הועלתה ל־2.3.1, וקובץ ה־HTML העצמאי קיבל שם וגרסה תואמים.
+- נוסף כלל מחייב של גרסה גלויה בכותרת והעלאת גרסה בכל שינוי מסמך עתידי.
 
 ## 2. מספרים מדויקים
 
 | מדד | תוצאה |
 |---|---:|
-| קובצי מימוש/נתונים/רישיון ששונו | 10 |
-| קובץ בדיקות ששונה | 1 |
-| מסמכי סטטוס/החלטות/מסירה שעודכנו | 4 |
+| קובצי מוצר ותצורה ששונו | 6 |
+| קובצי בדיקה ואימות ששונו | 2 |
+| מסמכים ודוח אימות שנוצרו או עודכנו | 11 |
 | בדיקות Node | 63 עברו, 0 נכשלו |
 | בדיקות PWA סטטיות | 957 עברו, 0 נכשלו |
 | בדיקות נתוני מקור | 14,083 עברו, 0 נכשלו |
 | שפות שנבדקו בדפדפן | 2 — עברית ואנגלית |
 | מופעי השם המלא בקובצי הפרסום שנבדקו | 0 |
+| מסמכים אנושיים ששונו ונושאים `גרסת מסמך` בכותרת | 10/10 |
 
 ## 3. קבצים שנוצרו או שונו
 
-- אתר ונתונים: `site/index.html`, `site/data/site-config.json`, `site/assets/js/i18n.js`, `site/service-worker.js`.
-- חבילת HTML: `site/downloads/Adventure-Riding-Video-Guide-v2.2.1-Standalone.html`.
-- מקור מקביל: `index.html`, `data/site-config.json`.
+- מוצר ותצורה: `package.json`, ‏`site/index.html`, ‏`site/data/site-config.json`, ‏`site/manifest.webmanifest`, ‏`site/service-worker.js`.
+- חבילת HTML: `site/downloads/Adventure-Riding-Video-Guide-v2.3.1-Standalone.html`.
 - רישיונות: `LICENSE`, ‏`documentation/LICENSE.md`, ‏`documentation/COMMUNITY_CONTENT_LICENSE.md`.
-- בדיקות: `tests/pwa.test.mjs`.
-- מסמכי סבב: `PROJECT_STATUS.md`, `DECISIONS.md`, `REVIEW_PACKET.md`, `NEXT_ACTION.md`.
+- בדיקות ואימות: `tests/pwa.test.mjs`, ‏`tools/validate_pwa.py`, ‏`reports/pwa-validation.json`.
+- מסמכי סבב ומדיניות: `AGENTS.md`, ‏`PROJECT_STATUS.md`, ‏`DECISIONS.md`, ‏`REVIEW_PACKET.md`, ‏`NEXT_ACTION.md`.
+- מסמכי גרסה: `documentation/README.md`, ‏`documentation/RELEASE_NOTES_2.3.1_HE.md`.
 
 ## 4. בדיקות שהורצו ותוצאותיהן
 
@@ -40,6 +43,7 @@
 | `npm run validate:pwa` | PASS — 957/957, ‏450 סרטונים |
 | `npm run validate` | PASS — 14,083/14,083, ‏250 רשומות מקור |
 | `git diff --check` | PASS |
+| ביקורת כותרות מסמכים | PASS — ‏10/10 נושאים `גרסת מסמך 2.3.1` |
 | חיפוש שם מלא בקובצי הפרסום והמקור המעודכנים | PASS — 0 מופעים |
 | דפדפן מקומי, עברית RTL | PASS — „אילן” בלבד, ללא שם מלא, ניסוח קהילתי |
 | דפדפן מקומי, אנגלית LTR | PASS — `Ilan` ו־`Community project`, ללא שם מלא |
@@ -47,7 +51,7 @@
 | GitHub Pages run `31032254407` | PASS |
 | מקור האתר החי | PASS — „אילן” בלבד וללא © אישי |
 | תצורת האתר החיה | PASS — `author_name` הוא „אילן” |
-| Service Worker חי | PASS — מטמון `adventure-guide-v2.3.0-privacy` |
+| Service Worker חי | ממתין לפרסום — מטמון יעד `adventure-guide-v2.3.1` |
 
 ## 5. בעיות, מגבלות וסיכונים
 

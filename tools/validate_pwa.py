@@ -109,7 +109,7 @@ def main() -> int:
         check(f"subpath-safe:{path.relative_to(site).as_posix()}", absolute_pattern.search(content) is None)
 
     worker = (site / "service-worker.js").read_text(encoding="utf-8")
-    for token in ["adventure-guide-v2.3.0", "SKIP_WAITING", "clients.claim", "./data/videos.json", "./offline.html"]:
+    for token in ["adventure-guide-v2.3.1", "SKIP_WAITING", "clients.claim", "./data/videos.json", "./offline.html"]:
         check(f"worker:{token}", token in worker)
     for forbidden in ["youtube.com", "youtube-nocookie.com", "googlevideo.com"]:
         check(f"worker:no-{forbidden}", forbidden not in worker)
