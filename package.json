@@ -1,6 +1,6 @@
 {
   "name": "adventure-riding-video-guide",
-  "version": "1.0.0",
+  "version": "2.3.0",
   "private": true,
   "description": "אתר סטטי בעברית למדריך וידאו לרכיבת אדוונצ'ר",
   "type": "module",
@@ -8,10 +8,11 @@
     "node": ">=20"
   },
   "scripts": {
-    "test": "node --test tests/search.test.mjs tests/filters.test.mjs tests/storage.test.mjs tests/data-integrity.test.mjs tests/scalability.test.mjs tests/smoke.test.mjs",
+    "test": "node --test tests/search.test.mjs tests/filters.test.mjs tests/storage.test.mjs tests/data-integrity.test.mjs tests/scalability.test.mjs tests/smoke.test.mjs tests/pwa.test.mjs",
     "test:unit": "node --test tests/search.test.mjs tests/filters.test.mjs tests/storage.test.mjs tests/data-integrity.test.mjs tests/scalability.test.mjs",
     "test:smoke": "node --test tests/smoke.test.mjs",
     "validate": "python tools/validate_data.py",
-    "audit": "python tools/build_audit.py"
+    "audit": "python tools/build_audit.py",
+    "validate:pwa": "python tools/validate_pwa.py --site site --schema documentation/video.schema.json --expected-count 450 --report reports/pwa-validation.json"
   }
 }

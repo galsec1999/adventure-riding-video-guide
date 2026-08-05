@@ -1,0 +1,63 @@
+{
+  "base_videos": 350,
+  "release_videos": 450,
+  "new_tutorials": 100,
+  "new_languages": {
+    "en": 80,
+    "he": 20
+  },
+  "new_domains": {
+    "practice": 13,
+    "road": 21,
+    "offroad_adventure": 28,
+    "safety_recovery": 4,
+    "mixed": 18,
+    "touring_travel": 16
+  },
+  "new_categories": {
+    "road_cornering": 9,
+    "road_strategy": 6,
+    "hills": 6,
+    "group_riding": 6,
+    "emergency_braking": 5,
+    "wet_weather": 5,
+    "sand": 5,
+    "tires_setup": 5,
+    "suspension_setup": 5,
+    "motorcycle_maintenance": 5,
+    "riding_position": 4,
+    "offroad_basics": 4,
+    "pre_trip_inspection": 4,
+    "offroad_turning": 3,
+    "balance_slow_control": 3,
+    "u_turns_low_speed": 3,
+    "obstacles": 3,
+    "controls_coordination": 2,
+    "fatigue_management": 2,
+    "ergonomics": 2,
+    "protective_gear": 2,
+    "roadside_repairs": 2,
+    "gravel_dirt": 1,
+    "descents": 1,
+    "ruts": 1,
+    "mud_wet": 1,
+    "lifting": 1,
+    "recovery": 1,
+    "packing_luggage": 1,
+    "route_navigation": 1,
+    "electronic_aids": 1
+  },
+  "new_content_types": {
+    "technique": 38,
+    "drill": 12,
+    "explainer": 21,
+    "maintenance_howto": 15,
+    "checklist": 4,
+    "touring_guide": 10
+  },
+  "new_channels": 66,
+  "new_unique_ids": 100,
+  "research_last_checked_dates": {
+    "2026-08-05": 100
+  }
+}

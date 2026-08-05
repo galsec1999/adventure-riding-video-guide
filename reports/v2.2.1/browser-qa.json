@@ -1,0 +1,59 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "video_count": 450,
+      "trail_braking_count": 9,
+      "formatted_count": 8,
+      "mobile_overflow": 0,
+      "mobile_overflow_context": 0
+    }
+  ],
+  "contrast": {
+    "hero_heading": {
+      "fg": "rgb(24, 34, 28)",
+      "bg": "rgb(244, 241, 232)",
+      "ratio": 14.48
+    },
+    "hero_lead": {
+      "fg": "rgb(51, 70, 59)",
+      "bg": "rgb(244, 241, 232)",
+      "ratio": 8.94
+    },
+    "primary_button": {
+      "fg": "rgb(255, 255, 255)",
+      "bg": "rgb(189, 79, 39)",
+      "ratio": 4.87
+    },
+    "footer_text": {
+      "fg": "rgb(212, 223, 216)",
+      "bg": "rgb(23, 53, 42)",
+      "ratio": 9.72
+    },
+    "discovery_heading": {
+      "fg": "rgb(242, 239, 229)",
+      "bg": "rgb(16, 23, 18)",
+      "ratio": 15.83
+    },
+    "domain_tab_active": {
+      "fg": "rgb(255, 253, 247)",
+      "bg": "rgb(49, 95, 74)",
+      "ratio": 7.2
+    },
+    "video_card_title": {
+      "fg": "rgb(242, 239, 229)",
+      "bg": "rgb(32, 45, 37)",
+      "ratio": 12.47
+    }
+  },
+  "errors": [],
+  "screenshots": [
+    "desktop-home-light-he.png",
+    "desktop-library-road-focus-he.png",
+    "desktop-video-detail-new-he.png",
+    "desktop-library-all-en.png",
+    "desktop-library-dark-en.png",
+    "mobile-filter-hierarchy-he.png",
+    "mobile-library-he.png"
+  ]
+}

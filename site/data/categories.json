@@ -1,0 +1,2555 @@
+{
+  "version": "2.2.1",
+  "updated": "2026-08-05",
+  "domains": [
+    {
+      "id": "offroad_adventure",
+      "name_he": "אדוונצ'ר ושטח",
+      "name_en": "Adventure and off-road",
+      "description_he": "רכיבה מחוץ לאספלט על אופנועי אדוונצ'ר ודו־שימושי.",
+      "description_en": "Guidance and resources for adventure and off-road."
+    },
+    {
+      "id": "road",
+      "name_he": "רכיבת כביש",
+      "name_en": "Road riding",
+      "description_he": "שליטה, פניות, בלימה ואסטרטגיה בכביש ציבורי.",
+      "description_en": "Guidance and resources for road riding."
+    },
+    {
+      "id": "mixed",
+      "name_he": "רכיבה משולבת",
+      "name_en": "Mixed riding",
+      "description_he": "מיומנויות המקשרות בין כביש, מגרש ושטח.",
+      "description_en": "Guidance and resources for mixed riding."
+    },
+    {
+      "id": "practice",
+      "name_he": "תרגול ואימון",
+      "name_en": "Practice and drills",
+      "description_he": "תרגילים מדורגים בסביבה מבוקרת.",
+      "description_en": "Guidance and resources for practice and drills."
+    },
+    {
+      "id": "safety_recovery",
+      "name_he": "בטיחות וחילוץ",
+      "name_en": "Safety and recovery",
+      "description_he": "מיגון, תכנון, עייפות, הרמה וחילוץ.",
+      "description_en": "Guidance and resources for safety and recovery."
+    },
+    {
+      "id": "touring_travel",
+      "name_he": "טיולים ומסעות",
+      "name_en": "Touring and trips",
+      "description_he": "תכנון, ניווט, קבוצה, ציוד, קשב ונסיעות ארוכות בארץ ובחו״ל.",
+      "description_en": "Guidance and resources for touring and trips."
+    }
+  ],
+  "categories": [
+    {
+      "id": "riding_position",
+      "name_he": "תנוחת רכיבה",
+      "name_en": "Riding position",
+      "description_he": "עמידה, ישיבה ומיקום גוף.",
+      "description_en": "Guidance and resources for riding position."
+    },
+    {
+      "id": "ergonomics",
+      "name_he": "ארגונומיה וכיוון פקדים",
+      "name_en": "Ergonomics and controls setup",
+      "description_he": "התאמת האופנוע ונקודות המגע לרוכב.",
+      "description_en": "Guidance and resources for ergonomics and controls setup."
+    },
+    {
+      "id": "controls_coordination",
+      "name_he": "תיאום פקדים",
+      "name_en": "Controls coordination",
+      "description_he": "מצמד, גז, הילוכים ובלמים בתיאום.",
+      "description_en": "Guidance and resources for controls coordination."
+    },
+    {
+      "id": "balance_slow_control",
+      "name_he": "איזון ושליטה איטית",
+      "name_en": "Balance and slow control",
+      "description_he": "שליטה במהירות נמוכה ובקצב הליכה.",
+      "description_en": "Guidance and resources for balance and slow control."
+    },
+    {
+      "id": "offroad_basics",
+      "name_he": "יסודות שטח",
+      "name_en": "Off-road fundamentals",
+      "description_he": "בסיס לרוכב הנכנס לעפר ולשבילים.",
+      "description_en": "Guidance and resources for off-road fundamentals."
+    },
+    {
+      "id": "offroad_braking",
+      "name_he": "בלימה בשטח",
+      "name_en": "Off-road braking",
+      "description_he": "ניהול בלימה ואחיזה על משטחים רופפים.",
+      "description_en": "Guidance and resources for off-road braking."
+    },
+    {
+      "id": "gravel_dirt",
+      "name_he": "עפר וחצץ",
+      "name_en": "Dirt and gravel",
+      "description_he": "רכיבה בדרכי עפר וחצץ בעומקים משתנים.",
+      "description_en": "Guidance and resources for dirt and gravel."
+    },
+    {
+      "id": "sand",
+      "name_he": "חול",
+      "name_en": "Sand",
+      "description_he": "חול רך, עמוק וחצץ רך.",
+      "description_en": "Guidance and resources for sand."
+    },
+    {
+      "id": "ruts",
+      "name_he": "חריצים",
+      "name_en": "Ruts",
+      "description_he": "כניסה, יציאה ושמירת קו בחריצים.",
+      "description_en": "Guidance and resources for ruts."
+    },
+    {
+      "id": "hills",
+      "name_he": "עליות",
+      "name_en": "Hill climbs",
+      "description_he": "הכנה, הילוך, תנופה וקו בעלייה.",
+      "description_en": "Guidance and resources for hill climbs."
+    },
+    {
+      "id": "descents",
+      "name_he": "ירידות",
+      "name_en": "Descents",
+      "description_he": "קצב, בלימה וקו בירידות.",
+      "description_en": "Guidance and resources for descents."
+    },
+    {
+      "id": "loose_rock",
+      "name_he": "אבנים ודרדרת",
+      "name_en": "Loose rock",
+      "description_he": "רכיבה על אבנים נעות וקרקע גסה.",
+      "description_en": "Guidance and resources for loose rock."
+    },
+    {
+      "id": "mud_wet",
+      "name_he": "בוץ ושטח רטוב",
+      "name_en": "Mud and wet terrain",
+      "description_he": "אחיזה ותפעול בתנאים חלקים.",
+      "description_en": "Guidance and resources for mud and wet terrain."
+    },
+    {
+      "id": "water_crossings",
+      "name_he": "מעברי מים",
+      "name_en": "Water crossings",
+      "description_he": "בדיקה, קו וקצב במעבר מים.",
+      "description_en": "Guidance and resources for water crossings."
+    },
+    {
+      "id": "obstacles",
+      "name_he": "מכשולים",
+      "name_en": "Obstacles",
+      "description_he": "מעבר מכשולים מדורג בשטח.",
+      "description_en": "Guidance and resources for obstacles."
+    },
+    {
+      "id": "offroad_turning",
+      "name_he": "פניות שטח",
+      "name_en": "Off-road turning",
+      "description_he": "פניות הדוקות, איטיות ועל אחיזה נמוכה.",
+      "description_en": "Guidance and resources for off-road turning."
+    },
+    {
+      "id": "road_cornering",
+      "name_he": "פניות בכביש",
+      "name_en": "Road cornering",
+      "description_he": "מבט, קו, קצב ותנוחה בפניות כביש.",
+      "description_en": "Guidance and resources for road cornering."
+    },
+    {
+      "id": "road_braking",
+      "name_he": "בלימה בכביש",
+      "name_en": "Road braking",
+      "description_he": "שילוב בלמים והעברת משקל בכביש.",
+      "description_en": "Guidance and resources for road braking."
+    },
+    {
+      "id": "emergency_braking",
+      "name_he": "בלימת חירום",
+      "name_en": "Emergency braking",
+      "description_he": "עצירה מרבית ו־ABS בסביבה מבוקרת.",
+      "description_en": "Guidance and resources for emergency braking."
+    },
+    {
+      "id": "road_strategy",
+      "name_he": "אסטרטגיית כביש",
+      "name_en": "Road strategy",
+      "description_he": "סריקה, מיקום, ראות ונתיב מילוט.",
+      "description_en": "Guidance and resources for road strategy."
+    },
+    {
+      "id": "u_turns_low_speed",
+      "name_he": "סיבובי פרסה",
+      "name_en": "U-turns",
+      "description_he": "סיבוב הדוק ושליטה איטית.",
+      "description_en": "Guidance and resources for u-turns."
+    },
+    {
+      "id": "wet_weather",
+      "name_he": "גשם וכביש רטוב",
+      "name_en": "Rain and wet roads",
+      "description_he": "אחיזה, ראות ומרווח בתנאי גשם.",
+      "description_en": "Guidance and resources for rain and wet roads."
+    },
+    {
+      "id": "passenger_riding",
+      "name_he": "רכיבה עם מורכב",
+      "name_en": "Pillion riding",
+      "description_he": "תקשורת והתאמת תפעול למשקל נוסף.",
+      "description_en": "Guidance and resources for pillion riding."
+    },
+    {
+      "id": "drills",
+      "name_he": "תרגילים",
+      "name_en": "Drills",
+      "description_he": "תרגול מובנה במגרש או בשטח בטוח.",
+      "description_en": "Guidance and resources for drills."
+    },
+    {
+      "id": "solo_group_safety",
+      "name_he": "רכיבת סולו וקבוצה",
+      "name_en": "Solo and group safety",
+      "description_he": "תכנון, תקשורת וניהול סיכונים.",
+      "description_en": "Guidance and resources for solo and group safety."
+    },
+    {
+      "id": "fatigue_management",
+      "name_he": "ניהול עייפות",
+      "name_en": "Fatigue management",
+      "description_he": "זיהוי עייפות, הפסקות ותכנון מסע.",
+      "description_en": "Guidance and resources for fatigue management."
+    },
+    {
+      "id": "recovery",
+      "name_he": "חילוץ",
+      "name_en": "Recovery",
+      "description_he": "התאוששות ממצב תקוע או כשל בעלייה.",
+      "description_en": "Guidance and resources for recovery."
+    },
+    {
+      "id": "lifting",
+      "name_he": "הרמת אופנוע",
+      "name_en": "Motorcycle lifting",
+      "description_he": "הרמה בטוחה לפי הקרקע והאופנוע.",
+      "description_en": "Guidance and resources for motorcycle lifting."
+    },
+    {
+      "id": "protective_gear",
+      "name_he": "ציוד מיגון",
+      "name_en": "Protective gear",
+      "description_he": "מיגון ולבוש לרכיבה.",
+      "description_en": "Guidance and resources for protective gear."
+    },
+    {
+      "id": "tires_setup",
+      "name_he": "צמיגים ולחצי אוויר",
+      "name_en": "Tires and pressures",
+      "description_he": "בחירת צמיג, לחץ אוויר והתאמה לעומס ולתוואי.",
+      "description_en": "Guidance and resources for tires and pressures."
+    },
+    {
+      "id": "suspension_setup",
+      "name_he": "כיוון מתלים",
+      "name_en": "Suspension setup",
+      "description_he": "קפיצים, שקיעה, קדם־עומס ושיכוך בהתאם לעומס.",
+      "description_en": "Guidance and resources for suspension setup."
+    },
+    {
+      "id": "electronic_aids",
+      "name_he": "מערכות עזר אלקטרוניות",
+      "name_en": "Electronic rider aids",
+      "description_he": "ABS, בקרת אחיזה ומצבי רכיבה בכביש ובשטח.",
+      "description_en": "Guidance and resources for electronic rider aids."
+    },
+    {
+      "id": "trip_preparation",
+      "name_he": "הכנה למסע",
+      "name_en": "Trip preparation",
+      "description_he": "תכנון מטען, ציוד חירום ומוכנות לפני יציאה.",
+      "description_en": "Guidance and resources for trip preparation."
+    },
+    {
+      "id": "motorcycle_maintenance",
+      "name_he": "תחזוקת אופנוע",
+      "name_en": "Motorcycle maintenance",
+      "description_he": "בדיקות, ניקוי, שימון וכיוון בסיסי לפי הוראות היצרן.",
+      "description_en": "Guidance and resources for motorcycle maintenance."
+    },
+    {
+      "id": "training_courses",
+      "name_he": "קורסים ואימונים",
+      "name_en": "Training and courses",
+      "description_he": "קורסים, אימון מודרך והתקדמות מתוכננת.",
+      "description_en": "Guidance and resources for training and courses."
+    },
+    {
+      "id": "mindful_riding",
+      "name_he": "קשב והרגלי רכיבה",
+      "name_en": "Mindful riding",
+      "description_he": "קשב, קבלת החלטות והרגלים שמפחיתים סיכון.",
+      "description_en": "Guidance and resources for mindful riding."
+    },
+    {
+      "id": "route_navigation",
+      "name_he": "ניווט ו־GPX",
+      "name_en": "Navigation and GPX",
+      "description_he": "תכנון מסלול, מפות לא מקוונות וניווט בפועל.",
+      "description_en": "Guidance and resources for navigation and gpx."
+    },
+    {
+      "id": "packing_luggage",
+      "name_he": "אריזה וזיווד",
+      "name_en": "Packing and luggage",
+      "description_he": "חלוקת משקל, ציוד ואריזה לטיול.",
+      "description_en": "Guidance and resources for packing and luggage."
+    },
+    {
+      "id": "tools_spares",
+      "name_he": "כלים וחלפים",
+      "name_en": "Tools and spares",
+      "description_he": "ערכת כלים, חלפים וציוד חירום לדרך.",
+      "description_en": "Guidance and resources for tools and spares."
+    },
+    {
+      "id": "group_riding",
+      "name_he": "רכיבה בקבוצה",
+      "name_en": "Group riding",
+      "description_he": "מבנה קבוצה, מוביל, מאסף, מרווח ותקשורת.",
+      "description_en": "Guidance and resources for group riding."
+    },
+    {
+      "id": "pre_trip_inspection",
+      "name_he": "בדיקה לפני טיול",
+      "name_en": "Pre-trip inspection",
+      "description_he": "צ׳קליסט אופנוע, רוכב ומסמכים לפני יציאה.",
+      "description_en": "Guidance and resources for pre-trip inspection."
+    },
+    {
+      "id": "motorcycle_camping",
+      "name_he": "קמפינג עם אופנוע",
+      "name_en": "Motorcycle camping",
+      "description_he": "לינה, ציוד וקמפינג בטיול אופנוע.",
+      "description_en": "Guidance and resources for motorcycle camping."
+    },
+    {
+      "id": "international_touring",
+      "name_he": "טיולים בחו״ל",
+      "name_en": "International touring",
+      "description_he": "גבולות, מסמכים, השכרה ושינוע במסע בחו״ל.",
+      "description_en": "Guidance and resources for international touring."
+    },
+    {
+      "id": "roadside_repairs",
+      "name_he": "תיקוני דרך",
+      "name_en": "Roadside repairs",
+      "description_he": "תקר, שרשרת ותקלות שניתן להעריך בדרך.",
+      "description_en": "Guidance and resources for roadside repairs."
+    },
+    {
+      "id": "bike_selection",
+      "name_he": "בחירת אופנוע",
+      "name_en": "Motorcycle selection",
+      "description_he": "התאמת גודל, משקל ויכולת למשימה ולרוכב.",
+      "description_en": "Guidance and resources for motorcycle selection."
+    },
+    {
+      "id": "mechanical_emergencies",
+      "name_he": "מצבי חירום מכניים",
+      "name_en": "Mechanical emergencies",
+      "description_he": "תגובה שמרנית לכשל מכני בזמן רכיבה.",
+      "description_en": "Guidance and resources for mechanical emergencies."
+    },
+    {
+      "id": "touring_planning",
+      "name_he": "תכנון טיול",
+      "name_en": "Tour planning",
+      "description_he": "טיול יום, רב־יומי או חו״ל: מסלול, קצב וגיבוי.",
+      "description_en": "Guidance and resources for tour planning."
+    }
+  ],
+  "subcategories": [
+    {
+      "id": "beginner_foundations",
+      "name_he": "יסודות למתחילים",
+      "name_en": "Beginner foundations",
+      "description_he": "נקודת פתיחה לרוכב חדש.",
+      "description_en": "Focused learning resources for beginner foundations."
+    },
+    {
+      "id": "neutral_body_position",
+      "name_he": "תנוחת גוף ניטרלית",
+      "name_en": "Neutral body position",
+      "description_he": "יציבה שמאפשרת תנועה ושליטה.",
+      "description_en": "Focused learning resources for neutral body position."
+    },
+    {
+      "id": "standing_position",
+      "name_he": "עמידה על הרגליות",
+      "name_en": "Standing position",
+      "description_he": "עמידה תנועתית בשטח.",
+      "description_en": "Focused learning resources for standing position."
+    },
+    {
+      "id": "weight_transfer",
+      "name_he": "העברת משקל",
+      "name_en": "Weight transfer",
+      "description_he": "ניהול עומס בין הגלגלים.",
+      "description_en": "Focused learning resources for weight transfer."
+    },
+    {
+      "id": "control_setup",
+      "name_he": "כיוון פקדים",
+      "name_en": "Control setup",
+      "description_he": "התאמת כידון, מנופים ונקודות מגע.",
+      "description_en": "Focused learning resources for control setup."
+    },
+    {
+      "id": "mirror_setup",
+      "name_he": "כיוון מראות",
+      "name_en": "Mirror setup",
+      "description_he": "שדה ראייה והפחתת שטחים מתים.",
+      "description_en": "Focused learning resources for mirror setup."
+    },
+    {
+      "id": "friction_zone",
+      "name_he": "אזור החיכוך",
+      "name_en": "Friction zone",
+      "description_he": "שליטה עדינה במצמד.",
+      "description_en": "Focused learning resources for friction zone."
+    },
+    {
+      "id": "throttle_precision",
+      "name_he": "דיוק בגז",
+      "name_en": "Throttle precision",
+      "description_he": "מינון מצערת חלק.",
+      "description_en": "Focused learning resources for throttle precision."
+    },
+    {
+      "id": "brake_coordination",
+      "name_he": "תיאום בלמים",
+      "name_en": "Brake coordination",
+      "description_he": "שילוב קדמי ואחורי.",
+      "description_en": "Focused learning resources for brake coordination."
+    },
+    {
+      "id": "walking_pace_balance",
+      "name_he": "איזון בקצב הליכה",
+      "name_en": "Walking-pace balance",
+      "description_he": "שליטה איטית ויציבה.",
+      "description_en": "Focused learning resources for walking-pace balance."
+    },
+    {
+      "id": "countersteering",
+      "name_he": "היגוי הפוך",
+      "name_en": "Countersteering",
+      "description_he": "היגוי ליצירת הטיה.",
+      "description_en": "Focused learning resources for countersteering."
+    },
+    {
+      "id": "vision_line",
+      "name_he": "מבט ובחירת קו",
+      "name_en": "Vision and line",
+      "description_he": "סריקה וקו רכיבה.",
+      "description_en": "Focused learning resources for vision and line."
+    },
+    {
+      "id": "entry_speed",
+      "name_he": "מהירות כניסה",
+      "name_en": "Entry speed",
+      "description_he": "ניהול מהירות לפני פנייה.",
+      "description_en": "Focused learning resources for entry speed."
+    },
+    {
+      "id": "trail_braking",
+      "name_he": "בלימה לתוך פנייה",
+      "name_en": "Trail braking",
+      "description_he": "שחרור בלם מדורג בכניסה.",
+      "description_en": "Focused learning resources for trail braking."
+    },
+    {
+      "id": "corner_exit",
+      "name_he": "יציאה מפנייה",
+      "name_en": "Corner exit",
+      "description_he": "פתיחת קו והאצה מבוקרת.",
+      "description_en": "Focused learning resources for corner exit."
+    },
+    {
+      "id": "maximum_braking",
+      "name_he": "בלימה מרבית",
+      "name_en": "Maximum braking",
+      "description_he": "עצירה חזקה בקו ישר.",
+      "description_en": "Focused learning resources for maximum braking."
+    },
+    {
+      "id": "swerve_escape",
+      "name_he": "הסטה ונתיב מילוט",
+      "name_en": "Swerve and escape path",
+      "description_he": "התחמקות ממכשול.",
+      "description_en": "Focused learning resources for swerve and escape path."
+    },
+    {
+      "id": "u_turn",
+      "name_he": "סיבוב פרסה",
+      "name_en": "U-turn",
+      "description_he": "פנייה הדוקה במהירות נמוכה.",
+      "description_en": "Focused learning resources for u-turn."
+    },
+    {
+      "id": "figure_eight",
+      "name_he": "שמיניות",
+      "name_en": "Figure eights",
+      "description_he": "מעברים רצופים בין פניות.",
+      "description_en": "Focused learning resources for figure eights."
+    },
+    {
+      "id": "full_lock_control",
+      "name_he": "שליטה בכידון מלא",
+      "name_en": "Full-lock control",
+      "description_he": "איזון בהיגוי מלא.",
+      "description_en": "Focused learning resources for full-lock control."
+    },
+    {
+      "id": "hazard_perception",
+      "name_he": "זיהוי סכנות",
+      "name_en": "Hazard perception",
+      "description_he": "קריאת תנועה וסביבה.",
+      "description_en": "Focused learning resources for hazard perception."
+    },
+    {
+      "id": "lane_position",
+      "name_he": "מיקום בנתיב",
+      "name_en": "Lane position",
+      "description_he": "בחירת מיקום שמגדיל מרווח.",
+      "description_en": "Focused learning resources for lane position."
+    },
+    {
+      "id": "overtaking",
+      "name_he": "עקיפה",
+      "name_en": "Overtaking",
+      "description_he": "הערכת ראות והפרש מהירות.",
+      "description_en": "Focused learning resources for overtaking."
+    },
+    {
+      "id": "shoulder_check",
+      "name_he": "בדיקת כתף",
+      "name_en": "Shoulder check",
+      "description_he": "אימות שטח מת לפני שינוי.",
+      "description_en": "Focused learning resources for shoulder check."
+    },
+    {
+      "id": "rain_strategy",
+      "name_he": "אסטרטגיית גשם",
+      "name_en": "Rain strategy",
+      "description_he": "קצב, מרווח ואחיזה ברטוב.",
+      "description_en": "Focused learning resources for rain strategy."
+    },
+    {
+      "id": "wet_cornering",
+      "name_he": "פניות ברטוב",
+      "name_en": "Wet cornering",
+      "description_he": "ניהול פנייה בכביש רטוב.",
+      "description_en": "Focused learning resources for wet cornering."
+    },
+    {
+      "id": "night_visibility",
+      "name_he": "ראות בלילה",
+      "name_en": "Night visibility",
+      "description_he": "סריקה, תאורה וסנוור.",
+      "description_en": "Focused learning resources for night visibility."
+    },
+    {
+      "id": "offroad_foundations",
+      "name_he": "יסודות אדוונצ׳ר",
+      "name_en": "Adventure foundations",
+      "description_he": "בסיס לרכיבה מחוץ לאספלט.",
+      "description_en": "Focused learning resources for adventure foundations."
+    },
+    {
+      "id": "offroad_line_selection",
+      "name_he": "קו בשטח",
+      "name_en": "Off-road line selection",
+      "description_he": "בחירת מסלול בתוואי משתנה.",
+      "description_en": "Focused learning resources for off-road line selection."
+    },
+    {
+      "id": "offroad_tight_turn",
+      "name_he": "פנייה הדוקה בשטח",
+      "name_en": "Tight off-road turn",
+      "description_he": "סיבוב איטי על משטח רופף.",
+      "description_en": "Focused learning resources for tight off-road turn."
+    },
+    {
+      "id": "offroad_cornering",
+      "name_he": "פניות שטח",
+      "name_en": "Off-road cornering",
+      "description_he": "מבט, אחיזה ותנועת גוף.",
+      "description_en": "Focused learning resources for off-road cornering."
+    },
+    {
+      "id": "gravel_stability",
+      "name_he": "יציבות בחצץ",
+      "name_en": "Gravel stability",
+      "description_he": "שליטה על משטח רופף.",
+      "description_en": "Focused learning resources for gravel stability."
+    },
+    {
+      "id": "sand_momentum",
+      "name_he": "תנופה בחול",
+      "name_en": "Sand momentum",
+      "description_he": "שמירת תנועה וקו.",
+      "description_en": "Focused learning resources for sand momentum."
+    },
+    {
+      "id": "deep_sand",
+      "name_he": "חול עמוק",
+      "name_en": "Deep sand",
+      "description_he": "ניהול אופנוע בחול עמוק.",
+      "description_en": "Focused learning resources for deep sand."
+    },
+    {
+      "id": "sand_cornering",
+      "name_he": "פניות בחול",
+      "name_en": "Sand cornering",
+      "description_he": "בחירת קו ותנופה בפנייה.",
+      "description_en": "Focused learning resources for sand cornering."
+    },
+    {
+      "id": "mud_traction",
+      "name_he": "אחיזה בבוץ",
+      "name_en": "Mud traction",
+      "description_he": "מינון פקדים וקריאת אחיזה.",
+      "description_en": "Focused learning resources for mud traction."
+    },
+    {
+      "id": "rut_line",
+      "name_he": "קו בחריץ",
+      "name_en": "Rut line",
+      "description_he": "שמירת גלגלים בתוך חריץ.",
+      "description_en": "Focused learning resources for rut line."
+    },
+    {
+      "id": "hill_approach",
+      "name_he": "הכנה לעלייה",
+      "name_en": "Hill approach",
+      "description_he": "קו, הילוך ותנופה לפני העלייה.",
+      "description_en": "Focused learning resources for hill approach."
+    },
+    {
+      "id": "hill_momentum",
+      "name_he": "תנופה בעלייה",
+      "name_en": "Hill momentum",
+      "description_he": "ניהול כוח ותנועה בטיפוס.",
+      "description_en": "Focused learning resources for hill momentum."
+    },
+    {
+      "id": "steep_descent",
+      "name_he": "ירידה תלולה",
+      "name_en": "Steep descent",
+      "description_he": "קצב ובלימה בירידה.",
+      "description_en": "Focused learning resources for steep descent."
+    },
+    {
+      "id": "loose_rock_line",
+      "name_he": "קו בדרדרת",
+      "name_en": "Loose-rock line",
+      "description_he": "בחירת קו על אבנים משוחררות.",
+      "description_en": "Focused learning resources for loose-rock line."
+    },
+    {
+      "id": "logs_ledges",
+      "name_he": "בולי עץ ומדרגות",
+      "name_en": "Logs and ledges",
+      "description_he": "מעבר מכשולים מדורג.",
+      "description_en": "Focused learning resources for logs and ledges."
+    },
+    {
+      "id": "rock_steps",
+      "name_he": "מדרגות סלע",
+      "name_en": "Rock steps",
+      "description_he": "עלייה וירידה בפני סלע.",
+      "description_en": "Focused learning resources for rock steps."
+    },
+    {
+      "id": "water_assessment",
+      "name_he": "הערכת מעבר מים",
+      "name_en": "Water assessment",
+      "description_he": "עומק, זרימה, כניסה ויציאה.",
+      "description_en": "Focused learning resources for water assessment."
+    },
+    {
+      "id": "bike_lift",
+      "name_he": "הרמת אופנוע",
+      "name_en": "Motorcycle lifting",
+      "description_he": "טכניקת הרמה בטוחה.",
+      "description_en": "Focused learning resources for motorcycle lifting."
+    },
+    {
+      "id": "bike_lift_hill",
+      "name_he": "הרמה במדרון",
+      "name_en": "Lifting on a slope",
+      "description_he": "התארגנות והרמה על שיפוע.",
+      "description_en": "Focused learning resources for lifting on a slope."
+    },
+    {
+      "id": "sand_mud_recovery",
+      "name_he": "חילוץ מחול ובוץ",
+      "name_en": "Sand and mud recovery",
+      "description_he": "שחרור אופנוע תקוע.",
+      "description_en": "Focused learning resources for sand and mud recovery."
+    },
+    {
+      "id": "tire_pressure",
+      "name_he": "לחץ אוויר",
+      "name_en": "Tyre pressure",
+      "description_he": "התאמת לחץ לשימוש ולמטען.",
+      "description_en": "Focused learning resources for tyre pressure."
+    },
+    {
+      "id": "tire_choice",
+      "name_he": "בחירת צמיג",
+      "name_en": "Tyre choice",
+      "description_he": "התאמת צמיג לכביש ולשטח.",
+      "description_en": "Focused learning resources for tyre choice."
+    },
+    {
+      "id": "sag_preload",
+      "name_he": "Sag ו־Preload",
+      "name_en": "Sag and preload",
+      "description_he": "גובה עבודה ועומס קפיץ.",
+      "description_en": "Focused learning resources for sag and preload."
+    },
+    {
+      "id": "damping_basics",
+      "name_he": "שיכוך בסיסי",
+      "name_en": "Damping basics",
+      "description_he": "כיוון Compression ו־Rebound.",
+      "description_en": "Focused learning resources for damping basics."
+    },
+    {
+      "id": "abs_strategy",
+      "name_he": "שימוש ב־ABS",
+      "name_en": "Using ABS",
+      "description_he": "מתי המערכת מסייעת ומה מגבלותיה.",
+      "description_en": "Focused learning resources for using abs."
+    },
+    {
+      "id": "traction_control",
+      "name_he": "בקרת אחיזה",
+      "name_en": "Traction control",
+      "description_he": "שימוש במערכות אלקטרוניות.",
+      "description_en": "Focused learning resources for traction control."
+    },
+    {
+      "id": "pre_ride_tclocs",
+      "name_he": "בדיקה לפני רכיבה",
+      "name_en": "Pre-ride inspection",
+      "description_he": "צמיגים, פקדים, נוזלים ושלדה.",
+      "description_en": "Focused learning resources for pre-ride inspection."
+    },
+    {
+      "id": "rental_inspection",
+      "name_he": "בדיקת אופנוע שכור",
+      "name_en": "Rental-bike inspection",
+      "description_he": "בדיקה לפני מסירת אופנוע לא מוכר.",
+      "description_en": "Focused learning resources for rental-bike inspection."
+    },
+    {
+      "id": "chain_care",
+      "name_he": "תחזוקת שרשרת",
+      "name_en": "Chain care",
+      "description_he": "ניקוי, שימון, מתיחה ובדיקה.",
+      "description_en": "Focused learning resources for chain care."
+    },
+    {
+      "id": "tire_repair_tube",
+      "name_he": "תיקון פנימית",
+      "name_en": "Tube repair",
+      "description_he": "פירוק ותיקון גלגל עם פנימית.",
+      "description_en": "Focused learning resources for tube repair."
+    },
+    {
+      "id": "field_repair",
+      "name_he": "תיקון דרך",
+      "name_en": "Field repair",
+      "description_he": "כלים ותיקון זמני בטיול.",
+      "description_en": "Focused learning resources for field repair."
+    },
+    {
+      "id": "helmet_fit",
+      "name_he": "התאמת קסדה",
+      "name_en": "Helmet fit",
+      "description_he": "בחירת מידה, תקן והתאמה.",
+      "description_en": "Focused learning resources for helmet fit."
+    },
+    {
+      "id": "protective_gear_selection",
+      "name_he": "בחירת מיגון",
+      "name_en": "Protective gear selection",
+      "description_he": "התאמת ציוד לסוג הרכיבה.",
+      "description_en": "Focused learning resources for protective gear selection."
+    },
+    {
+      "id": "group_formation",
+      "name_he": "מבנה קבוצה",
+      "name_en": "Group formation",
+      "description_he": "טור, מבנה מדורג ומרווחים.",
+      "description_en": "Focused learning resources for group formation."
+    },
+    {
+      "id": "leader_sweep",
+      "name_he": "מוביל ומאסף",
+      "name_en": "Leader and sweep",
+      "description_he": "חלוקת תפקידים בקבוצה.",
+      "description_en": "Focused learning resources for leader and sweep."
+    },
+    {
+      "id": "group_briefing",
+      "name_he": "תדריך קבוצה",
+      "name_en": "Group briefing",
+      "description_he": "קצב, עצירות, תקשורת וחירום.",
+      "description_en": "Focused learning resources for group briefing."
+    },
+    {
+      "id": "long_distance_pacing",
+      "name_he": "קצב למרחק ארוך",
+      "name_en": "Long-distance pacing",
+      "description_he": "הפסקות, מים וריכוז.",
+      "description_en": "Focused learning resources for long-distance pacing."
+    },
+    {
+      "id": "fatigue_breaks",
+      "name_he": "ניהול עייפות",
+      "name_en": "Fatigue management",
+      "description_he": "זיהוי ירידה בתפקוד ועצירה.",
+      "description_en": "Focused learning resources for fatigue management."
+    },
+    {
+      "id": "packing_balance",
+      "name_he": "איזון מטען",
+      "name_en": "Packing balance",
+      "description_he": "אריזה נמוכה, סימטרית ומאובטחת.",
+      "description_en": "Focused learning resources for packing balance."
+    },
+    {
+      "id": "gpx_workflow",
+      "name_he": "עבודה עם GPX",
+      "name_en": "GPX workflow",
+      "description_he": "יצירה, ייבוא, שיתוף וגיבוי.",
+      "description_en": "Focused learning resources for gpx workflow."
+    },
+    {
+      "id": "route_legality",
+      "name_he": "חוקיות מסלול",
+      "name_en": "Route legality",
+      "description_he": "בדיקת הרשאות ודרכים מותרות.",
+      "description_en": "Focused learning resources for route legality."
+    },
+    {
+      "id": "offline_navigation",
+      "name_he": "ניווט אופליין",
+      "name_en": "Offline navigation",
+      "description_he": "מפות וגיבוי ללא קליטה.",
+      "description_en": "Focused learning resources for offline navigation."
+    },
+    {
+      "id": "course_selection",
+      "name_he": "בחירת קורס",
+      "name_en": "Choosing a course",
+      "description_he": "הבנת מטרות והשלמה להדרכה מעשית.",
+      "description_en": "Focused learning resources for choosing a course."
+    },
+    {
+      "id": "winter_preparation",
+      "name_he": "הכנת חורף",
+      "name_en": "Winter preparation",
+      "description_he": "בדיקות ותחזוקה לעונה רטובה.",
+      "description_en": "Focused learning resources for winter preparation."
+    }
+  ],
+  "terrain_types": [
+    {
+      "id": "dirt",
+      "name_he": "עפר",
+      "name_en": "Dirt",
+      "description_he": "דרך עפר כללית.",
+      "description_en": "Guidance and resources for dirt."
+    },
+    {
+      "id": "gravel",
+      "name_he": "חצץ",
+      "name_en": "Gravel",
+      "description_he": "חצץ רדוד או עמוק.",
+      "description_en": "Guidance and resources for gravel."
+    },
+    {
+      "id": "soft_gravel",
+      "name_he": "חצץ רך",
+      "name_en": "Soft gravel",
+      "description_he": "חצץ שוקע ונע.",
+      "description_en": "Guidance and resources for soft gravel."
+    },
+    {
+      "id": "sand",
+      "name_he": "חול",
+      "name_en": "Sand",
+      "description_he": "חול רך.",
+      "description_en": "Guidance and resources for sand."
+    },
+    {
+      "id": "deep_sand",
+      "name_he": "חול עמוק",
+      "name_en": "Deep sand",
+      "description_he": "חול עמוק הדורש תנופה.",
+      "description_en": "Guidance and resources for deep sand."
+    },
+    {
+      "id": "ruts",
+      "name_he": "חריצים",
+      "name_en": "Ruts",
+      "description_he": "חריצי גלגלים או מים.",
+      "description_en": "Guidance and resources for ruts."
+    },
+    {
+      "id": "loose_rock",
+      "name_he": "אבנים משוחררות",
+      "name_en": "Loose rock",
+      "description_he": "אבנים נעות ודרדרת.",
+      "description_en": "Guidance and resources for loose rock."
+    },
+    {
+      "id": "river_rock",
+      "name_he": "אבני נחל",
+      "name_en": "River rock",
+      "description_he": "אבנים מעוגלות ולא יציבות.",
+      "description_en": "Guidance and resources for river rock."
+    },
+    {
+      "id": "mud",
+      "name_he": "בוץ",
+      "name_en": "Mud",
+      "description_he": "קרקע בוצית וחלקה.",
+      "description_en": "Guidance and resources for mud."
+    },
+    {
+      "id": "wet_trail",
+      "name_he": "שביל רטוב",
+      "name_en": "Wet trail",
+      "description_he": "שביל רטוב עם אחיזה משתנה.",
+      "description_en": "Guidance and resources for wet trail."
+    },
+    {
+      "id": "hill",
+      "name_he": "עלייה",
+      "name_en": "Hill",
+      "description_he": "שיפוע עולה.",
+      "description_en": "Guidance and resources for hill."
+    },
+    {
+      "id": "steep_descent",
+      "name_he": "ירידה תלולה",
+      "name_en": "Steep descent",
+      "description_he": "שיפוע יורד משמעותי.",
+      "description_en": "Guidance and resources for steep descent."
+    },
+    {
+      "id": "water_crossing",
+      "name_he": "מעבר מים",
+      "name_en": "Water crossing",
+      "description_he": "חציית מים זורמים או עומדים.",
+      "description_en": "Guidance and resources for water crossing."
+    },
+    {
+      "id": "obstacle",
+      "name_he": "מכשול",
+      "name_en": "Obstacle",
+      "description_he": "מכשול נקודתי בשטח.",
+      "description_en": "Guidance and resources for obstacle."
+    },
+    {
+      "id": "parking_lot",
+      "name_he": "מגרש",
+      "name_en": "Parking lot",
+      "description_he": "משטח סגור לתרגול.",
+      "description_en": "Guidance and resources for parking lot."
+    },
+    {
+      "id": "rock",
+      "name_he": "סלעים ומשטחי סלע",
+      "name_en": "Rock and rock surfaces",
+      "description_he": "משטחי סלע, מדרגות ופני סלע שאינם בהכרח דרדרת.",
+      "description_en": "Rock slabs, ledges and solid rock surfaces rather than loose rock."
+    }
+  ],
+  "road_conditions": [
+    {
+      "id": "dry_pavement",
+      "name_he": "אספלט יבש",
+      "name_en": "Dry pavement",
+      "description_he": "כביש יבש ותקין.",
+      "description_en": "Guidance and resources for dry pavement."
+    },
+    {
+      "id": "wet_pavement",
+      "name_he": "אספלט רטוב",
+      "name_en": "Wet pavement",
+      "description_he": "כביש רטוב או בגשם.",
+      "description_en": "Guidance and resources for wet pavement."
+    },
+    {
+      "id": "gravel_on_pavement",
+      "name_he": "חצץ על אספלט",
+      "name_en": "Gravel on pavement",
+      "description_he": "חצץ או לכלוך על הכביש.",
+      "description_en": "Guidance and resources for gravel on pavement."
+    },
+    {
+      "id": "urban",
+      "name_he": "עירוני",
+      "name_en": "Urban",
+      "description_he": "רחובות וצמתים עירוניים.",
+      "description_en": "Guidance and resources for urban."
+    },
+    {
+      "id": "rural_twisty",
+      "name_he": "כביש מפותל",
+      "name_en": "Twisty rural road",
+      "description_he": "כביש בין־עירוני מפותל.",
+      "description_en": "Guidance and resources for twisty rural road."
+    },
+    {
+      "id": "highway",
+      "name_he": "כביש מהיר",
+      "name_en": "Highway",
+      "description_he": "רכיבה במהירות בין־עירונית.",
+      "description_en": "Guidance and resources for highway."
+    },
+    {
+      "id": "parking_lot",
+      "name_he": "מגרש תרגול",
+      "name_en": "Practice lot",
+      "description_he": "שטח סגור ללא תנועה.",
+      "description_en": "Guidance and resources for practice lot."
+    },
+    {
+      "id": "closed_course",
+      "name_he": "מסלול סגור או מגרש אימון",
+      "name_en": "Closed course or training area",
+      "description_he": "סביבה סגורה ומבוקרת לתרגול טכניקה.",
+      "description_en": "A closed, controlled environment for technique practice."
+    },
+    {
+      "id": "traffic",
+      "name_he": "תנועה צפופה",
+      "name_en": "Traffic",
+      "description_he": "רכיבה בתוך תנועה עירונית או בין־עירונית צפופה.",
+      "description_en": "Riding in dense urban or inter-urban traffic."
+    },
+    {
+      "id": "night",
+      "name_he": "לילה וראות נמוכה",
+      "name_en": "Night and low visibility",
+      "description_he": "רכיבה בחשכה או בתנאי ראות מוגבלים.",
+      "description_en": "Riding after dark or in reduced visibility."
+    }
+  ],
+  "skill_levels": [
+    {
+      "id": "beginner",
+      "name_he": "מתחיל",
+      "name_en": "Beginner",
+      "description_he": "מיומנות יסוד ללא ניסיון קודם משמעותי.",
+      "description_en": "Guidance and resources for beginner."
+    },
+    {
+      "id": "advanced_beginner",
+      "name_he": "מתחיל מתקדם",
+      "name_en": "Advanced beginner",
+      "description_he": "רוכב ששולט בבסיס ומרחיב טווח.",
+      "description_en": "Guidance and resources for advanced beginner."
+    },
+    {
+      "id": "intermediate",
+      "name_he": "בינוני",
+      "name_en": "Intermediate",
+      "description_he": "דורש בסיס יציב ותרגול קודם.",
+      "description_en": "Guidance and resources for intermediate."
+    },
+    {
+      "id": "advanced",
+      "name_he": "מתקדם",
+      "name_en": "Advanced",
+      "description_he": "דורש שליטה גבוהה והדרכה מתאימה.",
+      "description_en": "Guidance and resources for advanced."
+    }
+  ],
+  "risk_levels": [
+    {
+      "id": "low",
+      "name_he": "נמוכה",
+      "name_en": "Low",
+      "description_he": "ניתן לתרגל לאט בסביבה סגורה.",
+      "description_en": "Guidance and resources for low."
+    },
+    {
+      "id": "medium",
+      "name_he": "בינונית",
+      "name_en": "Medium",
+      "description_he": "נדרשים מיגון, מרווח והתקדמות הדרגתית.",
+      "description_en": "Guidance and resources for medium."
+    },
+    {
+      "id": "high",
+      "name_he": "גבוהה",
+      "name_en": "High",
+      "description_he": "נדרשים בסיס קודם, תנאים מבוקרים ולעיתים מדריך.",
+      "description_en": "Guidance and resources for high."
+    }
+  ],
+  "motorcycle_types": [
+    {
+      "id": "adventure",
+      "name_he": "אדוונצ'ר",
+      "name_en": "Adventure",
+      "description_he": "אופנוע אדוונצ'ר לכביש ולשטח.",
+      "description_en": "Guidance and resources for adventure."
+    },
+    {
+      "id": "dual_sport",
+      "name_he": "דו־שימושי",
+      "name_en": "Dual sport",
+      "description_he": "אופנוע קל עד בינוני לשימוש כפול.",
+      "description_en": "Guidance and resources for dual sport."
+    },
+    {
+      "id": "street",
+      "name_he": "כביש",
+      "name_en": "Street",
+      "description_he": "אופנוע כביש כללי.",
+      "description_en": "Guidance and resources for street."
+    },
+    {
+      "id": "touring",
+      "name_he": "תיור",
+      "name_en": "Touring",
+      "description_he": "אופנוע לנסיעות ארוכות.",
+      "description_en": "Guidance and resources for touring."
+    },
+    {
+      "id": "sport_touring",
+      "name_he": "ספורט־תיור",
+      "name_en": "Sport touring",
+      "description_he": "אופנוע כביש דינמי לתיור.",
+      "description_en": "Guidance and resources for sport touring."
+    },
+    {
+      "id": "general_motorcycle",
+      "name_he": "כללי",
+      "name_en": "General motorcycle",
+      "description_he": "תוכן שאינו תלוי בסוג אופנוע.",
+      "description_en": "Guidance and resources for general motorcycle."
+    },
+    {
+      "id": "enduro",
+      "name_he": "אנדורו",
+      "name_en": "Enduro",
+      "description_he": "אופנועי אנדורו קלים ובינוניים לרכיבת שטח טכנית.",
+      "description_en": "Light and middleweight enduro motorcycles for technical off-road riding."
+    },
+    {
+      "id": "scooter",
+      "name_he": "קטנוע",
+      "name_en": "Scooter",
+      "description_he": "קטנועים וכלים אוטומטיים לרכיבת כביש ועיר.",
+      "description_en": "Scooters and automatic machines for urban and road riding."
+    }
+  ],
+  "motorcycle_weight_classes": [
+    {
+      "id": "light",
+      "name_he": "קל",
+      "name_en": "Light",
+      "description_he": "עד כ־170 קילוגרם בקירוב.",
+      "description_en": "Guidance and resources for light."
+    },
+    {
+      "id": "medium",
+      "name_he": "בינוני",
+      "name_en": "Medium",
+      "description_he": "אופנוע בינוני נפוץ באדוונצ'ר.",
+      "description_en": "Guidance and resources for medium."
+    },
+    {
+      "id": "heavy",
+      "name_he": "כבד",
+      "name_en": "Heavy",
+      "description_he": "אופנוע אדוונצ'ר או תיור כבד.",
+      "description_en": "Guidance and resources for heavy."
+    },
+    {
+      "id": "general",
+      "name_he": "כללי",
+      "name_en": "General",
+      "description_he": "רלוונטי ללא תלות במשקל.",
+      "description_en": "Guidance and resources for general."
+    }
+  ],
+  "source_types": [
+    {
+      "id": "riding_school",
+      "name_he": "בית ספר לרכיבה",
+      "name_en": "Riding school",
+      "description_he": "ערוץ של גוף הדרכה מסודר.",
+      "description_en": "Guidance and resources for riding school."
+    },
+    {
+      "id": "professional_instructor",
+      "name_he": "מדריך מקצועי",
+      "name_en": "Professional instructor",
+      "description_he": "מדריך המזוהה במפורש כמקצועי.",
+      "description_en": "Guidance and resources for professional instructor."
+    },
+    {
+      "id": "training_channel",
+      "name_he": "ערוץ הדרכה",
+      "name_en": "Training channel",
+      "description_he": "ערוץ המתמקד בהדרכות רכיבה.",
+      "description_en": "Guidance and resources for training channel."
+    },
+    {
+      "id": "experienced_rider",
+      "name_he": "רוכב מנוסה",
+      "name_en": "Experienced rider",
+      "description_he": "יוצר בעל ניסיון מעשי שאינו מוצג כבית ספר.",
+      "description_en": "Guidance and resources for experienced rider."
+    },
+    {
+      "id": "community_educator",
+      "name_he": "יוצר קהילתי",
+      "name_en": "Community educator",
+      "description_he": "תוכן מסביר ממקור קהילתי.",
+      "description_en": "Guidance and resources for community educator."
+    },
+    {
+      "id": "manufacturer",
+      "name_he": "יצרן",
+      "name_en": "Manufacturer",
+      "description_he": "מקור רשמי של יצרן אופנועים, ציוד או מערכות.",
+      "description_en": "Official content from a motorcycle, equipment or systems manufacturer."
+    }
+  ],
+  "languages": [
+    {
+      "id": "he",
+      "name_he": "עברית",
+      "name_en": "Hebrew",
+      "description_he": "תוכן מדובר בעיקר בעברית.",
+      "description_en": "Guidance and resources for hebrew."
+    },
+    {
+      "id": "en",
+      "name_he": "אנגלית",
+      "name_en": "English",
+      "description_he": "תוכן מדובר בעיקר באנגלית.",
+      "description_en": "Guidance and resources for english."
+    }
+  ],
+  "controlled_tags": [
+    {
+      "id": "abs",
+      "name_he": "ABS",
+      "name_en": "ABS",
+      "description_he": "תג מבוקר: ABS.",
+      "description_en": "Guidance and resources for abs."
+    },
+    {
+      "id": "anchor",
+      "name_he": "עיגון",
+      "name_en": "Anchor",
+      "description_he": "תג מבוקר: עיגון.",
+      "description_en": "Guidance and resources for anchor."
+    },
+    {
+      "id": "balance",
+      "name_he": "שיווי משקל",
+      "name_en": "Balance",
+      "description_he": "תג מבוקר: שיווי משקל.",
+      "description_en": "Guidance and resources for balance."
+    },
+    {
+      "id": "beginner",
+      "name_he": "מתחילים",
+      "name_en": "Beginner",
+      "description_he": "תג מבוקר: מתחילים.",
+      "description_en": "Guidance and resources for beginner."
+    },
+    {
+      "id": "body_mechanics",
+      "name_he": "מכניקת גוף",
+      "name_en": "Body mechanics",
+      "description_he": "תג מבוקר: מכניקת גוף.",
+      "description_en": "Guidance and resources for body mechanics."
+    },
+    {
+      "id": "body_position",
+      "name_he": "תנוחת גוף",
+      "name_en": "Body position",
+      "description_he": "תג מבוקר: תנוחת גוף.",
+      "description_en": "Guidance and resources for body position."
+    },
+    {
+      "id": "body_protection",
+      "name_he": "מיגון גוף",
+      "name_en": "Body protection",
+      "description_he": "תג מבוקר: מיגון גוף.",
+      "description_en": "Guidance and resources for body protection."
+    },
+    {
+      "id": "boots",
+      "name_he": "מגפיים",
+      "name_en": "Boots",
+      "description_he": "תג מבוקר: מגפיים.",
+      "description_en": "Guidance and resources for boots."
+    },
+    {
+      "id": "braking",
+      "name_he": "בלימה",
+      "name_en": "Braking",
+      "description_he": "תג מבוקר: בלימה.",
+      "description_en": "Guidance and resources for braking."
+    },
+    {
+      "id": "breaks",
+      "name_he": "הפסקות",
+      "name_en": "Breaks",
+      "description_he": "תג מבוקר: הפסקות.",
+      "description_en": "Guidance and resources for breaks."
+    },
+    {
+      "id": "clutch",
+      "name_he": "מצמד",
+      "name_en": "Clutch",
+      "description_he": "תג מבוקר: מצמד.",
+      "description_en": "Guidance and resources for clutch."
+    },
+    {
+      "id": "common_mistakes",
+      "name_he": "טעויות נפוצות",
+      "name_en": "Common mistakes",
+      "description_he": "תג מבוקר: טעויות נפוצות.",
+      "description_en": "Guidance and resources for common mistakes."
+    },
+    {
+      "id": "communication",
+      "name_he": "תקשורת",
+      "name_en": "Communication",
+      "description_he": "תג מבוקר: תקשורת.",
+      "description_en": "Guidance and resources for communication."
+    },
+    {
+      "id": "confidence",
+      "name_he": "ביטחון",
+      "name_en": "Confidence",
+      "description_he": "תג מבוקר: ביטחון.",
+      "description_en": "Guidance and resources for confidence."
+    },
+    {
+      "id": "controls_setup",
+      "name_he": "כיוון פקדים",
+      "name_en": "Controls setup",
+      "description_he": "תג מבוקר: כיוון פקדים.",
+      "description_en": "Guidance and resources for controls setup."
+    },
+    {
+      "id": "cornering",
+      "name_he": "פניות",
+      "name_en": "Cornering",
+      "description_he": "תג מבוקר: פניות.",
+      "description_en": "Guidance and resources for cornering."
+    },
+    {
+      "id": "counterbalance",
+      "name_he": "הטיה נגדית",
+      "name_en": "Counterbalance",
+      "description_he": "תג מבוקר: הטיה נגדית.",
+      "description_en": "Guidance and resources for counterbalance."
+    },
+    {
+      "id": "dirt",
+      "name_he": "עפר",
+      "name_en": "Dirt",
+      "description_he": "תג מבוקר: עפר.",
+      "description_en": "Guidance and resources for dirt."
+    },
+    {
+      "id": "downhill",
+      "name_he": "ירידה",
+      "name_en": "Downhill",
+      "description_he": "תג מבוקר: ירידה.",
+      "description_en": "Guidance and resources for downhill."
+    },
+    {
+      "id": "emergency_braking",
+      "name_he": "בלימת חירום",
+      "name_en": "Emergency braking",
+      "description_he": "תג מבוקר: בלימת חירום.",
+      "description_en": "Guidance and resources for emergency braking."
+    },
+    {
+      "id": "ergonomics",
+      "name_he": "ארגונומיה",
+      "name_en": "Ergonomics",
+      "description_he": "תג מבוקר: ארגונומיה.",
+      "description_en": "Guidance and resources for ergonomics."
+    },
+    {
+      "id": "escape_route",
+      "name_he": "נתיב מילוט",
+      "name_en": "Escape route",
+      "description_he": "תג מבוקר: נתיב מילוט.",
+      "description_en": "Guidance and resources for escape route."
+    },
+    {
+      "id": "failed_hill",
+      "name_he": "כישלון בעלייה",
+      "name_en": "Failed hill",
+      "description_he": "תג מבוקר: כישלון בעלייה.",
+      "description_en": "Guidance and resources for failed hill."
+    },
+    {
+      "id": "fatigue",
+      "name_he": "עייפות",
+      "name_en": "Fatigue",
+      "description_he": "תג מבוקר: עייפות.",
+      "description_en": "Guidance and resources for fatigue."
+    },
+    {
+      "id": "front_brake",
+      "name_he": "בלם קדמי",
+      "name_en": "Front brake",
+      "description_he": "תג מבוקר: בלם קדמי.",
+      "description_en": "Guidance and resources for front brake."
+    },
+    {
+      "id": "gear_selection",
+      "name_he": "בחירת הילוך",
+      "name_en": "Gear selection",
+      "description_he": "תג מבוקר: בחירת הילוך.",
+      "description_en": "Guidance and resources for gear selection."
+    },
+    {
+      "id": "gravel",
+      "name_he": "חצץ",
+      "name_en": "Gravel",
+      "description_he": "תג מבוקר: חצץ.",
+      "description_en": "Guidance and resources for gravel."
+    },
+    {
+      "id": "hazard_awareness",
+      "name_he": "זיהוי סכנות",
+      "name_en": "Hazard awareness",
+      "description_he": "תג מבוקר: זיהוי סכנות.",
+      "description_en": "Guidance and resources for hazard awareness."
+    },
+    {
+      "id": "heavy_bike",
+      "name_he": "אופנוע כבד",
+      "name_en": "Heavy bike",
+      "description_he": "תג מבוקר: אופנוע כבד.",
+      "description_en": "Guidance and resources for heavy bike."
+    },
+    {
+      "id": "helmet",
+      "name_he": "קסדה",
+      "name_en": "Helmet",
+      "description_he": "תג מבוקר: קסדה.",
+      "description_en": "Guidance and resources for helmet."
+    },
+    {
+      "id": "hill_climb",
+      "name_he": "עלייה",
+      "name_en": "Hill climb",
+      "description_he": "תג מבוקר: עלייה.",
+      "description_en": "Guidance and resources for hill climb."
+    },
+    {
+      "id": "hydration",
+      "name_he": "שתייה",
+      "name_en": "Hydration",
+      "description_he": "תג מבוקר: שתייה.",
+      "description_en": "Guidance and resources for hydration."
+    },
+    {
+      "id": "lane_position",
+      "name_he": "מיקום בנתיב",
+      "name_en": "Lane position",
+      "description_he": "תג מבוקר: מיקום בנתיב.",
+      "description_en": "Guidance and resources for lane position."
+    },
+    {
+      "id": "lean",
+      "name_he": "הטיה",
+      "name_en": "Lean",
+      "description_he": "תג מבוקר: הטיה.",
+      "description_en": "Guidance and resources for lean."
+    },
+    {
+      "id": "lifting",
+      "name_he": "הרמת אופנוע",
+      "name_en": "Motorcycle lifting",
+      "description_he": "תג מבוקר: הרמת אופנוע.",
+      "description_en": "Guidance and resources for motorcycle lifting."
+    },
+    {
+      "id": "line_selection",
+      "name_he": "בחירת קו",
+      "name_en": "Line selection",
+      "description_he": "תג מבוקר: בחירת קו.",
+      "description_en": "Guidance and resources for line selection."
+    },
+    {
+      "id": "long_distance",
+      "name_he": "רכיבה ארוכה",
+      "name_en": "Long distance",
+      "description_he": "תג מבוקר: רכיבה ארוכה.",
+      "description_en": "Guidance and resources for long distance."
+    },
+    {
+      "id": "loose_rock",
+      "name_he": "אבנים משוחררות",
+      "name_en": "Loose rock",
+      "description_he": "תג מבוקר: אבנים משוחררות.",
+      "description_en": "Guidance and resources for loose rock."
+    },
+    {
+      "id": "momentum",
+      "name_he": "תנופה",
+      "name_en": "Momentum",
+      "description_he": "תג מבוקר: תנופה.",
+      "description_en": "Guidance and resources for momentum."
+    },
+    {
+      "id": "mud",
+      "name_he": "בוץ",
+      "name_en": "Mud",
+      "description_he": "תג מבוקר: בוץ.",
+      "description_en": "Guidance and resources for mud."
+    },
+    {
+      "id": "obstacle",
+      "name_he": "מכשול",
+      "name_en": "Obstacle",
+      "description_he": "תג מבוקר: מכשול.",
+      "description_en": "Guidance and resources for obstacle."
+    },
+    {
+      "id": "parking_lot",
+      "name_he": "מגרש",
+      "name_en": "Parking lot",
+      "description_he": "תג מבוקר: מגרש.",
+      "description_en": "Guidance and resources for parking lot."
+    },
+    {
+      "id": "pillion",
+      "name_he": "מורכב",
+      "name_en": "Pillion",
+      "description_he": "תג מבוקר: מורכב.",
+      "description_en": "Guidance and resources for pillion."
+    },
+    {
+      "id": "planning",
+      "name_he": "תכנון",
+      "name_en": "Planning",
+      "description_he": "תג מבוקר: תכנון.",
+      "description_en": "Guidance and resources for planning."
+    },
+    {
+      "id": "practice_drill",
+      "name_he": "תרגיל",
+      "name_en": "Practice drill",
+      "description_he": "תג מבוקר: תרגיל.",
+      "description_en": "Guidance and resources for practice drill."
+    },
+    {
+      "id": "protective_gear",
+      "name_he": "ציוד מיגון",
+      "name_en": "Protective gear",
+      "description_he": "תג מבוקר: ציוד מיגון.",
+      "description_en": "Guidance and resources for protective gear."
+    },
+    {
+      "id": "rain",
+      "name_he": "גשם",
+      "name_en": "Rain",
+      "description_he": "תג מבוקר: גשם.",
+      "description_en": "Guidance and resources for rain."
+    },
+    {
+      "id": "rear_brake",
+      "name_he": "בלם אחורי",
+      "name_en": "Rear brake",
+      "description_he": "תג מבוקר: בלם אחורי.",
+      "description_en": "Guidance and resources for rear brake."
+    },
+    {
+      "id": "recovery",
+      "name_he": "חילוץ",
+      "name_en": "Recovery",
+      "description_he": "תג מבוקר: חילוץ.",
+      "description_en": "Guidance and resources for recovery."
+    },
+    {
+      "id": "relaxed_grip",
+      "name_he": "אחיזה רפויה",
+      "name_en": "Relaxed grip",
+      "description_he": "תג מבוקר: אחיזה רפויה.",
+      "description_en": "Guidance and resources for relaxed grip."
+    },
+    {
+      "id": "river_rock",
+      "name_he": "אבני נחל",
+      "name_en": "River rock",
+      "description_he": "תג מבוקר: אבני נחל.",
+      "description_en": "Guidance and resources for river rock."
+    },
+    {
+      "id": "running_wide",
+      "name_he": "התרחבות בפנייה",
+      "name_en": "Running wide",
+      "description_he": "תג מבוקר: התרחבות בפנייה.",
+      "description_en": "Guidance and resources for running wide."
+    },
+    {
+      "id": "ruts",
+      "name_he": "חריצים",
+      "name_en": "Ruts",
+      "description_he": "תג מבוקר: חריצים.",
+      "description_en": "Guidance and resources for ruts."
+    },
+    {
+      "id": "safety",
+      "name_he": "בטיחות",
+      "name_en": "Safety",
+      "description_he": "תג מבוקר: בטיחות.",
+      "description_en": "Guidance and resources for safety."
+    },
+    {
+      "id": "sand",
+      "name_he": "חול",
+      "name_en": "Sand",
+      "description_he": "תג מבוקר: חול.",
+      "description_en": "Guidance and resources for sand."
+    },
+    {
+      "id": "shifting",
+      "name_he": "הילוכים",
+      "name_en": "Shifting",
+      "description_he": "תג מבוקר: הילוכים.",
+      "description_en": "Guidance and resources for shifting."
+    },
+    {
+      "id": "slow_speed",
+      "name_he": "מהירות נמוכה",
+      "name_en": "Slow speed",
+      "description_he": "תג מבוקר: מהירות נמוכה.",
+      "description_en": "Guidance and resources for slow speed."
+    },
+    {
+      "id": "smooth_control",
+      "name_he": "תפעול חלק",
+      "name_en": "Smooth control",
+      "description_he": "תג מבוקר: תפעול חלק.",
+      "description_en": "Guidance and resources for smooth control."
+    },
+    {
+      "id": "soft_gravel",
+      "name_he": "חצץ רך",
+      "name_en": "Soft gravel",
+      "description_he": "תג מבוקר: חצץ רך.",
+      "description_en": "Guidance and resources for soft gravel."
+    },
+    {
+      "id": "solo_riding",
+      "name_he": "רכיבת סולו",
+      "name_en": "Solo riding",
+      "description_he": "תג מבוקר: רכיבת סולו.",
+      "description_en": "Guidance and resources for solo riding."
+    },
+    {
+      "id": "speed_management",
+      "name_he": "ניהול מהירות",
+      "name_en": "Speed management",
+      "description_he": "תג מבוקר: ניהול מהירות.",
+      "description_en": "Guidance and resources for speed management."
+    },
+    {
+      "id": "standing",
+      "name_he": "עמידה",
+      "name_en": "Standing",
+      "description_he": "תג מבוקר: עמידה.",
+      "description_en": "Guidance and resources for standing."
+    },
+    {
+      "id": "throttle",
+      "name_he": "גז",
+      "name_en": "Throttle",
+      "description_he": "תג מבוקר: גז.",
+      "description_en": "Guidance and resources for throttle."
+    },
+    {
+      "id": "traction",
+      "name_he": "אחיזה",
+      "name_en": "Traction",
+      "description_he": "תג מבוקר: אחיזה.",
+      "description_en": "Guidance and resources for traction."
+    },
+    {
+      "id": "trail_braking",
+      "name_he": "בלימה לתוך פנייה",
+      "name_en": "Trail braking",
+      "description_he": "תג מבוקר: בלימה לתוך פנייה.",
+      "description_en": "Guidance and resources for trail braking."
+    },
+    {
+      "id": "u_turn",
+      "name_he": "סיבוב פרסה",
+      "name_en": "U-turn",
+      "description_he": "תג מבוקר: סיבוב פרסה.",
+      "description_en": "Guidance and resources for u-turn."
+    },
+    {
+      "id": "visibility",
+      "name_he": "ראות",
+      "name_en": "Visibility",
+      "description_he": "תג מבוקר: ראות.",
+      "description_en": "Guidance and resources for visibility."
+    },
+    {
+      "id": "vision",
+      "name_he": "מבט",
+      "name_en": "Vision",
+      "description_he": "תג מבוקר: מבט.",
+      "description_en": "Guidance and resources for vision."
+    },
+    {
+      "id": "water_crossing",
+      "name_he": "מעבר מים",
+      "name_en": "Water crossing",
+      "description_he": "תג מבוקר: מעבר מים.",
+      "description_en": "Guidance and resources for water crossing."
+    },
+    {
+      "id": "weight_transfer",
+      "name_he": "העברת משקל",
+      "name_en": "Weight transfer",
+      "description_he": "תג מבוקר: העברת משקל.",
+      "description_en": "Guidance and resources for weight transfer."
+    },
+    {
+      "id": "wet_pavement",
+      "name_he": "כביש רטוב",
+      "name_en": "Wet pavement",
+      "description_he": "תג מבוקר: כביש רטוב.",
+      "description_en": "Guidance and resources for wet pavement."
+    },
+    {
+      "id": "wet_trail",
+      "name_he": "שביל רטוב",
+      "name_en": "Wet trail",
+      "description_he": "תג מבוקר: שביל רטוב.",
+      "description_en": "Guidance and resources for wet trail."
+    },
+    {
+      "id": "winch",
+      "name_he": "כננת",
+      "name_en": "Winch",
+      "description_he": "תג מבוקר: כננת.",
+      "description_en": "Guidance and resources for winch."
+    },
+    {
+      "id": "damping",
+      "name_he": "שיכוך",
+      "name_en": "Damping",
+      "description_he": "תג מבוקר: שיכוך מתלים.",
+      "description_en": "Guidance and resources for damping."
+    },
+    {
+      "id": "emergency_kit",
+      "name_he": "ערכת חירום",
+      "name_en": "Emergency kit",
+      "description_he": "תג מבוקר: ערכת חירום לרכיבה.",
+      "description_en": "Guidance and resources for emergency kit."
+    },
+    {
+      "id": "first_aid",
+      "name_he": "עזרה ראשונה",
+      "name_en": "First aid",
+      "description_he": "תג מבוקר: עזרה ראשונה.",
+      "description_en": "Guidance and resources for first aid."
+    },
+    {
+      "id": "luggage",
+      "name_he": "מטען",
+      "name_en": "Luggage",
+      "description_he": "תג מבוקר: מטען ואריזה.",
+      "description_en": "Guidance and resources for luggage."
+    },
+    {
+      "id": "offroad_braking",
+      "name_he": "בלימה בשטח",
+      "name_en": "Off-road braking",
+      "description_he": "תג מבוקר: בלימה בשטח.",
+      "description_en": "Guidance and resources for off-road braking."
+    },
+    {
+      "id": "preload",
+      "name_he": "קדם־עומס",
+      "name_en": "Preload",
+      "description_he": "תג מבוקר: קדם־עומס במתלה.",
+      "description_en": "Guidance and resources for preload."
+    },
+    {
+      "id": "sag",
+      "name_he": "שקיעת מתלה",
+      "name_en": "Suspension sag",
+      "description_he": "תג מבוקר: שקיעת מתלה.",
+      "description_en": "Guidance and resources for suspension sag."
+    },
+    {
+      "id": "suspension",
+      "name_he": "מתלים",
+      "name_en": "Suspension",
+      "description_he": "תג מבוקר: מערכת המתלים.",
+      "description_en": "Guidance and resources for suspension."
+    },
+    {
+      "id": "tire_pressure",
+      "name_he": "לחץ אוויר בצמיג",
+      "name_en": "Tire pressure",
+      "description_he": "תג מבוקר: לחץ אוויר בצמיג.",
+      "description_en": "Guidance and resources for tire pressure."
+    },
+    {
+      "id": "traction_control",
+      "name_he": "בקרת אחיזה",
+      "name_en": "Traction control",
+      "description_he": "תג מבוקר: בקרת אחיזה אלקטרונית.",
+      "description_en": "Guidance and resources for traction control."
+    },
+    {
+      "id": "advanced",
+      "name_he": "מתקדם",
+      "name_en": "Advanced",
+      "description_he": "תג מבוקר: טכניקה או תרגול למתקדמים.",
+      "description_en": "Guidance and resources for advanced."
+    },
+    {
+      "id": "animals",
+      "name_he": "בעלי חיים",
+      "name_en": "Animals",
+      "description_he": "תג מבוקר: מפגש עם בעלי חיים בדרך.",
+      "description_en": "Guidance and resources for animals."
+    },
+    {
+      "id": "camping",
+      "name_he": "קמפינג",
+      "name_en": "Camping",
+      "description_he": "תג מבוקר: ציוד ולינה במסע.",
+      "description_en": "Guidance and resources for camping."
+    },
+    {
+      "id": "chain",
+      "name_he": "שרשרת הינע",
+      "name_en": "Drive chain",
+      "description_he": "תג מבוקר: בדיקה ותחזוקת שרשרת הינע.",
+      "description_en": "Guidance and resources for drive chain."
+    },
+    {
+      "id": "construction",
+      "name_he": "עבודות דרך",
+      "name_en": "Road works",
+      "description_he": "תג מבוקר: מפגעים באזורי עבודות.",
+      "description_en": "Guidance and resources for road works."
+    },
+    {
+      "id": "countersteering",
+      "name_he": "היגוי נגדי",
+      "name_en": "Countersteering",
+      "description_he": "תג מבוקר: ייזום הטיה באמצעות היגוי נגדי.",
+      "description_en": "Guidance and resources for countersteering."
+    },
+    {
+      "id": "deep_sand",
+      "name_he": "חול עמוק",
+      "name_en": "Deep sand",
+      "description_he": "תג מבוקר: רכיבה בחול עמוק.",
+      "description_en": "Guidance and resources for deep sand."
+    },
+    {
+      "id": "fitness",
+      "name_he": "כושר",
+      "name_en": "Fitness",
+      "description_he": "תג מבוקר: מוכנות גופנית לרכיבה.",
+      "description_en": "Guidance and resources for fitness."
+    },
+    {
+      "id": "focus",
+      "name_he": "ריכוז",
+      "name_en": "Focus",
+      "description_he": "תג מבוקר: שמירת קשב וריכוז.",
+      "description_en": "Guidance and resources for focus."
+    },
+    {
+      "id": "gpx",
+      "name_he": "GPX",
+      "name_en": "GPX",
+      "description_he": "תג מבוקר: קובץ מסלול GPX.",
+      "description_en": "Guidance and resources for gpx."
+    },
+    {
+      "id": "gravel_on_pavement",
+      "name_he": "חצץ על אספלט",
+      "name_en": "Gravel on pavement",
+      "description_he": "תג מבוקר: חצץ או פסולת על כביש סלול.",
+      "description_en": "Guidance and resources for gravel on pavement."
+    },
+    {
+      "id": "group_riding",
+      "name_he": "רכיבה בקבוצה",
+      "name_en": "Group riding",
+      "description_he": "תג מבוקר: מבנה, תפקידים ותקשורת בקבוצה.",
+      "description_en": "Guidance and resources for group riding."
+    },
+    {
+      "id": "handlebars",
+      "name_he": "כידון",
+      "name_en": "Handlebars",
+      "description_he": "תג מבוקר: שימוש או כיוון כידון.",
+      "description_en": "Guidance and resources for handlebars."
+    },
+    {
+      "id": "heat",
+      "name_he": "חום",
+      "name_en": "Heat",
+      "description_he": "תג מבוקר: חום ואוורור ברכיבה.",
+      "description_en": "Guidance and resources for heat."
+    },
+    {
+      "id": "inspection",
+      "name_he": "בדיקה",
+      "name_en": "Inspection",
+      "description_he": "תג מבוקר: בדיקה מכנית או חזותית.",
+      "description_en": "Guidance and resources for inspection."
+    },
+    {
+      "id": "maintenance",
+      "name_he": "תחזוקה",
+      "name_en": "Maintenance",
+      "description_he": "תג מבוקר: תחזוקת אופנוע שגרתית.",
+      "description_en": "Guidance and resources for maintenance."
+    },
+    {
+      "id": "navigation",
+      "name_he": "ניווט",
+      "name_en": "Navigation",
+      "description_he": "תג מבוקר: תכנון וניווט במסלול.",
+      "description_en": "Guidance and resources for navigation."
+    },
+    {
+      "id": "crosswind",
+      "name_he": "רוח צד",
+      "name_en": "Crosswind",
+      "description_he": "תג מבוקר: רכיבה ברוח צד ובמשבים.",
+      "description_en": "Guidance and resources for crosswind."
+    },
+    {
+      "id": "night",
+      "name_he": "לילה",
+      "name_en": "Night",
+      "description_he": "תג מבוקר: רכיבה בתנאי חשכה.",
+      "description_en": "Guidance and resources for night."
+    },
+    {
+      "id": "offline_maps",
+      "name_he": "מפות לא מקוונות",
+      "name_en": "Offline maps",
+      "description_he": "תג מבוקר: מפות זמינות ללא קליטה.",
+      "description_en": "Guidance and resources for offline maps."
+    },
+    {
+      "id": "overtaking",
+      "name_he": "עקיפה",
+      "name_en": "Overtaking",
+      "description_he": "תג מבוקר: תכנון וביצוע עקיפה לפי חוק.",
+      "description_en": "Guidance and resources for overtaking."
+    },
+    {
+      "id": "pre_ride",
+      "name_he": "טרום־רכיבה",
+      "name_en": "Pre-ride",
+      "description_he": "תג מבוקר: בדיקה והכנה לפני יציאה.",
+      "description_en": "Guidance and resources for pre-ride."
+    },
+    {
+      "id": "puncture",
+      "name_he": "תקר",
+      "name_en": "Puncture",
+      "description_he": "תג מבוקר: אבחון ותיקון תקר.",
+      "description_en": "Guidance and resources for puncture."
+    },
+    {
+      "id": "route_sharing",
+      "name_he": "שיתוף מסלול",
+      "name_en": "Route sharing",
+      "description_he": "תג מבוקר: שמירה ושיתוף של מסלול.",
+      "description_en": "Guidance and resources for route sharing."
+    },
+    {
+      "id": "snow",
+      "name_he": "שלג",
+      "name_en": "Snow",
+      "description_he": "תג מבוקר: תנאי שלג או קרח בדרך.",
+      "description_en": "Guidance and resources for snow."
+    },
+    {
+      "id": "target_fixation",
+      "name_he": "קיבוע מטרה",
+      "name_en": "Target fixation",
+      "description_he": "תג מבוקר: קיבוע מבט במפגע.",
+      "description_en": "Guidance and resources for target fixation."
+    },
+    {
+      "id": "tire_repair",
+      "name_he": "תיקון צמיג",
+      "name_en": "Tire repair",
+      "description_he": "תג מבוקר: תיקון צמיג או פנימית.",
+      "description_en": "Guidance and resources for tire repair."
+    },
+    {
+      "id": "tires",
+      "name_he": "צמיגים",
+      "name_en": "Tires",
+      "description_he": "תג מבוקר: בדיקת צמיגים כללית.",
+      "description_en": "Guidance and resources for tires."
+    },
+    {
+      "id": "training",
+      "name_he": "הדרכה",
+      "name_en": "Training",
+      "description_he": "תג מבוקר: הדרכה.",
+      "description_en": "Guidance and resources for training."
+    },
+    {
+      "id": "skills_progression",
+      "name_he": "התקדמות מיומנות",
+      "name_en": "Skills progression",
+      "description_he": "תג מבוקר: התקדמות מיומנות.",
+      "description_en": "Guidance and resources for skills progression."
+    },
+    {
+      "id": "setup",
+      "name_he": "כיוון",
+      "name_en": "Setup",
+      "description_he": "תג מבוקר: כיוון.",
+      "description_en": "Guidance and resources for setup."
+    },
+    {
+      "id": "following_distance",
+      "name_he": "מרחק רכיבה",
+      "name_en": "Following distance",
+      "description_he": "תג מבוקר: מרחק רכיבה.",
+      "description_en": "Guidance and resources for following distance."
+    },
+    {
+      "id": "controls",
+      "name_he": "פקדים",
+      "name_en": "Controls",
+      "description_he": "תג מבוקר: פקדים.",
+      "description_en": "Guidance and resources for controls."
+    },
+    {
+      "id": "passenger",
+      "name_he": "מורכב",
+      "name_en": "Passenger",
+      "description_he": "תג מבוקר: מורכב.",
+      "description_en": "Guidance and resources for passenger."
+    },
+    {
+      "id": "swerving",
+      "name_he": "התחמקות",
+      "name_en": "Swerving",
+      "description_he": "תג מבוקר: התחמקות.",
+      "description_en": "Guidance and resources for swerving."
+    },
+    {
+      "id": "weight_distribution",
+      "name_he": "חלוקת משקל",
+      "name_en": "Weight distribution",
+      "description_he": "תג מבוקר: חלוקת משקל.",
+      "description_en": "Guidance and resources for weight distribution."
+    },
+    {
+      "id": "packing",
+      "name_he": "אריזה",
+      "name_en": "Packing",
+      "description_he": "תג מבוקר: אריזה.",
+      "description_en": "Guidance and resources for packing."
+    },
+    {
+      "id": "tools",
+      "name_he": "כלים",
+      "name_en": "Tools",
+      "description_he": "תג מבוקר: כלים.",
+      "description_en": "Guidance and resources for tools."
+    },
+    {
+      "id": "lofting",
+      "name_he": "הרמת גלגל",
+      "name_en": "Lofting",
+      "description_he": "תג מבוקר: הרמת גלגל.",
+      "description_en": "Guidance and resources for lofting."
+    },
+    {
+      "id": "cold_weather",
+      "name_he": "קור",
+      "name_en": "Cold weather",
+      "description_he": "תג מבוקר: קור.",
+      "description_en": "Guidance and resources for cold weather."
+    },
+    {
+      "id": "habit",
+      "name_he": "הרגל רכיבה",
+      "name_en": "Riding habit",
+      "description_he": "תג מבוקר: הרגל רכיבה.",
+      "description_en": "Guidance and resources for riding habit."
+    },
+    {
+      "id": "bike_selection",
+      "name_he": "בחירת אופנוע",
+      "name_en": "Bike selection",
+      "description_he": "תג מבוקר: בחירת אופנוע.",
+      "description_en": "Guidance and resources for bike selection."
+    },
+    {
+      "id": "weight",
+      "name_he": "משקל",
+      "name_en": "Weight",
+      "description_he": "תג מבוקר: משקל.",
+      "description_en": "Guidance and resources for weight."
+    },
+    {
+      "id": "international_touring",
+      "name_he": "טיול בחו״ל",
+      "name_en": "International touring",
+      "description_he": "תג מבוקר: טיול בחו״ל.",
+      "description_en": "Guidance and resources for international touring."
+    },
+    {
+      "id": "breakdowns",
+      "name_he": "תקלות בדרך",
+      "name_en": "Breakdowns",
+      "description_he": "תג מבוקר: תקלות בדרך.",
+      "description_en": "Guidance and resources for breakdowns."
+    },
+    {
+      "id": "desert",
+      "name_he": "מדבר",
+      "name_en": "Desert",
+      "description_he": "תג מבוקר: מדבר.",
+      "description_en": "Guidance and resources for desert."
+    },
+    {
+      "id": "airbag",
+      "name_he": "כרית אוויר לרוכב",
+      "name_en": "Rider airbag",
+      "description_he": "תג מבוקר: כרית אוויר לרוכב.",
+      "description_en": "Guidance and resources for rider airbag."
+    },
+    {
+      "id": "brake_failure",
+      "name_he": "איבוד בלמים",
+      "name_en": "Brake failure",
+      "description_he": "תג מבוקר: איבוד בלמים.",
+      "description_en": "Guidance and resources for brake failure."
+    },
+    {
+      "id": "mechanical_emergency",
+      "name_he": "חירום מכני",
+      "name_en": "Mechanical emergency",
+      "description_he": "תג מבוקר: חירום מכני.",
+      "description_en": "Guidance and resources for mechanical emergency."
+    },
+    {
+      "id": "etiquette",
+      "name_he": "נימוסי רכיבה",
+      "name_en": "Riding etiquette",
+      "description_he": "תג מבוקר: נימוסי רכיבה.",
+      "description_en": "Guidance and resources for riding etiquette."
+    },
+    {
+      "id": "comfort",
+      "name_he": "נוחות",
+      "name_en": "Comfort",
+      "description_he": "תג מבוקר: נוחות.",
+      "description_en": "Guidance and resources for comfort."
+    },
+    {
+      "id": "training_courses",
+      "name_he": "קורסי רכיבה",
+      "name_en": "Riding courses",
+      "description_he": "תג מבוקר: קורסי רכיבה.",
+      "description_en": "Guidance and resources for riding courses."
+    },
+    {
+      "id": "trip_planning",
+      "name_he": "תכנון טיול",
+      "name_en": "Trip planning",
+      "description_he": "תג מבוקר: תכנון טיול.",
+      "description_en": "Guidance and resources for trip planning."
+    },
+    {
+      "id": "urban",
+      "name_he": "עירוני",
+      "name_en": "Urban",
+      "description_he": "תג מבוקר: עירוני.",
+      "description_en": "Guidance and resources for urban."
+    },
+    {
+      "id": "mindset",
+      "name_he": "גישה מנטלית",
+      "name_en": "Mindset",
+      "description_he": "תג מבוקר: גישה מנטלית.",
+      "description_en": "Guidance and resources for mindset."
+    },
+    {
+      "id": "adventure",
+      "name_he": "אדוונצ׳ר",
+      "name_en": "adventure"
+    },
+    {
+      "id": "checklist",
+      "name_he": "צ׳קליסט",
+      "name_en": "checklist"
+    },
+    {
+      "id": "descent",
+      "name_he": "ירידה",
+      "name_en": "descent"
+    },
+    {
+      "id": "electronic_aids",
+      "name_he": "מערכות אלקטרוניות",
+      "name_en": "electronic aids"
+    },
+    {
+      "id": "entry_speed",
+      "name_he": "מהירות כניסה",
+      "name_en": "entry speed"
+    },
+    {
+      "id": "fit",
+      "name_he": "התאמה",
+      "name_en": "fit"
+    },
+    {
+      "id": "handlebar",
+      "name_he": "כידון",
+      "name_en": "handlebar"
+    },
+    {
+      "id": "hazard_avoidance",
+      "name_he": "התחמקות מסכנה",
+      "name_en": "hazard avoidance"
+    },
+    {
+      "id": "hazard_perception",
+      "name_he": "זיהוי סכנות",
+      "name_en": "hazard perception"
+    },
+    {
+      "id": "hill",
+      "name_he": "עלייה ומדרון",
+      "name_en": "hill"
+    },
+    {
+      "id": "leader_sweep",
+      "name_he": "מוביל ומאסף",
+      "name_en": "leader sweep"
+    },
+    {
+      "id": "levers",
+      "name_he": "מנופים",
+      "name_en": "levers"
+    },
+    {
+      "id": "logs",
+      "name_he": "בולי עץ",
+      "name_en": "logs"
+    },
+    {
+      "id": "lubrication",
+      "name_he": "שימון",
+      "name_en": "lubrication"
+    },
+    {
+      "id": "mirrors",
+      "name_he": "מראות",
+      "name_en": "mirrors"
+    },
+    {
+      "id": "mousse",
+      "name_he": "מוס",
+      "name_en": "mousse"
+    },
+    {
+      "id": "obstacles",
+      "name_he": "מכשולים",
+      "name_en": "obstacles"
+    },
+    {
+      "id": "offroad",
+      "name_he": "שטח",
+      "name_en": "offroad"
+    },
+    {
+      "id": "offroad_basics",
+      "name_he": "יסודות שטח",
+      "name_en": "offroad basics"
+    },
+    {
+      "id": "offroad_turning",
+      "name_he": "פניות בשטח",
+      "name_en": "offroad turning"
+    },
+    {
+      "id": "rental",
+      "name_he": "אופנוע שכור",
+      "name_en": "rental"
+    },
+    {
+      "id": "road",
+      "name_he": "כביש",
+      "name_en": "road"
+    },
+    {
+      "id": "rock_steps",
+      "name_he": "מדרגות סלע",
+      "name_en": "rock steps"
+    },
+    {
+      "id": "route_planning",
+      "name_he": "תכנון מסלול",
+      "name_en": "route planning"
+    },
+    {
+      "id": "slow_control",
+      "name_he": "שליטה איטית",
+      "name_en": "slow control"
+    },
+    {
+      "id": "traction_management",
+      "name_he": "ניהול אחיזה",
+      "name_en": "traction management"
+    },
+    {
+      "id": "travel",
+      "name_he": "טיולים",
+      "name_en": "travel"
+    },
+    {
+      "id": "tube",
+      "name_he": "פנימית",
+      "name_en": "tube"
+    },
+    {
+      "id": "wet_road",
+      "name_he": "כביש רטוב",
+      "name_en": "wet road"
+    },
+    {
+      "id": "wet_terrain",
+      "name_he": "שטח רטוב",
+      "name_en": "wet terrain"
+    },
+    {
+      "id": "winter",
+      "name_he": "חורף",
+      "name_en": "winter"
+    },
+    {
+      "id": "course_selection",
+      "name_he": "בחירת קורס",
+      "name_en": "Course selection"
+    },
+    {
+      "id": "professional_training",
+      "name_he": "הדרכה מקצועית",
+      "name_en": "Professional training"
+    },
+    {
+      "id": "beginner_foundations",
+      "name_he": "יסודות למתחילים",
+      "name_en": "Beginner foundations"
+    },
+    {
+      "id": "practice",
+      "name_he": "אימון ותרגול",
+      "name_en": "Practice"
+    },
+    {
+      "id": "observation",
+      "name_he": "התבוננות וקריאת מצב",
+      "name_en": "Observation"
+    }
+  ],
+  "content_types": [
+    {
+      "id": "technique",
+      "name_he": "טכניקה",
+      "name_en": "Technique",
+      "description_he": "הסבר או הדגמה של מיומנות רכיבה.",
+      "description_en": "Guidance presented as technique."
+    },
+    {
+      "id": "drill",
+      "name_he": "תרגיל",
+      "name_en": "Drill",
+      "description_he": "תרגול מובנה בסביבה מבוקרת.",
+      "description_en": "Guidance presented as drill."
+    },
+    {
+      "id": "explainer",
+      "name_he": "הסבר",
+      "name_en": "Explainer",
+      "description_he": "הבנת עיקרון, מערכת או סיכון.",
+      "description_en": "Guidance presented as explainer."
+    },
+    {
+      "id": "checklist",
+      "name_he": "צ׳קליסט",
+      "name_en": "Checklist",
+      "description_he": "רשימת בדיקות והכנות.",
+      "description_en": "Guidance presented as checklist."
+    },
+    {
+      "id": "maintenance_howto",
+      "name_he": "תחזוקה ותיקון",
+      "name_en": "Maintenance how-to",
+      "description_he": "פעולת תחזוקה או תיקון.",
+      "description_en": "Guidance presented as maintenance how-to."
+    },
+    {
+      "id": "touring_guide",
+      "name_he": "מדריך טיול",
+      "name_en": "Touring guide",
+      "description_he": "תכנון, קבוצה, אריזה וניווט.",
+      "description_en": "Guidance presented as touring guide."
+    },
+    {
+      "id": "course_overview",
+      "name_he": "היכרות עם אימון",
+      "name_en": "Training overview",
+      "description_he": "היכרות עם אימון או מסגרת לימוד.",
+      "description_en": "Guidance presented as training overview."
+    },
+    {
+      "id": "case_study",
+      "name_he": "מקרה בוחן",
+      "name_en": "Case study",
+      "description_he": "למידה מסיפור דרך, מסע או אירוע אמיתי.",
+      "description_en": "Guidance presented as case study."
+    }
+  ],
+  "domain_category_map": {
+    "offroad_adventure": [
+      "offroad_basics",
+      "sand",
+      "hills",
+      "riding_position",
+      "obstacles",
+      "gravel_dirt",
+      "descents",
+      "water_crossings",
+      "offroad_turning",
+      "ruts",
+      "mud_wet",
+      "loose_rock",
+      "ergonomics",
+      "offroad_braking",
+      "electronic_aids",
+      "controls_coordination",
+      "suspension_setup"
+    ],
+    "practice": [
+      "u_turns_low_speed",
+      "balance_slow_control",
+      "emergency_braking",
+      "drills",
+      "training_courses",
+      "controls_coordination",
+      "road_cornering",
+      "offroad_basics",
+      "offroad_braking",
+      "road_braking",
+      "offroad_turning",
+      "passenger_riding"
+    ],
+    "road": [
+      "road_strategy",
+      "road_cornering",
+      "wet_weather",
+      "passenger_riding",
+      "road_braking",
+      "emergency_braking",
+      "controls_coordination",
+      "riding_position",
+      "mindful_riding"
+    ],
+    "mixed": [
+      "motorcycle_maintenance",
+      "suspension_setup",
+      "tires_setup",
+      "ergonomics",
+      "electronic_aids",
+      "offroad_basics",
+      "controls_coordination",
+      "trip_preparation",
+      "bike_selection"
+    ],
+    "safety_recovery": [
+      "trip_preparation",
+      "protective_gear",
+      "fatigue_management",
+      "solo_group_safety",
+      "recovery",
+      "lifting",
+      "passenger_riding",
+      "tires_setup",
+      "water_crossings",
+      "mechanical_emergencies"
+    ],
+    "touring_travel": [
+      "group_riding",
+      "pre_trip_inspection",
+      "roadside_repairs",
+      "fatigue_management",
+      "route_navigation",
+      "passenger_riding",
+      "packing_luggage",
+      "trip_preparation",
+      "bike_selection",
+      "touring_planning",
+      "international_touring"
+    ]
+  },
+  "hierarchy_note_he": "תחום ← נושא ראשי ← מיקוד. אפשרויות המיקוד נבנות רק מן הסרטונים הרלוונטיים לבחירות הקודמות.",
+  "hierarchy_note_en": "Area ← primary topic ← focus. Focus options are generated only from videos relevant to the preceding choices."
+}

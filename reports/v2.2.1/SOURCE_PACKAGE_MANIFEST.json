@@ -1,0 +1,193 @@
+{
+  "version": "2.2.1",
+  "generated_at_utc": "2026-08-05T11:35:34.152779+00:00",
+  "root_directory": "Adventure-Riding-Video-Guide-v2.2.1",
+  "file_count": 37,
+  "files": [
+    {
+      "path": "README-FIRST.md",
+      "bytes": 1755,
+      "sha256": "55f03f12a826268f024c58eec76aea08a189ccf47c64d18d48952396ca132726"
+    },
+    {
+      "path": "documentation/CHANGELOG.md",
+      "bytes": 2838,
+      "sha256": "d0af0367d028c11226018789dd87beb1795b3cba5452039c5954fa51f8155758"
+    },
+    {
+      "path": "documentation/COMMUNITY_CONTENT_LICENSE.md",
+      "bytes": 2780,
+      "sha256": "8b04bdac73403532718b5e2a08666cd78ac163a990f05b13cb0d8fd73b2dc9fd"
+    },
+    {
+      "path": "documentation/CREDITS_AND_RIGHTS.md",
+      "bytes": 3212,
+      "sha256": "ae914c1d9499acb798b4b6a1830f0d6a674e0f70be5c35c5dfe77c8959684b66"
+    },
+    {
+      "path": "documentation/LICENSE.md",
+      "bytes": 1568,
+      "sha256": "ca0a8a707a155a25f3398483223faf59c8fed450ae4c8f9ae0e28df6e3216367"
+    },
+    {
+      "path": "documentation/README.md",
+      "bytes": 10927,
+      "sha256": "b976637bb0fa4051ba24d210025652cc0a5e827fb3ea3bfdb42666e8285c4de2"
+    },
+    {
+      "path": "documentation/RELEASE_NOTES_2.2.1_HE.md",
+      "bytes": 1697,
+      "sha256": "186aea43c20237730b082e79562aad8d26b94702272e08ff92df2c506bed44aa"
+    },
+    {
+      "path": "documentation/video.schema.json",
+      "bytes": 8881,
+      "sha256": "f7eac53ab22e8748aaaf86b363369fb478f67e6f5301f1ee0f676b203fa19d7b"
+    },
+    {
+      "path": "reports/v2.2.1/QA-REPORT-HE.md",
+      "bytes": 5924,
+      "sha256": "7c7f1ff68e7b32837b30686a4d42e0349b7733a8c914513ab95aa2c40a7e0246"
+    },
+    {
+      "path": "reports/v2.2.1/added-100-summary.json",
+      "bytes": 1327,
+      "sha256": "9ce83478593ed5331bd6d47835a8d3fdf39d5a69ecde19a334effaa0bd8dc72f"
+    },
+    {
+      "path": "reports/v2.2.1/added-100-tutorials.csv",
+      "bytes": 20003,
+      "sha256": "bc614500c655f7a1c1fbef33397e850437b521d1ff29c3fda8ab206cc598a460"
+    },
+    {
+      "path": "reports/v2.2.1/browser-qa.json",
+      "bytes": 1323,
+      "sha256": "175195f2a5ce9a5e660b25e8b2552e16f7bb48b361282c05ce00c0bfa20c4b36"
+    },
+    {
+      "path": "reports/v2.2.1/content-taxonomy-and-integrity.json",
+      "bytes": 454,
+      "sha256": "c5f6b3dc2c92646ac0ff2b52d32143deb2ae43a22b03698a03ce34fa67c90052"
+    },
+    {
+      "path": "reports/v2.2.1/package-preflight.json",
+      "bytes": 321,
+      "sha256": "5a13b8e2f49e1e061c97558287c260dd3aa6f24261643af506c596e35361cc99"
+    },
+    {
+      "path": "reports/v2.2.1/screenshots/desktop-home-light-he.png",
+      "bytes": 649286,
+      "sha256": "a51514598d1123dee8b34fc36e8a8bcf07a0c0245fffbd527e1dc75cdf7ffee4"
+    },
+    {
+      "path": "reports/v2.2.1/screenshots/desktop-library-all-en.png",
+      "bytes": 217156,
+      "sha256": "ba926fd770eb95b24c60cd8194a1a8faebf9bbf03904c47bdbd3bf701f97fab4"
+    },
+    {
+      "path": "reports/v2.2.1/screenshots/desktop-library-dark-en.png",
+      "bytes": 222706,
+      "sha256": "c77f6b565012d0e229ce268f50f7cd14405b06b0a7b3e685077b218e6309a55f"
+    },
+    {
+      "path": "reports/v2.2.1/screenshots/desktop-library-road-focus-he.png",
+      "bytes": 347193,
+      "sha256": "d0e8d9c36ea9612a6a66146da6159e0a9febe36201579bfa54dadd9193645e26"
+    },
+    {
+      "path": "reports/v2.2.1/screenshots/desktop-video-detail-new-he.png",
+      "bytes": 85664,
+      "sha256": "958bdf39afb1d224af76c7afd5f74dff354d486316902ee64672c4c769a3eca7"
+    },
+    {
+      "path": "reports/v2.2.1/screenshots/mobile-filter-hierarchy-he.png",
+      "bytes": 51264,
+      "sha256": "7bfedce5bbd69eca76494201a60e9186224e6cd89f992859b7f999b982e0a5d6"
+    },
+    {
+      "path": "reports/v2.2.1/screenshots/mobile-library-he.png",
+      "bytes": 136429,
+      "sha256": "848aeea4fd5ada59cc36851bb67bedffadfb3916cd74d4428d632bb14ac74257"
+    },
+    {
+      "path": "reports/v2.2.1/static-validation.json",
+      "bytes": 609,
+      "sha256": "c0f9665bbcbc7dca406c1e4cb7d2c83602150cd394e3f917d769abc9a8a79f9d"
+    },
+    {
+      "path": "site/assets/css/styles.css",
+      "bytes": 88941,
+      "sha256": "e3748786144c6705d31db1c1c4bb4f47c48c77d3304ca34dc18de2ee89c9127b"
+    },
+    {
+      "path": "site/assets/img/adventure-guide-mark.svg",
+      "bytes": 579,
+      "sha256": "117af166a344c03caaa468d920342a170a161f281d1e0072af8b7c9e1c0db236"
+    },
+    {
+      "path": "site/assets/js/app.js",
+      "bytes": 101848,
+      "sha256": "b338f357d20d723630c21abe1123832e1b4afe74892cbf5584cc8c9a7c742ec0"
+    },
+    {
+      "path": "site/assets/js/i18n.js",
+      "bytes": 38310,
+      "sha256": "ad9f3890bd1694fad8425dc479f4b6bba8b88c3db54ce58d9e5566ab4ebabd04"
+    },
+    {
+      "path": "site/assets/js/pagination.js",
+      "bytes": 1073,
+      "sha256": "0f52ce6ebe2e3dc122f1d17a1eb2a400ae3c88669f36345a5d12182ac18e1989"
+    },
+    {
+      "path": "site/assets/js/search.js",
+      "bytes": 13438,
+      "sha256": "f251450b8e948acfa1c33214d868e3a17bec982cee54bab50ddd459059ad90df"
+    },
+    {
+      "path": "site/assets/js/storage.js",
+      "bytes": 4578,
+      "sha256": "0b194250c7028d07a538c2d0480108e2164c38c094f5c4eb3a8a43d605d046e2"
+    },
+    {
+      "path": "site/data/categories.json",
+      "bytes": 88184,
+      "sha256": "cf502e6375c214a8867ca3fbca611776a7fd8f940c40ece356746dbc8d68f1a3"
+    },
+    {
+      "path": "site/data/learning-paths.json",
+      "bytes": 153538,
+      "sha256": "1f762eb14a952abd85338c7903ef62d2d109822a56fe882dc28dced35a2360bc"
+    },
+    {
+      "path": "site/data/site-config.json",
+      "bytes": 2390,
+      "sha256": "5be86a6ba400252eaf9d519ba8b3ca951519501b8fde9efafad5d2d0162f1a56"
+    },
+    {
+      "path": "site/data/synonyms.json",
+      "bytes": 12328,
+      "sha256": "27f5afd4469f7c60c6b6885b847684b5fcbcaf5bd842f5048477c72b9f06f7f3"
+    },
+    {
+      "path": "site/data/travel-guides.json",
+      "bytes": 8484,
+      "sha256": "d9d5bec1b29b829a7cbde9341402df3d829fd42adab33f217d622ce3d230f7de"
+    },
+    {
+      "path": "site/data/videos.json",
+      "bytes": 2787248,
+      "sha256": "68eb403b1e138ec842a840f2a9dc28e1d3a156befb4ad1ec909cd07268f821ad"
+    },
+    {
+      "path": "site/downloads/Adventure-Riding-Video-Guide-v2.2.1-Standalone.html",
+      "bytes": 3348588,
+      "sha256": "294fd1fe898d28ca3adf35710cf3e6e0999441cbec2a48d206d4d89de9256bfd"
+    },
+    {
+      "path": "site/index.html",
+      "bytes": 48516,
+      "sha256": "86f07b34525a6b9a93044ded2c2c3c77d80e1bd3f9047655f77443826aa11a08"
+    }
+  ]
+}

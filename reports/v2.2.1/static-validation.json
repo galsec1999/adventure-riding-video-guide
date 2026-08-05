@@ -1,0 +1,32 @@
+{
+  "schema_records": 450,
+  "integrity_checks": 15578,
+  "videos": 450,
+  "unique_video_ids": 450,
+  "channels": 175,
+  "languages": {
+    "en": 384,
+    "he": 66
+  },
+  "domains": {
+    "offroad_adventure": 125,
+    "practice": 73,
+    "road": 113,
+    "mixed": 47,
+    "safety_recovery": 57,
+    "touring_travel": 35
+  },
+  "learning_paths": 17,
+  "taxonomy": {
+    "domains": 6,
+    "categories": 47,
+    "subcategories": 71,
+    "content_types": 8,
+    "controlled_tags": 174,
+    "motorcycle_types": 8,
+    "terrain_types": 16,
+    "road_conditions": 10,
+    "source_types": 6
+  },
+  "status": "PASS"
+}

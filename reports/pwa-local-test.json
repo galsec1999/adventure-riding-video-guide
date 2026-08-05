@@ -1,0 +1,49 @@
+{
+  "status": "PASS",
+  "tested_at": "2026-08-05T16:00:00+03:00",
+  "source_release": "2.2.1",
+  "pwa_release": "2.3.0",
+  "url": "http://127.0.0.1:8765/adventure-riding-video-guide/",
+  "static_validation": {
+    "passed": 957,
+    "failed": 0,
+    "video_count": 450,
+    "unique_ids": 450,
+    "unique_youtube_ids": 450
+  },
+  "node_tests": {
+    "passed": 62,
+    "failed": 0
+  },
+  "chrome": {
+    "desktop_viewport": "1440x900",
+    "mobile_viewport": "390x844",
+    "hebrew_rtl": true,
+    "english_ltr": true,
+    "light_theme": true,
+    "dark_theme": true,
+    "horizontal_overflow_mobile": false,
+    "console_errors": 0,
+    "manifest_http_status": 200,
+    "icon_512_http_status": 200,
+    "service_worker_state": "activated",
+    "service_worker_controller": true,
+    "beforeinstallprompt_observed": true,
+    "custom_install_button_visible": true,
+    "update_consent_flow_passed": true,
+    "app_shell_loaded_with_origin_server_stopped": true,
+    "offline_loaded_video_count": 450,
+    "actual_installation_completed": false
+  },
+  "offline_video": {
+    "friendly_message_branch_tested": true,
+    "browser_wide_network_emulation": false,
+    "note": "Chrome loaded the full controlled app with the origin server stopped. The no-network YouTube branch passed the Node test; Chrome-wide network emulation was not available in the connected session."
+  },
+  "screenshots": [
+    "reports/screenshots/pwa-local/local-desktop-he.png",
+    "reports/screenshots/pwa-local/local-desktop-en.png",
+    "reports/screenshots/pwa-local/local-mobile-he.png",
+    "reports/screenshots/pwa-local/local-mobile-en.png"
+  ]
+}

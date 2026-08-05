@@ -1,0 +1,24 @@
+{
+  "version": "2.2.1",
+  "videos": 450,
+  "added_tutorials": 100,
+  "languages": {
+    "he": 66,
+    "en": 384
+  },
+  "domains": {
+    "offroad_adventure": 125,
+    "road": 113,
+    "mixed": 47,
+    "practice": 73,
+    "safety_recovery": 57,
+    "touring_travel": 35
+  },
+  "categories_used": 45,
+  "subtopics": 71,
+  "content_types": 8,
+  "channels": 175,
+  "learning_paths": 17,
+  "exact_same_channel_title_duplicates": 0,
+  "status": "STATIC_PASS"
+}

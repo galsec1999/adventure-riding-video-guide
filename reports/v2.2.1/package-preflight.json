@@ -1,0 +1,15 @@
+{
+  "version": "2.2.1",
+  "status": "PASS",
+  "checked_at_utc": "2026-08-05T11:35:34.145646+00:00",
+  "standalone": {
+    "bytes": 3348588,
+    "embedded_videos": 450,
+    "local_file_dependencies": 0,
+    "inline_css": true,
+    "inline_javascript": true
+  },
+  "modular_site": {
+    "missing_local_references": 0
+  }
+}

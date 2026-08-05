@@ -11,6 +11,7 @@ __pycache__/
 .env.*
 coverage/
 playwright-report/
+.playwright/
 test-results/
 .tmp/
 .cache/
@@ -32,6 +33,9 @@ reports/runtime/
 /reports/phase-03-git-show-stat.txt
 /reports/phase-03-git-status.txt
 /reports/phase-03-review-bundle.zip
+reports/*.zip
+release/*.zip
+Adventure-Riding-Video-Guide-Starter.zip
 *.log
 *.tmp
 *.temp
