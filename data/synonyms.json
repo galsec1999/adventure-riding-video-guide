@@ -1,0 +1,526 @@
+{
+  "version": "2.2.0",
+  "updated": "2026-08-05",
+  "terms": [
+    {
+      "concept_id": "countersteering",
+      "preferred_he": "היגוי הפוך",
+      "preferred_en": "countersteering",
+      "variants": [
+        "קאונטר סטירינג",
+        "קאונטרסטירינג",
+        "היגוי נגדי",
+        "counter steering"
+      ]
+    },
+    {
+      "concept_id": "trail_braking",
+      "preferred_he": "בלימה לתוך פנייה",
+      "preferred_en": "trail braking",
+      "variants": [
+        "טרייל ברייקינג",
+        "trail-braking",
+        "בלימה בפנייה"
+      ]
+    },
+    {
+      "concept_id": "rut",
+      "preferred_he": "חריץ",
+      "preferred_en": "rut",
+      "variants": [
+        "חריצים",
+        "קוליס",
+        "קוליסים",
+        "ruts",
+        "wheel rut"
+      ]
+    },
+    {
+      "concept_id": "hill_climb",
+      "preferred_he": "עלייה",
+      "preferred_en": "hill climb",
+      "variants": [
+        "עליות",
+        "טיפוס",
+        "טיפוס בעלייה",
+        "hillclimb",
+        "climb"
+      ]
+    },
+    {
+      "concept_id": "weight_transfer",
+      "preferred_he": "העברת משקל",
+      "preferred_en": "weight transfer",
+      "variants": [
+        "הסטת משקל",
+        "חלוקת משקל",
+        "load transfer"
+      ]
+    },
+    {
+      "concept_id": "target_fixation",
+      "preferred_he": "קיבעון מטרה",
+      "preferred_en": "target fixation",
+      "variants": [
+        "נעילת מבט",
+        "מבט נעול",
+        "קיבעון מבט"
+      ]
+    },
+    {
+      "concept_id": "counterbalance",
+      "preferred_he": "הטיה נגדית",
+      "preferred_en": "counterbalance",
+      "variants": [
+        "קאונטר באלאנס",
+        "counter balance",
+        "גוף החוצה"
+      ]
+    },
+    {
+      "concept_id": "friction_zone",
+      "preferred_he": "אזור החיכוך במצמד",
+      "preferred_en": "friction zone",
+      "variants": [
+        "נקודת חיכוך",
+        "חצי קלאץ'",
+        "חצי מצמד",
+        "clutch friction zone"
+      ]
+    },
+    {
+      "concept_id": "u_turn",
+      "preferred_he": "סיבוב פרסה",
+      "preferred_en": "u-turn",
+      "variants": [
+        "פרסה",
+        "פניית פרסה",
+        "יו טרן",
+        "uturn"
+      ]
+    },
+    {
+      "concept_id": "emergency_braking",
+      "preferred_he": "בלימת חירום",
+      "preferred_en": "emergency braking",
+      "variants": [
+        "עצירת חירום",
+        "עצירת פתע",
+        "בלימת פתע",
+        "maximum braking"
+      ]
+    },
+    {
+      "concept_id": "front_brake",
+      "preferred_he": "בלם קדמי",
+      "preferred_en": "front brake",
+      "variants": [
+        "ברקס קדמי",
+        "קדמי"
+      ]
+    },
+    {
+      "concept_id": "rear_brake",
+      "preferred_he": "בלם אחורי",
+      "preferred_en": "rear brake",
+      "variants": [
+        "ברקס אחורי",
+        "אחורי"
+      ]
+    },
+    {
+      "concept_id": "clutch",
+      "preferred_he": "מצמד",
+      "preferred_en": "clutch",
+      "variants": [
+        "קלאץ'",
+        "קלץ",
+        "clutch control"
+      ]
+    },
+    {
+      "concept_id": "throttle",
+      "preferred_he": "גז",
+      "preferred_en": "throttle",
+      "variants": [
+        "מצערת",
+        "ידית גז",
+        "throttle control"
+      ]
+    },
+    {
+      "concept_id": "standing",
+      "preferred_he": "רכיבה בעמידה",
+      "preferred_en": "standing",
+      "variants": [
+        "עמידה",
+        "עומדים",
+        "stand on pegs",
+        "standing position"
+      ]
+    },
+    {
+      "concept_id": "body_position",
+      "preferred_he": "תנוחת גוף",
+      "preferred_en": "body position",
+      "variants": [
+        "תנוחת רכיבה",
+        "מיקום גוף",
+        "riding posture"
+      ]
+    },
+    {
+      "concept_id": "line_selection",
+      "preferred_he": "בחירת קו",
+      "preferred_en": "line selection",
+      "variants": [
+        "קו רכיבה",
+        "קו בפנייה",
+        "riding line",
+        "corner line"
+      ]
+    },
+    {
+      "concept_id": "apex",
+      "preferred_he": "אייפקס",
+      "preferred_en": "apex",
+      "variants": [
+        "שיא הפנייה",
+        "נקודת השקה",
+        "אפקס"
+      ]
+    },
+    {
+      "concept_id": "sand",
+      "preferred_he": "חול",
+      "preferred_en": "sand",
+      "variants": [
+        "חולות",
+        "חול עמוק",
+        "deep sand",
+        "soft sand"
+      ]
+    },
+    {
+      "concept_id": "gravel",
+      "preferred_he": "חצץ",
+      "preferred_en": "gravel",
+      "variants": [
+        "כורכר",
+        "דרך כורכר",
+        "אבנים קטנות",
+        "loose gravel"
+      ]
+    },
+    {
+      "concept_id": "mud",
+      "preferred_he": "בוץ",
+      "preferred_en": "mud",
+      "variants": [
+        "בוצי",
+        "אדמה רטובה",
+        "muddy",
+        "wet dirt"
+      ]
+    },
+    {
+      "concept_id": "loose_rock",
+      "preferred_he": "דרדרת",
+      "preferred_en": "loose rock",
+      "variants": [
+        "אבנים משוחררות",
+        "סלעים משוחררים",
+        "scree",
+        "rocky"
+      ]
+    },
+    {
+      "concept_id": "water_crossing",
+      "preferred_he": "מעבר מים",
+      "preferred_en": "water crossing",
+      "variants": [
+        "חציית מים",
+        "חציית נחל",
+        "stream crossing",
+        "river crossing"
+      ]
+    },
+    {
+      "concept_id": "slow_speed",
+      "preferred_he": "רכיבה איטית",
+      "preferred_en": "slow speed",
+      "variants": [
+        "מהירות נמוכה",
+        "שליטה איטית",
+        "low speed",
+        "walking pace"
+      ]
+    },
+    {
+      "concept_id": "pillion",
+      "preferred_he": "מורכב",
+      "preferred_en": "pillion",
+      "variants": [
+        "נוסע",
+        "רכיבה בזוג",
+        "passenger",
+        "two-up"
+      ]
+    },
+    {
+      "concept_id": "fatigue",
+      "preferred_he": "עייפות",
+      "preferred_en": "fatigue",
+      "variants": [
+        "עייפות ברכיבה",
+        "תשישות",
+        "rider fatigue",
+        "drowsiness"
+      ]
+    },
+    {
+      "concept_id": "motorcycle_lifting",
+      "preferred_he": "הרמת אופנוע",
+      "preferred_en": "motorcycle lifting",
+      "variants": [
+        "להרים אופנוע",
+        "הרמת אופנוע כבד",
+        "pick up a motorcycle",
+        "bike lift"
+      ]
+    },
+    {
+      "concept_id": "adventure_bike",
+      "preferred_he": "אופנוע אדוונצ'ר",
+      "preferred_en": "adventure motorcycle",
+      "variants": [
+        "אדוונצ'ר",
+        "ADV",
+        "ADV bike",
+        "adventure bike"
+      ]
+    },
+    {
+      "concept_id": "dual_sport",
+      "preferred_he": "דו־שימושי",
+      "preferred_en": "dual sport",
+      "variants": [
+        "דוש",
+        "דו שימושי",
+        "dual-sport"
+      ]
+    },
+    {
+      "concept_id": "traction_control",
+      "preferred_he": "בקרת אחיזה",
+      "preferred_en": "traction control",
+      "variants": [
+        "TC",
+        "טרקשן קונטרול",
+        "בקרת משיכה"
+      ]
+    },
+    {
+      "concept_id": "abs",
+      "preferred_he": "ABS",
+      "preferred_en": "ABS",
+      "variants": [
+        "מערכת למניעת נעילה",
+        "anti-lock braking",
+        "איי בי אס"
+      ]
+    },
+    {
+      "concept_id": "tire_pressure",
+      "preferred_he": "לחץ אוויר בצמיג",
+      "preferred_en": "tire pressure",
+      "variants": [
+        "לחץ בצמיגים",
+        "לחץ אוויר",
+        "לחצי אוויר",
+        "tyre pressure",
+        "air pressure"
+      ]
+    },
+    {
+      "concept_id": "suspension",
+      "preferred_he": "מתלים",
+      "preferred_en": "suspension",
+      "variants": [
+        "בולם",
+        "בולמים",
+        "שיכוך",
+        "קדם עומס",
+        "preload",
+        "sag",
+        "damping"
+      ]
+    },
+    {
+      "concept_id": "luggage",
+      "preferred_he": "מטען",
+      "preferred_en": "luggage",
+      "variants": [
+        "אריזה",
+        "ציוד למסע",
+        "תיקי צד",
+        "packing",
+        "motorcycle luggage"
+      ]
+    },
+    {
+      "concept_id": "night_riding",
+      "preferred_he": "רכיבת לילה",
+      "preferred_en": "night riding",
+      "variants": [
+        "רכיבה בלילה",
+        "לילה",
+        "night ride",
+        "riding at night"
+      ]
+    },
+    {
+      "concept_id": "crosswind",
+      "preferred_he": "רוח צד",
+      "preferred_en": "crosswind",
+      "variants": [
+        "רוחות צד",
+        "רכיבה ברוח",
+        "משבי רוח",
+        "crosswinds",
+        "wind riding"
+      ]
+    },
+    {
+      "concept_id": "touring",
+      "preferred_he": "טיול אופנוע",
+      "preferred_en": "motorcycle touring",
+      "variants": [
+        "טיולים",
+        "מסע",
+        "מסעות",
+        "touring",
+        "motorcycle trip"
+      ]
+    },
+    {
+      "concept_id": "route_navigation",
+      "preferred_he": "ניווט מסלול",
+      "preferred_en": "route navigation",
+      "variants": [
+        "ניווט",
+        "תכנון מסלול",
+        "route planning",
+        "gps",
+        "gpx"
+      ]
+    },
+    {
+      "concept_id": "packing_luggage",
+      "preferred_he": "אריזה וזיווד",
+      "preferred_en": "packing and luggage",
+      "variants": [
+        "זיווד",
+        "מטען",
+        "ארגזים",
+        "תיקים",
+        "packing",
+        "luggage"
+      ]
+    },
+    {
+      "concept_id": "group_riding",
+      "preferred_he": "רכיבה בקבוצה",
+      "preferred_en": "group riding",
+      "variants": [
+        "קבוצת רכיבה",
+        "מוביל",
+        "מאסף",
+        "sweep rider",
+        "ride leader"
+      ]
+    },
+    {
+      "concept_id": "pre_trip_inspection",
+      "preferred_he": "בדיקה לפני טיול",
+      "preferred_en": "pre-trip inspection",
+      "variants": [
+        "צקליסט",
+        "צ׳קליסט",
+        "בדיקה לפני נסיעה",
+        "pre ride check",
+        "t-clocs"
+      ]
+    },
+    {
+      "concept_id": "tools_spares",
+      "preferred_he": "כלים וחלפים",
+      "preferred_en": "tools and spares",
+      "variants": [
+        "ערכת כלים",
+        "כלי עבודה",
+        "חלפים",
+        "tool kit",
+        "spares"
+      ]
+    },
+    {
+      "concept_id": "mindful_riding",
+      "preferred_he": "קשב ברכיבה",
+      "preferred_en": "mindful riding",
+      "variants": [
+        "קשיבות",
+        "ריכוז",
+        "מודעות",
+        "attention",
+        "focus",
+        "mindset"
+      ]
+    },
+    {
+      "concept_id": "training_courses",
+      "preferred_he": "קורס רכיבה",
+      "preferred_en": "rider training",
+      "variants": [
+        "אימון מתקדם",
+        "בית ספר לרכיבה",
+        "advanced course",
+        "riding course"
+      ]
+    },
+    {
+      "concept_id": "roadside_repairs",
+      "preferred_he": "תיקון דרך",
+      "preferred_en": "roadside repair",
+      "variants": [
+        "תקר",
+        "פנצ'ר",
+        "תיקון בשטח",
+        "flat tire",
+        "puncture repair"
+      ]
+    },
+    {
+      "concept_id": "bike_selection",
+      "preferred_he": "בחירת אופנוע",
+      "preferred_en": "bike selection",
+      "variants": [
+        "איזה אופנוע",
+        "גודל אופנוע",
+        "משקל אופנוע",
+        "which adventure bike"
+      ]
+    },
+    {
+      "concept_id": "mechanical_emergency",
+      "preferred_he": "תקלה מכנית",
+      "preferred_en": "mechanical emergency",
+      "variants": [
+        "איבוד בלמים",
+        "כשל מכני",
+        "brake failure",
+        "breakdown"
+      ]
+    }
+  ]
+}

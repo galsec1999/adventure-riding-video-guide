@@ -1,0 +1,218 @@
+{
+  "version": "2.2.0",
+  "updated": "2026-08-05",
+  "trip_types": [
+    {
+      "id": "day",
+      "name_he": "טיול יום",
+      "description_he": "מסלול קצר עם נקודות דלק, מים, הפסקה ודרך חזרה לפני החושך.",
+      "recommended_path_id": "day-trip-ready",
+      "name_en": "Day trip",
+      "description_en": "A short route with fuel, water, a break and a return plan before dark."
+    },
+    {
+      "id": "multi_day",
+      "name_he": "טיול רב־יומי",
+      "description_he": "מסע עם לינה, מטען, עייפות, תחזוקה ושינויי תוכנית.",
+      "recommended_path_id": "multi-day-adventure",
+      "name_en": "Multi-day trip",
+      "description_en": "A journey with accommodation, luggage, fatigue, maintenance and plan changes."
+    },
+    {
+      "id": "abroad",
+      "name_he": "טיול בחו״ל",
+      "description_he": "מסמכים, ביטוח, השכרה או שינוע, חוקים מקומיים וניווט גיבוי.",
+      "recommended_path_id": "multi-day-adventure",
+      "name_en": "International trip",
+      "description_en": "Documents, insurance, rental or transport, local laws and backup navigation."
+    }
+  ],
+  "checklists": [
+    {
+      "id": "bike",
+      "title_he": "האופנוע לפני יציאה",
+      "items_he": [
+        "לחצי אוויר ומצב הצמיגים",
+        "בלמים ונוזלים",
+        "שרשרת, שימון וחופש",
+        "אורות, צופר ומראות",
+        "דליפות, ברגים ומטען מקובע",
+        "דלק וטווח משוער"
+      ],
+      "title_en": "Motorcycle before departure",
+      "items_en": [
+        "Tire pressure and tire condition",
+        "Brakes and fluids",
+        "Chain condition, lubrication and slack",
+        "Lights, horn and mirrors",
+        "Leaks, fasteners and secured luggage",
+        "Fuel and estimated range"
+      ]
+    },
+    {
+      "id": "rider",
+      "title_he": "הרוכב והקשב",
+      "items_he": [
+        "שינה מספקת",
+        "מים ואוכל זמינים",
+        "תרופות ופרטי חירום",
+        "יעד קצב אישי",
+        "תוכנית לעצירה במקרה של לחץ או עייפות",
+        "ציוד מיגון ולבוש למזג האוויר"
+      ],
+      "title_en": "Rider and attention",
+      "items_en": [
+        "Enough sleep",
+        "Water and food available",
+        "Medication and emergency details",
+        "A personal pace target",
+        "A stop plan for stress or fatigue",
+        "Protective gear and weather-appropriate clothing"
+      ]
+    },
+    {
+      "id": "group",
+      "title_he": "תדריך קבוצה",
+      "items_he": [
+        "מוביל ומאסף",
+        "מסלול ונקודות מפגש",
+        "קצב והפסקות",
+        "נוהל פיצול או תקלה",
+        "תקשורת וסימנים",
+        "כלל: לא רודפים אחרי הקבוצה"
+      ],
+      "title_en": "Group briefing",
+      "items_en": [
+        "Lead and sweep riders",
+        "Route and meeting points",
+        "Pace and breaks",
+        "Split-up or breakdown procedure",
+        "Communication and hand signals",
+        "Rule: nobody chases the group"
+      ]
+    },
+    {
+      "id": "road_tools",
+      "title_he": "כלים לטיול כביש",
+      "items_he": [
+        "ערכת תקר מתאימה לצמיג",
+        "קומפרסור או משאבה",
+        "כלים ייעודיים לאופנוע",
+        "אזיקונים וסרט תיקון",
+        "פיוזים ונורות לפי הצורך",
+        "מטען וסוללת גיבוי"
+      ],
+      "title_en": "Road-trip tools",
+      "items_en": [
+        "A puncture kit suitable for the tire",
+        "Compressor or pump",
+        "Motorcycle-specific tools",
+        "Cable ties and repair tape",
+        "Fuses and bulbs when relevant",
+        "Charger and backup battery"
+      ]
+    },
+    {
+      "id": "offroad_tools",
+      "title_he": "כלים לשטח וחילוץ",
+      "items_he": [
+        "פנימית או פתרון תקר מתאים",
+        "מנופים וכלי גלגל",
+        "רצועת משיכה",
+        "ערכת תיקון בסיסית",
+        "מים נוספים",
+        "אמצעי תקשורת וגיבוי ניווט"
+      ],
+      "title_en": "Off-road and recovery tools",
+      "items_en": [
+        "Tube or suitable puncture solution",
+        "Tire levers and wheel tools",
+        "Tow strap",
+        "Basic repair kit",
+        "Extra water",
+        "Communication and navigation backup"
+      ]
+    },
+    {
+      "id": "navigation",
+      "title_he": "ניווט וגיבוי",
+      "items_he": [
+        "קובץ GPX נבדק",
+        "מפה לא מקוונת",
+        "נקודות דלק, מים ויציאה",
+        "טלפון או GPS טעון",
+        "כבל וסוללת גיבוי",
+        "המסלול משותף לרוכב נוסף"
+      ],
+      "title_en": "Navigation and backup",
+      "items_en": [
+        "A tested GPX file",
+        "Offline map",
+        "Fuel, water and exit points",
+        "Charged phone or GPS",
+        "Cable and backup battery",
+        "Route shared with another rider"
+      ]
+    },
+    {
+      "id": "abroad_docs",
+      "title_he": "מסמכים לחו״ל",
+      "items_he": [
+        "רישיון ודרישות מקומיות",
+        "ביטוח נסיעות ורכב",
+        "מסמכי השכרה או אופנוע",
+        "אישורי מעבר וגבול",
+        "מספרי חירום",
+        "עותק מאובטח של המסמכים"
+      ],
+      "title_en": "International documents",
+      "items_en": [
+        "Licence and local requirements",
+        "Travel and vehicle insurance",
+        "Rental or motorcycle documents",
+        "Border and crossing permits",
+        "Emergency numbers",
+        "A secure copy of documents"
+      ]
+    }
+  ],
+  "navigation_apps": [
+    {
+      "name": "OsmAnd",
+      "best_for_he": "מפות לא מקוונות, מסלולי GPX ותכנון מפורט.",
+      "caution_he": "הממשק עשיר; מכינים פרופיל ומפות לפני היציאה.",
+      "best_for_en": "Offline maps, GPX tracks and detailed route planning.",
+      "caution_en": "The interface is feature-rich; configure profiles and maps before departure."
+    },
+    {
+      "name": "REVER",
+      "best_for_he": "תכנון ושיתוף רכיבות, ניווט ומעקב קהילתי.",
+      "caution_he": "בודקים אילו תכונות דורשות חשבון או מנוי.",
+      "best_for_en": "Ride planning, sharing, navigation and community tracking.",
+      "caution_en": "Check which features require an account or subscription."
+    },
+    {
+      "name": "Gaia GPS",
+      "best_for_he": "שכבות מפה ותכנון מסלולים בשטח.",
+      "caution_he": "בודקים כיסוי, רישוי ושמירה לא מקוונת באזור היעד.",
+      "best_for_en": "Map layers and off-road route planning.",
+      "caution_en": "Check regional coverage, licensing and offline storage."
+    },
+    {
+      "name": "DMD2",
+      "best_for_he": "ממשק ניווט לרוכבי אדוונצ'ר ומכשירי Dashboard.",
+      "caution_he": "נדרש תרגול מראש והתאמה לחומרה.",
+      "best_for_en": "Adventure-riding navigation and dashboard hardware.",
+      "caution_en": "Practise beforehand and match it to your hardware."
+    },
+    {
+      "name": "Waze / Google Maps",
+      "best_for_he": "כביש, תנועה, דלק ויעדים יומיומיים.",
+      "caution_he": "אינם תחליף לבדיקת תוואי שטח או מסלול GPX.",
+      "best_for_en": "Road traffic, fuel and everyday destinations.",
+      "caution_en": "Not a substitute for off-road terrain checks or a GPX track."
+    }
+  ],
+  "mindfulness_note_he": "לפני כל קטע שואלים: האם אני רואה רחוק, נושם רגיל, שולט בקצב ומסוגל לעצור בלי לחץ? אם אחת התשובות שלילית — מורידים עומס, עוצרים ומעריכים מחדש.",
+  "mindfulness_note_en": "Before starting, pause for ten seconds: check your attention, fatigue, stress, weather, motorcycle and the group. A changed condition is a reason to slow down, stop or change the plan."
+}
