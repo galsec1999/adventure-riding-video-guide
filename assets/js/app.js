@@ -1,6 +1,6 @@
 import { applySearchAndFilters, normalizeText, prepareVideos, scoreSearchMatch, uniqueDisplayTaxonomyIds } from "./search.js";
 import { browserStorage } from "./storage.js";
-import { localizedField, getStoredLanguage, isEnglish, saveLanguage, startEnglishObserver, translateDocument, translateExact } from "./i18n.js";
+import { localizedField, getStoredLanguage, isEnglish, saveLanguage, startEnglishObserver, translateDocument, translateExact } from "./i18n.js?v=3.1.0-20260806d";
 import {
   INITIAL_VISIBLE_LIMIT,
   LOAD_MORE_BATCH_SIZE,
@@ -12,12 +12,13 @@ const MOBILE_OVERLAY_QUERY = "(max-width: 59.999rem)";
 const DEFAULT_SITE_NAME = "מדריך הווידאו לרכיבת אדוונצ'ר";
 const DEFAULT_SAFETY_WARNING = "יש לתרגל בהדרגה, במקום בטוח ועם ציוד מיגון מתאים.";
 const SAFE_LOGO_EXTENSION = /\.(?:avif|gif|jpe?g|png|svg|webp)$/i;
-const DATA_CACHE_REVISION = "3.0.0-20260806a";
+const DATA_CACHE_REVISION = "3.1.0-20260806d";
 const SEMANTIC_META_URL = "data/semantic-index.json";
 const SEMANTIC_WORKER_URL = `assets/js/semantic-worker.js?v=${DATA_CACHE_REVISION}`;
 
 const DATA_FILES = Object.freeze({
   videos: "data/videos.json",
+  shorts: "data/shorts.json",
   taxonomy: "data/categories.json",
   paths: "data/learning-paths.json",
   synonyms: "data/synonyms.json",
@@ -27,6 +28,7 @@ const DATA_FILES = Object.freeze({
 
 const EMBEDDED_DATA_IDS = Object.freeze({
   [DATA_FILES.videos]: "embedded-data-videos",
+  [DATA_FILES.shorts]: "embedded-data-shorts",
   [DATA_FILES.taxonomy]: "embedded-data-categories",
   [DATA_FILES.paths]: "embedded-data-learning-paths",
   [DATA_FILES.synonyms]: "embedded-data-synonyms",
@@ -34,7 +36,7 @@ const EMBEDDED_DATA_IDS = Object.freeze({
   [DATA_FILES.travel]: "embedded-data-travel-guides",
 });
 
-const VALID_VIEWS = Object.freeze(["home", "library", "paths", "trips", "smart", "safety"]);
+const VALID_VIEWS = Object.freeze(["home", "library", "shorts", "paths", "trips", "smart", "safety"]);
 const FEEDBACK_URL = "https://github.com/galsec1999/adventure-riding-video-guide/issues/new";
 
 const FILTER_IDS = Object.freeze({
@@ -75,6 +77,8 @@ const state = {
   travel: {},
   synonyms: {},
   videos: [],
+  shorts: [],
+  allVideos: [],
   videosById: new Map(),
   labels: new Map(),
   synonymIndex: null,
@@ -635,10 +639,14 @@ function taxonomyItems(collection, allowedIds) {
   return (state.taxonomy[collection] || []).filter((item) => allowed.has(item.id));
 }
 
+function currentCollectionVideos() {
+  return state.currentView === "shorts" ? state.shorts : state.videos;
+}
+
 function contextualVideos({ includeCategory = true } = {}) {
   const domain = state.filters.domain || "";
   const category = includeCategory ? (state.filters.category || "") : "";
-  return state.videos.filter((video) => {
+  return currentCollectionVideos().filter((video) => {
     if (domain && video.domain !== domain) return false;
     if (category && video.primary_category !== category) return false;
     return true;
@@ -849,7 +857,7 @@ function navigate(view, { updateHistory = true, focus = false } = {}) {
   if ($("#feedback-dialog")?.open) closeFeedback({ restoreFocus: false });
   state.currentView = view;
   $$('[id$="-view"]').forEach((section) => {
-    const active = section.id === `${view}-view`;
+    const active = section.id === `${view}-view` || (view === "shorts" && section.id === "library-view");
     section.hidden = !active;
     section.setAttribute("aria-hidden", String(!active));
   });
@@ -858,14 +866,15 @@ function navigate(view, { updateHistory = true, focus = false } = {}) {
     if (active) item.setAttribute("aria-current", "page");
     else item.removeAttribute("aria-current");
   });
-  if (view === "library") renderLibrary({ syncUrl: false });
+  if (view === "library" || view === "shorts") renderLibrary({ syncUrl: false });
   if (view === "paths") renderPaths();
   if (view === "trips") renderTrips();
   if (view === "smart") renderSmartResults(state.smartQuery);
   if (view === "home") renderContinue();
   if (updateHistory) updateUrl({ push: true });
   if (focus) {
-    const heading = $(`#${view}-view h1, #${view}-view h2`);
+    const targetView = view === "shorts" ? "library" : view;
+    const heading = $(`#${targetView}-view h1, #${targetView}-view h2`);
     if (heading) {
       heading.tabIndex = -1;
       heading.focus({ preventScroll: true });
@@ -895,6 +904,8 @@ function renderDomainCards() {
   container.replaceChildren(...cards);
 
   $$('[data-stat="videos"]').forEach((node) => { node.textContent = String(state.videos.length); });
+  $$('[data-stat="shorts"]').forEach((node) => { node.textContent = String(state.shorts.length); });
+  $$('[data-stat="all-videos"]').forEach((node) => { node.textContent = String(state.allVideos.length); });
   $$('[data-stat="domains"]').forEach((node) => { node.textContent = String((state.taxonomy.domains || []).length); });
   $$('[data-stat="paths"]').forEach((node) => { node.textContent = String(state.paths.length); });
   $$('[data-stat="channels"]').forEach((node) => {
@@ -932,7 +943,7 @@ function connectImageFallback(image, fallback) {
 
 function createVideoCard(video, { compact = false, matchReason = "" } = {}) {
   const article = createElement("article", {
-    className: `video-card${compact ? " video-card--compact" : ""}`,
+    className: `video-card${compact ? " video-card--compact" : ""}${video.media_format === "short" ? " video-card--short" : ""}`,
     attrs: { "data-video-id": video.id },
   });
   const media = createElement("div", { className: "video-card__media" });
@@ -962,6 +973,7 @@ function createVideoCard(video, { compact = false, matchReason = "" } = {}) {
     createBadge(label(video.skill_level), "level"),
     createBadge(video.language === "he" ? ui("עברית", "Hebrew") : ui("אנגלית", "English"), "language"),
   );
+  if (video.media_format === "short") badges.prepend(createBadge(ui("קצר", "Short"), "short"));
   if (video.contains_marketing) badges.append(createBadge(ui("כולל רכיב שיווקי", "Includes marketing"), "warning"));
   if (state.watched.has(video.id)) badges.append(createBadge(ui("נצפה", "Watched"), "success"));
 
@@ -1066,8 +1078,9 @@ function renderLibraryNavigator() {
     "data-filter-value": "",
     "aria-pressed": String(!state.filters.domain),
   });
+  const collection = currentCollectionVideos();
   const domainButtons = (state.taxonomy.domains || []).map((domain) => {
-    const count = state.videos.filter((video) => video.domain === domain.id).length;
+    const count = collection.filter((video) => video.domain === domain.id).length;
     return createButton(`${label(domain.id)} · ${count}`, "quick-domain", {
       className: `domain-tab${state.filters.domain === domain.id ? " is-active" : ""}`,
       "data-filter-value": domain.id,
@@ -1136,8 +1149,20 @@ function applyQuickFacet(kind, value) {
 
 function renderLibrary({ syncUrl = true } = {}) {
   if (!state.ready) return;
+  const collection = currentCollectionVideos();
+  const shortMode = state.currentView === "shorts";
+  const title = $("#library-title");
+  const eyebrow = $("#library-view .page-hero .eyebrow");
+  const intro = $("#library-title + p");
+  if (title) title.textContent = shortMode ? ui("ספריית הקצרים", "Shorts library") : ui("ספריית הסרטונים", "Video library");
+  if (eyebrow) eyebrow.textContent = shortMode
+    ? ui(`${state.shorts.length} קצרים מאומתים · רעיון אחד בכל צפייה`, `${state.shorts.length} verified Shorts · one idea per watch`)
+    : ui(`${state.videos.length} סרטונים · מידע מאומת · חיפוש אחד`, `${state.videos.length} videos · verified information · one search`);
+  if (intro) intro.textContent = shortMode
+    ? ui("חפשו וסננו קטעי YouTube Shorts לפי תחום, נושא, רמה ושפה. קצר הוא נקודת כניסה מהירה — לא תחליף להדרכה מלאה.", "Search and filter YouTube Shorts by area, topic, level and language. A Short is a quick entry point, not a replacement for full instruction.")
+    : ui("בחרו תחום, עברו לנושא מרכזי וצמצמו למיקוד מדויק. רק אפשרויות שרלוונטיות לבחירה שלכם יוצגו.", "Choose an area, move to a main topic and narrow to a precise focus. Only relevant options are shown.");
   state.filters = { ...state.filters, ...getFiltersFromControls() };
-  const results = applySearchAndFilters(state.videos, state.filters, {
+  const results = applySearchAndFilters(collection, state.filters, {
     favorites: state.favorites,
     watched: state.watched,
     synonymIndex: state.synonymIndex,
@@ -1308,7 +1333,13 @@ function renderPaths() {
         const link = videoLink(id, null, "alternative");
         if (link) alternatives.append(link);
       });
-      item.append(top, explanation, guardrails, primary, alternatives);
+      const shorts = createElement("div", { className: "path-step__videos path-step__videos--shorts" });
+      shorts.append(createElement("span", { className: "path-step__label", text: ui("קצרים לחזרה מהירה", "Shorts for a quick recap") }));
+      (step.short_video_ids || []).forEach((id) => {
+        const link = videoLink(id, null, "short");
+        if (link) shorts.append(link);
+      });
+      item.append(top, explanation, guardrails, primary, alternatives, shorts);
       steps.append(item);
     });
     card.append(header, steps);
@@ -1708,8 +1739,8 @@ function smartRankVideos(query) {
   const intent = inferSmartIntent(query);
   if (!intent.normalized) return { intent, results: [], matches: [] };
   const candidates = intent.category
-    ? state.videos.filter((video) => video.primary_category === intent.category || video.secondary_categories.includes(intent.category))
-    : intent.domain ? state.videos.filter((video) => video.domain === intent.domain) : state.videos;
+    ? state.allVideos.filter((video) => video.primary_category === intent.category || video.secondary_categories.includes(intent.category))
+    : intent.domain ? state.allVideos.filter((video) => video.domain === intent.domain) : state.allVideos;
   const scored = candidates.map((video) => {
     let score = 0;
     intent.tokens.forEach((token) => { score += scoreSearchMatch(video, token, state.synonymIndex); });
@@ -1791,13 +1822,20 @@ async function renderSmartResults(query = "") {
     note.textContent = ui("AI מקומי מדרג כעת את הרשומות לפי משמעות…", "Local AI is ranking the records by meaning…");
     const semanticMatches = await semanticRankVideos(clean, intent);
     if (state.smartQuery !== clean || !state.semantic.enabled) return;
-    state.smartMatches = semanticMatches;
-    state.smartResults = semanticMatches.map((entry) => entry.video);
+    const quickMatches = matches
+      .filter(({ video }) => video.media_format === "short")
+      .slice(0, 4)
+      .map(({ video }) => ({ video, score: 0, reason: smartMatchReason(video, intent, false) }));
+    const combinedMatches = [...quickMatches, ...semanticMatches]
+      .filter((entry, index, collection) => collection.findIndex((candidate) => candidate.video.id === entry.video.id) === index)
+      .slice(0, 12);
+    state.smartMatches = combinedMatches;
+    state.smartResults = combinedMatches.map((entry) => entry.video);
     note.textContent = ui(
-      `${semanticMatches.length} התאמות סמנטיות מקומיות · ${intentParts.join(" · ")}. כל התוצאות מגיעות מן המאגר המאומת.`,
-      `${semanticMatches.length} local semantic matches · ${intentParts.join(" · ")}. Every result comes from the curated library.`,
+      `${combinedMatches.length} התאמות מקומיות — סרטונים מלאים וקצרים · ${intentParts.join(" · ")}. כל התוצאות מגיעות מן המאגר המאומת.`,
+      `${combinedMatches.length} local matches — full videos and Shorts · ${intentParts.join(" · ")}. Every result comes from the curated library.`,
     );
-    grid.replaceChildren(...semanticMatches.map(({ video, reason }) => createVideoCard(video, { compact: true, matchReason: reason })));
+    grid.replaceChildren(...combinedMatches.map(({ video, reason }) => createVideoCard(video, { compact: true, matchReason: reason })));
   } catch (error) {
     updateLocalAiUi("error", ui("החיפוש הרגיל ממשיך לעבוד. טעינת המודל המקומי נכשלה.", "Regular search remains available. The local model could not be loaded."));
   }
@@ -2462,7 +2500,7 @@ function bindEvents() {
   });
   $("#reset-filters")?.addEventListener("click", resetFilters);
   $("#load-more")?.addEventListener("click", () => {
-    const total = applySearchAndFilters(state.videos, state.filters, {
+    const total = applySearchAndFilters(currentCollectionVideos(), state.filters, {
       favorites: state.favorites,
       watched: state.watched,
       synonymIndex: state.synonymIndex,
@@ -2513,8 +2551,9 @@ async function initialize() {
   bindEvents();
   overlayManager.syncBody();
   try {
-    const [videos, taxonomy, paths, synonyms, config, travel] = await Promise.all([
+    const [videos, shorts, taxonomy, paths, synonyms, config, travel] = await Promise.all([
       fetchJson(DATA_FILES.videos),
+      fetchJson(DATA_FILES.shorts),
       fetchJson(DATA_FILES.taxonomy),
       fetchJson(DATA_FILES.paths),
       fetchJson(DATA_FILES.synonyms),
@@ -2522,6 +2561,7 @@ async function initialize() {
       fetchJson(DATA_FILES.travel),
     ]);
     validateRuntimeVideos(videos);
+    validateRuntimeVideos(shorts);
     state.config = normalizeSiteConfig(config);
     state.taxonomy = taxonomy;
     state.paths = paths;
@@ -2529,9 +2569,12 @@ async function initialize() {
     state.synonyms = synonyms || {};
     setLabels();
     const prepared = prepareVideos(videos, taxonomy, synonyms);
+    const preparedShorts = prepareVideos(shorts, taxonomy, synonyms);
     state.videos = prepared.videos;
+    state.shorts = preparedShorts.videos;
+    state.allVideos = [...state.videos, ...state.shorts];
     state.synonymIndex = prepared.synonymIndex;
-    state.videosById = new Map(state.videos.map((video) => [video.id, video]));
+    state.videosById = new Map(state.allVideos.map((video) => [video.id, video]));
     state.favorites = browserStorage.getFavorites();
     state.watched = browserStorage.getWatched();
     state.pathProgress = browserStorage.getPathProgress();
@@ -2589,7 +2632,7 @@ async function initialize() {
     };
     window.dispatchEvent(new CustomEvent("adv-guide:ready", { detail: { videoCount: state.videos.length } }));
     if (englishMode()) translateDocument(document);
-    announce(englishMode() ? `The guide loaded with ${state.videos.length} videos` : `המדריך נטען עם ${state.videos.length} סרטונים`);
+    announce(englishMode() ? `The guide loaded with ${state.allVideos.length} videos and Shorts` : `המדריך נטען עם ${state.allVideos.length} סרטונים וקצרים`);
 
     if (state.activeVideoId) openVideo(state.activeVideoId, { updateHistory: false });
   } catch (error) {
