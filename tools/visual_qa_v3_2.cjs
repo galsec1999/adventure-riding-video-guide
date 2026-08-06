@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 /**
- * Visual and interaction QA for the source-verified Shorts recovery release.
- * Document version: 1.1.0
+ * Visual and interaction QA for the verified Chris Birch Adventure release.
+ * Document version: 1.2.0
  */
 
 const fs = require("node:fs");
@@ -11,7 +11,7 @@ const { spawn } = require("node:child_process");
 const { chromium } = require("playwright");
 
 const ROOT = path.resolve(__dirname, "..");
-const OUT = path.join(ROOT, "reports", "shorts-recovery-v3.3");
+const OUT = path.join(ROOT, "reports", "chris-birch-v3.4", "browser-qa");
 const SCREENSHOTS = path.join(OUT, "screenshots");
 
 function freePort() {
@@ -84,13 +84,13 @@ async function scenario(browser, baseUrl, config) {
   const expectedDirection = config.english ? "ltr" : "rtl";
   const expectedTheme = config.dark ? "dark" : "light";
   const checks = {
-    release_3_3_0: state.release === "3.3.0",
+    release_3_4_0: state.release === "3.4.0",
     language: state.language === expectedLanguage,
     direction: state.direction === expectedDirection,
     theme: state.theme === expectedTheme,
-    result_count_152: /\b152\b/.test(state.resultCount || ""),
-    initial_cards_rendered: state.cardCount > 0 && state.cardCount <= 152,
-    shorts_stat_152: state.shortStat === "152",
+    result_count_153: /\b153\b/.test(state.resultCount || ""),
+    initial_cards_rendered: state.cardCount > 0 && state.cardCount <= 153,
+    shorts_stat_153: state.shortStat === "153",
     no_tractionator: !state.cardText.some((text) => /tractionator|gps tire/i.test(text)),
     no_horizontal_overflow: state.horizontalOverflow <= 1,
     title_visible: state.titleVisible,
@@ -140,8 +140,8 @@ async function main() {
     const checks = Object.fromEntries(scenarios.flatMap((item) => Object.entries(item.checks).map(([key, value]) => [`${item.name}:${key}`, value])));
     checks["verified_navigation_category_visible"] = routeNavigation.categoryOptionExists && routeNavigation.categoryStillInUrl && routeNavigation.cardCount === 1;
     const report = {
-      document_version: "1.1.0",
-      product_version: "3.3.0",
+      document_version: "1.2.0",
+      product_version: "3.4.0",
       status: Object.values(checks).every(Boolean) ? "PASS" : "FAIL",
       real_browser: true,
       headless: true,

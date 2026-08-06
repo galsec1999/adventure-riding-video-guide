@@ -1,3 +1,5 @@
+"""Maintenance-tool regression tests. Document version 1.0.1 — product 3.4.0."""
+
 from __future__ import annotations
 
 import io
@@ -331,7 +333,7 @@ class MaintenanceToolsTests(unittest.TestCase):
             report = build_audit.build_audit(Path(temp_dir))
         self.assertEqual(SOURCE_COUNT, report["total_videos"])
         self.assertEqual(report["total_videos"], report["unique_youtube_video_ids"])
-        self.assertEqual(report["learning_paths"]["count"], 17)
+        self.assertEqual(report["learning_paths"]["count"], 18)
         self.assertEqual("pass", report["validation"]["status"])
 
     def test_audit_writes_all_three_formats(self) -> None:

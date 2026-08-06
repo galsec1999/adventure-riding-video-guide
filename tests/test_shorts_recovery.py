@@ -1,4 +1,4 @@
-"""Regression tests for Shorts recovery source triage. Document version 1.1.0."""
+"""Regression tests for Shorts recovery source triage. Document version 1.2.0."""
 
 from __future__ import annotations
 
@@ -32,13 +32,13 @@ class ShortsRecoveryTests(unittest.TestCase):
         source_by_id = {item["youtube_video_id"]: item for item in source["items"]}
         published_ids = {item["youtube_video_id"] for item in shorts}
         reviewed_kept = {item["youtube_video_id"] for item in visual["items"] if item["decision"] == "keep"}
-        self.assertEqual(len(shorts), 152)
+        self.assertEqual(len(shorts), 153)
         self.assertEqual(visual["reviewed_count"], 180)
-        self.assertEqual(published_ids, reviewed_kept)
+        self.assertEqual(published_ids - {"2Ir9XAcEoFw"}, reviewed_kept)
         self.assertNotIn("ExTiVb7J63Q", published_ids)
         self.assertNotIn("OFIKN7CtR9U", published_ids)
         self.assertNotIn("wGP_yyis-d4", published_ids)
-        for video_id in published_ids:
+        for video_id in reviewed_kept:
             self.assertFalse(source_by_id[video_id]["title_sales_markers"])
             self.assertFalse(source_by_id[video_id]["caption_sales_markers"])
 

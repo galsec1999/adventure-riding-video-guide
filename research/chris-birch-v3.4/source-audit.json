@@ -1,0 +1,217 @@
+{
+  "document_title": "ביקורת מקורות — הרחבת Chris Birch לאופנועי אדוונצ'ר",
+  "document_version": "1.0.0",
+  "product_version": "3.4.0",
+  "reviewed_on": "2026-08-06",
+  "discovery_counts": {
+    "official_channel_full": 103,
+    "official_channel_shorts": 18,
+    "initial_search_unique": 160,
+    "deep_search_unique": 203,
+    "combined_unique": 287
+  },
+  "detailed_metadata_reviewed": 66,
+  "published_full": 14,
+  "published_shorts": 1,
+  "policy_he": "תוכן נכנס רק כאשר ההדרכה והקשר לאופנוע אדוונצ'ר נתמכים בתיאור, פרקים, תמלול או בדיקה חזותית. ספק, אנדורו, ראווה או פרסום ממוקד גוררים הסרה.",
+  "policy_en": "Content is included only when both instruction and Adventure-motorcycle relevance are supported by description, chapters, transcript or visual review. Doubt, Enduro, showcase or product-focused promotion means exclusion.",
+  "selected": [
+    {
+      "youtube_video_id": "BySQmyz62EI",
+      "media_format": "full",
+      "decision": "include",
+      "reason": "adventure_instruction_verified"
+    },
+    {
+      "youtube_video_id": "waIHKJpQiB4",
+      "media_format": "full",
+      "decision": "include",
+      "reason": "adventure_instruction_verified"
+    },
+    {
+      "youtube_video_id": "mrLyIWGyUWo",
+      "media_format": "full",
+      "decision": "include",
+      "reason": "adventure_instruction_verified"
+    },
+    {
+      "youtube_video_id": "M5yAd24z5y0",
+      "media_format": "full",
+      "decision": "include",
+      "reason": "adventure_instruction_verified"
+    },
+    {
+      "youtube_video_id": "axhRmbeUy28",
+      "media_format": "full",
+      "decision": "include",
+      "reason": "adventure_instruction_verified"
+    },
+    {
+      "youtube_video_id": "w_mg182B1OA",
+      "media_format": "full",
+      "decision": "include",
+      "reason": "adventure_instruction_verified"
+    },
+    {
+      "youtube_video_id": "di8dBE6jkjM",
+      "media_format": "full",
+      "decision": "include",
+      "reason": "adventure_instruction_verified"
+    },
+    {
+      "youtube_video_id": "rCJmU0mIn_U",
+      "media_format": "full",
+      "decision": "include",
+      "reason": "adventure_instruction_verified"
+    },
+    {
+      "youtube_video_id": "6oh95eTdsNs",
+      "media_format": "full",
+      "decision": "include",
+      "reason": "adventure_instruction_verified"
+    },
+    {
+      "youtube_video_id": "X_Dwq8hmuJ0",
+      "media_format": "full",
+      "decision": "include",
+      "reason": "adventure_instruction_verified"
+    },
+    {
+      "youtube_video_id": "OXsQaL28fgo",
+      "media_format": "full",
+      "decision": "include",
+      "reason": "adventure_instruction_verified"
+    },
+    {
+      "youtube_video_id": "P3ckIVpbi9E",
+      "media_format": "full",
+      "decision": "include",
+      "reason": "adventure_instruction_verified"
+    },
+    {
+      "youtube_video_id": "y5-Kro247Qs",
+      "media_format": "full",
+      "decision": "include",
+      "reason": "adventure_instruction_verified"
+    },
+    {
+      "youtube_video_id": "BKgVjALEDVk",
+      "media_format": "full",
+      "decision": "include",
+      "reason": "adventure_instruction_verified"
+    },
+    {
+      "youtube_video_id": "2Ir9XAcEoFw",
+      "media_format": "short",
+      "decision": "include",
+      "reason": "adventure_instruction_verified_by_full_visual_review"
+    }
+  ],
+  "representative_exclusions": [
+    {
+      "youtube_video_id": "XprOa7xx15o",
+      "decision": "exclude",
+      "reason": "participant_hill_climb_without_instruction"
+    },
+    {
+      "youtube_video_id": "4kSGOxGgZQo",
+      "decision": "exclude",
+      "reason": "hill_climb_showcase_without_instruction"
+    },
+    {
+      "youtube_video_id": "hR28mpLjlik",
+      "decision": "exclude",
+      "reason": "wheelie_showcase_without_teaching_steps"
+    },
+    {
+      "youtube_video_id": "O1ZxB5Hm6gs",
+      "decision": "exclude",
+      "reason": "official_short_is_wheelie_showcase_without_instruction"
+    },
+    {
+      "youtube_video_id": "F-Mts-Iwtrc",
+      "decision": "exclude",
+      "reason": "official_short_is_adventure_day_showcase"
+    },
+    {
+      "youtube_video_id": "T_OXA6JdtzU",
+      "decision": "exclude",
+      "reason": "official_short_is_ride_showcase"
+    },
+    {
+      "youtube_video_id": "RXNjYa5svAo",
+      "decision": "exclude",
+      "reason": "hard_enduro_not_adventure"
+    },
+    {
+      "youtube_video_id": "CqboTvhGRxA",
+      "decision": "exclude",
+      "reason": "visual_review_shows_dirt_bike_lifter_training_not_adventure"
+    },
+    {
+      "youtube_video_id": "OsNaBO78Y1Y",
+      "decision": "exclude",
+      "reason": "log_pivot_is_dirt_bike_focused"
+    },
+    {
+      "youtube_video_id": "7oDyewNtTF0",
+      "decision": "exclude",
+      "reason": "dirt_bike_wheelie_episode_not_adventure"
+    },
+    {
+      "youtube_video_id": "eNj0eHkV2BI",
+      "decision": "exclude",
+      "reason": "hard_enduro_training_not_adventure"
+    },
+    {
+      "youtube_video_id": "YMDCtCmWXEA",
+      "decision": "exclude",
+      "reason": "commercial_series_trailer_not_tutorial"
+    },
+    {
+      "youtube_video_id": "LzNBmzNqzPU",
+      "decision": "exclude",
+      "reason": "commercial_series_preview_not_tutorial"
+    },
+    {
+      "youtube_video_id": "l4U8P0wsygA",
+      "decision": "exclude",
+      "reason": "product_accessories_promotion"
+    },
+    {
+      "youtube_video_id": "BFki1Ud3O0A",
+      "decision": "exclude",
+      "reason": "product_heavy_model_setup"
+    },
+    {
+      "youtube_video_id": "TAH2RlaK-mk",
+      "decision": "exclude",
+      "reason": "product_heavy_model_setup"
+    },
+    {
+      "youtube_video_id": "tGG4T1Uqqvs",
+      "decision": "exclude",
+      "reason": "product_heavy_model_setup"
+    },
+    {
+      "youtube_video_id": "knO0oDK6ol0",
+      "decision": "exclude",
+      "reason": "title_only_evidence_visual_review_blocked_by_advertising"
+    },
+    {
+      "youtube_video_id": "YgCdnylSKNw",
+      "decision": "exclude",
+      "reason": "creator_explicitly_says_video_is_not_meant_to_teach"
+    },
+    {
+      "youtube_video_id": "FQLfWAfldkM",
+      "decision": "exclude",
+      "reason": "brief_skill_demonstration_without_teaching_steps"
+    },
+    {
+      "youtube_video_id": "NNzkdKk_bJU",
+      "decision": "exclude",
+      "reason": "not_a_youtube_short_and_no_source_description"
+    }
+  ]
+}

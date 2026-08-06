@@ -5,7 +5,7 @@ import { fileURLToPath } from "node:url";
 
 import { applySearchAndFilters, prepareVideos } from "../assets/js/search.js";
 
-// Test document version: 1.1.0 — product 3.3.0.
+// Test document version: 1.2.0 — product 3.4.0.
 
 const root = path.resolve(fileURLToPath(new URL("..", import.meta.url)));
 
@@ -75,8 +75,8 @@ export async function evaluateSearchAcceptance() {
   });
   return {
     document_title: "Search acceptance report",
-    document_version: "1.1.0",
-    product_version: "3.3.0",
+    document_version: "1.2.0",
+    product_version: "3.4.0",
     generated_at_utc: new Date().toISOString(),
     required_query_count: searchAcceptanceCases.length,
     passed: checks.filter((check) => check.pass).length,

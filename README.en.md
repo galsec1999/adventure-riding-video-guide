@@ -1,10 +1,17 @@
-# Community Adventure Riding Video Guide — Document version 3.3.0 / גרסת מסמך 3.3.0
+# Community Adventure Riding Video Guide — Document version 3.4.0 / גרסת מסמך 3.4.0
 
-An installable Hebrew/English PWA with 411 full tutorials and 152 Shorts that passed refreshed source verification and individual visual review, 17 learning paths, a trip centre, contextual search and optional on-device semantic search. Product version: **3.3.0**.
+An installable Hebrew/English PWA with 425 full tutorials, 153 verified Shorts, 18 learning paths, a trip centre, contextual search and optional on-device semantic search. Product version: **3.4.0**.
 
 Live site: <https://galsec1999.github.io/adventure-riding-video-guide/>
 
-## What changed in 3.3.0
+## What changed in 3.4.0
+
+- Added 14 full Chris Birch tutorials and one Short. Every addition is explicitly relevant to Adventure motorcycles and was reviewed beyond its title.
+- Reviewed 287 unique candidates and collected detailed source metadata for 66. Enduro-only, showcase, raw-riding, product-led or keyword-only matches were excluded.
+- Added an eight-step Chris Birch Adventure masterclass covering body position, cockpit setup, braking, cornering, climbs and lifting an Adventure motorcycle.
+- The single Short is deliberately labelled as a refresher: it was watched in full and shows body-position coaching on Adventure bikes; the other 17 official Shorts did not pass the instructional gate.
+
+## Highlights from 3.3.0
 
 - Refreshed source metadata for all 795 Shorts quarantined in 3.2.0; 631 qualified for consideration and 180 entered a category-balanced individual visual review.
 - Published 152 Shorts whose title, description, captions and two live-player time points agree; rejected 28 visual finalists for promotion, mismatch or uncertainty.
@@ -41,12 +48,12 @@ Open <http://localhost:8080/>. Service workers require `localhost` or HTTPS.
 
 ```powershell
 node tools/build_semantic_index.mjs
-python tools/finalize_shorts_recovery.py
-python tools/prepare_release_v3_3.py
+python tools/add_chris_birch_v3_4.py
+python tools/prepare_release_v3_4.py
 python tools/build_standalone.py
 python tools/verify_site_sync.py --write
-python tools/validate_data.py --expected-count 411
-python tools/validate_pwa.py --site site --schema documentation/video.schema.json --expected-count 411
+python tools/validate_data.py --expected-count 425
+python tools/validate_pwa.py --site site --schema documentation/video.schema.json --expected-count 425
 python -m unittest discover -s tests -p "test_*.py"
 npm test
 node tools/search_acceptance.mjs
@@ -55,11 +62,11 @@ node tools/search_acceptance.mjs
 ## Repository layout
 
 - `site/` — the exact static artifact published by GitHub Pages.
-- `data/` — 411 full videos, 152 verified Shorts, taxonomy, paths, trip data and the semantic index.
+- `data/` — 425 full videos, 153 verified Shorts, taxonomy, paths, trip data and the semantic index.
 - `assets/` — UI, styles, Web Worker, Transformers.js and ONNX Runtime.
-- `downloads/Adventure-Riding-Video-Guide-v3.3.0-Standalone.html` — a single-file edition containing both content libraries, with regular search and no semantic model.
+- `downloads/Adventure-Riding-Video-Guide-v3.4.0-Standalone.html` — a single-file edition containing both content libraries, with regular search and no semantic model.
 - `documentation/` — specifications, licences, rights, third-party notices and release notes.
-- `research/shorts-v3.3/` and `reports/shorts-recovery-v3.3.json` — refreshed source evidence, visual decisions and the 3.3.0 recovery summary.
+- `research/chris-birch-v3.4/` and `reports/chris-birch-v3.4.json` — source evidence, visual decisions and the 3.4.0 Chris Birch expansion summary.
 
 ## Content, rights and privacy
 

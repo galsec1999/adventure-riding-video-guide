@@ -4328,5 +4328,238 @@
         ]
       }
     ]
+  },
+  {
+    "id": "chris-birch-adventure-masterclass",
+    "name_he": "מסלול כריס בירץ' לאופנועי אדוונצ'ר",
+    "description_he": "מסלול ממוקד מן היסודות ועד פניות, עליות, חילוץ, הרמה ותחזוקת שטח — רק תכנים שאומתו כאדוונצ'ר.",
+    "skill_level": "intermediate",
+    "name_en": "Chris Birch Adventure masterclass",
+    "description_en": "A focused path from fundamentals through cornering, hills, recovery, lifting and field maintenance, using Adventure-verified sources only.",
+    "steps": [
+      {
+        "order": 1,
+        "goal_he": "לבנות יסודות על אופנוע כבד",
+        "explanation_he": "מתחילים מכיוון פקדים, תנוחה והחלטה מתי לשבת או לעמוד.",
+        "primary_video_ids": [
+          "yt-BySQmyz62EI",
+          "yt-y5-Kro247Qs"
+        ],
+        "alternative_video_ids": [
+          "yt-BKgVjALEDVk"
+        ],
+        "equipment_he": [
+          "מיגון שטח מלא",
+          "מגן מנוע",
+          "שטח תרגול סגור"
+        ],
+        "risk_level": "medium",
+        "warning_he": "צפו תחילה; תרגלו בהדרגה ורק לפי הרמה, התנאים והנחיית מדריך מוסמך.",
+        "goal_en": "Build fundamentals on a heavy bike",
+        "explanation_en": "Start with controls setup, position and the decision to sit or stand.",
+        "equipment_en": [
+          "Full off-road protective gear",
+          "Engine protection",
+          "Closed practice area"
+        ],
+        "warning_en": "Study first; practise progressively and only within your level, conditions and qualified-instructor guidance.",
+        "short_video_ids": []
+      },
+      {
+        "order": 2,
+        "goal_he": "לחבר תנוחה, תאוצה ובלימה",
+        "explanation_he": "לומדים תנועה מאוזנת על אופנוע כבד ותחושת בלם אחורי.",
+        "primary_video_ids": [
+          "yt-X_Dwq8hmuJ0",
+          "yt-h5YrGuIGgVI"
+        ],
+        "alternative_video_ids": [
+          "yt-BySQmyz62EI"
+        ],
+        "equipment_he": [
+          "מיגון שטח מלא",
+          "מגן מנוע",
+          "שטח תרגול סגור"
+        ],
+        "risk_level": "medium",
+        "warning_he": "צפו תחילה; תרגלו בהדרגה ורק לפי הרמה, התנאים והנחיית מדריך מוסמך.",
+        "goal_en": "Connect position, acceleration and braking",
+        "explanation_en": "Study balanced movement on a heavy motorcycle and rear-brake feel.",
+        "equipment_en": [
+          "Full off-road protective gear",
+          "Engine protection",
+          "Closed practice area"
+        ],
+        "warning_en": "Study first; practise progressively and only within your level, conditions and qualified-instructor guidance.",
+        "short_video_ids": []
+      },
+      {
+        "order": 3,
+        "goal_he": "לבנות שגרת תרגול",
+        "explanation_he": "מבודדים יסודות בתרגילים וחוזרים עליהם לפני יציאה לשטח מורכב.",
+        "primary_video_ids": [
+          "yt-waIHKJpQiB4",
+          "yt-oZiD8uxH0hQ"
+        ],
+        "alternative_video_ids": [
+          "yt-mrLyIWGyUWo"
+        ],
+        "equipment_he": [
+          "מיגון שטח מלא",
+          "מגן מנוע",
+          "שטח תרגול סגור"
+        ],
+        "risk_level": "medium",
+        "warning_he": "צפו תחילה; תרגלו בהדרגה ורק לפי הרמה, התנאים והנחיית מדריך מוסמך.",
+        "goal_en": "Build a practice routine",
+        "explanation_en": "Isolate fundamentals in drills before moving to complex terrain.",
+        "equipment_en": [
+          "Full off-road protective gear",
+          "Engine protection",
+          "Closed practice area"
+        ],
+        "warning_en": "Study first; practise progressively and only within your level, conditions and qualified-instructor guidance.",
+        "short_video_ids": []
+      },
+      {
+        "order": 4,
+        "goal_he": "להבין החלקה בכניסה לפנייה",
+        "explanation_he": "זהו פרק מתקדם לצפייה ולהדרכה מוסמכת, לא לתרגול עצמאי מן הסרטון.",
+        "primary_video_ids": [
+          "yt-P3ckIVpbi9E"
+        ],
+        "alternative_video_ids": [
+          "yt-X_Dwq8hmuJ0"
+        ],
+        "equipment_he": [
+          "מיגון שטח מלא",
+          "מגן מנוע",
+          "שטח תרגול סגור"
+        ],
+        "risk_level": "high",
+        "warning_he": "צפו תחילה; תרגלו בהדרגה ורק לפי הרמה, התנאים והנחיית מדריך מוסמך.",
+        "goal_en": "Understand a slide into a corner",
+        "explanation_en": "This is advanced study for qualified coaching, not independent practice from video.",
+        "equipment_en": [
+          "Full off-road protective gear",
+          "Engine protection",
+          "Closed practice area"
+        ],
+        "warning_en": "Study first; practise progressively and only within your level, conditions and qualified-instructor guidance.",
+        "short_video_ids": []
+      },
+      {
+        "order": 5,
+        "goal_he": "לנהל עליות ושיפוע צד",
+        "explanation_he": "לומדים גישה לעלייה, חילוץ לאחר עצירה ותנוחת גוף בשיפוע צד.",
+        "primary_video_ids": [
+          "yt-M5yAd24z5y0"
+        ],
+        "alternative_video_ids": [
+          "yt-di8dBE6jkjM",
+          "yt-OXsQaL28fgo"
+        ],
+        "equipment_he": [
+          "מיגון שטח מלא",
+          "מגן מנוע",
+          "שטח תרגול סגור"
+        ],
+        "risk_level": "high",
+        "warning_he": "צפו תחילה; תרגלו בהדרגה ורק לפי הרמה, התנאים והנחיית מדריך מוסמך.",
+        "goal_en": "Manage hills and off-camber terrain",
+        "explanation_en": "Study hill approach, recovery after a stall and off-camber body position.",
+        "equipment_en": [
+          "Full off-road protective gear",
+          "Engine protection",
+          "Closed practice area"
+        ],
+        "warning_en": "Study first; practise progressively and only within your level, conditions and qualified-instructor guidance.",
+        "short_video_ids": []
+      },
+      {
+        "order": 6,
+        "goal_he": "להרים גלגל קדמי באופן מדורג",
+        "explanation_he": "הפרק המלא קודם; הקצר משמש רק כתזכורת לתנוחת גוף ולהתקדמות.",
+        "primary_video_ids": [
+          "yt-6oh95eTdsNs"
+        ],
+        "alternative_video_ids": [
+          "yt-waIHKJpQiB4"
+        ],
+        "equipment_he": [
+          "מיגון שטח מלא",
+          "מגן מנוע",
+          "שטח תרגול סגור"
+        ],
+        "risk_level": "high",
+        "warning_he": "צפו תחילה; תרגלו בהדרגה ורק לפי הרמה, התנאים והנחיית מדריך מוסמך.",
+        "goal_en": "Build a progressive front-wheel lift",
+        "explanation_en": "Use the full lesson first; the Short is only a reminder of body position and progression.",
+        "equipment_en": [
+          "Full off-road protective gear",
+          "Engine protection",
+          "Closed practice area"
+        ],
+        "warning_en": "Study first; practise progressively and only within your level, conditions and qualified-instructor guidance.",
+        "short_video_ids": [
+          "yts-2Ir9XAcEoFw"
+        ]
+      },
+      {
+        "order": 7,
+        "goal_he": "להרים ולחלץ אופנוע כבד",
+        "explanation_he": "מפרידים בין מכניקת הרמה נכונה לבין תכנון חילוץ בבוץ או בשיפוע.",
+        "primary_video_ids": [
+          "yt-axhRmbeUy28"
+        ],
+        "alternative_video_ids": [
+          "yt-zMuVNBk9Ogw",
+          "yt-di8dBE6jkjM"
+        ],
+        "equipment_he": [
+          "מיגון שטח מלא",
+          "מגן מנוע",
+          "שטח תרגול סגור"
+        ],
+        "risk_level": "high",
+        "warning_he": "צפו תחילה; תרגלו בהדרגה ורק לפי הרמה, התנאים והנחיית מדריך מוסמך.",
+        "goal_en": "Lift and recover a heavy motorcycle",
+        "explanation_en": "Separate sound lifting mechanics from planning mud or slope recovery.",
+        "equipment_en": [
+          "Full off-road protective gear",
+          "Engine protection",
+          "Closed practice area"
+        ],
+        "warning_en": "Study first; practise progressively and only within your level, conditions and qualified-instructor guidance.",
+        "short_video_ids": []
+      },
+      {
+        "order": 8,
+        "goal_he": "לטפל בצמיג בשטח",
+        "explanation_he": "מסיימים בתמיכת אופנוע ללא רגלית אמצע ובהחלפת צמיג בכלים פשוטים.",
+        "primary_video_ids": [
+          "yt-w_mg182B1OA"
+        ],
+        "alternative_video_ids": [
+          "yt-rCJmU0mIn_U"
+        ],
+        "equipment_he": [
+          "מיגון שטח מלא",
+          "מגן מנוע",
+          "שטח תרגול סגור"
+        ],
+        "risk_level": "medium",
+        "warning_he": "צפו תחילה; תרגלו בהדרגה ורק לפי הרמה, התנאים והנחיית מדריך מוסמך.",
+        "goal_en": "Handle a tyre problem in the field",
+        "explanation_en": "Finish with supporting a bike without a center stand and changing a tyre with simple tools.",
+        "equipment_en": [
+          "Full off-road protective gear",
+          "Engine protection",
+          "Closed practice area"
+        ],
+        "warning_en": "Study first; practise progressively and only within your level, conditions and qualified-instructor guidance.",
+        "short_video_ids": []
+      }
+    ]
   }
 ]

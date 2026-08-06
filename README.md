@@ -1,12 +1,19 @@
-# מדריך הווידאו הקהילתי לרכיבת אדוונצ'ר — גרסת מסמך 3.3.0
+# מדריך הווידאו הקהילתי לרכיבת אדוונצ'ר — גרסת מסמך 3.4.0
 
-אתר PWA דו־לשוני שניתן להתקנה, ובו 411 סרטוני הדרכה מלאים ו־152 קצרים שעברו אימות מקור ובדיקה חזותית פרטנית, 17 מסלולי לימוד, מרכז טיולים, חיפוש היררכי וחיפוש סמנטי מקומי אופציונלי. גרסת המוצר: **3.3.0**.
+אתר PWA דו־לשוני שניתן להתקנה, ובו 425 סרטוני הדרכה מלאים ו־153 קצרים מאומתים, 18 מסלולי לימוד, מרכז טיולים, חיפוש היררכי וחיפוש סמנטי מקומי אופציונלי. גרסת המוצר: **3.4.0**.
 
 האתר החי: <https://galsec1999.github.io/adventure-riding-video-guide/>
 
 [English README](README.en.md)
 
-## מה חדש ב־3.3.0
+## מה חדש ב־3.4.0
+
+- נוספו 14 סרטוני הדרכה מלאים של Chris Birch וקצר אחד, כולם קשורים במפורש לרכיבת Adventure ונבדקו מעבר לכותרת בלבד.
+- נסקרו 287 מועמדים ייחודיים, ול־66 מהם נאספו פרטי מקור מפורטים. קטעי Enduro בלבד, תדמית, רכיבת ראווה, פרסום מוצר או התאמה מילולית בלבד לא נכנסו.
+- נוסף מסלול לימוד ייעודי בן 8 שלבים: תנוחת גוף, כיוון עמדת הרכיבה, בלימה, פניות, שליטה בעליות והרמת אופנוע Adventure.
+- ה־Short היחיד מסומן כרענון: הוא נצפה במלואו ומציג הדרכה על תנוחת גוף והתקדמות מיומנויות עם אופנועי Adventure; 17 Shorts רשמיים אחרים לא עברו את שער ההדרכה.
+
+## עיקרי 3.3.0
 
 - כל 795 הקצרים שהוסגרו ב־3.2.0 עברו איסוף מקור חוזר; 631 נמצאו ראויים לבחינה ו־180 נכנסו למדגם מאוזן לבדיקה חזותית פרטנית.
 - 152 קצרים פורסמו לאחר התאמה בין כותרת, תיאור, כתוביות ושתי נקודות זמן מהנגן החי; 28 מועמדים חזותיים הוסרו עקב פרסום ממוקד, אי־התאמה או ספק.
@@ -43,27 +50,27 @@ python -m http.server 8080 --directory site
 
 ```powershell
 node tools/build_semantic_index.mjs
-python tools/finalize_shorts_recovery.py
-python tools/prepare_release_v3_3.py
+python tools/add_chris_birch_v3_4.py
+python tools/prepare_release_v3_4.py
 python tools/build_standalone.py
 python tools/verify_site_sync.py --write
-python tools/validate_data.py --expected-count 411
-python tools/validate_pwa.py --site site --schema documentation/video.schema.json --expected-count 411
+python tools/validate_data.py --expected-count 425
+python tools/validate_pwa.py --site site --schema documentation/video.schema.json --expected-count 425
 python -m unittest discover -s tests -p "test_*.py"
 npm test
 node tools/search_acceptance.mjs
 ```
 
-שערי השחרור בודקים בין היתר 411 מזהים וקישורים ייחודיים, התאמה לסכמה, מסלולי לימוד, נתוני טיולים, אינדקס סמנטי, Manifest, אייקונים, Service Worker, Offline, חיפוש, מסננים, Storage ו־Lazy Loading ללא מאות iframes.
+שערי השחרור בודקים בין היתר 425 סרטונים מלאים ו־153 קצרים, מזהים וקישורים ייחודיים, התאמה לסכמה, מסלולי לימוד, נתוני טיולים, אינדקס סמנטי, Manifest, אייקונים, Service Worker, Offline, חיפוש, מסננים, Storage ו־Lazy Loading ללא מאות iframes.
 
 ## מבנה Repository
 
 - `site/` — התוצר הסטטי המדויק שמתפרסם ב־GitHub Pages.
-- `data/` — 411 סרטונים מלאים, 152 קצרים מאומתים, טקסונומיה, מסלולים, טיולים ואינדקס סמנטי.
+- `data/` — 425 סרטונים מלאים, 153 קצרים מאומתים, טקסונומיה, מסלולים, טיולים ואינדקס סמנטי.
 - `assets/` — ממשק, עיצוב, Worker, Transformers.js ו־ONNX Runtime.
-- `downloads/Adventure-Riding-Video-Guide-v3.3.0-Standalone.html` — מהדורה עצמאית עם שני מאגרי התוכן וחיפוש רגיל, ללא המודל הסמנטי.
+- `downloads/Adventure-Riding-Video-Guide-v3.4.0-Standalone.html` — מהדורה עצמאית עם שני מאגרי התוכן וחיפוש רגיל, ללא המודל הסמנטי.
 - `documentation/` — מפרטים, רישיונות, זכויות, הודעות צד שלישי והערות שחרור.
-- `research/shorts-v3.3/` ו־`reports/shorts-recovery-v3.3.json` — ראיות המקור, החלטות הבדיקה החזותית וסיכום גרסה 3.3.0.
+- `research/chris-birch-v3.4/` ו־`reports/chris-birch-v3.4.json` — ראיות המקור, החלטות הבדיקה החזותית וסיכום הרחבת Chris Birch בגרסה 3.4.0.
 
 ## תוכן, זכויות ופרטיות
 

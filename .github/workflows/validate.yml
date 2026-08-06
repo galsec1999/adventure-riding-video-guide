@@ -1,3 +1,4 @@
+# Document version: 1.1.0 — product 3.4.0
 name: Validate site and PWA
 
 on:
@@ -36,11 +37,11 @@ jobs:
 
       - name: Validate canonical data and publication mirror
         run: |
-          python tools/validate_data.py --expected-count 411
+          python tools/validate_data.py --expected-count 425
           python tools/verify_site_sync.py
 
-      - name: Validate 411 full videos, audited Shorts, semantic index, standalone, manifest, icons and subpath safety
-        run: python tools/validate_pwa.py --site site --schema documentation/video.schema.json --expected-count 411
+      - name: Validate 425 full videos, audited Shorts, semantic index, standalone, manifest, icons and subpath safety
+        run: python tools/validate_pwa.py --site site --schema documentation/video.schema.json --expected-count 425
 
       - name: Run Node tests
         run: |

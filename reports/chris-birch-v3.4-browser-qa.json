@@ -1,0 +1,22 @@
+{
+  "document_title": "Chris Birch 3.4.0 browser QA",
+  "document_version": "1.0.0",
+  "product_version": "3.4.0",
+  "status": "PASS_DESKTOP",
+  "browser": "connected in-app Chromium",
+  "viewport": "1280x720",
+  "checks": {
+    "release_3_4_0": true,
+    "catalogue_total_578": true,
+    "full_total_425": true,
+    "shorts_total_153": true,
+    "paths_total_18": true,
+    "hebrew_rtl_dark": true,
+    "english_ltr_light": true,
+    "no_horizontal_page_overflow": true,
+    "chris_birch_full_results_15": true,
+    "chris_birch_short_results_1": true,
+    "dedicated_path_he_and_en": true
+  },
+  "mobile_note": "The connected browser does not expose viewport resizing; the current mobile structure is covered by automated CSS/PWA tests, but no new mobile screenshot is claimed."
+}

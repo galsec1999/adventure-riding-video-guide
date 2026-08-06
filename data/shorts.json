@@ -5626,6 +5626,112 @@
     "media_format": "short"
   },
   {
+    "id": "yts-2Ir9XAcEoFw",
+    "youtube_video_id": "2Ir9XAcEoFw",
+    "youtube_url": "https://www.youtube.com/shorts/2Ir9XAcEoFw",
+    "thumbnail_url": "https://i.ytimg.com/vi/2Ir9XAcEoFw/hqdefault.jpg",
+    "title_original": "Wheelie training with Chris Birch - Off Road Motorcycle Instructor #saynotoslow #shorts",
+    "title_he": "קצר: התקדמות בתרגול הרמת גלגל עם כריס בירץ'",
+    "title_en": "Wheelie training with Chris Birch - Off Road Motorcycle Instructor #saynotoslow #shorts",
+    "channel_name": "ADVMotoSkillZ",
+    "channel_url": "https://www.youtube.com/channel/UCAhh41POT6froY75PsUl-MA",
+    "published_date": "2022-11-16",
+    "duration_seconds": 48,
+    "language": "en",
+    "subtitle_languages": [],
+    "domain": "offroad_adventure",
+    "primary_category": "obstacles",
+    "secondary_categories": [
+      "riding_position",
+      "controls_coordination"
+    ],
+    "subtopics": [
+      "logs_ledges",
+      "weight_transfer",
+      "friction_zone"
+    ],
+    "content_type": "technique",
+    "tags": [
+      "body_position",
+      "clutch",
+      "practice_drill",
+      "adventure"
+    ],
+    "skill_level": "intermediate",
+    "risk_level": "high",
+    "motorcycle_types": [
+      "adventure"
+    ],
+    "motorcycle_weight_classes": [
+      "medium",
+      "heavy"
+    ],
+    "terrain_types": [
+      "dirt"
+    ],
+    "road_conditions": [],
+    "summary_he": "קצר חזותי מאימון כריס בירץ' על אופנועי אדוונצ'ר גדולים, המציג התחלה מתנוחת גוף, חזרות והתקדמות הדרגתית בהרמת הגלגל.",
+    "summary_en": "A visual Short from Chris Birch training on large Adventure motorcycles, showing a body-position starting point, repetitions and gradual front-wheel-lift progression.",
+    "learning_points_he": [
+      "להתחיל מתנוחת גוף לפני ניסיון להוסיף גובה",
+      "לבנות את התנועה בחזרות מדורגות",
+      "לקבל תיקון מאמן בין ניסיונות ולא להסיק הוראות מלאות מן הקצר"
+    ],
+    "learning_points_en": [
+      "Start with body position before adding height",
+      "Build the movement through progressive repetitions",
+      "Use coach feedback between attempts and do not infer a complete procedure from the Short"
+    ],
+    "fit_for_he": "לרוכבי אדוונצ'ר שרוצים ללמוד את הנושא לפני תרגול מדורג בשטח סגור ומתאים.",
+    "fit_for_en": "For Adventure riders who want to study the topic before progressive practice in a suitable controlled area.",
+    "why_watch_he": "הסרטון נצפה במלואו; הכתוביות המוטמעות מציינות התחלה מתנוחת גוף והתקדמות מיומנות.",
+    "why_watch_en": "The full clip was reviewed; embedded labels identify a body-position start and progressing skills.",
+    "exercises_he": [],
+    "exercises_en": [],
+    "equipment_he": [
+      "מיגון רכיבה מלא",
+      "מגן מנוע מתאים"
+    ],
+    "equipment_en": [
+      "Full protective riding gear",
+      "Appropriate engine protection"
+    ],
+    "safety_warnings_he": [
+      "טכניקה בסיכון גבוה: אין לתרגל מן הסרטון בלבד; נדרשים מדריך מוסמך, מיגון מלא ושטח סגור."
+    ],
+    "safety_warnings_en": [
+      "High-risk technique: do not practise from the video alone; use qualified instruction, full gear and a closed area."
+    ],
+    "common_mistakes_he": [
+      "ניסיון להעתיק את הקצב של המאמן לפני ביסוס היסודות"
+    ],
+    "common_mistakes_en": [
+      "Copying the instructor's pace before the fundamentals are stable"
+    ],
+    "chapters": [],
+    "quality_score": 4,
+    "quality_reason_he": "הקשר האדוונצ'ר וההתקדמות אומתו חזותית, אך הקצר אינו מספק הוראות ביצוע מלאות ולכן הוא משמש כרענון בלבד.",
+    "quality_reason_en": "Adventure context and progression were visually verified, but the Short lacks a complete procedure, so its score is capped.",
+    "source_type": "professional_instructor",
+    "contains_marketing": false,
+    "related_video_ids": [
+      "yt-6oh95eTdsNs"
+    ],
+    "verification": {
+      "link_status": "active_public",
+      "metadata_verified": true,
+      "content_evidence_types": [
+        "youtube_player_description",
+        "visual_content_review"
+      ],
+      "classification_confidence": "high",
+      "notes_he": "נבדקו מטא־דאטה וראיות התוכן ב־2026-08-06; לא נשמרו וידאו, אודיו או תמלול מלא.",
+      "notes_en": "Metadata and content evidence were reviewed on 2026-08-06; no video, audio or full transcript was stored."
+    },
+    "last_checked": "2026-08-06",
+    "media_format": "short"
+  },
+  {
     "id": "yts-Z0EJV8DirOM",
     "youtube_video_id": "Z0EJV8DirOM",
     "youtube_url": "https://www.youtube.com/shorts/Z0EJV8DirOM",

@@ -1,12 +1,12 @@
 {
   "document_version": "1.1.0",
-  "product_version": "3.2.0",
+  "product_version": "3.4.0",
   "status": "PASS",
-  "site": "site",
-  "expected_video_count": 411,
-  "video_count": 411,
-  "shorts_count": 11,
-  "checks_passed": 902,
+  "site": "D:\\Michael2015\\אופנוע\\Adventure-Riding-Video-Guide-Starter\\.worktrees\\adv-shorts-v330\\site",
+  "expected_video_count": 425,
+  "video_count": 425,
+  "shorts_count": 153,
+  "checks_passed": 930,
   "checks_failed": 0,
   "checks": [
     {
@@ -102,7 +102,7 @@
     {
       "name": "videos:exact-count",
       "passed": true,
-      "detail": 411
+      "detail": 425
     },
     {
       "name": "videos:unique-id",
@@ -122,7 +122,7 @@
     {
       "name": "shorts:non-empty",
       "passed": true,
-      "detail": 11
+      "detail": 153
     },
     {
       "name": "shorts:unique-id",
@@ -138,14 +138,14 @@
       "name": "release:manifest-config",
       "passed": true,
       "detail": {
-        "manifest": "3.2.0",
-        "config": "3.2.0"
+        "manifest": "3.4.0",
+        "config": "3.4.0"
       }
     },
     {
       "name": "semantic:count",
       "passed": true,
-      "detail": 411
+      "detail": 425
     },
     {
       "name": "semantic:ids",
@@ -161,14 +161,14 @@
       "name": "semantic:binary-size",
       "passed": true,
       "detail": {
-        "actual": 631296,
-        "expected": 631296
+        "actual": 652800,
+        "expected": 652800
       }
     },
     {
       "name": "standalone:configured",
       "passed": true,
-      "detail": "Adventure-Riding-Video-Guide-v3.2.0-Standalone.html"
+      "detail": "Adventure-Riding-Video-Guide-v3.4.0-Standalone.html"
     },
     {
       "name": "standalone:release",
@@ -178,12 +178,12 @@
     {
       "name": "standalone:count",
       "passed": true,
-      "detail": 411
+      "detail": 425
     },
     {
       "name": "standalone:shorts-count",
       "passed": true,
-      "detail": 11
+      "detail": 153
     },
     {
       "name": "schema:0:yt-UsOGqaTH3d0",
@@ -4296,6 +4296,146 @@
       "detail": "https://www.youtube.com/watch?v=wQkrAP1KEAg"
     },
     {
+      "name": "schema:411:yt-BySQmyz62EI",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "youtube-url:411",
+      "passed": true,
+      "detail": "https://www.youtube.com/watch?v=BySQmyz62EI"
+    },
+    {
+      "name": "schema:412:yt-waIHKJpQiB4",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "youtube-url:412",
+      "passed": true,
+      "detail": "https://www.youtube.com/watch?v=waIHKJpQiB4"
+    },
+    {
+      "name": "schema:413:yt-mrLyIWGyUWo",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "youtube-url:413",
+      "passed": true,
+      "detail": "https://www.youtube.com/watch?v=mrLyIWGyUWo"
+    },
+    {
+      "name": "schema:414:yt-M5yAd24z5y0",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "youtube-url:414",
+      "passed": true,
+      "detail": "https://www.youtube.com/watch?v=M5yAd24z5y0"
+    },
+    {
+      "name": "schema:415:yt-axhRmbeUy28",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "youtube-url:415",
+      "passed": true,
+      "detail": "https://www.youtube.com/watch?v=axhRmbeUy28"
+    },
+    {
+      "name": "schema:416:yt-w_mg182B1OA",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "youtube-url:416",
+      "passed": true,
+      "detail": "https://www.youtube.com/watch?v=w_mg182B1OA"
+    },
+    {
+      "name": "schema:417:yt-di8dBE6jkjM",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "youtube-url:417",
+      "passed": true,
+      "detail": "https://www.youtube.com/watch?v=di8dBE6jkjM"
+    },
+    {
+      "name": "schema:418:yt-rCJmU0mIn_U",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "youtube-url:418",
+      "passed": true,
+      "detail": "https://www.youtube.com/watch?v=rCJmU0mIn_U"
+    },
+    {
+      "name": "schema:419:yt-6oh95eTdsNs",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "youtube-url:419",
+      "passed": true,
+      "detail": "https://www.youtube.com/watch?v=6oh95eTdsNs"
+    },
+    {
+      "name": "schema:420:yt-X_Dwq8hmuJ0",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "youtube-url:420",
+      "passed": true,
+      "detail": "https://www.youtube.com/watch?v=X_Dwq8hmuJ0"
+    },
+    {
+      "name": "schema:421:yt-OXsQaL28fgo",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "youtube-url:421",
+      "passed": true,
+      "detail": "https://www.youtube.com/watch?v=OXsQaL28fgo"
+    },
+    {
+      "name": "schema:422:yt-P3ckIVpbi9E",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "youtube-url:422",
+      "passed": true,
+      "detail": "https://www.youtube.com/watch?v=P3ckIVpbi9E"
+    },
+    {
+      "name": "schema:423:yt-y5-Kro247Qs",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "youtube-url:423",
+      "passed": true,
+      "detail": "https://www.youtube.com/watch?v=y5-Kro247Qs"
+    },
+    {
+      "name": "schema:424:yt-BKgVjALEDVk",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "youtube-url:424",
+      "passed": true,
+      "detail": "https://www.youtube.com/watch?v=BKgVjALEDVk"
+    },
+    {
       "name": "manifest:id",
       "passed": true,
       "detail": "./"
@@ -4531,7 +4671,7 @@
       "detail": null
     },
     {
-      "name": "worker:adventure-guide-v3.2.0",
+      "name": "worker:adventure-guide-v3.4.0",
       "passed": true,
       "detail": null
     },

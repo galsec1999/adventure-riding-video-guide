@@ -1,0 +1,78 @@
+{
+  "document_title": "בדיקה חזותית פרטנית — Chris Birch Adventure",
+  "document_version": "1.0.0",
+  "product_version": "3.4.0",
+  "reviewed_on": "2026-08-06",
+  "items": [
+    {
+      "youtube_video_id": "XprOa7xx15o",
+      "decision": "exclude",
+      "observations": [
+        "BMW 1200GS visible",
+        "participant hill-climb attempt",
+        "no teaching steps"
+      ]
+    },
+    {
+      "youtube_video_id": "2Ir9XAcEoFw",
+      "decision": "include_short",
+      "observations": [
+        "large Adventure motorcycles",
+        "body-position starting label",
+        "progressing-skills label",
+        "coach feedback"
+      ]
+    },
+    {
+      "youtube_video_id": "NNzkdKk_bJU",
+      "decision": "exclude",
+      "observations": [
+        "Chris briefs riders",
+        "Adventure motorcycles present",
+        "not a YouTube Short",
+        "no source description"
+      ]
+    },
+    {
+      "youtube_video_id": "CqboTvhGRxA",
+      "decision": "exclude",
+      "observations": [
+        "dirt-bike obstacle context",
+        "Adventure relevance not demonstrated"
+      ]
+    },
+    {
+      "youtube_video_id": "axhRmbeUy28",
+      "decision": "include_full",
+      "observations": [
+        "large KTM Adventure",
+        "assess situation",
+        "use legs and hips",
+        "straighten back",
+        "engage core"
+      ]
+    },
+    {
+      "youtube_video_id": "BySQmyz62EI",
+      "decision": "include_full",
+      "observations": [
+        "large Adventure motorcycles",
+        "handlebar angle",
+        "lever angle",
+        "seated position",
+        "elbow position",
+        "steering"
+      ]
+    },
+    {
+      "youtube_video_id": "P3ckIVpbi9E",
+      "decision": "include_full",
+      "observations": [
+        "direct instructor briefing",
+        "rear-brake slide",
+        "slipper-clutch guidance",
+        "explicit opt-out guidance"
+      ]
+    }
+  ]
+}

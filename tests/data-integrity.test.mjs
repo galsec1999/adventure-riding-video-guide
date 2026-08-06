@@ -2,7 +2,7 @@ import assert from "node:assert/strict";
 import { readFile } from "node:fs/promises";
 import test from "node:test";
 
-// Test document version: 1.1.0 — product 3.3.0.
+// Test document version: 1.2.0 — product 3.4.0.
 
 
 async function loadJson(relativeUrl) {
@@ -72,7 +72,7 @@ function assertValidVideoReferences(videoReferences, context) {
 
 
 test("non-empty dataset has unique records with matching YouTube URLs", () => {
-  assert.equal(videos.length, 411, "the canonical root dataset must contain release 3.0.0's 411 active records");
+  assert.equal(videos.length, 425, "the canonical root dataset must contain release 3.4.0's 425 active full records");
   assert.equal(videoIds.size, videos.length);
   assert.equal(new Set(videos.map((video) => video.youtube_video_id)).size, videos.length);
   assert.equal(new Set(videos.map((video) => video.youtube_url)).size, videos.length);
@@ -83,8 +83,8 @@ test("non-empty dataset has unique records with matching YouTube URLs", () => {
   });
 });
 
-test("v3.3 Shorts library contains only the 152 individually verified records", () => {
-  assert.equal(shorts.length, 152);
+test("v3.4 Shorts library contains only the 153 individually verified records", () => {
+  assert.equal(shorts.length, 153);
   assert.equal(new Set(shorts.map((video) => video.id)).size, shorts.length);
   shorts.forEach((video) => {
     assert.equal(video.media_format, "short");
@@ -111,7 +111,7 @@ test("learning paths expose only category-matched verified Shorts", () => {
       referencedShorts += 1;
     });
   });
-  assert.equal(referencedShorts, 301);
+  assert.equal(referencedShorts, 302);
 });
 
 
@@ -185,9 +185,9 @@ test("all related-video references resolve to existing records", () => {
 });
 
 
-test("all 17 learning paths have ordered stages, safety fields, and valid video choices", () => {
-  assert.equal(learningPaths.length, 17);
-  assert.equal(ids(learningPaths).size, 17);
+test("all 18 learning paths have ordered stages, safety fields, and valid video choices", () => {
+  assert.equal(learningPaths.length, 18);
+  assert.equal(ids(learningPaths).size, 18);
 
   learningPaths.forEach((path) => {
     assert.ok(path.steps.length >= 8 && path.steps.length <= 12, `${path.id} must have 8-12 steps`);

@@ -1,10 +1,10 @@
 {
   "site_name_he": "מדריך הווידאו הקהילתי לרכיבת אדוונצ'ר",
-  "meta_title_he": "מדריך הווידאו הקהילתי לרכיבת אדוונצ'ר — גרסה 3.3.0",
-  "meta_description_he": "563 הדרכות רכיבה פעילות ומסווגות, ובהן 152 קצרים שעברו אימות מקור ובדיקה חזותית, מסלולי לימוד וחיפוש חכם בעברית ובאנגלית.",
+  "meta_title_he": "מדריך הווידאו הקהילתי לרכיבת אדוונצ'ר — גרסה 3.4.0",
+  "meta_description_he": "578 הדרכות רכיבה פעילות ומסווגות, ובהן 425 סרטונים מלאים ו־153 קצרים מאומתים, מסלולי לימוד וחיפוש חכם בעברית ובאנגלית.",
   "og_title_he": "מדריך הווידאו הקהילתי לרכיבת אדוונצ'ר",
   "og_description_he": "לימוד משלים לרוכבי שטח, כביש וטיולים — ללא כוונת רווח וללא פרסומות מטעם האתר.",
-  "release_version": "3.3.0",
+  "release_version": "3.4.0",
   "author_name": "אילן",
   "community_name": "קהילת רוכבי האדוונצ'ר",
   "contact": "",
@@ -17,14 +17,14 @@
   "site_ads": false,
   "code_license": "MIT",
   "content_license": "CC BY-NC-SA 4.0",
-  "standalone_filename": "Adventure-Riding-Video-Guide-v3.3.0-Standalone.html",
+  "standalone_filename": "Adventure-Riding-Video-Guide-v3.4.0-Standalone.html",
   "site_name_en": "Community Adventure Riding Video Guide",
   "community_name_en": "Adventure Riding Community",
-  "meta_title_en": "Community Adventure Riding Video Guide — Version 3.3.0",
-  "meta_description_en": "563 active, curated riding tutorials, including 152 Shorts that passed source and visual review, with learning paths and smart search in Hebrew and English.",
+  "meta_title_en": "Community Adventure Riding Video Guide — Version 3.4.0",
+  "meta_description_en": "578 active, curated riding tutorials: 425 full videos and 153 verified Shorts, with learning paths and smart search in Hebrew and English.",
   "og_title_en": "Community Adventure Riding Video Guide",
   "og_description_en": "Supplementary learning for off-road, road and touring riders — non-profit and free of site advertising.",
   "safety_warning_en": "This guide is not a replacement for a professional riding course, advanced training or supervised practice. Video can expand knowledge and suggest points to notice; real skill is built through qualified instruction, progressive practice, riding experience, attention and sound judgement.",
   "document_title": "תצורת אתר מדריך הווידאו הקהילתי לרכיבת אדוונצ'ר",
-  "document_version": "3.3.0"
+  "document_version": "3.4.0"
 }
