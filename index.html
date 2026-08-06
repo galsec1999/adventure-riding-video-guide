@@ -1,30 +1,30 @@
 <!DOCTYPE html>
 
-<html data-release="3.0.0" data-standalone="false" data-theme="light" lang="he" dir="rtl">
+<html data-release="3.1.0" data-standalone="false" data-theme="light" lang="he" dir="rtl">
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
-<meta content="411 סרטוני רכיבה פעילים, מסלולי לימוד, טיולים, ניווט וחיפוש חכם בעברית — ללא כוונת רווח." data-site-description="" name="description"/>
+<meta content="1,217 הדרכות רכיבה פעילות ומסווגות, ובהן 806 קצרים, מסלולי לימוד וחיפוש חכם מקומי." data-site-description="" name="description"/>
 <meta content="website" property="og:type"/>
 <meta content="he_IL" property="og:locale"/>
 <meta content="מדריך הווידאו הקהילתי לרכיבת אדוונצ'ר" property="og:title"/>
-<meta content="שטח, כביש, טיולים ותרגול — 411 סרטונים פעילים ומסווגים לקהילה." property="og:description"/>
+<meta content="שטח, כביש, טיולים ותרגול — 1,217 סרטונים וקצרים פעילים ומסווגים לקהילה." property="og:description"/>
 <meta content="summary" name="twitter:card"/>
 <meta content="מדריך הווידאו הקהילתי לרכיבת אדוונצ'ר" name="twitter:title"/>
-<meta content="שטח, כביש, טיולים ותרגול — 411 סרטונים פעילים ומסווגים לקהילה." name="twitter:description"/>
+<meta content="שטח, כביש, טיולים ותרגול — 1,217 סרטונים וקצרים פעילים ומסווגים לקהילה." name="twitter:description"/>
 <meta content="#f4f1e8" name="theme-color"/>
 <meta content="yes" name="mobile-web-app-capable"/>
 <meta content="yes" name="apple-mobile-web-app-capable"/>
 <meta content="default" name="apple-mobile-web-app-status-bar-style"/>
-<title>מדריך הווידאו הקהילתי לרכיבת אדוונצ'ר — גרסה 3.0.0</title>
+<title>מדריך הווידאו הקהילתי לרכיבת אדוונצ'ר — גרסה 3.1.0</title>
 <link href="./manifest.webmanifest" rel="manifest"/>
 <link href="./assets/icons/apple-touch-icon.png" rel="apple-touch-icon"/>
 <link href="./assets/icons/favicon-32.png" rel="icon" sizes="32x32" type="image/png"/>
-<link href="./assets/css/styles.css?v=3.0.0-20260805b" rel="stylesheet"/>
-<script src="./assets/js/app.js?v=3.0.0-20260806a" type="module"></script>
+<link href="./assets/css/styles.css?v=3.1.0-20260806d" rel="stylesheet"/>
+<script src="./assets/js/app.js?v=3.1.0-20260806d" type="module"></script>
 <script src="./assets/js/pwa.js" type="module"></script>
 </head>
-<body data-download-file="downloads/Adventure-Riding-Video-Guide-v3.0.0-Standalone.html">
+<body data-download-file="downloads/Adventure-Riding-Video-Guide-v3.1.0-Standalone.html">
 <a class="skip-link" href="#main-content">דלגו לתוכן הראשי</a>
 <header class="site-header" data-menu-open="false" id="site-header">
 <div class="site-header__inner shell">
@@ -45,6 +45,7 @@
 <nav aria-label="ניווט ראשי" class="primary-nav" id="primary-nav">
 <a aria-current="page" data-route="home" data-view="home" href="#home">דף הבית</a>
 <a data-route="library" data-view="library" href="#library">ספריית הסרטונים</a>
+<a data-route="shorts" data-view="shorts" href="#shorts">ספריית הקצרים</a>
 <a data-route="paths" data-view="paths" href="#paths">מסלולי לימוד</a>
 <a data-route="trips" data-view="trips" href="#trips">טיולים</a><a data-route="smart" data-view="smart" href="#smart">שאלו את המדריך</a><a data-route="safety" data-view="safety" href="#safety">בטיחות</a>
 <button class="pwa-install-button" hidden id="install-app-button" type="button">התקנת האפליקציה</button>
@@ -78,10 +79,10 @@
 <div aria-hidden="true" class="hero__terrain"></div>
 <div class="hero__inner shell">
 <div class="hero__content">
-<span class="release-badge">גרסה <b data-release-version="">3.0.0</b></span>
+<span class="release-badge">גרסה <b data-release-version="">3.1.0</b></span>
 <p class="eyebrow eyebrow--accent">לומדים נכון. מתרגלים בהדרגה. רוכבים רחוק.</p>
 <h1 id="home-title">הדרך שלך לרכיבה<br/><span>בטוחה ומדויקת יותר</span></h1>
-<p class="hero__lead"><strong data-stat="videos">—</strong> הדרכות פעילות ומסווגות בעברית ובאנגלית, עם ניווט לפי תחום, נושא ומיקוד — כהשלמה לקורסים, אימון וטיולים אמיתיים.</p>
+<p class="hero__lead"><strong data-stat="all-videos">—</strong> הדרכות פעילות ומסווגות, ובהן <strong data-stat="shorts">—</strong> קצרים לחזרה מהירה — כהשלמה לקורסים, אימון וטיולים אמיתיים.</p>
 <form action="./" class="hero-search" id="hero-search-form" method="get" role="search">
 <label class="visually-hidden" for="hero-search">מה תרצו ללמוד?</label>
 <input name="view" type="hidden" value="library"/>
@@ -89,9 +90,10 @@
 <input autocomplete="off" id="hero-search" name="q" placeholder="חפשו חול, בלימת חירום, cornering…" type="search"/>
 <button class="button button--primary" type="submit">מצאו הדרכה</button>
 </form>
-<div class="hero__actions"><a class="button button--primary" data-route="paths" data-view="paths" href="#paths">התחילו ללמוד</a><a class="button button--ghost" data-route="trips" data-view="trips" href="#trips">תכננו טיול</a><a class="button button--ghost" data-route="smart" data-view="smart" href="#smart">שאלו בשפה חופשית</a></div>
+<div class="hero__actions"><a class="button button--primary" data-route="paths" data-view="paths" href="#paths">התחילו ללמוד</a><a class="button button--ghost" data-route="shorts" data-view="shorts" href="#shorts">לקצרים</a><a class="button button--ghost" data-route="smart" data-view="smart" href="#smart">שאלו בשפה חופשית</a></div>
 <dl aria-label="נתוני הספרייה" class="hero__stats">
 <div><dt data-stat="videos">—</dt><dd>סרטונים מאומתים</dd></div>
+<div><dt data-stat="shorts">—</dt><dd>קצרים מאומתים</dd></div>
 <div><dt data-stat="domains">—</dt><dd>תחומי לימוד</dd></div>
 <div><dt data-stat="paths">—</dt><dd>מסלולים מסודרים</dd></div>
 <div class="hero__visit-stat"><dt><img alt="מונה כניסות גלובלי" decoding="async" height="20" id="visit-counter" width="88"/></dt><dd>כניסות שנמדדו <span aria-hidden="true" class="counter-info">i</span></dd><small id="visit-counter-note">מונה חיצוני סופר טעינות של האתר החי, לא אנשים ייחודיים; רענונים ובוטים עשויים להיספר.</small></div>
@@ -112,8 +114,9 @@
 <div class="welcome-grid">
 <a class="welcome-card" data-route="paths" data-view="paths" href="#paths"><span>01</span><h3>אני רוצה ללמוד לפי סדר</h3><p>מסלולים מדורגים עם התקדמות שמורה.</p></a>
 <a class="welcome-card" data-route="library" data-view="library" href="#library"><span>02</span><h3>יש לי נושא מסוים</h3><p>חיפוש ומסננים לפי כביש, שטח, רמה ותנאים.</p></a>
-<a class="welcome-card" data-route="trips" data-view="trips" href="#trips"><span>03</span><h3>אני מתכנן טיול</h3><p>צ׳קליסטים, זיווד, קבוצה, ניווט וכלי דרך.</p></a>
-<a class="welcome-card" data-route="smart" data-view="smart" href="#smart"><span>04</span><h3>אני לא יודע איך לחפש</h3><p>כתבו שאלה רגילה וקבלו סרטונים מתאימים.</p></a>
+<a class="welcome-card" data-route="shorts" data-view="shorts" href="#shorts"><span>03</span><h3>יש לי דקה ללמוד</h3><p>קצרים מאומתים וממוינים לרעיון אחד בכל צפייה.</p></a>
+<a class="welcome-card" data-route="trips" data-view="trips" href="#trips"><span>04</span><h3>אני מתכנן טיול</h3><p>צ׳קליסטים, זיווד, קבוצה, ניווט וכלי דרך.</p></a>
+<a class="welcome-card" data-route="smart" data-view="smart" href="#smart"><span>05</span><h3>אני לא יודע איך לחפש</h3><p>כתבו שאלה רגילה וקבלו סרטונים וקצרים מתאימים.</p></a>
 </div>
 </section>
 <section aria-labelledby="domains-title" class="section shell">
@@ -387,7 +390,7 @@
 <div aria-label="דוגמאות לשאלות" class="smart-examples"><button data-smart-example="טלפון או GPS ייעודי לטיול עם GPX ומפות אופליין" type="button">טלפון או GPS?</button><button data-smart-example="איזה מיגון חשוב לרוכב אדוונצ'ר מתחיל" type="button">איזה מיגון?</button><button data-smart-example="דיבורית Bluetooth או Mesh לקבוצת רוכבים" type="button">Bluetooth או Mesh?</button><button data-smart-example="פניות בכביש רטוב לרוכב מתחיל" type="button">פניות בגשם</button></div>
 <div aria-live="polite" class="local-ai-status" id="local-ai-status"><strong>חיפוש חכם זמין תמיד</strong><p>AI סמנטי מקומי הוא אפשרות נוספת. בהפעלה הראשונה יורד מודל של כ־140MB; לאחר מכן השאלות מעובדות במכשיר.</p><progress hidden id="local-ai-progress" max="100" value="0"></progress></div>
 </section>
-<aside class="smart-privacy"><h2>מה כאן AI ומה לא?</h2><p>החיפוש הרגיל מזהה כוונה, מילים נרדפות וקטגוריות ונשאר זמין בכל מכשיר. אם תפעילו AI מקומי, מודל רב־לשוני ייטען למכשיר וידרג את <span data-stat="videos">—</span> הרשומות לפי משמעות. אין API, מפתח או צ׳אט מרוחק; המודל אינו ממציא הדרכות אלא רק מאתר רשומות קיימות.</p></aside>
+<aside class="smart-privacy"><h2>מה כאן AI ומה לא?</h2><p>החיפוש הרגיל מזהה כוונה, מילים נרדפות וקטגוריות בכל <span data-stat="all-videos">—</span> הסרטונים והקצרים. אם תפעילו AI מקומי, מודל רב־לשוני ידרג את הסרטונים המלאים לפי משמעות והחיפוש ישלב גם קצרים מתאימים. אין API, מפתח או צ׳אט מרוחק; המודל אינו ממציא הדרכות אלא רק מאתר רשומות קיימות.</p></aside>
 <section aria-labelledby="smart-results-title" class="smart-results"><div class="section-heading"><div><p class="eyebrow">התאמות מן המאגר</p><h2 id="smart-results-title">הסרטונים המתאימים</h2></div></div><p class="smart-result-note" id="smart-result-note">כתבו שאלה כדי לקבל המלצות.</p><div class="video-grid" id="smart-video-grid"></div></section>
 </div>
 </section><section aria-labelledby="safety-title" class="view view--safety" hidden="" id="safety-view">

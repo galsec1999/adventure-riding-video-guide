@@ -53,12 +53,13 @@ def main() -> int:
         "assets/css/styles.css", "assets/js/app.js", "assets/js/pwa.js", "assets/js/semantic-worker.js",
         "assets/vendor/transformers.min.js", "assets/vendor/ort-wasm-simd-threaded.mjs",
         "assets/vendor/ort-wasm-simd-threaded.wasm", "data/videos.json", "data/travel-guides.json",
-        "data/semantic-index.json", "data/semantic-index.f32", "data/site-config.json",
+        "data/semantic-index.json", "data/semantic-index.f32", "data/shorts.json", "data/site-config.json",
     ]
     for relative in required:
         check(f"required:{relative}", (site / relative).is_file())
 
     videos = json.loads((site / "data/videos.json").read_text(encoding="utf-8"))
+    shorts = json.loads((site / "data/shorts.json").read_text(encoding="utf-8"))
     manifest = json.loads((site / "manifest.webmanifest").read_text(encoding="utf-8"))
     site_config = json.loads((site / "data/site-config.json").read_text(encoding="utf-8"))
     semantic_index = json.loads((site / "data/semantic-index.json").read_text(encoding="utf-8"))
@@ -69,6 +70,9 @@ def main() -> int:
     check("videos:unique-id", len({item["id"] for item in videos}) == len(videos))
     check("videos:unique-youtube-id", len({item["youtube_video_id"] for item in videos}) == len(videos))
     check("videos:unique-url", len({item["youtube_url"] for item in videos}) == len(videos))
+    check("shorts:non-empty", len(shorts) > 0, len(shorts))
+    check("shorts:unique-id", len({item["id"] for item in shorts}) == len(shorts))
+    check("catalogue:unique-youtube-id", len({item["youtube_video_id"] for item in [*videos, *shorts]}) == len(videos) + len(shorts))
     check("release:manifest-config", manifest.get("version") == site_config.get("release_version"), {
         "manifest": manifest.get("version"), "config": site_config.get("release_version"),
     })
@@ -99,6 +103,14 @@ def main() -> int:
         if embedded_videos:
             embedded_count = len(json.loads(embedded_videos.group(1).replace("<\\/script", "</script")))
         check("standalone:count", embedded_count == len(videos), embedded_count)
+        embedded_shorts = re.search(
+            r'<script id="embedded-data-shorts" type="application/json">([\s\S]*?)</script>',
+            standalone_text,
+        )
+        embedded_shorts_count = None
+        if embedded_shorts:
+            embedded_shorts_count = len(json.loads(embedded_shorts.group(1).replace("<\\/script", "</script")))
+        check("standalone:shorts-count", embedded_shorts_count == len(shorts), embedded_shorts_count)
 
     for index, video in enumerate(videos):
         errors = sorted(validator.iter_errors(video), key=lambda error: list(error.path))
@@ -156,6 +168,7 @@ def main() -> int:
         "site": str(site),
         "expected_video_count": args.expected_count,
         "video_count": len(videos),
+        "shorts_count": len(shorts),
         "checks_passed": len(checks) - len(failed),
         "checks_failed": len(failed),
         "checks": checks,

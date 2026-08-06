@@ -52,13 +52,13 @@ test("manifest defines a stable relative standalone identity", async () => {
   assert.deepEqual(manifest.display_override, ["standalone", "minimal-ui"]);
 });
 
-test("manifest exposes required icons, screenshots and four shortcuts", async () => {
+test("manifest exposes required icons, screenshots and five shortcuts", async () => {
   const manifest = JSON.parse(await read("site/manifest.webmanifest"));
   assert.ok(manifest.icons.some((icon) => icon.sizes === "192x192"));
   assert.ok(manifest.icons.some((icon) => icon.sizes === "512x512" && icon.purpose === "any"));
   assert.ok(manifest.icons.some((icon) => icon.sizes === "512x512" && icon.purpose === "maskable"));
   assert.equal(manifest.screenshots.length, 2);
-  assert.equal(manifest.shortcuts.length, 4);
+  assert.equal(manifest.shortcuts.length, 5);
   assert.ok(manifest.shortcuts.every((shortcut) => shortcut.url.startsWith("./#")));
 });
 

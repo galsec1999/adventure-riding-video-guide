@@ -1,0 +1,26 @@
+{
+  "document_version": "1.0.0",
+  "product_version": "3.1.0",
+  "purpose": "Metadata-only discovery of educational motorcycle YouTube Shorts; publication still requires evidence review.",
+  "channels": [
+    {"name": "Bret Tkacs ADV", "channel_id": "UCdCzEBaIZQy3JXzc06ByNAg", "focus": ["adventure", "offroad", "training"]},
+    {"name": "MOTOTREK", "channel_id": "UCWh6PvzNVeOmEU065h-8kUw", "focus": ["adventure", "offroad", "maintenance"]},
+    {"name": "Moto Control", "channel_id": "UC5mCIa2W16Bjs1O-2ZX7WRw", "focus": ["road", "slow_control", "training"]},
+    {"name": "CanyonChasers", "channel_id": "UCiUNhNOpGImlrr06ZZ-zWQg", "focus": ["road", "cornering", "safety"]},
+    {"name": "Doodle On A Motorcycle", "channel_id": "UCRFJclFblUdyXGdKLuWsfGQ", "focus": ["road", "training", "touring"]},
+    {"name": "FortNine", "channel_id": "UCNSMdQtn1SuFzCZjfK2C7dQ", "focus": ["safety", "equipment", "maintenance"]},
+    {"name": "Brake Magazine", "channel_id": "UC4GIo-eOhll0ZvEEcFfYnmQ", "focus": ["adventure", "offroad"]},
+    {"name": "MotoJitsu", "channel_id": "UC0FFFneMi9GwRHUsuBjM0jA", "focus": ["road", "slow_control", "training"]},
+    {"name": "SoCal Off-Road School", "channel_id": "UCzZDGVaWa91YCH-MZHOGWLQ", "focus": ["offroad", "training"]},
+    {"name": "RIDE Adventures", "channel_id": "UCWdo6fbG2ZMRfhxEoAc4NnA", "focus": ["adventure", "offroad", "touring"]},
+    {"name": "Adam Riemann", "channel_id": "UCY3mZIqfQh71JZBiWTQ3I7A", "focus": ["adventure", "offroad"]},
+    {"name": "The Mx Factory", "channel_id": "UCOZm6Utdkljzi8ykk6zndgA", "focus": ["offroad", "training"]},
+    {"name": "ADVMotoSkillZ", "channel_id": "UCAhh41POT6froY75PsUl-MA", "focus": ["adventure", "offroad", "training"]},
+    {"name": "DanDanTheFireman", "channel_id": "UC1iNF4BnIucCD7J2QGZYkjg", "focus": ["road", "safety"]},
+    {"name": "MCrider", "channel_id": "UCC4gEs8RahtTYiBqsiziudQ", "focus": ["road", "safety", "training"]},
+    {"name": "Megs Braap", "channel_id": "UCugPFDyYCzY9Qs79NevYdMw", "focus": ["offroad", "training"]},
+    {"name": "Life at Lean", "channel_id": "UCzjILZxaqNI0FM_XPPkcRJw", "focus": ["road", "cornering", "training"]},
+    {"name": "Dork in the Road", "channel_id": "UCrKYAp8fkN8yCbxcNK375rA", "focus": ["adventure", "offroad", "touring"]},
+    {"name": "Chris Birch - Off Road Coach", "channel_id": "UCTK4SLXIIvcFNeUYpv9Prvg", "focus": ["adventure", "offroad", "training"]}
+  ]
+}

@@ -8,13 +8,15 @@ async function loadJson(relativeUrl) {
 }
 
 
-const [videos, taxonomy, learningPaths, travelGuides] = await Promise.all([
+const [videos, shorts, taxonomy, learningPaths, travelGuides] = await Promise.all([
   loadJson("../data/videos.json"),
+  loadJson("../data/shorts.json"),
   loadJson("../data/categories.json"),
   loadJson("../data/learning-paths.json"),
   loadJson("../data/travel-guides.json"),
 ]);
 const videoIds = new Set(videos.map((video) => video.id));
+const allVideoIds = new Set([...videos, ...shorts].map((video) => video.id));
 
 
 function ids(collection) {
@@ -76,6 +78,29 @@ test("non-empty dataset has unique records with matching YouTube URLs", () => {
   videos.forEach((video) => {
     assert.equal(video.id, `yt-${video.youtube_video_id}`);
     assert.equal(video.youtube_url, `https://www.youtube.com/watch?v=${video.youtube_video_id}`);
+  });
+});
+
+test("v3.1 Shorts library contains 806 distinct, visually reviewed public records", () => {
+  assert.equal(shorts.length, 806);
+  assert.equal(new Set(shorts.map((video) => video.id)).size, shorts.length);
+  shorts.forEach((video) => {
+    assert.equal(video.media_format, "short");
+    assert.equal(video.id, `yts-${video.youtube_video_id}`);
+    assert.equal(video.youtube_url, `https://www.youtube.com/shorts/${video.youtube_video_id}`);
+    assert.ok(video.verification.content_evidence_types.includes("visual_review"));
+    assert.equal(video.contains_marketing, false);
+  });
+});
+
+test("every learning-path step exposes three valid Shorts", () => {
+  learningPaths.flatMap((path) => path.steps).forEach((step) => {
+    assert.equal(step.short_video_ids.length, 3);
+    assert.equal(new Set(step.short_video_ids).size, 3);
+    step.short_video_ids.forEach((id) => {
+      assert.ok(id.startsWith("yts-"));
+      assert.ok(allVideoIds.has(id));
+    });
   });
 });
 

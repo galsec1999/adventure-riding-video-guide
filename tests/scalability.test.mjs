@@ -21,11 +21,25 @@ async function loadJson(relativeUrl) {
 }
 
 
-const [sourceVideos, taxonomy, synonyms] = await Promise.all([
+const [sourceVideos, sourceShorts, taxonomy, synonyms] = await Promise.all([
   loadJson("../data/videos.json"),
+  loadJson("../data/shorts.json"),
   loadJson("../data/categories.json"),
   loadJson("../data/synonyms.json"),
 ]);
+
+test("the complete 1,217-record release prepares and searches without runtime errors", (t) => {
+  const complete = [...sourceVideos, ...sourceShorts];
+  const startedAt = performance.now();
+  const prepared = prepareVideos(complete, taxonomy, synonyms);
+  const results = applySearchAndFilters(prepared.videos, { q: "cornering", sort: "recommended" }, { synonymIndex: prepared.synonymIndex });
+  const elapsedMs = performance.now() - startedAt;
+  assert.equal(complete.length, 1217);
+  assert.equal(prepared.videos.length, 1217);
+  assert.equal(new Set(prepared.videos.map((video) => video.id)).size, 1217);
+  assert.ok(results.length > 0);
+  t.diagnostic(`prepare/search 1217: ${elapsedMs.toFixed(2)} ms (measurement only; no hardware threshold)`);
+});
 
 
 for (const fixtureSize of [411, 500]) {

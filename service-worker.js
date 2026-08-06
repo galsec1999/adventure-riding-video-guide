@@ -1,19 +1,19 @@
-// PWA release 3.0.0 — app shell and local semantic runtime only.
+// PWA release 3.1.0 — app shell, Shorts and local semantic runtime.
 const CACHE_PREFIX = "adventure-guide-";
-const CACHE_NAME = "adventure-guide-v3.0.0-20260806a";
+const CACHE_NAME = "adventure-guide-v3.1.0-20260806d";
 const BASE_URL = new URL("./", self.registration.scope);
 const APP_SHELL = [
   "./",
   "./index.html",
   "./offline.html",
   "./manifest.webmanifest",
-  "./assets/css/styles.css?v=3.0.0-20260805b",
-  "./assets/js/app.js?v=3.0.0-20260806a",
+  "./assets/css/styles.css?v=3.1.0-20260806d",
+  "./assets/js/app.js?v=3.1.0-20260806d",
   "./assets/js/i18n.js",
   "./assets/js/pagination.js",
   "./assets/js/pwa.js",
   "./assets/js/search.js",
-  "./assets/js/semantic-worker.js?v=3.0.0-20260806a",
+  "./assets/js/semantic-worker.js?v=3.1.0-20260806d",
   "./assets/js/storage.js",
   "./assets/vendor/transformers.min.js",
   "./assets/vendor/ort-wasm-simd-threaded.mjs",
@@ -24,14 +24,15 @@ const APP_SHELL = [
   "./assets/icons/icon-maskable-512.png",
   "./assets/icons/apple-touch-icon.png",
   "./assets/icons/favicon-32.png",
-  "./data/categories.json?v=3.0.0-20260806a",
-  "./data/learning-paths.json?v=3.0.0-20260806a",
-  "./data/semantic-index.f32?v=3.0.0-20260806a",
-  "./data/semantic-index.json?v=3.0.0-20260806a",
-  "./data/site-config.json?v=3.0.0-20260806a",
-  "./data/synonyms.json?v=3.0.0-20260806a",
-  "./data/travel-guides.json?v=3.0.0-20260806a",
-  "./data/videos.json?v=3.0.0-20260806a"
+  "./data/categories.json?v=3.1.0-20260806c",
+  "./data/learning-paths.json?v=3.1.0-20260806c",
+  "./data/semantic-index.f32?v=3.1.0-20260806c",
+  "./data/semantic-index.json?v=3.1.0-20260806c",
+  "./data/shorts.json?v=3.1.0-20260806c",
+  "./data/site-config.json?v=3.1.0-20260806c",
+  "./data/synonyms.json?v=3.1.0-20260806c",
+  "./data/travel-guides.json?v=3.1.0-20260806c",
+  "./data/videos.json?v=3.1.0-20260806c"
 ].map((path) => new URL(path, BASE_URL).href);
 
 self.addEventListener("install", (event) => {

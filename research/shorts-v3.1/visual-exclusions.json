@@ -1,0 +1,14 @@
+{
+  "document_version": "1.0.0",
+  "product_version": "3.1.0",
+  "review_basis": "Seventeen 50-item thumbnail contact sheets reviewed on 2026-08-06.",
+  "excluded_one_based_indexes": [
+    2, 5, 15, 17, 26, 38, 43, 66, 90, 109, 124, 134, 147, 149,
+    153, 161, 194, 249, 320, 368, 374, 378, 379, 380, 390, 400, 410,
+    420, 434, 440, 447, 482, 494, 495, 649, 697
+  ],
+  "reasons": [
+    "promotion or giveaway", "channel or event promotion", "product-first or first-impression content",
+    "travel footage without a clear instructional point", "accident reaction or entertainment-first framing"
+  ]
+}

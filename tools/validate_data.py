@@ -23,6 +23,7 @@ except ImportError:  # Reported as a validation failure with an actionable messa
 ROOT = Path(__file__).resolve().parents[1]
 DATA_FILES = {
     "videos": ROOT / "data" / "videos.json",
+    "shorts": ROOT / "data" / "shorts.json",
     "taxonomy": ROOT / "data" / "categories.json",
     "learning_paths": ROOT / "data" / "learning-paths.json",
     "travel_guides": ROOT / "data" / "travel-guides.json",
@@ -463,8 +464,10 @@ def validate_videos(
         valid_youtube_id = isinstance(youtube_id, str) and YOUTUBE_ID_RE.fullmatch(youtube_id) is not None
         audit.check(valid_youtube_id, "video.youtube_id", "YouTube ID must be exactly 11 valid characters", path=f"{path}.youtube_video_id")
         if valid_youtube_id:
-            audit.check(video.get("id") == f"yt-{youtube_id}", "video.internal_id", "Internal ID must equal yt-<youtube_video_id>", path=f"{path}.id")
-            expected_url = f"https://www.youtube.com/watch?v={youtube_id}"
+            short_format = video.get("media_format") == "short"
+            expected_id = f"yts-{youtube_id}" if short_format else f"yt-{youtube_id}"
+            audit.check(video.get("id") == expected_id, "video.internal_id", "Internal ID must match its media format and YouTube ID", path=f"{path}.id")
+            expected_url = f"https://www.youtube.com/shorts/{youtube_id}" if short_format else f"https://www.youtube.com/watch?v={youtube_id}"
             audit.check(video.get("youtube_url") == expected_url, "video.youtube_url", "YouTube URL does not match the Video ID", path=f"{path}.youtube_url")
             thumbnail_url = video.get("thumbnail_url")
             thumbnail = urlsplit(thumbnail_url) if isinstance(thumbnail_url, str) else None
@@ -559,7 +562,7 @@ def validate_learning_paths(
         audit.check(orders == list(range(1, len(steps) + 1)), "paths.step_order", "Step order must be consecutive and match array order", path=f"{path_name}.steps")
         for step_index, step in enumerate(steps):
             step_path = f"{path_name}.steps[{step_index}]"
-            if not require_keys(audit, step, ("order", "goal_he", "explanation_he", "primary_video_ids", "alternative_video_ids", "equipment_he", "risk_level", "warning_he"), step_path):
+            if not require_keys(audit, step, ("order", "goal_he", "explanation_he", "primary_video_ids", "alternative_video_ids", "short_video_ids", "equipment_he", "risk_level", "warning_he"), step_path):
                 continue
             audit.check(has_hebrew(step["goal_he"]), "paths.hebrew", "Step goal must contain Hebrew", path=f"{step_path}.goal_he")
             audit.check(has_hebrew(step["explanation_he"]), "paths.hebrew", "Step explanation must contain Hebrew", path=f"{step_path}.explanation_he")
@@ -568,19 +571,23 @@ def validate_learning_paths(
             audit.check(has_hebrew(step["warning_he"]), "paths.warning", "Step warning must contain Hebrew", path=f"{step_path}.warning_he")
             primary = step["primary_video_ids"]
             alternatives = step["alternative_video_ids"]
-            arrays_ok = isinstance(primary, list) and isinstance(alternatives, list)
+            shorts = step["short_video_ids"]
+            arrays_ok = isinstance(primary, list) and isinstance(alternatives, list) and isinstance(shorts, list)
             audit.check(arrays_ok, "paths.video_arrays", "Primary and alternative IDs must be arrays", path=step_path)
             if not arrays_ok:
                 continue
-            total_references += len(primary) + len(alternatives)
+            total_references += len(primary) + len(alternatives) + len(shorts)
             audit.check(bool(primary), "paths.primary", "Every step must include at least one primary video", path=f"{step_path}.primary_video_ids")
             audit.check(bool(alternatives), "paths.alternative", "Every step must include at least one alternative video", path=f"{step_path}.alternative_video_ids")
+            audit.check(len(shorts) >= 2, "paths.shorts", "Every step must include at least two Shorts", path=f"{step_path}.short_video_ids")
             all_refs = primary + alternatives
             audit.check(2 <= len(all_refs) <= 5, "paths.video_count", f"Every step must reference 2-5 videos; found {len(all_refs)}", path=step_path)
             unknown = sorted(set(all_refs) - internal_ids)
             audit.check(not unknown, "paths.reference", f"Unknown video IDs: {unknown}", path=step_path, details=unknown or None)
             duplicate_refs = duplicate_values(all_refs)
             audit.check(not duplicate_refs, "paths.duplicate_reference", f"Duplicate/overlapping step video IDs: {duplicate_refs}", path=step_path, details=duplicate_refs or None)
+            unknown_shorts = sorted(set(shorts) - internal_ids)
+            audit.check(not unknown_shorts, "paths.short_reference", f"Unknown Short IDs: {unknown_shorts}", path=step_path, details=unknown_shorts or None)
     audit.stats["learning_paths"] = len(paths)
     audit.stats["learning_path_steps"] = total_steps
     audit.stats["learning_path_video_references"] = total_references
@@ -1055,11 +1062,12 @@ def run_validation(
     files = {name: root / path.relative_to(ROOT) for name, path in DATA_FILES.items()}
     loaded = {name: load_json(path, audit, str(path.relative_to(root)).replace("\\", "/")) for name, path in files.items()}
     taxonomy_allowed = validate_taxonomy(audit, loaded["taxonomy"])
-    validate_domain_category_map(audit, loaded["taxonomy"], loaded["videos"], taxonomy_allowed)
-    validate_video_schema(audit, loaded["video_schema"], loaded["videos"])
+    all_videos = (loaded["videos"] or []) + (loaded["shorts"] or []) if isinstance(loaded["videos"], list) and isinstance(loaded["shorts"], list) else loaded["videos"]
+    validate_domain_category_map(audit, loaded["taxonomy"], all_videos, taxonomy_allowed)
+    validate_video_schema(audit, loaded["video_schema"], all_videos)
     internal_ids = validate_videos(
         audit,
-        loaded["videos"],
+        all_videos,
         taxonomy_allowed,
         expected_count=expected_count,
         minimum_count=minimum_count,
@@ -1074,14 +1082,14 @@ def run_validation(
     validate_synonyms(audit, loaded["synonyms"])
     validate_site_config(audit, loaded["site_config"], taxonomy_allowed["languages"])
     placeholder_hits: list[dict[str, str]] = []
-    for label in ("videos", "taxonomy", "learning_paths", "travel_guides", "synonyms", "site_config"):
+    for label in ("videos", "shorts", "taxonomy", "learning_paths", "travel_guides", "synonyms", "site_config"):
         for value_path, text in walk_strings(loaded[label], f"data.{label}"):
             match = PLACEHOLDER_RE.search(text)
             if match:
                 placeholder_hits.append({"path": value_path, "match": match.group(0)})
     audit.check(not placeholder_hits, "content.placeholder", "Placeholder-like content was found", path="data", details=placeholder_hits or None)
-    videos = loaded["videos"] if isinstance(loaded["videos"], list) else []
-    actual_count = len(videos) if isinstance(loaded["videos"], list) else None
+    videos = all_videos if isinstance(all_videos, list) else []
+    actual_count = len(videos) if isinstance(all_videos, list) else None
     audit.count_expectation = describe_count_expectation(
         expected_count=expected_count,
         minimum_count=minimum_count,

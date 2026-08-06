@@ -3,6 +3,16 @@ const STATIC_TRANSLATIONS = Object.freeze({"מדריך הווידאו הקהיל
 
 const V3_TRANSLATIONS = Object.freeze({
   "גרסה": "Version",
+  "ספריית הקצרים": "Shorts Library",
+  "לקצרים": "Open Shorts",
+  "קצרים מאומתים": "Verified Shorts",
+  "יש לי דקה ללמוד": "I have one minute to learn",
+  "קצרים מאומתים וממוינים לרעיון אחד בכל צפייה.": "Curated Shorts for one idea per watch.",
+  "החיפוש הרגיל מזהה כוונה, מילים נרדפות וקטגוריות בכל": "Regular search detects intent, synonyms and categories across all",
+  "הסרטונים והקצרים. אם תפעילו AI מקומי, מודל רב־לשוני ידרג את הסרטונים המלאים לפי משמעות והחיפוש ישלב גם קצרים מתאימים. אין API, מפתח או צ׳אט מרוחק; המודל אינו ממציא הדרכות אלא רק מאתר רשומות קיימות.": "videos and Shorts. If local AI is enabled, a multilingual model ranks full videos by meaning while local search also blends in matching Shorts. No API, key or remote chat is used; the model does not create guidance — it only finds existing records.",
+  "כתבו שאלה רגילה וקבלו סרטונים וקצרים מתאימים.": "Write a normal question and get matching videos and Shorts.",
+  "הדרכות פעילות ומסווגות, ובהן": "active curated tutorials, including",
+  "קצרים לחזרה מהירה — כהשלמה לקורסים, אימון וטיולים אמיתיים.": "Shorts for quick review — as a supplement to courses, practice and real rides.",
   "הדרך שלך לרכיבה": "Your path to",
   "בטוחה ומדויקת יותר": "safer, more precise riding",
   "הדרכות פעילות ומסווגות בעברית ובאנגלית, עם ניווט לפי תחום, נושא ומיקוד — כהשלמה לקורסים, אימון וטיולים אמיתיים.": "active, curated tutorials in Hebrew and English, organised by area, topic and focus — as a supplement to courses, practice and real rides.",

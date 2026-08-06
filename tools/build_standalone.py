@@ -11,6 +11,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 DATA_FILES = (
     ("videos", "videos.json"),
+    ("shorts", "shorts.json"),
     ("categories", "categories.json"),
     ("learning-paths", "learning-paths.json"),
     ("synonyms", "synonyms.json"),
@@ -69,6 +70,7 @@ def build() -> Path:
     output.write_text(html, encoding="utf-8", newline="\n")
 
     videos = json.loads((ROOT / "data" / "videos.json").read_text(encoding="utf-8"))
+    shorts = json.loads((ROOT / "data" / "shorts.json").read_text(encoding="utf-8"))
     rendered = output.read_text(encoding="utf-8")
     if not re.match(r"\A<!DOCTYPE html>\s*<html\b", rendered, flags=re.IGNORECASE):
         raise SystemExit("Standalone must begin with one doctype followed by the HTML element")
@@ -79,9 +81,14 @@ def build() -> Path:
     )
     if not embedded_videos or len(json.loads(embedded_videos.group(1).replace("<\\/script", "</script"))) != len(videos):
         raise SystemExit("Standalone embedded video count does not match the catalogue")
+    embedded_shorts = re.search(
+        r'<script id="embedded-data-shorts" type="application/json">([\s\S]*?)</script>', rendered
+    )
+    if not embedded_shorts or len(json.loads(embedded_shorts.group(1).replace("<\\/script", "</script"))) != len(shorts):
+        raise SystemExit("Standalone embedded Shorts count does not match the catalogue")
     if "semantic-worker.js" in rendered and "data-standalone=\"true\"" not in rendered:
         raise SystemExit("Standalone local-AI guard is missing")
-    print(f"Built {output.relative_to(ROOT)} with {len(videos)} videos for version {version}.")
+    print(f"Built {output.relative_to(ROOT)} with {len(videos)} videos and {len(shorts)} Shorts for version {version}.")
     return output
 
 

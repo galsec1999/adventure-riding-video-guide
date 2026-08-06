@@ -1,0 +1,228 @@
+{
+  "document_version": "1.0.0",
+  "product_version": "3.1.0",
+  "status": "in_progress",
+  "generated_at": "2026-08-06T07:47:10+00:00",
+  "publication_target": 250,
+  "candidates_available": 3167,
+  "accepted_before_cap": 0,
+  "published_count": 0,
+  "rejected_count": 30,
+  "rejection_reasons": {
+    "fetch_error": 30
+  },
+  "video_or_audio_downloaded": false,
+  "full_transcript_stored": false,
+  "rejections": [
+    {
+      "youtube_video_id": "Z0zXKj-M8AU",
+      "channel_name": "ADVMotoSkillZ",
+      "title_original": "How much can a simple U-turn reveal about your riding?",
+      "reason": "fetch_error",
+      "error": "ERROR: [youtube] Z0zXKj-M8AU: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies"
+    },
+    {
+      "youtube_video_id": "tTz4z0Adzkc",
+      "channel_name": "DanDanTheFireman",
+      "title_original": "Minor Accident, Major Repair Bill",
+      "reason": "fetch_error",
+      "error": "ERROR: [youtube] tTz4z0Adzkc: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies"
+    },
+    {
+      "youtube_video_id": "YV4Rfu1-6rI",
+      "channel_name": "RIDE Adventures",
+      "title_original": "How to Pick Up a Motorcycle on a Hill",
+      "reason": "fetch_error",
+      "error": "ERROR: [youtube] YV4Rfu1-6rI: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies"
+    },
+    {
+      "youtube_video_id": "wrbJdxbMRXo",
+      "channel_name": "CanyonChasers",
+      "title_original": "Information, Not Apex, Controls Your Brakes! Pro Rider Secret",
+      "reason": "fetch_error",
+      "error": "ERROR: [youtube] wrbJdxbMRXo: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies"
+    },
+    {
+      "youtube_video_id": "5lnbcA8brak",
+      "channel_name": "Dork in the Road",
+      "title_original": "My first time \"enjoying\" a dehydrated meal in the woods. Enjoy this classic from 2021 #camping",
+      "reason": "fetch_error",
+      "error": "ERROR: [youtube] 5lnbcA8brak: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies"
+    },
+    {
+      "youtube_video_id": "eToVWn_90m8",
+      "channel_name": "The Mx Factory",
+      "title_original": "Moto Dad’s Be Like: EP 1 (Satire)",
+      "reason": "fetch_error",
+      "error": "ERROR: [youtube] eToVWn_90m8: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies"
+    },
+    {
+      "youtube_video_id": "6eTHyWfEDME",
+      "channel_name": "MCrider",
+      "title_original": "Deer drunk on fermented fruit! New road hazard.",
+      "reason": "fetch_error",
+      "error": "ERROR: [youtube] 6eTHyWfEDME: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies"
+    },
+    {
+      "youtube_video_id": "HUFFQWSLLvw",
+      "channel_name": "MOTOTREK",
+      "title_original": "Should You Air-Down Your ADV Tires?",
+      "reason": "fetch_error",
+      "error": "ERROR: [youtube] HUFFQWSLLvw: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies"
+    },
+    {
+      "youtube_video_id": "gPLkp6ZJjP0",
+      "channel_name": "FortNine",
+      "title_original": "Find your correct helmet size with your phone camera!",
+      "reason": "fetch_error",
+      "error": "ERROR: [youtube] gPLkp6ZJjP0: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies"
+    },
+    {
+      "youtube_video_id": "3HOxcpS5xzo",
+      "channel_name": "SoCal Off-Road School",
+      "title_original": "ADV Hill Climb | How To Get Your Bike To The Top #advlife #adventurebike #motorcycle",
+      "reason": "fetch_error",
+      "error": "ERROR: [youtube] 3HOxcpS5xzo: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies"
+    },
+    {
+      "youtube_video_id": "Ute4DukdzMU",
+      "channel_name": "MotoJitsu",
+      "title_original": "Tight U-Turns On A Hayabusa",
+      "reason": "fetch_error",
+      "error": "ERROR: [youtube] Ute4DukdzMU: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies"
+    },
+    {
+      "youtube_video_id": "qhQe_e8-bvA",
+      "channel_name": "Bret Tkacs ADV",
+      "title_original": "Bend one arm and leg",
+      "reason": "fetch_error",
+      "error": "ERROR: [youtube] qhQe_e8-bvA: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies"
+    },
+    {
+      "youtube_video_id": "KCq1IuKG8Bc",
+      "channel_name": "Doodle On A Motorcycle",
+      "title_original": "The Best Trick for Full Lock U-Turns",
+      "reason": "fetch_error",
+      "error": "ERROR: [youtube] KCq1IuKG8Bc: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies"
+    },
+    {
+      "youtube_video_id": "uSoHg5x7ZmY",
+      "channel_name": "Moto Control",
+      "title_original": "The #1 Cornering Mistake on Cruisers #motorcycle #bikelife #harleydavidson",
+      "reason": "fetch_error",
+      "error": "ERROR: [youtube] uSoHg5x7ZmY: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies"
+    },
+    {
+      "youtube_video_id": "F4-RMMkqM-w",
+      "channel_name": "Megs Braap",
+      "title_original": "Giant log on the GPX TSE 300",
+      "reason": "fetch_error",
+      "error": "ERROR: [youtube] F4-RMMkqM-w: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies"
+    },
+    {
+      "youtube_video_id": "9gu3e4gXYnM",
+      "channel_name": "Adam Riemann",
+      "title_original": "Best tyres and luggage for off-road travel on your motorcycle",
+      "reason": "fetch_error",
+      "error": "ERROR: [youtube] 9gu3e4gXYnM: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies"
+    },
+    {
+      "youtube_video_id": "_QQt30WlaTQ",
+      "channel_name": "Chris Birch - Off Road Coach",
+      "title_original": "Playing around with a KTM 790 Adventure R in China. #cardofam #ktm #leatt #saynotoslow",
+      "reason": "fetch_error",
+      "error": "ERROR: [youtube] _QQt30WlaTQ: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies"
+    },
+    {
+      "youtube_video_id": "z71_42Saa9M",
+      "channel_name": "ADVMotoSkillZ",
+      "title_original": "Why practice U-turns?",
+      "reason": "fetch_error",
+      "error": "ERROR: [youtube] z71_42Saa9M: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies"
+    },
+    {
+      "youtube_video_id": "VHifagGyRL4",
+      "channel_name": "DanDanTheFireman",
+      "title_original": "PAY ATTENTION",
+      "reason": "fetch_error",
+      "error": "ERROR: [youtube] VHifagGyRL4: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies"
+    },
+    {
+      "youtube_video_id": "JW3liaXbMTI",
+      "channel_name": "CanyonChasers",
+      "title_original": "Brake for Control, Not a Mythical Apex: Safe Cornering",
+      "reason": "fetch_error",
+      "error": "ERROR: [youtube] JW3liaXbMTI: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies"
+    },
+    {
+      "youtube_video_id": "GDpnEf_vr2Y",
+      "channel_name": "RIDE Adventures",
+      "title_original": "Riding some fun suspension bridges in Nepal 🤪🔥",
+      "reason": "fetch_error",
+      "error": "ERROR: [youtube] GDpnEf_vr2Y: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies"
+    },
+    {
+      "youtube_video_id": "7tgdRntQtpk",
+      "channel_name": "Dork in the Road",
+      "title_original": "New Tower and Tablet Mount on the DR-Z4S",
+      "reason": "fetch_error",
+      "error": "ERROR: [youtube] 7tgdRntQtpk: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies"
+    },
+    {
+      "youtube_video_id": "w5ppXO13tus",
+      "channel_name": "The Mx Factory",
+      "title_original": "Sitting and braking? Do this instead.",
+      "reason": "fetch_error",
+      "error": "ERROR: [youtube] w5ppXO13tus: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies"
+    },
+    {
+      "youtube_video_id": "Cfyo3KfEOaw",
+      "channel_name": "MCrider",
+      "title_original": "Mastering Motorcycle Braking_ Achieve Balance and Control in Your Stops",
+      "reason": "fetch_error",
+      "error": "ERROR: [youtube] Cfyo3KfEOaw: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies"
+    },
+    {
+      "youtube_video_id": "g_5Y475flWU",
+      "channel_name": "MOTOTREK",
+      "title_original": "Should you air-down your tires when riding challenging terrain?",
+      "reason": "fetch_error",
+      "error": "ERROR: [youtube] g_5Y475flWU: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies"
+    },
+    {
+      "youtube_video_id": "eCciKNS1hl0",
+      "channel_name": "FortNine",
+      "title_original": "Getting Stuck At The Turkish Border...",
+      "reason": "fetch_error",
+      "error": "ERROR: [youtube] eCciKNS1hl0: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies"
+    },
+    {
+      "youtube_video_id": "rMI0N0RrUCA",
+      "channel_name": "SoCal Off-Road School",
+      "title_original": "Adventure Bike Hill Climb Crash | How To Avoid Going Down #adventurebike #advlife #motorcycle",
+      "reason": "fetch_error",
+      "error": "ERROR: [youtube] rMI0N0RrUCA: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies"
+    },
+    {
+      "youtube_video_id": "wm21UrByxkQ",
+      "channel_name": "MotoJitsu",
+      "title_original": "Hayabusa Knee Dragging, One-Handed, New Bike, 300 Miles, New Tires",
+      "reason": "fetch_error",
+      "error": "ERROR: [youtube] wm21UrByxkQ: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies"
+    },
+    {
+      "youtube_video_id": "0PmdBPnp2EI",
+      "channel_name": "Bret Tkacs ADV",
+      "title_original": "Weightless rider drill",
+      "reason": "fetch_error",
+      "error": "ERROR: [youtube] 0PmdBPnp2EI: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies"
+    },
+    {
+      "youtube_video_id": "wQCGFH93SPM",
+      "channel_name": "Doodle On A Motorcycle",
+      "title_original": "Your U-Turns are Wrong",
+      "reason": "fetch_error",
+      "error": "ERROR: [youtube] wQCGFH93SPM: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies"
+    }
+  ]
+}
