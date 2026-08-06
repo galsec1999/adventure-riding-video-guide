@@ -1,5 +1,9 @@
 #!/usr/bin/env python3
-"""Assign three topic-matched Shorts to every learning-path step."""
+"""Assign up to three exact-category Shorts to learning-path steps.
+
+Document version: 2.0.0. There is no domain fallback: a step stays empty when
+no strictly verified Short matches a full-video category in that step.
+"""
 import json
 from collections import defaultdict
 from pathlib import Path
@@ -22,11 +26,6 @@ for path in paths:
         if item["id"] not in choices: choices.append(item["id"])
         if len(choices)==3: break
       if len(choices)==3: break
-    if len(choices)<3:
-      fallback=[s for s in shorts if s["domain"]==byid[step["primary_video_ids"][0]]["domain"]]
-      for item in fallback:
-        if item["id"] not in choices: choices.append(item["id"])
-        if len(choices)==3: break
     step["short_video_ids"]=choices
 (root/"data/learning-paths.json").write_text(json.dumps(paths,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
 print(sum(len(p["steps"]) for p in paths),sum(len(s["short_video_ids"]) for p in paths for s in p["steps"]))

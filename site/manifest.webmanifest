@@ -1,9 +1,9 @@
 {
   "id": "./",
-  "version": "3.1.0",
+  "version": "3.2.0",
   "name": "מדריך הווידאו לרכיבת אדוונצ'ר / Community Adventure Riding Guide",
   "short_name": "ADV Guide",
-  "description": "1,217 הדרכות רכיבה פעילות ומסווגות, ובהן 806 קצרים, בעברית ובאנגלית.",
+  "description": "422 הדרכות רכיבה פעילות ומסווגות, ובהן 11 קצרים שעברו אימות תוכן מחמיר, בעברית ובאנגלית.",
   "lang": "he",
   "dir": "rtl",
   "start_url": "./#home",

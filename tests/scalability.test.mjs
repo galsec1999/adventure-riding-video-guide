@@ -28,17 +28,17 @@ const [sourceVideos, sourceShorts, taxonomy, synonyms] = await Promise.all([
   loadJson("../data/synonyms.json"),
 ]);
 
-test("the complete 1,217-record release prepares and searches without runtime errors", (t) => {
+test("the complete 422-record release prepares and searches without runtime errors", (t) => {
   const complete = [...sourceVideos, ...sourceShorts];
   const startedAt = performance.now();
   const prepared = prepareVideos(complete, taxonomy, synonyms);
   const results = applySearchAndFilters(prepared.videos, { q: "cornering", sort: "recommended" }, { synonymIndex: prepared.synonymIndex });
   const elapsedMs = performance.now() - startedAt;
-  assert.equal(complete.length, 1217);
-  assert.equal(prepared.videos.length, 1217);
-  assert.equal(new Set(prepared.videos.map((video) => video.id)).size, 1217);
+  assert.equal(complete.length, 422);
+  assert.equal(prepared.videos.length, 422);
+  assert.equal(new Set(prepared.videos.map((video) => video.id)).size, 422);
   assert.ok(results.length > 0);
-  t.diagnostic(`prepare/search 1217: ${elapsedMs.toFixed(2)} ms (measurement only; no hardware threshold)`);
+  t.diagnostic(`prepare/search 422: ${elapsedMs.toFixed(2)} ms (measurement only; no hardware threshold)`);
 });
 
 

@@ -1,5 +1,10 @@
 #!/usr/bin/env python3
-"""Build conservative Shorts records after a documented thumbnail contact-sheet review."""
+"""Retired unsafe title/thumbnail-only Shorts builder.
+
+Document version: 2.0.0. Product 3.2.0 requires title, source description and
+individual visual review. Use audit_shorts_content.py and
+apply_shorts_content_audit.py instead.
+"""
 
 from __future__ import annotations
 
@@ -43,6 +48,10 @@ def record(item, topic):
 
 
 def main():
+    raise SystemExit(
+        "Retired in product 3.2.0: title/thumbnail-only classification is forbidden. "
+        "Use tools/audit_shorts_content.py followed by tools/apply_shorts_content_audit.py."
+    )
     p=argparse.ArgumentParser(); p.add_argument("--candidates",type=Path,required=True); p.add_argument("--output",type=Path,required=True); p.add_argument("--target",type=int,default=1000); p.add_argument("--exclusions",type=Path); a=p.parse_args()
     src=json.loads(a.candidates.read_text(encoding="utf-8")); selected=[]
     for item in round_robin_candidates(src["candidates"]):

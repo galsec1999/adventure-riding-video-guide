@@ -1,0 +1,93 @@
+{
+  "document_version": "1.0.0",
+  "product_version": "3.2.0",
+  "reviewed_at": "2026-08-06",
+  "method_he": "בדיקה חזותית של תוכן הקצר בנגן YouTube הציבורי לאחר שער כותרת ותיאור. כל מועמד נוגן ונבדקה מסגרת תוכן עם כתוביות מסך כאשר היו זמינות.",
+  "method_en": "Visual review in the public YouTube Shorts player after the title-and-description gate. Each candidate was played and a content frame was reviewed, including on-screen captions where available.",
+  "items": [
+    {
+      "youtube_video_id": "YV4Rfu1-6rI",
+      "decision": "keep",
+      "category": "lifting",
+      "summary_he": "הסבר קצר על השיקולים וההכנה לפני הרמת אופנוע שנפל בשיפוע.",
+      "summary_en": "A short explanation of the setup and considerations before lifting a fallen motorcycle on a slope."
+    },
+    {
+      "youtube_video_id": "a1jMlqmy_q8",
+      "decision": "keep",
+      "category": "sand",
+      "summary_he": "הדגמת רכיבה בחול מנקודת מבט הרוכב, עם דגש חזותי על תיאום פקדים ושמירת תנועה.",
+      "summary_en": "A rider-view sand demonstration with visual emphasis on coordinated controls and maintaining movement."
+    },
+    {
+      "youtube_video_id": "j7QB8UCm1s8",
+      "decision": "keep",
+      "category": "recovery",
+      "summary_he": "הדגמה קצרה של גרירת אופנוע באמצעות אופנוע נוסף בשטח והכנת החיבור.",
+      "summary_en": "A short trail demonstration of towing one motorcycle with another and preparing the connection."
+    },
+    {
+      "youtube_video_id": "ba6fj6DsgVU",
+      "decision": "keep",
+      "category": "lifting",
+      "summary_he": "תרגיל כושר המדמה את תנועת הרמת האופנוע כדי לחזק את היכולת לפני צורך אמיתי בשטח.",
+      "summary_en": "A conditioning drill that simulates the motorcycle-lifting movement before it is needed in the field."
+    },
+    {
+      "youtube_video_id": "aAu3Zk-6jSs",
+      "decision": "keep",
+      "category": "packing_luggage",
+      "summary_he": "השוואה קצרה בין ארגזים קשיחים לתיקים רכים, כולל יתרון האבטחה של ארגז קשיח.",
+      "summary_en": "A short hard-versus-soft pannier comparison, including the security advantage of hard panniers."
+    },
+    {
+      "youtube_video_id": "YKNo00vBTmM",
+      "decision": "keep",
+      "category": "sand",
+      "summary_he": "הדגמה חזותית של שליטה באופנוע אדוונצ'ר בחול מנקודת מבט הרוכב.",
+      "summary_en": "A rider-view demonstration of controlling an adventure motorcycle in sand."
+    },
+    {
+      "youtube_video_id": "BlTAL-eYLV4",
+      "decision": "keep",
+      "category": "packing_luggage",
+      "summary_he": "הסבר קצר על יתרונות מעשיים של ארגזי צד קשיחים כחלק מבחירת מערכת מטען.",
+      "summary_en": "A short explanation of practical hard-pannier advantages when choosing a luggage system."
+    },
+    {
+      "youtube_video_id": "vW_BaO3d7Q8",
+      "decision": "keep",
+      "category": "packing_luggage",
+      "summary_he": "הסבר קצר על יתרונות ושיטות שימוש בסיסיות בתיקי צד רכים.",
+      "summary_en": "A short explanation of soft-pannier advantages and basic ways to use them."
+    },
+    {
+      "youtube_video_id": "SYNOqChQhnA",
+      "decision": "keep",
+      "category": "sand",
+      "summary_he": "טיפ בטיחותי לרכיבה בחול המדגיש תנועה קדימה במקום מאבק באופנוע.",
+      "summary_en": "A sand-riding safety tip emphasizing forward movement instead of fighting the motorcycle."
+    },
+    {
+      "youtube_video_id": "T2wFY9PsSFI",
+      "decision": "keep",
+      "category": "electronic_aids",
+      "summary_he": "הסבר קצר על מגבלות Cornering ABS ועל כך שעזר אלקטרוני אינו מחליף החלטת רכיבה בטוחה.",
+      "summary_en": "A short explanation of cornering-ABS limitations and why an electronic aid does not replace safe rider decisions."
+    },
+    {
+      "youtube_video_id": "FgaSAu39nrk",
+      "decision": "keep",
+      "category": "sand",
+      "summary_he": "הדגמת רכיבה בחול המסבירה התאמת תנופה לצפיפות החול המשתנה.",
+      "summary_en": "A sand-riding demonstration explaining how to adjust momentum to changing sand density."
+    },
+    {
+      "youtube_video_id": "bkzA8NOjea4",
+      "decision": "remove",
+      "category": "packing_luggage",
+      "reason_he": "הוסר בשער החזותי: נגן המקור מציג רכיב מסחרי בולט View products.",
+      "reason_en": "Removed at the visual gate because the source player displays a prominent View products commerce element."
+    }
+  ]
+}

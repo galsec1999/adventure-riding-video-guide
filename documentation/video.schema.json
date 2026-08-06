@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "urn:adventure-riding-video-guide:schema:video:3.0.0",
-  "title": "Adventure Riding Video Record — bilingual v3.0.0",
+  "$id": "urn:adventure-riding-video-guide:schema:video:3.2.0",
+  "title": "Adventure Riding Video Record — bilingual v3.2.0",
   "type": "object",
   "additionalProperties": false,
   "required": [
@@ -411,8 +411,10 @@
               "chapters",
               "transcript",
               "visual_review",
+              "visual_content_review",
               "captions_available",
-              "youtube_search_metadata"
+              "youtube_search_metadata",
+              "youtube_player_description"
             ]
           },
           "minItems": 1,

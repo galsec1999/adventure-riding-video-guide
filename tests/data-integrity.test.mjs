@@ -81,27 +81,35 @@ test("non-empty dataset has unique records with matching YouTube URLs", () => {
   });
 });
 
-test("v3.1 Shorts library contains 806 distinct, visually reviewed public records", () => {
-  assert.equal(shorts.length, 806);
+test("v3.2 Shorts library contains only the 11 individually verified records", () => {
+  assert.equal(shorts.length, 11);
   assert.equal(new Set(shorts.map((video) => video.id)).size, shorts.length);
   shorts.forEach((video) => {
     assert.equal(video.media_format, "short");
     assert.equal(video.id, `yts-${video.youtube_video_id}`);
     assert.equal(video.youtube_url, `https://www.youtube.com/shorts/${video.youtube_video_id}`);
-    assert.ok(video.verification.content_evidence_types.includes("visual_review"));
+    assert.ok(video.verification.content_evidence_types.includes("youtube_player_description"));
+    assert.ok(video.verification.content_evidence_types.includes("visual_content_review"));
+    assert.equal(video.verification.classification_confidence, "high");
     assert.equal(video.contains_marketing, false);
   });
 });
 
-test("every learning-path step exposes three valid Shorts", () => {
+test("learning paths expose only category-matched verified Shorts", () => {
+  const videosById = new Map(videos.map((video) => [video.id, video]));
+  let referencedShorts = 0;
   learningPaths.flatMap((path) => path.steps).forEach((step) => {
-    assert.equal(step.short_video_ids.length, 3);
-    assert.equal(new Set(step.short_video_ids).size, 3);
+    assert.ok(step.short_video_ids.length <= 3);
+    assert.equal(new Set(step.short_video_ids).size, step.short_video_ids.length);
+    const longCategories = new Set([...step.primary_video_ids, ...step.alternative_video_ids].map((id) => videosById.get(id)?.primary_category));
     step.short_video_ids.forEach((id) => {
       assert.ok(id.startsWith("yts-"));
       assert.ok(allVideoIds.has(id));
+      assert.ok(longCategories.has(shorts.find((short) => short.id === id).primary_category));
+      referencedShorts += 1;
     });
   });
+  assert.equal(referencedShorts, 28);
 });
 
 

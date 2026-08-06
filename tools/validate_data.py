@@ -505,6 +505,38 @@ def validate_videos(
             evidence = verification.get("content_evidence_types")
             audit.check(isinstance(evidence, list) and bool(evidence), "video.evidence", "At least one content evidence type is required", path=f"{path}.verification.content_evidence_types")
             audit.check(has_hebrew(verification.get("notes_he")), "video.verification_hebrew", "Verification notes must contain Hebrew text", path=f"{path}.verification.notes_he")
+            if video.get("media_format") == "short":
+                required_short_evidence = {"youtube_player_description", "visual_content_review"}
+                audit.check(
+                    isinstance(evidence, list) and required_short_evidence.issubset(evidence),
+                    "video.short_evidence",
+                    "A published Short requires source-description and individual visual-review evidence",
+                    path=f"{path}.verification.content_evidence_types",
+                )
+                audit.check(
+                    verification.get("classification_confidence") == "high",
+                    "video.short_confidence",
+                    "A published Short must have high classification confidence",
+                    path=f"{path}.verification.classification_confidence",
+                )
+                audit.check(
+                    isinstance(video.get("duration_seconds"), int) and 1 <= video["duration_seconds"] <= 180,
+                    "video.short_duration",
+                    "A published Short requires a verified duration of 1-180 seconds",
+                    path=f"{path}.duration_seconds",
+                )
+                audit.check(
+                    video.get("quality_score", 0) >= 4,
+                    "video.short_quality",
+                    "A published Short requires quality score 4 or higher",
+                    path=f"{path}.quality_score",
+                )
+                audit.check(
+                    video.get("contains_marketing") is False,
+                    "video.short_marketing",
+                    "A published Short cannot be marked as containing marketing",
+                    path=f"{path}.contains_marketing",
+                )
         related = video.get("related_video_ids")
         if isinstance(related, list):
             unknown_related = sorted(set(related) - internal_set)
@@ -534,6 +566,7 @@ def validate_learning_paths(
     audit: ValidationAudit,
     paths: Any,
     internal_ids: set[str],
+    videos_by_id: dict[str, dict[str, Any]],
     skill_levels: set[str],
     risk_levels: set[str],
 ) -> None:
@@ -579,7 +612,7 @@ def validate_learning_paths(
             total_references += len(primary) + len(alternatives) + len(shorts)
             audit.check(bool(primary), "paths.primary", "Every step must include at least one primary video", path=f"{step_path}.primary_video_ids")
             audit.check(bool(alternatives), "paths.alternative", "Every step must include at least one alternative video", path=f"{step_path}.alternative_video_ids")
-            audit.check(len(shorts) >= 2, "paths.shorts", "Every step must include at least two Shorts", path=f"{step_path}.short_video_ids")
+            audit.check(len(shorts) <= 3, "paths.shorts", "A step may include at most three strictly verified Shorts", path=f"{step_path}.short_video_ids")
             all_refs = primary + alternatives
             audit.check(2 <= len(all_refs) <= 5, "paths.video_count", f"Every step must reference 2-5 videos; found {len(all_refs)}", path=step_path)
             unknown = sorted(set(all_refs) - internal_ids)
@@ -588,6 +621,25 @@ def validate_learning_paths(
             audit.check(not duplicate_refs, "paths.duplicate_reference", f"Duplicate/overlapping step video IDs: {duplicate_refs}", path=step_path, details=duplicate_refs or None)
             unknown_shorts = sorted(set(shorts) - internal_ids)
             audit.check(not unknown_shorts, "paths.short_reference", f"Unknown Short IDs: {unknown_shorts}", path=step_path, details=unknown_shorts or None)
+            duplicate_shorts = duplicate_values(shorts)
+            audit.check(not duplicate_shorts, "paths.duplicate_short_reference", f"Duplicate Short IDs: {duplicate_shorts}", path=step_path, details=duplicate_shorts or None)
+            long_categories = {
+                videos_by_id[video_id].get("primary_category")
+                for video_id in all_refs
+                if video_id in videos_by_id
+            }
+            mismatched_shorts = sorted(
+                short_id
+                for short_id in shorts
+                if short_id in videos_by_id and videos_by_id[short_id].get("primary_category") not in long_categories
+            )
+            audit.check(
+                not mismatched_shorts,
+                "paths.short_semantic_match",
+                f"Short category does not match any full-video category in the step: {mismatched_shorts}",
+                path=step_path,
+                details=mismatched_shorts or None,
+            )
     audit.stats["learning_paths"] = len(paths)
     audit.stats["learning_path_steps"] = total_steps
     audit.stats["learning_path_video_references"] = total_references
@@ -1087,7 +1139,14 @@ def run_validation(
             f"Expected at least {minimum_count} videos; found {len(long_videos)}",
             path="data/videos.json",
         )
-    validate_learning_paths(audit, loaded["learning_paths"], internal_ids, taxonomy_allowed["skill_levels"], taxonomy_allowed["risk_levels"])
+    validate_learning_paths(
+        audit,
+        loaded["learning_paths"],
+        internal_ids,
+        {item["id"]: item for item in all_videos if isinstance(item, dict) and isinstance(item.get("id"), str)},
+        taxonomy_allowed["skill_levels"],
+        taxonomy_allowed["risk_levels"],
+    )
     learning_path_ids = {
         item.get("id")
         for item in loaded["learning_paths"] or []

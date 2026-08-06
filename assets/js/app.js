@@ -1,6 +1,6 @@
 import { applySearchAndFilters, normalizeText, prepareVideos, scoreSearchMatch, uniqueDisplayTaxonomyIds } from "./search.js";
 import { browserStorage } from "./storage.js";
-import { localizedField, getStoredLanguage, isEnglish, saveLanguage, startEnglishObserver, translateDocument, translateExact } from "./i18n.js?v=3.1.0-20260806d";
+import { localizedField, getStoredLanguage, isEnglish, saveLanguage, startEnglishObserver, translateDocument, translateExact } from "./i18n.js?v=3.2.0-20260806a";
 import {
   INITIAL_VISIBLE_LIMIT,
   LOAD_MORE_BATCH_SIZE,
@@ -12,7 +12,7 @@ const MOBILE_OVERLAY_QUERY = "(max-width: 59.999rem)";
 const DEFAULT_SITE_NAME = "מדריך הווידאו לרכיבת אדוונצ'ר";
 const DEFAULT_SAFETY_WARNING = "יש לתרגל בהדרגה, במקום בטוח ועם ציוד מיגון מתאים.";
 const SAFE_LOGO_EXTENSION = /\.(?:avif|gif|jpe?g|png|svg|webp)$/i;
-const DATA_CACHE_REVISION = "3.1.0-20260806d";
+const DATA_CACHE_REVISION = "3.2.0-20260806a";
 const SEMANTIC_META_URL = "data/semantic-index.json";
 const SEMANTIC_WORKER_URL = `assets/js/semantic-worker.js?v=${DATA_CACHE_REVISION}`;
 

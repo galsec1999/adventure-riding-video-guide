@@ -40,9 +40,9 @@ TAG_RE = re.compile(r"<[^>]+>")
 # Ordered: specific topics must win before broad topics.
 TOPICS: list[dict[str, Any]] = [
     {"category":"intercoms_communications","domain":"touring_travel","sub":"bluetooth_vs_mesh","tags":["intercom","bluetooth","mesh","communication"],"words":r"intercom|cardo|sena|bluetooth|mesh communication|helmet audio"},
-    {"category":"route_navigation","domain":"touring_travel","sub":"navigation_apps","tags":["navigation","gpx","offline_maps"],"words":r"navigation|gps|gpx|garmin|osmand|gaia|offline map|route planning|phone mount"},
+    {"category":"route_navigation","domain":"touring_travel","sub":"navigation_apps","tags":["navigation","gpx","offline_maps"],"words":r"motorcycle navigation|route navigation|gpx (?:file|track|route|import|export)|gps (?:navigation|unit|device|mount|setup)|garmin (?:zumo|tread)|road ?book navigation|osmand|gaia gps|offline maps?|route planning"},
     {"category":"protective_gear","domain":"safety_recovery","sub":"protective_gear_selection","tags":["protective_gear","safety","fit"],"words":r"helmet|protective gear|body armor|armour|airbag|riding boot|riding jacket|glove|abrasion|impact protection"},
-    {"category":"tires_setup","domain":"mixed","sub":"tire_pressure","tags":["tires","tire_pressure","traction"],"words":r"tyre|tire|air down|pressure|knobb|mousse"},
+    {"category":"tires_setup","domain":"mixed","sub":"tire_pressure","tags":["tires","tire_pressure","traction"],"words":r"tyre|tire|air down|pressure|knobb|mousse|tractionator gps"},
     {"category":"suspension_setup","domain":"mixed","sub":"sag_preload","tags":["suspension","sag","preload"],"words":r"suspension|sag|preload|damping|fork setup|shock setup"},
     {"category":"motorcycle_maintenance","domain":"mixed","sub":"chain_care","tags":["maintenance","chain","inspection"],"words":r"chain|oil change|maintenance|service|lubric|coolant|battery|brake fluid|air filter|spark plug"},
     {"category":"roadside_repairs","domain":"touring_travel","sub":"field_repair","tags":["tire_repair","tools","breakdowns"],"words":r"repair|puncture|flat tire|flat tyre|tool kit|roadside|broken bike|field fix|tow a motorcycle"},

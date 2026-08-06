@@ -164,6 +164,8 @@ def main() -> int:
 
     failed = [item for item in checks if not item["passed"]]
     report = {
+        "document_version": "1.1.0",
+        "product_version": manifest.get("version"),
         "status": "PASS" if not failed else "FAIL",
         "site": str(site),
         "expected_video_count": args.expected_count,

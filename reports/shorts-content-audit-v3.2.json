@@ -1,0 +1,18 @@
+{
+  "document_version": "1.0.0",
+  "product_version": "3.2.0",
+  "input_shorts": 806,
+  "published_shorts": 11,
+  "removed_shorts": 795,
+  "published_categories": {
+    "electronic_aids": 1,
+    "lifting": 2,
+    "packing_luggage": 3,
+    "recovery": 1,
+    "sand": 4
+  },
+  "steps_with_shorts": 12,
+  "short_references": 28,
+  "policy_he": "ספק שווה הסרה: קצר נשמר רק כאשר הכותרת, תיאור המקור והבדיקה החזותית מסכימים על אותו נושא.",
+  "policy_en": "Uncertainty means removal: a Short is kept only when title, source description and visual review agree on the same topic."
+}
