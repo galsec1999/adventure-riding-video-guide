@@ -1,9 +1,12 @@
 {
+  "document_version": "1.1.0",
+  "product_version": "3.2.0",
   "status": "PASS",
-  "site": "D:\\Michael2015\\אופנוע\\Adventure-Riding-Video-Guide-Starter\\site",
+  "site": "site",
   "expected_video_count": 411,
   "video_count": 411,
-  "checks_passed": 896,
+  "shorts_count": 11,
+  "checks_passed": 902,
   "checks_failed": 0,
   "checks": [
     {
@@ -87,6 +90,11 @@
       "detail": null
     },
     {
+      "name": "required:data/shorts.json",
+      "passed": true,
+      "detail": null
+    },
+    {
       "name": "required:data/site-config.json",
       "passed": true,
       "detail": null
@@ -112,11 +120,26 @@
       "detail": null
     },
     {
+      "name": "shorts:non-empty",
+      "passed": true,
+      "detail": 11
+    },
+    {
+      "name": "shorts:unique-id",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "catalogue:unique-youtube-id",
+      "passed": true,
+      "detail": null
+    },
+    {
       "name": "release:manifest-config",
       "passed": true,
       "detail": {
-        "manifest": "3.0.0",
-        "config": "3.0.0"
+        "manifest": "3.2.0",
+        "config": "3.2.0"
       }
     },
     {
@@ -145,7 +168,7 @@
     {
       "name": "standalone:configured",
       "passed": true,
-      "detail": "Adventure-Riding-Video-Guide-v3.0.0-Standalone.html"
+      "detail": "Adventure-Riding-Video-Guide-v3.2.0-Standalone.html"
     },
     {
       "name": "standalone:release",
@@ -156,6 +179,11 @@
       "name": "standalone:count",
       "passed": true,
       "detail": 411
+    },
+    {
+      "name": "standalone:shorts-count",
+      "passed": true,
+      "detail": 11
     },
     {
       "name": "schema:0:yt-UsOGqaTH3d0",
@@ -4408,6 +4436,11 @@
       "detail": "./#library"
     },
     {
+      "name": "shortcut-relative:ספריית הקצרים / Shorts library",
+      "passed": true,
+      "detail": "./#shorts"
+    },
+    {
       "name": "shortcut-relative:מסלולי הלימוד / Learning paths",
       "passed": true,
       "detail": "./#paths"
@@ -4498,7 +4531,7 @@
       "detail": null
     },
     {
-      "name": "worker:adventure-guide-v3.0.0",
+      "name": "worker:adventure-guide-v3.2.0",
       "passed": true,
       "detail": null
     },

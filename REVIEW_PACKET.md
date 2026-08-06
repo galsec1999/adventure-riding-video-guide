@@ -1,4 +1,4 @@
-# חבילת ביקורת — שחרור 3.2.0 — גרסת מסמך 3.2.0
+# חבילת ביקורת — שחרור 3.2.0 — גרסת מסמך 3.2.1
 
 ## 1. מה הושלם
 
@@ -18,7 +18,7 @@
 ## 3. קבצים שנוצרו או שונו
 
 - נתונים: `data/shorts.json`, `data/learning-paths.json`, `data/site-config.json` והמראה תחת `site/`.
-- ביקורת: `research/shorts-v3.2/content-audit.json`, `research/shorts-v3.2/visual-review.json`, `reports/shorts-content-audit-v3.2.json`.
+- ביקורת: `research/shorts-v3.2/content-audit.json`, `research/shorts-v3.2/visual-review.json`, `reports/shorts-content-audit-v3.2.json`, `reports/pwa-validation.json`.
 - כלים: `audit_shorts_content.py`, `apply_shorts_content_audit.py`, `visual_qa_v3_2.cjs`; כלי הכותרת/thumbnail הישן הוצא משימוש וכלי שיוך המסלולים איבד fallback כללי.
 - שערים ובדיקות: `validate_data.py`, `validate_pwa.py`, `test_shorts_content_audit.py`, בדיקות Node וסכמות 3.2.0.
 - UI/PWA: גרסאות ומוני תוכן ב־`index.html`, ‏`app.js`, ‏Manifest, ‏Service Worker ו־Standalone 3.2.0.
@@ -39,7 +39,9 @@
 | גלילה אופקית | PASS — 0 בכל ארבעת המצבים |
 | ניווט שגוי | PASS — קטגוריית ניווט אינה מוצעת בספריית הקצרים כאשר אין בה קצר מאומת |
 | Standalone | PASS — 411 סרטונים מלאים ו־11 קצרים |
-| GitHub CI/Pages | ממתין לפרסום |
+| GitHub Validate site and PWA | PASS — run `31089872866` |
+| GitHub Pages | PASS — run `31089872323` |
+| אתר ציבורי | PASS — HTTP 200; גרסה 3.2.0; ‏422 פריטים; 11 קצרים; שני מזהי `GPS Tire` השגויים נעדרים |
 
 ## 5. בעיות, מגבלות וסיכונים
 
@@ -50,11 +52,11 @@
 
 ## 6. מה נשאר
 
-לבצע commit, לדחוף את הענף, להעביר את עץ השחרור ל־`main`, להמתין ל־GitHub Actions ול־Pages ולאמת את גרסה 3.2.0 באתר החי.
+לא נשארה פעולה בסבב זה. גרסה 3.2.0 פורסמה ב־`main` מן commit `8f55c26ef21429b1379f89283c66e7c3a09e7ec8`, ונתוני האתר החי אומתו לאחר הפריסה.
 
 ## 7. שער האיכות
 
-כל השערים המקומיים של 3.2.0 עברו. שער הפרסום ייסגר רק לאחר CI וקריאה חוזרת מן האתר הציבורי.
+PASS. כל השערים המקומיים, GitHub CI, ‏GitHub Pages והקריאה החוזרת מן האתר הציבורי עברו.
 
 ## 8. המלצה לשלב הבא
 
