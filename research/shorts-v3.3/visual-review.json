@@ -1,0 +1,2355 @@
+{
+  "document_title": "בדיקה חזותית פרטנית לשחזור ספריית הקצרים",
+  "document_version": "1.0.0",
+  "product_version": "3.3.0",
+  "reviewed_on": "2026-08-06",
+  "reviewed_count": 180,
+  "decision_counts": {
+    "keep": 152,
+    "remove": 28
+  },
+  "policy_he": "כל מועמד נבדק בשתי נקודות זמן בנגן החי. ספק, פרסום ממוקד או אי התאמה לתוכן גוררים הסרה.",
+  "policy_en": "Each candidate was reviewed at two live-player time points. Doubt, product-focused promotion, or content mismatch means removal.",
+  "items": [
+    {
+      "youtube_video_id": "LtSgSOIDKWk",
+      "live_title": "Mastering Traction Control: When to Use and When to Disable",
+      "decision": "keep",
+      "source_category": "electronic_aids",
+      "final_category": "electronic_aids",
+      "reason": "title_description_captions_and_two_live_frames_agree",
+      "review_method": "two_distinct_frames_from_live_youtube_shorts_player",
+      "frame_sha256": [
+        "646335b24e992de37fbc15ba8f11ef8948495eb7d76931a738e3e42f0abc893c",
+        "29d650e68c7d81d1a77c2e0244a6cf1d64cc8c202991af092f197e8774c029cf"
+      ]
+    },
+    {
+      "youtube_video_id": "yUiWzVnMeoY",
+      "live_title": "ABS and Traction Control on ADV Bikes? Full video in description.",
+      "decision": "keep",
+      "source_category": "electronic_aids",
+      "final_category": "electronic_aids",
+      "reason": "title_description_captions_and_two_live_frames_agree",
+      "review_method": "two_distinct_frames_from_live_youtube_shorts_player",
+      "frame_sha256": [
+        "8c29287a8881a823ca3564f4c62d5cc0b958d950c84bab83830e4ee2c18b2dce",
+        "10a08f3777ad1a3d4de77bf17f6184c3d64a5eac11b0fe37d988f4aa40f7ce46"
+      ]
+    },
+    {
+      "youtube_video_id": "VsWW-K2OzOk",
+      "live_title": "🦶 Foot peg motorcycle mount techniques",
+      "decision": "keep",
+      "source_category": "ergonomics",
+      "final_category": "ergonomics",
+      "reason": "title_description_captions_and_two_live_frames_agree",
+      "review_method": "two_distinct_frames_from_live_youtube_shorts_player",
+      "frame_sha256": [
+        "00620dad7f93ee2d8c07bacd99b1fb451bf8e4f49e6bc4b843198802461284d6",
+        "86c7fa68ca9dee3e504149d31fd3f0c8e2613fb0faf07aae3eb2122ab874c77b"
+      ]
+    },
+    {
+      "youtube_video_id": "URmKqMWDzu4",
+      "live_title": "First motorcycle ride on gravel",
+      "decision": "keep",
+      "source_category": "gravel_dirt",
+      "final_category": "gravel_dirt",
+      "reason": "title_description_captions_and_two_live_frames_agree",
+      "review_method": "two_distinct_frames_from_live_youtube_shorts_player",
+      "frame_sha256": [
+        "2b1c53cd43093e26fb3083b063465997d997f61f33453873c7ad8095cfde4d8c",
+        "1f05861129713603079e5c59b48beca472a50aad9d02d339461304241ff87754"
+      ]
+    },
+    {
+      "youtube_video_id": "Z0EJV8DirOM",
+      "live_title": "Adventure bike pivot turn",
+      "decision": "keep",
+      "source_category": "obstacles",
+      "final_category": "obstacles",
+      "reason": "title_description_captions_and_two_live_frames_agree",
+      "review_method": "two_distinct_frames_from_live_youtube_shorts_player",
+      "frame_sha256": [
+        "92cfe95f8e867a893473b477fbdc3abb8e52cae3baeb697ba7d97534e3e97148",
+        "7ca1293b78730dea0e0c07b18e27bc71c4ecf2f8623c8d988ffe0fbc00b25550"
+      ]
+    },
+    {
+      "youtube_video_id": "0CKbaPH1KLY",
+      "live_title": "Sitting down offroad",
+      "decision": "keep",
+      "source_category": "offroad_basics",
+      "final_category": "offroad_basics",
+      "reason": "title_description_captions_and_two_live_frames_agree",
+      "review_method": "two_distinct_frames_from_live_youtube_shorts_player",
+      "frame_sha256": [
+        "574654ffa18b3d3b2ebf79f530977349ad4e7b1fa33c91429cc507dba2b32dbe",
+        "d0764a03d53f169bf16f17179adab1bad7fa20bd702bc726dddeda90ddbe898b"
+      ]
+    },
+    {
+      "youtube_video_id": "9PtiwkzXoL0",
+      "live_title": "Adventure Motorcycle Off Road Seating Position",
+      "decision": "keep",
+      "source_category": "offroad_basics",
+      "final_category": "offroad_basics",
+      "reason": "title_description_captions_and_two_live_frames_agree",
+      "review_method": "two_distinct_frames_from_live_youtube_shorts_player",
+      "frame_sha256": [
+        "6f98912e2da5951eccf371321d68fa5dfaad0b6f92fa184ccb51e893635ae8bc",
+        "2f7c1811379875bc8dcda28c81a233d4249b363ea5b6d9da06a079be1116719d"
+      ]
+    },
+    {
+      "youtube_video_id": "An1vpv_XTs0",
+      "live_title": "Throttle & Clutch for Adventure Riding",
+      "decision": "keep",
+      "source_category": "offroad_basics",
+      "final_category": "offroad_basics",
+      "reason": "title_description_captions_and_two_live_frames_agree",
+      "review_method": "two_distinct_frames_from_live_youtube_shorts_player",
+      "frame_sha256": [
+        "b70e915b16d9c20b20fad120be7cb60c3cd19e705c0b7b54998047805e59ac8a",
+        "50b4a499bedf3e877076048a5f544716d22c0fe64e2f0a8df40b44605187d76e"
+      ]
+    },
+    {
+      "youtube_video_id": "hj9FZrhQtXE",
+      "live_title": "Off-road motorcycle standing posture",
+      "decision": "keep",
+      "source_category": "offroad_basics",
+      "final_category": "offroad_basics",
+      "reason": "title_description_captions_and_two_live_frames_agree",
+      "review_method": "two_distinct_frames_from_live_youtube_shorts_player",
+      "frame_sha256": [
+        "7dcec666fa1b32b9f7fbd4e5ff075a1f5dd5584550e17d17a39192afc5ca9d39",
+        "9f20371070a8c323eea40ef85e685b50741096c51722c1abd8bede0aded57701"
+      ]
+    },
+    {
+      "youtube_video_id": "bkzA8NOjea4",
+      "live_title": "Maximize Storage and Options with Soft Luggage for Adventure Motorcycles",
+      "decision": "remove",
+      "source_category": "packing_luggage",
+      "final_category": null,
+      "reason": "product_focused_soft_luggage_promotion",
+      "review_method": "two_distinct_frames_from_live_youtube_shorts_player",
+      "frame_sha256": [
+        "c96fd43d0a1f01314ac1008922c0cfc7bd58758e1bd706f56c83e030f3dfebd9",
+        "7282955734c3d7ba33ae77cbadbb5c636c8c16715f7de692ac12471a026b7ec8"
+      ]
+    },
+    {
+      "youtube_video_id": "0H_kDe6zDIM",
+      "live_title": "🔥 ADV pros explain why body armor systems.",
+      "decision": "keep",
+      "source_category": "protective_gear",
+      "final_category": "protective_gear",
+      "reason": "title_description_captions_and_two_live_frames_agree",
+      "review_method": "two_distinct_frames_from_live_youtube_shorts_player",
+      "frame_sha256": [
+        "f05d95c2d9ba45cece3d2727c1338d827792353e37d85c6a27914190c6048bfc",
+        "e3588f4afe04af2991dbff81d7516620702c797de9bfdea011bfb86c03fcb2a5"
+      ]
+    },
+    {
+      "youtube_video_id": "TbcKQNfAAyI",
+      "live_title": "Eerily Still: The Most Stable Helmet I've Ever Worn! Alpinestars Supertech R7",
+      "decision": "keep",
+      "source_category": "protective_gear",
+      "final_category": "protective_gear",
+      "reason": "title_description_captions_and_two_live_frames_agree",
+      "review_method": "two_distinct_frames_from_live_youtube_shorts_player",
+      "frame_sha256": [
+        "74fdbf01ea92854bdc10d0376f05d901dfe4eac073119034ca75ca5d7b38fcc4",
+        "a13df487266a4eb7120df6cc2b3161b63de440502a96f65a2d6b71489450a5d8"
+      ]
+    },
+    {
+      "youtube_video_id": "4q_MVJ_vs-E",
+      "live_title": "Bike Balance and Body Position - ADV Training Course Fundamental",
+      "decision": "keep",
+      "source_category": "riding_position",
+      "final_category": "riding_position",
+      "reason": "title_description_captions_and_two_live_frames_agree",
+      "review_method": "two_distinct_frames_from_live_youtube_shorts_player",
+      "frame_sha256": [
+        "4ee86c9d1c7ab1f090be62751b6c567abaa8e3684506928a0b7013bef3e89f7b",
+        "44a38fc9f682a67f8892f96ae76104f6bdf41218335adb37370c489fe1006621"
+      ]
+    },
+    {
+      "youtube_video_id": "6W6A4jZiz4U",
+      "live_title": "What are the Real-World Advantages of Trail Braking?",
+      "decision": "keep",
+      "source_category": "road_braking",
+      "final_category": "road_braking",
+      "reason": "title_description_captions_and_two_live_frames_agree",
+      "review_method": "two_distinct_frames_from_live_youtube_shorts_player",
+      "frame_sha256": [
+        "dc3bd101b9cbfc228152fac96dd1a4330452cdb70d33f68e3bc6b87390b65003",
+        "8a5a602967ce6a62de288b5c93af9586292dc3b080c57986a3e1a084fb1af94f"
+      ]
+    },
+    {
+      "youtube_video_id": "AP4FSIjvZoo",
+      "live_title": "Front brake covering explained the right way",
+      "decision": "keep",
+      "source_category": "road_braking",
+      "final_category": "road_braking",
+      "reason": "title_description_captions_and_two_live_frames_agree",
+      "review_method": "two_distinct_frames_from_live_youtube_shorts_player",
+      "frame_sha256": [
+        "dbc9bc7953baed8800c092547b18e4d8c0f2ef111089f6e577fc7218d31e89fa",
+        "0da80ffe56c23a252c491eaf928b658ada57e3f21f68501c55e3ede7d9d16ec7"
+      ]
+    },
+    {
+      "youtube_video_id": "BxdMbbA-slU",
+      "live_title": "The rear brake exists to complement the front brake",
+      "decision": "keep",
+      "source_category": "road_braking",
+      "final_category": "road_braking",
+      "reason": "title_description_captions_and_two_live_frames_agree",
+      "review_method": "two_distinct_frames_from_live_youtube_shorts_player",
+      "frame_sha256": [
+        "8da7072630db1ef6b06a3874a8ebd3fe99777b546f5226850f6593a311a05c5f",
+        "4d9d10884bc157c20fede13f39cf9a98789170c4429ab3f02d632f71100d711c"
+      ]
+    },
+    {
+      "youtube_video_id": "H3gJIWUu3G8",
+      "live_title": "Stop Treating the Apex as a Sacred Spot! Riders Beware!",
+      "decision": "keep",
+      "source_category": "road_braking",
+      "final_category": "road_braking",
+      "reason": "title_description_captions_and_two_live_frames_agree",
+      "review_method": "two_distinct_frames_from_live_youtube_shorts_player",
+      "frame_sha256": [
+        "b8f77341f6e0d931671ae81184a43ea90b2fccd4a8212c4771cca517bb97ed69",
+        "8af8c88083a66e23c5790b065a2fc7e14bf5da67637c2b8fa18800067194111e"
+      ]
+    },
+    {
+      "youtube_video_id": "P9rXuOCPH1E",
+      "live_title": "Braking in a Corner will Make the Front Tire Wash Out",
+      "decision": "keep",
+      "source_category": "road_braking",
+      "final_category": "road_braking",
+      "reason": "title_description_captions_and_two_live_frames_agree",
+      "review_method": "two_distinct_frames_from_live_youtube_shorts_player",
+      "frame_sha256": [
+        "a6976c41bf4f3e345bcfcfca4c9a479f65e47871677339e4190275891fcfe8e9",
+        "84916d9a204a22f0a540ed8da4b05bf24bb9428af335edcc637e1538c4795217"
+      ]
+    },
+    {
+      "youtube_video_id": "SGALW1ZMZko",
+      "live_title": "Front brake is King! That's why:",
+      "decision": "keep",
+      "source_category": "road_braking",
+      "final_category": "road_braking",
+      "reason": "title_description_captions_and_two_live_frames_agree",
+      "review_method": "two_distinct_frames_from_live_youtube_shorts_player",
+      "frame_sha256": [
+        "6d50e85904da47dad8992292b0e27e8e43465eeed90f83704d4b3ba1f633178f",
+        "eb20b84bc2b34d066675fe52c76671c96304629b50093b279cde74b6c81f012c"
+      ]
+    },
+    {
+      "youtube_video_id": "ZocKNGRAnEU",
+      "live_title": "Why the First 5% of Braking is So Important",
+      "decision": "keep",
+      "source_category": "road_braking",
+      "final_category": "road_braking",
+      "reason": "title_description_captions_and_two_live_frames_agree",
+      "review_method": "two_distinct_frames_from_live_youtube_shorts_player",
+      "frame_sha256": [
+        "76740955a1e3c4b16f8b3f44dc96e80195b0aef61dda9dc507cadf98d8069c3f",
+        "0fdff4524a5e394814a781275dc094d966d02433458cfc863ab8ce5401c7b299"
+      ]
+    },
+    {
+      "youtube_video_id": "clb6G5Cc0F8",
+      "live_title": "Why Front Tire Slides Happen (And How to Stop Them)",
+      "decision": "keep",
+      "source_category": "road_braking",
+      "final_category": "road_braking",
+      "reason": "title_description_captions_and_two_live_frames_agree",
+      "review_method": "two_distinct_frames_from_live_youtube_shorts_player",
+      "frame_sha256": [
+        "7e1c4502f873c06ec499216c3d1d78f335bcf3b1d3d0cf11aa2b4a5678749882",
+        "3d9d2a9aa888c9c7a35d143be5ceee3958286df058f5c4aaa1de53b7b903bb49"
+      ]
+    },
+    {
+      "youtube_video_id": "0dMUhJxIi9k",
+      "live_title": "How To Ride A Motorcycle Through Downhill Corners",
+      "decision": "keep",
+      "source_category": "road_cornering",
+      "final_category": "road_cornering",
+      "reason": "title_description_captions_and_two_live_frames_agree",
+      "review_method": "two_distinct_frames_from_live_youtube_shorts_player",
+      "frame_sha256": [
+        "172e751de48e52c3e5c2bb9dab0a65bf0bf5dd4d98d4a5be5e3d36c7a17be05f",
+        "d3245177d2d843045238553d39fb501e17d917eb2f42cbcab1bac333bc7a4269"
+      ]
+    },
+    {
+      "youtube_video_id": "0tdqZrzb3Ac",
+      "live_title": "What is the proper head position in a corner?",
+      "decision": "keep",
+      "source_category": "road_cornering",
+      "final_category": "road_cornering",
+      "reason": "title_description_captions_and_two_live_frames_agree",
+      "review_method": "two_distinct_frames_from_live_youtube_shorts_player",
+      "frame_sha256": [
+        "317dbc1cf805fb61ec4df8515a6aada2620359d45802c943671203216496b03b",
+        "16057fcee81fb4d2187abafa958341d92e011aaeb7d30967676466c54cd8675a"
+      ]
+    },
+    {
+      "youtube_video_id": "2C-FoWX0M_Q",
+      "live_title": "Mastering Corners: The Limit Point Riding Secret!",
+      "decision": "keep",
+      "source_category": "road_cornering",
+      "final_category": "road_cornering",
+      "reason": "title_description_captions_and_two_live_frames_agree",
+      "review_method": "two_distinct_frames_from_live_youtube_shorts_player",
+      "frame_sha256": [
+        "a7e9e0c54bcc526cf5ded62cca1bb0287eeaf2dda1b19b76a9cdb2ba4bb806da",
+        "7f1808ae8782d0eae6ce6dfc4bf00ac1acb30d872b1fdf138a01fce4eae5d57c"
+      ]
+    },
+    {
+      "youtube_video_id": "7j610Lc83j4",
+      "live_title": "What Gear Should I Be In As I Enter A Corner?",
+      "decision": "keep",
+      "source_category": "road_cornering",
+      "final_category": "road_cornering",
+      "reason": "title_description_captions_and_two_live_frames_agree",
+      "review_method": "two_distinct_frames_from_live_youtube_shorts_player",
+      "frame_sha256": [
+        "8edd90796cc8fa480a3629cd9c7393f6a8a2ada1acdba0e830e9bd6d7210c752",
+        "4627b6e26c3270a8185202f0aa844af1b3517466ebcc3758f513353e6246be2b"
+      ]
+    },
+    {
+      "youtube_video_id": "87ONB6Rwsy8",
+      "live_title": "You Should Brake Slowly While Staying on the Throttle to go Through a Corner",
+      "decision": "keep",
+      "source_category": "road_cornering",
+      "final_category": "road_cornering",
+      "reason": "title_description_captions_and_two_live_frames_agree",
+      "review_method": "two_distinct_frames_from_live_youtube_shorts_player",
+      "frame_sha256": [
+        "e4993b32768d88734c6a34b828773ac2ff49c39a7651bb9df6ea6ffc8c688762",
+        "c4356bb2a87fe4199fabe2e5358169e2ac79ff4efdc160f5cd72e53282e46921"
+      ]
+    },
+    {
+      "youtube_video_id": "8BvxRy4_vKE",
+      "live_title": "Let the Corner Come to You. Racing's Most Underrated Technique",
+      "decision": "keep",
+      "source_category": "road_cornering",
+      "final_category": "road_cornering",
+      "reason": "title_description_captions_and_two_live_frames_agree",
+      "review_method": "two_distinct_frames_from_live_youtube_shorts_player",
+      "frame_sha256": [
+        "b826be460795c0c60c4563c3026f9b391fb076dd72ffcf207827a8c37ed3ae24",
+        "52152c8de338927be0d7283a6d208e65474d4b37064faa4f41cd17b717ad69cb"
+      ]
+    },
+    {
+      "youtube_video_id": "B_kv45skWFE",
+      "live_title": "Do I keep Pushing to Countersteer Through the Entire Corner?",
+      "decision": "keep",
+      "source_category": "road_cornering",
+      "final_category": "road_cornering",
+      "reason": "title_description_captions_and_two_live_frames_agree",
+      "review_method": "two_distinct_frames_from_live_youtube_shorts_player",
+      "frame_sha256": [
+        "8e2a58dcc59120d4bc8b5fddbb2bd0e19563e3ce6139639a2d8e61013b225668",
+        "705de954944e61df9598162e9eb75551034e9372a65a7f95b25980e8f1aabb7d"
+      ]
+    },
+    {
+      "youtube_video_id": "JW3liaXbMTI",
+      "live_title": "Brake for Control, Not a Mythical Apex: Safe Cornering",
+      "decision": "keep",
+      "source_category": "road_cornering",
+      "final_category": "road_cornering",
+      "reason": "title_description_captions_and_two_live_frames_agree",
+      "review_method": "two_distinct_frames_from_live_youtube_shorts_player",
+      "frame_sha256": [
+        "1b0fa53033494edb92f1ef80872d8f915f57e528942bf1e8d83289194d8de926",
+        "dbbbf428f37d4a237dbd37c9301d9e961c8206a7712df58c51beb2eae6e69d98"
+      ]
+    },
+    {
+      "youtube_video_id": "1EXgQKz7KYw",
+      "live_title": "😅 “You can’t ride a BMW GS in the sand—it’s too big!”",
+      "decision": "keep",
+      "source_category": "sand",
+      "final_category": "sand",
+      "reason": "title_description_captions_and_two_live_frames_agree",
+      "review_method": "two_distinct_frames_from_live_youtube_shorts_player",
+      "frame_sha256": [
+        "1c26e6f28b685f5949504e178f0406bc420f646eeca1e0aec36d4d48f9738d57",
+        "6f792c8eef3747b9e855674cfe2e3bbd28c98c0744530ca5f4469a0b0187dca5"
+      ]
+    },
+    {
+      "youtube_video_id": "8I7j6P-NFuA",
+      "live_title": "🏜️ You don’t need to ride fast in sand.",
+      "decision": "keep",
+      "source_category": "sand",
+      "final_category": "sand",
+      "reason": "title_description_captions_and_two_live_frames_agree",
+      "review_method": "two_distinct_frames_from_live_youtube_shorts_player",
+      "frame_sha256": [
+        "eac08234f73bbaf6401f72b7ce8829a80bea65ae6b751a21a4ea0a61741e9931",
+        "f88f6c641f8d121f2ae84589d36cffe223c37fec2bb09c13b16d93aba679b012"
+      ]
+    },
+    {
+      "youtube_video_id": "Ech_ZHLkjTo",
+      "live_title": "🏍️💨 Throttle Control in the Sand Dunes",
+      "decision": "keep",
+      "source_category": "sand",
+      "final_category": "sand",
+      "reason": "title_description_captions_and_two_live_frames_agree",
+      "review_method": "two_distinct_frames_from_live_youtube_shorts_player",
+      "frame_sha256": [
+        "703c1e7a93085e89283c7891020a1e8ca743f4cafcb88a8152c33e55c77c38a3",
+        "85263170b0965f9dcc3fc50144202f1e6decae4063146860c4b56f1baa5e60b7"
+      ]
+    },
+    {
+      "youtube_video_id": "Knx8VdEL2pM",
+      "live_title": "Struggling with Sand Riding? 🏜️ Here’s the Secret to Mastering It:",
+      "decision": "keep",
+      "source_category": "sand",
+      "final_category": "sand",
+      "reason": "title_description_captions_and_two_live_frames_agree",
+      "review_method": "two_distinct_frames_from_live_youtube_shorts_player",
+      "frame_sha256": [
+        "9c253ff688c4560433771bad419d48d2f2f4dffabb9e4df61e773f796cbb9ff5",
+        "fc0b887e025865e18ba73632e878187e53e9f528d4e3a6c523f9f780579d1cc8"
+      ]
+    },
+    {
+      "youtube_video_id": "4YPidt3u4Lo",
+      "live_title": "Can You Off-Road with Street Tires?",
+      "decision": "keep",
+      "source_category": "tires_setup",
+      "final_category": "tires_setup",
+      "reason": "title_description_captions_and_two_live_frames_agree",
+      "review_method": "two_distinct_frames_from_live_youtube_shorts_player",
+      "frame_sha256": [
+        "ccc2af0857c0d9cb54f718b9b20f774fc78d34995f6107ea676e701913a29bf5",
+        "dd4ccd52c935e6bdb3e3854ce18e6c697bc0997045c53c86a4f6eeeb2e4b03c2"
+      ]
+    },
+    {
+      "youtube_video_id": "4lW6EILWZIQ",
+      "live_title": "🛞 Are your tires up to the task?",
+      "decision": "keep",
+      "source_category": "tires_setup",
+      "final_category": "tires_setup",
+      "reason": "title_description_captions_and_two_live_frames_agree",
+      "review_method": "two_distinct_frames_from_live_youtube_shorts_player",
+      "frame_sha256": [
+        "d258932a2e636e71317e9d98ff03c9595f2238b521bfb4600d904a89fe0f09b6",
+        "1b402ed489e12c8a3a4743266a714aa02afdf87bac9df5295a16113b0f999ba5"
+      ]
+    },
+    {
+      "youtube_video_id": "F4Ps-zdiFmM",
+      "live_title": "Unleash Your Tires' Potential: Get Stickier Traction with Heidenau",
+      "decision": "remove",
+      "source_category": "tires_setup",
+      "final_category": null,
+      "reason": "product_hype_not_neutral_instruction",
+      "review_method": "two_distinct_frames_from_live_youtube_shorts_player",
+      "frame_sha256": [
+        "81e7ffa4f91d1d97ab5213e155b27c0c8fabf6cb43a5ecc77122bf6f9bfa3425",
+        "75a3eb2c3eecde1d7a28b24b649865ab8b554e26d7129373b66dfc24ff180375"
+      ]
+    },
+    {
+      "youtube_video_id": "IipheLs6-f0",
+      "live_title": "The Ultimate Tire Showdown: Finding the Perfect Fit for Any Terrain",
+      "decision": "keep",
+      "source_category": "tires_setup",
+      "final_category": "tires_setup",
+      "reason": "title_description_captions_and_two_live_frames_agree",
+      "review_method": "two_distinct_frames_from_live_youtube_shorts_player",
+      "frame_sha256": [
+        "32697280bc95f5eb142883fd76d1c1665c03a2693fdce15d80c918f18df08e01",
+        "952ceb6154ae1bd08f1a00ee9262f08102c9ee8eb341da858e2d3cc9f5c8784a"
+      ]
+    },
+    {
+      "youtube_video_id": "NV-PCEEpa_k",
+      "live_title": "🏍️ Choosing the right tires for your adventure motorcycle is crucial!",
+      "decision": "keep",
+      "source_category": "tires_setup",
+      "final_category": "tires_setup",
+      "reason": "title_description_captions_and_two_live_frames_agree",
+      "review_method": "two_distinct_frames_from_live_youtube_shorts_player",
+      "frame_sha256": [
+        "24b00b1fa32bfa1dbaea0dd848a738b3b53e7c5032da95ac5e78e1e275dfa3bd",
+        "ea86cab4b01f35a2ced1b93eabc4a8a9099e09d0dc5a8e7464f031c096c27218"
+      ]
+    },
+    {
+      "youtube_video_id": "NkxNujuedwk",
+      "live_title": "Pirelli Diablo Rosso Corsa IV Tire Review",
+      "decision": "keep",
+      "source_category": "tires_setup",
+      "final_category": "tires_setup",
+      "reason": "title_description_captions_and_two_live_frames_agree",
+      "review_method": "two_distinct_frames_from_live_youtube_shorts_player",
+      "frame_sha256": [
+        "d63c2c87ad0dd7441c4158400903678d278aea9bc830997878f64fef27b094fe",
+        "dca1b9f5c37130934ba2e9c24974345c4e1c48f00d735e2dba6d880e6c223945"
+      ]
+    },
+    {
+      "youtube_video_id": "RB6xDvoEPLY",
+      "live_title": "Unleash Your Adventure with the Ultimate Off-Road Tire!",
+      "decision": "remove",
+      "source_category": "tires_setup",
+      "final_category": null,
+      "reason": "product_hype_not_neutral_instruction",
+      "review_method": "two_distinct_frames_from_live_youtube_shorts_player",
+      "frame_sha256": [
+        "e1774295474126fdb5021888f66ace44ae1c8bf3e3b24f5ae26bbaa44e65390f",
+        "86c34c0f8bcb0cde1a6ee81c164f48ce87fc24557610c5ab13fc85ee29bdb599"
+      ]
+    },
+    {
+      "youtube_video_id": "_JIvXI7P8YM",
+      "live_title": "Unleashing the Tire Performance Secret: Ride, Thrills, and Mileage",
+      "decision": "keep",
+      "source_category": "tires_setup",
+      "final_category": "tires_setup",
+      "reason": "title_description_captions_and_two_live_frames_agree",
+      "review_method": "two_distinct_frames_from_live_youtube_shorts_player",
+      "frame_sha256": [
+        "027cda7d0939b4c556dda019a3a181c69a659c7fcd48adbc2b237ea2ca366fc2",
+        "6f54107bff43525c09e6d0bb48c80cb997bc98ef11f0bac125ec5245a4c97f1f"
+      ]
+    },
+    {
+      "youtube_video_id": "KCq1IuKG8Bc",
+      "live_title": "The Best Trick for Full Lock U-Turns",
+      "decision": "keep",
+      "source_category": "u_turns_low_speed",
+      "final_category": "u_turns_low_speed",
+      "reason": "title_description_captions_and_two_live_frames_agree",
+      "review_method": "two_distinct_frames_from_live_youtube_shorts_player",
+      "frame_sha256": [
+        "f9fdda1501550e417ce303f3aea1185d5de9c88ed0e00ee1362f35a90e727076",
+        "4a42a3decc95cca6f932a12dcd0588b3203301c788929dc68a3b7a62ec4b69bd"
+      ]
+    },
+    {
+      "youtube_video_id": "b6rDEMJJMAs",
+      "live_title": "Nobody Admits Making This U-turn Mistake",
+      "decision": "keep",
+      "source_category": "u_turns_low_speed",
+      "final_category": "u_turns_low_speed",
+      "reason": "title_description_captions_and_two_live_frames_agree",
+      "review_method": "two_distinct_frames_from_live_youtube_shorts_player",
+      "frame_sha256": [
+        "46c2154bc732e1380ebdaa5596413a41d4611607be49d078349c66d93f09da96",
+        "837475b54ce968553c9e33d933c621d7fadca8c4c2d0146d1437205096af5199"
+      ]
+    },
+    {
+      "youtube_video_id": "itjK-nNeSKY",
+      "live_title": "How To U Turn Enduro Bike| Quick And Tight Trail Technique",
+      "decision": "keep",
+      "source_category": "u_turns_low_speed",
+      "final_category": "u_turns_low_speed",
+      "reason": "title_description_captions_and_two_live_frames_agree",
+      "review_method": "two_distinct_frames_from_live_youtube_shorts_player",
+      "frame_sha256": [
+        "adecfc9115f19724ab4e4cd6b03af9f5b198f01ed89a34027d80746fd2880e20",
+        "2b6eb45c0b49413286f983d0015a25e0a9223c248b06f97a31c526cf84981e70"
+      ]
+    },
+    {
+      "youtube_video_id": "uTNx0egqMaU",
+      "live_title": "🔥 Speed meets precision in the Fastest Motorcycle U-Turn Challenge!",
+      "decision": "remove",
+      "source_category": "u_turns_low_speed",
+      "final_category": null,
+      "reason": "entertainment_challenge_not_instruction",
+      "review_method": "two_distinct_frames_from_live_youtube_shorts_player",
+      "frame_sha256": [
+        "fcec8f1044bd51cb128d31a39c9ce10ef84350f3efde56d4753e8c8f77b557c3",
+        "3914420c165008c437c166175c682fd5bfa5b04f07609f3c54787a655ee253c2"
+      ]
+    },
+    {
+      "youtube_video_id": "uWuwhIkjcJQ",
+      "live_title": "The Weirdest Trick You Never Learned for Mastering U-Turns",
+      "decision": "keep",
+      "source_category": "u_turns_low_speed",
+      "final_category": "u_turns_low_speed",
+      "reason": "title_description_captions_and_two_live_frames_agree",
+      "review_method": "two_distinct_frames_from_live_youtube_shorts_player",
+      "frame_sha256": [
+        "b43c9797278bcb05baa32bb09679dd98ef5bf964b9297a16f473f41824fe8028",
+        "b3531e53b52e7bf3cae43970423db262fcd2c0a2718d0c09c3b3429e861b8e93"
+      ]
+    },
+    {
+      "youtube_video_id": "0PmdBPnp2EI",
+      "live_title": "Weightless rider drill",
+      "decision": "keep",
+      "source_category": "drills",
+      "final_category": "drills",
+      "reason": "title_description_captions_and_two_live_frames_agree",
+      "review_method": "two_distinct_frames_from_live_youtube_shorts_player",
+      "frame_sha256": [
+        "4e17999e09bfee68d7b719b8c3ec97763c781636336a3ad4bcd68e47ec2b9f64",
+        "771952052a90016589b3f0e34055db6acb2a3b486a0e9ff75c240715d387a2e4"
+      ]
+    },
+    {
+      "youtube_video_id": "MxSX5L-Y-nM",
+      "live_title": "BE ONE WITH THE BIKE | ADV Training Tips",
+      "decision": "keep",
+      "source_category": "drills",
+      "final_category": "drills",
+      "reason": "title_description_captions_and_two_live_frames_agree",
+      "review_method": "two_distinct_frames_from_live_youtube_shorts_player",
+      "frame_sha256": [
+        "2ae13ea8ca85b9a3ce80e258e509e65cf09ca10e5c1ce4aeead738f07b51b6e1",
+        "6b76f3ef936e7ae8b79046ea46bc88c00d29908aa26fb5cb2179fa8a3e0f6ecd"
+      ]
+    },
+    {
+      "youtube_video_id": "MzPw29eu780",
+      "live_title": "🎯 Think slalom drills are just warm-ups?",
+      "decision": "keep",
+      "source_category": "drills",
+      "final_category": "drills",
+      "reason": "title_description_captions_and_two_live_frames_agree",
+      "review_method": "two_distinct_frames_from_live_youtube_shorts_player",
+      "frame_sha256": [
+        "709a21ce398840851c47221ca5e6ea6ef550a5b7552328e4a1ef1f6c973681b2",
+        "d7569586d3a012453878a4759f8f2810dcc899dfc0c10fc7c252937df1fb8e05"
+      ]
+    },
+    {
+      "youtube_video_id": "yqpn_0TrGKU",
+      "live_title": "The single BEST drill out there!",
+      "decision": "keep",
+      "source_category": "drills",
+      "final_category": "drills",
+      "reason": "title_description_captions_and_two_live_frames_agree",
+      "review_method": "two_distinct_frames_from_live_youtube_shorts_player",
+      "frame_sha256": [
+        "974884a9bebf7d9a714ed838aa68cbe6c0ea8fbb8c3bf2010fe35121670fc761",
+        "dd11062d63b1638f36a3f27edcce34c28a44ff9c0e26835d1182204a0bc21a6c"
+      ]
+    },
+    {
+      "youtube_video_id": "zHOReuzrxu4",
+      "live_title": "The Hidden Purpose of Police Motorcycle Drills",
+      "decision": "keep",
+      "source_category": "drills",
+      "final_category": "drills",
+      "reason": "title_description_captions_and_two_live_frames_agree",
+      "review_method": "two_distinct_frames_from_live_youtube_shorts_player",
+      "frame_sha256": [
+        "d1cfd34977be39fb09eda95be4f2312c7333836005052cf18d559daaf8685436",
+        "a7ee7eab2c2f5a31abaa1e21ecbc92bea70a7ded596e19744fab98c4b61e62f5"
+      ]
+    },
+    {
+      "youtube_video_id": "67xyqjrQ-hU",
+      "live_title": "Motorcycle Traction Control explained",
+      "decision": "keep",
+      "source_category": "electronic_aids",
+      "final_category": "electronic_aids",
+      "reason": "title_description_captions_and_two_live_frames_agree",
+      "review_method": "two_distinct_frames_from_live_youtube_shorts_player",
+      "frame_sha256": [
+        "5422882d1e1229004bcbc248bbb61882e6574ff2b57118a45eff3931cdb51cc9",
+        "5d3d267ec64af4ebde12371b24767a71393bdcb3fd17771fde12d9ca265d4275"
+      ]
+    },
+    {
+      "youtube_video_id": "BMnJUlhPMuA",
+      "live_title": "TRACTION CONTROL Part 1",
+      "decision": "keep",
+      "source_category": "electronic_aids",
+      "final_category": "electronic_aids",
+      "reason": "title_description_captions_and_two_live_frames_agree",
+      "review_method": "two_distinct_frames_from_live_youtube_shorts_player",
+      "frame_sha256": [
+        "15eb1f9d69a9331c89952795848c886f0a9ef07240ffdb41835357cf7210f4e7",
+        "8eb27d0c1e46c2ea59027dcc68f932c0884f09d96f4058688efe63245169da7a"
+      ]
+    },
+    {
+      "youtube_video_id": "Fev-bGX55qI",
+      "live_title": "TRACTION CONTROL Part 2",
+      "decision": "keep",
+      "source_category": "electronic_aids",
+      "final_category": "electronic_aids",
+      "reason": "title_description_captions_and_two_live_frames_agree",
+      "review_method": "two_distinct_frames_from_live_youtube_shorts_player",
+      "frame_sha256": [
+        "9895a0b641290dd472f16df65dd91a7e7aef8621fda9a4ac576ce4bf82e4d4e8",
+        "e29673a7160b43a6a39a1758509b758e6ce05e06c63e26069927e293be1b1ca0"
+      ]
+    },
+    {
+      "youtube_video_id": "IytdapnlMug",
+      "live_title": "TRACTION CONTROL Part 3",
+      "decision": "keep",
+      "source_category": "electronic_aids",
+      "final_category": "electronic_aids",
+      "reason": "title_description_captions_and_two_live_frames_agree",
+      "review_method": "two_distinct_frames_from_live_youtube_shorts_player",
+      "frame_sha256": [
+        "2ccd5bec023ff6deae0cea16cc206f1f09b7968fc3e45c1f8ab6fd58e2250a4d",
+        "721aea54868110e53a1d3eff0bb58ab117f3ddd7366b8067a2e1c73efb1d9d33"
+      ]
+    },
+    {
+      "youtube_video_id": "zpIVLoqWJpM",
+      "live_title": "ABS & Traction control on ADV Bikes",
+      "decision": "remove",
+      "source_category": "electronic_aids",
+      "final_category": null,
+      "reason": "commercial_call_to_shop",
+      "review_method": "two_distinct_frames_from_live_youtube_shorts_player",
+      "frame_sha256": [
+        "74dc5512686912ae505733046b70a6418ae52936290753a1924b469805cf3884",
+        "73abea2b8db0b7be9d35afdcf3b64aa0fcafa0fd9d6337a99bbd67d3bfa83805"
+      ]
+    },
+    {
+      "youtube_video_id": "wneqJIJBOno",
+      "live_title": "🏍️ Motorcycle handlebar risers impact on the bike",
+      "decision": "keep",
+      "source_category": "ergonomics",
+      "final_category": "ergonomics",
+      "reason": "title_description_captions_and_two_live_frames_agree",
+      "review_method": "two_distinct_frames_from_live_youtube_shorts_player",
+      "frame_sha256": [
+        "1fd97807513d7fab6a22c6e086273a8ba96dd00996680539b7d745f816320b2a",
+        "a221e7083453a244d4de42e3de9a05aee3f3c1902660991e1b65af5116778a42"
+      ]
+    },
+    {
+      "youtube_video_id": "8KpYmu-sfjc",
+      "live_title": "TIGHT UPHILL TURNS",
+      "decision": "keep",
+      "source_category": "hills",
+      "final_category": "hills",
+      "reason": "title_description_captions_and_two_live_frames_agree",
+      "review_method": "two_distinct_frames_from_live_youtube_shorts_player",
+      "frame_sha256": [
+        "fd1a674a5488e3cdb3aea206ac89c74174427d8abad547982839dc2118f73dc8",
+        "5b486f99f6ed9d89a6662395a60479b169be7f059381fe31e9cc3e8c1763774b"
+      ]
+    },
+    {
+      "youtube_video_id": "wpdZ_4YST74",
+      "live_title": "Secrets to an Engine that Lasts: Maintenance Tips for Peak Performance FLUIDS",
+      "decision": "keep",
+      "source_category": "motorcycle_maintenance",
+      "final_category": "motorcycle_maintenance",
+      "reason": "title_description_captions_and_two_live_frames_agree",
+      "review_method": "two_distinct_frames_from_live_youtube_shorts_player",
+      "frame_sha256": [
+        "dca61db11e597018ef0d7f05b514dedf4e9dff32c428839129ce672ad2690c1b",
+        "aba435bb991b05c75e025ee85cb78e8e68c93d3ef9640a763b815ceed7463e59"
+      ]
+    },
+    {
+      "youtube_video_id": "zAvDwvivtTA",
+      "live_title": "When was the last time you changed your brake fluid?",
+      "decision": "keep",
+      "source_category": "motorcycle_maintenance",
+      "final_category": "motorcycle_maintenance",
+      "reason": "title_description_captions_and_two_live_frames_agree",
+      "review_method": "two_distinct_frames_from_live_youtube_shorts_player",
+      "frame_sha256": [
+        "b826d076f618a885d3625ff7f888d42bb36c87635440e1063455e5a6448bd683",
+        "54104d4ffb4dec5b4f3c3e5532667544eb0d65ea6da7cac5512063cf2e60905d"
+      ]
+    },
+    {
+      "youtube_video_id": "HT8yKe9UYsU",
+      "live_title": "Off-Road Standing Posture for ADV Riders",
+      "decision": "keep",
+      "source_category": "offroad_basics",
+      "final_category": "offroad_basics",
+      "reason": "title_description_captions_and_two_live_frames_agree",
+      "review_method": "two_distinct_frames_from_live_youtube_shorts_player",
+      "frame_sha256": [
+        "c1fe2dc7c62be03f5a7d84195797404fa7739293904878a15f73b7a689257d56",
+        "5d65a72307b67f1eab471c91a4c3fafbfbc0773be69b58b88325f87d161a4350"
+      ]
+    },
+    {
+      "youtube_video_id": "ZEOQh34GpIc",
+      "live_title": "Tusk Traverse Pannier Bags Overview: Awesome Entry-Level Dual Sport Luggage |Dual Sport |",
+      "decision": "remove",
+      "source_category": "packing_luggage",
+      "final_category": null,
+      "reason": "affiliate_product_overview",
+      "review_method": "two_distinct_frames_from_live_youtube_shorts_player",
+      "frame_sha256": [
+        "fa3b834ae731d464537db779ab277cb4194e94d51975a8d51a576bc3b9ae3333",
+        "26146d0d7def8e7949f7363cf02e3ac1f3234e652fcb5015a9578476bd42e7d3"
+      ]
+    },
+    {
+      "youtube_video_id": "vBQ8ltoMJw4",
+      "live_title": "Protecting Your Valuables While Traveling Choosing the Right Luggage",
+      "decision": "keep",
+      "source_category": "packing_luggage",
+      "final_category": "packing_luggage",
+      "reason": "title_description_captions_and_two_live_frames_agree",
+      "review_method": "two_distinct_frames_from_live_youtube_shorts_player",
+      "frame_sha256": [
+        "f796b3d78193adad9be646fcd6692e6cfcc7ea440ef9dcc98c7119b6320e7105",
+        "1fe6b3898abf8c121d3c4ae70921d6acf5a23233e7717c46c48f336579b6686e"
+      ]
+    },
+    {
+      "youtube_video_id": "-A5Xpjo1NBs",
+      "live_title": "What Are Modular Motorcycle Helmets?",
+      "decision": "keep",
+      "source_category": "protective_gear",
+      "final_category": "protective_gear",
+      "reason": "title_description_captions_and_two_live_frames_agree",
+      "review_method": "two_distinct_frames_from_live_youtube_shorts_player",
+      "frame_sha256": [
+        "f570d28aebc4472434116f39ae45968df272aa036e20ac697a526e0ee20bc8ec",
+        "3f14c945400f1a1fa69509c398c8a542c0f716158d509a9f4bc851143adcb61b"
+      ]
+    },
+    {
+      "youtube_video_id": "-Mr3_hpJgEM",
+      "live_title": "Motorcycle Life Hacks: How to Make Any Pair of Motorcycle Gloves Waterproof |Dual Sport |",
+      "decision": "keep",
+      "source_category": "protective_gear",
+      "final_category": "protective_gear",
+      "reason": "title_description_captions_and_two_live_frames_agree",
+      "review_method": "two_distinct_frames_from_live_youtube_shorts_player",
+      "frame_sha256": [
+        "74db6cf0df9f8be95368601bfe72a412a561158054ba0e36b2d0dd1a7c3a1ac4",
+        "65110851285fa920ba759e0ec540ad6ed0de9f07b72f1111ea16815b1669c294"
+      ]
+    },
+    {
+      "youtube_video_id": "0Lg9VTF-xjc",
+      "live_title": "The Best Value in Winter Motorcycle Gloves? Klim PowerXross Gloves Overview |Dual Sport |",
+      "decision": "remove",
+      "source_category": "protective_gear",
+      "final_category": null,
+      "reason": "product_specific_glove_overview",
+      "review_method": "two_distinct_frames_from_live_youtube_shorts_player",
+      "frame_sha256": [
+        "a58c4cbec6427c40846d5fddb8e49edc610e6e3539142c0069c257f74f83b53c",
+        "554825f8b8e9e82f8a268242ffe88d93bf89da3daf8f80fe9a95e5e142e2a349"
+      ]
+    },
+    {
+      "youtube_video_id": "26UoIAeVv-0",
+      "live_title": "THIS IS WHY YOU NEED A HELMET!",
+      "decision": "keep",
+      "source_category": "protective_gear",
+      "final_category": "protective_gear",
+      "reason": "title_description_captions_and_two_live_frames_agree",
+      "review_method": "two_distinct_frames_from_live_youtube_shorts_player",
+      "frame_sha256": [
+        "45fd7ecdcaa96963f3d21b8bf982958a5ce643ce7836abe3614414e6cc7312e7",
+        "02879757a4a4fdeefd22eb72f9c4e2e206aa9adbc189ac8b66abce966625d5a1"
+      ]
+    },
+    {
+      "youtube_video_id": "L9Jiajgx_KU",
+      "live_title": "Ear and Eye Protection For Motorcycle Helmets",
+      "decision": "keep",
+      "source_category": "protective_gear",
+      "final_category": "protective_gear",
+      "reason": "title_description_captions_and_two_live_frames_agree",
+      "review_method": "two_distinct_frames_from_live_youtube_shorts_player",
+      "frame_sha256": [
+        "bc67e9502b49c407c1de9283b15044724c885e98e15c3b5e2ec3bba7330c9f8e",
+        "593229dbe2310127b1afeef306da7adce0ae3cf205fca0712ca2742f40838295"
+      ]
+    },
+    {
+      "youtube_video_id": "RMhhKHnY3VQ",
+      "live_title": "Do You Take Off a Helmet After a Crash?",
+      "decision": "keep",
+      "source_category": "protective_gear",
+      "final_category": "protective_gear",
+      "reason": "title_description_captions_and_two_live_frames_agree",
+      "review_method": "two_distinct_frames_from_live_youtube_shorts_player",
+      "frame_sha256": [
+        "a04915d3098440c609262389200e5ddc342ce17740eb326095b53eb64437d5dc",
+        "53adf36bc78f0361d24588cb6dbf61d8144748b4c4090f894701131daa39468f"
+      ]
+    },
+    {
+      "youtube_video_id": "My2a3WuwCLg",
+      "live_title": "Danger on the Road Avoiding Risks and Poor Following Distance",
+      "decision": "keep",
+      "source_category": "road_strategy",
+      "final_category": "road_strategy",
+      "reason": "title_description_captions_and_two_live_frames_agree",
+      "review_method": "two_distinct_frames_from_live_youtube_shorts_player",
+      "frame_sha256": [
+        "2ee29a976083f0c5001b916c3f6f1a27e79cf39829b07b45db62ad9cc139deb3",
+        "40be93aeac4e9b8db9d08f144824238b8369e95008bde7d93d0c2bb04b7eda15"
+      ]
+    },
+    {
+      "youtube_video_id": "TSiA54VHd34",
+      "live_title": "Unlocking Road Safety Secrets for Motorcyclists Mastering the Art of Following Distance",
+      "decision": "keep",
+      "source_category": "road_strategy",
+      "final_category": "road_strategy",
+      "reason": "title_description_captions_and_two_live_frames_agree",
+      "review_method": "two_distinct_frames_from_live_youtube_shorts_player",
+      "frame_sha256": [
+        "fe2f7dc8d6d6f30773a9259e8b2b65dab5e5519ecfe882bc3ee39236cbce10f3",
+        "7a8a20b8413179174145392ade77880be714a87bcec2df8d9f73d8102210d35d"
+      ]
+    },
+    {
+      "youtube_video_id": "grG_nET6rlI",
+      "live_title": "Riding in the Correct Lane Position: Tips and Tricks for Safe Motorcycle Riding",
+      "decision": "keep",
+      "source_category": "road_strategy",
+      "final_category": "road_strategy",
+      "reason": "title_description_captions_and_two_live_frames_agree",
+      "review_method": "two_distinct_frames_from_live_youtube_shorts_player",
+      "frame_sha256": [
+        "bc1ba5aa8433f78b0007139e82386ccd5f1ea36a88cbd9e30bb3e41dfdd4d73f",
+        "833fe7562044642962053d7b6ba8c9f26d8f741aa24bfb0b7e8c410b42497fb7"
+      ]
+    },
+    {
+      "youtube_video_id": "hUo4gcFssF0",
+      "live_title": "Optimal Lane Position for Motorcyclists: Prioritizing Visibility & Safety",
+      "decision": "keep",
+      "source_category": "road_strategy",
+      "final_category": "road_strategy",
+      "reason": "title_description_captions_and_two_live_frames_agree",
+      "review_method": "two_distinct_frames_from_live_youtube_shorts_player",
+      "frame_sha256": [
+        "5564b08f4b6e1917b8a8fbae363b5a1fec86d8a44baf515920f9c50cff8a7f7e",
+        "32bdf21b5a4cd29a6a57d381ef0ab9d93bdb50d5c338a6eac3cc7063eb42965b"
+      ]
+    },
+    {
+      "youtube_video_id": "9IF0rx4s_NQ",
+      "live_title": "Dakar Rally Navigation | What Is In The Road Book",
+      "decision": "keep",
+      "source_category": "route_navigation",
+      "final_category": "route_navigation",
+      "reason": "title_description_captions_and_two_live_frames_agree",
+      "review_method": "two_distinct_frames_from_live_youtube_shorts_player",
+      "frame_sha256": [
+        "866fbfd8c3371570acb9c61724e842d430f059ba37d350702fbe4618ca6b5c09",
+        "48470bf3280067dfeb797cf069b915ffe861cf3304bc2931d72d9bacb6cd6c44"
+      ]
+    },
+    {
+      "youtube_video_id": "09mZmTw7S2A",
+      "live_title": "🏜️ Crossing Small Sand Patches Like a Pro on Your Motorcycle",
+      "decision": "keep",
+      "source_category": "sand",
+      "final_category": "sand",
+      "reason": "title_description_captions_and_two_live_frames_agree",
+      "review_method": "two_distinct_frames_from_live_youtube_shorts_player",
+      "frame_sha256": [
+        "d287998555583d55c5f1c88802ce6868f385eb577fdf7ea7b7c75a25fb5a4884",
+        "3312fa77f063bfe5a46fa10c69c625cee465eddf1b01e0485cfbf295b4ff3e79"
+      ]
+    },
+    {
+      "youtube_video_id": "A4wGh3wOCBs",
+      "live_title": "Sand Corner Body Position | Dirt Bike Off Road Riding Tip",
+      "decision": "keep",
+      "source_category": "sand",
+      "final_category": "sand",
+      "reason": "title_description_captions_and_two_live_frames_agree",
+      "review_method": "two_distinct_frames_from_live_youtube_shorts_player",
+      "frame_sha256": [
+        "57f13557f60a90d4f2c1704ffa1c4b8d703710462a7c62c9f45779bd21c80d3f",
+        "4301fdbd0a6947b40d82fd844fb3f7541f60cc6c0cbee11a6fe0b4c277658ff3"
+      ]
+    },
+    {
+      "youtube_video_id": "L1CnCC-2U0E",
+      "live_title": "Watch Out For Sand on the Road!",
+      "decision": "keep",
+      "source_category": "sand",
+      "final_category": "road_strategy",
+      "reason": "title_description_captions_and_two_live_frames_agree",
+      "review_method": "two_distinct_frames_from_live_youtube_shorts_player",
+      "frame_sha256": [
+        "78a1edbc5100aeebb54da8367073f30377d6ba49077504e7f187b9a6907aa01a",
+        "d5a866857c36a70575a3632df490a0b8bc8b11553a3eb77bd11acecec31baef7"
+      ]
+    },
+    {
+      "youtube_video_id": "LwXXuSdkuuY",
+      "live_title": "Crossing over sand on the road with your ADV motorcycle",
+      "decision": "keep",
+      "source_category": "sand",
+      "final_category": "sand",
+      "reason": "title_description_captions_and_two_live_frames_agree",
+      "review_method": "two_distinct_frames_from_live_youtube_shorts_player",
+      "frame_sha256": [
+        "4cbf86033b2b96fada34fa3211f959a8a68bc3f3920b5ba5e895281d85b61b9c",
+        "730abc5364b5e352505c3ed6f832c818671e452b0f5c98ac03a8813649e2e1b9"
+      ]
+    },
+    {
+      "youtube_video_id": "H2nAVhI-swM",
+      "live_title": "New 2021 Honda CRF250L! More Low-End Power and Increased Suspension Travel! |Dual Sport |",
+      "decision": "remove",
+      "source_category": "suspension_setup",
+      "final_category": null,
+      "reason": "model_product_news_not_suspension_instruction",
+      "review_method": "two_distinct_frames_from_live_youtube_shorts_player",
+      "frame_sha256": [
+        "335a4d2dc67c99e2f0d467b88ffad1958c11ce1098de983b3e35518354a4682e",
+        "b9f4da2f5ba652e8f95fa9896af67611241febe1c525f082644cbb6522ce7f4a"
+      ]
+    },
+    {
+      "youtube_video_id": "U3K9wlWxNo0",
+      "live_title": "Let you legs act as shock absorbers when riding your motorcycle off-road",
+      "decision": "keep",
+      "source_category": "suspension_setup",
+      "final_category": "riding_position",
+      "reason": "title_description_captions_and_two_live_frames_agree",
+      "review_method": "two_distinct_frames_from_live_youtube_shorts_player",
+      "frame_sha256": [
+        "046297d8666b4cceb9c4bb20ffdaf922ff777af5a916c0e5224983a135da35bb",
+        "ca7be81c36cbd09f259db25878b05df0f4ad75fa507bb3d7c5c41556b5981f8a"
+      ]
+    },
+    {
+      "youtube_video_id": "NmT4FOEaIWI",
+      "live_title": "❓ Why full lock when mounting your motorcycle?",
+      "decision": "keep",
+      "source_category": "u_turns_low_speed",
+      "final_category": "u_turns_low_speed",
+      "reason": "title_description_captions_and_two_live_frames_agree",
+      "review_method": "two_distinct_frames_from_live_youtube_shorts_player",
+      "frame_sha256": [
+        "32c3c27ca529c0bc63aa97efd7652f9c36b407a848e2562911b7209a3dc5921b",
+        "ce3aa871072eb0f397233c893dda36edf8c25fbb89ffd3d6fecd22b073f3991a"
+      ]
+    },
+    {
+      "youtube_video_id": "kAU2NqrfmjQ",
+      "live_title": "Mastering U-Turns and Slow Speed Riding_ Essential Techniques for Riders of All Sizes",
+      "decision": "keep",
+      "source_category": "u_turns_low_speed",
+      "final_category": "u_turns_low_speed",
+      "reason": "title_description_captions_and_two_live_frames_agree",
+      "review_method": "two_distinct_frames_from_live_youtube_shorts_player",
+      "frame_sha256": [
+        "712e72240ee18e3006575cd6ca9f4123afdeda4442815de9ce87efabc8700078",
+        "ad5f867d15e123da17be9ca153b38600c0bffa91e3b85986515cb802504a963d"
+      ]
+    },
+    {
+      "youtube_video_id": "kq3-FIZyKsg",
+      "live_title": "3 Tips for U-Turns on Heavy Bikes",
+      "decision": "keep",
+      "source_category": "u_turns_low_speed",
+      "final_category": "u_turns_low_speed",
+      "reason": "title_description_captions_and_two_live_frames_agree",
+      "review_method": "two_distinct_frames_from_live_youtube_shorts_player",
+      "frame_sha256": [
+        "3b3a26ea0b2fdba13ef80a43d5408a65c3e4ab071d0ef8359e2bb3053f0cdaa9",
+        "6010dd771972a4f29c336b5bcd9f0d665f4da7a3240426ebe0ffd7d6fd9880ff"
+      ]
+    },
+    {
+      "youtube_video_id": "EVGxhu5k6Zg",
+      "live_title": "Eliminate Drops and Master Slow Speed Riding - MC Rider Tips",
+      "decision": "keep",
+      "source_category": "balance_slow_control",
+      "final_category": "balance_slow_control",
+      "reason": "title_description_captions_and_two_live_frames_agree",
+      "review_method": "two_distinct_frames_from_live_youtube_shorts_player",
+      "frame_sha256": [
+        "1d309dd2b09063b9eca0a0eab02666f0edc36de60065ad85258e1c89ea4e1cf0",
+        "96805a51c14312669cbccbc39f0edbe289131ca1146300526d0a2e9e208d8d50"
+      ]
+    },
+    {
+      "youtube_video_id": "PGVHO_Ek0Zw",
+      "live_title": "Slow Down in the Corners!",
+      "decision": "keep",
+      "source_category": "drills",
+      "final_category": "road_strategy",
+      "reason": "title_description_captions_and_two_live_frames_agree",
+      "review_method": "two_distinct_frames_from_live_youtube_shorts_player",
+      "frame_sha256": [
+        "54f75cfec5ee4cb8ceb41d2611ffa9876f9dcfe7be025e98d9ffa77ac99b3f96",
+        "3dcf9e033000c35c0a8670608d38157e323129c896c94d4d25f07ea8b1844def"
+      ]
+    },
+    {
+      "youtube_video_id": "HxC0x38UCoA",
+      "live_title": "🛑 Enduro mode? ABS off?",
+      "decision": "keep",
+      "source_category": "electronic_aids",
+      "final_category": "electronic_aids",
+      "reason": "title_description_captions_and_two_live_frames_agree",
+      "review_method": "two_distinct_frames_from_live_youtube_shorts_player",
+      "frame_sha256": [
+        "176dd1d18a60c11077526c05d93cc291e2c1f5f60d0a4801a76aa11aa5a5df2c",
+        "6252b9fc6ebb8935890875a024c3269b3aa42e0ebd5513397d632349ae4bf3fd"
+      ]
+    },
+    {
+      "youtube_video_id": "FtOhm6nM-Ak",
+      "live_title": "Are Your Foot Pegs Holding You Back? 👣",
+      "decision": "keep",
+      "source_category": "ergonomics",
+      "final_category": "ergonomics",
+      "reason": "title_description_captions_and_two_live_frames_agree",
+      "review_method": "two_distinct_frames_from_live_youtube_shorts_player",
+      "frame_sha256": [
+        "c64f81ed3d570d4003427981adcbabed24ca83d2accd7e3cae5dd5d39decf520",
+        "b630bc46a41d1f8c866794b5a285918781b27946d0c793511d5f79edf143f12c"
+      ]
+    },
+    {
+      "youtube_video_id": "WQ9KiULY6QI",
+      "live_title": "Gravel and Road Problems Lead to Crash",
+      "decision": "keep",
+      "source_category": "gravel_dirt",
+      "final_category": "gravel_dirt",
+      "reason": "title_description_captions_and_two_live_frames_agree",
+      "review_method": "two_distinct_frames_from_live_youtube_shorts_player",
+      "frame_sha256": [
+        "91361b8e2f0659587cdc80fe619090053a207ccd7eed33945035da54f9d7ec17",
+        "3280e623df71de350b3961e15307248a99ec50c846bef5257d11a23332d59f7f"
+      ]
+    },
+    {
+      "youtube_video_id": "QKSW9gDVR5c",
+      "live_title": "How To Never Be Invited Back To The Group Ride",
+      "decision": "keep",
+      "source_category": "group_riding",
+      "final_category": "group_riding",
+      "reason": "title_description_captions_and_two_live_frames_agree",
+      "review_method": "two_distinct_frames_from_live_youtube_shorts_player",
+      "frame_sha256": [
+        "1d1084314a009f7179f53f7f1f5186cb7dba28ad0039f85c4c178d1e857d4be6",
+        "56b0d4592eea436f54584dbcec58f99180e3db2415c18e5dbe76cffe211054f5"
+      ]
+    },
+    {
+      "youtube_video_id": "i_QWl-7gEJk",
+      "live_title": "not a group ride I would be in",
+      "decision": "keep",
+      "source_category": "group_riding",
+      "final_category": "group_riding",
+      "reason": "title_description_captions_and_two_live_frames_agree",
+      "review_method": "two_distinct_frames_from_live_youtube_shorts_player",
+      "frame_sha256": [
+        "6f8b94808b06b6cc1def4b3d3fbd75b364aeb7c3817fd2e95d06dbd596aaad5d",
+        "df845133bd3718a8a9dacfb78d985434781d52bd3377f480d8973936ae393c66"
+      ]
+    },
+    {
+      "youtube_video_id": "K0T6W4FZHeY",
+      "live_title": "Are you skilled at lifting a fallen bike?",
+      "decision": "remove",
+      "source_category": "lifting",
+      "final_category": null,
+      "reason": "visuals_do_not_show_claimed_lifting_instruction",
+      "review_method": "two_distinct_frames_from_live_youtube_shorts_player",
+      "frame_sha256": [
+        "8211b74bd3465b895ee057173a88627c3fab8630face702356a0c75183e79df6",
+        "c620a26621546c606155690fd4faf19d15df991efd3b92c6a61131d761704b8a"
+      ]
+    },
+    {
+      "youtube_video_id": "UWMgIk13MT8",
+      "live_title": "Secret Motorcycle Maintenance Hack for Guaranteed Free Services",
+      "decision": "remove",
+      "source_category": "motorcycle_maintenance",
+      "final_category": null,
+      "reason": "title_bait_without_useful_maintenance_procedure",
+      "review_method": "two_distinct_frames_from_live_youtube_shorts_player",
+      "frame_sha256": [
+        "da0d45e10970b4949378e3ac3938bf5a9ac6aba7e3f4c1144fb8b87c72495e84",
+        "0ef6ca58e2b01394ba76801ee76a00189bab640ee347d2bb439f6af8203b7fc3"
+      ]
+    },
+    {
+      "youtube_video_id": "h5w-Cor_fHY",
+      "live_title": "Tell us something most people don't know about brake fluid👇",
+      "decision": "keep",
+      "source_category": "motorcycle_maintenance",
+      "final_category": "motorcycle_maintenance",
+      "reason": "title_description_captions_and_two_live_frames_agree",
+      "review_method": "two_distinct_frames_from_live_youtube_shorts_player",
+      "frame_sha256": [
+        "b1072d5d1012113dbdb84bcefaaccb56b030d046833215e659064605322e8983",
+        "5d5e78d4d21c474745295ea734c62044fdd89025c27825241eae2e4914050c86"
+      ]
+    },
+    {
+      "youtube_video_id": "y76Taj9RDMc",
+      "live_title": "How To Do A Pivot Turn",
+      "decision": "keep",
+      "source_category": "obstacles",
+      "final_category": "obstacles",
+      "reason": "title_description_captions_and_two_live_frames_agree",
+      "review_method": "two_distinct_frames_from_live_youtube_shorts_player",
+      "frame_sha256": [
+        "109f8d8c7b5f6cbf68f3120ecbf3835f9ff827318dd50c4182877ac881f09244",
+        "396771e083101c8ce908e1f007cb3c69cdbda759ccbab287c03d1b51b5f000ed"
+      ]
+    },
+    {
+      "youtube_video_id": "hk18FsDo0gk",
+      "live_title": "The Biggest Risk in Adventure Riding...",
+      "decision": "remove",
+      "source_category": "offroad_basics",
+      "final_category": null,
+      "reason": "topic_too_vague_for_reliable_classification",
+      "review_method": "two_distinct_frames_from_live_youtube_shorts_player",
+      "frame_sha256": [
+        "341f8536f9f475720bc32adec2907944239df7d0bc927e370a2c406a7926d5bd",
+        "ec59c911e195caecb8299f62235da3775f69fa335087e3048cfb6aa85dc2471d"
+      ]
+    },
+    {
+      "youtube_video_id": "nHZzEdsByz0",
+      "live_title": "Turn Your Passion for Adventure Riding into a Job",
+      "decision": "remove",
+      "source_category": "offroad_basics",
+      "final_category": null,
+      "reason": "commercial_career_pitch_not_riding_instruction",
+      "review_method": "two_distinct_frames_from_live_youtube_shorts_player",
+      "frame_sha256": [
+        "aecf31fb7696f6617f1525d7b6d2cfc73f5d5e636fc320cdad0bbeb475320d2d",
+        "714db2b34f58cc228a7df5487998459a1d7ad667b2cd3fb2b0eb27e5137d3158"
+      ]
+    },
+    {
+      "youtube_video_id": "uAjub2-IMf4",
+      "live_title": "🚨 Avoid This Dangerous Adventure Riding Mistake!",
+      "decision": "keep",
+      "source_category": "offroad_basics",
+      "final_category": "offroad_basics",
+      "reason": "title_description_captions_and_two_live_frames_agree",
+      "review_method": "two_distinct_frames_from_live_youtube_shorts_player",
+      "frame_sha256": [
+        "afca90eb3a6044da401024b6bfc1379c6c2537b892f604575563b9be8160f664",
+        "3611619a8d264954c809574161a879a57e0a9755c66f0aa8fd6da974bc0ac6e0"
+      ]
+    },
+    {
+      "youtube_video_id": "-BvZEljF0Y0",
+      "live_title": "Tusk Pilot Soft Panniers Overview: Budget-Friendly Motorcycle Soft Luggage |Dual Sport |",
+      "decision": "remove",
+      "source_category": "packing_luggage",
+      "final_category": null,
+      "reason": "affiliate_product_overview",
+      "review_method": "two_distinct_frames_from_live_youtube_shorts_player",
+      "frame_sha256": [
+        "26d1e887296d48e4b6414f292ccbf0bb3bd2a6784235dfddb96467da73fd8bd1",
+        "84df26fbbce5516f9b2fb5a62a7d03f11ca1dcd2b43e4fa599aefbac80c20b70"
+      ]
+    },
+    {
+      "youtube_video_id": "Lznug__PybY",
+      "live_title": "🛵 Packing light for your motorcycle trip? Check out this classic video from 13 years ago! 🌟",
+      "decision": "keep",
+      "source_category": "packing_luggage",
+      "final_category": "packing_luggage",
+      "reason": "title_description_captions_and_two_live_frames_agree",
+      "review_method": "two_distinct_frames_from_live_youtube_shorts_player",
+      "frame_sha256": [
+        "0e647f9a537238531d4f0eddc5dcad6a32f1d367f46b73f0892e983ff865a7cb",
+        "b1affd7b6ff7a7baf24a10ba66cc6a3a89e6123fc350b343e7bead132f8ef2c4"
+      ]
+    },
+    {
+      "youtube_video_id": "7RCTfRRVdSY",
+      "live_title": "Dont Ride in the Blind Spots",
+      "decision": "keep",
+      "source_category": "road_strategy",
+      "final_category": "road_strategy",
+      "reason": "title_description_captions_and_two_live_frames_agree",
+      "review_method": "two_distinct_frames_from_live_youtube_shorts_player",
+      "frame_sha256": [
+        "6dc9c6c2d40f6aba1f5b52463581bc997bd749b9a452f816d863e38671c2a864",
+        "a1361944a8263c98444100838a1aa00e89e10dd892929a12cf997414dfddfccb"
+      ]
+    },
+    {
+      "youtube_video_id": "_emqc79E_dI",
+      "live_title": "Quad Lock Phone Mount Setup on the Kawasaki KLE 500",
+      "decision": "remove",
+      "source_category": "route_navigation",
+      "final_category": null,
+      "reason": "product_specific_phone_mount_install",
+      "review_method": "two_distinct_frames_from_live_youtube_shorts_player",
+      "frame_sha256": [
+        "13333932d44c37032aae00a45fbca03054e8f77a1416c0e922c2f9f82517912a",
+        "d5ca45b463f25ad4362e421b9f7be46dffc64a5dbb32dae3e8f69b969a9cb88f"
+      ]
+    },
+    {
+      "youtube_video_id": "LGiAdeH1qp0",
+      "live_title": "Solo Suspension Sag Tool",
+      "decision": "keep",
+      "source_category": "suspension_setup",
+      "final_category": "suspension_setup",
+      "reason": "title_description_captions_and_two_live_frames_agree",
+      "review_method": "two_distinct_frames_from_live_youtube_shorts_player",
+      "frame_sha256": [
+        "8d157796ac1ab6f4a134b7a2c5acc6abfbdba7e6425d789d5c3c05f3c413734e",
+        "ce5f7149ea8277838d976e94c440eb31b9d924526324efa6636594e433b6187b"
+      ]
+    },
+    {
+      "youtube_video_id": "R1cPEPdtLYc",
+      "live_title": "Worlds Fastest Fork Seal Job ⚠️ Warning : Fork Caps Under Spring Pressure",
+      "decision": "keep",
+      "source_category": "suspension_setup",
+      "final_category": "motorcycle_maintenance",
+      "reason": "title_description_captions_and_two_live_frames_agree",
+      "review_method": "two_distinct_frames_from_live_youtube_shorts_player",
+      "frame_sha256": [
+        "e0ecdc1901f80c9ec698bce575cc9a93442ba029d892c8fe656f09caa6ed48e0",
+        "21df77935f858d7ea43d77618e475dccbddd199535c64ff7d041dba0e7776a12"
+      ]
+    },
+    {
+      "youtube_video_id": "131BxBdIKYg",
+      "live_title": "The Weirdest Trick for Slow Speed Skills on BIG Bikes",
+      "decision": "keep",
+      "source_category": "balance_slow_control",
+      "final_category": "balance_slow_control",
+      "reason": "title_description_captions_and_two_live_frames_agree",
+      "review_method": "two_distinct_frames_from_live_youtube_shorts_player",
+      "frame_sha256": [
+        "8eda05b91cc4d3f0d5d85fd7fa931827571478cc4bdcce0d74ae57ca957e36b7",
+        "ed1c584df314c915800f0cd76ecc321f9860a65e52efcb7567fafff0a850d9a1"
+      ]
+    },
+    {
+      "youtube_video_id": "LaFYZfxG8IQ",
+      "live_title": "Slow Speed ⭕️ Practice",
+      "decision": "keep",
+      "source_category": "balance_slow_control",
+      "final_category": "balance_slow_control",
+      "reason": "title_description_captions_and_two_live_frames_agree",
+      "review_method": "two_distinct_frames_from_live_youtube_shorts_player",
+      "frame_sha256": [
+        "77a1e5b9fa59ba744c15375205f78604500f29048f89a0d772f8b9c4a43796d7",
+        "c627c36f754a8bc433bd7253a24b9a0775c2214e72217d4bb619b9517ee10137"
+      ]
+    },
+    {
+      "youtube_video_id": "D6Im6stLMRM",
+      "live_title": "Mastering the Friction Zone_ Essential Motorcycle Skills for Control and Stability",
+      "decision": "keep",
+      "source_category": "controls_coordination",
+      "final_category": "controls_coordination",
+      "reason": "title_description_captions_and_two_live_frames_agree",
+      "review_method": "two_distinct_frames_from_live_youtube_shorts_player",
+      "frame_sha256": [
+        "a83a9d79c34e4ad33bd6f18c11a8c953c212bf9ffa432fd6db9d808b7f81b01e",
+        "6d57abb9777127892d17a9e27ef2bae38918d2480834839c621824ec5676a870"
+      ]
+    },
+    {
+      "youtube_video_id": "kSt28gre498",
+      "live_title": "Friction Zone - How To Ride a Motorcycle - Part 4",
+      "decision": "keep",
+      "source_category": "controls_coordination",
+      "final_category": "controls_coordination",
+      "reason": "title_description_captions_and_two_live_frames_agree",
+      "review_method": "two_distinct_frames_from_live_youtube_shorts_player",
+      "frame_sha256": [
+        "0e6f058b421e0b59337f8122ad15095148d97cfb21f273c1e66aea2094f79247",
+        "3585552838feab5cca5491e000bab540004ec5e9a7c8db14599a9b7410685eb9"
+      ]
+    },
+    {
+      "youtube_video_id": "uLySdp3jekE",
+      "live_title": "DOWNHILL TURN SPEED",
+      "decision": "keep",
+      "source_category": "descents",
+      "final_category": "descents",
+      "reason": "title_description_captions_and_two_live_frames_agree",
+      "review_method": "two_distinct_frames_from_live_youtube_shorts_player",
+      "frame_sha256": [
+        "2b66ef4fca5f12007b6c6fa83cc22b47b240c188ccc1978b0d687f91bc475c40",
+        "902697cea52f53001532f96cdea7f3a825510ab23c769ad325751906e94e7959"
+      ]
+    },
+    {
+      "youtube_video_id": "SNnFRsnxgUo",
+      "live_title": "Master Motorcycle Clutch & Brake Fundamentals for Beginners",
+      "decision": "keep",
+      "source_category": "drills",
+      "final_category": "drills",
+      "reason": "title_description_captions_and_two_live_frames_agree",
+      "review_method": "two_distinct_frames_from_live_youtube_shorts_player",
+      "frame_sha256": [
+        "78f78f59d40441661979b6dbc70afd7cbc0f2b11fb7d7d46bbac4b2789d6fdb3",
+        "115c8f8ee6efdd685708172d6c520694634b6455b02f4aac93813783c5f327dc"
+      ]
+    },
+    {
+      "youtube_video_id": "ZzsOotMp3fg",
+      "live_title": "The Best Standing Drill EVER - Seriously.",
+      "decision": "keep",
+      "source_category": "drills",
+      "final_category": "drills",
+      "reason": "title_description_captions_and_two_live_frames_agree",
+      "review_method": "two_distinct_frames_from_live_youtube_shorts_player",
+      "frame_sha256": [
+        "92a5ec201d0427930328e703440feeccb56e452141aee99eae8bdbea3eab5d77",
+        "c02d587c8abcf3f7248930bca0c2b8db452f93a5dfddffa43b3025558aa78c8e"
+      ]
+    },
+    {
+      "youtube_video_id": "32M-0vvje-g",
+      "live_title": "Honda E-Clutch: The Future of Motorcycle Shifting?",
+      "decision": "remove",
+      "source_category": "ergonomics",
+      "final_category": null,
+      "reason": "motorcycle_product_feature_not_ergonomics_instruction",
+      "review_method": "two_distinct_frames_from_live_youtube_shorts_player",
+      "frame_sha256": [
+        "1c474d66b1d80a112d474a3760b63e613813eab27d1127bf01ad39278bca0493",
+        "0cc5a88b89cc0893133a43f01038d38402fb81772c5d60c346022802549efbf9"
+      ]
+    },
+    {
+      "youtube_video_id": "88_KylhSysU",
+      "live_title": "🔄 Countersteering: it’s more than just pressing on the foot pegs!",
+      "decision": "keep",
+      "source_category": "ergonomics",
+      "final_category": "road_cornering",
+      "reason": "title_description_captions_and_two_live_frames_agree",
+      "review_method": "two_distinct_frames_from_live_youtube_shorts_player",
+      "frame_sha256": [
+        "6dcc887d342e53185c5b8f8d4259b8bfa6178285023ac513d6a7a2368e3e97cf",
+        "d828336b62b51eb339986a24ee30b4b27063a019287cccf3a665004f3fe8361d"
+      ]
+    },
+    {
+      "youtube_video_id": "A-enaN_3gIM",
+      "live_title": "Kove 450 Rally Ergonomics",
+      "decision": "remove",
+      "source_category": "ergonomics",
+      "final_category": null,
+      "reason": "motorcycle_model_promotion_not_neutral_ergonomics",
+      "review_method": "two_distinct_frames_from_live_youtube_shorts_player",
+      "frame_sha256": [
+        "ad2acbb906154510dd01e93646609b4af58fea57d5aca2fce5e7e53294ae6a0e",
+        "19442cf9453d64b54d871ce21cf2e92190eb8efb2331d38ee3f9bb9f27850e4f"
+      ]
+    },
+    {
+      "youtube_video_id": "ujiYMYPDQuA",
+      "live_title": "Over-rotating handlebars on an ADV bike",
+      "decision": "keep",
+      "source_category": "ergonomics",
+      "final_category": "ergonomics",
+      "reason": "title_description_captions_and_two_live_frames_agree",
+      "review_method": "two_distinct_frames_from_live_youtube_shorts_player",
+      "frame_sha256": [
+        "2e6f6d02c8bdc83103bbbc29c77ff2b68ed060931249c7b2c4fab5242a617894",
+        "e32f4017223e2d5fa104dc16ea41e16d2192280d2a7806e013ac0b382112d34f"
+      ]
+    },
+    {
+      "youtube_video_id": "f2jP6R4aZpQ",
+      "live_title": "Don't Ride Thirsty! Hydration Tips for Motorcyclists",
+      "decision": "keep",
+      "source_category": "fatigue_management",
+      "final_category": "fatigue_management",
+      "reason": "title_description_captions_and_two_live_frames_agree",
+      "review_method": "two_distinct_frames_from_live_youtube_shorts_player",
+      "frame_sha256": [
+        "bc4fd4032eb7f8c45219a7fc04aa3aba4530a65b3eb122e4f1548682b92b8e36",
+        "c448df146c00c1583bade620a62486055d22cc44fab9b9d3b663a3c7a4f03fcd"
+      ]
+    },
+    {
+      "youtube_video_id": "ntCmRKUFBCs",
+      "live_title": "motorcycle start uphill",
+      "decision": "keep",
+      "source_category": "hills",
+      "final_category": "hills",
+      "reason": "title_description_captions_and_two_live_frames_agree",
+      "review_method": "two_distinct_frames_from_live_youtube_shorts_player",
+      "frame_sha256": [
+        "0d5f0a092a5bbe90d15fd7fb0042ef53fe265575851c095fd3b5bb88abd37a1b",
+        "a66563a4122a1db959facd7ac9f3f29c4e630931661ce4b3e5e445c84bced3e3"
+      ]
+    },
+    {
+      "youtube_video_id": "IekY5hZaWRA",
+      "live_title": "Motorcycle lifts work on all makes and all models",
+      "decision": "remove",
+      "source_category": "mud_wet",
+      "final_category": null,
+      "reason": "visuals_and_claim_do_not_support_published_category",
+      "review_method": "two_distinct_frames_from_live_youtube_shorts_player",
+      "frame_sha256": [
+        "ccd82da644189cd18b2e3b97621ad26b19ffdd5472b1d5aac199542993a0ef65",
+        "24a4a2111d693f54d4f02aad56835fe7c609176fb217963b856f8e5090340589"
+      ]
+    },
+    {
+      "youtube_video_id": "kt1pctmYIGc",
+      "live_title": "How To Go Over An Obstacle Mid-Turn",
+      "decision": "keep",
+      "source_category": "obstacles",
+      "final_category": "obstacles",
+      "reason": "title_description_captions_and_two_live_frames_agree",
+      "review_method": "two_distinct_frames_from_live_youtube_shorts_player",
+      "frame_sha256": [
+        "bc781b9f3be66e9974316d910cc38ed326b3e7ffb17ac9501cfcedc81b1c2b9f",
+        "8b5a10696d47c1266dc8f33e4bb6439e5b377dee406b78b17eeb5b9b00b9d1ed"
+      ]
+    },
+    {
+      "youtube_video_id": "el7ANATcH1M",
+      "live_title": "🛠️ Classic packing hack alert! Oils and food. And KTM rider tip.",
+      "decision": "keep",
+      "source_category": "packing_luggage",
+      "final_category": "packing_luggage",
+      "reason": "title_description_captions_and_two_live_frames_agree",
+      "review_method": "two_distinct_frames_from_live_youtube_shorts_player",
+      "frame_sha256": [
+        "e94ca4dabd923f84b70f689cc548fccd1f300cb775eed118619e1a87c2c9b34d",
+        "1b8d277045ea46ef131d95abf4492408d8aac2576f9f21555c2e1e4f115c099d"
+      ]
+    },
+    {
+      "youtube_video_id": "1mbUjnc46Ak",
+      "live_title": "Motorcyclists Safety Tips: Finding Gaps to Avoid Hazards on the Road",
+      "decision": "keep",
+      "source_category": "road_strategy",
+      "final_category": "road_strategy",
+      "reason": "title_description_captions_and_two_live_frames_agree",
+      "review_method": "two_distinct_frames_from_live_youtube_shorts_player",
+      "frame_sha256": [
+        "d17caa8c90b8993fa762fbcebc3b7064967a3b23666571373266ce60498d2572",
+        "36cfa56661b46dbef863128a59198268343f431581ebf2d766aeee0da1ca4c0f"
+      ]
+    },
+    {
+      "youtube_video_id": "ISZaZtqTLWI",
+      "live_title": "Critical Lesson Avoid Dangerous Lane Habits & Poor Following Distance!",
+      "decision": "keep",
+      "source_category": "road_strategy",
+      "final_category": "road_strategy",
+      "reason": "title_description_captions_and_two_live_frames_agree",
+      "review_method": "two_distinct_frames_from_live_youtube_shorts_player",
+      "frame_sha256": [
+        "dd06348548528d2f4ab37c241cf4d9308d4b43a19c3f195b80bfcf7f1116f1bb",
+        "a31b1245999a87405221fb4b4c80441a6311028a2d5985659a637fe0a2a8a7e8"
+      ]
+    },
+    {
+      "youtube_video_id": "cmA1snLY93A",
+      "live_title": "intersections are hazard situations",
+      "decision": "keep",
+      "source_category": "road_strategy",
+      "final_category": "road_strategy",
+      "reason": "title_description_captions_and_two_live_frames_agree",
+      "review_method": "two_distinct_frames_from_live_youtube_shorts_player",
+      "frame_sha256": [
+        "9e1128e1ea567b507d69319e9b742db25816ea2a57e2137cbddb71f77e706970",
+        "67a6adc8dd772c832715d3a192f001fd26683024d66dc384bb61c43b42902062"
+      ]
+    },
+    {
+      "youtube_video_id": "eCwbo5iJkYQ",
+      "live_title": "My Favorite Motorcycle GPS (Garmin Zumo XT2) is $100 Off Right Now!",
+      "decision": "remove",
+      "source_category": "route_navigation",
+      "final_category": null,
+      "reason": "affiliate_product_price_promotion",
+      "review_method": "two_distinct_frames_from_live_youtube_shorts_player",
+      "frame_sha256": [
+        "53fa4707c8b8cf63e8054f22459979391e5b54815e89c2f590d8322551cb2b6b",
+        "427c601bb082bfbd786713448ab22dd1291e0f8b1d4f8e4a7f58caf1776ce8a3"
+      ]
+    },
+    {
+      "youtube_video_id": "wGP_yyis-d4",
+      "live_title": "Stay Alert Deer Rut Season is here!",
+      "decision": "remove",
+      "source_category": "ruts",
+      "final_category": null,
+      "reason": "false_keyword_match_deer_rut_is_not_terrain_ruts",
+      "review_method": "two_distinct_frames_from_live_youtube_shorts_player",
+      "frame_sha256": [
+        "2ddba14d19d932a8d11da80617c4e2d53cb3827427f4d000106fa6c8361c3415",
+        "635d35c690b938e543bb06aff5ee8dd19a0e8ae9a20ac6ac59dc078bb6c70757"
+      ]
+    },
+    {
+      "youtube_video_id": "now0O77Fvus",
+      "live_title": "ADJUST YOUR SAG",
+      "decision": "keep",
+      "source_category": "suspension_setup",
+      "final_category": "suspension_setup",
+      "reason": "title_description_captions_and_two_live_frames_agree",
+      "review_method": "two_distinct_frames_from_live_youtube_shorts_player",
+      "frame_sha256": [
+        "29100ae37893e89fefb99c74ff7762da779ce556ed0d338bdf1f110d09ef678a",
+        "5779bc61b22130b54df5f58a3db2e1a764b1fea6faa28e54328a6c762f078e58"
+      ]
+    },
+    {
+      "youtube_video_id": "Di4hnvdMDfc",
+      "live_title": "STAND UP for MORE CONTROL",
+      "decision": "keep",
+      "source_category": "balance_slow_control",
+      "final_category": "riding_position",
+      "reason": "title_description_captions_and_two_live_frames_agree",
+      "review_method": "two_distinct_frames_from_live_youtube_shorts_player",
+      "frame_sha256": [
+        "73effdd1d63500fb314024c6471990fe2dab1541309ecd895f1049d01a5c6d1b",
+        "8d2370e88d8e2554969eff58f3952e87ccdf0e6cc6b9a4500398aaa3ad457eb7"
+      ]
+    },
+    {
+      "youtube_video_id": "pKZPshN9AaI",
+      "live_title": "Motorcycle grinding - so you are ready for the ruts!",
+      "decision": "remove",
+      "source_category": "balance_slow_control",
+      "final_category": null,
+      "reason": "unclear_tire_grinding_content_not_slow_control",
+      "review_method": "two_distinct_frames_from_live_youtube_shorts_player",
+      "frame_sha256": [
+        "aced4370029a1ee76d2bc1662d9812cc7a45389fbd33da25fc84a2c14274a035",
+        "eadf0db1e33f4f7e55f4cca18f547f8f6562af98b0f1a6350b8d7a70319f9639"
+      ]
+    },
+    {
+      "youtube_video_id": "qcphDOEaFCU",
+      "live_title": "Quick Lesson About The Clutch",
+      "decision": "keep",
+      "source_category": "controls_coordination",
+      "final_category": "controls_coordination",
+      "reason": "title_description_captions_and_two_live_frames_agree",
+      "review_method": "two_distinct_frames_from_live_youtube_shorts_player",
+      "frame_sha256": [
+        "4105c060aa139895124926881e7080613929310c3ef876ec28c5dcc67c483a4e",
+        "ab8815ae1560bbe3eee17fae5f4e8e3fc6c7b725dc826b1304bb3df018675c35"
+      ]
+    },
+    {
+      "youtube_video_id": "Chu_AJtcyh0",
+      "live_title": "Refine Your Off-road Motorcycle Uphill & Downhill Riding with Teeter Totter Practice",
+      "decision": "keep",
+      "source_category": "descents",
+      "final_category": "hills",
+      "reason": "title_description_captions_and_two_live_frames_agree",
+      "review_method": "two_distinct_frames_from_live_youtube_shorts_player",
+      "frame_sha256": [
+        "5167ea9e768390f30c6dcb6bc1158194f6b83ef861418556973abe686e12ab4d",
+        "322fb5e6780563a51d9f167448dce3b417677ead573d7d85460e0d19276e2d1b"
+      ]
+    },
+    {
+      "youtube_video_id": "1bkwd9R7pns",
+      "live_title": "ADV Bike STUCK| How To Get Out",
+      "decision": "keep",
+      "source_category": "ergonomics",
+      "final_category": "ergonomics",
+      "reason": "title_description_captions_and_two_live_frames_agree",
+      "review_method": "two_distinct_frames_from_live_youtube_shorts_player",
+      "frame_sha256": [
+        "4c88ae365a69591b6b6f955fa64e50bb3a90395618e0224b98c97ad9e41ac898",
+        "f1b72c1c29591fce5dc6efb878710f5817dd7f66d7680f5874b888ce3aad889e"
+      ]
+    },
+    {
+      "youtube_video_id": "8P4_2TxtP1w",
+      "live_title": "Avoid Crashes & Fatigue",
+      "decision": "keep",
+      "source_category": "fatigue_management",
+      "final_category": "fatigue_management",
+      "reason": "title_description_captions_and_two_live_frames_agree",
+      "review_method": "two_distinct_frames_from_live_youtube_shorts_player",
+      "frame_sha256": [
+        "31530baa30c0f54bf04d1727790ba08be8ab5c46ee766325cf9ddae035465429",
+        "e89813be5c5e4afd38ca44758cc4b9e7e29aad86df0044557c50a9ac84776350"
+      ]
+    },
+    {
+      "youtube_video_id": "efCcg_jt3ko",
+      "live_title": "How to Safely Navigate Gravel Corners on a Motorcycle",
+      "decision": "keep",
+      "source_category": "gravel_dirt",
+      "final_category": "gravel_dirt",
+      "reason": "title_description_captions_and_two_live_frames_agree",
+      "review_method": "two_distinct_frames_from_live_youtube_shorts_player",
+      "frame_sha256": [
+        "4296cd5edc8a5483df87922eaf99881cbc0ed1a6161d8f6de512cdd24b52d13b",
+        "2bed75b72b3f918ac1ad7376c4e49977ad1bdc79bc46d8ac72846ed44b5602ea"
+      ]
+    },
+    {
+      "youtube_video_id": "oBRANRwSpGw",
+      "live_title": "DEEP GRAVEL",
+      "decision": "keep",
+      "source_category": "gravel_dirt",
+      "final_category": "gravel_dirt",
+      "reason": "title_description_captions_and_two_live_frames_agree",
+      "review_method": "two_distinct_frames_from_live_youtube_shorts_player",
+      "frame_sha256": [
+        "bc2933b74c07a81ff636a2a0ec05c0b9a18ac71fb13eda17ed74adcec182e57e",
+        "3cba1d89e3c4207176ca5b03c1e7ba42ec9783df8186760528ce36d82f524a01"
+      ]
+    },
+    {
+      "youtube_video_id": "aUXqsHWkDHE",
+      "live_title": "Don’t forget to lean and favor that uphill leg. 🦵",
+      "decision": "keep",
+      "source_category": "hills",
+      "final_category": "hills",
+      "reason": "title_description_captions_and_two_live_frames_agree",
+      "review_method": "two_distinct_frames_from_live_youtube_shorts_player",
+      "frame_sha256": [
+        "005fe697406e9c67ab38880079c03be19245b978536461d1443fd147bd113695",
+        "96f2e821546c0812294d8412f2490f77da396a6dd51476505a42c28a029e3bc9"
+      ]
+    },
+    {
+      "youtube_video_id": "0KUl9bL-g3c",
+      "live_title": "Motorcycle lift from the knees",
+      "decision": "keep",
+      "source_category": "lifting",
+      "final_category": "lifting",
+      "reason": "title_description_captions_and_two_live_frames_agree",
+      "review_method": "two_distinct_frames_from_live_youtube_shorts_player",
+      "frame_sha256": [
+        "c92bff92e78fe3eb996ef43e785492fa7b2566e6e4d2c8849504fd815f588819",
+        "a24f184ebc778fb0482b56863886d058ac76219a4770d076ed6a3b10ba86c3ee"
+      ]
+    },
+    {
+      "youtube_video_id": "YUrlp2wmXCc",
+      "live_title": "Squat lift technique safely",
+      "decision": "keep",
+      "source_category": "lifting",
+      "final_category": "lifting",
+      "reason": "title_description_captions_and_two_live_frames_agree",
+      "review_method": "two_distinct_frames_from_live_youtube_shorts_player",
+      "frame_sha256": [
+        "4b7d4df53895214062e61579fea1737a4d7ec28dcee0cadcfe8d4115000a8326",
+        "17e2a23ae54a346275cd6ff83742c174c246d4b028f13dc7e4b7a6088a5316f7"
+      ]
+    },
+    {
+      "youtube_video_id": "4TbZuEvpSXk",
+      "live_title": "Different setups for moto camping.",
+      "decision": "keep",
+      "source_category": "motorcycle_camping",
+      "final_category": "motorcycle_camping",
+      "reason": "title_description_captions_and_two_live_frames_agree",
+      "review_method": "two_distinct_frames_from_live_youtube_shorts_player",
+      "frame_sha256": [
+        "d3b8ad9c7ed1db73bc868e3321b4f49c6c0ccaca660aef04f7a8a616e88aa20a",
+        "b4c7dc85ff95facc4ec0955052d032d8fc8ee61013637ca3316a812e9c5a9aae"
+      ]
+    },
+    {
+      "youtube_video_id": "FGtBR0wh9aI",
+      "live_title": "What DIY maintenance video do you want to see next?",
+      "decision": "keep",
+      "source_category": "motorcycle_maintenance",
+      "final_category": "motorcycle_maintenance",
+      "reason": "title_description_captions_and_two_live_frames_agree",
+      "review_method": "two_distinct_frames_from_live_youtube_shorts_player",
+      "frame_sha256": [
+        "b9926e43b09e3758979826a2e62a0143b493627f5cd296db7643bec1c5bd8b36",
+        "6e2060e678b67f1d39954df490494c7a47af201e7c48d65e643fee584ead5509"
+      ]
+    },
+    {
+      "youtube_video_id": "CMaH1wmdwrc",
+      "live_title": "Obstacle Mid-Turn? Do This!",
+      "decision": "keep",
+      "source_category": "obstacles",
+      "final_category": "obstacles",
+      "reason": "title_description_captions_and_two_live_frames_agree",
+      "review_method": "two_distinct_frames_from_live_youtube_shorts_player",
+      "frame_sha256": [
+        "831d467b1f9e35194e37a35e32e258b3e0a84beffe67dc56b08836e4a6a63567",
+        "016b55ec39208ac4a2371cadadcbfabb3549f1a54f4b92ef5709bc5c034a7b05"
+      ]
+    },
+    {
+      "youtube_video_id": "Or4rjLDqLhc",
+      "live_title": "Soft Luggage That Works With 2022 Kawasaki KLR 650 Adventure OEM Racks: Giant Loop Siskiyou Panniers",
+      "decision": "remove",
+      "source_category": "packing_luggage",
+      "final_category": null,
+      "reason": "product_specific_luggage_with_promo_code",
+      "review_method": "two_distinct_frames_from_live_youtube_shorts_player",
+      "frame_sha256": [
+        "e05cddbd17b67687c936bd601156a7a7ca181951d884876a0efc80e5a98d7df3",
+        "a07c7358626b9e26514cf6ddccb0d31c710f2692d738bddfaf3ccde311d0f466"
+      ]
+    },
+    {
+      "youtube_video_id": "C-c78aYjgaA",
+      "live_title": "Exploring ADV Self-Recovery Systems From Green Chile ADV and Dragan Systems",
+      "decision": "remove",
+      "source_category": "recovery",
+      "final_category": null,
+      "reason": "affiliate_product_recovery_system_overview",
+      "review_method": "two_distinct_frames_from_live_youtube_shorts_player",
+      "frame_sha256": [
+        "fa860860372dfa7878400936d583012fefd2b239b60a7737880a093a5c4ab399",
+        "c4ec497f871824ec054f2050972ce91e5188b14a762e5ef54f641fcd0c60c788"
+      ]
+    },
+    {
+      "youtube_video_id": "rxEktsR1cwg",
+      "live_title": "Power when stuck?",
+      "decision": "keep",
+      "source_category": "recovery",
+      "final_category": "recovery",
+      "reason": "title_description_captions_and_two_live_frames_agree",
+      "review_method": "two_distinct_frames_from_live_youtube_shorts_player",
+      "frame_sha256": [
+        "ef65fed37095049c135f43c2106b18d31d518befbe14867a7ebf7dcf1de80f53",
+        "a7bbe4d488ad2e73bf5c411c972c398dbfccc057067492c749172804dd8101f3"
+      ]
+    },
+    {
+      "youtube_video_id": "WPxTjPB6qX8",
+      "live_title": "BIG Enduro Riding Mistake | Proper Body Position Explained",
+      "decision": "keep",
+      "source_category": "riding_position",
+      "final_category": "riding_position",
+      "reason": "title_description_captions_and_two_live_frames_agree",
+      "review_method": "two_distinct_frames_from_live_youtube_shorts_player",
+      "frame_sha256": [
+        "143e9019599985ae87c7861c1481b134de71127dd797f7573fd881349ca3ee90",
+        "952dbfdaeb513a7a9dfacaee641e6c9732983cf273f053119f5ca737b5240713"
+      ]
+    },
+    {
+      "youtube_video_id": "9dTri0b4KO4",
+      "live_title": "Motopumps Locking Mount for Garmin Zumo XT",
+      "decision": "remove",
+      "source_category": "route_navigation",
+      "final_category": null,
+      "reason": "product_specific_gps_mount_with_promo_code",
+      "review_method": "two_distinct_frames_from_live_youtube_shorts_player",
+      "frame_sha256": [
+        "503708fb47a6215baffb5eb1ae17ff52d8855cd013759bf60031fa3747c29ce2",
+        "ffdf4cba37822445faaaecc9fcc245ec84c0808cb4c533f7bed4d1516a874be7"
+      ]
+    },
+    {
+      "youtube_video_id": "cQG9xm6u4Ho",
+      "live_title": "Fix Your Foundation: Motorcycle Standing Riding Posture",
+      "decision": "keep",
+      "source_category": "suspension_setup",
+      "final_category": "riding_position",
+      "reason": "title_description_captions_and_two_live_frames_agree",
+      "review_method": "two_distinct_frames_from_live_youtube_shorts_player",
+      "frame_sha256": [
+        "77cca2c5698b435070446dff9211d94d6ed1938ebf35a6e35a7a0713ff020629",
+        "07389b5e4c8175c88f8badd1a117243224f695ade51b50db014c6e383654e486"
+      ]
+    },
+    {
+      "youtube_video_id": "pCWR8FIfBf4",
+      "live_title": "That Final Brake Pressure Decides Your Fate",
+      "decision": "keep",
+      "source_category": "suspension_setup",
+      "final_category": "road_braking",
+      "reason": "title_description_captions_and_two_live_frames_agree",
+      "review_method": "two_distinct_frames_from_live_youtube_shorts_player",
+      "frame_sha256": [
+        "bfbf4c8d712303658ea6b0c597d3907f79ee69e3927d7284cbdf49cc24cef798",
+        "6340b7d3fb2a00d7c38869a2d5d3da651a6b8ff394528ebdace3de415594980c"
+      ]
+    },
+    {
+      "youtube_video_id": "utAjifdpIX4",
+      "live_title": "How to set your dirt bike up like a Pro | Sag",
+      "decision": "keep",
+      "source_category": "suspension_setup",
+      "final_category": "suspension_setup",
+      "reason": "title_description_captions_and_two_live_frames_agree",
+      "review_method": "two_distinct_frames_from_live_youtube_shorts_player",
+      "frame_sha256": [
+        "e411ad12bf97666b31094a2b3defc2947f7d675008aa9450460f89cde1a3ba3b",
+        "90465014abc5acf5ef5003de239af387e1e2b6107e454de125dc71d245b025cb"
+      ]
+    },
+    {
+      "youtube_video_id": "MK_A6IorNQE",
+      "live_title": "🌊 ADV Water Crossing Riding Tip 👍🏻",
+      "decision": "keep",
+      "source_category": "balance_slow_control",
+      "final_category": "water_crossings",
+      "reason": "title_description_captions_and_two_live_frames_agree",
+      "review_method": "two_distinct_frames_from_live_youtube_shorts_player",
+      "frame_sha256": [
+        "33bef6e03a2e2b517e5a2e00e8d75b62282df41f83354ce08645e7c61e463391",
+        "00259106e7a5c78260cea5968d0ef7d42ba61f593e499a959ab5fb70e0795c06"
+      ]
+    },
+    {
+      "youtube_video_id": "ttZ4cRSWco8",
+      "live_title": "Does the Friction Zone burn up the motorcycle clutch?",
+      "decision": "keep",
+      "source_category": "controls_coordination",
+      "final_category": "controls_coordination",
+      "reason": "title_description_captions_and_two_live_frames_agree",
+      "review_method": "two_distinct_frames_from_live_youtube_shorts_player",
+      "frame_sha256": [
+        "5fe7cdcfd699cb19f3be69b89c37adb7e14471c6d2cde8f20e6b82c5ac87c513",
+        "75760f003625b0fe0831dbe5f447054e7354802f7953e6ed477e2a7fed5037fa"
+      ]
+    },
+    {
+      "youtube_video_id": "FQKDnPJNBOk",
+      "live_title": "Enduro Riding Tip: Rocky Downhills",
+      "decision": "keep",
+      "source_category": "descents",
+      "final_category": "descents",
+      "reason": "title_description_captions_and_two_live_frames_agree",
+      "review_method": "two_distinct_frames_from_live_youtube_shorts_player",
+      "frame_sha256": [
+        "2e4bd058440ab1dad6cd88f0d3bf29abfc472d9a8b42dbe5bc058fb42bdcaa3a",
+        "48ed67eaf0b14947cbac585b28cf9d5658adffe918cea6fb69982ac17cfdfe93"
+      ]
+    },
+    {
+      "youtube_video_id": "d95k5GMSWB0",
+      "live_title": "Gravel vs Motorcycle Rider",
+      "decision": "keep",
+      "source_category": "gravel_dirt",
+      "final_category": "gravel_dirt",
+      "reason": "title_description_captions_and_two_live_frames_agree",
+      "review_method": "two_distinct_frames_from_live_youtube_shorts_player",
+      "frame_sha256": [
+        "bd7db1086d6b8a052ab54aabd702e040a64117cb3c6e2f0e14e107313a8189c9",
+        "45b5204f5cc37f7d3e64501e320716474f3bb7ded6cc2a7cf87544be45418616"
+      ]
+    },
+    {
+      "youtube_video_id": "6STHZgDcOXQ",
+      "live_title": "When Group Riding Goes WRONG",
+      "decision": "keep",
+      "source_category": "group_riding",
+      "final_category": "group_riding",
+      "reason": "title_description_captions_and_two_live_frames_agree",
+      "review_method": "two_distinct_frames_from_live_youtube_shorts_player",
+      "frame_sha256": [
+        "f00bc87789a7be4d83d048e28884b273529ddf7f40005633785a570d11f3a2d3",
+        "b0f6cfdd444e7107b7e18ab852985ea9c2d50616454a51a4fc84c70fd23486f1"
+      ]
+    },
+    {
+      "youtube_video_id": "1_a9ml4MhjE",
+      "live_title": "Unlocking Your True Street Riding Potential Gauging Progress and Skill",
+      "decision": "keep",
+      "source_category": "obstacles",
+      "final_category": "road_strategy",
+      "reason": "title_description_captions_and_two_live_frames_agree",
+      "review_method": "two_distinct_frames_from_live_youtube_shorts_player",
+      "frame_sha256": [
+        "368c913aa6a0e42df5e291e5fdf7bb5c70d9544c27cee49b785bcb41111e9d9b",
+        "391c3f88e60e5c2fe9125f5fad469766679a26353b5bb891e5d74b38a41f4f79"
+      ]
+    },
+    {
+      "youtube_video_id": "53icTAgXcEE",
+      "live_title": "Enduro Log Crossing | Enduro Skills Training",
+      "decision": "keep",
+      "source_category": "obstacles",
+      "final_category": "obstacles",
+      "reason": "title_description_captions_and_two_live_frames_agree",
+      "review_method": "two_distinct_frames_from_live_youtube_shorts_player",
+      "frame_sha256": [
+        "f8679d7c8b582bf1067c5d7f58e1c626c17d70ed7e3b93bfabc1146bd6332397",
+        "7c9ee48f710f88e88895608419da256cc3aa7bb35749084206818c85cc7940e7"
+      ]
+    },
+    {
+      "youtube_video_id": "DbvN5GgWj1c",
+      "live_title": "How to repair Dry Bags | PVC Saddlebags, WolfMan Luggage, Nelson-Rigg, Giant Loop ect.",
+      "decision": "keep",
+      "source_category": "packing_luggage",
+      "final_category": "packing_luggage",
+      "reason": "title_description_captions_and_two_live_frames_agree",
+      "review_method": "two_distinct_frames_from_live_youtube_shorts_player",
+      "frame_sha256": [
+        "f0553bd5c167cf796d1c55f35e1946734b621cd7a05330bfda766fc572b24a34",
+        "9ecfad7373e9a163c52184346ebd7772ba67ff8b84ad9b9cf75fde26d5357e8a"
+      ]
+    },
+    {
+      "youtube_video_id": "5PStgZAtpuw",
+      "live_title": "The Best Body Position for Hill Restarts",
+      "decision": "keep",
+      "source_category": "riding_position",
+      "final_category": "riding_position",
+      "reason": "title_description_captions_and_two_live_frames_agree",
+      "review_method": "two_distinct_frames_from_live_youtube_shorts_player",
+      "frame_sha256": [
+        "51a0a9c07c66c8ff9df9fb53bd81801bbfcb29ccd661987c820d401d0c3200a8",
+        "82d0391c81af15b1269833222433b4b7b10000565ec76015b6d2e25a72163a1e"
+      ]
+    },
+    {
+      "youtube_video_id": "cvz-AAXJTvw",
+      "live_title": "The BEST Way To Get Into Perfect Standing Position on Your Dirt Bike",
+      "decision": "keep",
+      "source_category": "riding_position",
+      "final_category": "riding_position",
+      "reason": "title_description_captions_and_two_live_frames_agree",
+      "review_method": "two_distinct_frames_from_live_youtube_shorts_player",
+      "frame_sha256": [
+        "4746e39c0d095a1708b293c546b6afb24ef7026d1a1dc200759b439773eca7a1",
+        "04b7b05a535add0a96eabb54e65f78a0949c65a675eedc5d77ffdebf2ab0132f"
+      ]
+    },
+    {
+      "youtube_video_id": "mqRpOOvG5ks",
+      "live_title": "BODY POSITION Quick Lesson",
+      "decision": "keep",
+      "source_category": "riding_position",
+      "final_category": "riding_position",
+      "reason": "title_description_captions_and_two_live_frames_agree",
+      "review_method": "two_distinct_frames_from_live_youtube_shorts_player",
+      "frame_sha256": [
+        "753c2f0e4dc358063ffa136ee26594a9296a417d434cca0986c43a2f5039f833",
+        "14827b5f7926855f67ea98fdaf3543f7be4a295b3e43a526b02e837cfa030412"
+      ]
+    },
+    {
+      "youtube_video_id": "rfVJMg4S6TA",
+      "live_title": "🌀 Want tighter turns on your big ADV bike? It all starts with body position.",
+      "decision": "keep",
+      "source_category": "riding_position",
+      "final_category": "riding_position",
+      "reason": "title_description_captions_and_two_live_frames_agree",
+      "review_method": "two_distinct_frames_from_live_youtube_shorts_player",
+      "frame_sha256": [
+        "06e3ff517eeb0d0ffbca50a2da81443f2916e6aaaeec621fd7a63680da960764",
+        "646dbf67d61012e75b14a9f64129cb928b6c3b50a10e3b22ffea358d3244599e"
+      ]
+    },
+    {
+      "youtube_video_id": "sZr1odvxS48",
+      "live_title": "Ideal Body Position For 65cc Riders | Dirt Bike Riding Tip",
+      "decision": "keep",
+      "source_category": "riding_position",
+      "final_category": "riding_position",
+      "reason": "title_description_captions_and_two_live_frames_agree",
+      "review_method": "two_distinct_frames_from_live_youtube_shorts_player",
+      "frame_sha256": [
+        "a2fdcbf0446d7d02957a7df9ec9fd42dfde8c4e921914a5924aa51eb7c038eb6",
+        "484d0b2cee5e9cadb6c7bc9f7f9c3ce3e1eb00287d42afec5b930d4589434022"
+      ]
+    },
+    {
+      "youtube_video_id": "saQRaD0fRws",
+      "live_title": "The Worst and Most Common Body Position Mistake",
+      "decision": "keep",
+      "source_category": "riding_position",
+      "final_category": "riding_position",
+      "reason": "title_description_captions_and_two_live_frames_agree",
+      "review_method": "two_distinct_frames_from_live_youtube_shorts_player",
+      "frame_sha256": [
+        "f961167ad4b2c08ecdb104f62eaa93d2b3dd05e959afa942409c7bf9b75de05c",
+        "6a37b23c8e38f7d52fb74c03ff4290453e8578cf42e3047c2529fbb664516d7e"
+      ]
+    },
+    {
+      "youtube_video_id": "rHsx-ZEO6WI",
+      "live_title": "You gotta go to war with ruts 🫡",
+      "decision": "keep",
+      "source_category": "ruts",
+      "final_category": "ruts",
+      "reason": "title_description_captions_and_two_live_frames_agree",
+      "review_method": "two_distinct_frames_from_live_youtube_shorts_player",
+      "frame_sha256": [
+        "8c817634e53c9dbb89f807ee8c43696c9982c72befb68d5ee64436ea450db58e",
+        "54a122fc9ed17ae9797acf99c95195b4a1cbf03d6162762686bacc2de0c2c8e7"
+      ]
+    },
+    {
+      "youtube_video_id": "qCJBE2fJpAo",
+      "live_title": "Adventure Motorcycle Water Crossing| How To Ride Into Water Correctly",
+      "decision": "keep",
+      "source_category": "water_crossings",
+      "final_category": "water_crossings",
+      "reason": "title_description_captions_and_two_live_frames_agree",
+      "review_method": "two_distinct_frames_from_live_youtube_shorts_player",
+      "frame_sha256": [
+        "b31f4ca098f3abc6f2611f9999ab1b582441c333a6f95c85b8a5a0b30fcfb7bd",
+        "0a98dc9b22514610243ef46400b1d18167f892d2e516fb59778b5988673aafdc"
+      ]
+    },
+    {
+      "youtube_video_id": "2xiinuSKF4Q",
+      "live_title": "⚙️ Let’s talk motorcycle friction zone.",
+      "decision": "keep",
+      "source_category": "controls_coordination",
+      "final_category": "controls_coordination",
+      "reason": "title_description_captions_and_two_live_frames_agree",
+      "review_method": "two_distinct_frames_from_live_youtube_shorts_player",
+      "frame_sha256": [
+        "d647f95daf3d251ad57f6ea1dfb20d645a1164bcb36f3e2f915554d3511ff270",
+        "6141dca3087664651bc5e545891682afd924bd05a105b6f05f85909a60f7a45a"
+      ]
+    },
+    {
+      "youtube_video_id": "9HmmpWU-iJQ",
+      "live_title": "🏍️ Mastering the Friction Zone — One Step at a Time! 💪",
+      "decision": "keep",
+      "source_category": "controls_coordination",
+      "final_category": "controls_coordination",
+      "reason": "title_description_captions_and_two_live_frames_agree",
+      "review_method": "two_distinct_frames_from_live_youtube_shorts_player",
+      "frame_sha256": [
+        "7ad3acb873c238f56995c752df3f91b093850fd09aed881d8b8e6d9669ebb810",
+        "9ad4f77cde6d3d49b5f9480d3eb007acfea780f273e1c1398608baf1bc9652e3"
+      ]
+    },
+    {
+      "youtube_video_id": "BIG1sDzYpIA",
+      "live_title": "Use the Friction Zone to control power to your rear wheel on a motorcycle",
+      "decision": "keep",
+      "source_category": "controls_coordination",
+      "final_category": "controls_coordination",
+      "reason": "title_description_captions_and_two_live_frames_agree",
+      "review_method": "two_distinct_frames_from_live_youtube_shorts_player",
+      "frame_sha256": [
+        "39db04d334d79d7858866f70c2be74ca5d146cbd3aa68caa730aad8f5a0ee4fb",
+        "6fc303860b0e144a1526935ce0f86d1d34d0226f4c31535086c203b176a99ac4"
+      ]
+    },
+    {
+      "youtube_video_id": "yl995O3njnc",
+      "live_title": "Practicing clutch control without distractions",
+      "decision": "keep",
+      "source_category": "controls_coordination",
+      "final_category": "controls_coordination",
+      "reason": "title_description_captions_and_two_live_frames_agree",
+      "review_method": "two_distinct_frames_from_live_youtube_shorts_player",
+      "frame_sha256": [
+        "4ad6647a93532fe76c554cd60ebd9e48fb95212a4868ff2889461be7432a4c93",
+        "318d904e8d3353ff7d086f57ed03b0796c9e402aad24311a9c0ea4f418a5c8ea"
+      ]
+    },
+    {
+      "youtube_video_id": "5STGXzVHkLk",
+      "live_title": "YOU DON'T NEED KNOBBIES for DIRT & GRAVEL",
+      "decision": "keep",
+      "source_category": "gravel_dirt",
+      "final_category": "tires_setup",
+      "reason": "title_description_captions_and_two_live_frames_agree",
+      "review_method": "two_distinct_frames_from_live_youtube_shorts_player",
+      "frame_sha256": [
+        "6c8f3cb4d8d871bdcbfab681dc6bc9ee3c504416a8cb894452749c24515640e9",
+        "e76b598fed5966c464c73fb70a44f586cb21b016e00084cb448b6f61139bd0a9"
+      ]
+    },
+    {
+      "youtube_video_id": "LsZqLRKYFsc",
+      "live_title": "Turn this video off... and go Motocamping!",
+      "decision": "remove",
+      "source_category": "motorcycle_camping",
+      "final_category": null,
+      "reason": "scenic_entertainment_not_camping_instruction",
+      "review_method": "two_distinct_frames_from_live_youtube_shorts_player",
+      "frame_sha256": [
+        "92f3c8d28560b32b3292145766b6e2cc48401a0be0aaa4bfc8f43a876d926f0e",
+        "17aac297e7ac07f12937be592102832e026d07c5fde623860a2c54edbcae15d9"
+      ]
+    },
+    {
+      "youtube_video_id": "epnx-1eSPbI",
+      "live_title": "Textbook example of a widowmaker branch",
+      "decision": "remove",
+      "source_category": "motorcycle_camping",
+      "final_category": null,
+      "reason": "tree_example_not_motorcycle_camping_instruction",
+      "review_method": "two_distinct_frames_from_live_youtube_shorts_player",
+      "frame_sha256": [
+        "2e88a58c7278550a02435308da64e45ab47e06724f82bcdfef069dc5da0010da",
+        "6c052a02cf5933bd8120cb0f97a21dbc3e31c2755b2c87e2eee0a67865f6be12"
+      ]
+    },
+    {
+      "youtube_video_id": "2w-0y0MZjQs",
+      "live_title": "We had some \"fun\" in the mud at the Royal Enfield Himalayan 450 launch 🤣",
+      "decision": "remove",
+      "source_category": "mud_wet",
+      "final_category": null,
+      "reason": "mud_event_commentary_not_instruction",
+      "review_method": "two_distinct_frames_from_live_youtube_shorts_player",
+      "frame_sha256": [
+        "d695c1971977f724d28fcfb9279e73bc38b20f39d979d9698def2cd44d48157c",
+        "af2c6940a84e55c9a236f352e0678800a298b05dc59fd9029bb7886206201abe"
+      ]
+    },
+    {
+      "youtube_video_id": "bk3sYQMUMCo",
+      "live_title": "Honda CRF250L and DRZ400S vs THE MUD PIT at Shotgun Creek OHV! |Dual Sport | w/Mclovin Moto!",
+      "decision": "remove",
+      "source_category": "mud_wet",
+      "final_category": null,
+      "reason": "model_versus_mud_entertainment_not_instruction",
+      "review_method": "two_distinct_frames_from_live_youtube_shorts_player",
+      "frame_sha256": [
+        "284dab46a025637f193c1fcbd126367eec8cdd73ab506d4789e85c12f25219b1",
+        "24e7f393c84d16c16ac5bad7108a10bcde0b7e3e840214454ace0ffe69ba2903"
+      ]
+    },
+    {
+      "youtube_video_id": "9kepbiYrMRk",
+      "live_title": "Tip on tackling a river crossing on your motorcycle",
+      "decision": "keep",
+      "source_category": "water_crossings",
+      "final_category": "water_crossings",
+      "reason": "title_description_captions_and_two_live_frames_agree",
+      "review_method": "two_distinct_frames_from_live_youtube_shorts_player",
+      "frame_sha256": [
+        "1dfc229d13e5cb236423d796e34f02b4f13fee9c051eaa3c3dbbf15b415b0a67",
+        "0f1ec244513871db488ba34dfb58727bf2476f2a85d216309f70fc429d24845b"
+      ]
+    },
+    {
+      "youtube_video_id": "UUPYLcmUgXk",
+      "live_title": "Honda Cb500x Water Crossing Crash Aftermath",
+      "decision": "keep",
+      "source_category": "water_crossings",
+      "final_category": "water_crossings",
+      "reason": "title_description_captions_and_two_live_frames_agree",
+      "review_method": "two_distinct_frames_from_live_youtube_shorts_player",
+      "frame_sha256": [
+        "32a075331f3bb4a33ab6ff0ced98316c5f79f8e1d496ab1577d0b28e8a1a893d",
+        "8373d2b4c78ee1e606d836c15b888d69b2001762963d22c1d522d4dc16f69a96"
+      ]
+    },
+    {
+      "youtube_video_id": "5jmS-EHTDj0",
+      "live_title": "Clutch Feathering: Power with Precision on your ADV Motorcycle",
+      "decision": "keep",
+      "source_category": "balance_slow_control",
+      "final_category": "balance_slow_control",
+      "reason": "title_description_captions_and_two_live_frames_agree",
+      "review_method": "two_distinct_frames_from_live_youtube_shorts_player",
+      "frame_sha256": [
+        "cb4eb2c12caf21d14075d0e3d565bca1d97879f5f16b6698e388c40f656bbdd2",
+        "45a0e51a3e87541d7e90e805e2b52a0a86c4cbf12e24889221ab368ae1b6651f"
+      ]
+    },
+    {
+      "youtube_video_id": "bGPo7hg2I34",
+      "live_title": "Master slow speed skills with Figure 8",
+      "decision": "keep",
+      "source_category": "balance_slow_control",
+      "final_category": "balance_slow_control",
+      "reason": "title_description_captions_and_two_live_frames_agree",
+      "review_method": "two_distinct_frames_from_live_youtube_shorts_player",
+      "frame_sha256": [
+        "4d6e838729c7cb954e4c3f8458951f23d380078ae22e16b3ad0519dbeffca774",
+        "5b3ba4fda7255d5a98324f1efc1b5591596de5bb2895f3995486a4730dba0a02"
+      ]
+    },
+    {
+      "youtube_video_id": "qXkDVTkiyEY",
+      "live_title": "STAND UP",
+      "decision": "keep",
+      "source_category": "gravel_dirt",
+      "final_category": "riding_position",
+      "reason": "title_description_captions_and_two_live_frames_agree",
+      "review_method": "two_distinct_frames_from_live_youtube_shorts_player",
+      "frame_sha256": [
+        "deb13030a0ad4299193fa6bbe9557700b779ad4bfd8e39642591a87f221317af",
+        "b79ce6d7a64a14aa3c6c0351c2fb50a5892b4c2e557737f927529fe1ce97aaf5"
+      ]
+    },
+    {
+      "youtube_video_id": "bA-9KdUwzJ0",
+      "live_title": "Group Ride CRASH",
+      "decision": "keep",
+      "source_category": "group_riding",
+      "final_category": "group_riding",
+      "reason": "title_description_captions_and_two_live_frames_agree",
+      "review_method": "two_distinct_frames_from_live_youtube_shorts_player",
+      "frame_sha256": [
+        "c85eb4e723bcdc20d6a32143ee182ad079ba8e0bbf49a307e79fa9d65c6f1a9b",
+        "26c0b1a091aa1e472ba53aead860bf0566126405d359e79a02f3c43b2d13242e"
+      ]
+    },
+    {
+      "youtube_video_id": "Rzuw2jRqPKM",
+      "live_title": "Intersections Are Dangerous!",
+      "decision": "remove",
+      "source_category": "intercoms_communications",
+      "final_category": null,
+      "reason": "affiliate_intercom_insert_and_wrong_topic_classification",
+      "review_method": "two_distinct_frames_from_live_youtube_shorts_player",
+      "frame_sha256": [
+        "82880a31e942a2b9d8cf0ab9cb488c175890422afbbc77d92891315aa5f3a09f",
+        "b57651d87e9f11faf2533327b2e5fef66f9ccd1b1173a188a9d3fbc4a563b21d"
+      ]
+    },
+    {
+      "youtube_video_id": "QSj8ze_wchw",
+      "live_title": "The FREE way to fix your stuck clutch! | Suzuki GS850",
+      "decision": "keep",
+      "source_category": "motorcycle_maintenance",
+      "final_category": "motorcycle_maintenance",
+      "reason": "title_description_captions_and_two_live_frames_agree",
+      "review_method": "two_distinct_frames_from_live_youtube_shorts_player",
+      "frame_sha256": [
+        "29a33d6f6892575775f4aefb68a5bff8c83dba5c6b85953ff7ac51eddb3d594f",
+        "c66f3ba57d6b4e0f381a36945dc4ccc4c907f41bb20c8b0634a96be15057ce8e"
+      ]
+    }
+  ]
+}

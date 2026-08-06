@@ -1,0 +1,67 @@
+{
+  "document_title": "בדיקת דפדפן מקומית לשחרור ספריית הקצרים",
+  "document_version": "1.0.0",
+  "product_version": "3.3.0",
+  "tested_on": "2026-08-06",
+  "browser_surface": "Google Chrome live tab",
+  "status": "PASS_WITH_RESPONSIVE_BASELINE",
+  "desktop_scenarios": [
+    {
+      "language": "he",
+      "direction": "rtl",
+      "theme": "dark",
+      "release": "3.3.0",
+      "result_text": "152 סרטונים נמצאו",
+      "shorts_stat": "152",
+      "initial_cards": 48,
+      "horizontal_overflow_px": 0,
+      "visual_review": "pass"
+    },
+    {
+      "language": "he",
+      "direction": "rtl",
+      "theme": "light",
+      "release": "3.3.0",
+      "result_text": "152 סרטונים נמצאו",
+      "initial_cards": 48,
+      "horizontal_overflow_px": 0,
+      "visual_review": "pass"
+    },
+    {
+      "language": "en",
+      "direction": "ltr",
+      "theme": "dark",
+      "release": "3.3.0",
+      "result_text": "152 videos found",
+      "initial_cards": 48,
+      "horizontal_overflow_px": 0,
+      "computed_body_background": "rgb(16, 23, 18)",
+      "computed_body_color": "rgb(242, 239, 229)",
+      "visual_review": "pass"
+    },
+    {
+      "language": "en",
+      "direction": "ltr",
+      "theme": "light",
+      "release": "3.3.0",
+      "result_text": "152 videos found",
+      "shorts_stat": "152",
+      "initial_cards": 48,
+      "horizontal_overflow_px": 0,
+      "computed_body_background": "rgb(244, 241, 232)",
+      "computed_body_color": "rgb(24, 34, 28)",
+      "visual_review": "pass"
+    }
+  ],
+  "focused_checks": {
+    "route_navigation_result_count": 1,
+    "route_navigation_title": "Dakar Rally Navigation | What Is In The Road Book",
+    "route_navigation_category": "route_navigation",
+    "route_navigation_horizontal_overflow_px": 0,
+    "card_evidence_copy_mentions_source_caption_and_live_player": true,
+    "gps_tire_ids_absent": true,
+    "deer_rut_false_match_absent": true
+  },
+  "responsive_note_he": "בקרת Chrome המחוברת לא אפשרה שינוי viewport בסבב זה. קוד ה־CSS והמבנה הרספונסיבי לא השתנו מגרסה 3.2.0 שעברה QA חזותי במובייל; בדיקות ה־PWA, המראה וה־Node עברו על תוצר 3.3.0. אין כאן טענה לצילום מובייל חדש.",
+  "responsive_note_en": "The connected Chrome surface did not expose viewport resizing in this round. Responsive CSS and structure are unchanged from the 3.2.0 mobile visual baseline; PWA, mirror and Node tests passed on the 3.3.0 artifact. This is not claimed as a new mobile screenshot."
+}

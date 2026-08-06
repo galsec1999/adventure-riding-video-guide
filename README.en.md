@@ -1,15 +1,15 @@
-# Community Adventure Riding Video Guide — Document version 3.2.0 / גרסת מסמך 3.2.0
+# Community Adventure Riding Video Guide — Document version 3.3.0 / גרסת מסמך 3.3.0
 
-An installable Hebrew/English PWA with 411 full tutorials and 11 Shorts that passed a strict content audit, 17 learning paths, a trip centre, contextual search and optional on-device semantic search. Product version: **3.2.0**.
+An installable Hebrew/English PWA with 411 full tutorials and 152 Shorts that passed refreshed source verification and individual visual review, 17 learning paths, a trip centre, contextual search and optional on-device semantic search. Product version: **3.3.0**.
 
 Live site: <https://galsec1999.github.io/adventure-riding-video-guide/>
 
-## What changed in 3.2.0
+## What changed in 3.3.0
 
-- Re-audited all 806 Shorts from 3.1.0 after a keyword-classification failure placed a tyre named GPS under navigation.
-- Kept only 11 Shorts whose title, source description and individual visual review agree; removed 795 under an uncertainty-means-removal policy.
-- Learning steps receive up to three Shorts only when their category matches a full-video category in the same step. There is no broad fallback.
-- Data validation now requires high confidence, source-description evidence, individual visual review, verified duration and no marketing flag for every published Short.
+- Refreshed source metadata for all 795 Shorts quarantined in 3.2.0; 631 qualified for consideration and 180 entered a category-balanced individual visual review.
+- Published 152 Shorts whose title, description, captions and two live-player time points agree; rejected 28 visual finalists for promotion, mismatch or uncertainty.
+- Blocked false semantic matches such as `GPS Tire` and deer rut, and moved useful but misclassified clips to their accurate categories.
+- Added 301 category-matched Short references across 114 learning steps, with at most three per step and no broad fallback.
 
 ## Highlights from 3.0.0
 
@@ -41,8 +41,8 @@ Open <http://localhost:8080/>. Service workers require `localhost` or HTTPS.
 
 ```powershell
 node tools/build_semantic_index.mjs
-python tools/audit_shorts_content.py --workers 4
-python tools/apply_shorts_content_audit.py
+python tools/finalize_shorts_recovery.py
+python tools/prepare_release_v3_3.py
 python tools/build_standalone.py
 python tools/verify_site_sync.py --write
 python tools/validate_data.py --expected-count 411
@@ -55,11 +55,11 @@ node tools/search_acceptance.mjs
 ## Repository layout
 
 - `site/` — the exact static artifact published by GitHub Pages.
-- `data/` — 411 full videos, 11 verified Shorts, taxonomy, paths, trip data and the semantic index.
+- `data/` — 411 full videos, 152 verified Shorts, taxonomy, paths, trip data and the semantic index.
 - `assets/` — UI, styles, Web Worker, Transformers.js and ONNX Runtime.
-- `downloads/Adventure-Riding-Video-Guide-v3.2.0-Standalone.html` — a single-file edition containing both content libraries, with regular search and no semantic model.
+- `downloads/Adventure-Riding-Video-Guide-v3.3.0-Standalone.html` — a single-file edition containing both content libraries, with regular search and no semantic model.
 - `documentation/` — specifications, licences, rights, third-party notices and release notes.
-- `reports/shorts-content-audit-v3.2/` — the Shorts audit report and visual QA evidence for 3.2.0.
+- `research/shorts-v3.3/` and `reports/shorts-recovery-v3.3.json` — refreshed source evidence, visual decisions and the 3.3.0 recovery summary.
 
 ## Content, rights and privacy
 

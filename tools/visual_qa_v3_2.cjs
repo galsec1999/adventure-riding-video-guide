@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 /**
- * Visual and interaction QA for the strict Shorts audit release.
- * Document version: 1.0.1
+ * Visual and interaction QA for the source-verified Shorts recovery release.
+ * Document version: 1.1.0
  */
 
 const fs = require("node:fs");
@@ -11,7 +11,7 @@ const { spawn } = require("node:child_process");
 const { chromium } = require("playwright");
 
 const ROOT = path.resolve(__dirname, "..");
-const OUT = path.join(ROOT, "reports", "shorts-content-audit-v3.2");
+const OUT = path.join(ROOT, "reports", "shorts-recovery-v3.3");
 const SCREENSHOTS = path.join(OUT, "screenshots");
 
 function freePort() {
@@ -84,13 +84,13 @@ async function scenario(browser, baseUrl, config) {
   const expectedDirection = config.english ? "ltr" : "rtl";
   const expectedTheme = config.dark ? "dark" : "light";
   const checks = {
-    release_3_2_0: state.release === "3.2.0",
+    release_3_3_0: state.release === "3.3.0",
     language: state.language === expectedLanguage,
     direction: state.direction === expectedDirection,
     theme: state.theme === expectedTheme,
-    result_count_11: /\b11\b/.test(state.resultCount || ""),
-    all_11_cards_rendered: state.cardCount === 11,
-    shorts_stat_11: state.shortStat === "11",
+    result_count_152: /\b152\b/.test(state.resultCount || ""),
+    initial_cards_rendered: state.cardCount > 0 && state.cardCount <= 152,
+    shorts_stat_152: state.shortStat === "152",
     no_tractionator: !state.cardText.some((text) => /tractionator|gps tire/i.test(text)),
     no_horizontal_overflow: state.horizontalOverflow <= 1,
     title_visible: state.titleVisible,
@@ -138,10 +138,10 @@ async function main() {
     await routeContext.close();
 
     const checks = Object.fromEntries(scenarios.flatMap((item) => Object.entries(item.checks).map(([key, value]) => [`${item.name}:${key}`, value])));
-    checks["navigation_category_removed_when_no_verified_shorts"] = !routeNavigation.categoryOptionExists && !routeNavigation.categoryStillInUrl;
+    checks["verified_navigation_category_visible"] = routeNavigation.categoryOptionExists && routeNavigation.categoryStillInUrl && routeNavigation.cardCount === 1;
     const report = {
-      document_version: "1.0.1",
-      product_version: "3.2.0",
+      document_version: "1.1.0",
+      product_version: "3.3.0",
       status: Object.values(checks).every(Boolean) ? "PASS" : "FAIL",
       real_browser: true,
       headless: true,

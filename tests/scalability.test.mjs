@@ -2,6 +2,8 @@ import assert from "node:assert/strict";
 import { readFile } from "node:fs/promises";
 import test from "node:test";
 
+// Test document version: 1.1.0 — product 3.3.0.
+
 import {
   getVisibleItems,
   INITIAL_VISIBLE_LIMIT,
@@ -28,17 +30,17 @@ const [sourceVideos, sourceShorts, taxonomy, synonyms] = await Promise.all([
   loadJson("../data/synonyms.json"),
 ]);
 
-test("the complete 422-record release prepares and searches without runtime errors", (t) => {
+test("the complete 563-record release prepares and searches without runtime errors", (t) => {
   const complete = [...sourceVideos, ...sourceShorts];
   const startedAt = performance.now();
   const prepared = prepareVideos(complete, taxonomy, synonyms);
   const results = applySearchAndFilters(prepared.videos, { q: "cornering", sort: "recommended" }, { synonymIndex: prepared.synonymIndex });
   const elapsedMs = performance.now() - startedAt;
-  assert.equal(complete.length, 422);
-  assert.equal(prepared.videos.length, 422);
-  assert.equal(new Set(prepared.videos.map((video) => video.id)).size, 422);
+  assert.equal(complete.length, 563);
+  assert.equal(prepared.videos.length, 563);
+  assert.equal(new Set(prepared.videos.map((video) => video.id)).size, 563);
   assert.ok(results.length > 0);
-  t.diagnostic(`prepare/search 422: ${elapsedMs.toFixed(2)} ms (measurement only; no hardware threshold)`);
+  t.diagnostic(`prepare/search 563: ${elapsedMs.toFixed(2)} ms (measurement only; no hardware threshold)`);
 });
 
 

@@ -1,4 +1,4 @@
-"""Regression tests for the strict Shorts content audit. Document version 1.0.0."""
+"""Regression tests for the strict Shorts content audit. Document version 1.1.0."""
 
 from __future__ import annotations
 
@@ -48,9 +48,11 @@ class ShortsContentAuditTests(unittest.TestCase):
 
     def test_production_shorts_all_have_strict_evidence(self) -> None:
         shorts = json.loads((ROOT / "data/shorts.json").read_text(encoding="utf-8"))
-        self.assertEqual(len(shorts), 11)
+        self.assertEqual(len(shorts), 152)
         self.assertNotIn("ExTiVb7J63Q", {item["youtube_video_id"] for item in shorts})
         self.assertNotIn("OFIKN7CtR9U", {item["youtube_video_id"] for item in shorts})
+        self.assertNotIn("wGP_yyis-d4", {item["youtube_video_id"] for item in shorts})
+        self.assertNotIn("eCwbo5iJkYQ", {item["youtube_video_id"] for item in shorts})
         for item in shorts:
             evidence = set(item["verification"]["content_evidence_types"])
             self.assertTrue({"youtube_player_description", "visual_content_review"}.issubset(evidence))

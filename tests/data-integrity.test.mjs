@@ -2,6 +2,8 @@ import assert from "node:assert/strict";
 import { readFile } from "node:fs/promises";
 import test from "node:test";
 
+// Test document version: 1.1.0 — product 3.3.0.
+
 
 async function loadJson(relativeUrl) {
   return JSON.parse(await readFile(new URL(relativeUrl, import.meta.url), "utf8"));
@@ -81,8 +83,8 @@ test("non-empty dataset has unique records with matching YouTube URLs", () => {
   });
 });
 
-test("v3.2 Shorts library contains only the 11 individually verified records", () => {
-  assert.equal(shorts.length, 11);
+test("v3.3 Shorts library contains only the 152 individually verified records", () => {
+  assert.equal(shorts.length, 152);
   assert.equal(new Set(shorts.map((video) => video.id)).size, shorts.length);
   shorts.forEach((video) => {
     assert.equal(video.media_format, "short");
@@ -109,7 +111,7 @@ test("learning paths expose only category-matched verified Shorts", () => {
       referencedShorts += 1;
     });
   });
-  assert.equal(referencedShorts, 28);
+  assert.equal(referencedShorts, 301);
 });
 
 
