@@ -1,4 +1,4 @@
-# חבילת ביקורת — שחרור 3.2.0 — גרסת מסמך 3.2.1
+# חבילת ביקורת — שחרור 3.2.0 — גרסת מסמך 3.2.2
 
 ## 1. מה הושלם
 
@@ -20,7 +20,7 @@
 - נתונים: `data/shorts.json`, `data/learning-paths.json`, `data/site-config.json` והמראה תחת `site/`.
 - ביקורת: `research/shorts-v3.2/content-audit.json`, `research/shorts-v3.2/visual-review.json`, `reports/shorts-content-audit-v3.2.json`, `reports/pwa-validation.json`.
 - כלים: `audit_shorts_content.py`, `apply_shorts_content_audit.py`, `visual_qa_v3_2.cjs`; כלי הכותרת/thumbnail הישן הוצא משימוש וכלי שיוך המסלולים איבד fallback כללי.
-- שערים ובדיקות: `validate_data.py`, `validate_pwa.py`, `test_shorts_content_audit.py`, בדיקות Node וסכמות 3.2.0.
+- שערים ובדיקות: `validate_data.py`, `validate_pwa.py`, `test_shorts_content_audit.py`, בדיקות Node, סכמות 3.2.0 ו־`.github/workflows/validate.yml` עם תווית Shorts שאינה מציגה עוד את הכמות הישנה.
 - UI/PWA: גרסאות ומוני תוכן ב־`index.html`, ‏`app.js`, ‏Manifest, ‏Service Worker ו־Standalone 3.2.0.
 - מסמכים: מפרט־על, שערי איכות, החלטות, README בעברית ובאנגלית, Changelog, מסמכי סטטוס ומשימה.
 

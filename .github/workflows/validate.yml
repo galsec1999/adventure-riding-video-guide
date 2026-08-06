@@ -39,7 +39,7 @@ jobs:
           python tools/validate_data.py --expected-count 411
           python tools/verify_site_sync.py
 
-      - name: Validate 411 full videos, 806 Shorts, semantic index, standalone, manifest, icons and subpath safety
+      - name: Validate 411 full videos, audited Shorts, semantic index, standalone, manifest, icons and subpath safety
         run: python tools/validate_pwa.py --site site --schema documentation/video.schema.json --expected-count 411
 
       - name: Run Node tests
