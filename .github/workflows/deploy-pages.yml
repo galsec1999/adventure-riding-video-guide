@@ -20,6 +20,8 @@ jobs:
     steps:
       - name: Check out repository
         uses: actions/checkout@v7
+        with:
+          fetch-depth: 2
 
       - name: Set up Python
         uses: actions/setup-python@v7
@@ -46,7 +48,7 @@ jobs:
           node tools/search_acceptance.mjs --report reports/site-upgrade-v3/search-acceptance-ci.json
           find site/assets/js -name '*.js' -print0 | xargs -0 -n1 node --check
           node --check site/service-worker.js
-          git show --check --oneline --no-renames HEAD
+          git diff --check HEAD^ HEAD
 
   deploy:
     needs: validate
