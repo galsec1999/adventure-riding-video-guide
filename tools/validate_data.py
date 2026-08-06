@@ -25,13 +25,16 @@ DATA_FILES = {
     "videos": ROOT / "data" / "videos.json",
     "taxonomy": ROOT / "data" / "categories.json",
     "learning_paths": ROOT / "data" / "learning-paths.json",
+    "travel_guides": ROOT / "data" / "travel-guides.json",
     "synonyms": ROOT / "data" / "synonyms.json",
     "site_config": ROOT / "data" / "site-config.json",
     "video_schema": ROOT / "schema" / "video.schema.json",
 }
 
 HEBREW_RE = re.compile(r"[\u0590-\u05ff]")
+LATIN_RE = re.compile(r"[A-Za-z]")
 SLUG_RE = re.compile(r"^[a-z0-9][a-z0-9_-]*$")
+SEMVER_RE = re.compile(r"^\d+\.\d+\.\d+(?:-[0-9A-Za-z.-]+)?(?:\+[0-9A-Za-z.-]+)?$")
 YOUTUBE_ID_RE = re.compile(r"^[A-Za-z0-9_-]{11}$")
 PLACEHOLDER_RE = re.compile(
     r"(?:lorem\s+ipsum|placeholder|dummy\s+data|sample\s+data|"
@@ -116,6 +119,27 @@ def is_nonempty_string(value: Any) -> bool:
 
 def has_hebrew(value: Any) -> bool:
     return isinstance(value, str) and HEBREW_RE.search(value) is not None
+
+
+def has_latin(value: Any) -> bool:
+    return isinstance(value, str) and LATIN_RE.search(value) is not None
+
+
+def valid_https_url(value: Any) -> bool:
+    if not is_nonempty_string(value) or any(character.isspace() for character in value):
+        return False
+    try:
+        parsed = urlsplit(value)
+        hostname = parsed.hostname
+        parsed.port  # Validate an explicitly supplied port, if any.
+    except ValueError:
+        return False
+    return bool(
+        parsed.scheme == "https"
+        and hostname
+        and parsed.username is None
+        and parsed.password is None
+    )
 
 
 def valid_iso_date(value: Any) -> bool:
@@ -214,6 +238,7 @@ def validate_taxonomy(audit: ValidationAudit, taxonomy: Any) -> dict[str, set[st
         "domains",
         "categories",
         "subcategories",
+        "content_types",
         "terrain_types",
         "road_conditions",
         "skill_levels",
@@ -237,11 +262,11 @@ def validate_taxonomy(audit: ValidationAudit, taxonomy: Any) -> dict[str, set[st
         ids: list[str] = []
         for index, item in enumerate(items):
             item_path = f"{section_path}[{index}]"
-            if not require_keys(audit, item, ("id", "name_he", "name_en", "description_he"), item_path):
+            if not require_keys(audit, item, ("id", "name_he", "name_en", "description_he", "description_en"), item_path):
                 continue
             identifier = item.get("id")
             audit.check(is_nonempty_string(identifier) and SLUG_RE.fullmatch(identifier) is not None, "taxonomy.id", "Taxonomy ID must be a lowercase slug", path=f"{item_path}.id")
-            for field_name in ("name_he", "name_en", "description_he"):
+            for field_name in ("name_he", "name_en", "description_he", "description_en"):
                 audit.check(is_nonempty_string(item.get(field_name)), "taxonomy.text", f"{field_name} must be non-empty", path=f"{item_path}.{field_name}")
             audit.check(has_hebrew(item.get("description_he")), "taxonomy.hebrew", "Hebrew description must contain Hebrew text", path=f"{item_path}.description_he")
             if isinstance(identifier, str):
@@ -250,6 +275,98 @@ def validate_taxonomy(audit: ValidationAudit, taxonomy: Any) -> dict[str, set[st
         audit.check(not duplicates, "taxonomy.duplicate_id", f"Duplicate IDs: {duplicates}", path=section_path, details=duplicates or None)
         allowed[section] = set(ids)
     return allowed
+
+
+def validate_domain_category_map(
+    audit: ValidationAudit,
+    taxonomy: Any,
+    videos: Any,
+    allowed: dict[str, set[str]],
+) -> None:
+    mapping = taxonomy.get("domain_category_map") if isinstance(taxonomy, dict) else None
+    if not audit.check(
+        isinstance(mapping, dict),
+        "taxonomy.domain_category_map",
+        "domain_category_map must be an object",
+        path="data/categories.json.domain_category_map",
+    ):
+        return
+
+    domain_ids = allowed["domains"]
+    category_ids = allowed["categories"]
+    unknown_domains = sorted(set(mapping) - domain_ids)
+    missing_domains = sorted(domain_ids - set(mapping))
+    audit.check(
+        not unknown_domains,
+        "taxonomy.domain_category_map_domain",
+        f"Unknown domains in domain_category_map: {unknown_domains}",
+        path="data/categories.json.domain_category_map",
+        details=unknown_domains or None,
+    )
+    audit.check(
+        not missing_domains,
+        "taxonomy.domain_category_map_domain",
+        f"Domains missing from domain_category_map: {missing_domains}",
+        path="data/categories.json.domain_category_map",
+        details=missing_domains or None,
+    )
+
+    normalized: dict[str, set[str]] = {}
+    for domain, categories in mapping.items():
+        path = f"data/categories.json.domain_category_map.{domain}"
+        array_ok = isinstance(categories, list) and bool(categories)
+        audit.check(array_ok, "taxonomy.domain_category_map_array", "Mapped categories must be a non-empty array", path=path)
+        if not array_ok:
+            continue
+        values_ok = all(is_nonempty_string(category) for category in categories)
+        audit.check(
+            values_ok,
+            "taxonomy.domain_category_map_value",
+            "Mapped category IDs must be non-empty strings",
+            path=path,
+        )
+        valid_values = [category for category in categories if is_nonempty_string(category)]
+        duplicates = duplicate_values(valid_values)
+        unknown_categories = sorted(set(valid_values) - category_ids)
+        audit.check(
+            not duplicates,
+            "taxonomy.domain_category_map_duplicate",
+            f"Duplicate mapped categories: {duplicates}",
+            path=path,
+            details=duplicates or None,
+        )
+        audit.check(
+            not unknown_categories,
+            "taxonomy.domain_category_map_category",
+            f"Unknown mapped categories: {unknown_categories}",
+            path=path,
+            details=unknown_categories or None,
+        )
+        normalized[domain] = set(valid_values) & category_ids
+
+    mismatches: list[dict[str, str]] = []
+    if isinstance(videos, list):
+        for video in videos:
+            if not isinstance(video, dict):
+                continue
+            domain = video.get("domain")
+            category = video.get("primary_category")
+            if domain in normalized and category not in normalized[domain]:
+                mismatches.append(
+                    {
+                        "id": str(video.get("id", "<unknown>")),
+                        "domain": str(domain),
+                        "primary_category": str(category),
+                    }
+                )
+    audit.check(
+        not mismatches,
+        "video.domain_category",
+        f"Videos with a primary category outside their domain mapping: {len(mismatches)}",
+        path="data/videos.json",
+        details=mismatches or None,
+    )
+    audit.stats["domain_category_pairs"] = sum(len(categories) for categories in normalized.values())
 
 
 def validate_video_schema(audit: ValidationAudit, schema: Any, videos: Any) -> None:
@@ -314,6 +431,7 @@ def validate_videos(
     mappings = {
         "domain": allowed["domains"],
         "primary_category": allowed["categories"],
+        "content_type": allowed["content_types"],
         "skill_level": allowed["skill_levels"],
         "risk_level": allowed["risk_levels"],
         "source_type": allowed["source_types"],
@@ -321,6 +439,7 @@ def validate_videos(
     }
     array_mappings = {
         "secondary_categories": allowed["categories"],
+        "subtopics": allowed["subcategories"],
         "tags": allowed["controlled_tags"],
         "motorcycle_types": allowed["motorcycle_types"],
         "motorcycle_weight_classes": allowed["motorcycle_weight_classes"],
@@ -467,6 +586,402 @@ def validate_learning_paths(
     audit.stats["learning_path_video_references"] = total_references
 
 
+def validate_bilingual_text_fields(
+    audit: ValidationAudit,
+    value: dict[str, Any],
+    stems: Iterable[str],
+    path: str,
+) -> None:
+    for stem in stems:
+        hebrew_key = f"{stem}_he"
+        english_key = f"{stem}_en"
+        hebrew_value = value.get(hebrew_key)
+        english_value = value.get(english_key)
+        audit.check(
+            is_nonempty_string(hebrew_value) and has_hebrew(hebrew_value),
+            "travel.bilingual_hebrew",
+            f"{hebrew_key} must be non-empty Hebrew text",
+            path=f"{path}.{hebrew_key}",
+        )
+        audit.check(
+            is_nonempty_string(english_value) and has_latin(english_value),
+            "travel.bilingual_english",
+            f"{english_key} must be non-empty English text",
+            path=f"{path}.{english_key}",
+        )
+
+
+def validate_bilingual_list_fields(
+    audit: ValidationAudit,
+    value: dict[str, Any],
+    stems: Iterable[str],
+    path: str,
+    *,
+    expected_items: int | None = None,
+    every_hebrew_item: bool = False,
+) -> None:
+    for stem in stems:
+        hebrew_key = f"{stem}_he"
+        english_key = f"{stem}_en"
+        hebrew_values = value.get(hebrew_key)
+        english_values = value.get(english_key)
+        hebrew_ok = (
+            isinstance(hebrew_values, list)
+            and bool(hebrew_values)
+            and all(is_nonempty_string(item) for item in hebrew_values)
+        )
+        english_ok = (
+            isinstance(english_values, list)
+            and bool(english_values)
+            and all(is_nonempty_string(item) for item in english_values)
+        )
+        audit.check(
+            hebrew_ok,
+            "travel.bilingual_array",
+            f"{hebrew_key} must be a non-empty array of strings",
+            path=f"{path}.{hebrew_key}",
+        )
+        audit.check(
+            english_ok,
+            "travel.bilingual_array",
+            f"{english_key} must be a non-empty array of strings",
+            path=f"{path}.{english_key}",
+        )
+        if not (hebrew_ok and english_ok):
+            continue
+        assert isinstance(hebrew_values, list)
+        assert isinstance(english_values, list)
+        audit.check(
+            len(hebrew_values) == len(english_values),
+            "travel.bilingual_array_length",
+            f"{hebrew_key} and {english_key} must contain the same number of entries",
+            path=path,
+        )
+        if expected_items is not None:
+            audit.check(
+                len(hebrew_values) == expected_items and len(english_values) == expected_items,
+                "travel.bilingual_array_count",
+                f"{hebrew_key} and {english_key} must each contain exactly {expected_items} entries",
+                path=path,
+            )
+        hebrew_content_ok = (
+            all(has_hebrew(item) for item in hebrew_values)
+            if every_hebrew_item
+            else has_hebrew(" ".join(hebrew_values))
+        )
+        audit.check(
+            hebrew_content_ok,
+            "travel.bilingual_hebrew",
+            f"{hebrew_key} must contain Hebrew content",
+            path=f"{path}.{hebrew_key}",
+        )
+        audit.check(
+            all(has_latin(item) for item in english_values),
+            "travel.bilingual_english",
+            f"Every {english_key} entry must contain English text",
+            path=f"{path}.{english_key}",
+        )
+
+
+def validate_travel_video_ids(
+    audit: ValidationAudit,
+    value: Any,
+    internal_ids: set[str],
+    path: str,
+) -> int:
+    array_ok = isinstance(value, list) and bool(value) and all(is_nonempty_string(item) for item in value)
+    audit.check(
+        array_ok,
+        "travel.video_ids",
+        "video_ids must be a non-empty array of video IDs",
+        path=path,
+    )
+    if not array_ok:
+        return 0
+    valid_values = [item for item in value if isinstance(item, str)]
+    duplicates = duplicate_values(valid_values)
+    unknown = sorted(set(valid_values) - internal_ids)
+    audit.check(
+        not duplicates,
+        "travel.duplicate_video_id",
+        f"Duplicate video IDs: {duplicates}",
+        path=path,
+        details=duplicates or None,
+    )
+    audit.check(
+        not unknown,
+        "travel.video_reference",
+        f"Unknown video IDs: {unknown}",
+        path=path,
+        details=unknown or None,
+    )
+    return len(valid_values)
+
+
+def validate_travel_guides(
+    audit: ValidationAudit,
+    travel: Any,
+    internal_ids: set[str],
+    learning_path_ids: set[str],
+) -> None:
+    root_path = "data/travel-guides.json"
+    required_top_level = (
+        "version",
+        "updated",
+        "trip_types",
+        "checklists",
+        "navigation_apps",
+        "mindfulness_note_he",
+        "mindfulness_note_en",
+        "knowledge_guides",
+    )
+    if not require_keys(audit, travel, required_top_level, root_path):
+        return
+    assert isinstance(travel, dict)
+    audit.check(
+        is_nonempty_string(travel["version"]) and SEMVER_RE.fullmatch(travel["version"]) is not None,
+        "travel.version",
+        "Travel-guide version must be a semantic version",
+        path=f"{root_path}.version",
+    )
+    audit.check(
+        valid_iso_date(travel["updated"]),
+        "travel.updated",
+        "Travel-guide updated value must be an ISO date",
+        path=f"{root_path}.updated",
+    )
+    validate_bilingual_text_fields(audit, travel, ("mindfulness_note",), root_path)
+
+    trip_types = travel["trip_types"]
+    trip_array_ok = isinstance(trip_types, list)
+    audit.check(trip_array_ok, "travel.trip_types_array", "trip_types must be an array", path=f"{root_path}.trip_types")
+    if trip_array_ok:
+        assert isinstance(trip_types, list)
+        audit.check(
+            len(trip_types) == 3,
+            "travel.trip_types_count",
+            f"Expected exactly three trip types; found {len(trip_types)}",
+            path=f"{root_path}.trip_types",
+        )
+        trip_ids = [item.get("id") for item in trip_types if isinstance(item, dict)]
+        audit.check(
+            set(trip_ids) == {"day", "multi_day", "abroad"} and len(trip_ids) == 3,
+            "travel.trip_type_ids",
+            "Trip types must be day, multi_day and abroad",
+            path=f"{root_path}.trip_types",
+            details=trip_ids,
+        )
+        for index, trip_type in enumerate(trip_types):
+            path = f"{root_path}.trip_types[{index}]"
+            if not require_keys(
+                audit,
+                trip_type,
+                ("id", "name_he", "name_en", "description_he", "description_en", "recommended_path_id"),
+                path,
+            ):
+                continue
+            assert isinstance(trip_type, dict)
+            audit.check(
+                is_nonempty_string(trip_type["id"]) and SLUG_RE.fullmatch(trip_type["id"]) is not None,
+                "travel.trip_type_id",
+                "Trip-type ID must be a lowercase slug",
+                path=f"{path}.id",
+            )
+            validate_bilingual_text_fields(audit, trip_type, ("name", "description"), path)
+            audit.check(
+                trip_type["recommended_path_id"] in learning_path_ids,
+                "travel.learning_path_reference",
+                f"Unknown recommended learning path: {trip_type['recommended_path_id']!r}",
+                path=f"{path}.recommended_path_id",
+            )
+
+    checklists = travel["checklists"]
+    checklist_array_ok = isinstance(checklists, list)
+    audit.check(checklist_array_ok, "travel.checklists_array", "checklists must be an array", path=f"{root_path}.checklists")
+    checklist_item_count = 0
+    if checklist_array_ok:
+        assert isinstance(checklists, list)
+        audit.check(
+            len(checklists) == 7,
+            "travel.checklists_count",
+            f"Expected exactly seven checklists; found {len(checklists)}",
+            path=f"{root_path}.checklists",
+        )
+        checklist_ids = [item.get("id") for item in checklists if isinstance(item, dict)]
+        duplicates = duplicate_values(checklist_ids)
+        audit.check(
+            not duplicates and len(checklist_ids) == len(checklists),
+            "travel.checklist_ids",
+            f"Checklist IDs must be present and unique: {duplicates}",
+            path=f"{root_path}.checklists",
+            details=duplicates or None,
+        )
+        for index, checklist in enumerate(checklists):
+            path = f"{root_path}.checklists[{index}]"
+            if not require_keys(audit, checklist, ("id", "title_he", "title_en", "items_he", "items_en"), path):
+                continue
+            assert isinstance(checklist, dict)
+            audit.check(
+                is_nonempty_string(checklist["id"]) and SLUG_RE.fullmatch(checklist["id"]) is not None,
+                "travel.checklist_id",
+                "Checklist ID must be a lowercase slug",
+                path=f"{path}.id",
+            )
+            validate_bilingual_text_fields(audit, checklist, ("title",), path)
+            validate_bilingual_list_fields(
+                audit,
+                checklist,
+                ("items",),
+                path,
+                expected_items=6,
+                every_hebrew_item=True,
+            )
+            if isinstance(checklist.get("items_he"), list):
+                checklist_item_count += len(checklist["items_he"])
+
+    navigation_apps = travel["navigation_apps"]
+    navigation_array_ok = isinstance(navigation_apps, list)
+    audit.check(
+        navigation_array_ok,
+        "travel.navigation_apps_array",
+        "navigation_apps must be an array",
+        path=f"{root_path}.navigation_apps",
+    )
+    navigation_video_references = 0
+    if navigation_array_ok:
+        assert isinstance(navigation_apps, list)
+        audit.check(
+            len(navigation_apps) == 10,
+            "travel.navigation_apps_count",
+            f"Expected exactly ten navigation comparisons; found {len(navigation_apps)}",
+            path=f"{root_path}.navigation_apps",
+        )
+        names = [item.get("name") for item in navigation_apps if isinstance(item, dict)]
+        duplicate_names = duplicate_values(names)
+        audit.check(
+            not duplicate_names and len(names) == len(navigation_apps),
+            "travel.navigation_app_names",
+            f"Navigation-app names must be present and unique: {duplicate_names}",
+            path=f"{root_path}.navigation_apps",
+            details=duplicate_names or None,
+        )
+        source_urls: list[str] = []
+        for index, comparison in enumerate(navigation_apps):
+            path = f"{root_path}.navigation_apps[{index}]"
+            required = (
+                "name",
+                "type_he", "type_en",
+                "best_for_he", "best_for_en",
+                "capabilities_he", "capabilities_en",
+                "advantages_he", "advantages_en",
+                "limitations_he", "limitations_en",
+                "setup_he", "setup_en",
+                "caution_he", "caution_en",
+                "source_url",
+                "video_ids",
+            )
+            if not require_keys(audit, comparison, required, path):
+                continue
+            assert isinstance(comparison, dict)
+            audit.check(
+                is_nonempty_string(comparison["name"]),
+                "travel.navigation_app_name",
+                "Navigation-app name must be non-empty",
+                path=f"{path}.name",
+            )
+            validate_bilingual_text_fields(audit, comparison, ("type", "best_for", "setup", "caution"), path)
+            validate_bilingual_list_fields(audit, comparison, ("capabilities", "advantages", "limitations"), path)
+            audit.check(
+                valid_https_url(comparison["source_url"]),
+                "travel.source_url",
+                "source_url must be a valid credential-free HTTPS URL",
+                path=f"{path}.source_url",
+            )
+            if isinstance(comparison["source_url"], str):
+                source_urls.append(comparison["source_url"])
+            navigation_video_references += validate_travel_video_ids(
+                audit,
+                comparison["video_ids"],
+                internal_ids,
+                f"{path}.video_ids",
+            )
+        duplicate_urls = duplicate_values(source_urls)
+        audit.check(
+            not duplicate_urls,
+            "travel.duplicate_source_url",
+            f"Navigation source URLs must be unique: {duplicate_urls}",
+            path=f"{root_path}.navigation_apps",
+            details=duplicate_urls or None,
+        )
+
+    knowledge_guides = travel["knowledge_guides"]
+    guide_array_ok = isinstance(knowledge_guides, list)
+    audit.check(
+        guide_array_ok,
+        "travel.knowledge_guides_array",
+        "knowledge_guides must be an array",
+        path=f"{root_path}.knowledge_guides",
+    )
+    guide_video_references = 0
+    if guide_array_ok:
+        assert isinstance(knowledge_guides, list)
+        audit.check(
+            len(knowledge_guides) == 6,
+            "travel.knowledge_guides_count",
+            f"Expected exactly six knowledge guides; found {len(knowledge_guides)}",
+            path=f"{root_path}.knowledge_guides",
+        )
+        guide_ids = [item.get("id") for item in knowledge_guides if isinstance(item, dict)]
+        duplicate_ids = duplicate_values(guide_ids)
+        audit.check(
+            not duplicate_ids and len(guide_ids) == len(knowledge_guides),
+            "travel.knowledge_guide_ids",
+            f"Knowledge-guide IDs must be present and unique: {duplicate_ids}",
+            path=f"{root_path}.knowledge_guides",
+            details=duplicate_ids or None,
+        )
+        for index, guide in enumerate(knowledge_guides):
+            path = f"{root_path}.knowledge_guides[{index}]"
+            required = (
+                "id",
+                "eyebrow_he", "eyebrow_en",
+                "title_he", "title_en",
+                "summary_he", "summary_en",
+                "best_when_he", "best_when_en",
+                "tradeoffs_he", "tradeoffs_en",
+                "setup_checks_he", "setup_checks_en",
+                "video_ids",
+            )
+            if not require_keys(audit, guide, required, path):
+                continue
+            assert isinstance(guide, dict)
+            audit.check(
+                is_nonempty_string(guide["id"]) and SLUG_RE.fullmatch(guide["id"]) is not None,
+                "travel.knowledge_guide_id",
+                "Knowledge-guide ID must be a lowercase slug",
+                path=f"{path}.id",
+            )
+            validate_bilingual_text_fields(audit, guide, ("eyebrow", "title", "summary"), path)
+            validate_bilingual_list_fields(audit, guide, ("best_when", "tradeoffs", "setup_checks"), path)
+            guide_video_references += validate_travel_video_ids(
+                audit,
+                guide["video_ids"],
+                internal_ids,
+                f"{path}.video_ids",
+            )
+
+    audit.stats.update(
+        {
+            "travel_trip_types": len(trip_types) if isinstance(trip_types, list) else 0,
+            "travel_checklists": len(checklists) if isinstance(checklists, list) else 0,
+            "travel_checklist_items_per_language": checklist_item_count,
+            "travel_navigation_comparisons": len(navigation_apps) if isinstance(navigation_apps, list) else 0,
+            "travel_knowledge_guides": len(knowledge_guides) if isinstance(knowledge_guides, list) else 0,
+            "travel_video_references": navigation_video_references + guide_video_references,
+        }
+    )
+
+
 def validate_synonyms(audit: ValidationAudit, synonyms: Any) -> None:
     if not require_keys(audit, synonyms, ("version", "updated", "terms"), "data/synonyms.json"):
         return
@@ -516,7 +1031,12 @@ def validate_site_config(audit: ValidationAudit, config: Any, languages: set[str
     audit.check(has_hebrew(config["site_name_he"]), "config.site_name", "Site name must contain Hebrew", path="data/site-config.json.site_name_he")
     for key in ("meta_title_he", "meta_description_he", "og_title_he", "og_description_he"):
         audit.check(has_hebrew(config[key]), "config.metadata", f"{key} must contain Hebrew text", path=f"data/site-config.json.{key}")
-    audit.check(config["release_version"] == "1.0.0", "config.release_version", "Release version must be 1.0.0", path="data/site-config.json.release_version")
+    audit.check(
+        is_nonempty_string(config["release_version"]) and SEMVER_RE.fullmatch(config["release_version"]) is not None,
+        "config.release_version",
+        "Release version must be a semantic version such as 3.0.0",
+        path="data/site-config.json.release_version",
+    )
     for key in ("author_name", "community_name", "contact", "logo_path"):
         audit.check(isinstance(config[key], str), "config.optional_string", f"{key} must be a string (empty is allowed)", path=f"data/site-config.json.{key}")
     audit.check(has_hebrew(config["safety_warning_he"]), "config.safety_warning", "Safety warning must contain Hebrew text", path="data/site-config.json.safety_warning_he")
@@ -535,6 +1055,7 @@ def run_validation(
     files = {name: root / path.relative_to(ROOT) for name, path in DATA_FILES.items()}
     loaded = {name: load_json(path, audit, str(path.relative_to(root)).replace("\\", "/")) for name, path in files.items()}
     taxonomy_allowed = validate_taxonomy(audit, loaded["taxonomy"])
+    validate_domain_category_map(audit, loaded["taxonomy"], loaded["videos"], taxonomy_allowed)
     validate_video_schema(audit, loaded["video_schema"], loaded["videos"])
     internal_ids = validate_videos(
         audit,
@@ -544,10 +1065,16 @@ def run_validation(
         minimum_count=minimum_count,
     )
     validate_learning_paths(audit, loaded["learning_paths"], internal_ids, taxonomy_allowed["skill_levels"], taxonomy_allowed["risk_levels"])
+    learning_path_ids = {
+        item.get("id")
+        for item in loaded["learning_paths"] or []
+        if isinstance(item, dict) and isinstance(item.get("id"), str)
+    } if isinstance(loaded["learning_paths"], list) else set()
+    validate_travel_guides(audit, loaded["travel_guides"], internal_ids, learning_path_ids)
     validate_synonyms(audit, loaded["synonyms"])
     validate_site_config(audit, loaded["site_config"], taxonomy_allowed["languages"])
     placeholder_hits: list[dict[str, str]] = []
-    for label in ("videos", "taxonomy", "learning_paths", "synonyms", "site_config"):
+    for label in ("videos", "taxonomy", "learning_paths", "travel_guides", "synonyms", "site_config"):
         for value_path, text in walk_strings(loaded[label], f"data.{label}"):
             match = PLACEHOLDER_RE.search(text)
             if match:

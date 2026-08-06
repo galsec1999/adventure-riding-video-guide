@@ -1,8 +1,8 @@
-# מדיניות אבטחה / Security Policy
+# מדיניות אבטחה / Security Policy — גרסת מסמך 1.0.1
 
 ## דיווח פרטי
 
-אם מצאתם פגיעות שעלולה לסכן משתמשים, פרטיות, שלמות נתונים או תהליך הפרסום, אל תפתחו Issue ציבורי עם פרטי ניצול. שלחו תיאור והוראות שחזור אל [Ilan.nachman@gmail.com](mailto:Ilan.nachman@gmail.com).
+אם מצאתם פגיעות שעלולה לסכן משתמשים, פרטיות, שלמות נתונים או תהליך הפרסום, אל תפתחו Issue ציבורי עם פרטי ניצול. השתמשו באפשרות **Report a vulnerability** בלשונית Security של המאגר: <https://github.com/galsec1999/adventure-riding-video-guide/security/advisories/new>.
 
 נשתדל לאשר קבלה, לבדוק את ההשפעה ולפרסם תיקון לפני חשיפה מלאה. אין לכלול בדיווח Secrets או מידע אישי שאינו נדרש לשחזור.
 

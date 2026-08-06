@@ -1,31 +1,47 @@
-# מצב הפרויקט — גרסת מסמך 2.3.2
+# מצב הפרויקט — גרסת מסמך 3.0.1
 
-- **גרסה:** 2.3.1 PWA
-- **מצב:** פורסם ונבדק ב־GitHub Pages
-- **תוצאה:** PASS
+- **גרסת מוצר:** 3.0.0
+- **מצב:** מועמד שחרור מקומי מלא; commit, פרסום GitHub Pages ואימות חי יבוצעו לאחר סגירת מסמכי המסירה
+- **תוצאת שחרור:** שערי הנתונים, הקישורים, הקוד, ה־PWA, הסנכרון וה־Design QA עברו. בדיקת Content Quality Legacy נשארה `FAIL` כחריגה לא חוסמת ומתועדת; אין טענה שכל שערי האיכות עברו.
 - **Repository ציבורי:** <https://github.com/galsec1999/adventure-riding-video-guide>
-- **אתר חי:** <https://galsec1999.github.io/adventure-riding-video-guide/>
-- **בסיס תוכן:** חבילת `Adventure-Riding-Video-Guide-v2.2.1-Bilingual-Web-Package.zip`
-- **סרטונים:** 450 בדיוק — 66 בעברית ו־384 באנגלית
-- **ערוצים ייחודיים:** 175
-- **מסלולי למידה:** 17
-- **מזהי רשומה / YouTube ייחודיים:** 450 / 450
-- **בדיקות מקומיות:** 957 בדיקות PWA, ‏63 בדיקות Node ו־14,083 בדיקות נתוני המקור עברו; 0 נכשלו
-- **עדכון פרטיות 2026-08-05:** הקרדיט הציבורי מציג „אילן” בלבד, ללא שם משפחה וללא טענת © אישית; נוסח הזכויות הכללי נשמר בניסוח קהילתי
-- **בדיקות Chrome:** עברית RTL, אנגלית LTR, Desktop ‏1440×900, Mobile ‏390×844, מצב כהה/בהיר, 0 גלישה אופקית
-- **PWA:** Manifest תקין, Service Worker פעיל ושולט, אירוע התקנה אמיתי זמין, עדכון בהסכמה ו־offline app shell עברו
-- **GitHub Actions:** Validate run `31033294766` ו־Pages run `31033296204` עברו עבור גרסה 2.3.1
-- **אימות חי:** GitHub Pages מציג גרסת מוצר 2.3.1, את „אילן” בלבד, את ההורדה `Adventure-Riding-Video-Guide-v2.3.1-Standalone.html` ואת המטמון `adventure-guide-v2.3.1`
-- **Tag/Release:** `v2.3.1`
-- **משימת המשך:** אין
+- **אתר ציבורי:** <https://galsec1999.github.io/adventure-riding-video-guide/>
+- **סרטונים פעילים:** 411 — מהם 69 בעברית ו־342 באנגלית
+- **ערוצים ייחודיים:** 165
+- **מסלולי למידה:** 17 מסלולים, 136 שלבים ו־416 הפניות לסרטונים
+- **מרכז טיולים:** 3 סוגי טיול, 42 פריטי checklist, ‏10 כלי ניווט ו־6 מדריכי ידע
+- **קישורי YouTube:** ‏411/411 פעילים; 0 unavailable, ‏0 indeterminate ו־0 rate-limited
+- **PWA:** ‏896 בדיקות עברו, 0 נכשלו
+- **בדיקות Python:** ‏32/32 עברו
+- **בדיקות Node:** ‏76/76 עברו
+- **בדיקות חיפוש:** ‏25/25 עברו
+- **אימות נתונים וסכמה:** ‏25,132 בדיקות עברו, 0 נכשלו ו־0 אזהרות
+- **ביקורת תוכן מבנית:** ‏25,131 בדיקות עברו, 0 נכשלו
+- **תחביר JavaScript:** ‏13/13 קבצים עברו
+- **סנכרון פרסום:** ‏33/33 קבצים תואמים בין המקור לבין `site/`, ללא חסרים, עודפים או הבדלי hash
+- **Standalone:** ‏411 רשומות מוטמעות; הקובץ תואם לגרסת מוצר 3.0.0 ולנתוני האתר
+- **AI מקומי:** חיפוש סמנטי אופציונלי במכשיר, ללא API או Backend; החיפוש הרגיל נשאר זמין תמיד
+- **פרטיות:** הקרדיט הציבורי הוא „אילן” בלבד; השם המלא, כתובת האימייל האישית ושורת © אישית אינם מוצגים
+- **Design QA:** עברית/אנגלית, RTL/LTR, מצב כהה/בהיר, Desktop ‏1440×900 ו־Mobile ‏390×844 נבדקו; 0 גלישה אופקית
+
+## חריגת Content Quality Legacy
+
+הכלי `content_quality_lint.py` מדווח במכוון על חוב תוכן ותיק: **7,137 שגיאות ו־382 אזהרות**. הממצאים כוללים תקצירים קצרים, ניסוחים זהים או דומים וחוסרי ראיות ב־Legacy. הדוח לא הוסתר ולא סומן כ־PASS. החריגה אינה מבטלת את תוצאות שערי הנתונים, הסכמה, הקישורים, הקוד, ה־PWA וה־Design QA, אך היא נשארת חוב עריכה מפורש לסבב עתידי.
 
 ## ראיות מרכזיות
 
-- `DEPLOYMENT_REPORT.md`
-- `reports/pwa-validation.json`
-- `reports/pwa-local-test.json`
-- `reports/live-site-test.json`
-- `reports/screenshots/pwa-local/`
-- `reports/screenshots/live/`
+- `reports/site-upgrade-v3/final-link-check.json`
+- `reports/site-upgrade-v3/pwa-validation.json`
+- `reports/site-upgrade-v3/search-acceptance.json`
+- `reports/site-upgrade-v3/content-audit.json`
+- `reports/site-upgrade-v3/content-quality.json`
+- `reports/site-upgrade-v3/design-qa.md`
+- `reports/site-upgrade-v3/design-comparison.png`
+- `reports/site-upgrade-v3/screenshots/`
+- `documentation/SITE_UPGRADE_PLAN_HE.md`
+- `documentation/THIRD_PARTY_NOTICES.md`
 - `.github/workflows/validate.yml`
 - `.github/workflows/deploy-pages.yml`
+
+## המשך עתידי
+
+המשך העבודה מוגבל לחוב Content Quality Legacy ולהרחבת תוכן מאומתת בעתיד, כמפורט ב־`NEXT_ACTION.md`. אין לבצע אותו כחלק מסבב שחרור 3.0.0.

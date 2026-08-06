@@ -18,6 +18,7 @@ from tools import (
     serve_acceptance_fixture,
     validate_data,
     validate_wave1,
+    verify_site_sync,
 )
 from tools.fixture_factory import load_json, materialize_project_fixture
 
@@ -27,6 +28,69 @@ SOURCE_COUNT = len(SOURCE_VIDEOS)
 
 
 class MaintenanceToolsTests(unittest.TestCase):
+    def test_site_sync_detects_missing_extra_and_changed_publication_files(self) -> None:
+        with tempfile.TemporaryDirectory() as temp_dir:
+            root = Path(temp_dir)
+            site = root / "site"
+            source_files = {
+                "index.html": b"<main>canonical</main>\n",
+                "assets/js/app.js": b"export const version = 3;\n",
+                "assets/css/styles.css": b":root { color: black; }\n",
+                "data/videos.json": b"[]\n",
+            }
+            for relative, content in source_files.items():
+                source = root / relative
+                source.parent.mkdir(parents=True, exist_ok=True)
+                source.write_bytes(content)
+                published = site / relative
+                published.parent.mkdir(parents=True, exist_ok=True)
+                published.write_bytes(content)
+
+            (site / "assets/js/app.js").write_text("stale\n", encoding="utf-8")
+            (site / "data/videos.json").unlink()
+            (site / "data/stale.json").write_text("{}\n", encoding="utf-8")
+
+            result = verify_site_sync.compare_site(root, site)
+
+        self.assertEqual("fail", result["status"])
+        self.assertEqual(["data/videos.json"], result["missing"])
+        self.assertEqual(["data/stale.json"], result["extra"])
+        self.assertEqual(["assets/js/app.js"], [item["path"] for item in result["mismatched"]])
+        self.assertRegex(result["mismatched"][0]["source_sha256"], r"^[0-9a-f]{64}$")
+
+    def test_site_sync_makes_the_complete_publication_surface_exact(self) -> None:
+        with tempfile.TemporaryDirectory() as temp_dir:
+            root = Path(temp_dir)
+            site = root / "site"
+            for relative, content in {
+                "index.html": "canonical\n",
+                "assets/js/app.js": "canonical js\n",
+                "data/videos.json": "[]\n",
+            }.items():
+                source = root / relative
+                source.parent.mkdir(parents=True, exist_ok=True)
+                source.write_text(content, encoding="utf-8")
+            pwa_only = site / "manifest.webmanifest"
+            pwa_only.parent.mkdir(parents=True, exist_ok=True)
+            pwa_only.write_text("{}\n", encoding="utf-8")
+            stale_managed = site / "data" / "stale.json"
+            stale_managed.parent.mkdir(parents=True, exist_ok=True)
+            stale_managed.write_text("{}\n", encoding="utf-8")
+
+            changes = verify_site_sync.synchronize_site(root, site)
+            result = verify_site_sync.compare_site(root, site)
+            pwa_only_exists = pwa_only.exists()
+            stale_managed_exists = stale_managed.exists()
+
+        self.assertEqual(
+            ["assets/js/app.js", "data/videos.json", "index.html"],
+            changes["copied"],
+        )
+        self.assertEqual(["data/stale.json", "manifest.webmanifest"], changes["removed"])
+        self.assertEqual("pass", result["status"], result)
+        self.assertFalse(pwa_only_exists)
+        self.assertFalse(stale_managed_exists)
+
     def test_complete_data_validation_is_nonempty_and_count_agnostic_by_default(self) -> None:
         result = validate_data.run_validation()
         self.assertEqual("pass", result["status"], result["errors"])
@@ -52,6 +116,26 @@ class MaintenanceToolsTests(unittest.TestCase):
         self.assertIn("videos.nonempty", {error["code"] for error in result["errors"]})
         self.assertEqual(0, result["count_expectation"]["actual"])
         self.assertFalse(result["count_expectation"]["satisfied"])
+
+    def test_data_validation_rejects_primary_category_outside_domain_mapping(self) -> None:
+        with tempfile.TemporaryDirectory() as temp_dir:
+            root = Path(temp_dir)
+            materialize_project_fixture(validate_data.ROOT, root, SOURCE_COUNT)
+            videos_path = root / "data" / "videos.json"
+            taxonomy = load_json(root / "data" / "categories.json")
+            videos = load_json(videos_path)
+            first = videos[0]
+            allowed = set(taxonomy["domain_category_map"][first["domain"]])
+            disallowed = next(item["id"] for item in taxonomy["categories"] if item["id"] not in allowed)
+            first["primary_category"] = disallowed
+            videos_path.write_text(json.dumps(videos, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+
+            result = validate_data.run_validation(root)
+
+        self.assertEqual("fail", result["status"])
+        domain_errors = [error for error in result["errors"] if error["code"] == "video.domain_category"]
+        self.assertEqual(1, len(domain_errors), result["errors"])
+        self.assertEqual(first["id"], domain_errors[0]["details"][0]["id"])
 
     def test_expected_and_minimum_count_policies_pass_and_fail_explicitly(self) -> None:
         expected = validate_data.run_validation(expected_count=SOURCE_COUNT)
@@ -133,8 +217,8 @@ class MaintenanceToolsTests(unittest.TestCase):
         self.assertEqual(SOURCE_COUNT, payload["count_expectation"]["actual"])
         self.assertIn("legacy phase-specific wrapper", stderr.getvalue())
 
-    def test_validator_accepts_temporary_250_and_300_record_fixtures(self) -> None:
-        for target_count in (250, 300):
+    def test_validator_accepts_current_and_larger_record_fixtures(self) -> None:
+        for target_count in (SOURCE_COUNT, 500):
             with self.subTest(target_count=target_count), tempfile.TemporaryDirectory() as temp_dir:
                 root = Path(temp_dir)
                 materialize_project_fixture(validate_data.ROOT, root, target_count)
@@ -150,14 +234,14 @@ class MaintenanceToolsTests(unittest.TestCase):
                 self.assertEqual(target_count, result["stats"]["unique_internal_ids"])
                 self.assertEqual(target_count, result["stats"]["unique_youtube_video_ids"])
 
-    def test_300_record_fixture_satisfies_minimum_250_policy(self) -> None:
+    def test_500_record_fixture_satisfies_minimum_release_policy(self) -> None:
         with tempfile.TemporaryDirectory() as temp_dir:
             root = Path(temp_dir)
-            materialize_project_fixture(validate_data.ROOT, root, 300)
-            result = validate_data.run_validation(root, minimum_count=250)
+            materialize_project_fixture(validate_data.ROOT, root, 500)
+            result = validate_data.run_validation(root, minimum_count=SOURCE_COUNT)
         self.assertEqual("pass", result["status"], result["errors"])
         self.assertEqual(
-            {"mode": "minimum", "value": 250, "actual": 300, "satisfied": True},
+            {"mode": "minimum", "value": SOURCE_COUNT, "actual": 500, "satisfied": True},
             result["count_expectation"],
         )
 
@@ -166,11 +250,11 @@ class MaintenanceToolsTests(unittest.TestCase):
         self.assertFalse(production_logo.exists())
         with tempfile.TemporaryDirectory() as temp_dir:
             root = Path(temp_dir)
-            serve_acceptance_fixture.prepare_site(root, 250, "custom-logo")
+            serve_acceptance_fixture.prepare_site(root, SOURCE_COUNT, "custom-logo")
             videos = load_json(root / "data" / "videos.json")
             config = load_json(root / "data" / "site-config.json")
-            self.assertEqual(250, len(videos))
-            self.assertEqual(250, len({video["id"] for video in videos}))
+            self.assertEqual(SOURCE_COUNT, len(videos))
+            self.assertEqual(SOURCE_COUNT, len({video["id"] for video in videos}))
             self.assertEqual("מדריך בדיקת תצורה", config["site_name_he"])
             self.assertEqual("קהילת בדיקות מקומית", config["community_name"])
             self.assertEqual("מדריך בדיקת תצורה", config["meta_title_he"])
@@ -182,7 +266,7 @@ class MaintenanceToolsTests(unittest.TestCase):
     def test_acceptance_fixture_can_expose_a_safe_empty_data_error_state(self) -> None:
         with tempfile.TemporaryDirectory() as temp_dir:
             root = Path(temp_dir)
-            serve_acceptance_fixture.prepare_site(root, 250, "broken-data")
+            serve_acceptance_fixture.prepare_site(root, SOURCE_COUNT, "broken-data")
             self.assertEqual([], load_json(root / "data" / "videos.json"))
             self.assertTrue((root / "index.html").is_file())
 
@@ -247,7 +331,7 @@ class MaintenanceToolsTests(unittest.TestCase):
             report = build_audit.build_audit(Path(temp_dir))
         self.assertEqual(SOURCE_COUNT, report["total_videos"])
         self.assertEqual(report["total_videos"], report["unique_youtube_video_ids"])
-        self.assertEqual(report["learning_paths"]["count"], 8)
+        self.assertEqual(report["learning_paths"]["count"], 17)
         self.assertEqual("pass", report["validation"]["status"])
 
     def test_audit_writes_all_three_formats(self) -> None:

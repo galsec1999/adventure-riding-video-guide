@@ -88,10 +88,10 @@ test("index is Hebrew RTL and all declared local assets exist", async () => {
   const indexPath = join(projectRoot, "index.html");
   const html = await readFile(indexPath, "utf8");
   assert.match(html, /<html\b[^>]*\blang=["']he["'][^>]*\bdir=["']rtl["']/i);
-  assert.match(html, /<script\b[^>]*\btype=["']module["'][^>]*\bsrc=["']assets\/js\/app\.js["']/i);
+  assert.match(html, /<script\b(?=[^>]*\btype=["']module["'])(?=[^>]*\bsrc=["'](?:\.\/)?assets\/js\/app\.js(?:\?[^"']*)?["'])[^>]*>/i);
 
-  const localAssets = [...html.matchAll(/\b(?:href|src)=["'](assets\/[^"'#?]+)["']/gi)]
-    .map((match) => match[1]);
+  const localAssets = [...html.matchAll(/\b(?:href|src)=["']((?:\.\/)?assets\/[^"'#?]+)["']/gi)]
+    .map((match) => match[1].replace(/^\.\//, ""));
   assert.ok(localAssets.length >= 2, "expected stylesheet and module references");
   for (const relativePath of new Set(localAssets)) {
     assert.ok(await fileExists(join(projectRoot, relativePath)), `missing declared asset: ${relativePath}`);

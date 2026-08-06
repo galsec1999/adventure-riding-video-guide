@@ -1,0 +1,31 @@
+{
+  "status": "pass",
+  "checks_passed": 25132,
+  "checks_failed": 0,
+  "errors": [],
+  "warnings": [],
+  "count_expectation": {
+    "mode": "expected",
+    "value": 411,
+    "actual": 411,
+    "satisfied": true
+  },
+  "stats": {
+    "domain_category_pairs": 69,
+    "learning_paths": 17,
+    "learning_path_steps": 136,
+    "learning_path_video_references": 416,
+    "travel_trip_types": 3,
+    "travel_checklists": 7,
+    "travel_checklist_items_per_language": 42,
+    "travel_navigation_comparisons": 10,
+    "travel_knowledge_guides": 6,
+    "travel_video_references": 34,
+    "synonym_concepts": 47,
+    "videos": 411,
+    "unique_internal_ids": 411,
+    "unique_youtube_video_ids": 411,
+    "taxonomy_categories": 48,
+    "taxonomy_tags": 191
+  }
+}

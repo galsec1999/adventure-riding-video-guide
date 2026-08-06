@@ -1,0 +1,184 @@
+[
+  {
+    "local_id": "yt-2qcnOx2UMt4",
+    "decision": "supports",
+    "evidence_types": ["description", "chapters"],
+    "confidence": "medium",
+    "rationale_he": "התיאור מציין במפורש הדרכה להרמת אופנוע שנתקע בצד מדרון, והפרקים מתעדים אחיזה בחזית ושימוש ב־Bump Start. זהו בסיס ממשי לסיווג הרמה במדרון, אך הראיות אינן מאמתות במפורש כל ניסוח מקומי על אבטחה, בחירת צד והימנעות ממשיכה בגב."
+  },
+  {
+    "local_id": "yt-USVn82stPho",
+    "decision": "supports",
+    "evidence_types": ["description", "chapters"],
+    "confidence": "medium",
+    "rationale_he": "התיאור מפרט שלוש טכניקות לחילוץ אופנוע שנתקע בחול עמוק, והפרקים כוללים פינוי הנתיב, משיכת הכידון ורכיבה החוצה. הראיות תומכות בסיווג חילוץ ובתקציר הכללי, אך אינן תומכות בטענות המקומיות על פריקת מטען או שימוש בעזרה ובכלים."
+  },
+  {
+    "local_id": "yt-21golINzets",
+    "decision": "supports",
+    "evidence_types": ["description"],
+    "confidence": "medium",
+    "rationale_he": "התיאור דן במפורש בבחירת לחץ ניפוח או הפחתת לחץ ובהקמת ערך בסיס לשיפור ביצועי הצמיג, ולכן מספק בסיס לסיווג כיוון לחץ אוויר. אין בו ראיה מפורשת לבדיקה בצמיג קר, התאמה לעומס או שימוש בהוראות היצרן, ולכן הביטחון מוגבל."
+  },
+  {
+    "local_id": "yt-otnEotD6Y3c",
+    "decision": "supports",
+    "evidence_types": ["description"],
+    "confidence": "medium",
+    "rationale_he": "התיאור מסביר שלחץ האוויר משפיע על אחיזה, יציבות ושליטה, ושיש להתאימו לאופנוע ולתוואי במקום לחפש מספר יחיד. זה תומך ישירות בקטגוריה ובתקציר, אך אינו מאמת בדיקה כשהצמיג קר או הפניה להוראות היצרן."
+  },
+  {
+    "local_id": "yt-S371SeT-b4M",
+    "decision": "supports",
+    "evidence_types": ["description", "chapters"],
+    "confidence": "high",
+    "rationale_he": "התיאור מפרט את השפעת הלחץ על אחיזה, התנהגות, יציבות, נוחות ובלאי, מורה למדוד כשהצמיג קר ומפנה לספר הרכב או למדבקת היצרן. הפרק החי מחזק את נושא המדידה הקרה; ההתאמה לעומס אינה מפורטת, אך יתר הטענות המקומיות נתמכות היטב."
+  },
+  {
+    "local_id": "yt-CI6h7XtyINY",
+    "decision": "supports",
+    "evidence_types": ["description", "chapters"],
+    "confidence": "medium",
+    "rationale_he": "התיאור מציג הדרכה בסיסית להבנת פעולת המתלים וכיוונם, והפרקים מתעדים Preload, Compression ו־Rebound. זה תומך בסיווג כיוון מתלים וברוב התקציר, אך Sag ומתודולוגיית שינוי אחד בכל פעם, תיעוד וחזרה לבסיס אינם מתועדים."
+  },
+  {
+    "local_id": "yt-CivTmdpBies",
+    "decision": "supports",
+    "evidence_types": ["description", "chapters"],
+    "confidence": "medium",
+    "rationale_he": "התיאור אומר שהסרטון עוסק בהתאמת מתלי KTM 790/890 לרוכב, והפרקים מתעדים מזלג, Rebound ו־Compression. הסיווג והיבט השיכוך נתמכים, אך Sag, Preload ושלוש נקודות שיטת העבודה המקומיות אינם מקבלים ראיה מפורשת."
+  },
+  {
+    "local_id": "yt-kBZ1ormGpog",
+    "decision": "insufficient",
+    "evidence_types": ["description"],
+    "confidence": "high",
+    "rationale_he": "התיאור הקצר מציין רק שמתלים של KTM 790 R כוונו לכביש ולשטח ומפנה את הקורא לסרטון מלא באתר חיצוני. ללא פרקים או פירוט על Sag, Preload, שיכוך או שיטת מדידה ותיעוד, אין די ראיה לתקציר ולנקודות הלמידה המקומיות."
+  },
+  {
+    "local_id": "yt-uKhJBWNJ8Ys",
+    "decision": "insufficient",
+    "evidence_types": ["description"],
+    "confidence": "medium",
+    "rationale_he": "התיאור מציין באופן כללי התאמת מתלים למשקל ולפרופיל הרכיבה וטיפים לכיוון, ולכן הנושא הכללי סביר. עם זאת אין פירוט חי על Sag, Preload, שיכוך, מדידת בסיס, שינוי יחיד או תיעוד, ואין פרקים שיסגרו את הפער."
+  },
+  {
+    "local_id": "yt-jeijOYcnlvU",
+    "decision": "supports",
+    "evidence_types": ["description", "chapters"],
+    "confidence": "medium",
+    "rationale_he": "התיאור והפרקים מתעדים במפורש Preload, Static/Race Sag, מדידה, חישוב ופירוש התוצאות. הם תומכים היטב בסיווג ובחלק המדידה של התקציר, אך מציינים ש־Rebound ו־Compression יידונו בסרטון הבא ואינם מאמתים את טענות השינוי היחיד והתיעוד."
+  },
+  {
+    "local_id": "yt-DmkKmo5XVE0",
+    "decision": "insufficient",
+    "evidence_types": ["description", "chapters"],
+    "confidence": "high",
+    "rationale_he": "התיאור אומר רק לוודא מוכנות לכביש והפרקים כוללים כותרת כללית של צ׳קליסט ואזכור צופר. אין פירוט חי שמבסס את הרשימה המקומית של צמיגים, גלגלים, פקדים, אורות, נוזלים, מטען וחיבורים."
+  },
+  {
+    "local_id": "yt-_u44__eZ_Ug",
+    "decision": "supports",
+    "evidence_types": ["description", "chapters"],
+    "confidence": "high",
+    "rationale_he": "התיאור מגדיר בדיקה לפני כל רכיבה, והפרקים מפרטים צמיגים ולחץ, בלמים ונוזלים, מצערת, שמן, אורות, מתלים, רגלית, הילוכים, שרשרת, מצמד ומתגים. הדבר תומך היטב בצ׳קליסט ובשתי קבוצות הלמידה הראשונות; מטען וחיבורים אינם מופיעים."
+  },
+  {
+    "local_id": "yt-Fz2XB6_63l4",
+    "decision": "supports",
+    "evidence_types": ["description", "chapters"],
+    "confidence": "medium",
+    "rationale_he": "התיאור והפרקים מתעדים בדיקה מהירה לפני רכיבה באופנוע שכור, לרבות צמיגים, בלמים, שרשרת, מנוע וקילומטראז׳. זהו בסיס ממשי לסיווג בדיקה לפני טיול, אך אורות, נוזלים, מטען וחיבורים מן הטקסט המקומי אינם מתועדים."
+  },
+  {
+    "local_id": "yt-84ZNjxLHjmc",
+    "decision": "supports",
+    "evidence_types": ["description"],
+    "confidence": "medium",
+    "rationale_he": "התיאור מציין במפורש הדגמה לניקוי ולשימון נכון של שרשרת אופנוע, ולכן תומך בסיווג תחזוקה ובחלק המרכזי של התקציר. הוא אינו מתעד בדיקת מצב ומתיחה או עבודה לפי ספר היצרן."
+  },
+  {
+    "local_id": "yt-RA6OPG_cFms",
+    "decision": "supports",
+    "evidence_types": ["description", "chapters"],
+    "confidence": "high",
+    "rationale_he": "התיאור והפרקים מפרטים חשיבות מרווח השרשרת, מדידה, ערכי יצרן, שחרור ציר, כיוון הדרגתי, יישור, הידוק במומנט וניקוי. זהו בסיס מפורט לסיווג תחזוקת שרשרת, לתקציר ולנקודות בדיקת המתיחה והעבודה לפי הוראות היצרן."
+  },
+  {
+    "local_id": "yt-rejkYx8SgVc",
+    "decision": "supports",
+    "evidence_types": ["description", "chapters"],
+    "confidence": "high",
+    "rationale_he": "התיאור עוסק בניקוי ובכיוון שרשרת בזמן נסיעה, והפרקים מתעדים ניקוי ושימון, העברה לניוטרל, בדיקת מתיחה, שחרור אום הציר וכיוון. הסיווג, התקציר ושתי נקודות הלמידה הראשונות נתמכים היטב; הפניה לספר היצרן אינה מתועדת."
+  },
+  {
+    "local_id": "yt-erpkyD7SMfw",
+    "decision": "supports",
+    "evidence_types": ["description"],
+    "confidence": "medium",
+    "rationale_he": "תיאור ה־MSF מפרט תצורות רכיבה, פגישות טרום־רכיבה וסימני ידיים, ולכן תומך בסיווג רכיבה קבוצתית, בתדריך ובמבנה הקבוצה. אין בו ראיה מפורשת למוביל ומאסף או לנוהל עצירה ופיצול, וההקשר המשפטי הוא אמריקאי."
+  },
+  {
+    "local_id": "yt-hQAPTHLg3Go",
+    "decision": "supports",
+    "evidence_types": ["description", "chapters"],
+    "confidence": "medium",
+    "rationale_he": "התיאור מציג טיפים וטכניקות להצלחת רכיבה קבוצתית, והפרקים עוסקים בהכנה, מבנה, רכיבה בקצב אישי, רוכבים חלשים ועצמאות. זהו בסיס לסיווג ולחלק מן התקציר, אך תפקידי מוביל ומאסף ונוהל עצירה או פיצול אינם מתועדים."
+  },
+  {
+    "local_id": "yt-zhMvb5-EJQ8",
+    "decision": "supports",
+    "evidence_types": ["description", "chapters"],
+    "confidence": "medium",
+    "rationale_he": "התיאור מזהה במפורש הדרכה לרכיבה מיטבית בקבוצה, והפרקים מפרטים תכנון מסלול, סדר רכיבה, אחריות אישית, שמירה על הרוכב שמאחור ומבנה מדורג. הדבר תומך בסיווג, בתיאום ובמרווחים, אך לא בנוהל עצירה ופיצול מפורש."
+  },
+  {
+    "local_id": "yt-nJtV9JxZ3wY",
+    "decision": "supports",
+    "evidence_types": ["description", "chapters"],
+    "confidence": "high",
+    "rationale_he": "התיאור מציג טיפים מעשיים לפני רכיבה קבוצתית, והפרקים מתעדים פגישת טרום־רכיבה, סדר רכיבה, מבנה מדורג והיפרדות. אלה תומכים ישירות בסיווג, בתקציר ובנקודות התדריך, המבנה והטיפול בפיצול."
+  },
+  {
+    "local_id": "yt-mPgGjQBkSv4",
+    "decision": "insufficient",
+    "evidence_types": ["description"],
+    "confidence": "high",
+    "rationale_he": "התיאור עוסק רק בשמירת מבנה קבוצתי בטוח כאשר רכב מאחור מבקש לעקוף. זה תומך בתת־נושא צר של מבנה, אך אינו מבסס את התקציר הרחב על תיאום, מרווחים, מוביל ומאסף או את נקודות התדריך והפיצול."
+  },
+  {
+    "local_id": "yt-FTVaL-a3XUo",
+    "decision": "insufficient",
+    "evidence_types": ["description"],
+    "confidence": "high",
+    "rationale_he": "התיאור אומר רק שהסרטון הוא סקירה של פעולות בטוחות ברכיבה עם קבוצה, זוג או אופנוע אחר, ולא מפרט את הפעולות עצמן. ללא פרקים אין בסיס לטענות המקומיות על תדריך, מבנה, מרווחים, מוביל ומאסף או נוהל פיצול."
+  },
+  {
+    "local_id": "yt-yW7GW4ILInI",
+    "decision": "supports",
+    "evidence_types": ["description", "chapters"],
+    "confidence": "high",
+    "rationale_he": "התיאור והפרקים מפרטים תכנון עצירות לדלק ולרענון, עצירה כאשר מתעייפים, עייפות עיניים והימנעות מארוחה כבדה שפוגעת בריכוז. הם תומכים ישירות בניהול הפסקות, זיהוי עייפות ועצירה לפני ירידה נוספת ביכולת."
+  },
+  {
+    "local_id": "yt-KC1sVC1tDbs",
+    "decision": "insufficient",
+    "evidence_types": ["description"],
+    "confidence": "high",
+    "rationale_he": "התיאור מורכב מקישורים וממילות חיפוש כלליות על חמישה טיפים לרכיבה ארוכה, ללא פירוט של הטיפים וללא פרקים. מאחר שכותרת בלבד אינה ראיה, אין בסיס חי לניהול קצב, תכנון הפסקות או זיהוי ירידה בריכוז."
+  },
+  {
+    "local_id": "yt-GinzCxHMViI",
+    "decision": "reject",
+    "evidence_types": ["description"],
+    "confidence": "high",
+    "rationale_he": "התיאור עוסק בארגון ציוד, נגישות לפריטים חיוניים ושימוש בארגוניות, ואף כולל קישורי מוצרים. הוא אינו עוסק במיקום משקל נמוך וקרוב למרכז, איזון בין הצדדים, אבטחת המטען או בדיקת קשירה; לכן התקציר ונקודות הלמידה המקומיות מייחסים לו תוכן אחר."
+  },
+  {
+    "local_id": "yt-gpOpgtUzjqI",
+    "decision": "supports",
+    "evidence_types": ["description", "chapters"],
+    "confidence": "medium",
+    "rationale_he": "התיאור מפרט איתור, תכנון, שרטוט וניווט של שבילי שטח חוקיים, והפרקים מתעדים כלי תכנון, בדיקת חוקיות, בניית מסלול וניווט באפליקציית OS Maps. אלה תומכים בסיווג ניווט מסלול, בתקציר ובבדיקת חוקיות ונגישות; אין ראיה מפורשת לשמירה אופליין או לחלופות לדלק, מזג אוויר וחסימות."
+  }
+]

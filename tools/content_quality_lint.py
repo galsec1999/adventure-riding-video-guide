@@ -452,6 +452,7 @@ def audit_dataset(videos: list[dict[str, Any]], ledger: Any | None) -> dict[str,
     counts = Counter(item.severity for item in findings)
     codes = Counter(item.code for item in findings)
     return {
+        "document_version": "1.0.0",
         "status": "pass" if counts["error"] == 0 else "fail",
         "policy": {
             "summary_word_range": [SUMMARY_MIN_WORDS, SUMMARY_MAX_WORDS],
@@ -507,7 +508,7 @@ def render_html(report: dict[str, Any]) -> str:
   </style>
 </head>
 <body>
-  <h1>ביקורת איכות תוכן</h1>
+  <h1>ביקורת איכות תוכן — גרסת מסמך 1.0.0</h1>
   <p class="status">{html.escape(status.upper())}</p>
   <p>{stats['videos']} סרטונים · {stats['errors']} שגיאות · {stats['warnings']} אזהרות</p>
   <table>

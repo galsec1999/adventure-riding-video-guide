@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "urn:adventure-riding-video-guide:schema:video:1.0",
-  "title": "Adventure Riding Video Record",
+  "$id": "urn:adventure-riding-video-guide:schema:video:3.0.0",
+  "title": "Adventure Riding Video Record — bilingual v3.0.0",
   "type": "object",
   "additionalProperties": false,
   "required": [
@@ -11,6 +11,7 @@
     "thumbnail_url",
     "title_original",
     "title_he",
+    "title_en",
     "channel_name",
     "channel_url",
     "published_date",
@@ -20,6 +21,8 @@
     "domain",
     "primary_category",
     "secondary_categories",
+    "subtopics",
+    "content_type",
     "tags",
     "skill_level",
     "risk_level",
@@ -28,16 +31,25 @@
     "terrain_types",
     "road_conditions",
     "summary_he",
+    "summary_en",
     "learning_points_he",
+    "learning_points_en",
     "fit_for_he",
+    "fit_for_en",
     "why_watch_he",
+    "why_watch_en",
     "exercises_he",
+    "exercises_en",
     "equipment_he",
+    "equipment_en",
     "safety_warnings_he",
+    "safety_warnings_en",
     "common_mistakes_he",
+    "common_mistakes_en",
     "chapters",
     "quality_score",
     "quality_reason_he",
+    "quality_reason_en",
     "source_type",
     "contains_marketing",
     "related_video_ids",
@@ -69,6 +81,10 @@
       "type": "string",
       "minLength": 1
     },
+    "title_en": {
+      "type": "string",
+      "minLength": 1
+    },
     "channel_name": {
       "type": "string",
       "minLength": 1
@@ -92,7 +108,11 @@
       "minimum": 0
     },
     "language": {
-      "type": "string"
+      "type": "string",
+      "enum": [
+        "he",
+        "en"
+      ]
     },
     "subtitle_languages": {
       "type": "array",
@@ -102,7 +122,15 @@
       "uniqueItems": true
     },
     "domain": {
-      "type": "string"
+      "type": "string",
+      "enum": [
+        "offroad_adventure",
+        "road",
+        "mixed",
+        "practice",
+        "safety_recovery",
+        "touring_travel"
+      ]
     },
     "primary_category": {
       "type": "string"
@@ -114,6 +142,27 @@
       },
       "uniqueItems": true
     },
+    "subtopics": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "type": "string"
+      }
+    },
+    "content_type": {
+      "type": "string",
+      "enum": [
+        "technique",
+        "explainer",
+        "drill",
+        "maintenance_howto",
+        "checklist",
+        "touring_guide",
+        "course_overview",
+        "case_study"
+      ]
+    },
     "tags": {
       "type": "array",
       "items": {
@@ -123,10 +172,21 @@
       "minItems": 2
     },
     "skill_level": {
-      "type": "string"
+      "type": "string",
+      "enum": [
+        "beginner",
+        "advanced_beginner",
+        "intermediate",
+        "advanced"
+      ]
     },
     "risk_level": {
-      "type": "string"
+      "type": "string",
+      "enum": [
+        "low",
+        "medium",
+        "high"
+      ]
     },
     "motorcycle_types": {
       "type": "array",
@@ -160,9 +220,22 @@
     },
     "summary_he": {
       "type": "string",
-      "minLength": 40
+      "minLength": 30
+    },
+    "summary_en": {
+      "type": "string",
+      "minLength": 30
     },
     "learning_points_he": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 8
+      },
+      "minItems": 3,
+      "maxItems": 6
+    },
+    "learning_points_en": {
       "type": "array",
       "items": {
         "type": "string",
@@ -175,7 +248,15 @@
       "type": "string",
       "minLength": 10
     },
+    "fit_for_en": {
+      "type": "string",
+      "minLength": 10
+    },
     "why_watch_he": {
+      "type": "string",
+      "minLength": 10
+    },
+    "why_watch_en": {
       "type": "string",
       "minLength": 10
     },
@@ -186,7 +267,21 @@
       },
       "uniqueItems": true
     },
+    "exercises_en": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
     "equipment_he": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "equipment_en": {
       "type": "array",
       "items": {
         "type": "string"
@@ -201,7 +296,22 @@
       "uniqueItems": true,
       "minItems": 1
     },
+    "safety_warnings_en": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true,
+      "minItems": 1
+    },
     "common_mistakes_he": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "common_mistakes_en": {
       "type": "array",
       "items": {
         "type": "string"
@@ -243,8 +353,21 @@
       "type": "string",
       "minLength": 20
     },
+    "quality_reason_en": {
+      "type": "string",
+      "minLength": 20
+    },
     "source_type": {
-      "type": "string"
+      "type": "string",
+      "enum": [
+        "community_educator",
+        "experienced_rider",
+        "manufacturer",
+        "official_safety_program",
+        "professional_instructor",
+        "riding_school",
+        "training_channel"
+      ]
     },
     "contains_marketing": {
       "type": "boolean"
@@ -264,12 +387,14 @@
         "metadata_verified",
         "content_evidence_types",
         "classification_confidence",
-        "notes_he"
+        "notes_he",
+        "notes_en"
       ],
       "properties": {
         "link_status": {
           "enum": [
             "active_public",
+            "active_public_at_research_date",
             "unavailable",
             "private",
             "unknown"
@@ -285,7 +410,9 @@
               "description",
               "chapters",
               "transcript",
-              "visual_review"
+              "visual_review",
+              "captions_available",
+              "youtube_search_metadata"
             ]
           },
           "minItems": 1,
@@ -299,6 +426,10 @@
           ]
         },
         "notes_he": {
+          "type": "string",
+          "minLength": 10
+        },
+        "notes_en": {
           "type": "string",
           "minLength": 10
         }

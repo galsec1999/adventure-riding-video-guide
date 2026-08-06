@@ -1,4 +1,4 @@
-import { applySearchAndFilters, normalizeText, prepareVideos, scoreSearchMatch } from "./search.js";
+import { applySearchAndFilters, normalizeText, prepareVideos, scoreSearchMatch, uniqueDisplayTaxonomyIds } from "./search.js";
 import { browserStorage } from "./storage.js";
 import { localizedField, getStoredLanguage, isEnglish, saveLanguage, startEnglishObserver, translateDocument, translateExact } from "./i18n.js";
 import {
@@ -12,6 +12,9 @@ const MOBILE_OVERLAY_QUERY = "(max-width: 59.999rem)";
 const DEFAULT_SITE_NAME = "מדריך הווידאו לרכיבת אדוונצ'ר";
 const DEFAULT_SAFETY_WARNING = "יש לתרגל בהדרגה, במקום בטוח ועם ציוד מיגון מתאים.";
 const SAFE_LOGO_EXTENSION = /\.(?:avif|gif|jpe?g|png|svg|webp)$/i;
+const DATA_CACHE_REVISION = "3.0.0-20260806a";
+const SEMANTIC_META_URL = "data/semantic-index.json";
+const SEMANTIC_WORKER_URL = `assets/js/semantic-worker.js?v=${DATA_CACHE_REVISION}`;
 
 const DATA_FILES = Object.freeze({
   videos: "data/videos.json",
@@ -32,7 +35,7 @@ const EMBEDDED_DATA_IDS = Object.freeze({
 });
 
 const VALID_VIEWS = Object.freeze(["home", "library", "paths", "trips", "smart", "safety"]);
-const FEEDBACK_EMAIL = "Ilan.nachman@gmail.com";
+const FEEDBACK_URL = "https://github.com/galsec1999/adventure-riding-video-guide/issues/new";
 
 const FILTER_IDS = Object.freeze({
   domain: "filter-domain",
@@ -81,8 +84,20 @@ const state = {
   pathProgress: {},
   tripChecklist: new Set(),
   selectedTripType: "day",
+  selectedPathId: "",
   smartQuery: "",
   smartResults: [],
+  smartMatches: [],
+  semantic: {
+    enabled: false,
+    ready: false,
+    loading: false,
+    worker: null,
+    meta: null,
+    matrix: null,
+    pending: new Map(),
+    requestSequence: 0,
+  },
   currentView: "home",
   visibleLimit: INITIAL_VISIBLE_LIMIT,
   activeVideoId: null,
@@ -244,6 +259,10 @@ function currentLanguage() { return state.uiLanguage === "en" ? "en" : "he"; }
 function englishMode() { return isEnglish(currentLanguage()); }
 function ui(he, en) { return englishMode() ? en : he; }
 function localField(record, base) { return localizedField(record, base, currentLanguage()); }
+function localArray(record, base) {
+  const value = englishMode() ? (record?.[`${base}_en`] || record?.[`${base}_he`]) : record?.[`${base}_he`];
+  return Array.isArray(value) ? value : [];
+}
 function videoTitle(video) { return englishMode() ? (video.title_en || video.title_original) : video.title_he; }
 function videoSummary(video) { return englishMode() ? (video.summary_en || video.summary_he) : video.summary_he; }
 function videoArray(video, base) {
@@ -269,7 +288,7 @@ function cleanConfigText(value) {
 
 function normalizeSiteConfig(config) {
   if (!config || Array.isArray(config) || typeof config !== "object") {
-    throw new Error("קובץ הגדרות האתר חייב להיות אובייקט JSON תקין.");
+    throw new Error(ui("קובץ הגדרות האתר חייב להיות אובייקט JSON תקין.", "The site configuration must be a valid JSON object."));
   }
   const language = cleanConfigText(config.default_language);
   const direction = cleanConfigText(config.direction);
@@ -283,9 +302,9 @@ function normalizeSiteConfig(config) {
     logo_path: cleanConfigText(config.logo_path),
     safety_warning_he: cleanConfigText(config.safety_warning_he) || DEFAULT_SAFETY_WARNING,
     safety_warning_en: cleanConfigText(config.safety_warning_en) || "This guide supplements professional instruction and progressive practice; it does not replace them.",
-    release_version: cleanConfigText(config.release_version) || "2.2.0",
-    feedback_email: cleanConfigText(config.feedback_email || config.contact) || FEEDBACK_EMAIL,
-    standalone_filename: cleanConfigText(config.standalone_filename) || "Adventure-Riding-Video-Guide-v2.2.0-Standalone.html",
+    release_version: cleanConfigText(config.release_version) || "3.0.0",
+    feedback_url: cleanConfigText(config.feedback_url) || FEEDBACK_URL,
+    standalone_filename: cleanConfigText(config.standalone_filename) || "Adventure-Riding-Video-Guide-v3.0.0-Standalone.html",
     code_license: cleanConfigText(config.code_license) || "MIT",
     content_license: cleanConfigText(config.content_license) || "CC BY-NC-SA 4.0",
     nonprofit: config.nonprofit !== false,
@@ -372,8 +391,9 @@ function applySiteConfig(config) {
   $$('[data-author-name]').forEach((node) => { node.textContent = config.author_name; });
   $$('[data-author-block]').forEach((node) => { node.hidden = !config.author_name; });
   $$('[data-community-name]').forEach((node) => {
-    node.textContent = config.community_name;
-    node.hidden = !config.community_name;
+    const communityName = englishMode() ? config.community_name_en : config.community_name;
+    node.textContent = communityName;
+    node.hidden = !communityName;
   });
   $$('[data-contact]').forEach((node) => {
     node.textContent = config.contact;
@@ -381,13 +401,41 @@ function applySiteConfig(config) {
   });
   $$('[data-contact-block]').forEach((node) => { node.hidden = !config.contact; });
   $$('[data-safety-warning]').forEach((node) => { node.textContent = englishMode() ? config.safety_warning_en : config.safety_warning_he; });
+  $$('[data-release-version]').forEach((node) => { node.textContent = config.release_version; });
+  document.documentElement.dataset.release = config.release_version;
   $$('[data-current-year]').forEach((node) => { node.textContent = String(new Date().getFullYear()); });
   applyLogoConfig(config);
 }
 
+function initializeVisitCounter() {
+  const image = $("#visit-counter");
+  if (!(image instanceof HTMLImageElement)) return;
+  const canonicalHost = "galsec1999.github.io";
+  const canonicalPath = "/adventure-riding-video-guide";
+  const isCanonical = window.location.hostname === canonicalHost
+    && window.location.pathname.startsWith(canonicalPath);
+  if (!isCanonical) {
+    const placeholder = createElement("span", {
+      className: "visit-counter__placeholder",
+      text: ui("באתר החי", "On the live site"),
+    });
+    image.replaceWith(placeholder);
+    return;
+  }
+  image.addEventListener("error", () => {
+    const fallback = createElement("span", {
+      className: "visit-counter__placeholder",
+      text: ui("המונה אינו זמין כרגע", "Counter currently unavailable"),
+      attrs: { role: "status" },
+    });
+    image.replaceWith(fallback);
+  }, { once: true });
+  image.src = "https://hits.sh/galsec1999.github.io/adventure-riding-video-guide.svg?style=flat-square&label=&color=cc5a2c";
+}
+
 function validateRuntimeVideos(videos) {
-  if (!Array.isArray(videos)) throw new Error("נתוני הסרטונים חייבים להיות מערך JSON.");
-  if (videos.length === 0) throw new Error("ספריית הסרטונים ריקה. נדרשת לפחות רשומה תקינה אחת.");
+  if (!Array.isArray(videos)) throw new Error(ui("נתוני הסרטונים חייבים להיות מערך JSON.", "Video data must be a JSON array."));
+  if (videos.length === 0) throw new Error(ui("ספריית הסרטונים ריקה. נדרשת לפחות רשומה תקינה אחת.", "The video library is empty. At least one valid record is required."));
   const requiredStrings = [
     "id", "youtube_video_id", "youtube_url", "thumbnail_url", "title_he", "title_original",
     "channel_name", "channel_url", "summary_he", "fit_for_he", "why_watch_he", "quality_reason_he",
@@ -402,27 +450,27 @@ function validateRuntimeVideos(videos) {
   const youtubeIds = new Set();
   videos.forEach((video, index) => {
     if (!video || Array.isArray(video) || typeof video !== "object") {
-      throw new Error(`רשומת הסרטון ${index + 1} אינה אובייקט תקין.`);
+      throw new Error(ui(`רשומת הסרטון ${index + 1} אינה אובייקט תקין.`, `Video record ${index + 1} is not a valid object.`));
     }
     requiredStrings.forEach((field) => {
       if (typeof video[field] !== "string" || !video[field].trim()) {
-        throw new Error(`רשומת הסרטון ${index + 1} חסרה ערך טקסט תקין בשדה ${field}.`);
+        throw new Error(ui(`רשומת הסרטון ${index + 1} חסרה ערך טקסט תקין בשדה ${field}.`, `Video record ${index + 1} is missing a valid text value in ${field}.`));
       }
     });
     requiredArrays.forEach((field) => {
-      if (!Array.isArray(video[field])) throw new Error(`רשומת הסרטון ${video.id} חייבת לכלול מערך בשדה ${field}.`);
+      if (!Array.isArray(video[field])) throw new Error(ui(`רשומת הסרטון ${video.id} חייבת לכלול מערך בשדה ${field}.`, `Video record ${video.id} must include an array in ${field}.`));
     });
     if (!video.verification || typeof video.verification !== "object"
       || typeof video.verification.notes_he !== "string"
       || typeof video.verification.classification_confidence !== "string"
       || !Array.isArray(video.verification.content_evidence_types)) {
-      throw new Error(`רשומת הסרטון ${video.id} חסרה תיעוד אימות תקין.`);
+      throw new Error(ui(`רשומת הסרטון ${video.id} חסרה תיעוד אימות תקין.`, `Video record ${video.id} is missing valid verification evidence.`));
     }
     if (!Number.isFinite(video.quality_score) || (video.duration_seconds != null && !Number.isFinite(video.duration_seconds))) {
-      throw new Error(`רשומת הסרטון ${video.id} כוללת ערך מספרי לא תקין.`);
+      throw new Error(ui(`רשומת הסרטון ${video.id} כוללת ערך מספרי לא תקין.`, `Video record ${video.id} contains an invalid numeric value.`));
     }
-    if (ids.has(video.id)) throw new Error(`מזהה הסרטון ${video.id} מופיע יותר מפעם אחת.`);
-    if (youtubeIds.has(video.youtube_video_id)) throw new Error(`YouTube Video ID ${video.youtube_video_id} מופיע יותר מפעם אחת.`);
+    if (ids.has(video.id)) throw new Error(ui(`מזהה הסרטון ${video.id} מופיע יותר מפעם אחת.`, `Video ID ${video.id} appears more than once.`));
+    if (youtubeIds.has(video.youtube_video_id)) throw new Error(ui(`YouTube Video ID ${video.youtube_video_id} מופיע יותר מפעם אחת.`, `YouTube Video ID ${video.youtube_video_id} appears more than once.`));
     ids.add(video.id);
     youtubeIds.add(video.youtube_video_id);
   });
@@ -448,13 +496,13 @@ function createVideoMeta(video, { includeCategory = false, includeDate = false, 
   if (includeDate) {
     parts.push(video.published_date
       ? { tag: "time", text: formatDate(video.published_date), dir: "ltr", attrs: { datetime: video.published_date, class: "mixed-meta__date" } }
-      : { text: "תאריך לא זמין", dir: "auto", attrs: { class: "mixed-meta__date" } });
+      : { text: ui("תאריך לא זמין", "Date unavailable"), dir: "auto", attrs: { class: "mixed-meta__date" } });
   }
   return appendSeparatedParts(createElement("p", { className: `mixed-meta ${className}`.trim() }), parts);
 }
 
 function formatDuration(seconds) {
-  if (!Number.isFinite(seconds)) return "משך לא זמין";
+  if (!Number.isFinite(seconds)) return ui("משך לא זמין", "Duration unavailable");
   const hours = Math.floor(seconds / 3600);
   const minutes = Math.floor((seconds % 3600) / 60);
   const remainder = seconds % 60;
@@ -464,7 +512,7 @@ function formatDuration(seconds) {
 }
 
 function formatDate(value) {
-  if (!value) return "תאריך לא זמין";
+  if (!value) return ui("תאריך לא זמין", "Date unavailable");
   const date = new Date(`${value}T00:00:00Z`);
   if (Number.isNaN(date.valueOf())) return value;
   return englishMode() ? new Intl.DateTimeFormat("en-GB", { day: "2-digit", month: "short", year: "numeric", timeZone: "UTC" }).format(date) : `${String(date.getUTCDate()).padStart(2, "0")}.${String(date.getUTCMonth() + 1).padStart(2, "0")}.${date.getUTCFullYear()}`;
@@ -498,11 +546,13 @@ async function fetchJson(path) {
     try {
       return JSON.parse(embedded.textContent || "null");
     } catch (error) {
-      throw new Error(`הנתונים המוטמעים עבור ${path} אינם JSON תקין: ${error.message}`);
+      throw new Error(ui(`הנתונים המוטמעים עבור ${path} אינם JSON תקין: ${error.message}`, `Embedded data for ${path} is not valid JSON: ${error.message}`));
     }
   }
-  const response = await fetch(path, { cache: "no-store" });
-  if (!response.ok) throw new Error(`טעינת ${path} נכשלה (${response.status})`);
+  const requestUrl = new URL(path, document.baseURI);
+  requestUrl.searchParams.set("v", DATA_CACHE_REVISION);
+  const response = await fetch(requestUrl, { cache: "no-store" });
+  if (!response.ok) throw new Error(ui(`טעינת ${path} נכשלה (${response.status})`, `Loading ${path} failed (${response.status}).`));
   return response.json();
 }
 
@@ -534,14 +584,14 @@ function showFatalError(error) {
     attrs: { role: "alert", "aria-labelledby": "load-error-title" },
   });
   panel.append(
-    createElement("h1", { text: "לא הצלחנו לטעון את המדריך", attrs: { id: "load-error-title" } }),
-    createElement("p", { text: error.message || "אירעה שגיאה לא צפויה." }),
-    createElement("p", { text: "יש לפתוח את האתר דרך השרת המקומי: run-local.bat או python tools/serve_local.py" }),
+    createElement("h1", { text: ui("לא הצלחנו לטעון את המדריך", "We could not load the guide"), attrs: { id: "load-error-title" } }),
+    createElement("p", { text: error.message || ui("אירעה שגיאה לא צפויה.", "An unexpected error occurred.") }),
+    createElement("p", { text: ui("יש לפתוח את האתר דרך השרת המקומי: run-local.bat או python tools/serve_local.py", "Open the guide through the local server: run-local.bat or python tools/serve_local.py") }),
   );
   app.replaceChildren(panel);
   app.hidden = false;
   if ($("#app-status")) $("#app-status").hidden = true;
-  announce("טעינת האתר נכשלה. מוצגות הוראות להפעלה מקומית.");
+  announce(ui("טעינת האתר נכשלה. מוצגות הוראות להפעלה מקומית.", "The guide failed to load. Local launch instructions are shown."));
 }
 
 function applyTheme(theme) {
@@ -706,6 +756,8 @@ function hydrateFromUrl() {
   state.currentView = VALID_VIEWS.includes(requestedView) ? requestedView : "home";
   const videoId = params.get("video");
   state.activeVideoId = videoId && state.videosById.has(videoId) ? videoId : null;
+  const pathId = params.get("path") || browserStorage.getSelectedPath();
+  state.selectedPathId = state.paths.some((path) => path.id === pathId) ? pathId : "";
   syncControlsFromFilters();
 }
 
@@ -720,6 +772,8 @@ function updateUrl({ push = false, includeVideo = true } = {}) {
   else url.searchParams.delete("view");
   if (includeVideo && state.activeVideoId) url.searchParams.set("video", state.activeVideoId);
   else url.searchParams.delete("video");
+  if (state.currentView === "paths" && state.selectedPathId) url.searchParams.set("path", state.selectedPathId);
+  else url.searchParams.delete("path");
   url.hash = "";
   try {
     window.history[push ? "pushState" : "replaceState"]({}, "", url);
@@ -735,7 +789,9 @@ function reflectMenuState(open) {
   const button = $("#mobile-menu-toggle");
   if (button) {
     button.setAttribute("aria-expanded", String(open));
-    button.setAttribute("aria-label", open ? "סגירת תפריט הניווט" : "פתיחת תפריט הניווט");
+    button.setAttribute("aria-label", open
+      ? ui("סגירת תפריט הניווט", "Close navigation menu")
+      : ui("פתיחת תפריט הניווט", "Open navigation menu"));
   }
   $("#primary-nav")?.classList.toggle("is-open", open);
   if ($("#site-header")) $("#site-header").dataset.menuOpen = String(open);
@@ -874,7 +930,7 @@ function connectImageFallback(image, fallback) {
   }, { once: true });
 }
 
-function createVideoCard(video, { compact = false } = {}) {
+function createVideoCard(video, { compact = false, matchReason = "" } = {}) {
   const article = createElement("article", {
     className: `video-card${compact ? " video-card--compact" : ""}`,
     attrs: { "data-video-id": video.id },
@@ -883,7 +939,7 @@ function createVideoCard(video, { compact = false } = {}) {
   const image = createElement("img", {
     attrs: {
       src: video.thumbnail_url,
-      alt: `תמונת תצוגה של ${videoTitle(video)}`,
+      alt: ui(`תמונת תצוגה של ${videoTitle(video)}`, `Thumbnail for ${videoTitle(video)}`),
       loading: "lazy",
       decoding: "async",
       width: "480",
@@ -893,7 +949,7 @@ function createVideoCard(video, { compact = false } = {}) {
   const play = createButton(ui("צפייה", "Watch"), "play-video", {
     className: "video-card__play",
     "data-video-id": video.id,
-    "aria-label": `צפייה בסרטון: ${videoTitle(video)}`,
+    "aria-label": ui(`צפייה בסרטון: ${videoTitle(video)}`, `Watch video: ${videoTitle(video)}`),
   });
   const imageFallback = createImageFallback(ui("תמונת התצוגה אינה זמינה. אפשר לפתוח את הסרטון או לעבור ל־YouTube.", "The thumbnail is unavailable. You can still open the video or view it on YouTube."));
   connectImageFallback(image, imageFallback);
@@ -905,9 +961,9 @@ function createVideoCard(video, { compact = false } = {}) {
     createBadge(label(video.domain), "domain"),
     createBadge(label(video.skill_level), "level"),
     createBadge(video.language === "he" ? ui("עברית", "Hebrew") : ui("אנגלית", "English"), "language"),
-    createBadge(label(video.content_type), "format"),
   );
-  if (state.watched.has(video.id)) badges.append(createBadge("נצפה", "success"));
+  if (video.contains_marketing) badges.append(createBadge(ui("כולל רכיב שיווקי", "Includes marketing"), "warning"));
+  if (state.watched.has(video.id)) badges.append(createBadge(ui("נצפה", "Watched"), "success"));
 
   const title = createElement("h3", { className: "video-card__title", text: videoTitle(video) });
   const originalText = englishMode() ? (video.language === "he" ? video.title_original : "") : video.title_original;
@@ -920,15 +976,29 @@ function createVideoCard(video, { compact = false } = {}) {
     createElement("strong", { text: ui("מה נלמד: ", "What you will learn: ") }),
     document.createTextNode(videoArray(video, "learning_points").slice(0, compact ? 1 : 2).join(" · ")),
   );
-  const tags = createElement("div", { className: "tag-list", attrs: { "aria-label": "תגיות" } });
-  [...(video.subtopics || []), ...video.tags].filter((value, index, list) => list.indexOf(value) === index).slice(0, compact ? 2 : 4).forEach((tag) => tags.append(createElement("span", { className: "tag", text: label(tag) })));
+  const tags = createElement("div", { className: "tag-list", attrs: { "aria-label": ui("תגיות", "Tags") } });
+  uniqueDisplayTaxonomyIds([...(video.subtopics || []), ...video.tags], state.labels, currentLanguage())
+    .slice(0, compact ? 2 : 4)
+    .forEach((tag) => tags.append(createElement("span", { className: "tag", text: label(tag) })));
+  const sourceNote = createElement("p", {
+    className: "video-card__source",
+    text: ui("סוג מקור", "Source") + ": " + label(video.source_type) + " · " + ui("עומק אימות", "Verification depth") + " " + video.quality_score + "/5",
+  });
+  const reason = matchReason ? createElement("p", { className: "smart-match-reason", text: matchReason }) : null;
+  const likeNote = createElement("p", {
+    className: compact ? "creator-like-note creator-like-note--compact" : "creator-like-note",
+    text: ui("עזר לכם? תנו לייק ביוטיוב — כך מעודדים את היוצרים להמשיך.", "Helpful? Give it a like on YouTube — it helps creators keep making useful videos."),
+  });
 
   const actions = createElement("div", { className: "video-card__actions" });
   const favorite = createButton(state.favorites.has(video.id) ? ui("במועדפים", "In favourites") : ui("מועדף", "Favourite"), "toggle-favorite", {
     className: `icon-button${state.favorites.has(video.id) ? " is-active" : ""}`,
     "data-video-id": video.id,
     "aria-pressed": String(state.favorites.has(video.id)),
-    "aria-label": `${state.favorites.has(video.id) ? "הסרה מהמועדפים" : "הוספה למועדפים"}: ${videoTitle(video)}`,
+    "aria-label": ui(
+      `${state.favorites.has(video.id) ? "הסרה מהמועדפים" : "הוספה למועדפים"}: ${videoTitle(video)}`,
+      `${state.favorites.has(video.id) ? "Remove from favourites" : "Add to favourites"}: ${videoTitle(video)}`,
+    ),
   });
   const watched = createButton(state.watched.has(video.id) ? ui("נצפה", "Watched") : ui("סימון נצפה", "Mark watched"), "toggle-watched", {
     className: `icon-button${state.watched.has(video.id) ? " is-active" : ""}`,
@@ -942,10 +1012,12 @@ function createVideoCard(video, { compact = false } = {}) {
   const youtube = createElement("a", {
     className: "button button--text",
     text: "YouTube",
-    attrs: { href: video.youtube_url, target: "_blank", rel: "noopener noreferrer", "aria-label": `פתיחה ב-YouTube: ${videoTitle(video)}` },
+    attrs: { href: video.youtube_url, target: "_blank", rel: "noopener noreferrer", "aria-label": ui(`פתיחה ב-YouTube: ${videoTitle(video)}`, `Open on YouTube: ${videoTitle(video)}`) },
   });
   actions.append(favorite, watched, details, youtube);
-  body.append(badges, title, original, meta, summary, learning, tags, actions);
+  body.append(badges, title, original, meta, summary, learning, tags, sourceNote);
+  if (reason) body.append(reason);
+  body.append(likeNote, actions);
   article.append(media, body);
   return article;
 }
@@ -1092,7 +1164,7 @@ function renderLibrary({ syncUrl = true } = {}) {
   }
   const progress = $("#load-progress");
   if (progress) progress.textContent = englishMode() ? `Showing ${limit} of ${results.length} videos` : `מוצגים ${limit} מתוך ${results.length} סרטונים`;
-  announce(`${results.length} סרטונים נמצאו`);
+  announce(englishMode() ? `${results.length} videos found` : `${results.length} סרטונים נמצאו`);
   if (syncUrl) updateUrl();
 }
 
@@ -1110,10 +1182,10 @@ function renderContinue() {
   if (lastVideo) {
     const block = createElement("article", { className: "continue-card" });
     block.append(
-      createElement("span", { className: "eyebrow", text: "הסרטון האחרון" }),
-      createElement("h3", { text: lastVideo.title_he }),
+      createElement("span", { className: "eyebrow", text: ui("הסרטון האחרון", "Last video") }),
+      createElement("h3", { text: videoTitle(lastVideo) }),
       createElement("p", { text: lastVideo.channel_name, attrs: { dir: "auto" } }),
-      createButton("המשך לפרטים", "open-video", { "data-video-id": lastVideo.id, className: "button button--primary" }),
+      createButton(ui("המשך לפרטים", "Continue to details"), "open-video", { "data-video-id": lastVideo.id, className: "button button--primary" }),
     );
     blocks.push(block);
   }
@@ -1121,10 +1193,12 @@ function renderContinue() {
     const complete = state.pathProgress[pathEntry.id].length;
     const block = createElement("article", { className: "continue-card" });
     block.append(
-      createElement("span", { className: "eyebrow", text: "מסלול בתהליך" }),
+      createElement("span", { className: "eyebrow", text: ui("מסלול בתהליך", "Path in progress") }),
       createElement("h3", { text: localField(pathEntry, "name") }),
-      createElement("p", { text: `${complete} מתוך ${pathEntry.steps.length} שלבים הושלמו` }),
-      createButton("המשך במסלול", "open-paths", { className: "button button--primary" }),
+      createElement("p", { text: englishMode()
+        ? `${complete} of ${pathEntry.steps.length} steps completed`
+        : `${complete} מתוך ${pathEntry.steps.length} שלבים הושלמו` }),
+      createButton(ui("המשך במסלול", "Continue path"), "open-paths", { className: "button button--primary" }),
     );
     blocks.push(block);
   }
@@ -1142,10 +1216,32 @@ function videoLink(videoId, text, kind = "primary") {
   });
 }
 
+function selectLearningPath(pathId, { focus = true, updateHistory = true } = {}) {
+  if (!state.paths.some((path) => path.id === pathId)) return;
+  state.selectedPathId = pathId;
+  browserStorage.setSelectedPath(pathId);
+  renderPaths();
+  if (updateHistory) updateUrl();
+  const pathNode = $(`#path-${CSS.escape(pathId)}`);
+  if (focus) {
+    const heading = $("h2", pathNode);
+    if (heading) {
+      heading.tabIndex = -1;
+      heading.focus({ preventScroll: true });
+    }
+  }
+  pathNode?.scrollIntoView({ behavior: "smooth", block: "start" });
+}
+
 function renderPaths() {
   const container = $("#paths-container");
   if (!container) return;
-  const pathCards = state.paths.map((path) => {
+  if (!state.paths.some((path) => path.id === state.selectedPathId)) {
+    const firstIncomplete = state.paths.find((path) => (state.pathProgress[path.id] || []).length < path.steps.length);
+    state.selectedPathId = firstIncomplete?.id || state.paths[0]?.id || "";
+    browserStorage.setSelectedPath(state.selectedPathId);
+  }
+  const pathCards = state.paths.filter((path) => path.id === state.selectedPathId).map((path) => {
     const completed = new Set(state.pathProgress[path.id] || []);
     const card = createElement("article", { className: "learning-path", attrs: { id: `path-${path.id}` } });
     const header = createElement("header", { className: "learning-path__header" });
@@ -1155,10 +1251,17 @@ function renderPaths() {
       createElement("h2", { text: localField(path, "name") }),
       createElement("p", { text: localField(path, "description") }),
     );
+    const nextStep = path.steps.find((step) => !completed.has(step.order));
+    titleBlock.append(createElement("p", {
+      className: "path-next-step",
+      text: nextStep
+        ? ui(`השלב הבא: ${localField(nextStep, "goal")}`, `Next: ${localField(nextStep, "goal")}`)
+        : ui("המסלול הושלם — אפשר לבחור מסלול נוסף או לחזור לרענון.", "Path complete — choose another path or revisit it for practice."),
+    }));
     const progress = createElement("div", { className: "path-progress" });
     progress.append(
-      createElement("span", { text: `${completed.size} מתוך ${path.steps.length} שלבים` }),
-      createElement("progress", { attrs: { value: completed.size, max: path.steps.length, "aria-label": `התקדמות במסלול ${localField(path, "name")}` } }),
+      createElement("span", { text: ui(`${completed.size} מתוך ${path.steps.length} שלבים`, `${completed.size} of ${path.steps.length} steps`) }),
+      createElement("progress", { attrs: { value: completed.size, max: path.steps.length, "aria-label": ui(`התקדמות במסלול ${localField(path, "name")}`, `Progress in ${localField(path, "name")}`) } }),
     );
     header.append(titleBlock, progress);
 
@@ -1173,7 +1276,7 @@ function renderPaths() {
           "data-path-id": path.id,
           "data-step-order": step.order,
           "data-action": "toggle-path-step",
-          "aria-label": `סימון השלב ${step.order} כהושלם`,
+          "aria-label": ui(`סימון השלב ${step.order} כהושלם`, `Mark step ${step.order} complete`),
         },
       });
       checkbox.checked = completed.has(step.order);
@@ -1231,11 +1334,23 @@ function renderPaths() {
   }
   const switcher = $("#path-switcher");
   if (switcher) {
-    switcher.replaceChildren(...state.paths.map((path) => createButton(localField(path, "name"), "jump-path", {
-      className: "path-switcher__button",
-      "data-path-id": path.id,
-      "aria-label": `מעבר למסלול ${localField(path, "name")}`,
-    })));
+    switcher.replaceChildren(...state.paths.map((path) => {
+      const completed = (state.pathProgress[path.id] || []).length;
+      const percent = path.steps.length ? Math.round((completed / path.steps.length) * 100) : 0;
+      const button = createButton("", "select-path", {
+        className: `path-catalog__card${path.id === state.selectedPathId ? " is-active" : ""}`,
+        "data-path-id": path.id,
+        "aria-pressed": String(path.id === state.selectedPathId),
+        "aria-label": ui(`בחירת מסלול ${localField(path, "name")}`, `Select ${localField(path, "name")}`),
+        role: "listitem",
+      });
+      button.append(
+        createElement("span", { className: "eyebrow", text: label(path.skill_level) }),
+        createElement("strong", { text: localField(path, "name") }),
+        createElement("small", { text: ui(`${path.steps.length} שלבים · ${percent}% הושלמו`, `${path.steps.length} steps · ${percent}% complete`) }),
+      );
+      return button;
+    }));
   }
 }
 
@@ -1248,7 +1363,7 @@ function renderTrips() {
       const selected = state.selectedTripType === trip.id;
       const card = createElement("article", { className: `trip-type-card${selected ? " is-selected" : ""}` });
       card.append(
-        createElement("p", { className: "eyebrow", text: selected ? "נבחר" : "סוג טיול" }),
+        createElement("p", { className: "eyebrow", text: selected ? ui("נבחר", "Selected") : ui("סוג טיול", "Trip type") }),
         createElement("h3", { text: localField(trip, "name") }),
         createElement("p", { text: localField(trip, "description") }),
       );
@@ -1313,11 +1428,74 @@ function renderTrips() {
   if (appGrid) {
     appGrid.replaceChildren(...(travel.navigation_apps || []).map((app) => {
       const card = createElement("article", { className: "navigation-app-card" });
+      const capabilities = createElement("ul", { className: "feature-chip-list", attrs: { "aria-label": ui("יכולות מרכזיות", "Key capabilities") } });
+      localArray(app, "capabilities").forEach((item) => capabilities.append(createElement("li", { text: item })));
       card.append(
+        createElement("p", { className: "eyebrow", text: localField(app, "type") || ui("כלי ניווט", "Navigation tool") }),
         createElement("h3", { text: app.name, attrs: { dir: "auto" } }),
         createElement("p", { text: localField(app, "best_for") }),
-        createElement("p", { className: "navigation-app-card__caution", text: localField(app, "caution") }),
       );
+      if (capabilities.childElementCount) card.append(capabilities);
+      const compare = createElement("div", { className: "navigation-app-card__compare" });
+      [
+        [ui("יתרונות", "Strengths"), localArray(app, "advantages")],
+        [ui("מגבלות", "Limitations"), localArray(app, "limitations")],
+      ].forEach(([title, items]) => {
+        if (!items.length) return;
+        const section = createElement("section");
+        const list = createElement("ul");
+        items.forEach((item) => list.append(createElement("li", { text: item })));
+        section.append(createElement("h4", { text: title }), list);
+        compare.append(section);
+      });
+      if (compare.childElementCount) card.append(compare);
+      if (localField(app, "setup")) card.append(createElement("p", { className: "navigation-app-card__setup", text: `${ui("לפני הרכיבה", "Before the ride")}: ${localField(app, "setup")}` }));
+      card.append(createElement("p", { className: "navigation-app-card__caution", text: `${ui("חשוב לדעת", "Keep in mind")}: ${localField(app, "caution")}` }));
+      const videos = createElement("div", { className: "knowledge-video-links" });
+      (app.video_ids || []).forEach((id) => {
+        const link = videoLink(id, null, "guide");
+        if (link) videos.append(link);
+      });
+      if (videos.childElementCount) {
+        videos.prepend(createElement("h4", { text: ui("לימוד ויישום", "Learn and apply") }));
+        card.append(videos);
+      }
+      return card;
+    }));
+  }
+
+  const guideGrid = $("#knowledge-guide-grid");
+  if (guideGrid) {
+    guideGrid.replaceChildren(...(travel.knowledge_guides || []).map((guide) => {
+      const card = createElement("article", { className: "knowledge-guide-card" });
+      card.append(
+        createElement("p", { className: "eyebrow", text: localField(guide, "eyebrow") }),
+        createElement("h3", { text: localField(guide, "title") }),
+        createElement("p", { className: "knowledge-guide-card__lead", text: localField(guide, "summary") }),
+      );
+      const columns = createElement("div", { className: "knowledge-guide-card__columns" });
+      [
+        [ui("מתאים כאשר", "Choose it when"), localArray(guide, "best_when")],
+        [ui("פשרות ומגבלות", "Trade-offs and limits"), localArray(guide, "tradeoffs")],
+        [ui("לפני שימוש", "Before use"), localArray(guide, "setup_checks")],
+      ].forEach(([title, items]) => {
+        if (!items.length) return;
+        const section = createElement("section");
+        const list = createElement("ul");
+        items.forEach((item) => list.append(createElement("li", { text: item })));
+        section.append(createElement("h4", { text: title }), list);
+        columns.append(section);
+      });
+      card.append(columns);
+      const videos = createElement("div", { className: "knowledge-video-links" });
+      (guide.video_ids || []).forEach((id) => {
+        const link = videoLink(id, null, "guide");
+        if (link) videos.append(link);
+      });
+      if (videos.childElementCount) {
+        videos.prepend(createElement("h4", { text: ui("סרטונים נבחרים", "Selected videos") }));
+        card.append(videos);
+      }
       return card;
     }));
   }
@@ -1333,6 +1511,154 @@ function renderTrips() {
   }
 }
 
+function updateLocalAiUi(stage, detail = "", percent = null) {
+  const button = $("#local-ai-toggle");
+  const status = $("#local-ai-status");
+  const progress = $("#local-ai-progress");
+  const standalone = document.documentElement.dataset.standalone === "true";
+  if (button) {
+    button.disabled = standalone || stage === "loading";
+    button.textContent = standalone
+      ? ui("AI מקומי באתר המלא", "Local AI on full site")
+      : state.semantic.enabled
+      ? ui("השבתת AI מקומי", "Disable local AI")
+      : ui("הפעלת AI מקומי", "Enable local AI");
+  }
+  if (status) {
+    const title = $("strong", status);
+    const copy = $("p", status);
+    if (title) title.textContent = standalone
+      ? ui("AI מקומי זמין באתר המלא", "Local AI is available on the full site")
+      : stage === "ready"
+      ? ui("AI מקומי פעיל", "Local AI is active")
+      : stage === "loading"
+        ? ui("טוען מודל מקומי…", "Loading the local model…")
+        : stage === "error"
+          ? ui("AI מקומי אינו זמין כרגע", "Local AI is currently unavailable")
+          : ui("חיפוש חכם זמין תמיד", "Smart search is always available");
+    if (copy) copy.textContent = standalone
+      ? ui("קובץ HTML העצמאי ממשיך להשתמש בחיפוש החכם הרגיל ואינו מוריד את המודל.", "The standalone HTML continues to use regular smart search and does not download the model.")
+      : detail || (stage === "ready"
+      ? ui("השאלה מדורגת מול אינדקס הסרטונים במכשיר. אין שליחה לשרת AI.", "Your question is ranked against the video index on this device. Nothing is sent to an AI server.")
+      : ui("בהפעלה הראשונה יורד מודל של כ־140MB. החיפוש הרגיל נשאר זמין גם בלי המודל.", "The first activation downloads a model of about 140MB. Regular search remains available without it."));
+  }
+  if (progress) {
+    progress.hidden = stage !== "loading" || percent == null;
+    if (percent != null) progress.value = percent;
+  }
+}
+
+async function ensureSemanticReady() {
+  if (state.semantic.ready) return true;
+  if (state.semantic.loading) {
+    while (state.semantic.loading) await new Promise((resolve) => window.setTimeout(resolve, 100));
+    return state.semantic.ready;
+  }
+  if (document.documentElement.dataset.standalone === "true") {
+    throw new Error(ui("AI מקומי זמין באתר המלא; קובץ HTML עצמאי ממשיך להשתמש בחיפוש החכם הרגיל.", "Local AI is available on the full site; the standalone HTML continues to use regular smart search."));
+  }
+  if (!("Worker" in window) || !("WebAssembly" in window)) {
+    throw new Error(ui("הדפדפן אינו תומך בהרצת המודל המקומי.", "This browser cannot run the local model."));
+  }
+  state.semantic.loading = true;
+  updateLocalAiUi("loading");
+  try {
+    const meta = await fetchJson(SEMANTIC_META_URL);
+    if (!meta || meta.count !== state.videos.length || !Number.isInteger(meta.dimensions) || meta.ids?.length !== state.videos.length
+      || meta.ids.some((id) => !state.videosById.has(id))) {
+      throw new Error(ui("מטא־דאטה של האינדקס הסמנטי אינה תואמת לספריית הסרטונים.", "Semantic index metadata does not match the video library."));
+    }
+    const indexUrl = new URL(`data/${meta.binary}`, document.baseURI);
+    indexUrl.searchParams.set("v", DATA_CACHE_REVISION);
+    const response = await fetch(indexUrl, { cache: "no-store" });
+    if (!response.ok) throw new Error(ui(`בקשת האינדקס הסמנטי נכשלה (${response.status}).`, `Semantic index request failed (${response.status}).`));
+    const buffer = await response.arrayBuffer();
+    if (buffer.byteLength !== meta.count * meta.dimensions * Float32Array.BYTES_PER_ELEMENT) {
+      throw new Error(ui("גודל האינדקס הסמנטי אינו תקין.", "Semantic index size is invalid."));
+    }
+    state.semantic.meta = meta;
+    state.semantic.matrix = new Float32Array(buffer);
+    const worker = new Worker(new URL(SEMANTIC_WORKER_URL, document.baseURI), { type: "module" });
+    state.semantic.worker = worker;
+    await new Promise((resolve, reject) => {
+      const timeout = window.setTimeout(() => reject(new Error("Local model loading timed out.")), 240000);
+      worker.addEventListener("message", (event) => {
+        const message = event.data || {};
+        if (message.type === "progress") updateLocalAiUi("loading", "", message.percent);
+        if (message.type === "status" && message.stage === "ready") {
+          window.clearTimeout(timeout);
+          resolve();
+        }
+        if (message.type === "embedding") {
+          const pending = state.semantic.pending.get(message.requestId);
+          if (pending) {
+            state.semantic.pending.delete(message.requestId);
+            pending.resolve(message.vector);
+          }
+        }
+        if (message.type === "error") {
+          const pending = state.semantic.pending.get(message.requestId);
+          if (pending) {
+            state.semantic.pending.delete(message.requestId);
+            pending.reject(new Error(message.message));
+          } else {
+            window.clearTimeout(timeout);
+            reject(new Error(message.message));
+          }
+        }
+      });
+      worker.addEventListener("error", (event) => reject(new Error(event.message || "Local AI worker failed.")), { once: true });
+      worker.postMessage({ type: "load" });
+    });
+    state.semantic.ready = true;
+    updateLocalAiUi("ready");
+    return true;
+  } finally {
+    state.semantic.loading = false;
+  }
+}
+
+function requestSemanticEmbedding(query) {
+  return new Promise((resolve, reject) => {
+    if (!state.semantic.worker || !state.semantic.ready) {
+      reject(new Error("Local AI is not ready."));
+      return;
+    }
+    const requestId = ++state.semantic.requestSequence;
+    const timeout = window.setTimeout(() => {
+      state.semantic.pending.delete(requestId);
+      reject(new Error("Local semantic query timed out."));
+    }, 30000);
+    state.semantic.pending.set(requestId, {
+      resolve: (vector) => { window.clearTimeout(timeout); resolve(vector); },
+      reject: (error) => { window.clearTimeout(timeout); reject(error); },
+    });
+    state.semantic.worker.postMessage({ type: "embed", requestId, query });
+  });
+}
+
+async function toggleLocalAi() {
+  if (state.semantic.enabled) {
+    state.semantic.enabled = false;
+    browserStorage.setSemanticEnabled(false);
+    updateLocalAiUi("idle");
+    renderSmartResults(state.smartQuery);
+    return;
+  }
+  state.semantic.enabled = true;
+  browserStorage.setSemanticEnabled(true);
+  try {
+    await ensureSemanticReady();
+    updateLocalAiUi("ready");
+    renderSmartResults(state.smartQuery);
+  } catch (error) {
+    state.semantic.enabled = false;
+    browserStorage.setSemanticEnabled(false);
+    updateLocalAiUi("error", error instanceof Error ? error.message : String(error));
+    renderSmartResults(state.smartQuery);
+  }
+}
+
 const SMART_STOP_WORDS = new Set([
   "אני", "רוצה", "איך", "אפשר", "צריך", "כדאי", "מה", "עם", "של", "על", "את", "זה", "לי", "יש", "שלי",
   "לפני", "אחרי", "עבור", "תנו", "תן", "תמצאו", "ללמוד", "לראות", "קודם", "קצת", "מאוד", "יותר", "פחות",
@@ -1343,7 +1669,21 @@ function inferSmartIntent(query) {
   const normalized = normalizeText(query);
   const hasAny = (terms) => terms.some((term) => (` ${normalized} `).includes(` ${normalizeText(term)} `));
   let domain = "";
-  if (hasAny(["טיול", "מסע", "זיווד", "מטען", "קבוצה", "מוביל", "מאסף", "ניווט", "gpx", "osmand", "rever", "gaia", "dmd2", "touring", "trip", "packing", "luggage", "route"])) domain = "touring_travel";
+  let category = "";
+  let topic = "";
+  if (hasAny(["ניווט", "gpx", "osmand", "rever", "gaia", "dmd2", "garmin", "gps", "calimoto", "kurviger", "locus", "מפה אופליין", "טלפון או", "שיקוף", "navigation", "offline map", "smart display"])) {
+    domain = "touring_travel";
+    category = "route_navigation";
+    topic = "navigation";
+  } else if (hasAny(["דיבורית", "דיבוריות", "אינטרקום", "בלוטות", "bluetooth", "mesh", "intercom", "cardo", "sena", "lexin"])) {
+    domain = "touring_travel";
+    category = "intercoms_communications";
+    topic = "communications";
+  } else if (hasAny(["מיגון", "קסדה", "מגפיים", "מגן ברכ", "כרית אוויר", "helmet", "protective gear", "motorcycle gear", "airbag", "boots"])) {
+    domain = "safety_recovery";
+    category = "protective_gear";
+    topic = "protection";
+  } else if (hasAny(["טיול", "מסע", "זיווד", "מטען", "קבוצה", "מוביל", "מאסף", "touring", "trip", "packing", "luggage", "route"])) domain = "touring_travel";
   else if (hasAny(["שטח", "אדוונצר", "חול", "בוץ", "חריץ", "שביל", "עליה", "ירידה", "מכשול", "off road", "offroad", "dirt", "sand", "mud", "hill", "trail"])) domain = "offroad_adventure";
   else if (hasAny(["כביש", "פניה", "פניות", "גשם", "עירוני", "כביש מהיר", "corner", "road", "rain", "traffic", "highway"])) domain = "road";
   else if (hasAny(["חילוץ", "הרמת", "נפילה", "עייפות", "חירום", "recovery", "rescue", "lift", "fatigue", "emergency"])) domain = "safety_recovery";
@@ -1361,48 +1701,106 @@ function inferSmartIntent(query) {
   const tokens = normalized.split(" ")
     .filter((token) => token.length >= 2 && !SMART_STOP_WORDS.has(token))
     .slice(0, 18);
-  return { normalized, tokens, domain, skill, weight };
+  return { normalized, tokens, domain, category, topic, skill, weight };
 }
 
 function smartRankVideos(query) {
   const intent = inferSmartIntent(query);
-  if (!intent.normalized) return { intent, results: [] };
-  const candidates = intent.domain ? state.videos.filter((video) => video.domain === intent.domain) : state.videos;
+  if (!intent.normalized) return { intent, results: [], matches: [] };
+  const candidates = intent.category
+    ? state.videos.filter((video) => video.primary_category === intent.category || video.secondary_categories.includes(intent.category))
+    : intent.domain ? state.videos.filter((video) => video.domain === intent.domain) : state.videos;
   const scored = candidates.map((video) => {
     let score = 0;
     intent.tokens.forEach((token) => { score += scoreSearchMatch(video, token, state.synonymIndex); });
     if (intent.domain && video.domain === intent.domain) score += 180;
+    if (intent.category && video.primary_category === intent.category) score += 260;
     if (intent.skill && video.skill_level === intent.skill) score += 35;
     if (intent.weight && video.motorcycle_weight_classes.includes(intent.weight)) score += 30;
     if (intent.tokens.some((token) => normalizeText(video.title_he).includes(token) || normalizeText(video.title_original).includes(token))) score += 55;
     score += Number(video.quality_score || 0) * 5;
-    return { video, score };
+    return { video, score, reason: smartMatchReason(video, intent, false) };
   }).filter((entry) => entry.score > 20);
   scored.sort((a, b) => b.score - a.score || b.video.quality_score - a.video.quality_score || a.video._sourceIndex - b.video._sourceIndex);
-  return { intent, results: scored.slice(0, 12).map((entry) => entry.video) };
+  const matches = scored.slice(0, 12);
+  return { intent, matches, results: matches.map((entry) => entry.video) };
 }
 
-function renderSmartResults(query = "") {
+function smartMatchReason(video, intent, semantic = false) {
+  const reasons = [];
+  if (semantic) reasons.push(ui("התאמה סמנטית מקומית", "Local semantic match"));
+  if (intent.category && video.primary_category === intent.category) reasons.push(label(intent.category));
+  else if (intent.domain && video.domain === intent.domain) reasons.push(label(intent.domain));
+  if (intent.skill && video.skill_level === intent.skill) reasons.push(label(intent.skill));
+  if (intent.weight && video.motorcycle_weight_classes.includes(intent.weight)) reasons.push(label(intent.weight));
+  if (!reasons.length) reasons.push(ui("התאמה למונחים ולנושאים שבשאלה", "Matches terms and topics in the question"));
+  return `${ui("למה התאים", "Why it matched")}: ${reasons.join(" · ")}`;
+}
+
+async function semanticRankVideos(query, intent) {
+  const vector = await requestSemanticEmbedding(query);
+  const meta = state.semantic.meta;
+  const matrix = state.semantic.matrix;
+  const scored = meta.ids.map((id, index) => {
+    const video = state.videosById.get(id);
+    if (!video) return null;
+    let cosine = 0;
+    const offset = index * meta.dimensions;
+    for (let dimension = 0; dimension < meta.dimensions; dimension += 1) cosine += vector[dimension] * matrix[offset + dimension];
+    let score = cosine * 1000;
+    if (intent.domain && video.domain === intent.domain) score += 80;
+    if (intent.category && video.primary_category === intent.category) score += 130;
+    if (intent.skill && video.skill_level === intent.skill) score += 22;
+    if (intent.weight && video.motorcycle_weight_classes.includes(intent.weight)) score += 18;
+    if (video.contains_marketing) score -= 12;
+    score += Number(video.quality_score || 0) * 3;
+    return { video, score, reason: smartMatchReason(video, intent, true) };
+  }).filter(Boolean);
+  scored.sort((left, right) => right.score - left.score || right.video.quality_score - left.video.quality_score);
+  return scored.slice(0, 12);
+}
+
+async function renderSmartResults(query = "") {
   const grid = $("#smart-video-grid");
   const note = $("#smart-result-note");
   if (!grid || !note) return;
   const clean = String(query || "").trim();
   if (!clean) {
     grid.replaceChildren();
-    note.textContent = "כתבו שאלה כדי לקבל המלצות.";
+    note.textContent = ui("כתבו שאלה כדי לקבל המלצות.", "Ask a question to get recommendations.");
     return;
   }
-  const { intent, results } = smartRankVideos(clean);
+  const { intent, results, matches } = smartRankVideos(clean);
   state.smartQuery = clean;
   state.smartResults = results;
-  const intentParts = [intent.domain ? label(intent.domain) : "כל התחומים"];
+  state.smartMatches = matches;
+  const intentParts = [intent.domain ? label(intent.domain) : ui("כל התחומים", "All areas")];
+  if (intent.category) intentParts.push(label(intent.category));
   if (intent.skill) intentParts.push(label(intent.skill));
   if (intent.weight) intentParts.push(label(intent.weight));
   note.textContent = results.length
-    ? `${results.length} התאמות מובילות · ${intentParts.join(" · ")}. זהו מנגנון איתור מקומי, לא ייעוץ רכיבה.`
-    : "לא נמצאה התאמה חזקה. נסו לציין תחום, תנאי דרך, רמה או סוג אופנוע.";
-  grid.replaceChildren(...results.map((video) => createVideoCard(video, { compact: true })));
-  announce(`${results.length} המלצות חכמות נמצאו`);
+    ? ui(`${results.length} התאמות מובילות · ${intentParts.join(" · ")}. חיפוש מקומי, לא ייעוץ רכיבה.`, `${results.length} leading matches · ${intentParts.join(" · ")}. Local search, not riding advice.`)
+    : ui("לא נמצאה התאמה חזקה. נסו לציין תחום, תנאי דרך, רמה או סוג אופנוע.", "No strong match was found. Try adding an area, road condition, level or motorcycle type.");
+  grid.replaceChildren(...matches.map(({ video, reason }) => createVideoCard(video, { compact: true, matchReason: reason })));
+  announce(ui(`${results.length} המלצות חכמות נמצאו`, `${results.length} smart recommendations found`));
+
+  if (!state.semantic.enabled) return;
+  try {
+    await ensureSemanticReady();
+    if (state.smartQuery !== clean) return;
+    note.textContent = ui("AI מקומי מדרג כעת את הרשומות לפי משמעות…", "Local AI is ranking the records by meaning…");
+    const semanticMatches = await semanticRankVideos(clean, intent);
+    if (state.smartQuery !== clean || !state.semantic.enabled) return;
+    state.smartMatches = semanticMatches;
+    state.smartResults = semanticMatches.map((entry) => entry.video);
+    note.textContent = ui(
+      `${semanticMatches.length} התאמות סמנטיות מקומיות · ${intentParts.join(" · ")}. כל התוצאות מגיעות מן המאגר המאומת.`,
+      `${semanticMatches.length} local semantic matches · ${intentParts.join(" · ")}. Every result comes from the curated library.`,
+    );
+    grid.replaceChildren(...semanticMatches.map(({ video, reason }) => createVideoCard(video, { compact: true, matchReason: reason })));
+  } catch (error) {
+    updateLocalAiUi("error", ui("החיפוש הרגיל ממשיך לעבוד. טעינת המודל המקומי נכשלה.", "Regular search remains available. The local model could not be loaded."));
+  }
 }
 
 function buildAiPrompt() {
@@ -1437,7 +1835,7 @@ function createDialogVideoContent(video) {
   badges.append(
     createBadge(label(video.domain), "domain"),
     createBadge(label(video.skill_level), "level"),
-    createBadge(`רמת סיכון ${label(video.risk_level)}`, video.risk_level === "high" ? "warning" : "neutral"),
+    createBadge(`${ui("רמת סיכון", "Risk level")} ${label(video.risk_level)}`, video.risk_level === "high" ? "warning" : "neutral"),
   );
   header.append(
     badges,
@@ -1447,32 +1845,32 @@ function createDialogVideoContent(video) {
 
   const player = createElement("div", { className: "video-player-slot", attrs: { id: "video-player-slot", "data-video-id": video.id } });
   const poster = createElement("img", {
-    attrs: { src: video.thumbnail_url, alt: `תמונת תצוגה של ${videoTitle(video)}`, width: 960, height: 720 },
+    attrs: { src: video.thumbnail_url, alt: ui(`תמונת תצוגה של ${videoTitle(video)}`, `Thumbnail for ${videoTitle(video)}`), width: 960, height: 720 },
   });
   const loadPlayer = createButton(ui("טעינת נגן YouTube", "Load YouTube player"), "load-player", {
     className: "button button--primary video-player-slot__button",
     "data-video-id": video.id,
   });
-  const posterFallback = createImageFallback("תמונת התצוגה אינה זמינה. ניתן עדיין לטעון את הנגן או לפתוח את המקור ב־YouTube.");
+  const posterFallback = createImageFallback(ui("תמונת התצוגה אינה זמינה. ניתן עדיין לטעון את הנגן או לפתוח את המקור ב־YouTube.", "The thumbnail is unavailable. You can still load the player or open the source on YouTube."));
   connectImageFallback(poster, posterFallback);
   player.append(poster, posterFallback, loadPlayer);
 
   const actions = createElement("div", { className: "video-detail__actions" });
   actions.append(
-    createButton(state.favorites.has(video.id) ? "הסרה מהמועדפים" : "הוספה למועדפים", "toggle-favorite", {
+    createButton(state.favorites.has(video.id) ? ui("הסרה מהמועדפים", "Remove from favourites") : ui("הוספה למועדפים", "Add to favourites"), "toggle-favorite", {
       className: `button button--secondary${state.favorites.has(video.id) ? " is-active" : ""}`,
       "data-video-id": video.id,
       "aria-pressed": String(state.favorites.has(video.id)),
     }),
-    createButton(state.watched.has(video.id) ? "סומן כנצפה" : "סימון כנצפה", "toggle-watched", {
+    createButton(state.watched.has(video.id) ? ui("סומן כנצפה", "Marked watched") : ui("סימון כנצפה", "Mark watched"), "toggle-watched", {
       className: `button button--secondary${state.watched.has(video.id) ? " is-active" : ""}`,
       "data-video-id": video.id,
       "aria-pressed": String(state.watched.has(video.id)),
     }),
-    createButton("שיתוף", "share-video", { className: "button button--secondary", "data-video-id": video.id }),
+    createButton(ui("שיתוף", "Share"), "share-video", { className: "button button--secondary", "data-video-id": video.id }),
     createElement("a", {
       className: "button button--text",
-      text: "פתיחה ב־YouTube",
+      text: ui("פתיחה ב־YouTube", "Open on YouTube"),
       attrs: { href: video.youtube_url, target: "_blank", rel: "noopener noreferrer" },
     }),
   );
@@ -1486,6 +1884,13 @@ function createDialogVideoContent(video) {
     detailSection(ui("תרגילים", "Drills"), videoArray(video, "exercises")),
     detailSection(ui("ציוד נדרש", "Required equipment"), videoArray(video, "equipment")),
     detailSection(ui("טעויות נפוצות", "Common mistakes"), videoArray(video, "common_mistakes")),
+    detailSection(
+      ui("מתי הסרטון לא מספיק", "When this video is not enough"),
+      ui(
+        "הסרטון הוא מקור לימוד בלבד. לתרגול עם סיכון, להתאמה לאופנוע או לציוד שלכם, ולכל ספק בטיחותי — עוצרים ופונים למדריך מוסמך, למדריך היצרן או לבעל מקצוע מתאים.",
+        "This video is a learning resource only. For risk-bearing practice, motorcycle- or equipment-specific setup, or any safety doubt, stop and consult a qualified instructor, the manufacturer manual or an appropriate professional.",
+      ),
+    ),
   ].filter(Boolean).forEach((section) => summaryGrid.append(section));
 
   const warnings = detailSection(ui("אזהרות בטיחות", "Safety warnings"), videoArray(video, "safety_warnings"));
@@ -1494,7 +1899,7 @@ function createDialogVideoContent(video) {
   const filteredChapters = video.chapters.filter((chapter) => !isPlaceholderChapter(chapter));
   const chaptersSection = filteredChapters.length ? createElement("section", { className: "detail-section" }) : null;
   if (chaptersSection) {
-    chaptersSection.append(createElement("h3", { text: "פרקים / נקודות זמן מתועדות" }));
+    chaptersSection.append(createElement("h3", { text: ui("פרקים / נקודות זמן מתועדות", "Documented chapters / timestamps") }));
     const list = createElement("ol", { className: "chapters" });
     filteredChapters.forEach((chapter) => {
       const item = createElement("li");
@@ -1508,24 +1913,24 @@ function createDialogVideoContent(video) {
   }
 
   const facts = createElement("dl", { className: "video-facts" });
-  const qualityScore = createElement("span", { text: `${video.quality_score} מתוך 5`, attrs: { dir: "ltr" } });
+  const qualityScore = createElement("span", { text: ui(`${video.quality_score} מתוך 5`, `${video.quality_score} of 5`), attrs: { dir: "ltr" } });
   const lastChecked = video.last_checked
     ? createElement("time", { text: formatDate(video.last_checked), attrs: { dir: "ltr", datetime: video.last_checked } })
-    : createElement("span", { text: "תאריך לא זמין" });
+    : createElement("span", { text: ui("תאריך לא זמין", "Date unavailable") });
   [
     [ui("קטגוריה", "Category"), label(video.primary_category)],
     [ui("מיקוד", "Focus"), (video.subtopics || []).map(label).join(", ")],
     [ui("סוג הדרכה", "Guidance format"), label(video.content_type)],
-    ["שפה", video.language === "he" ? ui("עברית", "Hebrew") : ui("אנגלית", "English")],
-    ["כתוביות", video.subtitle_languages.length ? video.subtitle_languages.map(label).join(", ") : "לא תועדו"],
-    ["סוגי אופנוע", video.motorcycle_types.map(label).join(", ")],
-    ["משקל אופנוע", video.motorcycle_weight_classes.map(label).join(", ")],
-    ["קרקע", video.terrain_types.length ? video.terrain_types.map(label).join(", ") : "לא רלוונטי"],
-    ["תנאי דרך", video.road_conditions.length ? video.road_conditions.map(label).join(", ") : "לא רלוונטי"],
-    ["סוג מקור", label(video.source_type)],
-    ["תוכן שיווקי", video.contains_marketing ? "כן — מסומן בשקיפות" : "לא"],
-    ["דירוג פנימי", qualityScore],
-    ["נבדק לאחרונה", lastChecked],
+    [ui("שפה", "Language"), video.language === "he" ? ui("עברית", "Hebrew") : ui("אנגלית", "English")],
+    [ui("כתוביות", "Subtitles"), video.subtitle_languages.length ? video.subtitle_languages.map(label).join(", ") : ui("לא תועדו", "Not documented")],
+    [ui("סוגי אופנוע", "Motorcycle types"), video.motorcycle_types.map(label).join(", ")],
+    [ui("משקל אופנוע", "Motorcycle weight"), video.motorcycle_weight_classes.map(label).join(", ")],
+    [ui("קרקע", "Terrain"), video.terrain_types.length ? video.terrain_types.map(label).join(", ") : ui("לא רלוונטי", "Not applicable")],
+    [ui("תנאי דרך", "Road conditions"), video.road_conditions.length ? video.road_conditions.map(label).join(", ") : ui("לא רלוונטי", "Not applicable")],
+    [ui("סוג מקור", "Source type"), label(video.source_type)],
+    [ui("תוכן שיווקי", "Marketing content"), video.contains_marketing ? ui("כן — מסומן בשקיפות", "Yes — marked transparently") : ui("לא תועד", "Not documented")],
+    [ui("עומק אימות ותיעוד", "Verification and documentation depth"), qualityScore],
+    [ui("נבדק לאחרונה", "Last checked"), lastChecked],
   ].forEach(([term, description]) => {
     const value = createElement("dd");
     if (description instanceof Node) value.append(description);
@@ -1536,21 +1941,21 @@ function createDialogVideoContent(video) {
   const verification = createElement("section", { className: "detail-section detail-section--verification" });
   const verificationMeta = createElement("p", { className: "mixed-inline" });
   verificationMeta.append(
-    document.createTextNode("בסיס הסיווג: "),
+    document.createTextNode(ui("בסיס הסיווג: ", "Classification basis: ")),
     createElement("bdi", { text: video.verification.content_evidence_types.join(", "), attrs: { dir: "ltr" } }),
     createElement("span", { text: "·", attrs: { "aria-hidden": "true" } }),
-    document.createTextNode("ביטחון: "),
+    document.createTextNode(ui("ביטחון: ", "Confidence: ")),
     createElement("bdi", { text: video.verification.classification_confidence, attrs: { dir: "ltr" } }),
   );
   verification.append(
-    createElement("h3", { text: "תיעוד אימות" }),
+    createElement("h3", { text: ui("תיעוד אימות", "Verification record") }),
     createElement("p", { text: englishMode() ? video.verification.notes_en : video.verification.notes_he }),
     verificationMeta,
     createElement("p", { text: videoText(video, "quality_reason") }),
   );
 
   const related = createElement("section", { className: "related-videos" });
-  related.append(createElement("h3", { text: "סרטונים קשורים" }));
+  related.append(createElement("h3", { text: ui("סרטונים קשורים", "Related videos") }));
   const relatedGrid = createElement("div", { className: "related-videos__grid" });
   video.related_video_ids.forEach((id) => {
     const relatedVideo = state.videosById.get(id);
@@ -1560,11 +1965,12 @@ function createDialogVideoContent(video) {
 
   const source = createElement("section", { className: "source-credit" });
   const channelLink = createElement("a", { attrs: { href: video.channel_url, target: "_blank", rel: "noopener noreferrer" } });
-  channelLink.append(document.createTextNode("לערוץ "), createElement("bdi", { text: video.channel_name, attrs: { dir: "auto" } }));
+  channelLink.append(document.createTextNode(ui("לערוץ ", "Visit channel ")), createElement("bdi", { text: video.channel_name, attrs: { dir: "auto" } }));
   source.append(
-    createElement("p", { text: "הסרטון שייך ליוצר ולערוץ המקורי. המדריך מרכז מידע וקישורים לצורכי למידה." }),
+    createElement("p", { text: ui("הסרטון, הסימנים המסחריים וכל זכויותיו שייכים ליוצר ולערוץ המקורי. המדריך הוא אוצר קישורים קהילתי בלבד; הוא אינו נותן חסות, בעלות, אחריות או אישור לתוכן.", "The video, trademarks and all associated rights belong to its creator and original channel. This guide is a community link curator only; it does not claim sponsorship, ownership, warranty or endorsement.") }),
+    createElement("p", { className: "creator-like-note creator-like-note--detail", text: ui("הסרטון עזר לכם? פתחו אותו ב־YouTube ותנו לייק — זו דרך פשוטה להודות ליוצרים ולעודד המשך השקעה בתוכן איכותי.", "Did it help? Open it on YouTube and leave a like — a simple way to thank creators and encourage more useful work.") }),
     channelLink,
-    createButton("דיווח על קישור שבור או בקשת הסרה", "copy-report", {
+    createButton(ui("דיווח על קישור שבור או בקשת הסרה", "Report a broken link or request removal"), "copy-report", {
       className: "button button--text",
       "data-video-id": video.id,
     }),
@@ -1648,7 +2054,7 @@ function loadPlayer(videoId) {
   const iframe = createElement("iframe", {
     attrs: {
       src: `https://www.youtube-nocookie.com/embed/${video.youtube_video_id}?rel=0`,
-      title: `נגן YouTube: ${videoTitle(video)}`,
+      title: ui(`נגן YouTube: ${videoTitle(video)}`, `YouTube player: ${videoTitle(video)}`),
       allow: "accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share",
       allowfullscreen: "",
       referrerpolicy: "strict-origin-when-cross-origin",
@@ -1656,7 +2062,7 @@ function loadPlayer(videoId) {
     },
   });
   slot.replaceChildren(iframe);
-  announce("נגן YouTube נטען לאחר בקשת המשתמש");
+  announce(ui("נגן YouTube נטען לאחר בקשת המשתמש", "YouTube player loaded after the user's request"));
 }
 
 function restoreControlFocus(action, videoId, inDialog) {
@@ -1670,7 +2076,7 @@ function toggleFavorite(videoId, origin) {
   const inDialog = Boolean(origin?.closest("#video-dialog"));
   const active = browserStorage.toggleFavorite(videoId);
   state.favorites = browserStorage.getFavorites();
-  showToast(active ? "נוסף למועדפים" : "הוסר מהמועדפים");
+  showToast(active ? ui("נוסף למועדפים", "Added to favourites") : ui("הוסר מהמועדפים", "Removed from favourites"));
   renderLibrary();
   if (state.activeVideoId === videoId) {
     const content = $("#video-dialog-content");
@@ -1684,7 +2090,7 @@ function toggleWatched(videoId, origin) {
   const inDialog = Boolean(origin?.closest("#video-dialog"));
   const active = browserStorage.toggleWatched(videoId);
   state.watched = browserStorage.getWatched();
-  showToast(active ? "סומן כנצפה" : "סימון נצפה הוסר");
+  showToast(active ? ui("סומן כנצפה", "Marked as watched") : ui("סימון נצפה הוסר", "Watch mark removed"));
   renderLibrary();
   if (state.activeVideoId === videoId) {
     const content = $("#video-dialog-content");
@@ -1701,10 +2107,12 @@ function togglePathStep(control) {
   renderPaths();
   renderContinue();
   $(`[data-action="toggle-path-step"][data-path-id="${pathId}"][data-step-order="${stepOrder}"]`)?.focus();
-  showToast(control.checked ? "השלב סומן כהושלם" : "סימון השלב הוסר");
+  showToast(control.checked
+    ? ui("השלב סומן כהושלם", "Step marked complete")
+    : ui("סימון השלב הוסר", "Step completion removed"));
 }
 
-async function copyText(text, successMessage = "הקישור הועתק") {
+async function copyText(text, successMessage = ui("הקישור הועתק", "Link copied")) {
   try {
     await navigator.clipboard.writeText(text);
   } catch {
@@ -1809,15 +2217,16 @@ function sendFeedback() {
   const message = $("#feedback-message")?.value.trim() || "";
   if (!message) {
     $("#feedback-message")?.focus();
-    showToast("כתבו הודעה לפני פתיחת האימייל");
+    showToast(ui("כתבו הודעה לפני פתיחת GitHub", "Write a message before opening GitHub"));
     return;
   }
   const type = $("#feedback-type")?.value || "שיפור או רעיון";
-  const recipient = state.config.feedback_email || state.config.contact || FEEDBACK_EMAIL;
   const subject = englishMode() ? `Adventure Guide feedback: ${translateExact(type)}` : `משוב למדריך האדוונצ'ר: ${type}`;
-  const mailto = `mailto:${encodeURIComponent(recipient)}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(buildFeedbackText())}`;
-  window.location.href = mailto;
-  showToast("נפתחה הודעת אימייל מוכנה");
+  const target = new URL(state.config.feedback_url || FEEDBACK_URL);
+  target.searchParams.set("title", subject);
+  target.searchParams.set("body", buildFeedbackText());
+  window.location.href = target.toString();
+  showToast(ui("נפתח דיווח מוכן ב־GitHub", "A prepared GitHub report was opened"));
 }
 
 function saveBlob(filename, content, type) {
@@ -1831,30 +2240,32 @@ function saveBlob(filename, content, type) {
 
 async function downloadStandaloneHtml() {
   const standalone = document.documentElement.dataset.standalone === "true";
-  const filename = state.config.standalone_filename || "Adventure-Riding-Video-Guide-v2.2.0-Standalone.html";
+  const filename = state.config.standalone_filename || "Adventure-Riding-Video-Guide-v3.0.0-Standalone.html";
   if (standalone) {
     const source = `<!DOCTYPE html>\n${document.documentElement.outerHTML}`;
     saveBlob(filename, source, "text/html;charset=utf-8");
-    showToast("קובץ ה־HTML נשמר");
+    showToast(ui("קובץ ה־HTML נשמר", "The HTML file was saved"));
     return;
   }
   const target = document.body.dataset.downloadFile;
   if (!target) {
-    showToast("קובץ ההורדה אינו זמין בחבילה זו");
+    showToast(ui("קובץ ההורדה אינו זמין בחבילה זו", "The download is unavailable in this package"));
     return;
   }
   const anchor = createElement("a", { attrs: { href: target, download: filename } });
   document.body.append(anchor);
   anchor.click();
   anchor.remove();
-  showToast("הורדת קובץ ה־HTML החלה");
+  showToast(ui("הורדת קובץ ה־HTML החלה", "The HTML download started"));
 }
 
 function copyReport(videoId) {
   const video = state.videosById.get(videoId);
   if (!video) return;
-  const text = `דיווח על קישור שבור / בקשת הסרה\nמזהה: ${video.id}\nכותרת: ${video.title_original}\nמקור: ${video.youtube_url}`;
-  copyText(text, "נוסח הדיווח הועתק");
+  const text = englishMode()
+    ? `Broken-link report / removal request\nID: ${video.id}\nTitle: ${video.title_original}\nSource: ${video.youtube_url}`
+    : `דיווח על קישור שבור / בקשת הסרה\nמזהה: ${video.id}\nכותרת: ${video.title_original}\nמקור: ${video.youtube_url}`;
+  copyText(text, ui("נוסח הדיווח הועתק", "Report text copied"));
 }
 
 function clearFilter(key) {
@@ -1879,7 +2290,7 @@ function resetFilters() {
   state.visibleLimit = INITIAL_VISIBLE_LIMIT;
   renderLibrary();
   $("#library-search")?.focus();
-  showToast("כל המסננים אופסו");
+  showToast(ui("כל המסננים אופסו", "All filters were reset"));
 }
 
 function handleDomainSelection(domain) {
@@ -1963,7 +2374,7 @@ function bindEvents() {
     else if (action === "toggle-favorite") toggleFavorite(videoId, control);
     else if (action === "toggle-watched") toggleWatched(videoId, control);
     else if (action === "share-video") shareVideo(videoId);
-    else if (action === "share-filters") copyText(window.location.href, "קישור החיפוש הועתק");
+    else if (action === "share-filters") copyText(window.location.href, ui("קישור החיפוש הועתק", "Search link copied"));
     else if (action === "copy-report") copyReport(videoId);
     else if (action === "remove-filter") clearFilter(control.dataset.filterKey);
     else if (action === "quick-domain") applyQuickFacet("domain", control.dataset.filterValue || "");
@@ -1984,34 +2395,31 @@ function bindEvents() {
     else if (action === "open-rights") openRights();
     else if (action === "open-feedback") openFeedback();
     else if (action === "close-feedback") closeFeedback();
-    else if (action === "copy-feedback") copyText(buildFeedbackText(), "נוסח המשוב הועתק");
+    else if (action === "copy-feedback") copyText(buildFeedbackText(), ui("נוסח המשוב הועתק", "Feedback text copied"));
     else if (action === "download-html") downloadStandaloneHtml();
-    else if (action === "copy-ai-prompt") copyText(buildAiPrompt(), "נוסח מפורט לכלי AI הועתק");
+    else if (action === "copy-ai-prompt") copyText(buildAiPrompt(), ui("נוסח מפורט לכלי AI הועתק", "Detailed AI prompt copied"));
     else if (action === "reset-trip-checklists") {
       state.tripChecklist = browserStorage.resetTripChecklist();
       renderTrips();
-      showToast("סימוני הצ׳קליסט אופסו");
+      showToast(ui("סימוני הצ׳קליסט אופסו", "Checklist marks were reset"));
     }
     else if (action === "select-trip-type") {
       state.selectedTripType = control.dataset.tripType || "day";
       browserStorage.setSelectedTripType(state.selectedTripType);
       renderTrips();
-      showToast("סוג הטיול נשמר במכשיר");
+      showToast(ui("סוג הטיול נשמר במכשיר", "Trip type saved on this device"));
     }
     else if (action === "open-trip-path") {
+      state.selectedPathId = control.dataset.pathId || state.selectedPathId;
+      browserStorage.setSelectedPath(state.selectedPathId);
       navigate("paths", { focus: true });
       window.setTimeout(() => {
-        const pathNode = $(`#path-${control.dataset.pathId}`);
-        pathNode?.scrollIntoView({ behavior: "smooth", block: "start" });
+        selectLearningPath(state.selectedPathId, { focus: true, updateHistory: true });
       }, 50);
     }
     else if (action === "open-paths") navigate("paths", { focus: true });
-    else if (action === "jump-path") {
-      const pathNode = $(`#path-${control.dataset.pathId}`);
-      pathNode?.scrollIntoView({ behavior: "smooth", block: "start" });
-      const heading = $("h2", pathNode);
-      if (heading) { heading.tabIndex = -1; heading.focus({ preventScroll: true }); }
-    }
+    else if (action === "select-path" || action === "jump-path") selectLearningPath(control.dataset.pathId, { focus: true });
+    else if (action === "toggle-local-ai") toggleLocalAi();
     else if (action === "back-to-top") window.scrollTo({ top: 0, behavior: "smooth" });
     else if (action === "close-video" || action === "close-video-dialog") closeVideo();
     else if (action === "close-rights") closeRights();
@@ -2129,12 +2537,15 @@ async function initialize() {
     state.pathProgress = browserStorage.getPathProgress();
     state.tripChecklist = browserStorage.getTripChecklist();
     state.selectedTripType = browserStorage.getSelectedTripType();
+    state.selectedPathId = browserStorage.getSelectedPath();
+    state.semantic.enabled = browserStorage.getSemanticEnabled();
     state.ready = true;
 
     hydrateFromUrl();
     populateFilters();
     syncControlsFromFilters();
     renderSafety();
+    initializeVisitCounter();
     renderDomainCards();
     renderFeatured();
     renderContinue();
@@ -2142,6 +2553,16 @@ async function initialize() {
     renderPaths();
     renderTrips();
     renderSmartResults(state.smartQuery);
+    updateLocalAiUi(state.semantic.enabled ? "loading" : "idle");
+    if (state.semantic.enabled) {
+      ensureSemanticReady()
+        .then(() => renderSmartResults(state.smartQuery))
+        .catch((error) => {
+          state.semantic.enabled = false;
+          browserStorage.setSemanticEnabled(false);
+          updateLocalAiUi("error", error instanceof Error ? error.message : String(error));
+        });
+    }
     navigate(state.currentView, { updateHistory: false });
     $("#loading-state")?.remove();
     if ($("#app")) $("#app").hidden = false;
@@ -2157,6 +2578,9 @@ async function initialize() {
         pathCount: state.paths.length,
         currentView: state.currentView,
         activeVideoId: state.activeVideoId,
+        selectedPathId: state.selectedPathId,
+        semanticEnabled: state.semantic.enabled,
+        semanticReady: state.semantic.ready,
       }),
       getSmartResults: (query) => smartRankVideos(query).results.map((video) => video.id),
       openVideo,

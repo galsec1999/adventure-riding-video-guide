@@ -240,6 +240,42 @@ def fetch_command(input_path: Path, output: Path, *, workers: int, include_descr
     return 0 if report["failed"] == 0 else 1
 
 
+def evidence_gap_command(output: Path, *, workers: int) -> int:
+    """Fetch descriptions for records whose only content evidence is search metadata."""
+
+    videos = read_json(VIDEOS_PATH)
+    accepted_evidence = {"description", "chapters", "captions", "transcript", "visual_review"}
+    selected = [
+        item for item in videos
+        if not accepted_evidence.intersection(item.get("verification", {}).get("content_evidence_types", []))
+    ]
+    fetched = fetch_many((item["youtube_url"] for item in selected), workers=workers, include_description=True)
+    local_by_youtube_id = {item["youtube_video_id"]: item for item in selected}
+    for item in fetched:
+        local = local_by_youtube_id.get(item.get("youtube_video_id"), {})
+        item["local_id"] = local.get("id")
+        item["local_primary_category"] = local.get("primary_category")
+        item["local_title_he"] = local.get("title_he")
+        item["local_summary_he"] = local.get("summary_he")
+        item["local_learning_points_he"] = local.get("learning_points_he", [])
+        item["local_risk_level"] = local.get("risk_level")
+    report = {
+        "generated_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
+        "network_performed": True,
+        "video_or_transcript_downloaded": False,
+        "selection": "records without description, chapters, captions, transcript or visual_review evidence",
+        "requested": len(selected),
+        "passed": sum(item["status"] == "pass" for item in fetched),
+        "failed": sum(item["status"] != "pass" for item in fetched),
+        "results": fetched,
+    }
+    write_json(output, report)
+    print(f"Fetched evidence gaps: {report['passed']}/{report['requested']}")
+    print(f"Failed: {report['failed']}")
+    print(f"Report: {output}")
+    return 0 if report["failed"] == 0 else 1
+
+
 def search_one(query_spec: dict[str, Any]) -> dict[str, Any]:
     """Run one metadata-only YouTube search and retain the query provenance."""
 
@@ -405,6 +441,13 @@ def parser() -> argparse.ArgumentParser:
     fetch.add_argument("--workers", type=int, default=4)
     fetch.add_argument("--include-description", action="store_true")
 
+    evidence_gap = subparsers.add_parser(
+        "evidence-gap",
+        help="Fetch descriptions for records whose only content evidence is search metadata",
+    )
+    evidence_gap.add_argument("--output", type=Path, required=True)
+    evidence_gap.add_argument("--workers", type=int, default=4)
+
     discover = subparsers.add_parser(
         "discover",
         help="Run metadata-only YouTube searches and deduplicate candidates",
@@ -427,6 +470,8 @@ def main(argv: list[str] | None = None) -> int:
             return audit_existing(args.output, workers=args.workers)
         if args.command == "discover":
             return discover_command(args.input, args.output, workers=args.workers)
+        if args.command == "evidence-gap":
+            return evidence_gap_command(args.output, workers=args.workers)
         return fetch_command(
             args.input,
             args.output,

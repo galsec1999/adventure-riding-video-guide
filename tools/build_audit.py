@@ -124,6 +124,7 @@ def build_audit(
     }
     videos_hash = source_hashes["data/videos.json"]
     return {
+        "document_version": "1.0.0",
         "generated_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
         "generator": "tools/build_audit.py",
         "source_files_sha256": source_hashes,
@@ -239,7 +240,7 @@ def render_html(report: dict[str, Any]) -> str:
 </head>
 <body>
   <header>
-    <h1>דוח ביקורת תוכן</h1>
+    <h1>דוח ביקורת תוכן — גרסת מסמך 1.0.0</h1>
     <p>נוצר אוטומטית ב־<code>{html.escape(report['generated_at'])}</code>.</p>
     <p class="status">מצב אימות: {html.escape(status)}</p>
     <p>{link_note}</p>

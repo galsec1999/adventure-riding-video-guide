@@ -4,6 +4,10 @@ export const STORAGE_KEYS = Object.freeze({
   pathProgress: "adv-guide:v1:path-progress",
   theme: "adv-guide:v1:theme",
   lastVideo: "adv-guide:v1:last-video",
+  tripChecklist: "adv-guide:v2:trip-checklist",
+  selectedTripType: "adv-guide:v2:selected-trip-type",
+  selectedPath: "adv-guide:v3:selected-path",
+  semanticEnabled: "adv-guide:v3:semantic-enabled",
 });
 
 function safeParse(value, fallback) {
@@ -119,6 +123,41 @@ export function createStorage(candidate) {
     },
     setLastVideo(id) {
       backend.setItem(STORAGE_KEYS.lastVideo, JSON.stringify({ id, updatedAt: new Date().toISOString() }));
+    },
+
+    getTripChecklist() {
+      return readSet(STORAGE_KEYS.tripChecklist);
+    },
+    toggleTripChecklist(id, force) {
+      return toggleSetItem(STORAGE_KEYS.tripChecklist, id, force);
+    },
+    resetTripChecklist() {
+      backend.removeItem(STORAGE_KEYS.tripChecklist);
+      return new Set();
+    },
+
+    getSelectedTripType() {
+      return backend.getItem(STORAGE_KEYS.selectedTripType) || "day";
+    },
+    setSelectedTripType(id) {
+      if (typeof id === "string" && id) backend.setItem(STORAGE_KEYS.selectedTripType, id);
+      else backend.removeItem(STORAGE_KEYS.selectedTripType);
+    },
+
+    getSelectedPath() {
+      return backend.getItem(STORAGE_KEYS.selectedPath) || "";
+    },
+    setSelectedPath(id) {
+      if (typeof id === "string" && id) backend.setItem(STORAGE_KEYS.selectedPath, id);
+      else backend.removeItem(STORAGE_KEYS.selectedPath);
+    },
+
+    getSemanticEnabled() {
+      return backend.getItem(STORAGE_KEYS.semanticEnabled) === "yes";
+    },
+    setSemanticEnabled(enabled) {
+      if (enabled) backend.setItem(STORAGE_KEYS.semanticEnabled, "yes");
+      else backend.removeItem(STORAGE_KEYS.semanticEnabled);
     },
   };
 }

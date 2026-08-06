@@ -38,10 +38,15 @@ jobs:
 
       - name: Validate release
         run: |
-          python tools/validate_pwa.py --site site --schema documentation/video.schema.json --expected-count 450
+          python tools/validate_data.py --expected-count 411
+          python tools/verify_site_sync.py
+          python tools/validate_pwa.py --site site --schema documentation/video.schema.json --expected-count 411
+          python -m unittest discover -s tests -p "test_*.py"
           npm test
+          node tools/search_acceptance.mjs --report reports/site-upgrade-v3/search-acceptance-ci.json
           find site/assets/js -name '*.js' -print0 | xargs -0 -n1 node --check
           node --check site/service-worker.js
+          git show --check --oneline --no-renames HEAD
 
   deploy:
     needs: validate

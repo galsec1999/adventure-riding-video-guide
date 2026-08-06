@@ -1,16 +1,26 @@
-# Community Adventure Riding Video Guide
+# Community Adventure Riding Video Guide — Document version 3.0.1 / גרסת מסמך 3.0.1
 
-An installable, bilingual Hebrew/English PWA with 450 curated riding tutorials, contextual filters, 17 learning paths, trip planning material, favourites and local progress.
+An installable Hebrew/English PWA with 411 active curated riding tutorials, 17 learning paths, a trip centre, contextual search and optional on-device semantic search. Product version: **3.0.0**.
 
 Live site: <https://galsec1999.github.io/adventure-riding-video-guide/>
 
+## What changed in 3.0.0
+
+- Added 17 focused videos: 6 navigation, 7 protective gear and 4 intercoms; removed 56 unavailable or insufficiently evidenced records.
+- Added basic and advanced filters, richer video cards, a prominent Like reminder and stronger curation disclaimers.
+- Learning paths now open one at a time and show progress, the next step and viewing alternatives.
+- The navigation centre now contains 10 comparisons, 6 knowledge guides, 7 checklists and 34 video references.
+- Optional multilingual semantic search runs on the device with no AI API, key or backend. Regular search remains available at all times.
+- The visit counter records live-site loads through Hits.sh; it is not a unique-user counter.
+- Public credit shows “Ilan” only. Feedback and removal requests use GitHub without exposing a surname.
+
 ## Install
 
-- Android Chrome: open the site, open the ⋮ menu and choose **Install app** or **Add to Home screen**.
+- Android Chrome: open the site, use the ⋮ menu, then choose **Install app** or **Add to Home screen**.
 - Desktop Chrome: use the install icon in the address bar or choose **Install** from the browser menu.
 - iPhone/iPad: use **Share → Add to Home Screen**.
 
-The library, filters and learning paths work offline after the first successful load. YouTube playback still requires internet access.
+After the first successful load, the library, regular search, filters, trips and learning paths work offline. YouTube playback and the local model's first download still require internet access.
 
 ## Run locally
 
@@ -20,28 +30,32 @@ python -m http.server 8080 --directory site
 
 Open <http://localhost:8080/>. Service workers require `localhost` or HTTPS.
 
-## Validate
+## Build and validate
 
 ```powershell
-python -m pip install jsonschema==4.26.0
-python tools/validate_pwa.py --site site --schema documentation/video.schema.json --expected-count 450
+node tools/build_semantic_index.mjs
+python tools/build_standalone.py
+python tools/verify_site_sync.py --write
+python tools/validate_data.py --expected-count 411
+python tools/validate_pwa.py --site site --schema documentation/video.schema.json --expected-count 411
+python -m unittest discover -s tests -p "test_*.py"
 npm test
+node tools/search_acceptance.mjs
 ```
 
 ## Repository layout
 
 - `site/` — the exact static artifact published by GitHub Pages.
-- `site/data/` — the 450-record bilingual dataset and controlled taxonomies.
-- `documentation/` — licences, schema, changelog and v2.2.1 source notes.
-- `tools/validate_pwa.py` — CI release gate.
-- `reports/` — QA evidence and deployment reports.
+- `data/` — 411 records, taxonomy, paths, trip data and the semantic index.
+- `assets/` — UI, styles, Web Worker, Transformers.js and ONNX Runtime.
+- `downloads/Adventure-Riding-Video-Guide-v3.0.0-Standalone.html` — a single-file edition with regular search and no semantic model.
+- `documentation/` — specifications, licences, rights, third-party notices and release notes.
+- `reports/site-upgrade-v3/` — release reports, checks and visual QA evidence.
 
-## Content updates and releases
+## Content, rights and privacy
 
-Only add a video after verifying its source beyond the title. Do not invent metadata, timestamps or learning claims. Run all validation before pushing. A push to `main` validates and deploys `site/` through the official GitHub Pages workflow. Releases use semantic tags; the PWA release is `v2.3.0-pwa`.
+Never add a video from its title alone or invent metadata, timestamps or learning claims. The site is a curated index: it does not own the videos, endorse every claim or replace professional instruction, applicable law or the manufacturer's manual.
 
-## Rights and purpose
+Original code is MIT licensed; original community text and classifications use CC BY-NC-SA 4.0. YouTube videos, thumbnails, channel names and trademarks remain the property of their owners. User state stays in the browser. See `documentation/THIRD_PARTY_NOTICES.md` for third-party components.
 
-This is a non-profit community project. Original code is MIT licensed. Original summaries and classifications are shared under CC BY-NC-SA 4.0. YouTube videos, thumbnails, channel names and trademarks remain the property of their owners and are not covered by the project licences.
-
-Feedback and removal requests: [Ilan.nachman@gmail.com](mailto:Ilan.nachman@gmail.com)
+Feedback and removal requests: <https://github.com/galsec1999/adventure-riding-video-guide/issues/new>

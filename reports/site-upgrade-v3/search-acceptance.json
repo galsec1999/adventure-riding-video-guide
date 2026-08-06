@@ -1,0 +1,709 @@
+{
+  "generated_at_utc": "2026-08-06T00:12:45.593Z",
+  "required_query_count": 25,
+  "passed": 25,
+  "failed": 0,
+  "status": "PASS",
+  "checks": [
+    {
+      "query": "חול",
+      "result_count": 35,
+      "top_three": [
+        {
+          "id": "yt-o9nOs9NVnKE",
+          "title_he": "שלושה סוגי חול וטכניקות לאדוונצ׳ר",
+          "channel_name": "MOTOTREK",
+          "score": 1645,
+          "relevant": true
+        },
+        {
+          "id": "yt-RQBTnhHzthU",
+          "title_he": "יסודות רכיבה בחול עמוק",
+          "channel_name": "mxtvshow",
+          "score": 1389,
+          "relevant": true
+        },
+        {
+          "id": "yt-CD8zbN_lpHQ",
+          "title_he": "רכיבה בחול עמוק בלי להילחם באופנוע",
+          "channel_name": "Bret Tkacs ADV",
+          "score": 1353,
+          "relevant": true
+        }
+      ],
+      "pass": true
+    },
+    {
+      "query": "בוץ",
+      "result_count": 15,
+      "top_three": [
+        {
+          "id": "yt-wsokPULhmv0",
+          "title_he": "בוץ וגשם: פקודות צפויות ואחיזה",
+          "channel_name": "Dirt Bike Academy",
+          "score": 1348,
+          "relevant": true
+        },
+        {
+          "id": "yt-MqIxMyAUURM",
+          "title_he": "רכיבת בוץ וסלעים חלקלקים 22.11.2020",
+          "channel_name": "kRuvi",
+          "score": 1348,
+          "relevant": true
+        },
+        {
+          "id": "yt-1cHdv7grbts",
+          "title_he": "איך לרכוב נכון בבוץ עם אופנוע אדוונצ'ר",
+          "channel_name": "Brake Magazine",
+          "score": 951,
+          "relevant": true
+        }
+      ],
+      "pass": true
+    },
+    {
+      "query": "פניות בכביש",
+      "result_count": 53,
+      "top_three": [
+        {
+          "id": "yt-3cPj4-gVXD4",
+          "title_he": "פניות עיוורות, רטובות ובירידה",
+          "channel_name": "CanyonChasers",
+          "score": 1419,
+          "relevant": true
+        },
+        {
+          "id": "yt-bJkK-Z0eDq0",
+          "title_he": "זווית הטיה, אחיזה וקו בטוח בפניית כביש",
+          "channel_name": "Bennetts BikeSocial",
+          "score": 1327,
+          "relevant": true
+        },
+        {
+          "id": "yt-doVLIwQbnWs",
+          "title_he": "חמישה שלבים לשיפור פניות",
+          "channel_name": "MotoJitsu®",
+          "score": 1327,
+          "relevant": true
+        }
+      ],
+      "pass": true
+    },
+    {
+      "query": "בלימת חירום",
+      "result_count": 24,
+      "top_three": [
+        {
+          "id": "yt-HxJPOQ_4L18",
+          "title_he": "הדגמת בלימת חירום עם שני הבלמים",
+          "channel_name": "Joe Goe Motorcycle Adventures",
+          "score": 2066,
+          "relevant": true
+        },
+        {
+          "id": "yt-EiicJgmx53Q",
+          "title_he": "בלימת חירום במהירות גבוהה",
+          "channel_name": "Moto Control",
+          "score": 2036,
+          "relevant": true
+        },
+        {
+          "id": "yt-bO88ooYOLhw",
+          "title_he": "בלימת חירום ישרה במהירות 20 מייל לשעה",
+          "channel_name": "Low Altitude Flyer",
+          "score": 2036,
+          "relevant": true
+        }
+      ],
+      "pass": true
+    },
+    {
+      "query": "הרמת אופנוע",
+      "result_count": 10,
+      "top_three": [
+        {
+          "id": "yt-uT-staOOo9w",
+          "title_he": "הרמת אופנוע שנפל בבטחה",
+          "channel_name": "Paul Tannahill",
+          "score": 2166,
+          "relevant": true
+        },
+        {
+          "id": "yt-dRvofOL3eaI",
+          "title_he": "איך להרים אופנוע אדוונצ'ר גם כרוכב קטן",
+          "channel_name": "The Girl On A Bike",
+          "score": 1982,
+          "relevant": true
+        },
+        {
+          "id": "yt-_fddOX-CZXI",
+          "title_he": "שלוש דרכים להרים אופנוע אדוונצ'ר כבד",
+          "channel_name": "The Next Adventure Show",
+          "score": 1823,
+          "relevant": true
+        }
+      ],
+      "pass": true
+    },
+    {
+      "query": "גשם",
+      "result_count": 41,
+      "top_three": [
+        {
+          "id": "yt-T-NlEZr1-ws",
+          "title_he": "ירידה בחריצי גשם על אופנוע אדוונצ'ר",
+          "channel_name": "SoCal Off-Road School",
+          "score": 822,
+          "relevant": true
+        },
+        {
+          "id": "yt-DY7OFizK_eo",
+          "title_he": "איך לרכוב בגשם",
+          "channel_name": "FortNine",
+          "score": 771,
+          "relevant": true
+        },
+        {
+          "id": "yt-wdESPaOqd8I",
+          "title_he": "ארבע טכניקות לרכיבה בטוחה בגשם",
+          "channel_name": "Moto Control",
+          "score": 771,
+          "relevant": true
+        }
+      ],
+      "pass": true
+    },
+    {
+      "query": "עלייה תלולה",
+      "result_count": 19,
+      "top_three": [
+        {
+          "id": "yt-gOsYp0-dBuc",
+          "title_he": "טיפוס וירידה בשיפועים לפי אדם רימן",
+          "channel_name": "Adam Riemann",
+          "score": 845,
+          "relevant": true
+        },
+        {
+          "id": "yt-jJbqqwiVZYM",
+          "title_he": "איך לטפס עלייה באופנוע שטח",
+          "channel_name": "SoCal Off-Road School",
+          "score": 729,
+          "relevant": true
+        },
+        {
+          "id": "yt-FQp-0v2ddQ0",
+          "title_he": "התאוששות מכישלון באמצע עלייה",
+          "channel_name": "MOTOTREK",
+          "score": 615,
+          "relevant": true
+        }
+      ],
+      "pass": true
+    },
+    {
+      "query": "רכיבה איטית",
+      "result_count": 167,
+      "top_three": [
+        {
+          "id": "yt-FtbWGcyEEwo",
+          "title_he": "טכניקה לשליטה איטית",
+          "channel_name": "Yammie Noob",
+          "score": 984,
+          "relevant": true
+        },
+        {
+          "id": "yt-bm1Xynt0QuE",
+          "title_he": "הסוד לביטחון בתמרונים במהירות נמוכה",
+          "channel_name": "MotoJitsu®",
+          "score": 871,
+          "relevant": true
+        },
+        {
+          "id": "yt-S2scBN4YzsU",
+          "title_he": "3 תרגילים לשיפור שליטת מצמד במהירות נמוכה",
+          "channel_name": "Prorider Central Texas YouTube",
+          "score": 847,
+          "relevant": true
+        }
+      ],
+      "pass": true
+    },
+    {
+      "query": "רוח צד",
+      "result_count": 3,
+      "top_three": [
+        {
+          "id": "yt-HbeehN-Ustk",
+          "title_he": "ניהול רוח צד במשאיות ובשטחים פתוחים",
+          "channel_name": "Firm Foundation",
+          "score": 1259,
+          "relevant": true
+        },
+        {
+          "id": "yt-zVxVAUB8n78",
+          "title_he": "שלוש טכניקות לשליטה ברוח צד חזקה",
+          "channel_name": "CanyonChasers",
+          "score": 757,
+          "relevant": true
+        },
+        {
+          "id": "yt-LCYXUCRHzww",
+          "title_he": "כיצד לרכוב ברוח ובמשבים",
+          "channel_name": "Tularosa Moto",
+          "score": 566,
+          "relevant": true
+        }
+      ],
+      "pass": true
+    },
+    {
+      "query": "רכיבת לילה",
+      "result_count": 8,
+      "top_three": [
+        {
+          "id": "yt-Rmd7mV_a_i8",
+          "title_he": "רכיבת לילה: לראות, להיראות ולעצור בטווח הפנס",
+          "channel_name": "Relishlife",
+          "score": 1027,
+          "relevant": true
+        },
+        {
+          "id": "yt-uXkKS8z0nSI",
+          "title_he": "טיפ פשוט לרכיבת לילה בטוחה יותר",
+          "channel_name": "DanDanTheFireman",
+          "score": 433,
+          "relevant": true
+        },
+        {
+          "id": "yt-eTBshYyXrW0",
+          "title_he": "ציוד והכנת האופנוע לרכיבת לילה",
+          "channel_name": "TWO WHEELS PARADISE",
+          "score": 433,
+          "relevant": true
+        }
+      ],
+      "pass": true
+    },
+    {
+      "query": "לחץ אוויר",
+      "result_count": 27,
+      "top_three": [
+        {
+          "id": "yt-S371SeT-b4M",
+          "title_he": "לחץ אוויר בצמיגים ולמה הוא חשוב",
+          "channel_name": "Motorcyclist Magazine",
+          "score": 2253,
+          "relevant": true
+        },
+        {
+          "id": "yt-oW7eVgdCC58",
+          "title_he": "לחץ אוויר בצמיגי אופנוע: עקרונות ויישומים",
+          "channel_name": "Big Rock Moto",
+          "score": 2223,
+          "relevant": true
+        },
+        {
+          "id": "yt-5pUSer1l8jI",
+          "title_he": "לחץ אוויר לשטח באופנועי אדוונצ'ר",
+          "channel_name": "OFFroad-OFFcourse",
+          "score": 2223,
+          "relevant": true
+        }
+      ],
+      "pass": true
+    },
+    {
+      "query": "מתלים",
+      "result_count": 18,
+      "top_three": [
+        {
+          "id": "yt-CCCl2KBpP5g",
+          "title_he": "קדם־עומס ושקיעת מתלים באופנוע אדוונצ'ר",
+          "channel_name": "MOTOTREK",
+          "score": 1912,
+          "relevant": true
+        },
+        {
+          "id": "yt-DW0GVIvub44",
+          "title_he": "כיוון שקיעת מתלה באדוונצ'ר עמוס",
+          "channel_name": "Terra-Moto",
+          "score": 1410,
+          "relevant": true
+        },
+        {
+          "id": "yt-QrdzBXxa7e0",
+          "title_he": "כיוון SAG לכל אופנוע אדוונצ'ר",
+          "channel_name": "MOTOTREK",
+          "score": 1410,
+          "relevant": true
+        }
+      ],
+      "pass": true
+    },
+    {
+      "query": "ABS בשטח",
+      "result_count": 3,
+      "top_three": [
+        {
+          "id": "yt-_zQoFML9xPk",
+          "title_he": "בחינת התנהגות ABS בשטח",
+          "channel_name": "Bret Tkacs ADV",
+          "score": 1167,
+          "relevant": true
+        },
+        {
+          "id": "yt-oW1fVY2m7JI",
+          "title_he": "השוואת ABS ובלמים בשטח בשבע עצירות",
+          "channel_name": "Adventure Warehouse",
+          "score": 578,
+          "relevant": true
+        },
+        {
+          "id": "yt-zsKLdi_nYYQ",
+          "title_he": "מתי להשתמש ב־ABS ובבקרת אחיזה",
+          "channel_name": "RIDE Adventures",
+          "score": 417,
+          "relevant": true
+        }
+      ],
+      "pass": true
+    },
+    {
+      "query": "רכיבה עם מורכב",
+      "result_count": 14,
+      "top_three": [
+        {
+          "id": "yt-SQhttXPPOsU",
+          "title_he": "יסודות רכיבה עם מורכב",
+          "channel_name": "Stay Upright Rider Training",
+          "score": 2104,
+          "relevant": true
+        },
+        {
+          "id": "yt-60isWQSlMg0",
+          "title_he": "רכיבה עם מורכב או מטען כבד",
+          "channel_name": "Bennetts BikeSocial",
+          "score": 2104,
+          "relevant": true
+        },
+        {
+          "id": "yt-y5vUZouBNgE",
+          "title_he": "העיקרון החשוב ברכיבה עם מורכב",
+          "channel_name": "FortNine",
+          "score": 1707,
+          "relevant": true
+        }
+      ],
+      "pass": true
+    },
+    {
+      "query": "מטען",
+      "result_count": 59,
+      "top_three": [
+        {
+          "id": "yt-fm88yhrX9bk",
+          "title_he": "חלוקת משקל נכונה של מטען באופנוע",
+          "channel_name": "Ride or Die Motorcycles",
+          "score": 1493,
+          "relevant": true
+        },
+        {
+          "id": "yt-GJTbVEFaTqE",
+          "title_he": "להפסיק להעמיס: מדריך אריזה לטיול אופנוע",
+          "channel_name": "ViaTerra Gear",
+          "score": 1320,
+          "relevant": true
+        },
+        {
+          "id": "yt-o586btpMUfY",
+          "title_he": "עצות מומחה לרוכבי אדוונצ'ר חדשים",
+          "channel_name": "MOTOTREK",
+          "score": 1093,
+          "relevant": true
+        }
+      ],
+      "pass": true
+    },
+    {
+      "query": "עייפות",
+      "result_count": 134,
+      "top_three": [
+        {
+          "id": "yt-J0ijNI0HhFA",
+          "title_he": "מניעת עייפות ברכיבה למרחקים",
+          "channel_name": "Gliding_On_Two's",
+          "score": 1628,
+          "relevant": true
+        },
+        {
+          "id": "yt-PtRYyP96HHA",
+          "title_he": "חמש דרכים להפחתת עייפות ברכיבה ארוכה",
+          "channel_name": "Lets Ride Bikes",
+          "score": 1523,
+          "relevant": true
+        },
+        {
+          "id": "yt-HGU8gAIq9ME",
+          "title_he": "הכנת הרוכב וניהול עייפות לפני מסע",
+          "channel_name": "Road Safety Commission",
+          "score": 1469,
+          "relevant": true
+        }
+      ],
+      "pass": true
+    },
+    {
+      "query": "Countersteering",
+      "result_count": 17,
+      "top_three": [
+        {
+          "id": "yt-xl3emOAywZ8",
+          "title_he": "טיפ לביצוע היגוי הפוך באופנוע",
+          "channel_name": "ProRiding Israel",
+          "score": 1087,
+          "relevant": true
+        },
+        {
+          "id": "yt-W4n81NgcRDg",
+          "title_he": "היגוי נגדי באופנוע — הסבר קצר",
+          "channel_name": "Ask Ralbad",
+          "score": 1063,
+          "relevant": true
+        },
+        {
+          "id": "yt--_a3Hk4Jeg8",
+          "title_he": "היגוי נגדי בפשטות: מנגנון ותרגול",
+          "channel_name": "Instructor Cory",
+          "score": 1033,
+          "relevant": true
+        }
+      ],
+      "pass": true
+    },
+    {
+      "query": "Trail Braking",
+      "result_count": 13,
+      "top_three": [
+        {
+          "id": "yt-J4PqKpLNOhQ",
+          "title_he": "טרייל ברייקינג: מתי כן ומתי לא",
+          "channel_name": "Roadcraft Nottingham - Motorcycle Training",
+          "score": 1599,
+          "relevant": true
+        },
+        {
+          "id": "yt-ShWc7D5HllY",
+          "title_he": "בלימה לתוך פנייה בשלוש דקות",
+          "channel_name": "ChampSchool",
+          "score": 1545,
+          "relevant": true
+        },
+        {
+          "id": "yt-gPE67XqGsV4",
+          "title_he": "למה כדאי להבין בלימה לתוך פנייה",
+          "channel_name": "CanyonChasers",
+          "score": 1545,
+          "relevant": true
+        }
+      ],
+      "pass": true
+    },
+    {
+      "query": "Sand",
+      "result_count": 21,
+      "top_three": [
+        {
+          "id": "yt-RQBTnhHzthU",
+          "title_he": "יסודות רכיבה בחול עמוק",
+          "channel_name": "mxtvshow",
+          "score": 1681,
+          "relevant": true
+        },
+        {
+          "id": "yt-CD8zbN_lpHQ",
+          "title_he": "רכיבה בחול עמוק בלי להילחם באופנוע",
+          "channel_name": "Bret Tkacs ADV",
+          "score": 1645,
+          "relevant": true
+        },
+        {
+          "id": "yt-Fo75lHpLBOM",
+          "title_he": "רכיבה בחול עמוק על אופנוע אדוונצ'ר כבד",
+          "channel_name": "MOTOTREK",
+          "score": 1645,
+          "relevant": true
+        }
+      ],
+      "pass": true
+    },
+    {
+      "query": "Mud",
+      "result_count": 11,
+      "top_three": [
+        {
+          "id": "yt-wsokPULhmv0",
+          "title_he": "בוץ וגשם: פקודות צפויות ואחיזה",
+          "channel_name": "Dirt Bike Academy",
+          "score": 1435,
+          "relevant": true
+        },
+        {
+          "id": "yt-MqIxMyAUURM",
+          "title_he": "רכיבת בוץ וסלעים חלקלקים 22.11.2020",
+          "channel_name": "kRuvi",
+          "score": 1435,
+          "relevant": true
+        },
+        {
+          "id": "yt-1cHdv7grbts",
+          "title_he": "איך לרכוב נכון בבוץ עם אופנוע אדוונצ'ר",
+          "channel_name": "Brake Magazine",
+          "score": 1330,
+          "relevant": true
+        }
+      ],
+      "pass": true
+    },
+    {
+      "query": "Emergency braking",
+      "result_count": 21,
+      "top_three": [
+        {
+          "id": "yt-nsklKzXl2Ws",
+          "title_he": "עצירת פתע נכונה באופנוע",
+          "channel_name": "Moto Lamed",
+          "score": 2190,
+          "relevant": true
+        },
+        {
+          "id": "yt-HxJPOQ_4L18",
+          "title_he": "הדגמת בלימת חירום עם שני הבלמים",
+          "channel_name": "Joe Goe Motorcycle Adventures",
+          "score": 2136,
+          "relevant": true
+        },
+        {
+          "id": "yt-EiicJgmx53Q",
+          "title_he": "בלימת חירום במהירות גבוהה",
+          "channel_name": "Moto Control",
+          "score": 2106,
+          "relevant": true
+        }
+      ],
+      "pass": true
+    },
+    {
+      "query": "Cornering",
+      "result_count": 63,
+      "top_three": [
+        {
+          "id": "yt-NVW3lk0_SKY",
+          "title_he": "ארבע טעויות מסוכנות בפניות",
+          "channel_name": "MCrider - Motorcycle Training",
+          "score": 1047,
+          "relevant": true
+        },
+        {
+          "id": "yt-doVLIwQbnWs",
+          "title_he": "חמישה שלבים לשיפור פניות",
+          "channel_name": "MotoJitsu®",
+          "score": 1047,
+          "relevant": true
+        },
+        {
+          "id": "yt-Dtuy4qxkZ6M",
+          "title_he": "טיפ מרכזי לפנייה בטוחה בכביש",
+          "channel_name": "MCrider - Motorcycle Training",
+          "score": 1047,
+          "relevant": true
+        }
+      ],
+      "pass": true
+    },
+    {
+      "query": "Crosswind",
+      "result_count": 3,
+      "top_three": [
+        {
+          "id": "yt-HbeehN-Ustk",
+          "title_he": "ניהול רוח צד במשאיות ובשטחים פתוחים",
+          "channel_name": "Firm Foundation",
+          "score": 712,
+          "relevant": true
+        },
+        {
+          "id": "yt-zVxVAUB8n78",
+          "title_he": "שלוש טכניקות לשליטה ברוח צד חזקה",
+          "channel_name": "CanyonChasers",
+          "score": 607,
+          "relevant": true
+        },
+        {
+          "id": "yt-LCYXUCRHzww",
+          "title_he": "כיצד לרכוב ברוח ובמשבים",
+          "channel_name": "Tularosa Moto",
+          "score": 448,
+          "relevant": true
+        }
+      ],
+      "pass": true
+    },
+    {
+      "query": "Suspension",
+      "result_count": 9,
+      "top_three": [
+        {
+          "id": "yt-CCCl2KBpP5g",
+          "title_he": "קדם־עומס ושקיעת מתלים באופנוע אדוונצ'ר",
+          "channel_name": "MOTOTREK",
+          "score": 1912,
+          "relevant": true
+        },
+        {
+          "id": "yt-DW0GVIvub44",
+          "title_he": "כיוון שקיעת מתלה באדוונצ'ר עמוס",
+          "channel_name": "Terra-Moto",
+          "score": 1702,
+          "relevant": true
+        },
+        {
+          "id": "yt-QrdzBXxa7e0",
+          "title_he": "כיוון SAG לכל אופנוע אדוונצ'ר",
+          "channel_name": "MOTOTREK",
+          "score": 1702,
+          "relevant": true
+        }
+      ],
+      "pass": true
+    },
+    {
+      "query": "Tire pressure",
+      "result_count": 15,
+      "top_three": [
+        {
+          "id": "yt-S371SeT-b4M",
+          "title_he": "לחץ אוויר בצמיגים ולמה הוא חשוב",
+          "channel_name": "Motorcyclist Magazine",
+          "score": 1771,
+          "relevant": true
+        },
+        {
+          "id": "yt-oW7eVgdCC58",
+          "title_he": "לחץ אוויר בצמיגי אופנוע: עקרונות ויישומים",
+          "channel_name": "Big Rock Moto",
+          "score": 1741,
+          "relevant": true
+        },
+        {
+          "id": "yt-5pUSer1l8jI",
+          "title_he": "לחץ אוויר לשטח באופנועי אדוונצ'ר",
+          "channel_name": "OFFroad-OFFcourse",
+          "score": 1741,
+          "relevant": true
+        }
+      ],
+      "pass": true
+    }
+  ]
+}

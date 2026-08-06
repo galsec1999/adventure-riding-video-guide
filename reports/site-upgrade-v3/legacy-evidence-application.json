@@ -1,0 +1,348 @@
+{
+  "document_version": "1.0.0",
+  "review_date": "2026-08-05",
+  "policy": "retain only supports/high; remove supports/medium, insufficient and reject",
+  "reviewed_count": 78,
+  "retained_high_confidence_count": 25,
+  "removed_count": 53,
+  "video_count_before": 464,
+  "video_count_after": 411,
+  "removed_by_review_decision": {
+    "supports": 24,
+    "insufficient": 24,
+    "reject": 5
+  },
+  "removed_ids": [
+    "yt-0hI2YTTF5Z4",
+    "yt-1zluOSO-0aU",
+    "yt-21golINzets",
+    "yt-2XsUcFxuUQY",
+    "yt-2qcnOx2UMt4",
+    "yt-7wt8btf9DyM",
+    "yt-83YeesoSmz4",
+    "yt-84ZNjxLHjmc",
+    "yt-ANNNfcC3WII",
+    "yt-CI6h7XtyINY",
+    "yt-CivTmdpBies",
+    "yt-DmkKmo5XVE0",
+    "yt-FTVaL-a3XUo",
+    "yt-FcxxNhrte6o",
+    "yt-Fz2XB6_63l4",
+    "yt-GinzCxHMViI",
+    "yt-KC1sVC1tDbs",
+    "yt-KhFEnjo7fz4",
+    "yt-M5yAd24z5y0",
+    "yt-M8-J26oUIEI",
+    "yt-MPzV9BMouQI",
+    "yt-NdwIill2oYg",
+    "yt-ORbb_efZh4M",
+    "yt-P-lnb0oRNHU",
+    "yt-Q0Pg6ytOXVw",
+    "yt-R3VrRIOGWWY",
+    "yt-U10E123mrYc",
+    "yt-U1GLOiTAohk",
+    "yt-USVn82stPho",
+    "yt-UmYgdYBXADY",
+    "yt-VceHUU0WnTI",
+    "yt-eLgD0ZVj05o",
+    "yt-eRkTxPlcFQw",
+    "yt-erpkyD7SMfw",
+    "yt-gFXAEsSEbEA",
+    "yt-gpOpgtUzjqI",
+    "yt-hQAPTHLg3Go",
+    "yt-i8rywrWuAqw",
+    "yt-jeijOYcnlvU",
+    "yt-kBZ1ormGpog",
+    "yt-mBFRc7cClJo",
+    "yt-mPgGjQBkSv4",
+    "yt-mPs3E_d5YBQ",
+    "yt-otnEotD6Y3c",
+    "yt-p-xKVEiqsr0",
+    "yt-rfhCyasgiiY",
+    "yt-snjYumlKMJw",
+    "yt-tnMdFsWyGDg",
+    "yt-uKhJBWNJ8Ys",
+    "yt-urV4pCVJeU4",
+    "yt-w55SIeJpUgA",
+    "yt-yzmoUmX34-I",
+    "yt-zhMvb5-EJQ8"
+  ],
+  "retained_ids": [
+    "yt--KgE-9E46lk",
+    "yt-5s_JCuByuEI",
+    "yt-6v3_XhGVQJ8",
+    "yt-7Ep1UqOlgss",
+    "yt-Cnni_3tZwvE",
+    "yt-HZeZ01ZaDVs",
+    "yt-J4PqKpLNOhQ",
+    "yt-MZt1jRLds_g",
+    "yt-RA6OPG_cFms",
+    "yt-S371SeT-b4M",
+    "yt-S_RhILvCuD8",
+    "yt-W3RjWP34Tqg",
+    "yt-Xmd8KedFXYg",
+    "yt-_u44__eZ_Ug",
+    "yt-denM-tFXlcs",
+    "yt-gPE67XqGsV4",
+    "yt-jJbqqwiVZYM",
+    "yt-nJtV9JxZ3wY",
+    "yt-o9nOs9NVnKE",
+    "yt-pHIMXUVwomQ",
+    "yt-rZjskcIm61U",
+    "yt-rejkYx8SgVc",
+    "yt-w5ymN-FU75k",
+    "yt-yW7GW4ILInI",
+    "yt-zMy5dDd5NPE"
+  ],
+  "related_references_removed": 46,
+  "learning_path_steps_changed": [
+    {
+      "path_id": "road-control-lab",
+      "step_order": 1,
+      "before": [
+        "yt--KgE-9E46lk",
+        "yt-MPzV9BMouQI",
+        "yt-k6mUJ309W3k"
+      ],
+      "after": [
+        "yt--KgE-9E46lk",
+        "yt-k6mUJ309W3k"
+      ]
+    },
+    {
+      "path_id": "road-control-lab",
+      "step_order": 2,
+      "before": [
+        "yt-W3RjWP34Tqg",
+        "yt-1zluOSO-0aU",
+        "yt-yzmoUmX34-I"
+      ],
+      "after": [
+        "yt-W3RjWP34Tqg",
+        "yt-7Ix1B9MjKOQ"
+      ]
+    },
+    {
+      "path_id": "road-control-lab",
+      "step_order": 3,
+      "before": [
+        "yt-KhFEnjo7fz4",
+        "yt-W4n81NgcRDg",
+        "yt-bJkK-Z0eDq0"
+      ],
+      "after": [
+        "yt-W4n81NgcRDg",
+        "yt-bJkK-Z0eDq0"
+      ]
+    },
+    {
+      "path_id": "road-control-lab",
+      "step_order": 5,
+      "before": [
+        "yt-w55SIeJpUgA",
+        "yt-P-lnb0oRNHU",
+        "yt-bO88ooYOLhw"
+      ],
+      "after": [
+        "yt-bO88ooYOLhw",
+        "yt-UILe5YDA4B8"
+      ]
+    },
+    {
+      "path_id": "offroad-surface-progression",
+      "step_order": 1,
+      "before": [
+        "yt-7Ep1UqOlgss",
+        "yt-FcxxNhrte6o",
+        "yt-5CfJENGn07s"
+      ],
+      "after": [
+        "yt-7Ep1UqOlgss",
+        "yt-5CfJENGn07s"
+      ]
+    },
+    {
+      "path_id": "offroad-surface-progression",
+      "step_order": 2,
+      "before": [
+        "yt-U1GLOiTAohk",
+        "yt-gFXAEsSEbEA",
+        "yt-vVBdOqqKt-A"
+      ],
+      "after": [
+        "yt-vVBdOqqKt-A",
+        "yt-3QNTu2pzRfg"
+      ]
+    },
+    {
+      "path_id": "offroad-surface-progression",
+      "step_order": 3,
+      "before": [
+        "yt-U10E123mrYc",
+        "yt-o9nOs9NVnKE",
+        "yt-eLgD0ZVj05o"
+      ],
+      "after": [
+        "yt-o9nOs9NVnKE",
+        "yt-TDCajc6HYRE"
+      ]
+    },
+    {
+      "path_id": "offroad-surface-progression",
+      "step_order": 4,
+      "before": [
+        "yt-7wt8btf9DyM",
+        "yt-UbemLevjCHw",
+        "yt-_yZRZN_X9sQ"
+      ],
+      "after": [
+        "yt-UbemLevjCHw",
+        "yt-_yZRZN_X9sQ"
+      ]
+    },
+    {
+      "path_id": "offroad-surface-progression",
+      "step_order": 5,
+      "before": [
+        "yt-M5yAd24z5y0",
+        "yt-mBFRc7cClJo",
+        "yt-mi6-lTRzFkI"
+      ],
+      "after": [
+        "yt-mi6-lTRzFkI",
+        "yt--rQwIXp4Zu8"
+      ]
+    },
+    {
+      "path_id": "offroad-surface-progression",
+      "step_order": 6,
+      "before": [
+        "yt-R3VrRIOGWWY",
+        "yt-6v3_XhGVQJ8",
+        "yt-FUoXWECH40A"
+      ],
+      "after": [
+        "yt-6v3_XhGVQJ8",
+        "yt-FUoXWECH40A"
+      ]
+    },
+    {
+      "path_id": "adventure-setup-pretrip",
+      "step_order": 2,
+      "before": [
+        "yt-21golINzets",
+        "yt-S371SeT-b4M",
+        "yt-BHZ2mSbXkbw"
+      ],
+      "after": [
+        "yt-S371SeT-b4M",
+        "yt-BHZ2mSbXkbw"
+      ]
+    },
+    {
+      "path_id": "adventure-setup-pretrip",
+      "step_order": 3,
+      "before": [
+        "yt-CI6h7XtyINY",
+        "yt-jeijOYcnlvU",
+        "yt-3tSkUdUYaA4"
+      ],
+      "after": [
+        "yt-3tSkUdUYaA4",
+        "yt-DW0GVIvub44"
+      ]
+    },
+    {
+      "path_id": "adventure-setup-pretrip",
+      "step_order": 5,
+      "before": [
+        "yt-vFRDMa7gwIU",
+        "yt-_u44__eZ_Ug",
+        "yt-Fz2XB6_63l4"
+      ],
+      "after": [
+        "yt-vFRDMa7gwIU",
+        "yt-_u44__eZ_Ug"
+      ]
+    },
+    {
+      "path_id": "group-tour-readiness",
+      "step_order": 1,
+      "before": [
+        "yt-erpkyD7SMfw",
+        "yt-hQAPTHLg3Go",
+        "yt-evc423OwTpY"
+      ],
+      "after": [
+        "yt-evc423OwTpY",
+        "yt-nJtV9JxZ3wY"
+      ]
+    },
+    {
+      "path_id": "group-tour-readiness",
+      "step_order": 2,
+      "before": [
+        "yt-mPgGjQBkSv4",
+        "yt-zhMvb5-EJQ8",
+        "yt-erpkyD7SMfw"
+      ],
+      "after": [
+        "yt-evc423OwTpY",
+        "yt-nJtV9JxZ3wY"
+      ]
+    },
+    {
+      "path_id": "group-tour-readiness",
+      "step_order": 3,
+      "before": [
+        "yt-nJtV9JxZ3wY",
+        "yt-FTVaL-a3XUo",
+        "yt-erpkyD7SMfw"
+      ],
+      "after": [
+        "yt-nJtV9JxZ3wY",
+        "yt-evc423OwTpY"
+      ]
+    },
+    {
+      "path_id": "group-tour-readiness",
+      "step_order": 4,
+      "before": [
+        "yt-KC1sVC1tDbs",
+        "yt-yW7GW4ILInI",
+        "yt-GwXb1oEWeMY"
+      ],
+      "after": [
+        "yt-yW7GW4ILInI",
+        "yt-GwXb1oEWeMY"
+      ]
+    },
+    {
+      "path_id": "group-tour-readiness",
+      "step_order": 5,
+      "before": [
+        "yt-GinzCxHMViI",
+        "yt-GJTbVEFaTqE",
+        "yt-jevfjCDOddA"
+      ],
+      "after": [
+        "yt-GJTbVEFaTqE",
+        "yt-jevfjCDOddA"
+      ]
+    },
+    {
+      "path_id": "group-tour-readiness",
+      "step_order": 6,
+      "before": [
+        "yt-gpOpgtUzjqI",
+        "yt-N5DsF-4q98c",
+        "yt-UOI7yWHv07w"
+      ],
+      "after": [
+        "yt-N5DsF-4q98c",
+        "yt-UOI7yWHv07w"
+      ]
+    }
+  ],
+  "travel_guide_references_removed": 0
+}

@@ -32,11 +32,21 @@ jobs:
       - name: Install validator dependency
         run: python -m pip install -r requirements-ci.txt
 
-      - name: Validate 450 records, manifest, icons and subpath safety
-        run: python tools/validate_pwa.py --site site --schema documentation/video.schema.json --expected-count 450
+      - name: Validate canonical data and publication mirror
+        run: |
+          python tools/validate_data.py --expected-count 411
+          python tools/verify_site_sync.py
+
+      - name: Validate 411 records, semantic index, standalone, manifest, icons and subpath safety
+        run: python tools/validate_pwa.py --site site --schema documentation/video.schema.json --expected-count 411
 
       - name: Run Node tests
-        run: npm test
+        run: |
+          npm test
+          node tools/search_acceptance.mjs --report reports/site-upgrade-v3/search-acceptance-ci.json
+
+      - name: Run Python maintenance tests
+        run: python -m unittest discover -s tests -p "test_*.py"
 
       - name: Check JavaScript syntax
         shell: bash
@@ -45,4 +55,4 @@ jobs:
           node --check site/service-worker.js
 
       - name: Check whitespace errors
-        run: git diff --check
+        run: git show --check --oneline --no-renames HEAD

@@ -10,6 +10,7 @@ const PROFESSIONAL_SOURCE_TYPES = new Set([
   "riding_school",
   "professional_instructor",
   "training_channel",
+  "official_safety_program",
 ]);
 
 const SKILL_ORDER = new Map([
@@ -100,10 +101,24 @@ export function createTaxonomyLookup(taxonomy = {}) {
     if (!Array.isArray(collection)) return;
     collection.forEach((item) => {
       if (!item?.id) return;
-      lookup.set(item.id, [item.id, item.name_he, item.name_en, item.description_he].filter(Boolean));
+      lookup.set(item.id, [item.id, item.name_he, item.name_en, item.description_he, item.description_en].filter(Boolean));
     });
   });
   return lookup;
+}
+
+export function uniqueDisplayTaxonomyIds(ids = [], labels = new Map(), language = "he") {
+  const seen = new Set();
+  return asArray(ids).filter((id) => {
+    const entry = labels instanceof Map ? labels.get(id) : labels?.[id];
+    const value = entry && typeof entry === "object"
+      ? (language === "en" ? entry.name_en : entry.name_he) || entry.name_he || entry.name_en || id
+      : entry || id;
+    const normalized = normalizeText(value);
+    if (seen.has(normalized)) return false;
+    seen.add(normalized);
+    return true;
+  });
 }
 
 export function createSynonymIndex(synonyms = {}) {
@@ -160,16 +175,27 @@ export function buildSearchText(video, taxonomyLookup = new Map()) {
     video.id,
     video.youtube_video_id,
     video.title_he,
+    video.title_en,
     video.title_original,
     video.channel_name,
     video.summary_he,
+    video.summary_en,
     video.learning_points_he,
+    video.learning_points_en,
     video.fit_for_he,
+    video.fit_for_en,
     video.why_watch_he,
+    video.why_watch_en,
     video.exercises_he,
+    video.exercises_en,
     video.equipment_he,
+    video.equipment_en,
     video.safety_warnings_he,
+    video.safety_warnings_en,
     video.common_mistakes_he,
+    video.common_mistakes_en,
+    video.quality_reason_he,
+    video.quality_reason_en,
     video.chapters?.map((chapter) => chapter.title),
     taxonomyValues,
   ];
@@ -194,6 +220,7 @@ function buildSearchFacetText(video, taxonomyLookup = new Map()) {
 
   return normalizeText(flattenText([
     video.title_he,
+    video.title_en,
     video.title_original,
     taxonomyValues,
   ]).join(" "));
@@ -207,12 +234,30 @@ export function prepareVideos(videos, taxonomy, synonyms) {
     videos: videos.map((video, sourceIndex) => {
       const searchText = buildSearchText(video, taxonomyLookup);
       const searchFacetText = buildSearchFacetText(video, taxonomyLookup);
+      const titleText = normalizeText([video.title_he, video.title_en, video.title_original].filter(Boolean).join(" "));
+      const primaryText = normalizeText([video.primary_category, ...(taxonomyLookup.get(video.primary_category) || [])].join(" "));
+      const subtopicText = normalizeText(asArray(video.subtopics).flatMap((id) => taxonomyLookup.get(id) || [id]).join(" "));
+      const tagText = normalizeText(asArray(video.tags).flatMap((id) => taxonomyLookup.get(id) || [id]).join(" "));
+      const technicalText = normalizeText([
+        video.title_he,
+        video.title_en,
+        video.title_original,
+        video.primary_category,
+        ...asArray(video.secondary_categories),
+        ...asArray(video.subtopics),
+        ...asArray(video.tags),
+      ].filter(Boolean).join(" "));
       return {
         ...video,
         _sourceIndex: sourceIndex,
         _searchText: searchText,
         _searchWords: new Set(searchText.split(" ").filter(Boolean)),
         _searchFacetText: searchFacetText,
+        _titleText: titleText,
+        _primaryText: primaryText,
+        _subtopicText: subtopicText,
+        _tagText: tagText,
+        _technicalText: technicalText,
       };
     }),
   };
@@ -225,13 +270,25 @@ export function scoreSearchMatch(video, query, synonymIndex) {
   const words = video._searchWords || new Set(text.split(" ").filter(Boolean));
   const facetText = video._searchFacetText || text;
   const expansions = expandQuery(normalized, synonymIndex);
+  const titleText = video._titleText || normalizeText([video.title_he, video.title_en, video.title_original].filter(Boolean).join(" "));
+  const primaryText = video._primaryText || normalizeText(video.primary_category || "");
+  const subtopicText = video._subtopicText || normalizeText(asArray(video.subtopics).join(" "));
+  const tagText = video._tagText || normalizeText(asArray(video.tags).join(" "));
   let score = 0;
 
   if (containsPhrase(text, normalized)) score += 120;
   if (containsPhrase(facetText, normalized)) score += 80;
+  if (containsPhrase(titleText, normalized)) score += 260;
+  if (containsPhrase(primaryText, normalized)) score += 210;
+  if (containsPhrase(subtopicText, normalized)) score += 75;
+  if (containsPhrase(tagText, normalized)) score += 40;
   expansions.forEach((phrase) => {
     if (phrase !== normalized && phrase.length >= 3 && containsPhrase(text, phrase)) score += 30;
     if (phrase.length >= 3 && containsPhrase(facetText, phrase)) score += 24;
+    if (phrase.length >= 3 && containsPhrase(titleText, phrase)) score += 105;
+    if (phrase.length >= 3 && containsPhrase(primaryText, phrase)) score += 90;
+    if (phrase.length >= 3 && containsPhrase(subtopicText, phrase)) score += 34;
+    if (phrase.length >= 3 && containsPhrase(tagText, phrase)) score += 18;
   });
 
   const queryTokens = normalized.split(" ").flatMap(searchTokenForms);
@@ -240,6 +297,10 @@ export function scoreSearchMatch(video, query, synonymIndex) {
     if (words.has(token)) {
       matchedTokens += 1;
       score += 16;
+      if (titleText.split(" ").includes(token)) score += 32;
+      if (primaryText.split(" ").includes(token)) score += 46;
+      if (subtopicText.split(" ").includes(token)) score += 12;
+      if (tagText.split(" ").includes(token)) score += 6;
       return;
     }
     const fuzzy = [...words].some((word) => boundedLevenshteinOne(token, word));
@@ -247,12 +308,26 @@ export function scoreSearchMatch(video, query, synonymIndex) {
       matchedTokens += 1;
       score += 5;
     }
+    if (titleText.split(" ").some((word) => boundedLevenshteinOne(token, word))) score += 32;
+    if (primaryText.split(" ").some((word) => boundedLevenshteinOne(token, word))) score += 46;
+    if (subtopicText.split(" ").some((word) => boundedLevenshteinOne(token, word))) score += 12;
+    if (tagText.split(" ").some((word) => boundedLevenshteinOne(token, word))) score += 6;
   });
 
   const directPhraseMatch = containsPhrase(text, normalized);
   const synonymVariantMatch = expansions
     .filter((phrase) => phrase !== normalized && !queryTokens.includes(phrase) && phrase.length >= 3)
     .some((phrase) => containsPhrase(text, phrase));
+  // Preserve explicit technical acronyms and English terms in mixed-language
+  // queries. For example, "ABS בשטח" must not rank a generic off-road braking
+  // video merely because "שטח" matched a synonym group.
+  const explicitLatinTokens = String(query).split(/\s+/)
+    .map((token) => normalizeText(token))
+    .filter((token, index) => /^[a-z0-9-]{2,}$/i.test(token)
+      && /[A-Z]/.test(String(query).split(/\s+/)[index] || ""));
+  const technicalWords = new Set((video._technicalText || titleText).split(" ").filter(Boolean));
+  if (explicitLatinTokens.some((token) => !technicalWords.has(token)
+    && ![...technicalWords].some((word) => boundedLevenshteinOne(token, word)))) return 0;
   const requiredTokenMatches = queryTokens.length <= 1 ? 1 : queryTokens.length;
   if (!directPhraseMatch && !synonymVariantMatch && matchedTokens < requiredTokenMatches) return 0;
   if (matchedTokens === queryTokens.length && queryTokens.length > 1) score += 24;

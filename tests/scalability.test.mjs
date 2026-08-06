@@ -28,7 +28,7 @@ const [sourceVideos, taxonomy, synonyms] = await Promise.all([
 ]);
 
 
-for (const fixtureSize of [250, 300]) {
+for (const fixtureSize of [411, 500]) {
   test(`${fixtureSize}-record fixture prepares and indexes without runtime errors`, (t) => {
     const fixture = buildVideoFixture(sourceVideos, fixtureSize);
     const startedAt = performance.now();

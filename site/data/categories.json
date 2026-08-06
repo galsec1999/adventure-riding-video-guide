@@ -1,5 +1,5 @@
 {
-  "version": "2.2.1",
+  "version": "3.0.0",
   "updated": "2026-08-05",
   "domains": [
     {
@@ -374,6 +374,13 @@
       "name_en": "Tour planning",
       "description_he": "טיול יום, רב־יומי או חו״ל: מסלול, קצב וגיבוי.",
       "description_en": "Guidance and resources for tour planning."
+    },
+    {
+      "id": "intercoms_communications",
+      "name_he": "דיבוריות ותקשורת",
+      "name_en": "Intercoms and communication",
+      "description_he": "בחירה, התקנה ושימוש בטוח בדיבוריות לרוכב יחיד, מורכב וקבוצה.",
+      "description_en": "Choosing, installing and safely using intercoms for solo riders, passengers and groups."
     }
   ],
   "subcategories": [
@@ -873,6 +880,174 @@
       "name_en": "Winter preparation",
       "description_he": "בדיקות ותחזוקה לעונה רטובה.",
       "description_en": "Focused learning resources for winter preparation."
+    },
+    {
+      "id": "phone_vs_dedicated_gps",
+      "name_he": "טלפון מול GPS ייעודי",
+      "name_en": "Phone vs dedicated GPS",
+      "description_he": "השוואת עמידות, תפעול, עלות, מסך וגיבוי.",
+      "description_en": "Comparing durability, controls, cost, display and backup options."
+    },
+    {
+      "id": "rugged_phone_navigation",
+      "name_he": "טלפון מוקשח לניווט",
+      "name_en": "Rugged phone navigation",
+      "description_he": "טלפון מוקשח כמכשיר ניווט ייעודי לרכיבה.",
+      "description_en": "Using a rugged phone as a dedicated riding navigator."
+    },
+    {
+      "id": "navigation_apps",
+      "name_he": "אפליקציות ניווט",
+      "name_en": "Navigation apps",
+      "description_he": "בחירת אפליקציות למפות, מסלולים ושימוש לא מקוון.",
+      "description_en": "Choosing apps for maps, routes and offline use."
+    },
+    {
+      "id": "osmand",
+      "name_he": "OsmAnd",
+      "name_en": "OsmAnd",
+      "description_he": "עבודה עם מפות לא מקוונות, פרופילים וקובצי GPX ב־OsmAnd.",
+      "description_en": "Using offline maps, profiles and GPX files in OsmAnd."
+    },
+    {
+      "id": "route_vs_track",
+      "name_he": "Route לעומת Track",
+      "name_en": "Route vs track",
+      "description_he": "הבדלים מעשיים בין מסלול מחושב לעקבות קבועות.",
+      "description_en": "Practical differences between a calculated route and a fixed track."
+    },
+    {
+      "id": "gaia_gps",
+      "name_he": "Gaia GPS",
+      "name_en": "Gaia GPS",
+      "description_he": "תכנון, שכבות מפה וייצוא מסלולים ב־Gaia GPS.",
+      "description_en": "Planning, map layers and route export in Gaia GPS."
+    },
+    {
+      "id": "local_mapping",
+      "name_he": "מיפוי מקומי",
+      "name_en": "Local mapping",
+      "description_he": "המרה והצגת נתוני מסלול במערכות מיפוי מקומיות.",
+      "description_en": "Converting and displaying route data in local mapping systems."
+    },
+    {
+      "id": "helmet_testing",
+      "name_he": "בדיקות קסדה",
+      "name_en": "Helmet testing",
+      "description_he": "שיטות בדיקה והשוואת ביצועי קסדות.",
+      "description_en": "Methods for testing and comparing helmet performance."
+    },
+    {
+      "id": "helmet_ratings",
+      "name_he": "דירוגי קסדות",
+      "name_en": "Helmet ratings",
+      "description_he": "הבנת דירוגים ותוצאות בדיקה מעבר לתווית התקן.",
+      "description_en": "Understanding ratings and test results beyond a standards label."
+    },
+    {
+      "id": "gear_standards",
+      "name_he": "תקני ציוד רכיבה",
+      "name_en": "Riding-gear standards",
+      "description_he": "קריאת סימוני תקן ובדיקת הסמכה של ביגוד מגן.",
+      "description_en": "Reading standards markings and checking protective-apparel certification."
+    },
+    {
+      "id": "abrasion_resistance",
+      "name_he": "עמידות בשחיקה",
+      "name_en": "Abrasion resistance",
+      "description_he": "הבדלים בחומרים, תפרים ורמות עמידות בהחלקה.",
+      "description_en": "Differences in materials, seams and slide resistance."
+    },
+    {
+      "id": "body_armor_standards",
+      "name_he": "תקני מיגון גוף",
+      "name_en": "Body-armour standards",
+      "description_he": "רמות ובדיקות של מגני פגיעה לגפיים ולגב.",
+      "description_en": "Levels and tests for limb and back impact protectors."
+    },
+    {
+      "id": "abrasion_vs_impact",
+      "name_he": "שחיקה לעומת פגיעה",
+      "name_en": "Abrasion vs impact",
+      "description_he": "ההבדל בין הגנה בהחלקה לספיגת אנרגיית מכה.",
+      "description_en": "The difference between slide protection and impact-energy absorption."
+    },
+    {
+      "id": "beginner_gear",
+      "name_he": "מיגון לרוכב מתחיל",
+      "name_en": "Beginner protective gear",
+      "description_he": "בחירת מעטפת מיגון בסיסית לפי שימוש והתאמה.",
+      "description_en": "Choosing a basic protection system by use and fit."
+    },
+    {
+      "id": "protective_boots",
+      "name_he": "מגפי מיגון",
+      "name_en": "Protective boots",
+      "description_he": "איזון בין קיבוע קרסול, הגנה, נוחות ומים.",
+      "description_en": "Balancing ankle support, protection, comfort and weather resistance."
+    },
+    {
+      "id": "crash_case_study",
+      "name_he": "מקרה בוחן לאחר תאונה",
+      "name_en": "Post-crash case study",
+      "description_he": "בדיקת ציוד לאחר אירוע אמיתי ללא הסקת מסקנות סטטיסטיות.",
+      "description_en": "Reviewing gear after a real incident without treating it as statistical proof."
+    },
+    {
+      "id": "bluetooth_vs_mesh",
+      "name_he": "Bluetooth לעומת Mesh",
+      "name_en": "Bluetooth vs mesh",
+      "description_he": "הבדלים בחיבור יחיד, מורכב וקבוצה.",
+      "description_en": "Differences for one-to-one, passenger and group connections."
+    },
+    {
+      "id": "safe_intercom_use",
+      "name_he": "שימוש בטוח בדיבורית",
+      "name_en": "Safe intercom use",
+      "description_he": "צמצום הסחת דעת והגדרת המערכת לפני רכיבה.",
+      "description_en": "Reducing distraction and configuring the system before riding."
+    },
+    {
+      "id": "budget_vs_premium",
+      "name_he": "תקציבי לעומת פרימיום",
+      "name_en": "Budget vs premium",
+      "description_he": "השוואת יכולות, אמינות, תמיכה ועלות כוללת.",
+      "description_en": "Comparing capability, reliability, support and total cost."
+    },
+    {
+      "id": "budget_bluetooth",
+      "name_he": "דיבורית Bluetooth תקציבית",
+      "name_en": "Budget Bluetooth intercom",
+      "description_he": "הבנת גבולות טווח, שמע וחיבור בדגמים בסיסיים.",
+      "description_en": "Understanding range, audio and connection limits in entry-level units."
+    },
+    {
+      "id": "installation_fit_audio",
+      "name_he": "התקנה, התאמה ושמע",
+      "name_en": "Installation, fit and audio",
+      "description_he": "מיקום רמקולים, מיקרופון ויחידה בלי לפגוע בהתאמת הקסדה.",
+      "description_en": "Positioning speakers, microphone and unit without compromising helmet fit."
+    },
+    {
+      "id": "multi_brand_comparison",
+      "name_he": "השוואה בין מותגים",
+      "name_en": "Multi-brand comparison",
+      "description_he": "השוואת מערכות לפי צורך ולא לפי שם מותג בלבד.",
+      "description_en": "Comparing systems by need rather than brand name alone."
+    },
+    {
+      "id": "group_mesh",
+      "name_he": "רשת תקשורת קבוצתית",
+      "name_en": "Group mesh",
+      "description_he": "תקשורת יציבה יותר לקבוצה והתנהגות בעת התנתקות וחזרה.",
+      "description_en": "Group communication and behaviour when riders disconnect and rejoin."
+    },
+    {
+      "id": "helmet_compatibility",
+      "name_he": "תאימות לקסדה",
+      "name_en": "Helmet compatibility",
+      "description_he": "בדיקת מקום לרמקולים, מיקרופון ותושבת לפי דגם קסדה.",
+      "description_en": "Checking speaker, microphone and mount space for a helmet model."
     }
   ],
   "terrain_types": [
@@ -1244,6 +1419,13 @@
       "name_en": "Manufacturer",
       "description_he": "מקור רשמי של יצרן אופנועים, ציוד או מערכות.",
       "description_en": "Official content from a motorcycle, equipment or systems manufacturer."
+    },
+    {
+      "id": "official_safety_program",
+      "name_he": "תוכנית בטיחות רשמית",
+      "name_en": "Official safety programme",
+      "description_he": "גוף ציבורי או תוכנית בטיחות רשמית שמפרסמים מידע לציבור.",
+      "description_en": "A public body or official safety programme publishing information for riders."
     }
   ],
   "languages": [
@@ -2232,182 +2414,373 @@
     {
       "id": "adventure",
       "name_he": "אדוונצ׳ר",
-      "name_en": "adventure"
+      "name_en": "adventure",
+      "description_he": "מונח מבוקר במדריך: אדוונצ׳ר.",
+      "description_en": "Controlled guide term: adventure."
     },
     {
       "id": "checklist",
       "name_he": "צ׳קליסט",
-      "name_en": "checklist"
+      "name_en": "checklist",
+      "description_he": "מונח מבוקר במדריך: צ׳קליסט.",
+      "description_en": "Controlled guide term: checklist."
     },
     {
       "id": "descent",
       "name_he": "ירידה",
-      "name_en": "descent"
+      "name_en": "descent",
+      "description_he": "מונח מבוקר במדריך: ירידה.",
+      "description_en": "Controlled guide term: descent."
     },
     {
       "id": "electronic_aids",
       "name_he": "מערכות אלקטרוניות",
-      "name_en": "electronic aids"
+      "name_en": "electronic aids",
+      "description_he": "מונח מבוקר במדריך: מערכות אלקטרוניות.",
+      "description_en": "Controlled guide term: electronic aids."
     },
     {
       "id": "entry_speed",
       "name_he": "מהירות כניסה",
-      "name_en": "entry speed"
+      "name_en": "entry speed",
+      "description_he": "מונח מבוקר במדריך: מהירות כניסה.",
+      "description_en": "Controlled guide term: entry speed."
     },
     {
       "id": "fit",
       "name_he": "התאמה",
-      "name_en": "fit"
+      "name_en": "fit",
+      "description_he": "מונח מבוקר במדריך: התאמה.",
+      "description_en": "Controlled guide term: fit."
     },
     {
       "id": "handlebar",
       "name_he": "כידון",
-      "name_en": "handlebar"
+      "name_en": "handlebar",
+      "description_he": "מונח מבוקר במדריך: כידון.",
+      "description_en": "Controlled guide term: handlebar."
     },
     {
       "id": "hazard_avoidance",
       "name_he": "התחמקות מסכנה",
-      "name_en": "hazard avoidance"
+      "name_en": "hazard avoidance",
+      "description_he": "מונח מבוקר במדריך: התחמקות מסכנה.",
+      "description_en": "Controlled guide term: hazard avoidance."
     },
     {
       "id": "hazard_perception",
       "name_he": "זיהוי סכנות",
-      "name_en": "hazard perception"
+      "name_en": "hazard perception",
+      "description_he": "מונח מבוקר במדריך: זיהוי סכנות.",
+      "description_en": "Controlled guide term: hazard perception."
     },
     {
       "id": "hill",
       "name_he": "עלייה ומדרון",
-      "name_en": "hill"
+      "name_en": "hill",
+      "description_he": "מונח מבוקר במדריך: עלייה ומדרון.",
+      "description_en": "Controlled guide term: hill."
     },
     {
       "id": "leader_sweep",
       "name_he": "מוביל ומאסף",
-      "name_en": "leader sweep"
+      "name_en": "leader sweep",
+      "description_he": "מונח מבוקר במדריך: מוביל ומאסף.",
+      "description_en": "Controlled guide term: leader sweep."
     },
     {
       "id": "levers",
       "name_he": "מנופים",
-      "name_en": "levers"
+      "name_en": "levers",
+      "description_he": "מונח מבוקר במדריך: מנופים.",
+      "description_en": "Controlled guide term: levers."
     },
     {
       "id": "logs",
       "name_he": "בולי עץ",
-      "name_en": "logs"
+      "name_en": "logs",
+      "description_he": "מונח מבוקר במדריך: בולי עץ.",
+      "description_en": "Controlled guide term: logs."
     },
     {
       "id": "lubrication",
       "name_he": "שימון",
-      "name_en": "lubrication"
+      "name_en": "lubrication",
+      "description_he": "מונח מבוקר במדריך: שימון.",
+      "description_en": "Controlled guide term: lubrication."
     },
     {
       "id": "mirrors",
       "name_he": "מראות",
-      "name_en": "mirrors"
+      "name_en": "mirrors",
+      "description_he": "מונח מבוקר במדריך: מראות.",
+      "description_en": "Controlled guide term: mirrors."
     },
     {
       "id": "mousse",
       "name_he": "מוס",
-      "name_en": "mousse"
+      "name_en": "mousse",
+      "description_he": "מונח מבוקר במדריך: מוס.",
+      "description_en": "Controlled guide term: mousse."
     },
     {
       "id": "obstacles",
       "name_he": "מכשולים",
-      "name_en": "obstacles"
+      "name_en": "obstacles",
+      "description_he": "מונח מבוקר במדריך: מכשולים.",
+      "description_en": "Controlled guide term: obstacles."
     },
     {
       "id": "offroad",
       "name_he": "שטח",
-      "name_en": "offroad"
+      "name_en": "offroad",
+      "description_he": "מונח מבוקר במדריך: שטח.",
+      "description_en": "Controlled guide term: offroad."
     },
     {
       "id": "offroad_basics",
       "name_he": "יסודות שטח",
-      "name_en": "offroad basics"
+      "name_en": "offroad basics",
+      "description_he": "מונח מבוקר במדריך: יסודות שטח.",
+      "description_en": "Controlled guide term: offroad basics."
     },
     {
       "id": "offroad_turning",
       "name_he": "פניות בשטח",
-      "name_en": "offroad turning"
+      "name_en": "offroad turning",
+      "description_he": "מונח מבוקר במדריך: פניות בשטח.",
+      "description_en": "Controlled guide term: offroad turning."
     },
     {
       "id": "rental",
       "name_he": "אופנוע שכור",
-      "name_en": "rental"
+      "name_en": "rental",
+      "description_he": "מונח מבוקר במדריך: אופנוע שכור.",
+      "description_en": "Controlled guide term: rental."
     },
     {
       "id": "road",
       "name_he": "כביש",
-      "name_en": "road"
+      "name_en": "road",
+      "description_he": "מונח מבוקר במדריך: כביש.",
+      "description_en": "Controlled guide term: road."
     },
     {
       "id": "rock_steps",
       "name_he": "מדרגות סלע",
-      "name_en": "rock steps"
+      "name_en": "rock steps",
+      "description_he": "מונח מבוקר במדריך: מדרגות סלע.",
+      "description_en": "Controlled guide term: rock steps."
     },
     {
       "id": "route_planning",
       "name_he": "תכנון מסלול",
-      "name_en": "route planning"
+      "name_en": "route planning",
+      "description_he": "מונח מבוקר במדריך: תכנון מסלול.",
+      "description_en": "Controlled guide term: route planning."
     },
     {
       "id": "slow_control",
       "name_he": "שליטה איטית",
-      "name_en": "slow control"
+      "name_en": "slow control",
+      "description_he": "מונח מבוקר במדריך: שליטה איטית.",
+      "description_en": "Controlled guide term: slow control."
     },
     {
       "id": "traction_management",
       "name_he": "ניהול אחיזה",
-      "name_en": "traction management"
+      "name_en": "traction management",
+      "description_he": "מונח מבוקר במדריך: ניהול אחיזה.",
+      "description_en": "Controlled guide term: traction management."
     },
     {
       "id": "travel",
       "name_he": "טיולים",
-      "name_en": "travel"
+      "name_en": "travel",
+      "description_he": "מונח מבוקר במדריך: טיולים.",
+      "description_en": "Controlled guide term: travel."
     },
     {
       "id": "tube",
       "name_he": "פנימית",
-      "name_en": "tube"
+      "name_en": "tube",
+      "description_he": "מונח מבוקר במדריך: פנימית.",
+      "description_en": "Controlled guide term: tube."
     },
     {
       "id": "wet_road",
       "name_he": "כביש רטוב",
-      "name_en": "wet road"
+      "name_en": "wet road",
+      "description_he": "מונח מבוקר במדריך: כביש רטוב.",
+      "description_en": "Controlled guide term: wet road."
     },
     {
       "id": "wet_terrain",
       "name_he": "שטח רטוב",
-      "name_en": "wet terrain"
+      "name_en": "wet terrain",
+      "description_he": "מונח מבוקר במדריך: שטח רטוב.",
+      "description_en": "Controlled guide term: wet terrain."
     },
     {
       "id": "winter",
       "name_he": "חורף",
-      "name_en": "winter"
+      "name_en": "winter",
+      "description_he": "מונח מבוקר במדריך: חורף.",
+      "description_en": "Controlled guide term: winter."
     },
     {
       "id": "course_selection",
       "name_he": "בחירת קורס",
-      "name_en": "Course selection"
+      "name_en": "Course selection",
+      "description_he": "מונח מבוקר במדריך: בחירת קורס.",
+      "description_en": "Controlled guide term: Course selection."
     },
     {
       "id": "professional_training",
       "name_he": "הדרכה מקצועית",
-      "name_en": "Professional training"
+      "name_en": "Professional training",
+      "description_he": "מונח מבוקר במדריך: הדרכה מקצועית.",
+      "description_en": "Controlled guide term: Professional training."
     },
     {
       "id": "beginner_foundations",
       "name_he": "יסודות למתחילים",
-      "name_en": "Beginner foundations"
+      "name_en": "Beginner foundations",
+      "description_he": "מונח מבוקר במדריך: יסודות למתחילים.",
+      "description_en": "Controlled guide term: Beginner foundations."
     },
     {
       "id": "practice",
       "name_he": "אימון ותרגול",
-      "name_en": "Practice"
+      "name_en": "Practice",
+      "description_he": "מונח מבוקר במדריך: אימון ותרגול.",
+      "description_en": "Controlled guide term: Practice."
     },
     {
       "id": "observation",
       "name_he": "התבוננות וקריאת מצב",
-      "name_en": "Observation"
+      "name_en": "Observation",
+      "description_he": "מונח מבוקר במדריך: התבוננות וקריאת מצב.",
+      "description_en": "Controlled guide term: Observation."
+    },
+    {
+      "id": "smartphone_navigation",
+      "name_he": "ניווט בטלפון",
+      "name_en": "Smartphone navigation",
+      "description_he": "תג מבוקר: ניווט בטלפון.",
+      "description_en": "Controlled topic tag: Smartphone navigation."
+    },
+    {
+      "id": "dedicated_gps",
+      "name_he": "GPS ייעודי",
+      "name_en": "Dedicated GPS",
+      "description_he": "תג מבוקר: GPS ייעודי.",
+      "description_en": "Controlled topic tag: Dedicated GPS."
+    },
+    {
+      "id": "rugged_phone",
+      "name_he": "טלפון מוקשח",
+      "name_en": "Rugged phone",
+      "description_he": "תג מבוקר: טלפון מוקשח.",
+      "description_en": "Controlled topic tag: Rugged phone."
+    },
+    {
+      "id": "route_vs_track",
+      "name_he": "Route לעומת Track",
+      "name_en": "Route vs track",
+      "description_he": "תג מבוקר: Route לעומת Track.",
+      "description_en": "Controlled topic tag: Route vs track."
+    },
+    {
+      "id": "helmet_testing",
+      "name_he": "בדיקות קסדה",
+      "name_en": "Helmet testing",
+      "description_he": "תג מבוקר: בדיקות קסדה.",
+      "description_en": "Controlled topic tag: Helmet testing."
+    },
+    {
+      "id": "helmet_fit",
+      "name_he": "התאמת קסדה",
+      "name_en": "Helmet fit",
+      "description_he": "תג מבוקר: התאמת קסדה.",
+      "description_en": "Controlled topic tag: Helmet fit."
+    },
+    {
+      "id": "gear_standards",
+      "name_he": "תקני ציוד",
+      "name_en": "Gear standards",
+      "description_he": "תג מבוקר: תקני ציוד.",
+      "description_en": "Controlled topic tag: Gear standards."
+    },
+    {
+      "id": "abrasion_resistance",
+      "name_he": "עמידות בשחיקה",
+      "name_en": "Abrasion resistance",
+      "description_he": "תג מבוקר: עמידות בשחיקה.",
+      "description_en": "Controlled topic tag: Abrasion resistance."
+    },
+    {
+      "id": "body_armor",
+      "name_he": "מיגון גוף",
+      "name_en": "Body armour",
+      "description_he": "תג מבוקר: מיגון גוף.",
+      "description_en": "Controlled topic tag: Body armour."
+    },
+    {
+      "id": "impact_protection",
+      "name_he": "הגנת פגיעה",
+      "name_en": "Impact protection",
+      "description_he": "תג מבוקר: הגנת פגיעה.",
+      "description_en": "Controlled topic tag: Impact protection."
+    },
+    {
+      "id": "crash_case_study",
+      "name_he": "מקרה בוחן תאונה",
+      "name_en": "Crash case study",
+      "description_he": "תג מבוקר: מקרה בוחן תאונה.",
+      "description_en": "Controlled topic tag: Crash case study."
+    },
+    {
+      "id": "intercom",
+      "name_he": "דיבורית",
+      "name_en": "Intercom",
+      "description_he": "תג מבוקר: דיבורית.",
+      "description_en": "Controlled topic tag: Intercom."
+    },
+    {
+      "id": "bluetooth",
+      "name_he": "Bluetooth",
+      "name_en": "Bluetooth",
+      "description_he": "תג מבוקר: Bluetooth.",
+      "description_en": "Controlled topic tag: Bluetooth."
+    },
+    {
+      "id": "mesh",
+      "name_he": "Mesh",
+      "name_en": "Mesh",
+      "description_he": "תג מבוקר: Mesh.",
+      "description_en": "Controlled topic tag: Mesh."
+    },
+    {
+      "id": "helmet_audio",
+      "name_he": "שמע בקסדה",
+      "name_en": "Helmet audio",
+      "description_he": "תג מבוקר: שמע בקסדה.",
+      "description_en": "Controlled topic tag: Helmet audio."
+    },
+    {
+      "id": "distraction_management",
+      "name_he": "ניהול הסחת דעת",
+      "name_en": "Distraction management",
+      "description_he": "תג מבוקר: ניהול הסחת דעת.",
+      "description_en": "Controlled topic tag: Distraction management."
+    },
+    {
+      "id": "budget_comparison",
+      "name_he": "השוואת מחיר ויכולת",
+      "name_en": "Price and capability comparison",
+      "description_he": "תג מבוקר: השוואת מחיר ויכולת.",
+      "description_en": "Controlled topic tag: Price and capability comparison."
     }
   ],
   "content_types": [
@@ -2547,7 +2920,8 @@
       "trip_preparation",
       "bike_selection",
       "touring_planning",
-      "international_touring"
+      "international_touring",
+      "intercoms_communications"
     ]
   },
   "hierarchy_note_he": "תחום ← נושא ראשי ← מיקוד. אפשרויות המיקוד נבנות רק מן הסרטונים הרלוונטיים לבחירות הקודמות.",

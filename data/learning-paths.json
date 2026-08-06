@@ -22,7 +22,15 @@
           "מגן מנוע"
         ],
         "risk_level": "low",
-        "warning_he": "תרגלו תחילה על משטח ישר ועם משגיח."
+        "warning_he": "תרגלו תחילה על משטח ישר ועם משגיח.",
+        "goal_en": "Study off-road fundamentals and riding position",
+        "explanation_en": "Watch the selected sources, note the key decisions and practise only the parts that match your present skill level.",
+        "equipment_en": [
+          "Full protective riding gear",
+          "A safe practice area",
+          "The equipment specified by the selected source"
+        ],
+        "warning_en": "Stop and seek qualified instruction when the technique, terrain or risk exceeds your current ability."
       },
       {
         "order": 2,
@@ -41,7 +49,15 @@
           "מיגון מלא"
         ],
         "risk_level": "low",
-        "warning_he": "אין לתרגל בין כלי רכב חונים."
+        "warning_he": "אין לתרגל בין כלי רכב חונים.",
+        "goal_en": "Study controls coordination and drills",
+        "explanation_en": "Watch the selected sources, note the key decisions and practise only the parts that match your present skill level.",
+        "equipment_en": [
+          "Full protective riding gear",
+          "A safe practice area",
+          "The equipment specified by the selected source"
+        ],
+        "warning_en": "Stop and seek qualified instruction when the technique, terrain or risk exceeds your current ability."
       },
       {
         "order": 3,
@@ -59,7 +75,15 @@
           "מגרש עפר קל"
         ],
         "risk_level": "medium",
-        "warning_he": "אל תדלגו מתרגול מגרש ישר לשביל טכני."
+        "warning_he": "אל תדלגו מתרגול מגרש ישר לשביל טכני.",
+        "goal_en": "Study off-road fundamentals",
+        "explanation_en": "Watch the selected sources, note the key decisions and practise only the parts that match your present skill level.",
+        "equipment_en": [
+          "Full protective riding gear",
+          "A safe practice area",
+          "The equipment specified by the selected source"
+        ],
+        "warning_en": "Stop and seek qualified instruction when the technique, terrain or risk exceeds your current ability."
       },
       {
         "order": 4,
@@ -78,7 +102,15 @@
           "משטח עפר נקי"
         ],
         "risk_level": "medium",
-        "warning_he": "בלימה חזקה מתרגלים רק בקו ישר ובשטח סגור."
+        "warning_he": "בלימה חזקה מתרגלים רק בקו ישר ובשטח סגור.",
+        "goal_en": "Study off-road braking and off-road fundamentals",
+        "explanation_en": "Watch the selected sources, note the key decisions and practise only the parts that match your present skill level.",
+        "equipment_en": [
+          "Full protective riding gear",
+          "A safe practice area",
+          "The equipment specified by the selected source"
+        ],
+        "warning_en": "Stop and seek qualified instruction when the technique, terrain or risk exceeds your current ability."
       },
       {
         "order": 5,
@@ -97,7 +129,15 @@
           "צמיגים תקינים"
         ],
         "risk_level": "medium",
-        "warning_he": "בחרו דרך רחבה ורדודה ללא תנועה."
+        "warning_he": "בחרו דרך רחבה ורדודה ללא תנועה.",
+        "goal_en": "Study dirt and gravel",
+        "explanation_en": "Watch the selected sources, note the key decisions and practise only the parts that match your present skill level.",
+        "equipment_en": [
+          "Full protective riding gear",
+          "A safe practice area",
+          "The equipment specified by the selected source"
+        ],
+        "warning_en": "Stop and seek qualified instruction when the technique, terrain or risk exceeds your current ability."
       },
       {
         "order": 6,
@@ -116,7 +156,15 @@
           "נתיב חזרה"
         ],
         "risk_level": "high",
-        "warning_he": "אין לנסות עלייה בלי נתיב מילוט ותכנית עצירה."
+        "warning_he": "אין לנסות עלייה בלי נתיב מילוט ותכנית עצירה.",
+        "goal_en": "Study hill climbs",
+        "explanation_en": "Watch the selected sources, note the key decisions and practise only the parts that match your present skill level.",
+        "equipment_en": [
+          "Full protective riding gear",
+          "A safe practice area",
+          "The equipment specified by the selected source"
+        ],
+        "warning_en": "Stop and seek qualified instruction when the technique, terrain or risk exceeds your current ability."
       },
       {
         "order": 7,
@@ -135,7 +183,15 @@
           "שותף"
         ],
         "risk_level": "high",
-        "warning_he": "התחילו בירידה קצרה ומתונה; החלופה המתקדמת מיועדת לצפייה מאוחרת."
+        "warning_he": "התחילו בירידה קצרה ומתונה; החלופה המתקדמת מיועדת לצפייה מאוחרת.",
+        "goal_en": "Study descents",
+        "explanation_en": "Watch the selected sources, note the key decisions and practise only the parts that match your present skill level.",
+        "equipment_en": [
+          "Full protective riding gear",
+          "A safe practice area",
+          "The equipment specified by the selected source"
+        ],
+        "warning_en": "Stop and seek qualified instruction when the technique, terrain or risk exceeds your current ability."
       },
       {
         "order": 8,
@@ -154,9 +210,19 @@
           "משגיח"
         ],
         "risk_level": "medium",
-        "warning_he": "אין להרים אם נפצעתם, יש דליפה או הקרקע משופעת."
+        "warning_he": "אין להרים אם נפצעתם, יש דליפה או הקרקע משופעת.",
+        "goal_en": "Study motorcycle lifting",
+        "explanation_en": "Watch the selected sources, note the key decisions and practise only the parts that match your present skill level.",
+        "equipment_en": [
+          "Full protective riding gear",
+          "A safe practice area",
+          "The equipment specified by the selected source"
+        ],
+        "warning_en": "Stop and seek qualified instruction when the technique, terrain or risk exceeds your current ability."
       }
-    ]
+    ],
+    "name_en": "Adventure foundations for beginners",
+    "description_en": "From body position and controls to gravel, hills, descents and safe lifting."
   },
   {
     "id": "mototrek-heavy-adv-mastery",
@@ -181,7 +247,15 @@
           "מפתח מומנט"
         ],
         "risk_level": "medium",
-        "warning_he": "שינויים במתלים ובפקדים נשארים בטווח היצרן."
+        "warning_he": "שינויים במתלים ובפקדים נשארים בטווח היצרן.",
+        "goal_en": "Study ergonomics",
+        "explanation_en": "Watch the selected sources, note the key decisions and practise only the parts that match your present skill level.",
+        "equipment_en": [
+          "Full protective riding gear",
+          "A safe practice area",
+          "The equipment specified by the selected source"
+        ],
+        "warning_en": "Stop and seek qualified instruction when the technique, terrain or risk exceeds your current ability."
       },
       {
         "order": 2,
@@ -200,7 +274,15 @@
           "מגן מנוע"
         ],
         "risk_level": "medium",
-        "warning_he": "עבדו ברדיוס רחב לפני תרגילי נעילת היגוי."
+        "warning_he": "עבדו ברדיוס רחב לפני תרגילי נעילת היגוי.",
+        "goal_en": "Study balance and slow control and controls coordination",
+        "explanation_en": "Watch the selected sources, note the key decisions and practise only the parts that match your present skill level.",
+        "equipment_en": [
+          "Full protective riding gear",
+          "A safe practice area",
+          "The equipment specified by the selected source"
+        ],
+        "warning_en": "Stop and seek qualified instruction when the technique, terrain or risk exceeds your current ability."
       },
       {
         "order": 3,
@@ -218,7 +300,15 @@
           "מגרש סגור"
         ],
         "risk_level": "low",
-        "warning_he": "אין להביט בידיות בזמן תנועה."
+        "warning_he": "אין להביט בידיות בזמן תנועה.",
+        "goal_en": "Study controls coordination",
+        "explanation_en": "Watch the selected sources, note the key decisions and practise only the parts that match your present skill level.",
+        "equipment_en": [
+          "Full protective riding gear",
+          "A safe practice area",
+          "The equipment specified by the selected source"
+        ],
+        "warning_en": "Stop and seek qualified instruction when the technique, terrain or risk exceeds your current ability."
       },
       {
         "order": 4,
@@ -237,7 +327,15 @@
           "ערכת תקר"
         ],
         "risk_level": "medium",
-        "warning_he": "הימנעו מחצץ עמוק ביום התרגול הראשון."
+        "warning_he": "הימנעו מחצץ עמוק ביום התרגול הראשון.",
+        "goal_en": "Study dirt and gravel",
+        "explanation_en": "Watch the selected sources, note the key decisions and practise only the parts that match your present skill level.",
+        "equipment_en": [
+          "Full protective riding gear",
+          "A safe practice area",
+          "The equipment specified by the selected source"
+        ],
+        "warning_en": "Stop and seek qualified instruction when the technique, terrain or risk exceeds your current ability."
       },
       {
         "order": 5,
@@ -256,7 +354,15 @@
           "מגני ידיים"
         ],
         "risk_level": "high",
-        "warning_he": "התחילו במכשול נמוך ומקובע עם מדריך."
+        "warning_he": "התחילו במכשול נמוך ומקובע עם מדריך.",
+        "goal_en": "Study loose rock",
+        "explanation_en": "Watch the selected sources, note the key decisions and practise only the parts that match your present skill level.",
+        "equipment_en": [
+          "Full protective riding gear",
+          "A safe practice area",
+          "The equipment specified by the selected source"
+        ],
+        "warning_en": "Stop and seek qualified instruction when the technique, terrain or risk exceeds your current ability."
       },
       {
         "order": 6,
@@ -275,7 +381,15 @@
           "שותף"
         ],
         "risk_level": "high",
-        "warning_he": "עייפות וחימום מצמד הם נקודת עצירה, לא יעד להתגבר עליו."
+        "warning_he": "עייפות וחימום מצמד הם נקודת עצירה, לא יעד להתגבר עליו.",
+        "goal_en": "Study sand",
+        "explanation_en": "Watch the selected sources, note the key decisions and practise only the parts that match your present skill level.",
+        "equipment_en": [
+          "Full protective riding gear",
+          "A safe practice area",
+          "The equipment specified by the selected source"
+        ],
+        "warning_en": "Stop and seek qualified instruction when the technique, terrain or risk exceeds your current ability."
       },
       {
         "order": 7,
@@ -294,7 +408,15 @@
           "שותף"
         ],
         "risk_level": "high",
-        "warning_he": "אין להיכנס לירידה שאי אפשר לבדוק ולחזור ממנה."
+        "warning_he": "אין להיכנס לירידה שאי אפשר לבדוק ולחזור ממנה.",
+        "goal_en": "Study descents",
+        "explanation_en": "Watch the selected sources, note the key decisions and practise only the parts that match your present skill level.",
+        "equipment_en": [
+          "Full protective riding gear",
+          "A safe practice area",
+          "The equipment specified by the selected source"
+        ],
+        "warning_en": "Stop and seek qualified instruction when the technique, terrain or risk exceeds your current ability."
       },
       {
         "order": 8,
@@ -313,9 +435,19 @@
           "צוות"
         ],
         "risk_level": "high",
-        "warning_he": "אין לבצע חילוץ כבד לבד או מתחת לאופנוע שעלול להחליק."
+        "warning_he": "אין לבצע חילוץ כבד לבד או מתחת לאופנוע שעלול להחליק.",
+        "goal_en": "Study recovery",
+        "explanation_en": "Watch the selected sources, note the key decisions and practise only the parts that match your present skill level.",
+        "equipment_en": [
+          "Full protective riding gear",
+          "A safe practice area",
+          "The equipment specified by the selected source"
+        ],
+        "warning_en": "Stop and seek qualified instruction when the technique, terrain or risk exceeds your current ability."
       }
-    ]
+    ],
+    "name_en": "Heavy adventure-bike control with MOTOTREK",
+    "description_en": "A focused route through selected MOTOTREK lessons and complementary instructors."
   },
   {
     "id": "defensive-road-riding",
@@ -340,7 +472,15 @@
           "מדריך"
         ],
         "risk_level": "low",
-        "warning_he": "למתחיל מוחלט נדרשת הדרכה חוקית ומעשית."
+        "warning_he": "למתחיל מוחלט נדרשת הדרכה חוקית ומעשית.",
+        "goal_en": "Study road strategy and off-road fundamentals",
+        "explanation_en": "Watch the selected sources, note the key decisions and practise only the parts that match your present skill level.",
+        "equipment_en": [
+          "Full protective riding gear",
+          "A safe practice area",
+          "The equipment specified by the selected source"
+        ],
+        "warning_en": "Stop and seek qualified instruction when the technique, terrain or risk exceeds your current ability."
       },
       {
         "order": 2,
@@ -359,7 +499,15 @@
           "מיגון מלא"
         ],
         "risk_level": "low",
-        "warning_he": "אין להשתמש בבלם קדמי כשהכידון מסובב."
+        "warning_he": "אין להשתמש בבלם קדמי כשהכידון מסובב.",
+        "goal_en": "Study controls coordination and u-turns",
+        "explanation_en": "Watch the selected sources, note the key decisions and practise only the parts that match your present skill level.",
+        "equipment_en": [
+          "Full protective riding gear",
+          "A safe practice area",
+          "The equipment specified by the selected source"
+        ],
+        "warning_en": "Stop and seek qualified instruction when the technique, terrain or risk exceeds your current ability."
       },
       {
         "order": 3,
@@ -377,7 +525,15 @@
           "מגרש רחב"
         ],
         "risk_level": "medium",
-        "warning_he": "אין לבצע ניסויי היגוי בכביש פתוח."
+        "warning_he": "אין לבצע ניסויי היגוי בכביש פתוח.",
+        "goal_en": "Study road cornering",
+        "explanation_en": "Watch the selected sources, note the key decisions and practise only the parts that match your present skill level.",
+        "equipment_en": [
+          "Full protective riding gear",
+          "A safe practice area",
+          "The equipment specified by the selected source"
+        ],
+        "warning_en": "Stop and seek qualified instruction when the technique, terrain or risk exceeds your current ability."
       },
       {
         "order": 4,
@@ -395,7 +551,15 @@
           "מאמן"
         ],
         "risk_level": "high",
-        "warning_he": "טכניקת Trail Braking נלמדת בהדרגה ובסביבה מבוקרת."
+        "warning_he": "טכניקת Trail Braking נלמדת בהדרגה ובסביבה מבוקרת.",
+        "goal_en": "Study road cornering",
+        "explanation_en": "Watch the selected sources, note the key decisions and practise only the parts that match your present skill level.",
+        "equipment_en": [
+          "Full protective riding gear",
+          "A safe practice area",
+          "The equipment specified by the selected source"
+        ],
+        "warning_en": "Stop and seek qualified instruction when the technique, terrain or risk exceeds your current ability."
       },
       {
         "order": 5,
@@ -415,7 +579,15 @@
           "מדריך"
         ],
         "risk_level": "high",
-        "warning_he": "אין לתרגל עצירה מרבית בתנועה."
+        "warning_he": "אין לתרגל עצירה מרבית בתנועה.",
+        "goal_en": "Study emergency braking",
+        "explanation_en": "Watch the selected sources, note the key decisions and practise only the parts that match your present skill level.",
+        "equipment_en": [
+          "Full protective riding gear",
+          "A safe practice area",
+          "The equipment specified by the selected source"
+        ],
+        "warning_en": "Stop and seek qualified instruction when the technique, terrain or risk exceeds your current ability."
       },
       {
         "order": 6,
@@ -433,7 +605,15 @@
           "תאורה תקינה"
         ],
         "risk_level": "medium",
-        "warning_he": "נראות אינה הוכחה שנהג זיהה אתכם."
+        "warning_he": "נראות אינה הוכחה שנהג זיהה אתכם.",
+        "goal_en": "Study road strategy",
+        "explanation_en": "Watch the selected sources, note the key decisions and practise only the parts that match your present skill level.",
+        "equipment_en": [
+          "Full protective riding gear",
+          "A safe practice area",
+          "The equipment specified by the selected source"
+        ],
+        "warning_en": "Stop and seek qualified instruction when the technique, terrain or risk exceeds your current ability."
       },
       {
         "order": 7,
@@ -452,7 +632,15 @@
           "צמיגים תקינים"
         ],
         "risk_level": "high",
-        "warning_he": "אין לחפש גבול אחיזה בכביש רטוב."
+        "warning_he": "אין לחפש גבול אחיזה בכביש רטוב.",
+        "goal_en": "Study rain and wet roads",
+        "explanation_en": "Watch the selected sources, note the key decisions and practise only the parts that match your present skill level.",
+        "equipment_en": [
+          "Full protective riding gear",
+          "A safe practice area",
+          "The equipment specified by the selected source"
+        ],
+        "warning_en": "Stop and seek qualified instruction when the technique, terrain or risk exceeds your current ability."
       },
       {
         "order": 8,
@@ -471,9 +659,19 @@
           "תאורה תקינה"
         ],
         "risk_level": "medium",
-        "warning_he": "אין לרכב מהר יותר מן היכולת לעצור בתוך טווח הפנס."
+        "warning_he": "אין לרכב מהר יותר מן היכולת לעצור בתוך טווח הפנס.",
+        "goal_en": "Study road strategy",
+        "explanation_en": "Watch the selected sources, note the key decisions and practise only the parts that match your present skill level.",
+        "equipment_en": [
+          "Full protective riding gear",
+          "A safe practice area",
+          "The equipment specified by the selected source"
+        ],
+        "warning_en": "Stop and seek qualified instruction when the technique, terrain or risk exceeds your current ability."
       }
-    ]
+    ],
+    "name_en": "Defensive road riding",
+    "description_en": "From controls and vision to emergency braking, rain and night riding."
   },
   {
     "id": "parking-lot-control-lab",
@@ -497,7 +695,15 @@
           "מגרש סגור"
         ],
         "risk_level": "low",
-        "warning_he": "שמרו מרחב גדול לכיבוי ולעצירה."
+        "warning_he": "שמרו מרחב גדול לכיבוי ולעצירה.",
+        "goal_en": "Study controls coordination and u-turns",
+        "explanation_en": "Watch the selected sources, note the key decisions and practise only the parts that match your present skill level.",
+        "equipment_en": [
+          "Full protective riding gear",
+          "A safe practice area",
+          "The equipment specified by the selected source"
+        ],
+        "warning_en": "Stop and seek qualified instruction when the technique, terrain or risk exceeds your current ability."
       },
       {
         "order": 2,
@@ -516,7 +722,15 @@
           "מגן מנוע"
         ],
         "risk_level": "low",
-        "warning_he": "צמצמו רדיוס רק אחרי רצף נקי."
+        "warning_he": "צמצמו רדיוס רק אחרי רצף נקי.",
+        "goal_en": "Study drills",
+        "explanation_en": "Watch the selected sources, note the key decisions and practise only the parts that match your present skill level.",
+        "equipment_en": [
+          "Full protective riding gear",
+          "A safe practice area",
+          "The equipment specified by the selected source"
+        ],
+        "warning_en": "Stop and seek qualified instruction when the technique, terrain or risk exceeds your current ability."
       },
       {
         "order": 3,
@@ -534,7 +748,15 @@
           "מיגון מלא"
         ],
         "risk_level": "medium",
-        "warning_he": "פרסת הסמוראי היא חלופה מתקדמת בלבד."
+        "warning_he": "פרסת הסמוראי היא חלופה מתקדמת בלבד.",
+        "goal_en": "Study u-turns",
+        "explanation_en": "Watch the selected sources, note the key decisions and practise only the parts that match your present skill level.",
+        "equipment_en": [
+          "Full protective riding gear",
+          "A safe practice area",
+          "The equipment specified by the selected source"
+        ],
+        "warning_en": "Stop and seek qualified instruction when the technique, terrain or risk exceeds your current ability."
       },
       {
         "order": 4,
@@ -552,7 +774,15 @@
           "מיגון מלא"
         ],
         "risk_level": "medium",
-        "warning_he": "אין להגדיל מהירות כדי להרגיש תגובה חזקה יותר."
+        "warning_he": "אין להגדיל מהירות כדי להרגיש תגובה חזקה יותר.",
+        "goal_en": "Study road cornering",
+        "explanation_en": "Watch the selected sources, note the key decisions and practise only the parts that match your present skill level.",
+        "equipment_en": [
+          "Full protective riding gear",
+          "A safe practice area",
+          "The equipment specified by the selected source"
+        ],
+        "warning_en": "Stop and seek qualified instruction when the technique, terrain or risk exceeds your current ability."
       },
       {
         "order": 5,
@@ -571,7 +801,15 @@
           "מדריך"
         ],
         "risk_level": "high",
-        "warning_he": "התקדמו בלחץ, לא בקפיצה במהירות."
+        "warning_he": "התקדמו בלחץ, לא בקפיצה במהירות.",
+        "goal_en": "Study emergency braking",
+        "explanation_en": "Watch the selected sources, note the key decisions and practise only the parts that match your present skill level.",
+        "equipment_en": [
+          "Full protective riding gear",
+          "A safe practice area",
+          "The equipment specified by the selected source"
+        ],
+        "warning_en": "Stop and seek qualified instruction when the technique, terrain or risk exceeds your current ability."
       },
       {
         "order": 6,
@@ -590,7 +828,15 @@
           "מדריך"
         ],
         "risk_level": "high",
-        "warning_he": "אין לשלב בלימה מרבית והסטה חדה בו־זמנית."
+        "warning_he": "אין לשלב בלימה מרבית והסטה חדה בו־זמנית.",
+        "goal_en": "Study drills and emergency braking",
+        "explanation_en": "Watch the selected sources, note the key decisions and practise only the parts that match your present skill level.",
+        "equipment_en": [
+          "Full protective riding gear",
+          "A safe practice area",
+          "The equipment specified by the selected source"
+        ],
+        "warning_en": "Stop and seek qualified instruction when the technique, terrain or risk exceeds your current ability."
       },
       {
         "order": 7,
@@ -609,7 +855,15 @@
           "מדריך"
         ],
         "risk_level": "high",
-        "warning_he": "אין להוסיף מורכב לפני שהמסלול עקבי ללא מורכב."
+        "warning_he": "אין להוסיף מורכב לפני שהמסלול עקבי ללא מורכב.",
+        "goal_en": "Study pillion riding",
+        "explanation_en": "Watch the selected sources, note the key decisions and practise only the parts that match your present skill level.",
+        "equipment_en": [
+          "Full protective riding gear",
+          "A safe practice area",
+          "The equipment specified by the selected source"
+        ],
+        "warning_en": "Stop and seek qualified instruction when the technique, terrain or risk exceeds your current ability."
       },
       {
         "order": 8,
@@ -628,9 +882,19 @@
           "מדריך"
         ],
         "risk_level": "medium",
-        "warning_he": "שלב זה הוא סיכום מגרש, לא אישור לעבור לכביש ללא רישוי."
+        "warning_he": "שלב זה הוא סיכום מגרש, לא אישור לעבור לכביש ללא רישוי.",
+        "goal_en": "Study off-road fundamentals",
+        "explanation_en": "Watch the selected sources, note the key decisions and practise only the parts that match your present skill level.",
+        "equipment_en": [
+          "Full protective riding gear",
+          "A safe practice area",
+          "The equipment specified by the selected source"
+        ],
+        "warning_en": "Stop and seek qualified instruction when the technique, terrain or risk exceeds your current ability."
       }
-    ]
+    ],
+    "name_en": "Parking-lot control lab",
+    "description_en": "Progressive practice units for clutch control, figure eights, U-turns, braking and swerving."
   },
   {
     "id": "advanced-offroad-terrain",
@@ -655,7 +919,15 @@
           "שותף"
         ],
         "risk_level": "high",
-        "warning_he": "עצרו לפני תשישות או התחממות מצמד."
+        "warning_he": "עצרו לפני תשישות או התחממות מצמד.",
+        "goal_en": "Study sand",
+        "explanation_en": "Watch the selected sources, note the key decisions and practise only the parts that match your present skill level.",
+        "equipment_en": [
+          "Full protective riding gear",
+          "A safe practice area",
+          "The equipment specified by the selected source"
+        ],
+        "warning_en": "Stop and seek qualified instruction when the technique, terrain or risk exceeds your current ability."
       },
       {
         "order": 2,
@@ -674,7 +946,15 @@
           "שותף"
         ],
         "risk_level": "high",
-        "warning_he": "בדקו עומק ומכשולים ברגל לפני קטע בוץ."
+        "warning_he": "בדקו עומק ומכשולים ברגל לפני קטע בוץ.",
+        "goal_en": "Study mud and wet terrain",
+        "explanation_en": "Watch the selected sources, note the key decisions and practise only the parts that match your present skill level.",
+        "equipment_en": [
+          "Full protective riding gear",
+          "A safe practice area",
+          "The equipment specified by the selected source"
+        ],
+        "warning_en": "Stop and seek qualified instruction when the technique, terrain or risk exceeds your current ability."
       },
       {
         "order": 3,
@@ -693,7 +973,15 @@
           "אופנוע קל לתרגול"
         ],
         "risk_level": "high",
-        "warning_he": "חריץ עמוק עלול ללכוד רגל; אין לתרגל לבד."
+        "warning_he": "חריץ עמוק עלול ללכוד רגל; אין לתרגל לבד.",
+        "goal_en": "Study ruts",
+        "explanation_en": "Watch the selected sources, note the key decisions and practise only the parts that match your present skill level.",
+        "equipment_en": [
+          "Full protective riding gear",
+          "A safe practice area",
+          "The equipment specified by the selected source"
+        ],
+        "warning_en": "Stop and seek qualified instruction when the technique, terrain or risk exceeds your current ability."
       },
       {
         "order": 4,
@@ -712,7 +1000,15 @@
           "מגני ידיים"
         ],
         "risk_level": "high",
-        "warning_he": "החלופה היא לניתוח בלבד ואינה שיעור לביצוע."
+        "warning_he": "החלופה היא לניתוח בלבד ואינה שיעור לביצוע.",
+        "goal_en": "Study loose rock",
+        "explanation_en": "Watch the selected sources, note the key decisions and practise only the parts that match your present skill level.",
+        "equipment_en": [
+          "Full protective riding gear",
+          "A safe practice area",
+          "The equipment specified by the selected source"
+        ],
+        "warning_en": "Stop and seek qualified instruction when the technique, terrain or risk exceeds your current ability."
       },
       {
         "order": 5,
@@ -731,7 +1027,15 @@
           "מדריך"
         ],
         "risk_level": "high",
-        "warning_he": "התחילו בשפה נמוכה; הרמת קדמי דורשת הדרכה."
+        "warning_he": "התחילו בשפה נמוכה; הרמת קדמי דורשת הדרכה.",
+        "goal_en": "Study obstacles",
+        "explanation_en": "Watch the selected sources, note the key decisions and practise only the parts that match your present skill level.",
+        "equipment_en": [
+          "Full protective riding gear",
+          "A safe practice area",
+          "The equipment specified by the selected source"
+        ],
+        "warning_en": "Stop and seek qualified instruction when the technique, terrain or risk exceeds your current ability."
       },
       {
         "order": 6,
@@ -750,7 +1054,15 @@
           "שותפים"
         ],
         "risk_level": "high",
-        "warning_he": "מים זורמים, עמוקים או עכורים הם נקודת חזרה."
+        "warning_he": "מים זורמים, עמוקים או עכורים הם נקודת חזרה.",
+        "goal_en": "Study water crossings",
+        "explanation_en": "Watch the selected sources, note the key decisions and practise only the parts that match your present skill level.",
+        "equipment_en": [
+          "Full protective riding gear",
+          "A safe practice area",
+          "The equipment specified by the selected source"
+        ],
+        "warning_en": "Stop and seek qualified instruction when the technique, terrain or risk exceeds your current ability."
       },
       {
         "order": 7,
@@ -769,7 +1081,15 @@
           "נתיב מילוט"
         ],
         "risk_level": "high",
-        "warning_he": "זיגזג והעמסת אחורי הן טכניקות מתקדמות בלבד."
+        "warning_he": "זיגזג והעמסת אחורי הן טכניקות מתקדמות בלבד.",
+        "goal_en": "Study hill climbs",
+        "explanation_en": "Watch the selected sources, note the key decisions and practise only the parts that match your present skill level.",
+        "equipment_en": [
+          "Full protective riding gear",
+          "A safe practice area",
+          "The equipment specified by the selected source"
+        ],
+        "warning_en": "Stop and seek qualified instruction when the technique, terrain or risk exceeds your current ability."
       },
       {
         "order": 8,
@@ -788,9 +1108,19 @@
           "שותף"
         ],
         "risk_level": "high",
-        "warning_he": "אין להעתיק טכניקת אופנוע קל לאדוונצ'ר כבד ללא התאמה."
+        "warning_he": "אין להעתיק טכניקת אופנוע קל לאדוונצ'ר כבד ללא התאמה.",
+        "goal_en": "Study descents",
+        "explanation_en": "Watch the selected sources, note the key decisions and practise only the parts that match your present skill level.",
+        "equipment_en": [
+          "Full protective riding gear",
+          "A safe practice area",
+          "The equipment specified by the selected source"
+        ],
+        "warning_en": "Stop and seek qualified instruction when the technique, terrain or risk exceeds your current ability."
       }
-    ]
+    ],
+    "name_en": "Advanced off-road terrain",
+    "description_en": "Sand, mud, ruts, rocks, water, climbs and descents for experienced riders."
   },
   {
     "id": "trip-preparation-maintenance",
@@ -815,7 +1145,15 @@
           "ספר רכב"
         ],
         "risk_level": "low",
-        "warning_he": "ליקוי בבלמים, צמיג או היגוי מונע יציאה."
+        "warning_he": "ליקוי בבלמים, צמיג או היגוי מונע יציאה.",
+        "goal_en": "Study trip preparation",
+        "explanation_en": "Watch the selected sources, note the key decisions and practise only the parts that match your present skill level.",
+        "equipment_en": [
+          "Full protective riding gear",
+          "A safe practice area",
+          "The equipment specified by the selected source"
+        ],
+        "warning_en": "Stop and seek qualified instruction when the technique, terrain or risk exceeds your current ability."
       },
       {
         "order": 2,
@@ -834,7 +1172,15 @@
           "מנקה ושמן מתאימים"
         ],
         "risk_level": "low",
-        "warning_he": "המנוע כבוי תמיד בזמן טיפול בשרשרת."
+        "warning_he": "המנוע כבוי תמיד בזמן טיפול בשרשרת.",
+        "goal_en": "Study motorcycle maintenance",
+        "explanation_en": "Watch the selected sources, note the key decisions and practise only the parts that match your present skill level.",
+        "equipment_en": [
+          "Full protective riding gear",
+          "A safe practice area",
+          "The equipment specified by the selected source"
+        ],
+        "warning_en": "Stop and seek qualified instruction when the technique, terrain or risk exceeds your current ability."
       },
       {
         "order": 3,
@@ -853,7 +1199,15 @@
           "מדידה"
         ],
         "risk_level": "medium",
-        "warning_he": "הידוק ויישור שגויים הם סיכון בטיחותי; בספק פנו למוסך."
+        "warning_he": "הידוק ויישור שגויים הם סיכון בטיחותי; בספק פנו למוסך.",
+        "goal_en": "Study motorcycle maintenance",
+        "explanation_en": "Watch the selected sources, note the key decisions and practise only the parts that match your present skill level.",
+        "equipment_en": [
+          "Full protective riding gear",
+          "A safe practice area",
+          "The equipment specified by the selected source"
+        ],
+        "warning_en": "Stop and seek qualified instruction when the technique, terrain or risk exceeds your current ability."
       },
       {
         "order": 4,
@@ -872,7 +1226,15 @@
           "ערכת תקר"
         ],
         "risk_level": "medium",
-        "warning_he": "אין להעתיק מספר לחץ מסרטון ללא התאמה לדגם ולצמיג."
+        "warning_he": "אין להעתיק מספר לחץ מסרטון ללא התאמה לדגם ולצמיג.",
+        "goal_en": "Study tires and pressures and dirt and gravel",
+        "explanation_en": "Watch the selected sources, note the key decisions and practise only the parts that match your present skill level.",
+        "equipment_en": [
+          "Full protective riding gear",
+          "A safe practice area",
+          "The equipment specified by the selected source"
+        ],
+        "warning_en": "Stop and seek qualified instruction when the technique, terrain or risk exceeds your current ability."
       },
       {
         "order": 5,
@@ -891,7 +1253,15 @@
           "עוזרים"
         ],
         "risk_level": "medium",
-        "warning_he": "אל תחרגו מטווחי היצרן ואל תשנו כמה פרמטרים יחד."
+        "warning_he": "אל תחרגו מטווחי היצרן ואל תשנו כמה פרמטרים יחד.",
+        "goal_en": "Study suspension setup",
+        "explanation_en": "Watch the selected sources, note the key decisions and practise only the parts that match your present skill level.",
+        "equipment_en": [
+          "Full protective riding gear",
+          "A safe practice area",
+          "The equipment specified by the selected source"
+        ],
+        "warning_en": "Stop and seek qualified instruction when the technique, terrain or risk exceeds your current ability."
       },
       {
         "order": 6,
@@ -910,7 +1280,15 @@
           "ספר רכב"
         ],
         "risk_level": "medium",
-        "warning_he": "אין לעבור את מגבלת העומס או להשאיר קצה רצועה חופשי."
+        "warning_he": "אין לעבור את מגבלת העומס או להשאיר קצה רצועה חופשי.",
+        "goal_en": "Study trip preparation",
+        "explanation_en": "Watch the selected sources, note the key decisions and practise only the parts that match your present skill level.",
+        "equipment_en": [
+          "Full protective riding gear",
+          "A safe practice area",
+          "The equipment specified by the selected source"
+        ],
+        "warning_en": "Stop and seek qualified instruction when the technique, terrain or risk exceeds your current ability."
       },
       {
         "order": 7,
@@ -929,7 +1307,15 @@
           "מפה גיבוי"
         ],
         "risk_level": "low",
-        "warning_he": "עצרו לפני כל שינוי יעד ואל תסמכו על מכשיר יחיד."
+        "warning_he": "עצרו לפני כל שינוי יעד ואל תסמכו על מכשיר יחיד.",
+        "goal_en": "Study trip preparation",
+        "explanation_en": "Watch the selected sources, note the key decisions and practise only the parts that match your present skill level.",
+        "equipment_en": [
+          "Full protective riding gear",
+          "A safe practice area",
+          "The equipment specified by the selected source"
+        ],
+        "warning_en": "Stop and seek qualified instruction when the technique, terrain or risk exceeds your current ability."
       },
       {
         "order": 8,
@@ -948,9 +1334,19 @@
           "מיגון מותאם"
         ],
         "risk_level": "medium",
-        "warning_he": "פיהוק, כאב או ירידה בריכוז מחייבים עצירה."
+        "warning_he": "פיהוק, כאב או ירידה בריכוז מחייבים עצירה.",
+        "goal_en": "Study fatigue management",
+        "explanation_en": "Watch the selected sources, note the key decisions and practise only the parts that match your present skill level.",
+        "equipment_en": [
+          "Full protective riding gear",
+          "A safe practice area",
+          "The equipment specified by the selected source"
+        ],
+        "warning_en": "Stop and seek qualified instruction when the technique, terrain or risk exceeds your current ability."
       }
-    ]
+    ],
+    "name_en": "Trip preparation, maintenance and touring",
+    "description_en": "Prepare the rider and motorcycle for a long day or a multi-day journey."
   },
   {
     "id": "passenger-group-safety",
@@ -974,7 +1370,15 @@
           "רגליות תקינות"
         ],
         "risk_level": "medium",
-        "warning_he": "אין להרכיב ללא מושב, רגליות ועומס מאושרים."
+        "warning_he": "אין להרכיב ללא מושב, רגליות ועומס מאושרים.",
+        "goal_en": "Study pillion riding",
+        "explanation_en": "Watch the selected sources, note the key decisions and practise only the parts that match your present skill level.",
+        "equipment_en": [
+          "Full protective riding gear",
+          "A safe practice area",
+          "The equipment specified by the selected source"
+        ],
+        "warning_en": "Stop and seek qualified instruction when the technique, terrain or risk exceeds your current ability."
       },
       {
         "order": 2,
@@ -993,7 +1397,15 @@
           "מיגון לשניים"
         ],
         "risk_level": "medium",
-        "warning_he": "פעלו לפי מגבלת היצרן, לא לפי תחושה בלבד."
+        "warning_he": "פעלו לפי מגבלת היצרן, לא לפי תחושה בלבד.",
+        "goal_en": "Study pillion riding",
+        "explanation_en": "Watch the selected sources, note the key decisions and practise only the parts that match your present skill level.",
+        "equipment_en": [
+          "Full protective riding gear",
+          "A safe practice area",
+          "The equipment specified by the selected source"
+        ],
+        "warning_en": "Stop and seek qualified instruction when the technique, terrain or risk exceeds your current ability."
       },
       {
         "order": 3,
@@ -1011,7 +1423,15 @@
           "אמצעי תקשורת"
         ],
         "risk_level": "medium",
-        "warning_he": "מבנה הקבוצה אינו גובר על מרווח אישי או חוק."
+        "warning_he": "מבנה הקבוצה אינו גובר על מרווח אישי או חוק.",
+        "goal_en": "Study solo and group safety",
+        "explanation_en": "Watch the selected sources, note the key decisions and practise only the parts that match your present skill level.",
+        "equipment_en": [
+          "Full protective riding gear",
+          "A safe practice area",
+          "The equipment specified by the selected source"
+        ],
+        "warning_en": "Stop and seek qualified instruction when the technique, terrain or risk exceeds your current ability."
       },
       {
         "order": 4,
@@ -1029,7 +1449,15 @@
           "ערכת עזרה ראשונה"
         ],
         "risk_level": "low",
-        "warning_he": "אל תצאו לפני שכל רוכב יודע מי המאסף ומהו נוהל אובדן קשר."
+        "warning_he": "אל תצאו לפני שכל רוכב יודע מי המאסף ומהו נוהל אובדן קשר.",
+        "goal_en": "Study solo and group safety",
+        "explanation_en": "Watch the selected sources, note the key decisions and practise only the parts that match your present skill level.",
+        "equipment_en": [
+          "Full protective riding gear",
+          "A safe practice area",
+          "The equipment specified by the selected source"
+        ],
+        "warning_en": "Stop and seek qualified instruction when the technique, terrain or risk exceeds your current ability."
       },
       {
         "order": 5,
@@ -1047,7 +1475,15 @@
           "מיגון נראה"
         ],
         "risk_level": "medium",
-        "warning_he": "אל תניחו שנהג ראה את כל חברי הקבוצה."
+        "warning_he": "אל תניחו שנהג ראה את כל חברי הקבוצה.",
+        "goal_en": "Study road strategy",
+        "explanation_en": "Watch the selected sources, note the key decisions and practise only the parts that match your present skill level.",
+        "equipment_en": [
+          "Full protective riding gear",
+          "A safe practice area",
+          "The equipment specified by the selected source"
+        ],
+        "warning_en": "Stop and seek qualified instruction when the technique, terrain or risk exceeds your current ability."
       },
       {
         "order": 6,
@@ -1065,7 +1501,15 @@
           "אמצעי תקשורת"
         ],
         "risk_level": "medium",
-        "warning_he": "אין לרדוף אחרי הקבוצה; המוביל והמאסף מתאימים את הקצב."
+        "warning_he": "אין לרדוף אחרי הקבוצה; המוביל והמאסף מתאימים את הקצב.",
+        "goal_en": "Study solo and group safety and fatigue management",
+        "explanation_en": "Watch the selected sources, note the key decisions and practise only the parts that match your present skill level.",
+        "equipment_en": [
+          "Full protective riding gear",
+          "A safe practice area",
+          "The equipment specified by the selected source"
+        ],
+        "warning_en": "Stop and seek qualified instruction when the technique, terrain or risk exceeds your current ability."
       },
       {
         "order": 7,
@@ -1084,7 +1528,15 @@
           "מחזירי אור"
         ],
         "risk_level": "high",
-        "warning_he": "קבוצה אינה סיבה להמשיך בתנאים שחורגים מרמת הרוכב החלש ביותר."
+        "warning_he": "קבוצה אינה סיבה להמשיך בתנאים שחורגים מרמת הרוכב החלש ביותר.",
+        "goal_en": "Study rain and wet roads",
+        "explanation_en": "Watch the selected sources, note the key decisions and practise only the parts that match your present skill level.",
+        "equipment_en": [
+          "Full protective riding gear",
+          "A safe practice area",
+          "The equipment specified by the selected source"
+        ],
+        "warning_en": "Stop and seek qualified instruction when the technique, terrain or risk exceeds your current ability."
       },
       {
         "order": 8,
@@ -1104,9 +1556,19 @@
           "ערכת עזרה ראשונה"
         ],
         "risk_level": "high",
-        "warning_he": "אין לתרגל עצירת חירום בתוך רכיבת קבוצה פעילה."
+        "warning_he": "אין לתרגל עצירת חירום בתוך רכיבת קבוצה פעילה.",
+        "goal_en": "Study emergency braking",
+        "explanation_en": "Watch the selected sources, note the key decisions and practise only the parts that match your present skill level.",
+        "equipment_en": [
+          "Full protective riding gear",
+          "A safe practice area",
+          "The equipment specified by the selected source"
+        ],
+        "warning_en": "Stop and seek qualified instruction when the technique, terrain or risk exceeds your current ability."
       }
-    ]
+    ],
+    "name_en": "Passenger, group and shared safety",
+    "description_en": "Communication, added load, group structure and a pace that works for everyone."
   },
   {
     "id": "recovery-emergency-readiness",
@@ -1131,7 +1593,15 @@
           "פנס"
         ],
         "risk_level": "low",
-        "warning_he": "ליקוי לא מוסבר מחייב בדיקה מקצועית."
+        "warning_he": "ליקוי לא מוסבר מחייב בדיקה מקצועית.",
+        "goal_en": "Study trip preparation",
+        "explanation_en": "Watch the selected sources, note the key decisions and practise only the parts that match your present skill level.",
+        "equipment_en": [
+          "Full protective riding gear",
+          "A safe practice area",
+          "The equipment specified by the selected source"
+        ],
+        "warning_en": "Stop and seek qualified instruction when the technique, terrain or risk exceeds your current ability."
       },
       {
         "order": 2,
@@ -1150,7 +1620,15 @@
           "משגיח"
         ],
         "risk_level": "medium",
-        "warning_he": "בפציעה, דליפה, תנועה או שיפוע מזמינים עזרה."
+        "warning_he": "בפציעה, דליפה, תנועה או שיפוע מזמינים עזרה.",
+        "goal_en": "Study motorcycle lifting",
+        "explanation_en": "Watch the selected sources, note the key decisions and practise only the parts that match your present skill level.",
+        "equipment_en": [
+          "Full protective riding gear",
+          "A safe practice area",
+          "The equipment specified by the selected source"
+        ],
+        "warning_en": "Stop and seek qualified instruction when the technique, terrain or risk exceeds your current ability."
       },
       {
         "order": 3,
@@ -1169,7 +1647,15 @@
           "צוות"
         ],
         "risk_level": "high",
-        "warning_he": "אין לעמוד מתחת לאופנוע או לתרגל לבד."
+        "warning_he": "אין לעמוד מתחת לאופנוע או לתרגל לבד.",
+        "goal_en": "Study recovery and hill climbs",
+        "explanation_en": "Watch the selected sources, note the key decisions and practise only the parts that match your present skill level.",
+        "equipment_en": [
+          "Full protective riding gear",
+          "A safe practice area",
+          "The equipment specified by the selected source"
+        ],
+        "warning_en": "Stop and seek qualified instruction when the technique, terrain or risk exceeds your current ability."
       },
       {
         "order": 4,
@@ -1189,7 +1675,15 @@
           "צוות"
         ],
         "risk_level": "high",
-        "warning_he": "מאמץ יתר ושקיעה עמוקה מחייבים עצירה והזעקת עזרה."
+        "warning_he": "מאמץ יתר ושקיעה עמוקה מחייבים עצירה והזעקת עזרה.",
+        "goal_en": "Study recovery and mud and wet terrain",
+        "explanation_en": "Watch the selected sources, note the key decisions and practise only the parts that match your present skill level.",
+        "equipment_en": [
+          "Full protective riding gear",
+          "A safe practice area",
+          "The equipment specified by the selected source"
+        ],
+        "warning_en": "Stop and seek qualified instruction when the technique, terrain or risk exceeds your current ability."
       },
       {
         "order": 5,
@@ -1208,7 +1702,15 @@
           "מקל בדיקה"
         ],
         "risk_level": "high",
-        "warning_he": "אין להיכנס למים שאי אפשר לבדוק או לחלץ מהם."
+        "warning_he": "אין להיכנס למים שאי אפשר לבדוק או לחלץ מהם.",
+        "goal_en": "Study water crossings",
+        "explanation_en": "Watch the selected sources, note the key decisions and practise only the parts that match your present skill level.",
+        "equipment_en": [
+          "Full protective riding gear",
+          "A safe practice area",
+          "The equipment specified by the selected source"
+        ],
+        "warning_en": "Stop and seek qualified instruction when the technique, terrain or risk exceeds your current ability."
       },
       {
         "order": 6,
@@ -1228,7 +1730,15 @@
           "כלי ציר"
         ],
         "risk_level": "medium",
-        "warning_he": "גלגל, קליפר וציר חוזרים לפי סדר ומומנט היצרן."
+        "warning_he": "גלגל, קליפר וציר חוזרים לפי סדר ומומנט היצרן.",
+        "goal_en": "Study tires and pressures",
+        "explanation_en": "Watch the selected sources, note the key decisions and practise only the parts that match your present skill level.",
+        "equipment_en": [
+          "Full protective riding gear",
+          "A safe practice area",
+          "The equipment specified by the selected source"
+        ],
+        "warning_en": "Stop and seek qualified instruction when the technique, terrain or risk exceeds your current ability."
       },
       {
         "order": 7,
@@ -1248,7 +1758,15 @@
           "ספר שירות"
         ],
         "risk_level": "medium",
-        "warning_he": "לעולם אין להניע את הגלגל בזמן טיפול."
+        "warning_he": "לעולם אין להניע את הגלגל בזמן טיפול.",
+        "goal_en": "Study motorcycle maintenance",
+        "explanation_en": "Watch the selected sources, note the key decisions and practise only the parts that match your present skill level.",
+        "equipment_en": [
+          "Full protective riding gear",
+          "A safe practice area",
+          "The equipment specified by the selected source"
+        ],
+        "warning_en": "Stop and seek qualified instruction when the technique, terrain or risk exceeds your current ability."
       },
       {
         "order": 8,
@@ -1268,7 +1786,1995 @@
           "מדריך"
         ],
         "risk_level": "high",
-        "warning_he": "אין ללמוד תמרון חירום בכביש פתוח."
+        "warning_he": "אין ללמוד תמרון חירום בכביש פתוח.",
+        "goal_en": "Study emergency braking",
+        "explanation_en": "Watch the selected sources, note the key decisions and practise only the parts that match your present skill level.",
+        "equipment_en": [
+          "Full protective riding gear",
+          "A safe practice area",
+          "The equipment specified by the selected source"
+        ],
+        "warning_en": "Stop and seek qualified instruction when the technique, terrain or risk exceeds your current ability."
+      }
+    ],
+    "name_en": "Recovery and emergency readiness",
+    "description_en": "Assessment, lifting, hill and mud recovery, water, punctures and prevention."
+  },
+  {
+    "id": "day-trip-ready",
+    "name_he": "מוכנים לטיול יום",
+    "description_he": "מסלול קצר שמחבר בדיקת אופנוע, ניווט, קבוצה, קשב וציוד לטיול יום.",
+    "skill_level": "beginner",
+    "steps": [
+      {
+        "order": 1,
+        "goal_he": "מגדירים מסלול וקצב",
+        "explanation_he": "מתאימים מרחק ותוואי לרוכבים ולשעות האור.",
+        "primary_video_ids": [
+          "yt-bAY-2OdpIus",
+          "yt-DSbsGr1txnU"
+        ],
+        "alternative_video_ids": [
+          "yt-NtLsIDFYv8M",
+          "yt-wPQIXpF0bss"
+        ],
+        "equipment_he": [
+          "ציוד מיגון מלא",
+          "טלפון טעון או דף תכנון",
+          "מים"
+        ],
+        "risk_level": "low",
+        "warning_he": "משנים מסלול כשמזג האוויר או הקבוצה דורשים זאת.",
+        "goal_en": "Study tour planning and off-road fundamentals",
+        "explanation_en": "Watch the selected sources, note the key decisions and practise only the parts that match your present skill level.",
+        "equipment_en": [
+          "Full protective riding gear",
+          "A safe practice area",
+          "The equipment specified by the selected source"
+        ],
+        "warning_en": "Stop and seek qualified instruction when the technique, terrain or risk exceeds your current ability."
+      },
+      {
+        "order": 2,
+        "goal_he": "בודקים את האופנוע",
+        "explanation_he": "עוברים על צמיגים, שרשרת, נוזלים, אורות ובלמים.",
+        "primary_video_ids": [
+          "yt-unp3hXfGjts",
+          "yt-_pksFgZ-5wQ"
+        ],
+        "alternative_video_ids": [
+          "yt-cSchxYarffc",
+          "yt-UaxuuvJdF88"
+        ],
+        "equipment_he": [
+          "ציוד מיגון מלא",
+          "טלפון טעון או דף תכנון",
+          "מים"
+        ],
+        "risk_level": "low",
+        "warning_he": "ממצא לא ברור עובר לבדיקה מקצועית לפני היציאה.",
+        "goal_en": "Study pre-trip inspection",
+        "explanation_en": "Watch the selected sources, note the key decisions and practise only the parts that match your present skill level.",
+        "equipment_en": [
+          "Full protective riding gear",
+          "A safe practice area",
+          "The equipment specified by the selected source"
+        ],
+        "warning_en": "Stop and seek qualified instruction when the technique, terrain or risk exceeds your current ability."
+      },
+      {
+        "order": 3,
+        "goal_he": "אורזים בלי להעמיס",
+        "explanation_he": "ממקמים מים, ערכת חירום וכלים בצורה נגישה ומאוזנת.",
+        "primary_video_ids": [
+          "yt-GJTbVEFaTqE",
+          "yt-o586btpMUfY"
+        ],
+        "alternative_video_ids": [
+          "yt-UsOGqaTH3d0"
+        ],
+        "equipment_he": [
+          "ציוד מיגון מלא",
+          "טלפון טעון או דף תכנון",
+          "מים"
+        ],
+        "risk_level": "low",
+        "warning_he": "מטען חייב להיות מקובע ולא לפגוע בהיגוי או במתלים.",
+        "goal_en": "Study packing and luggage and trip preparation",
+        "explanation_en": "Watch the selected sources, note the key decisions and practise only the parts that match your present skill level.",
+        "equipment_en": [
+          "Full protective riding gear",
+          "A safe practice area",
+          "The equipment specified by the selected source"
+        ],
+        "warning_en": "Stop and seek qualified instruction when the technique, terrain or risk exceeds your current ability."
+      },
+      {
+        "order": 4,
+        "goal_he": "מכינים ניווט וגיבוי",
+        "explanation_he": "שומרים מסלול, מפה לא מקוונת ונקודות עצירה.",
+        "primary_video_ids": [
+          "yt-jkkKIyAJH_k",
+          "yt-iHz2GH6L7AY"
+        ],
+        "alternative_video_ids": [
+          "yt-UsOGqaTH3d0"
+        ],
+        "equipment_he": [
+          "ציוד מיגון מלא",
+          "טלפון טעון או דף תכנון",
+          "מים"
+        ],
+        "risk_level": "low",
+        "warning_he": "אין להסתמך על טלפון יחיד ללא סוללה או תוכנית חלופית.",
+        "goal_en": "Study navigation and gpx",
+        "explanation_en": "Watch the selected sources, note the key decisions and practise only the parts that match your present skill level.",
+        "equipment_en": [
+          "Full protective riding gear",
+          "A safe practice area",
+          "The equipment specified by the selected source"
+        ],
+        "warning_en": "Stop and seek qualified instruction when the technique, terrain or risk exceeds your current ability."
+      },
+      {
+        "order": 5,
+        "goal_he": "מתאמים קבוצה",
+        "explanation_he": "מגדירים מוביל, מאסף, קצב וסימני עצירה.",
+        "primary_video_ids": [
+          "yt-evc423OwTpY",
+          "yt-HiOGAYOXN8U"
+        ],
+        "alternative_video_ids": [
+          "yt-UsOGqaTH3d0"
+        ],
+        "equipment_he": [
+          "ציוד מיגון מלא",
+          "טלפון טעון או דף תכנון",
+          "מים"
+        ],
+        "risk_level": "low",
+        "warning_he": "אין לרדוף אחרי הקבוצה; כל רוכב אחראי לקצב בטוח.",
+        "goal_en": "Study group riding and mindful riding",
+        "explanation_en": "Watch the selected sources, note the key decisions and practise only the parts that match your present skill level.",
+        "equipment_en": [
+          "Full protective riding gear",
+          "A safe practice area",
+          "The equipment specified by the selected source"
+        ],
+        "warning_en": "Stop and seek qualified instruction when the technique, terrain or risk exceeds your current ability."
+      },
+      {
+        "order": 6,
+        "goal_he": "מנהלים קשב ועייפות",
+        "explanation_he": "מתכננים הפסקות ומזהים ירידה בריכוז.",
+        "primary_video_ids": [
+          "yt-PtRYyP96HHA",
+          "yt-GwXb1oEWeMY"
+        ],
+        "alternative_video_ids": [
+          "yt-2XP_qr9NNcc",
+          "yt-2HTa9iHvI6U"
+        ],
+        "equipment_he": [
+          "ציוד מיגון מלא",
+          "טלפון טעון או דף תכנון",
+          "מים"
+        ],
+        "risk_level": "low",
+        "warning_he": "עייפות היא סיבה להאט או לעצור, לא להילחם בה.",
+        "goal_en": "Study fatigue management",
+        "explanation_en": "Watch the selected sources, note the key decisions and practise only the parts that match your present skill level.",
+        "equipment_en": [
+          "Full protective riding gear",
+          "A safe practice area",
+          "The equipment specified by the selected source"
+        ],
+        "warning_en": "Stop and seek qualified instruction when the technique, terrain or risk exceeds your current ability."
+      },
+      {
+        "order": 7,
+        "goal_he": "מתרגלים מצב חירום",
+        "explanation_he": "מרעננים בלימה, התחמקות ותגובה לתקלה.",
+        "primary_video_ids": [
+          "yt-eqbeqc2xeBc",
+          "yt-bO88ooYOLhw"
+        ],
+        "alternative_video_ids": [
+          "yt-UILe5YDA4B8",
+          "yt-EiicJgmx53Q"
+        ],
+        "equipment_he": [
+          "ציוד מיגון מלא",
+          "טלפון טעון או דף תכנון",
+          "מים"
+        ],
+        "risk_level": "medium",
+        "warning_he": "תרגול חירום מבוצע במגרש סגור בלבד.",
+        "goal_en": "Study emergency braking",
+        "explanation_en": "Watch the selected sources, note the key decisions and practise only the parts that match your present skill level.",
+        "equipment_en": [
+          "Full protective riding gear",
+          "A safe practice area",
+          "The equipment specified by the selected source"
+        ],
+        "warning_en": "Stop and seek qualified instruction when the technique, terrain or risk exceeds your current ability."
+      },
+      {
+        "order": 8,
+        "goal_he": "מסכמים ומשתפים",
+        "explanation_he": "אחרי הטיול מתעדים תקלות, מסלול ולקחים לקהילה.",
+        "primary_video_ids": [
+          "yt-5d96LXhQPxA",
+          "yt-uXkKS8z0nSI"
+        ],
+        "alternative_video_ids": [
+          "yt-n8T8nWXt_Nw",
+          "yt-ZPnjRbMZ_pI"
+        ],
+        "equipment_he": [
+          "ציוד מיגון מלא",
+          "טלפון טעון או דף תכנון",
+          "מים"
+        ],
+        "risk_level": "low",
+        "warning_he": "שומרים על פרטיות ומכבדים יוצרי תוכן ומסלולים.",
+        "goal_en": "Study riding courses and road strategy",
+        "explanation_en": "Watch the selected sources, note the key decisions and practise only the parts that match your present skill level.",
+        "equipment_en": [
+          "Full protective riding gear",
+          "A safe practice area",
+          "The equipment specified by the selected source"
+        ],
+        "warning_en": "Stop and seek qualified instruction when the technique, terrain or risk exceeds your current ability."
+      }
+    ],
+    "name_en": "Ready for a day trip",
+    "description_en": "A concise route through motorcycle checks, navigation, group riding, attention and equipment."
+  },
+  {
+    "id": "multi-day-adventure",
+    "name_he": "מסע אדוונצ'ר רב־יומי",
+    "description_he": "הכנה למסע עם מטען, תקלות, עייפות, לינה ושינויי תוכנית.",
+    "skill_level": "advanced_beginner",
+    "steps": [
+      {
+        "order": 1,
+        "goal_he": "מחלקים את המסע לימים",
+        "explanation_he": "בונים מרחק יומי ריאלי עם זמן גיבוי.",
+        "primary_video_ids": [
+          "yt-UsOGqaTH3d0",
+          "yt-fqm0Oj9G8QU"
+        ],
+        "alternative_video_ids": [
+          "yt-q58g03DSHIs",
+          "yt-GqfRGMw8gvQ"
+        ],
+        "equipment_he": [
+          "ציוד מיגון מלא",
+          "טלפון טעון או דף תכנון",
+          "מים"
+        ],
+        "risk_level": "low",
+        "warning_he": "לא בונים לוח זמנים שמחייב רכיבה עייפה או בלילה.",
+        "goal_en": "Study riding position and controls coordination",
+        "explanation_en": "Watch the selected sources, note the key decisions and practise only the parts that match your present skill level.",
+        "equipment_en": [
+          "Full protective riding gear",
+          "A safe practice area",
+          "The equipment specified by the selected source"
+        ],
+        "warning_en": "Stop and seek qualified instruction when the technique, terrain or risk exceeds your current ability."
+      },
+      {
+        "order": 2,
+        "goal_he": "מתאימים את האופנוע לעומס",
+        "explanation_he": "בודקים מתלים, לחץ אוויר וקיבוע מטען.",
+        "primary_video_ids": [
+          "yt-sJg_rAPp0Rg",
+          "yt-QrdzBXxa7e0"
+        ],
+        "alternative_video_ids": [
+          "yt-DW0GVIvub44",
+          "yt-CCCl2KBpP5g"
+        ],
+        "equipment_he": [
+          "ציוד מיגון מלא",
+          "טלפון טעון או דף תכנון",
+          "מים"
+        ],
+        "risk_level": "low",
+        "warning_he": "משתמשים בנתוני היצרן ולא בניחוש.",
+        "goal_en": "Study suspension setup",
+        "explanation_en": "Watch the selected sources, note the key decisions and practise only the parts that match your present skill level.",
+        "equipment_en": [
+          "Full protective riding gear",
+          "A safe practice area",
+          "The equipment specified by the selected source"
+        ],
+        "warning_en": "Stop and seek qualified instruction when the technique, terrain or risk exceeds your current ability."
+      },
+      {
+        "order": 3,
+        "goal_he": "בונים מערכת אריזה",
+        "explanation_he": "מפרידים ציוד יומי, לינה וחירום.",
+        "primary_video_ids": [
+          "yt-GJTbVEFaTqE",
+          "yt-o586btpMUfY"
+        ],
+        "alternative_video_ids": [
+          "yt-UsOGqaTH3d0"
+        ],
+        "equipment_he": [
+          "ציוד מיגון מלא",
+          "טלפון טעון או דף תכנון",
+          "מים"
+        ],
+        "risk_level": "low",
+        "warning_he": "ציוד כבד נשמר נמוך וקרוב למרכז.",
+        "goal_en": "Study packing and luggage and trip preparation",
+        "explanation_en": "Watch the selected sources, note the key decisions and practise only the parts that match your present skill level.",
+        "equipment_en": [
+          "Full protective riding gear",
+          "A safe practice area",
+          "The equipment specified by the selected source"
+        ],
+        "warning_en": "Stop and seek qualified instruction when the technique, terrain or risk exceeds your current ability."
+      },
+      {
+        "order": 4,
+        "goal_he": "מכינים כלי דרך וחלפים",
+        "explanation_he": "בוחרים כלים לפי האופנוע והתוואי.",
+        "primary_video_ids": [
+          "yt-Nix5yh2r-04",
+          "yt-cSchxYarffc"
+        ],
+        "alternative_video_ids": [
+          "yt-ZPnjRbMZ_pI",
+          "yt-gn17lwwS3aI"
+        ],
+        "equipment_he": [
+          "ציוד מיגון מלא",
+          "טלפון טעון או דף תכנון",
+          "מים"
+        ],
+        "risk_level": "low",
+        "warning_he": "לא מבצעים תיקון שאין לנו ידע או כלי מתאים עבורו.",
+        "goal_en": "Study roadside repairs and motorcycle maintenance",
+        "explanation_en": "Watch the selected sources, note the key decisions and practise only the parts that match your present skill level.",
+        "equipment_en": [
+          "Full protective riding gear",
+          "A safe practice area",
+          "The equipment specified by the selected source"
+        ],
+        "warning_en": "Stop and seek qualified instruction when the technique, terrain or risk exceeds your current ability."
+      },
+      {
+        "order": 5,
+        "goal_he": "מתכננים ניווט חלופי",
+        "explanation_he": "שומרים GPX, מפה לא מקוונת ודרך יציאה.",
+        "primary_video_ids": [
+          "yt-jkkKIyAJH_k",
+          "yt-iHz2GH6L7AY"
+        ],
+        "alternative_video_ids": [
+          "yt-DSbsGr1txnU"
+        ],
+        "equipment_he": [
+          "ציוד מיגון מלא",
+          "טלפון טעון או דף תכנון",
+          "מים"
+        ],
+        "risk_level": "low",
+        "warning_he": "בודקים את חוקיות ופתיחות הדרך לפני הכניסה.",
+        "goal_en": "Study navigation and gpx",
+        "explanation_en": "Watch the selected sources, note the key decisions and practise only the parts that match your present skill level.",
+        "equipment_en": [
+          "Full protective riding gear",
+          "A safe practice area",
+          "The equipment specified by the selected source"
+        ],
+        "warning_en": "Stop and seek qualified instruction when the technique, terrain or risk exceeds your current ability."
+      },
+      {
+        "order": 6,
+        "goal_he": "מנהלים עייפות ומזג אוויר",
+        "explanation_he": "מתאימים קצב, שתייה, לבוש ועצירות.",
+        "primary_video_ids": [
+          "yt-PtRYyP96HHA",
+          "yt-GwXb1oEWeMY"
+        ],
+        "alternative_video_ids": [
+          "yt-2XP_qr9NNcc",
+          "yt-2HTa9iHvI6U"
+        ],
+        "equipment_he": [
+          "ציוד מיגון מלא",
+          "טלפון טעון או דף תכנון",
+          "מים"
+        ],
+        "risk_level": "low",
+        "warning_he": "עוצרים לפני שמופיעים טעויות ריכוז חוזרות.",
+        "goal_en": "Study fatigue management",
+        "explanation_en": "Watch the selected sources, note the key decisions and practise only the parts that match your present skill level.",
+        "equipment_en": [
+          "Full protective riding gear",
+          "A safe practice area",
+          "The equipment specified by the selected source"
+        ],
+        "warning_en": "Stop and seek qualified instruction when the technique, terrain or risk exceeds your current ability."
+      },
+      {
+        "order": 7,
+        "goal_he": "מתכוננים לתקר או נפילה",
+        "explanation_he": "לומדים הערכה, תיקון בסיסי וחילוץ.",
+        "primary_video_ids": [
+          "yt-ToeaB1SpH2s",
+          "yt-bAY-2OdpIus"
+        ],
+        "alternative_video_ids": [
+          "yt-NtLsIDFYv8M",
+          "yt-wPQIXpF0bss"
+        ],
+        "equipment_he": [
+          "ציוד מיגון מלא",
+          "טלפון טעון או דף תכנון",
+          "מים"
+        ],
+        "risk_level": "medium",
+        "warning_he": "בטיחות הגוף קודמת להצלת מסלול או ציוד.",
+        "goal_en": "Study roadside repairs and tour planning",
+        "explanation_en": "Watch the selected sources, note the key decisions and practise only the parts that match your present skill level.",
+        "equipment_en": [
+          "Full protective riding gear",
+          "A safe practice area",
+          "The equipment specified by the selected source"
+        ],
+        "warning_en": "Stop and seek qualified instruction when the technique, terrain or risk exceeds your current ability."
+      },
+      {
+        "order": 8,
+        "goal_he": "בונים גמישות מנטלית",
+        "explanation_he": "מקבלים שינוי תוכנית כחלק מן המסע.",
+        "primary_video_ids": [
+          "yt-HiOGAYOXN8U",
+          "yt-5d96LXhQPxA"
+        ],
+        "alternative_video_ids": [
+          "yt-uXkKS8z0nSI",
+          "yt-n8T8nWXt_Nw"
+        ],
+        "equipment_he": [
+          "ציוד מיגון מלא",
+          "טלפון טעון או דף תכנון",
+          "מים"
+        ],
+        "risk_level": "low",
+        "warning_he": "אין יעד ששווה רכיבה מעבר ליכולת.",
+        "goal_en": "Study mindful riding and riding courses",
+        "explanation_en": "Watch the selected sources, note the key decisions and practise only the parts that match your present skill level.",
+        "equipment_en": [
+          "Full protective riding gear",
+          "A safe practice area",
+          "The equipment specified by the selected source"
+        ],
+        "warning_en": "Stop and seek qualified instruction when the technique, terrain or risk exceeds your current ability."
+      }
+    ],
+    "name_en": "Multi-day adventure journey",
+    "description_en": "Luggage, faults, fatigue, accommodation and changes of plan."
+  },
+  {
+    "id": "navigation-gpx",
+    "name_he": "ניווט ו־GPX לרוכבים",
+    "description_he": "מסלול מעשי בן שמונה צעדים: תכנון, טלפון מול GPS, כוח וקיבוע, GPX, התקנת אפליקציה, מפות לא מקוונות וגיבוי.",
+    "skill_level": "beginner",
+    "steps": [
+      {
+        "order": 1,
+        "goal_he": "מגדירים יעד, נקודות מפתח ומגבלות",
+        "explanation_he": "מתחילים ביעד, דלק, מים, נקודות יציאה ותנאי הדרך ורק אחר כך בוחרים אפליקציה או מכשיר.",
+        "primary_video_ids": [
+          "yt-lcauMhznleg",
+          "yt-iHz2GH6L7AY"
+        ],
+        "alternative_video_ids": [
+          "yt-hDX4TBsPKLU"
+        ],
+        "equipment_he": [
+          "טלפון או GPS טעון",
+          "מקור כוח וקיבוע המתאימים למכשיר",
+          "קובץ GPX ומפת גיבוי לבדיקה"
+        ],
+        "risk_level": "low",
+        "warning_he": "את ההתקנה, ההקלדה ושינויי המסלול מבצעים בעמידה בלבד; בזמן רכיבה הקשב נשאר בדרך ובתוואי.",
+        "goal_en": "Define the destination, key points and constraints",
+        "explanation_en": "Start with the destination, fuel, water, exit points and route constraints before choosing an app or device.",
+        "equipment_en": [
+          "A charged phone or GPS",
+          "Power and mounting appropriate to the device",
+          "A GPX file and backup map for testing"
+        ],
+        "warning_en": "Install, type and change routes only while stopped; while riding, keep attention on the road and terrain."
+      },
+      {
+        "order": 2,
+        "goal_he": "בוחרים טלפון או GPS ייעודי",
+        "explanation_he": "משווים עמידות, עבודה בכפפות, קריאות מסך, עלות, מזג אוויר וגיבוי במקום לבחור לפי גודל המסך בלבד.",
+        "primary_video_ids": [
+          "yt-OiOgLX5AwLQ",
+          "yt-0Oa8Hc9AG4c"
+        ],
+        "alternative_video_ids": [
+          "yt-hDX4TBsPKLU"
+        ],
+        "equipment_he": [
+          "טלפון או GPS טעון",
+          "מקור כוח וקיבוע המתאימים למכשיר",
+          "קובץ GPX ומפת גיבוי לבדיקה"
+        ],
+        "risk_level": "low",
+        "warning_he": "את ההתקנה, ההקלדה ושינויי המסלול מבצעים בעמידה בלבד; בזמן רכיבה הקשב נשאר בדרך ובתוואי.",
+        "goal_en": "Choose a phone or dedicated GPS",
+        "explanation_en": "Compare durability, glove use, screen readability, cost, weather exposure and backup rather than choosing by screen size alone.",
+        "equipment_en": [
+          "A charged phone or GPS",
+          "Power and mounting appropriate to the device",
+          "A GPX file and backup map for testing"
+        ],
+        "warning_en": "Install, type and change routes only while stopped; while riding, keep attention on the road and terrain."
+      },
+      {
+        "order": 3,
+        "goal_he": "מכינים מכשיר, כוח וקיבוע",
+        "explanation_he": "בודקים מראש אספקת חשמל, קיבוע, גשם, כפפות וקריאות; טלפון אישי נשאר גיבוי אם משתמשים במכשיר ניווט נפרד.",
+        "primary_video_ids": [
+          "yt-hDX4TBsPKLU",
+          "yt-0Oa8Hc9AG4c"
+        ],
+        "alternative_video_ids": [
+          "yt-OiOgLX5AwLQ"
+        ],
+        "equipment_he": [
+          "טלפון או GPS טעון",
+          "מקור כוח וקיבוע המתאימים למכשיר",
+          "קובץ GPX ומפת גיבוי לבדיקה"
+        ],
+        "risk_level": "low",
+        "warning_he": "את ההתקנה, ההקלדה ושינויי המסלול מבצעים בעמידה בלבד; בזמן רכיבה הקשב נשאר בדרך ובתוואי.",
+        "goal_en": "Prepare the device, power and mounting",
+        "explanation_en": "Check power, mounting, rain, gloves and readability in advance; keep the personal phone as backup when using a separate navigation device.",
+        "equipment_en": [
+          "A charged phone or GPS",
+          "Power and mounting appropriate to the device",
+          "A GPX file and backup map for testing"
+        ],
+        "warning_en": "Install, type and change routes only while stopped; while riding, keep attention on the road and terrain."
+      },
+      {
+        "order": 4,
+        "goal_he": "מבינים Route, Track ו־GPX",
+        "explanation_he": "לומדים להבדיל בין מסלול מחושב לבין עקבה קבועה, ומוודאים שהאפליקציה אינה מחשבת מחדש תוואי שונה.",
+        "primary_video_ids": [
+          "yt-N5DsF-4q98c",
+          "yt-UOI7yWHv07w"
+        ],
+        "alternative_video_ids": [
+          "yt-_4xaX5MT94Y"
+        ],
+        "equipment_he": [
+          "טלפון או GPS טעון",
+          "מקור כוח וקיבוע המתאימים למכשיר",
+          "קובץ GPX ומפת גיבוי לבדיקה"
+        ],
+        "risk_level": "low",
+        "warning_he": "את ההתקנה, ההקלדה ושינויי המסלול מבצעים בעמידה בלבד; בזמן רכיבה הקשב נשאר בדרך ובתוואי.",
+        "goal_en": "Understand Route, Track and GPX",
+        "explanation_en": "Distinguish a calculated route from a fixed track and verify that the app does not recalculate a different course.",
+        "equipment_en": [
+          "A charged phone or GPS",
+          "Power and mounting appropriate to the device",
+          "A GPX file and backup map for testing"
+        ],
+        "warning_en": "Install, type and change routes only while stopped; while riding, keep attention on the road and terrain."
+      },
+      {
+        "order": 5,
+        "goal_he": "יוצרים, עורכים, ממירים ומשתפים GPX",
+        "explanation_he": "עורכים נקודות ציון, מייצאים קובץ, בודקים אותו באפליקציה נוספת וממירים פורמט רק כאשר כלי היעד דורש זאת.",
+        "primary_video_ids": [
+          "yt-N5DsF-4q98c",
+          "yt-_4xaX5MT94Y"
+        ],
+        "alternative_video_ids": [
+          "yt-iHz2GH6L7AY"
+        ],
+        "equipment_he": [
+          "טלפון או GPS טעון",
+          "מקור כוח וקיבוע המתאימים למכשיר",
+          "קובץ GPX ומפת גיבוי לבדיקה"
+        ],
+        "risk_level": "low",
+        "warning_he": "את ההתקנה, ההקלדה ושינויי המסלול מבצעים בעמידה בלבד; בזמן רכיבה הקשב נשאר בדרך ובתוואי.",
+        "goal_en": "Create, edit, convert and share GPX",
+        "explanation_en": "Edit waypoints, export the file, check it in another app and convert format only when the target tool requires it.",
+        "equipment_en": [
+          "A charged phone or GPS",
+          "Power and mounting appropriate to the device",
+          "A GPX file and backup map for testing"
+        ],
+        "warning_en": "Install, type and change routes only while stopped; while riding, keep attention on the road and terrain."
+      },
+      {
+        "order": 6,
+        "goal_he": "מתקינים ומגדירים אפליקציית ניווט",
+        "explanation_he": "עוברים על התקנה ראשונית, בחירת פרופיל, ייבוא מסלול ואפשרויות ניווט לפני שמסתמכים על האפליקציה בטיול.",
+        "primary_video_ids": [
+          "yt-uJwRnbm74E4",
+          "yt-UOI7yWHv07w"
+        ],
+        "alternative_video_ids": [
+          "yt-hDX4TBsPKLU"
+        ],
+        "equipment_he": [
+          "טלפון או GPS טעון",
+          "מקור כוח וקיבוע המתאימים למכשיר",
+          "קובץ GPX ומפת גיבוי לבדיקה"
+        ],
+        "risk_level": "low",
+        "warning_he": "את ההתקנה, ההקלדה ושינויי המסלול מבצעים בעמידה בלבד; בזמן רכיבה הקשב נשאר בדרך ובתוואי.",
+        "goal_en": "Install and configure a navigation app",
+        "explanation_en": "Complete initial installation, profile selection, route import and navigation settings before relying on the app during a trip.",
+        "equipment_en": [
+          "A charged phone or GPS",
+          "Power and mounting appropriate to the device",
+          "A GPX file and backup map for testing"
+        ],
+        "warning_en": "Install, type and change routes only while stopped; while riding, keep attention on the road and terrain."
+      },
+      {
+        "order": 7,
+        "goal_he": "מורידים מפות ובודקים עבודה לא מקוונת",
+        "explanation_he": "מורידים מראש מפות ונתוני עניין, פותחים את ה־GPX ומבצעים בדיקת שולחן בלי קליטה לפני היציאה.",
+        "primary_video_ids": [
+          "yt-UOI7yWHv07w",
+          "yt-hDX4TBsPKLU"
+        ],
+        "alternative_video_ids": [
+          "yt-lcauMhznleg"
+        ],
+        "equipment_he": [
+          "טלפון או GPS טעון",
+          "מקור כוח וקיבוע המתאימים למכשיר",
+          "קובץ GPX ומפת גיבוי לבדיקה"
+        ],
+        "risk_level": "low",
+        "warning_he": "את ההתקנה, ההקלדה ושינויי המסלול מבצעים בעמידה בלבד; בזמן רכיבה הקשב נשאר בדרך ובתוואי.",
+        "goal_en": "Download maps and test offline use",
+        "explanation_en": "Download maps and points of interest, open the GPX and perform a stationary no-signal test before departure.",
+        "equipment_en": [
+          "A charged phone or GPS",
+          "Power and mounting appropriate to the device",
+          "A GPX file and backup map for testing"
+        ],
+        "warning_en": "Install, type and change routes only while stopped; while riding, keep attention on the road and terrain."
+      },
+      {
+        "order": 8,
+        "goal_he": "בונים גיבוי ומשתפים עם הקבוצה",
+        "explanation_he": "שומרים עותק נוסף של המסלול, משתפים נקודות מפגש ומוודאים שהניווט נשאר אפשרי גם אם המכשיר הראשי או הקליטה נכשלים.",
+        "primary_video_ids": [
+          "yt-OiOgLX5AwLQ",
+          "yt-lcauMhznleg"
+        ],
+        "alternative_video_ids": [
+          "yt-N5DsF-4q98c"
+        ],
+        "equipment_he": [
+          "טלפון או GPS טעון",
+          "מקור כוח וקיבוע המתאימים למכשיר",
+          "קובץ GPX ומפת גיבוי לבדיקה"
+        ],
+        "risk_level": "low",
+        "warning_he": "את ההתקנה, ההקלדה ושינויי המסלול מבצעים בעמידה בלבד; בזמן רכיבה הקשב נשאר בדרך ובתוואי.",
+        "goal_en": "Build a backup and share with the group",
+        "explanation_en": "Keep another route copy, share meeting points and verify that navigation remains possible if the primary device or reception fails.",
+        "equipment_en": [
+          "A charged phone or GPS",
+          "Power and mounting appropriate to the device",
+          "A GPX file and backup map for testing"
+        ],
+        "warning_en": "Install, type and change routes only while stopped; while riding, keep attention on the road and terrain."
+      }
+    ],
+    "name_en": "Navigation and GPX for riders",
+    "description_en": "An eight-step practical path covering planning, phone versus GPS, power and mounting, GPX, app setup, offline maps and backup."
+  },
+  {
+    "id": "group-ride-safety",
+    "name_he": "רכיבה בטוחה בקבוצה",
+    "description_he": "תפקידים, מרווח, קצב, עקיפה, עצירה ותגובה לאירוע.",
+    "skill_level": "beginner",
+    "steps": [
+      {
+        "order": 1,
+        "goal_he": "עושים תדריך קצר",
+        "explanation_he": "מגדירים מסלול, קצב, מוביל, מאסף וכללי עצירה.",
+        "primary_video_ids": [
+          "yt-wPQIXpF0bss",
+          "yt-evc423OwTpY"
+        ],
+        "alternative_video_ids": [
+          "yt-HiOGAYOXN8U",
+          "yt-bAY-2OdpIus"
+        ],
+        "equipment_he": [
+          "ציוד מיגון מלא",
+          "טלפון טעון או דף תכנון",
+          "מים"
+        ],
+        "risk_level": "low",
+        "warning_he": "כל רוכב מצהיר מראש על מגבלה או צורך מיוחד.",
+        "goal_en": "Study group riding",
+        "explanation_en": "Watch the selected sources, note the key decisions and practise only the parts that match your present skill level.",
+        "equipment_en": [
+          "Full protective riding gear",
+          "A safe practice area",
+          "The equipment specified by the selected source"
+        ],
+        "warning_en": "Stop and seek qualified instruction when the technique, terrain or risk exceeds your current ability."
+      },
+      {
+        "order": 2,
+        "goal_he": "שומרים מבנה גמיש",
+        "explanation_he": "מתאימים דירוג או טור לתנאי הדרך.",
+        "primary_video_ids": [
+          "yt-wPQIXpF0bss",
+          "yt-evc423OwTpY"
+        ],
+        "alternative_video_ids": [
+          "yt-HiOGAYOXN8U",
+          "yt-bAY-2OdpIus"
+        ],
+        "equipment_he": [
+          "ציוד מיגון מלא",
+          "טלפון טעון או דף תכנון",
+          "מים"
+        ],
+        "risk_level": "low",
+        "warning_he": "מבנה הקבוצה אינו גובר על קו בטוח.",
+        "goal_en": "Study group riding",
+        "explanation_en": "Watch the selected sources, note the key decisions and practise only the parts that match your present skill level.",
+        "equipment_en": [
+          "Full protective riding gear",
+          "A safe practice area",
+          "The equipment specified by the selected source"
+        ],
+        "warning_en": "Stop and seek qualified instruction when the technique, terrain or risk exceeds your current ability."
+      },
+      {
+        "order": 3,
+        "goal_he": "מנהלים מרווח",
+        "explanation_he": "נמנעים מאפקט אקורדיון ומבלימות פתע.",
+        "primary_video_ids": [
+          "yt-zVxVAUB8n78",
+          "yt-uvPpdzE1ZZ0"
+        ],
+        "alternative_video_ids": [
+          "yt-l_vLv-Fds5g",
+          "yt-kYZQaPo2R7Q"
+        ],
+        "equipment_he": [
+          "ציוד מיגון מלא",
+          "טלפון טעון או דף תכנון",
+          "מים"
+        ],
+        "risk_level": "low",
+        "warning_he": "אין להצמד לרוכב שלפנים.",
+        "goal_en": "Study road strategy",
+        "explanation_en": "Watch the selected sources, note the key decisions and practise only the parts that match your present skill level.",
+        "equipment_en": [
+          "Full protective riding gear",
+          "A safe practice area",
+          "The equipment specified by the selected source"
+        ],
+        "warning_en": "Stop and seek qualified instruction when the technique, terrain or risk exceeds your current ability."
+      },
+      {
+        "order": 4,
+        "goal_he": "מתאימים קצב לחלש ביותר",
+        "explanation_he": "עוצרים בנקודות מוסכמות ולא בצמתים מסוכנים.",
+        "primary_video_ids": [
+          "yt-o586btpMUfY",
+          "yt-5d96LXhQPxA"
+        ],
+        "alternative_video_ids": [
+          "yt-uXkKS8z0nSI",
+          "yt-n8T8nWXt_Nw"
+        ],
+        "equipment_he": [
+          "ציוד מיגון מלא",
+          "טלפון טעון או דף תכנון",
+          "מים"
+        ],
+        "risk_level": "low",
+        "warning_he": "אף רוכב אינו צריך לרדוף אחרי הקבוצה.",
+        "goal_en": "Study trip preparation and riding courses",
+        "explanation_en": "Watch the selected sources, note the key decisions and practise only the parts that match your present skill level.",
+        "equipment_en": [
+          "Full protective riding gear",
+          "A safe practice area",
+          "The equipment specified by the selected source"
+        ],
+        "warning_en": "Stop and seek qualified instruction when the technique, terrain or risk exceeds your current ability."
+      },
+      {
+        "order": 5,
+        "goal_he": "עוקפים נכון",
+        "explanation_he": "עוקפים אחד־אחד ורק כשכל רוכב רואה שהדרך פנויה.",
+        "primary_video_ids": [
+          "yt-Z4z0mCP8UPk",
+          "yt-vyzJUx4AJDo"
+        ],
+        "alternative_video_ids": [
+          "yt-51gsYMB2beQ",
+          "yt-bYIzeyCubcw"
+        ],
+        "equipment_he": [
+          "ציוד מיגון מלא",
+          "טלפון טעון או דף תכנון",
+          "מים"
+        ],
+        "risk_level": "medium",
+        "warning_he": "העקיפה כפופה לחוק ולראות מלאה.",
+        "goal_en": "Study road strategy",
+        "explanation_en": "Watch the selected sources, note the key decisions and practise only the parts that match your present skill level.",
+        "equipment_en": [
+          "Full protective riding gear",
+          "A safe practice area",
+          "The equipment specified by the selected source"
+        ],
+        "warning_en": "Stop and seek qualified instruction when the technique, terrain or risk exceeds your current ability."
+      },
+      {
+        "order": 6,
+        "goal_he": "מטפלים בפיצול",
+        "explanation_he": "המאסף נשאר עם רוכב תקוע והקבוצה מקבלת הודעה.",
+        "primary_video_ids": [
+          "yt-wPQIXpF0bss",
+          "yt-evc423OwTpY"
+        ],
+        "alternative_video_ids": [
+          "yt-HiOGAYOXN8U",
+          "yt-bAY-2OdpIus"
+        ],
+        "equipment_he": [
+          "ציוד מיגון מלא",
+          "טלפון טעון או דף תכנון",
+          "מים"
+        ],
+        "risk_level": "low",
+        "warning_he": "לא מבצעים פרסה פתאומית כדי לחפש קבוצה.",
+        "goal_en": "Study group riding",
+        "explanation_en": "Watch the selected sources, note the key decisions and practise only the parts that match your present skill level.",
+        "equipment_en": [
+          "Full protective riding gear",
+          "A safe practice area",
+          "The equipment specified by the selected source"
+        ],
+        "warning_en": "Stop and seek qualified instruction when the technique, terrain or risk exceeds your current ability."
+      },
+      {
+        "order": 7,
+        "goal_he": "מגיבים לנפילה או תקלה",
+        "explanation_he": "מאבטחים את הזירה לפני טיפול באופנוע.",
+        "primary_video_ids": [
+          "yt-zMuVNBk9Ogw",
+          "yt-ZGS_MoW7yps"
+        ],
+        "alternative_video_ids": [
+          "yt-SXJZ_kYGLRY",
+          "yt-FQp-0v2ddQ0"
+        ],
+        "equipment_he": [
+          "ציוד מיגון מלא",
+          "טלפון טעון או דף תכנון",
+          "מים"
+        ],
+        "risk_level": "medium",
+        "warning_he": "בטיחות בני אדם ותנועה קודמת לציוד.",
+        "goal_en": "Study recovery",
+        "explanation_en": "Watch the selected sources, note the key decisions and practise only the parts that match your present skill level.",
+        "equipment_en": [
+          "Full protective riding gear",
+          "A safe practice area",
+          "The equipment specified by the selected source"
+        ],
+        "warning_en": "Stop and seek qualified instruction when the technique, terrain or risk exceeds your current ability."
+      },
+      {
+        "order": 8,
+        "goal_he": "מבצעים תחקיר קצר",
+        "explanation_he": "משתפים לקחים בלי האשמה.",
+        "primary_video_ids": [
+          "yt-ZPnjRbMZ_pI",
+          "yt-WFNb6L6WBko"
+        ],
+        "alternative_video_ids": [
+          "yt-x94PGgYKHQ0",
+          "yt-mg8s-aNQFts"
+        ],
+        "equipment_he": [
+          "ציוד מיגון מלא",
+          "טלפון טעון או דף תכנון",
+          "מים"
+        ],
+        "risk_level": "low",
+        "warning_he": "מטרת התחקיר היא שיפור ולא תחרות.",
+        "goal_en": "Study trip preparation and road strategy",
+        "explanation_en": "Watch the selected sources, note the key decisions and practise only the parts that match your present skill level.",
+        "equipment_en": [
+          "Full protective riding gear",
+          "A safe practice area",
+          "The equipment specified by the selected source"
+        ],
+        "warning_en": "Stop and seek qualified instruction when the technique, terrain or risk exceeds your current ability."
+      }
+    ],
+    "name_en": "Safe group riding",
+    "description_en": "Roles, spacing, pace, overtaking, stops and incident response."
+  },
+  {
+    "id": "mindful-confident-rider",
+    "name_he": "קשב, ביטחון והרגלים טובים",
+    "description_he": "מסלול משלים שמחבר קורסים, תרגול, מודעות עצמית והחלטות אחראיות.",
+    "skill_level": "beginner",
+    "steps": [
+      {
+        "order": 1,
+        "goal_he": "מכירים את מגבלת הווידאו",
+        "explanation_he": "מבינים שצפייה אינה יוצרת מיומנות גופנית.",
+        "primary_video_ids": [
+          "yt-_gFFFePEj_s",
+          "yt-U8Lsg6VYDLs"
+        ],
+        "alternative_video_ids": [
+          "yt-7As5eL1WE0A",
+          "yt-5d96LXhQPxA"
+        ],
+        "equipment_he": [
+          "ציוד מיגון מלא",
+          "טלפון טעון או דף תכנון",
+          "מים"
+        ],
+        "risk_level": "low",
+        "warning_he": "מיומנויות מתקדמות לומדים עם מדריך מוסמך.",
+        "goal_en": "Study riding courses",
+        "explanation_en": "Watch the selected sources, note the key decisions and practise only the parts that match your present skill level.",
+        "equipment_en": [
+          "Full protective riding gear",
+          "A safe practice area",
+          "The equipment specified by the selected source"
+        ],
+        "warning_en": "Stop and seek qualified instruction when the technique, terrain or risk exceeds your current ability."
+      },
+      {
+        "order": 2,
+        "goal_he": "מזהים עומס קשב",
+        "explanation_he": "לומדים כיצד מבט, פחד וריבוי משימות משפיעים על החלטה.",
+        "primary_video_ids": [
+          "yt-HiOGAYOXN8U",
+          "yt-o586btpMUfY"
+        ],
+        "alternative_video_ids": [
+          "yt-uXkKS8z0nSI",
+          "yt-n8T8nWXt_Nw"
+        ],
+        "equipment_he": [
+          "ציוד מיגון מלא",
+          "טלפון טעון או דף תכנון",
+          "מים"
+        ],
+        "risk_level": "low",
+        "warning_he": "עוצרים כשאיננו מסוגלים לסרוק את הסביבה באופן יציב.",
+        "goal_en": "Study mindful riding and trip preparation",
+        "explanation_en": "Watch the selected sources, note the key decisions and practise only the parts that match your present skill level.",
+        "equipment_en": [
+          "Full protective riding gear",
+          "A safe practice area",
+          "The equipment specified by the selected source"
+        ],
+        "warning_en": "Stop and seek qualified instruction when the technique, terrain or risk exceeds your current ability."
+      },
+      {
+        "order": 3,
+        "goal_he": "בונים הרגלי סריקה",
+        "explanation_he": "מתרגלים מבט רחוק, מראות ונתיב מילוט.",
+        "primary_video_ids": [
+          "yt-zVxVAUB8n78",
+          "yt-uvPpdzE1ZZ0"
+        ],
+        "alternative_video_ids": [
+          "yt-l_vLv-Fds5g",
+          "yt-kYZQaPo2R7Q"
+        ],
+        "equipment_he": [
+          "ציוד מיגון מלא",
+          "טלפון טעון או דף תכנון",
+          "מים"
+        ],
+        "risk_level": "low",
+        "warning_he": "התרגול נעשה בלי להסיר קשב מן הדרך.",
+        "goal_en": "Study road strategy",
+        "explanation_en": "Watch the selected sources, note the key decisions and practise only the parts that match your present skill level.",
+        "equipment_en": [
+          "Full protective riding gear",
+          "A safe practice area",
+          "The equipment specified by the selected source"
+        ],
+        "warning_en": "Stop and seek qualified instruction when the technique, terrain or risk exceeds your current ability."
+      },
+      {
+        "order": 4,
+        "goal_he": "מנהלים פחד בלי להילחם בו",
+        "explanation_he": "מורידים קצב ומפרקים משימה לצעדים.",
+        "primary_video_ids": [
+          "yt-ZPnjRbMZ_pI",
+          "yt-WFNb6L6WBko"
+        ],
+        "alternative_video_ids": [
+          "yt-x94PGgYKHQ0",
+          "yt-vyzJUx4AJDo"
+        ],
+        "equipment_he": [
+          "ציוד מיגון מלא",
+          "טלפון טעון או דף תכנון",
+          "מים"
+        ],
+        "risk_level": "low",
+        "warning_he": "לחץ חריג הוא סימן לעצור ולהעריך מחדש.",
+        "goal_en": "Study trip preparation and road strategy",
+        "explanation_en": "Watch the selected sources, note the key decisions and practise only the parts that match your present skill level.",
+        "equipment_en": [
+          "Full protective riding gear",
+          "A safe practice area",
+          "The equipment specified by the selected source"
+        ],
+        "warning_en": "Stop and seek qualified instruction when the technique, terrain or risk exceeds your current ability."
+      },
+      {
+        "order": 5,
+        "goal_he": "מתרגלים בסיס קבוע",
+        "explanation_he": "בוחרים תרגיל אחד וחוזרים אליו לאורך זמן.",
+        "primary_video_ids": [
+          "yt-uscjPZXNyMc",
+          "yt-oZiD8uxH0hQ"
+        ],
+        "alternative_video_ids": [
+          "yt-njzovd5FuZU",
+          "yt-nBhWbHKCkks"
+        ],
+        "equipment_he": [
+          "ציוד מיגון מלא",
+          "טלפון טעון או דף תכנון",
+          "מים"
+        ],
+        "risk_level": "low",
+        "warning_he": "לא מעלים מהירות כדי להרגיש התקדמות.",
+        "goal_en": "Study drills",
+        "explanation_en": "Watch the selected sources, note the key decisions and practise only the parts that match your present skill level.",
+        "equipment_en": [
+          "Full protective riding gear",
+          "A safe practice area",
+          "The equipment specified by the selected source"
+        ],
+        "warning_en": "Stop and seek qualified instruction when the technique, terrain or risk exceeds your current ability."
+      },
+      {
+        "order": 6,
+        "goal_he": "לומדים ממשוב מקצועי",
+        "explanation_he": "משלבים קורס, צילום ותרגול מודרך.",
+        "primary_video_ids": [
+          "yt-4g26zZNA7Tg",
+          "yt-yCJSSrJswjs"
+        ],
+        "alternative_video_ids": [
+          "yt-amaIWvH3dG0",
+          "yt-0Ho6mmYaMeg"
+        ],
+        "equipment_he": [
+          "ציוד מיגון מלא",
+          "טלפון טעון או דף תכנון",
+          "מים"
+        ],
+        "risk_level": "low",
+        "warning_he": "אין להסתמך על ביקורת עצמית בלבד בטכניקה בסיכון.",
+        "goal_en": "Study riding courses",
+        "explanation_en": "Watch the selected sources, note the key decisions and practise only the parts that match your present skill level.",
+        "equipment_en": [
+          "Full protective riding gear",
+          "A safe practice area",
+          "The equipment specified by the selected source"
+        ],
+        "warning_en": "Stop and seek qualified instruction when the technique, terrain or risk exceeds your current ability."
+      },
+      {
+        "order": 7,
+        "goal_he": "מזהים עייפות",
+        "explanation_he": "מבינים מתי קשב וביצוע מתחילים להידרדר.",
+        "primary_video_ids": [
+          "yt-PtRYyP96HHA",
+          "yt-GwXb1oEWeMY"
+        ],
+        "alternative_video_ids": [
+          "yt-2XP_qr9NNcc",
+          "yt-2HTa9iHvI6U"
+        ],
+        "equipment_he": [
+          "ציוד מיגון מלא",
+          "טלפון טעון או דף תכנון",
+          "מים"
+        ],
+        "risk_level": "low",
+        "warning_he": "עייפות אינה נפתרת באמצעות לחץ קבוצתי.",
+        "goal_en": "Study fatigue management",
+        "explanation_en": "Watch the selected sources, note the key decisions and practise only the parts that match your present skill level.",
+        "equipment_en": [
+          "Full protective riding gear",
+          "A safe practice area",
+          "The equipment specified by the selected source"
+        ],
+        "warning_en": "Stop and seek qualified instruction when the technique, terrain or risk exceeds your current ability."
+      },
+      {
+        "order": 8,
+        "goal_he": "מרחיבים ידע ומשתפים",
+        "explanation_he": "מתעדים תרגיל, מקור ולקח ומחזירים לקהילה.",
+        "primary_video_ids": [
+          "yt-mg8s-aNQFts",
+          "yt-evc423OwTpY"
+        ],
+        "alternative_video_ids": [
+          "yt-eTe7_ox-akQ",
+          "yt-XlwSz_axo3w"
+        ],
+        "equipment_he": [
+          "ציוד מיגון מלא",
+          "טלפון טעון או דף תכנון",
+          "מים"
+        ],
+        "risk_level": "low",
+        "warning_he": "מכבדים זכויות יוצרים ולא מציגים עצה אישית כהסמכה.",
+        "goal_en": "Study road strategy and group riding",
+        "explanation_en": "Watch the selected sources, note the key decisions and practise only the parts that match your present skill level.",
+        "equipment_en": [
+          "Full protective riding gear",
+          "A safe practice area",
+          "The equipment specified by the selected source"
+        ],
+        "warning_en": "Stop and seek qualified instruction when the technique, terrain or risk exceeds your current ability."
+      }
+    ],
+    "name_en": "Attention, confidence and good habits",
+    "description_en": "Courses, practice, self-awareness and responsible decisions."
+  },
+  {
+    "id": "road-control-lab",
+    "name_he": "מעבדת שליטה בכביש",
+    "name_en": "Road Control Lab",
+    "description_he": "ממצמד ושליטה איטית דרך בלימת חירום, הסטה ופניות.",
+    "description_en": "From clutch and low-speed control to emergency braking, swerving and cornering.",
+    "skill_level": "advanced_beginner",
+    "steps": [
+      {
+        "order": 1,
+        "goal_he": "לייצב אזור חיכוך",
+        "goal_en": "Stabilise the friction zone",
+        "explanation_he": "צפו במקורות לפי הסדר, רשמו שתי נקודות ליישום ותרגלו רק בסביבה מתאימה ובהדרגה.",
+        "explanation_en": "Watch the sources in sequence, note two practical points and practise only in a suitable environment, progressively.",
+        "primary_video_ids": [
+          "yt--KgE-9E46lk"
+        ],
+        "alternative_video_ids": [
+          "yt-k6mUJ309W3k"
+        ],
+        "equipment_he": [
+          "ציוד מיגון מלא",
+          "סביבה בטוחה המתאימה לשלב"
+        ],
+        "equipment_en": [
+          "Full protective gear",
+          "A safe environment appropriate to the step"
+        ],
+        "risk_level": "low",
+        "warning_he": "אין לעבור לשלב הבא לפני שהבסיס יציב; קורס והדרכה מעשית עדיפים על ניסוי עצמי.",
+        "warning_en": "Do not advance before the foundation is stable; professional instruction is preferable to self-experimentation."
+      },
+      {
+        "order": 2,
+        "goal_he": "לבנות שליטה איטית",
+        "goal_en": "Build low-speed control",
+        "explanation_he": "צפו במקורות לפי הסדר, רשמו שתי נקודות ליישום ותרגלו רק בסביבה מתאימה ובהדרגה.",
+        "explanation_en": "Watch the sources in sequence, note two practical points and practise only in a suitable environment, progressively.",
+        "primary_video_ids": [
+          "yt-W3RjWP34Tqg"
+        ],
+        "alternative_video_ids": [
+          "yt-7Ix1B9MjKOQ"
+        ],
+        "equipment_he": [
+          "ציוד מיגון מלא",
+          "סביבה בטוחה המתאימה לשלב"
+        ],
+        "equipment_en": [
+          "Full protective gear",
+          "A safe environment appropriate to the step"
+        ],
+        "risk_level": "low",
+        "warning_he": "אין לעבור לשלב הבא לפני שהבסיס יציב; קורס והדרכה מעשית עדיפים על ניסוי עצמי.",
+        "warning_en": "Do not advance before the foundation is stable; professional instruction is preferable to self-experimentation."
+      },
+      {
+        "order": 3,
+        "goal_he": "להבין היגוי הפוך",
+        "goal_en": "Understand countersteering",
+        "explanation_he": "צפו במקורות לפי הסדר, רשמו שתי נקודות ליישום ותרגלו רק בסביבה מתאימה ובהדרגה.",
+        "explanation_en": "Watch the sources in sequence, note two practical points and practise only in a suitable environment, progressively.",
+        "primary_video_ids": [
+          "yt-W4n81NgcRDg"
+        ],
+        "alternative_video_ids": [
+          "yt-bJkK-Z0eDq0"
+        ],
+        "equipment_he": [
+          "ציוד מיגון מלא",
+          "סביבה בטוחה המתאימה לשלב"
+        ],
+        "equipment_en": [
+          "Full protective gear",
+          "A safe environment appropriate to the step"
+        ],
+        "risk_level": "low",
+        "warning_he": "אין לעבור לשלב הבא לפני שהבסיס יציב; קורס והדרכה מעשית עדיפים על ניסוי עצמי.",
+        "warning_en": "Do not advance before the foundation is stable; professional instruction is preferable to self-experimentation."
+      },
+      {
+        "order": 4,
+        "goal_he": "לתרגל בלימת חירום",
+        "goal_en": "Practise emergency braking",
+        "explanation_he": "צפו במקורות לפי הסדר, רשמו שתי נקודות ליישום ותרגלו רק בסביבה מתאימה ובהדרגה.",
+        "explanation_en": "Watch the sources in sequence, note two practical points and practise only in a suitable environment, progressively.",
+        "primary_video_ids": [
+          "yt-MZt1jRLds_g",
+          "yt-rZjskcIm61U"
+        ],
+        "alternative_video_ids": [
+          "yt-bO88ooYOLhw"
+        ],
+        "equipment_he": [
+          "ציוד מיגון מלא",
+          "סביבה בטוחה המתאימה לשלב"
+        ],
+        "equipment_en": [
+          "Full protective gear",
+          "A safe environment appropriate to the step"
+        ],
+        "risk_level": "medium",
+        "warning_he": "אין לעבור לשלב הבא לפני שהבסיס יציב; קורס והדרכה מעשית עדיפים על ניסוי עצמי.",
+        "warning_en": "Do not advance before the foundation is stable; professional instruction is preferable to self-experimentation."
+      },
+      {
+        "order": 5,
+        "goal_he": "להפריד בלימה והסטה",
+        "goal_en": "Separate braking and swerving",
+        "explanation_he": "צפו במקורות לפי הסדר, רשמו שתי נקודות ליישום ותרגלו רק בסביבה מתאימה ובהדרגה.",
+        "explanation_en": "Watch the sources in sequence, note two practical points and practise only in a suitable environment, progressively.",
+        "primary_video_ids": [
+          "yt-bO88ooYOLhw"
+        ],
+        "alternative_video_ids": [
+          "yt-UILe5YDA4B8"
+        ],
+        "equipment_he": [
+          "ציוד מיגון מלא",
+          "סביבה בטוחה המתאימה לשלב"
+        ],
+        "equipment_en": [
+          "Full protective gear",
+          "A safe environment appropriate to the step"
+        ],
+        "risk_level": "medium",
+        "warning_he": "אין לעבור לשלב הבא לפני שהבסיס יציב; קורס והדרכה מעשית עדיפים על ניסוי עצמי.",
+        "warning_en": "Do not advance before the foundation is stable; professional instruction is preferable to self-experimentation."
+      },
+      {
+        "order": 6,
+        "goal_he": "לנהל כניסה לפנייה",
+        "goal_en": "Manage corner entry",
+        "explanation_he": "צפו במקורות לפי הסדר, רשמו שתי נקודות ליישום ותרגלו רק בסביבה מתאימה ובהדרגה.",
+        "explanation_en": "Watch the sources in sequence, note two practical points and practise only in a suitable environment, progressively.",
+        "primary_video_ids": [
+          "yt-gPE67XqGsV4",
+          "yt-FXZLg82hwnU"
+        ],
+        "alternative_video_ids": [
+          "yt-bJkK-Z0eDq0"
+        ],
+        "equipment_he": [
+          "ציוד מיגון מלא",
+          "סביבה בטוחה המתאימה לשלב"
+        ],
+        "equipment_en": [
+          "Full protective gear",
+          "A safe environment appropriate to the step"
+        ],
+        "risk_level": "medium",
+        "warning_he": "אין לעבור לשלב הבא לפני שהבסיס יציב; קורס והדרכה מעשית עדיפים על ניסוי עצמי.",
+        "warning_en": "Do not advance before the foundation is stable; professional instruction is preferable to self-experimentation."
+      },
+      {
+        "order": 7,
+        "goal_he": "לנהל אחיזה בכביש רטוב",
+        "goal_en": "Manage grip on wet roads",
+        "explanation_he": "לומדים לזהות שינויי אחיזה, להחליק פעולות ולהגדיל מרווחים — ואת התרגול מבצעים רק בתנאים מבוקרים.",
+        "explanation_en": "Learn to recognise grip changes, smooth inputs and increase margins; practise only in controlled conditions.",
+        "primary_video_ids": [
+          "yt-wu01iLFdTE0",
+          "yt-Qx6G0gkQ048"
+        ],
+        "alternative_video_ids": [
+          "yt-ko70RgiF5OQ"
+        ],
+        "equipment_he": [
+          "ציוד מיגון מלא",
+          "סביבה בטוחה המתאימה לשלב"
+        ],
+        "equipment_en": [
+          "Full protective gear",
+          "A safe environment appropriate to the step"
+        ],
+        "risk_level": "medium",
+        "warning_he": "אין לעבור לשלב הבא לפני שהבסיס יציב; קורס והדרכה מעשית עדיפים על ניסוי עצמי.",
+        "warning_en": "Do not advance before the foundation is stable; professional instruction is preferable to self-experimentation."
+      },
+      {
+        "order": 8,
+        "goal_he": "לבנות אסטרטגיית זיהוי סכנות",
+        "goal_en": "Build a hazard-perception strategy",
+        "explanation_he": "מחברים מיקום נתיב, צמתים, ראייה קדימה ותכנון מוצא לפני שמגבירים קצב.",
+        "explanation_en": "Connect lane position, intersections, forward vision and escape planning before increasing pace.",
+        "primary_video_ids": [
+          "yt-NN1twMtJrlA",
+          "yt-PLH1U7SnnZA"
+        ],
+        "alternative_video_ids": [
+          "yt-l_vLv-Fds5g"
+        ],
+        "equipment_he": [
+          "ציוד מיגון מלא",
+          "סביבה בטוחה המתאימה לשלב"
+        ],
+        "equipment_en": [
+          "Full protective gear",
+          "A safe environment appropriate to the step"
+        ],
+        "risk_level": "medium",
+        "warning_he": "אין לעבור לשלב הבא לפני שהבסיס יציב; קורס והדרכה מעשית עדיפים על ניסוי עצמי.",
+        "warning_en": "Do not advance before the foundation is stable; professional instruction is preferable to self-experimentation."
+      }
+    ]
+  },
+  {
+    "id": "offroad-surface-progression",
+    "name_he": "התקדמות בתוואי שטח",
+    "name_en": "Off-road Surface Progression",
+    "description_he": "עמידה, חצץ, חול, חריצים, עליות, ירידות ומכשולים.",
+    "description_en": "Standing, gravel, sand, ruts, hills, descents and obstacles.",
+    "skill_level": "intermediate",
+    "steps": [
+      {
+        "order": 1,
+        "goal_he": "לבסס תנוחת עמידה",
+        "goal_en": "Establish standing posture",
+        "explanation_he": "צפו במקורות לפי הסדר, רשמו שתי נקודות ליישום ותרגלו רק בסביבה מתאימה ובהדרגה.",
+        "explanation_en": "Watch the sources in sequence, note two practical points and practise only in a suitable environment, progressively.",
+        "primary_video_ids": [
+          "yt-7Ep1UqOlgss"
+        ],
+        "alternative_video_ids": [
+          "yt-5CfJENGn07s"
+        ],
+        "equipment_he": [
+          "ציוד מיגון מלא",
+          "סביבה בטוחה המתאימה לשלב"
+        ],
+        "equipment_en": [
+          "Full protective gear",
+          "A safe environment appropriate to the step"
+        ],
+        "risk_level": "low",
+        "warning_he": "אין לעבור לשלב הבא לפני שהבסיס יציב; קורס והדרכה מעשית עדיפים על ניסוי עצמי.",
+        "warning_en": "Do not advance before the foundation is stable; professional instruction is preferable to self-experimentation."
+      },
+      {
+        "order": 2,
+        "goal_he": "לרכוב בחצץ",
+        "goal_en": "Ride gravel",
+        "explanation_he": "צפו במקורות לפי הסדר, רשמו שתי נקודות ליישום ותרגלו רק בסביבה מתאימה ובהדרגה.",
+        "explanation_en": "Watch the sources in sequence, note two practical points and practise only in a suitable environment, progressively.",
+        "primary_video_ids": [
+          "yt-vVBdOqqKt-A"
+        ],
+        "alternative_video_ids": [
+          "yt-3QNTu2pzRfg"
+        ],
+        "equipment_he": [
+          "ציוד מיגון מלא",
+          "סביבה בטוחה המתאימה לשלב"
+        ],
+        "equipment_en": [
+          "Full protective gear",
+          "A safe environment appropriate to the step"
+        ],
+        "risk_level": "medium",
+        "warning_he": "אין לעבור לשלב הבא לפני שהבסיס יציב; קורס והדרכה מעשית עדיפים על ניסוי עצמי.",
+        "warning_en": "Do not advance before the foundation is stable; professional instruction is preferable to self-experimentation."
+      },
+      {
+        "order": 3,
+        "goal_he": "להכיר חול",
+        "goal_en": "Learn sand fundamentals",
+        "explanation_he": "צפו במקורות לפי הסדר, רשמו שתי נקודות ליישום ותרגלו רק בסביבה מתאימה ובהדרגה.",
+        "explanation_en": "Watch the sources in sequence, note two practical points and practise only in a suitable environment, progressively.",
+        "primary_video_ids": [
+          "yt-o9nOs9NVnKE"
+        ],
+        "alternative_video_ids": [
+          "yt-TDCajc6HYRE"
+        ],
+        "equipment_he": [
+          "ציוד מיגון מלא",
+          "סביבה בטוחה המתאימה לשלב"
+        ],
+        "equipment_en": [
+          "Full protective gear",
+          "A safe environment appropriate to the step"
+        ],
+        "risk_level": "medium",
+        "warning_he": "אין לעבור לשלב הבא לפני שהבסיס יציב; קורס והדרכה מעשית עדיפים על ניסוי עצמי.",
+        "warning_en": "Do not advance before the foundation is stable; professional instruction is preferable to self-experimentation."
+      },
+      {
+        "order": 4,
+        "goal_he": "לשמור קו בחריצים",
+        "goal_en": "Hold a rut line",
+        "explanation_he": "צפו במקורות לפי הסדר, רשמו שתי נקודות ליישום ותרגלו רק בסביבה מתאימה ובהדרגה.",
+        "explanation_en": "Watch the sources in sequence, note two practical points and practise only in a suitable environment, progressively.",
+        "primary_video_ids": [
+          "yt-UbemLevjCHw"
+        ],
+        "alternative_video_ids": [
+          "yt-_yZRZN_X9sQ"
+        ],
+        "equipment_he": [
+          "ציוד מיגון מלא",
+          "סביבה בטוחה המתאימה לשלב"
+        ],
+        "equipment_en": [
+          "Full protective gear",
+          "A safe environment appropriate to the step"
+        ],
+        "risk_level": "medium",
+        "warning_he": "אין לעבור לשלב הבא לפני שהבסיס יציב; קורס והדרכה מעשית עדיפים על ניסוי עצמי.",
+        "warning_en": "Do not advance before the foundation is stable; professional instruction is preferable to self-experimentation."
+      },
+      {
+        "order": 5,
+        "goal_he": "להכין עלייה וירידה",
+        "goal_en": "Prepare climbs and descents",
+        "explanation_he": "צפו במקורות לפי הסדר, רשמו שתי נקודות ליישום ותרגלו רק בסביבה מתאימה ובהדרגה.",
+        "explanation_en": "Watch the sources in sequence, note two practical points and practise only in a suitable environment, progressively.",
+        "primary_video_ids": [
+          "yt-mi6-lTRzFkI"
+        ],
+        "alternative_video_ids": [
+          "yt--rQwIXp4Zu8"
+        ],
+        "equipment_he": [
+          "ציוד מיגון מלא",
+          "סביבה בטוחה המתאימה לשלב"
+        ],
+        "equipment_en": [
+          "Full protective gear",
+          "A safe environment appropriate to the step"
+        ],
+        "risk_level": "high",
+        "warning_he": "אין לעבור לשלב הבא לפני שהבסיס יציב; קורס והדרכה מעשית עדיפים על ניסוי עצמי.",
+        "warning_en": "Do not advance before the foundation is stable; professional instruction is preferable to self-experimentation."
+      },
+      {
+        "order": 6,
+        "goal_he": "לגשת למכשול",
+        "goal_en": "Approach obstacles",
+        "explanation_he": "צפו במקורות לפי הסדר, רשמו שתי נקודות ליישום ותרגלו רק בסביבה מתאימה ובהדרגה.",
+        "explanation_en": "Watch the sources in sequence, note two practical points and practise only in a suitable environment, progressively.",
+        "primary_video_ids": [
+          "yt-6v3_XhGVQJ8"
+        ],
+        "alternative_video_ids": [
+          "yt-FUoXWECH40A"
+        ],
+        "equipment_he": [
+          "ציוד מיגון מלא",
+          "סביבה בטוחה המתאימה לשלב"
+        ],
+        "equipment_en": [
+          "Full protective gear",
+          "A safe environment appropriate to the step"
+        ],
+        "risk_level": "high",
+        "warning_he": "אין לעבור לשלב הבא לפני שהבסיס יציב; קורס והדרכה מעשית עדיפים על ניסוי עצמי.",
+        "warning_en": "Do not advance before the foundation is stable; professional instruction is preferable to self-experimentation."
+      },
+      {
+        "order": 7,
+        "goal_he": "לנהל בוץ וקרקע רטובה",
+        "goal_en": "Manage mud and wet terrain",
+        "explanation_he": "עוברים בהדרגה מתוואי יבש לאחיזה משתנה, עם קצב נמוך, מרחק עצירה ותוכנית נסיגה.",
+        "explanation_en": "Progress from dry terrain to changing grip with low speed, stopping distance and a retreat plan.",
+        "primary_video_ids": [
+          "yt-wsokPULhmv0",
+          "yt-MqIxMyAUURM"
+        ],
+        "alternative_video_ids": [
+          "yt-rlcGpTJl16U"
+        ],
+        "equipment_he": [
+          "ציוד מיגון מלא",
+          "סביבה בטוחה המתאימה לשלב"
+        ],
+        "equipment_en": [
+          "Full protective gear",
+          "A safe environment appropriate to the step"
+        ],
+        "risk_level": "high",
+        "warning_he": "אין לבצע את השלב לבד או ללא הערכת תנאים; הדרכה מקצועית ותוכנית יציאה קודמות לתרגול.",
+        "warning_en": "Do not attempt this alone or without assessing conditions; professional instruction and an exit plan come first."
+      },
+      {
+        "order": 8,
+        "goal_he": "להעריך מעבר מים",
+        "goal_en": "Assess a water crossing",
+        "explanation_he": "לומדים לבדוק עומק, זרימה, קרקע, כניסה ויציאה, ומוותרים כשאין ודאות מספקת.",
+        "explanation_en": "Assess depth, flow, bed, entry and exit, and turn back when uncertainty remains.",
+        "primary_video_ids": [
+          "yt-WkeMWUDkqgc",
+          "yt-VKCEzq_fUNg"
+        ],
+        "alternative_video_ids": [
+          "yt-n5d2muv5OtE"
+        ],
+        "equipment_he": [
+          "ציוד מיגון מלא",
+          "סביבה בטוחה המתאימה לשלב"
+        ],
+        "equipment_en": [
+          "Full protective gear",
+          "A safe environment appropriate to the step"
+        ],
+        "risk_level": "high",
+        "warning_he": "אין לבצע את השלב לבד או ללא הערכת תנאים; הדרכה מקצועית ותוכנית יציאה קודמות לתרגול.",
+        "warning_en": "Do not attempt this alone or without assessing conditions; professional instruction and an exit plan come first."
+      }
+    ]
+  },
+  {
+    "id": "adventure-setup-pretrip",
+    "name_he": "הכנת אופנוע אדוונצ׳ר",
+    "name_en": "Adventure Bike Setup and Pre-trip",
+    "description_he": "ארגונומיה, צמיגים, מתלים, שרשרת ובדיקה לפני יציאה.",
+    "description_en": "Ergonomics, tyres, suspension, chain and pre-ride checks.",
+    "skill_level": "beginner",
+    "steps": [
+      {
+        "order": 1,
+        "goal_he": "לכוון נקודות מגע",
+        "goal_en": "Set up contact points",
+        "explanation_he": "צפו במקורות לפי הסדר, רשמו שתי נקודות ליישום ותרגלו רק בסביבה מתאימה ובהדרגה.",
+        "explanation_en": "Watch the sources in sequence, note two practical points and practise only in a suitable environment, progressively.",
+        "primary_video_ids": [
+          "yt-ysyoSLg8gqE",
+          "yt-_kUzaGCzuvQ"
+        ],
+        "alternative_video_ids": [
+          "yt-5S4fHLYnjgM"
+        ],
+        "equipment_he": [
+          "ציוד מיגון מלא",
+          "סביבה בטוחה המתאימה לשלב"
+        ],
+        "equipment_en": [
+          "Full protective gear",
+          "A safe environment appropriate to the step"
+        ],
+        "risk_level": "low",
+        "warning_he": "אין לעבור לשלב הבא לפני שהבסיס יציב; קורס והדרכה מעשית עדיפים על ניסוי עצמי.",
+        "warning_en": "Do not advance before the foundation is stable; professional instruction is preferable to self-experimentation."
+      },
+      {
+        "order": 2,
+        "goal_he": "להבין לחץ אוויר",
+        "goal_en": "Understand tyre pressure",
+        "explanation_he": "צפו במקורות לפי הסדר, רשמו שתי נקודות ליישום ותרגלו רק בסביבה מתאימה ובהדרגה.",
+        "explanation_en": "Watch the sources in sequence, note two practical points and practise only in a suitable environment, progressively.",
+        "primary_video_ids": [
+          "yt-S371SeT-b4M"
+        ],
+        "alternative_video_ids": [
+          "yt-BHZ2mSbXkbw"
+        ],
+        "equipment_he": [
+          "ציוד מיגון מלא",
+          "סביבה בטוחה המתאימה לשלב"
+        ],
+        "equipment_en": [
+          "Full protective gear",
+          "A safe environment appropriate to the step"
+        ],
+        "risk_level": "low",
+        "warning_he": "אין לעבור לשלב הבא לפני שהבסיס יציב; קורס והדרכה מעשית עדיפים על ניסוי עצמי.",
+        "warning_en": "Do not advance before the foundation is stable; professional instruction is preferable to self-experimentation."
+      },
+      {
+        "order": 3,
+        "goal_he": "למדוד מתלים",
+        "goal_en": "Measure suspension baseline",
+        "explanation_he": "צפו במקורות לפי הסדר, רשמו שתי נקודות ליישום ותרגלו רק בסביבה מתאימה ובהדרגה.",
+        "explanation_en": "Watch the sources in sequence, note two practical points and practise only in a suitable environment, progressively.",
+        "primary_video_ids": [
+          "yt-3tSkUdUYaA4"
+        ],
+        "alternative_video_ids": [
+          "yt-DW0GVIvub44"
+        ],
+        "equipment_he": [
+          "ציוד מיגון מלא",
+          "סביבה בטוחה המתאימה לשלב"
+        ],
+        "equipment_en": [
+          "Full protective gear",
+          "A safe environment appropriate to the step"
+        ],
+        "risk_level": "low",
+        "warning_he": "אין לעבור לשלב הבא לפני שהבסיס יציב; קורס והדרכה מעשית עדיפים על ניסוי עצמי.",
+        "warning_en": "Do not advance before the foundation is stable; professional instruction is preferable to self-experimentation."
+      },
+      {
+        "order": 4,
+        "goal_he": "לבדוק שרשרת",
+        "goal_en": "Inspect the chain",
+        "explanation_he": "צפו במקורות לפי הסדר, רשמו שתי נקודות ליישום ותרגלו רק בסביבה מתאימה ובהדרגה.",
+        "explanation_en": "Watch the sources in sequence, note two practical points and practise only in a suitable environment, progressively.",
+        "primary_video_ids": [
+          "yt-dwsml9_0Ol8",
+          "yt-RA6OPG_cFms"
+        ],
+        "alternative_video_ids": [
+          "yt-_4KinOAw74Q"
+        ],
+        "equipment_he": [
+          "ציוד מיגון מלא",
+          "סביבה בטוחה המתאימה לשלב"
+        ],
+        "equipment_en": [
+          "Full protective gear",
+          "A safe environment appropriate to the step"
+        ],
+        "risk_level": "low",
+        "warning_he": "אין לעבור לשלב הבא לפני שהבסיס יציב; קורס והדרכה מעשית עדיפים על ניסוי עצמי.",
+        "warning_en": "Do not advance before the foundation is stable; professional instruction is preferable to self-experimentation."
+      },
+      {
+        "order": 5,
+        "goal_he": "לבצע בדיקה לפני רכיבה",
+        "goal_en": "Complete a pre-ride inspection",
+        "explanation_he": "צפו במקורות לפי הסדר, רשמו שתי נקודות ליישום ותרגלו רק בסביבה מתאימה ובהדרגה.",
+        "explanation_en": "Watch the sources in sequence, note two practical points and practise only in a suitable environment, progressively.",
+        "primary_video_ids": [
+          "yt-vFRDMa7gwIU"
+        ],
+        "alternative_video_ids": [
+          "yt-_u44__eZ_Ug"
+        ],
+        "equipment_he": [
+          "ציוד מיגון מלא",
+          "סביבה בטוחה המתאימה לשלב"
+        ],
+        "equipment_en": [
+          "Full protective gear",
+          "A safe environment appropriate to the step"
+        ],
+        "risk_level": "low",
+        "warning_he": "אין לעבור לשלב הבא לפני שהבסיס יציב; קורס והדרכה מעשית עדיפים על ניסוי עצמי.",
+        "warning_en": "Do not advance before the foundation is stable; professional instruction is preferable to self-experimentation."
+      },
+      {
+        "order": 6,
+        "goal_he": "להכין לחורף",
+        "goal_en": "Prepare for winter",
+        "explanation_he": "צפו במקורות לפי הסדר, רשמו שתי נקודות ליישום ותרגלו רק בסביבה מתאימה ובהדרגה.",
+        "explanation_en": "Watch the sources in sequence, note two practical points and practise only in a suitable environment, progressively.",
+        "primary_video_ids": [
+          "yt-JYJnIDwEFdg",
+          "yt-CaMfDrjMFi4"
+        ],
+        "alternative_video_ids": [
+          "yt-_u44__eZ_Ug"
+        ],
+        "equipment_he": [
+          "ציוד מיגון מלא",
+          "סביבה בטוחה המתאימה לשלב"
+        ],
+        "equipment_en": [
+          "Full protective gear",
+          "A safe environment appropriate to the step"
+        ],
+        "risk_level": "low",
+        "warning_he": "אין לעבור לשלב הבא לפני שהבסיס יציב; קורס והדרכה מעשית עדיפים על ניסוי עצמי.",
+        "warning_en": "Do not advance before the foundation is stable; professional instruction is preferable to self-experimentation."
+      },
+      {
+        "order": 7,
+        "goal_he": "לבנות מערכת ניווט וגיבוי",
+        "goal_en": "Build navigation and backup",
+        "explanation_he": "בוחרים טלפון או GPS לפי הצורך, מורידים מפות ומסלול ובודקים מקור חשמל וגיבוי לפני יציאה.",
+        "explanation_en": "Choose phone or GPS by need, download maps and route, and verify power and backup before departure.",
+        "primary_video_ids": [
+          "yt-OiOgLX5AwLQ",
+          "yt-UOI7yWHv07w"
+        ],
+        "alternative_video_ids": [
+          "yt-N5DsF-4q98c"
+        ],
+        "equipment_he": [
+          "ציוד מיגון מלא",
+          "סביבה בטוחה המתאימה לשלב"
+        ],
+        "equipment_en": [
+          "Full protective gear",
+          "A safe environment appropriate to the step"
+        ],
+        "risk_level": "low",
+        "warning_he": "אין לעבור לשלב הבא לפני שהבסיס יציב; קורס והדרכה מעשית עדיפים על ניסוי עצמי.",
+        "warning_en": "Do not advance before the foundation is stable; professional instruction is preferable to self-experimentation."
+      },
+      {
+        "order": 8,
+        "goal_he": "להתאים את מערכת המיגון",
+        "goal_en": "Fit the protection system",
+        "explanation_he": "מסיימים את ההכנה בבדיקת תקן, התאמת קסדה, מגפיים ומיגון גוף לפי סוג הרכיבה.",
+        "explanation_en": "Finish preparation by checking standards and fitting helmet, boots and body protection to the ride.",
+        "primary_video_ids": [
+          "yt-v94eMFeojhc",
+          "yt-dSdKgAG-J-U"
+        ],
+        "alternative_video_ids": [
+          "yt-dP4MoF5l3IE"
+        ],
+        "equipment_he": [
+          "ציוד מיגון מלא",
+          "סביבה בטוחה המתאימה לשלב"
+        ],
+        "equipment_en": [
+          "Full protective gear",
+          "A safe environment appropriate to the step"
+        ],
+        "risk_level": "low",
+        "warning_he": "אין לעבור לשלב הבא לפני שהבסיס יציב; קורס והדרכה מעשית עדיפים על ניסוי עצמי.",
+        "warning_en": "Do not advance before the foundation is stable; professional instruction is preferable to self-experimentation."
+      }
+    ]
+  },
+  {
+    "id": "group-tour-readiness",
+    "name_he": "מוכנות לטיול קבוצתי",
+    "name_en": "Group Tour Readiness",
+    "description_he": "תדריך, מבנה קבוצה, קצב, עייפות, זיווד וניווט.",
+    "description_en": "Briefing, formation, pace, fatigue, luggage and navigation.",
+    "skill_level": "advanced_beginner",
+    "steps": [
+      {
+        "order": 1,
+        "goal_he": "לקבוע כללי קבוצה",
+        "goal_en": "Agree group rules",
+        "explanation_he": "צפו במקורות לפי הסדר, רשמו שתי נקודות ליישום ותרגלו רק בסביבה מתאימה ובהדרגה.",
+        "explanation_en": "Watch the sources in sequence, note two practical points and practise only in a suitable environment, progressively.",
+        "primary_video_ids": [
+          "yt-evc423OwTpY"
+        ],
+        "alternative_video_ids": [
+          "yt-nJtV9JxZ3wY"
+        ],
+        "equipment_he": [
+          "ציוד מיגון מלא",
+          "סביבה בטוחה המתאימה לשלב"
+        ],
+        "equipment_en": [
+          "Full protective gear",
+          "A safe environment appropriate to the step"
+        ],
+        "risk_level": "low",
+        "warning_he": "אין לעבור לשלב הבא לפני שהבסיס יציב; קורס והדרכה מעשית עדיפים על ניסוי עצמי.",
+        "warning_en": "Do not advance before the foundation is stable; professional instruction is preferable to self-experimentation."
+      },
+      {
+        "order": 2,
+        "goal_he": "לבחור מבנה מתאים",
+        "goal_en": "Choose the right formation",
+        "explanation_he": "צפו במקורות לפי הסדר, רשמו שתי נקודות ליישום ותרגלו רק בסביבה מתאימה ובהדרגה.",
+        "explanation_en": "Watch the sources in sequence, note two practical points and practise only in a suitable environment, progressively.",
+        "primary_video_ids": [
+          "yt-evc423OwTpY"
+        ],
+        "alternative_video_ids": [
+          "yt-nJtV9JxZ3wY"
+        ],
+        "equipment_he": [
+          "ציוד מיגון מלא",
+          "סביבה בטוחה המתאימה לשלב"
+        ],
+        "equipment_en": [
+          "Full protective gear",
+          "A safe environment appropriate to the step"
+        ],
+        "risk_level": "low",
+        "warning_he": "אין לעבור לשלב הבא לפני שהבסיס יציב; קורס והדרכה מעשית עדיפים על ניסוי עצמי.",
+        "warning_en": "Do not advance before the foundation is stable; professional instruction is preferable to self-experimentation."
+      },
+      {
+        "order": 3,
+        "goal_he": "לנהל פערים וקצב",
+        "goal_en": "Manage pace and gaps",
+        "explanation_he": "צפו במקורות לפי הסדר, רשמו שתי נקודות ליישום ותרגלו רק בסביבה מתאימה ובהדרגה.",
+        "explanation_en": "Watch the sources in sequence, note two practical points and practise only in a suitable environment, progressively.",
+        "primary_video_ids": [
+          "yt-nJtV9JxZ3wY"
+        ],
+        "alternative_video_ids": [
+          "yt-evc423OwTpY"
+        ],
+        "equipment_he": [
+          "ציוד מיגון מלא",
+          "סביבה בטוחה המתאימה לשלב"
+        ],
+        "equipment_en": [
+          "Full protective gear",
+          "A safe environment appropriate to the step"
+        ],
+        "risk_level": "medium",
+        "warning_he": "אין לעבור לשלב הבא לפני שהבסיס יציב; קורס והדרכה מעשית עדיפים על ניסוי עצמי.",
+        "warning_en": "Do not advance before the foundation is stable; professional instruction is preferable to self-experimentation."
+      },
+      {
+        "order": 4,
+        "goal_he": "לנהל עייפות",
+        "goal_en": "Manage fatigue",
+        "explanation_he": "צפו במקורות לפי הסדר, רשמו שתי נקודות ליישום ותרגלו רק בסביבה מתאימה ובהדרגה.",
+        "explanation_en": "Watch the sources in sequence, note two practical points and practise only in a suitable environment, progressively.",
+        "primary_video_ids": [
+          "yt-yW7GW4ILInI"
+        ],
+        "alternative_video_ids": [
+          "yt-GwXb1oEWeMY"
+        ],
+        "equipment_he": [
+          "ציוד מיגון מלא",
+          "סביבה בטוחה המתאימה לשלב"
+        ],
+        "equipment_en": [
+          "Full protective gear",
+          "A safe environment appropriate to the step"
+        ],
+        "risk_level": "medium",
+        "warning_he": "אין לעבור לשלב הבא לפני שהבסיס יציב; קורס והדרכה מעשית עדיפים על ניסוי עצמי.",
+        "warning_en": "Do not advance before the foundation is stable; professional instruction is preferable to self-experimentation."
+      },
+      {
+        "order": 5,
+        "goal_he": "לארוז מאוזן",
+        "goal_en": "Pack with balance",
+        "explanation_he": "צפו במקורות לפי הסדר, רשמו שתי נקודות ליישום ותרגלו רק בסביבה מתאימה ובהדרגה.",
+        "explanation_en": "Watch the sources in sequence, note two practical points and practise only in a suitable environment, progressively.",
+        "primary_video_ids": [
+          "yt-GJTbVEFaTqE"
+        ],
+        "alternative_video_ids": [
+          "yt-jevfjCDOddA"
+        ],
+        "equipment_he": [
+          "ציוד מיגון מלא",
+          "סביבה בטוחה המתאימה לשלב"
+        ],
+        "equipment_en": [
+          "Full protective gear",
+          "A safe environment appropriate to the step"
+        ],
+        "risk_level": "low",
+        "warning_he": "אין לעבור לשלב הבא לפני שהבסיס יציב; קורס והדרכה מעשית עדיפים על ניסוי עצמי.",
+        "warning_en": "Do not advance before the foundation is stable; professional instruction is preferable to self-experimentation."
+      },
+      {
+        "order": 6,
+        "goal_he": "לתכנן ניווט וגיבוי",
+        "goal_en": "Plan navigation and backup",
+        "explanation_he": "צפו במקורות לפי הסדר, רשמו שתי נקודות ליישום ותרגלו רק בסביבה מתאימה ובהדרגה.",
+        "explanation_en": "Watch the sources in sequence, note two practical points and practise only in a suitable environment, progressively.",
+        "primary_video_ids": [
+          "yt-N5DsF-4q98c"
+        ],
+        "alternative_video_ids": [
+          "yt-UOI7yWHv07w"
+        ],
+        "equipment_he": [
+          "ציוד מיגון מלא",
+          "סביבה בטוחה המתאימה לשלב"
+        ],
+        "equipment_en": [
+          "Full protective gear",
+          "A safe environment appropriate to the step"
+        ],
+        "risk_level": "low",
+        "warning_he": "אין לעבור לשלב הבא לפני שהבסיס יציב; קורס והדרכה מעשית עדיפים על ניסוי עצמי.",
+        "warning_en": "Do not advance before the foundation is stable; professional instruction is preferable to self-experimentation."
+      },
+      {
+        "order": 7,
+        "goal_he": "להגדיר תקשורת קבוצתית",
+        "goal_en": "Configure group communication",
+        "explanation_he": "מחליטים אם נדרש Bluetooth או Mesh, מתקינים ובודקים בעמידה וקובעים כלל להפסקת שיחה כשעומס הרכיבה עולה.",
+        "explanation_en": "Choose Bluetooth or mesh, install and test while stationary, and agree to stop talking when riding workload rises.",
+        "primary_video_ids": [
+          "yt-msN_yCSN3dM",
+          "yt-K9tcqL8KOgk"
+        ],
+        "alternative_video_ids": [
+          "yt-wQkrAP1KEAg"
+        ],
+        "equipment_he": [
+          "ציוד מיגון מלא",
+          "סביבה בטוחה המתאימה לשלב"
+        ],
+        "equipment_en": [
+          "Full protective gear",
+          "A safe environment appropriate to the step"
+        ],
+        "risk_level": "low",
+        "warning_he": "אין לעבור לשלב הבא לפני שהבסיס יציב; קורס והדרכה מעשית עדיפים על ניסוי עצמי.",
+        "warning_en": "Do not advance before the foundation is stable; professional instruction is preferable to self-experimentation."
+      },
+      {
+        "order": 8,
+        "goal_he": "לשתף מסלול ולבנות גיבוי",
+        "goal_en": "Share the route and build backup",
+        "explanation_he": "משתפים GPX ונקודות מפגש, מוודאים מפות לא מקוונות וקובעים מה עושים אם הקבוצה מתפצלת.",
+        "explanation_en": "Share GPX and meeting points, verify offline maps, and agree what happens if the group splits.",
+        "primary_video_ids": [
+          "yt-OiOgLX5AwLQ",
+          "yt-N5DsF-4q98c"
+        ],
+        "alternative_video_ids": [
+          "yt-UOI7yWHv07w"
+        ],
+        "equipment_he": [
+          "ציוד מיגון מלא",
+          "סביבה בטוחה המתאימה לשלב"
+        ],
+        "equipment_en": [
+          "Full protective gear",
+          "A safe environment appropriate to the step"
+        ],
+        "risk_level": "low",
+        "warning_he": "אין לעבור לשלב הבא לפני שהבסיס יציב; קורס והדרכה מעשית עדיפים על ניסוי עצמי.",
+        "warning_en": "Do not advance before the foundation is stable; professional instruction is preferable to self-experimentation."
       }
     ]
   }

@@ -1,30 +1,30 @@
 <!DOCTYPE html>
 
-<html data-release="2.3.1" data-standalone="false" data-theme="light" dir="rtl" lang="he">
+<html data-release="3.0.0" data-standalone="false" data-theme="light" lang="he" dir="rtl">
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
-<meta content="450 סרטוני רכיבה, מסלולי לימוד, טיולים, ניווט וחיפוש חכם בעברית — ללא כוונת רווח." data-site-description="" name="description"/>
+<meta content="411 סרטוני רכיבה פעילים, מסלולי לימוד, טיולים, ניווט וחיפוש חכם בעברית — ללא כוונת רווח." data-site-description="" name="description"/>
 <meta content="website" property="og:type"/>
 <meta content="he_IL" property="og:locale"/>
 <meta content="מדריך הווידאו הקהילתי לרכיבת אדוונצ'ר" property="og:title"/>
-<meta content="שטח, כביש, טיולים ותרגול — 450 סרטונים מסווגים לקהילה." property="og:description"/>
+<meta content="שטח, כביש, טיולים ותרגול — 411 סרטונים פעילים ומסווגים לקהילה." property="og:description"/>
 <meta content="summary" name="twitter:card"/>
 <meta content="מדריך הווידאו הקהילתי לרכיבת אדוונצ'ר" name="twitter:title"/>
-<meta content="שטח, כביש, טיולים ותרגול — 450 סרטונים מסווגים לקהילה." name="twitter:description"/>
+<meta content="שטח, כביש, טיולים ותרגול — 411 סרטונים פעילים ומסווגים לקהילה." name="twitter:description"/>
 <meta content="#f4f1e8" name="theme-color"/>
 <meta content="yes" name="mobile-web-app-capable"/>
 <meta content="yes" name="apple-mobile-web-app-capable"/>
 <meta content="default" name="apple-mobile-web-app-status-bar-style"/>
-<title>מדריך הווידאו הקהילתי לרכיבת אדוונצ'ר</title>
+<title>מדריך הווידאו הקהילתי לרכיבת אדוונצ'ר — גרסה 3.0.0</title>
 <link href="./manifest.webmanifest" rel="manifest"/>
 <link href="./assets/icons/apple-touch-icon.png" rel="apple-touch-icon"/>
 <link href="./assets/icons/favicon-32.png" rel="icon" sizes="32x32" type="image/png"/>
-<link href="./assets/css/styles.css" rel="stylesheet"/>
-<script src="./assets/js/app.js" type="module"></script>
+<link href="./assets/css/styles.css?v=3.0.0-20260805b" rel="stylesheet"/>
+<script src="./assets/js/app.js?v=3.0.0-20260806a" type="module"></script>
 <script src="./assets/js/pwa.js" type="module"></script>
 </head>
-<body data-download-file="downloads/Adventure-Riding-Video-Guide-v2.3.1-Standalone.html">
+<body data-download-file="downloads/Adventure-Riding-Video-Guide-v3.0.0-Standalone.html">
 <a class="skip-link" href="#main-content">דלגו לתוכן הראשי</a>
 <header class="site-header" data-menu-open="false" id="site-header">
 <div class="site-header__inner shell">
@@ -78,9 +78,10 @@
 <div aria-hidden="true" class="hero__terrain"></div>
 <div class="hero__inner shell">
 <div class="hero__content">
+<span class="release-badge">גרסה <b data-release-version="">3.0.0</b></span>
 <p class="eyebrow eyebrow--accent">לומדים נכון. מתרגלים בהדרגה. רוכבים רחוק.</p>
 <h1 id="home-title">הדרך שלך לרכיבה<br/><span>בטוחה ומדויקת יותר</span></h1>
-<p class="hero__lead">450 הדרכות מסווגות בעברית ובאנגלית, עם ניווט לפי תחום, נושא ומיקוד — כהשלמה לקורסים, אימון וטיולים אמיתיים.</p>
+<p class="hero__lead"><strong data-stat="videos">—</strong> הדרכות פעילות ומסווגות בעברית ובאנגלית, עם ניווט לפי תחום, נושא ומיקוד — כהשלמה לקורסים, אימון וטיולים אמיתיים.</p>
 <form action="./" class="hero-search" id="hero-search-form" method="get" role="search">
 <label class="visually-hidden" for="hero-search">מה תרצו ללמוד?</label>
 <input name="view" type="hidden" value="library"/>
@@ -93,6 +94,7 @@
 <div><dt data-stat="videos">—</dt><dd>סרטונים מאומתים</dd></div>
 <div><dt data-stat="domains">—</dt><dd>תחומי לימוד</dd></div>
 <div><dt data-stat="paths">—</dt><dd>מסלולים מסודרים</dd></div>
+<div class="hero__visit-stat"><dt><img alt="מונה כניסות גלובלי" decoding="async" height="20" id="visit-counter" width="88"/></dt><dd>כניסות שנמדדו <span aria-hidden="true" class="counter-info">i</span></dd><small id="visit-counter-note">מונה חיצוני סופר טעינות של האתר החי, לא אנשים ייחודיים; רענונים ובוטים עשויים להיספר.</small></div>
 </dl>
 </div>
 <aside aria-label="גישה מומלצת ללמידה" class="hero__guide">
@@ -233,7 +235,7 @@
 <button aria-label="סגירת המסננים" class="icon-button filter-close" data-action="close-filters" type="button">×</button>
 </div>
 <div class="filter-form__body">
-<fieldset class="filter-group">
+<fieldset class="filter-group filter-group--primary">
 <legend>סיווג</legend>
 <label for="filter-domain">תחום</label>
 <select id="filter-domain" name="domain"><option value="">כל התחומים</option></select>
@@ -241,13 +243,8 @@
 <select id="filter-category" name="category"><option value="">כל הנושאים</option></select><label for="filter-subcategory">מיקוד / תת־נושא</label><select id="filter-subcategory" name="subcategory"><option value="">כל המיקודים</option></select>
 <label for="filter-format">סוג הדרכה</label><select id="filter-format" name="format"><option value="">כל סוגי ההדרכה</option></select><label for="filter-language">שפת הסרטון</label>
 <select id="filter-language" name="language"><option value="">כל השפות</option></select>
-</fieldset>
-<fieldset class="filter-group">
-<legend>רמת הרכיבה</legend>
 <label for="filter-skill">רמה</label>
 <select id="filter-skill" name="skill"><option value="">כל הרמות</option></select>
-<label for="filter-risk">סיכון בתרגול</label>
-<select id="filter-risk" name="risk"><option value="">כל רמות הסיכון</option></select>
 <label for="filter-duration">משך הסרטון</label>
 <select id="filter-duration" name="duration">
 <option value="">כל משך</option>
@@ -255,6 +252,14 @@
 <option value="medium">בינוני — 5 עד 15 דקות</option>
 <option value="long">ארוך — מעל 15 דקות</option>
 </select>
+</fieldset>
+<details class="advanced-filters">
+<summary><span>מסננים מתקדמים</span><small>סיכון, אופנוע, תנאים ומאפייני מקור</small></summary>
+<div class="advanced-filters__body">
+<fieldset class="filter-group">
+<legend>רמת סיכון</legend>
+<label for="filter-risk">סיכון בתרגול</label>
+<select id="filter-risk" name="risk"><option value="">כל רמות הסיכון</option></select>
 </fieldset>
 <fieldset class="filter-group">
 <legend>האופנוע והסביבה</legend>
@@ -279,6 +284,8 @@
 <label class="check-row"><input id="filter-watched" name="watched" type="checkbox"/><span>סרטונים שנצפו</span></label>
 <label class="check-row"><input id="filter-unwatched" name="unwatched" type="checkbox"/><span>טרם נצפו</span></label>
 </fieldset>
+</div>
+</details>
 </div>
 <div class="filter-form__footer">
 <button class="button button--quiet" data-action="reset-filters" type="reset">איפוס הכול</button>
@@ -347,7 +354,7 @@
 </div>
 </header>
 <div class="section shell">
-<nav aria-label="מעבר מהיר בין מסלולים" class="path-switcher" id="path-switcher"></nav>
+<div aria-label="בחירת מסלול לימוד" class="path-catalog" id="path-switcher" role="list"></div>
 <div aria-busy="true" aria-live="polite" class="paths-container" id="paths-container">
 <div aria-hidden="true" class="path-skeleton"><i></i><b></b><span></span><span></span><span></span></div>
 </div>
@@ -363,7 +370,8 @@
 <section aria-labelledby="trip-types-title"><div class="section-heading"><div><p class="eyebrow">בחרו סוג טיול</p><h2 id="trip-types-title">מה אתם מתכננים?</h2></div></div><div class="trip-type-grid" id="trip-type-grid"></div></section>
 <aside class="mindfulness-card" id="trip-mindfulness"><span aria-hidden="true">◉</span><div><h2>בדיקת קשב של עשר שניות</h2><p data-mindfulness-note=""></p></div></aside>
 <section aria-labelledby="checklists-title"><div class="section-heading"><div><p class="eyebrow">לפני ההנעה</p><h2 id="checklists-title">צ׳קליסטים שאפשר לסמן</h2></div><button class="button button--quiet" data-action="reset-trip-checklists" type="button">איפוס סימונים</button></div><div class="checklist-grid" id="trip-checklist-grid"></div></section>
-<section aria-labelledby="navigation-apps-title"><div class="section-heading"><div><p class="eyebrow">ניווט הוא מערכת, לא רק אפליקציה</p><h2 id="navigation-apps-title">כלי ניווט שכדאי להכיר</h2></div></div><div class="navigation-app-grid" id="navigation-app-grid"></div></section>
+<section aria-labelledby="navigation-apps-title"><div class="section-heading"><div><p class="eyebrow">ניווט הוא מערכת, לא רק אפליקציה</p><h2 id="navigation-apps-title">כלי ניווט שכדאי להכיר</h2><p>השוו לפי שימוש, עבודה ללא קליטה, GPX, התקנה, חשמל ומגבלות — לא לפי שם המותג בלבד.</p></div></div><div class="navigation-app-grid" id="navigation-app-grid"></div></section>
+<section aria-labelledby="gear-guides-title"><div class="section-heading"><div><p class="eyebrow">מחליטים לפי צורך, לא לפי מחיר בלבד</p><h2 id="gear-guides-title">מדריכי ניווט, מיגון ודיבוריות</h2></div></div><div class="knowledge-guide-grid" id="knowledge-guide-grid"></div></section>
 <section aria-labelledby="trip-videos-title"><div class="section-heading"><div><p class="eyebrow">לומדים מן המקורות</p><h2 id="trip-videos-title">סרטונים מומלצים לטיול</h2></div><a class="text-link" data-route="library" data-view="library" href="#library?domain=touring_travel">לכל סרטוני הטיולים ←</a></div><div class="video-grid" id="trip-video-grid"></div></section>
 </div>
 </section><section aria-labelledby="smart-title" class="view view--smart" hidden="" id="smart-view">
@@ -375,10 +383,11 @@
 <div class="section shell smart-layout">
 <section aria-labelledby="smart-form-title" class="smart-search-card">
 <div><p class="eyebrow">עוזר איתור מקומי</p><h2 id="smart-form-title">מה אתם מנסים ללמוד או לתכנן?</h2></div>
-<form id="smart-search-form"><label for="smart-query">השאלה שלכם</label><textarea id="smart-query" placeholder="לדוגמה: אני רוכב מתחיל עם אדוונצ'ר כבד ומתכנן טיול יום בשטח עם חול. מה לראות קודם?" rows="4"></textarea><div class="smart-actions"><button class="button button--primary" type="submit">מצאו סרטונים</button><button class="button button--ghost" data-action="copy-ai-prompt" type="button">העתקת שאלה מפורטת לכלי AI</button></div></form>
-<div aria-label="דוגמאות לשאלות" class="smart-examples"><button data-smart-example="ABS בשטח עם אופנוע אדוונצ'ר כבד" type="button">ABS בשטח</button><button data-smart-example="טיול רב יומי עם מטען וניווט GPX" type="button">טיול רב־יומי</button><button data-smart-example="פניות בכביש רטוב לרוכב מתחיל" type="button">פניות בגשם</button><button data-smart-example="איך נוסעים נכון בקבוצת אופנועים" type="button">רכיבה בקבוצה</button></div>
+<form id="smart-search-form"><label for="smart-query">השאלה שלכם</label><textarea id="smart-query" placeholder="לדוגמה: אני רוכב מתחיל עם אדוונצ'ר כבד ומתכנן טיול יום בשטח עם חול. מה לראות קודם?" rows="4"></textarea><div class="smart-actions"><button class="button button--primary" type="submit">מצאו סרטונים</button><button class="button button--ghost" data-action="toggle-local-ai" id="local-ai-toggle" type="button">הפעלת AI מקומי</button></div></form>
+<div aria-label="דוגמאות לשאלות" class="smart-examples"><button data-smart-example="טלפון או GPS ייעודי לטיול עם GPX ומפות אופליין" type="button">טלפון או GPS?</button><button data-smart-example="איזה מיגון חשוב לרוכב אדוונצ'ר מתחיל" type="button">איזה מיגון?</button><button data-smart-example="דיבורית Bluetooth או Mesh לקבוצת רוכבים" type="button">Bluetooth או Mesh?</button><button data-smart-example="פניות בכביש רטוב לרוכב מתחיל" type="button">פניות בגשם</button></div>
+<div aria-live="polite" class="local-ai-status" id="local-ai-status"><strong>חיפוש חכם זמין תמיד</strong><p>AI סמנטי מקומי הוא אפשרות נוספת. בהפעלה הראשונה יורד מודל של כ־140MB; לאחר מכן השאלות מעובדות במכשיר.</p><progress hidden id="local-ai-progress" max="100" value="0"></progress></div>
 </section>
-<aside class="smart-privacy"><h2>מה כאן AI ומה לא?</h2><p>האתר מפעיל מנגנון התאמה מקומי שמזהה כוונה, מילים נרדפות וקטגוריות. אין מפתח API, אין צ׳אט מרוחק והשאלה אינה יוצאת מן המכשיר. הכפתור הנוסף רק מעתיק נוסח שתוכלו לבחור לשלוח לכלי AI משלכם.</p></aside>
+<aside class="smart-privacy"><h2>מה כאן AI ומה לא?</h2><p>החיפוש הרגיל מזהה כוונה, מילים נרדפות וקטגוריות ונשאר זמין בכל מכשיר. אם תפעילו AI מקומי, מודל רב־לשוני ייטען למכשיר וידרג את <span data-stat="videos">—</span> הרשומות לפי משמעות. אין API, מפתח או צ׳אט מרוחק; המודל אינו ממציא הדרכות אלא רק מאתר רשומות קיימות.</p></aside>
 <section aria-labelledby="smart-results-title" class="smart-results"><div class="section-heading"><div><p class="eyebrow">התאמות מן המאגר</p><h2 id="smart-results-title">הסרטונים המתאימים</h2></div></div><p class="smart-result-note" id="smart-result-note">כתבו שאלה כדי לקבל המלצות.</p><div class="video-grid" id="smart-video-grid"></div></section>
 </div>
 </section><section aria-labelledby="safety-title" class="view view--safety" hidden="" id="safety-view">
@@ -387,7 +396,7 @@
 <div>
 <p class="eyebrow eyebrow--accent">ידע, שיקול דעת והתקדמות מדורגת</p>
 <h1 id="safety-title">רוכבים כדי לחזור בשלום</h1>
-<p>הספרייה מרחיבה ידע ומציעה רעיונות לתרגול. היא אינה תחליף לקורס, לאימון מתקדם, למדריך מקצועי או להערכת תנאים בשטח.</p>
+<p>הספרייה אוצרת קישורים לתוכן צד שלישי. היא מרחיבה ידע ומציעה רעיונות לתרגול, אך אינה תחליף לקורס, למדריך מקצועי, לספר היצרן, לחוק או להערכת התנאים בשטח.</p>
 </div>
 </div>
 </header>
@@ -471,13 +480,14 @@
 <form class="modal__close-form" method="dialog"><button aria-label="סגירת חלון הזכויות" class="icon-button modal__close" type="submit">×</button></form>
 </header>
 <div class="rights-dialog__body">
-<section><h3>לא תחליף להדרכה מקצועית</h3><p>האתר, התקצירים והסרטונים נועדו להעשרה בלבד. רכיבה מתקדמת לומדים בקורסים ובאימונים אצל מדריכים מוסמכים, עם ציוד, שטח ומשוב מתאימים.</p></section>
+<section><h3>אוצרות בלבד — לא אישור או אחריות</h3><p>האתר הוא אינדקס אוצר של תוכן צד שלישי. הוא אינו מאשר כל טענה, אינו יכול לבדוק ברציפות דיוק, עדכניות, איכות או בטיחות, ואינו מעניק הסמכה, אחריות או המלצה מסחרית. דעות היוצרים אינן דעות האתר.</p></section>
+<section><h3>לא תחליף להדרכה מקצועית</h3><p>האתר, התקצירים והסרטונים נועדו להעשרה בלבד. רכיבה מתקדמת לומדים בקורסים ובאימונים אצל מדריכים מוסמכים, עם ציוד, שטח ומשוב מתאימים. החוק, ספר היצרן והחלטה שמרנית בשטח תמיד גוברים.</p></section>
 <section><h3>כבוד ליוצרי הסרטונים</h3><p>האתר מקשר לסרטוני YouTube ואינו טוען לבעלות עליהם. הסרטונים, התמונות, שמות הערוצים וסימני המסחר נשארים של בעלי הזכויות. אהבתם סרטון? תנו לייק, תגובה או הרשמה ליוצר.</p></section>
-<section><h3>קהילתי, ללא רווח וללא פרסומות מטעם האתר</h3><p>אין באתר פרסומות, Affiliate או תשלום עבור הצגת סרטון. ייתכן שבתוך סרטון חיצוני תופיע חסות של היוצר; היא מסומנת ככל שניתן.</p></section>
+<section><h3>קהילתי, ללא רווח וללא פרסומות מטעם האתר</h3><p>אין באתר פרסומות, Affiliate או תשלום עבור הצגת סרטון. ייתכן שבתוך סרטון חיצוני תופיע חסות של היוצר; היא מסומנת ככל שניתן. סימון „ללא שיווק” מתאר את הראיות שנאספו ואינו אישור לעצמאות מוחלטת.</p></section>
 <section><h3>העתקה, שיתוף ושיפור</h3><p>קוד האתר המקורי מופץ לפי רישיון MIT. הטקסטים, הסיווגים והצ׳קליסטים המקוריים מופצים לפי CC BY-NC-SA 4.0 לשימוש קהילתי לא־מסחרי: תנו קרדיט, שמרו על אופי לא־מסחרי ושתפו שיפורים באותם תנאים. רישיונות אלה אינם חלים על תוכן צד שלישי.</p></section>
 <section><h3>אין אחריות ואין הבטחת התאמה</h3><p>המידע ניתן כפי שהוא. כל רוכב אחראי לחוק, לתנאים, למצב האופנוע, לציוד ולבחירת רמת תרגול. הוראות היצרן ומדריך מוסמך גוברים על סרטון או תקציר.</p></section>
 <section><h3>שיפור באמצעות AI</h3><p>מותר להוריד את ה־HTML, לשפר אותו בעזרת כלי AI ולשתף. חובה לבדוק קישורים, קוד, בטיחות וזכויות לפני פרסום, ומומלץ להחזיר את הקובץ המשופר לקהילה.</p></section>
-<section data-contact-block=""><h3>יצירת קשר, תיקון או בקשת הסרה</h3><p><a href="mailto:Ilan.nachman@gmail.com">Ilan.nachman@gmail.com</a></p></section>
+<section><h3>יצירת קשר, תיקון או בקשת הסרה</h3><p><a href="https://github.com/galsec1999/adventure-riding-video-guide/issues/new" rel="noopener noreferrer" target="_blank">פתיחת פנייה ב־GitHub</a></p></section>
 <div class="rights-dialog__note">פרויקט קהילתי — קוד ורכיבים מקוריים בלבד. כל תוכן צד שלישי מוחרג ונשאר בבעלות יוצריו.</div>
 <div class="rights-dialog__actions"><button class="button button--primary" data-action="download-html" type="button">הורדת HTML מלא</button><button class="button button--ghost" data-action="open-feedback" type="button">שליחת משוב</button></div></div>
 </div>

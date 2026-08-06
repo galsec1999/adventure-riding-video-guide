@@ -1,0 +1,247 @@
+[
+  {
+    "local_id": "yt--KgE-9E46lk",
+    "decision": "supports",
+    "evidence_types": [
+      "description"
+    ],
+    "confidence": "high",
+    "rationale_he": "התיאור מפרט מהו אזור החיכוך, התנעה חלקה, תמרון במהירות נמוכה וטעויות נפוצות. זהו בסיס תוכני ישיר לקטגוריית תיאום פקדים ולתקציר המקומי."
+  },
+  {
+    "local_id": "yt-83YeesoSmz4",
+    "decision": "insufficient",
+    "evidence_types": [
+      "description"
+    ],
+    "confidence": "low",
+    "rationale_he": "התיאור מכיל קישורי ערוץ, מוצרים ודיסקליימר בלבד. אין בו פירוט של פקדים, תרגול איטי או טעויות מתחילים, ולכן הכותרת לבדה אינה מספיקה לאישור הסיווג והתקציר."
+  },
+  {
+    "local_id": "yt-MZt1jRLds_g",
+    "decision": "supports",
+    "evidence_types": [
+      "description",
+      "chapters"
+    ],
+    "confidence": "high",
+    "rationale_he": "התיאור עוסק במפורש בבלימת חירום ובמחלוקת בין טכניקות, והפרקים מתעדים שלבי עצירה, הורדה להילוך ראשון ושימוש במצמד. הראיות תומכות בקטגוריה ובנקודות הלמידה המרכזיות, גם אם סביבת תרגול סגורה אינה מפורטת בתיאור."
+  },
+  {
+    "local_id": "yt-rZjskcIm61U",
+    "decision": "supports",
+    "evidence_types": [
+      "description"
+    ],
+    "confidence": "high",
+    "rationale_he": "התיאור מפרט הפעלה מדורגת של שני הבלמים, תגובה לנעילת גלגל אחורי, הורדת הילוכים, מבט, מרכוז הגוף והיערכות להעברת משקל. זו התאמה ישירה לבלימת חירום ולתקציר המקומי."
+  },
+  {
+    "local_id": "yt-J4PqKpLNOhQ",
+    "decision": "supports",
+    "evidence_types": [
+      "description",
+      "chapters"
+    ],
+    "confidence": "high",
+    "rationale_he": "התיאור והפרקים מסבירים מהי בלימה לתוך פנייה, יתרונות, מגבלות, סיכונים, מקרים שבהם היא נדרשת ותגובה לכניסה מהירה מדי. הם תומכים בסיווג פניות כביש ובניסוח המקומי שמציג גם את המחלוקת ולא רק המלצה חד־צדדית."
+  },
+  {
+    "local_id": "yt-gPE67XqGsV4",
+    "decision": "supports",
+    "evidence_types": [
+      "description",
+      "chapters"
+    ],
+    "confidence": "high",
+    "rationale_he": "לצד תוכן שיווקי רב, התיאור מגדיר במפורש Trail Braking, מסביר את פעולתו ואת השימוש המוצע בכביש, והפרקים כוללים ביצוע, תרגול והוספה או הפחתה של בלימה. בסיס התוכן תומך בסיווג ובנקודות הלמידה."
+  },
+  {
+    "local_id": "yt-mPs3E_d5YBQ",
+    "decision": "insufficient",
+    "evidence_types": [
+      "description"
+    ],
+    "confidence": "low",
+    "rationale_he": "התיאור הוא כתובת אתר בלבד ואין Chapters. אין ראיה תוכנית לקצב שחרור בלם, כניסה לפנייה או Trail Braking; אי אפשר לאשר את הרשומה על סמך הכותרת."
+  },
+  {
+    "local_id": "yt-Cnni_3tZwvE",
+    "decision": "supports",
+    "evidence_types": [
+      "description"
+    ],
+    "confidence": "high",
+    "rationale_he": "התיאור המפורט עוסק בסיבוב פרסה בשטח ומפרק אותו למומנטום, תיאום מצמד־גז־בלם אחורי, תנוחת גוף, מבט, בחירת נקודות ייחוס וסיכון לנפילה. הוא תומך היטב בקטגוריית פניות שטח ובתקציר."
+  },
+  {
+    "local_id": "yt-NdwIill2oYg",
+    "decision": "supports",
+    "evidence_types": [
+      "description"
+    ],
+    "confidence": "medium",
+    "rationale_he": "התיאור מציין דיון מפורש בבחירת קווי פנייה במסלול שטח וביתרונות ובחסרונות של כל קו, ולכן הוא תומך בקטגוריה ובמוקד בחירת הקו. הוא אינו מפרט ישירות מבט או מרווח תיקון, ולכן הביטחון בנקודות המקומיות המלאות בינוני."
+  },
+  {
+    "local_id": "yt-KhFEnjo7fz4",
+    "decision": "insufficient",
+    "evidence_types": [
+      "description"
+    ],
+    "confidence": "low",
+    "rationale_he": "התיאור כולל קורסים, מדריך ציוד וקישורי חסות בלבד. אין בו הסבר על היגוי הפוך או הקשר בין קלט בכידון להטיה, ולכן אין בסיס שאינו הכותרת לסיווג המקומי."
+  },
+  {
+    "local_id": "yt-5s_JCuByuEI",
+    "decision": "supports",
+    "evidence_types": [
+      "description",
+      "chapters"
+    ],
+    "confidence": "high",
+    "rationale_he": "התיאור שואל ומגדיר במפורש כיצד אופנוע פונה וכיצד Counter Steering פועל, והפרקים מכסים התחלת פנייה, מנגנון הפנייה ומהירות פנייה מרבית. הראיות תומכות ישירות בסיווג ובתקציר המקומי."
+  },
+  {
+    "local_id": "yt-MPzV9BMouQI",
+    "decision": "insufficient",
+    "evidence_types": [
+      "description",
+      "chapters"
+    ],
+    "confidence": "medium",
+    "rationale_he": "ה־Chapters מצביעים על מצמד למתחילים, שליטה, גז והחלפה, אך התיאור עצמו הוא קישורי קורסים וחסות ואינו נותן בסיס תוכני ממשי. בנוסף אין בראיות המטא־דאטה תמיכה מפורשת בבלם אחורי ובמבט שנכללו מקומית."
+  },
+  {
+    "local_id": "yt-W3RjWP34Tqg",
+    "decision": "supports",
+    "evidence_types": [
+      "description"
+    ],
+    "confidence": "high",
+    "rationale_he": "התיאור מפרט תרגיל מגרש לשליטה איטית, שילוב אזור חיכוך, גז, בלם אחורי, תנוחת ראש ואיזון, וכן טעויות נפוצות. הוא תומך ישירות בקטגוריה, בתקציר ובנקודות הלמידה."
+  },
+  {
+    "local_id": "yt-1zluOSO-0aU",
+    "decision": "insufficient",
+    "evidence_types": [
+      "description"
+    ],
+    "confidence": "low",
+    "rationale_he": "התיאור מפנה לסרטון הדרכה ולקורס בתשלום אך אינו מפרט אזור חיכוך, בלם אחורי או שליטה במהירות נמוכה. אין בסיס תוכני שאינו הכותרת לאישור התקציר ונקודות הלמידה."
+  },
+  {
+    "local_id": "yt-urV4pCVJeU4",
+    "decision": "supports",
+    "evidence_types": [
+      "description",
+      "chapters"
+    ],
+    "confidence": "medium",
+    "rationale_he": "התיאור מצהיר על הדגמת רכיבה איטית וסיבוב פרסה במבחן DVSA, והפרקים מפרידים בין Slow Riding, תצפית קריטית ו־U-Turn. זהו בסיס ממשי לסיווג, אך פרטי המצמד והבלם האחורי בנקודות המקומיות אינם מפורשים בראיות."
+  },
+  {
+    "local_id": "yt-zMy5dDd5NPE",
+    "decision": "supports",
+    "evidence_types": [
+      "description",
+      "chapters"
+    ],
+    "confidence": "high",
+    "rationale_he": "התיאור מציג מדריך מדורג לסיבוב פרסה, והפרקים כוללים הכנה, אזור חיכוך, סל״ד, כניסה, סיבוב ראש, שמירת מהירות והתקדמות לביצוע מלא. הראיות תומכות היטב בסיווג ובמרבית נקודות הלמידה."
+  },
+  {
+    "local_id": "yt-yzmoUmX34-I",
+    "decision": "insufficient",
+    "evidence_types": [
+      "description",
+      "chapters"
+    ],
+    "confidence": "medium",
+    "rationale_he": "הפרקים מצביעים על מהירות, מבט והטיה, מצמד, Counterbalance ותרגול, אך התיאור עצמו מכיל קישורי ערוץ, אפליקציה ודיסקליימר בלבד. לפי רף הבדיקה שנקבע, Chapters ללא תיאור תוכני אינם מספיקים ל־supports."
+  },
+  {
+    "local_id": "yt-w55SIeJpUgA",
+    "decision": "reject",
+    "evidence_types": [
+      "description",
+      "chapters"
+    ],
+    "confidence": "high",
+    "rationale_he": "התיאור והפרקים עוסקים בתרגיל התחמקות, תמרון ו־Swerve, לא בעצירת חירום. הם תומכים בכותרת ובתקציר המקומיים על התחמקות אך סותרים את הקטגוריה הראשית emergency_braking, ולכן הסיווג הנוכחי נדחה."
+  },
+  {
+    "local_id": "yt-tnMdFsWyGDg",
+    "decision": "reject",
+    "evidence_types": [
+      "description"
+    ],
+    "confidence": "high",
+    "rationale_he": "התיאור מפרט תמרון הימנעות במבחן Module 1, שימוש בנקודת ייחוס חזותית וקביעת מהירות דרך התוואי. הוא אינו מתאר בלימת חירום, ולכן הקטגוריה emergency_braking אינה נתמכת אף שהתקציר המקומי על התחמקות מתאים לתיאור."
+  },
+  {
+    "local_id": "yt-P-lnb0oRNHU",
+    "decision": "insufficient",
+    "evidence_types": [
+      "description"
+    ],
+    "confidence": "low",
+    "rationale_he": "התיאור הוא חומר קידום, קישורי שותפים ודיסקליימר ואינו מתאר ביצוע הסטה או הפרדה בין בלימה לשינוי כיוון. אין בסיס ממשי לסיווג או לנקודות הלמידה."
+  },
+  {
+    "local_id": "yt-ORbb_efZh4M",
+    "decision": "insufficient",
+    "evidence_types": [
+      "description"
+    ],
+    "confidence": "low",
+    "rationale_he": "התיאור בן משפט אחד מציין רק לימוד יסודות לרכיבה בגשם. הוא מאשר את הנושא הכללי אך אינו מספק תוכן ממשי על קצב, מרווח, פקודות חלקות או משטחים חלקים, ולכן אינו מספיק לאישור הרשומה המקומית."
+  },
+  {
+    "local_id": "yt-ANNNfcC3WII",
+    "decision": "insufficient",
+    "evidence_types": [
+      "description",
+      "chapters"
+    ],
+    "confidence": "low",
+    "rationale_he": "התיאור מכיל קישורי ערוץ ודיסקליימר בלבד. הפרקים הכלליים Intro, Lean Angle ו־Other Tips אינם מספקים לבדם בסיס מפורט להתאמת קצב, מרווח, פקודות חלקות וזיהוי משטחים חלקים בכביש רטוב."
+  },
+  {
+    "local_id": "yt-pHIMXUVwomQ",
+    "decision": "supports",
+    "evidence_types": [
+      "description"
+    ],
+    "confidence": "high",
+    "rationale_he": "התיאור המפורט מכסה ראות וביגוד, נוחות וריכוז, בחירת נתיב, האטה בשלוליות, שמירת אחיזה והימנעות משינויים חדים במהירות, בלימה וגז. הוא תומך היטב בקטגוריית מזג אוויר רטוב ובנקודות המקומיות."
+  },
+  {
+    "local_id": "yt-eRkTxPlcFQw",
+    "decision": "insufficient",
+    "evidence_types": [
+      "description"
+    ],
+    "confidence": "low",
+    "rationale_he": "התיאור אומר שהיוצר משתף טיפים אישיים לרכיבה רטובה אך אינו מציג אף טיפ או עיקרון בפועל. לכן הוא מאשר נושא כללי בלבד ואינו תומך בתקציר ובנקודות הלמידה המפורטות."
+  },
+  {
+    "local_id": "yt-2XsUcFxuUQY",
+    "decision": "supports",
+    "evidence_types": [
+      "description",
+      "chapters"
+    ],
+    "confidence": "medium",
+    "rationale_he": "התיאור עוסק במפורש בסכנות ובטיפים לרכיבת לילה, והפרקים מכסים סכנות, טיפים, קסדה ופנסים. זהו בסיס ממשי לסיווג אסטרטגיית כביש ולתקציר, אך מהירות לפי טווח אור, סנוור ועייפות אינם מפורטים במטא־דאטה ולכן הביטחון בנקודות הספציפיות בינוני."
+  },
+  {
+    "local_id": "yt-rfhCyasgiiY",
+    "decision": "insufficient",
+    "evidence_types": [
+      "description"
+    ],
+    "confidence": "low",
+    "rationale_he": "התיאור הארוך מוקדש למועדון, קורסים, שותפים, קישורי מסחר והצהרה משפטית. אין בו מידע על רכיבת לילה, ראות, סנוור או עייפות, ולכן אין בסיס שאינו הכותרת לסיווג המקומי."
+  }
+]
