@@ -1062,16 +1062,31 @@ def run_validation(
     files = {name: root / path.relative_to(ROOT) for name, path in DATA_FILES.items()}
     loaded = {name: load_json(path, audit, str(path.relative_to(root)).replace("\\", "/")) for name, path in files.items()}
     taxonomy_allowed = validate_taxonomy(audit, loaded["taxonomy"])
-    all_videos = (loaded["videos"] or []) + (loaded["shorts"] or []) if isinstance(loaded["videos"], list) and isinstance(loaded["shorts"], list) else loaded["videos"]
+    long_videos = loaded["videos"] if isinstance(loaded["videos"], list) else []
+    short_videos = loaded["shorts"] if isinstance(loaded["shorts"], list) else []
+    all_videos = long_videos + short_videos
     validate_domain_category_map(audit, loaded["taxonomy"], all_videos, taxonomy_allowed)
     validate_video_schema(audit, loaded["video_schema"], all_videos)
     internal_ids = validate_videos(
         audit,
         all_videos,
         taxonomy_allowed,
-        expected_count=expected_count,
-        minimum_count=minimum_count,
     )
+    audit.check(bool(long_videos), "videos.nonempty", "videos.json must contain at least one video", path="data/videos.json")
+    if expected_count is not None:
+        audit.check(
+            len(long_videos) == expected_count,
+            "videos.expected_count",
+            f"Expected exactly {expected_count} videos; found {len(long_videos)}",
+            path="data/videos.json",
+        )
+    elif minimum_count is not None:
+        audit.check(
+            len(long_videos) >= minimum_count,
+            "videos.minimum_count",
+            f"Expected at least {minimum_count} videos; found {len(long_videos)}",
+            path="data/videos.json",
+        )
     validate_learning_paths(audit, loaded["learning_paths"], internal_ids, taxonomy_allowed["skill_levels"], taxonomy_allowed["risk_levels"])
     learning_path_ids = {
         item.get("id")
@@ -1088,8 +1103,8 @@ def run_validation(
             if match:
                 placeholder_hits.append({"path": value_path, "match": match.group(0)})
     audit.check(not placeholder_hits, "content.placeholder", "Placeholder-like content was found", path="data", details=placeholder_hits or None)
-    videos = all_videos if isinstance(all_videos, list) else []
-    actual_count = len(videos) if isinstance(all_videos, list) else None
+    videos = long_videos
+    actual_count = len(videos) if isinstance(loaded["videos"], list) else None
     audit.count_expectation = describe_count_expectation(
         expected_count=expected_count,
         minimum_count=minimum_count,
@@ -1100,6 +1115,10 @@ def run_validation(
             "videos": len(videos),
             "unique_internal_ids": len({item.get("id") for item in videos if isinstance(item, dict)}),
             "unique_youtube_video_ids": len({item.get("youtube_video_id") for item in videos if isinstance(item, dict)}),
+            "shorts": len(short_videos),
+            "catalogue_total": len(all_videos),
+            "catalogue_unique_internal_ids": len({item.get("id") for item in all_videos if isinstance(item, dict)}),
+            "catalogue_unique_youtube_video_ids": len({item.get("youtube_video_id") for item in all_videos if isinstance(item, dict)}),
             "taxonomy_categories": len(taxonomy_allowed["categories"]),
             "taxonomy_tags": len(taxonomy_allowed["controlled_tags"]),
         }

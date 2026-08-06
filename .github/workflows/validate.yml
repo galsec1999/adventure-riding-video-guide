@@ -36,7 +36,7 @@ jobs:
 
       - name: Validate canonical data and publication mirror
         run: |
-          python tools/validate_data.py --expected-count 1217
+          python tools/validate_data.py --expected-count 411
           python tools/verify_site_sync.py
 
       - name: Validate 411 full videos, 806 Shorts, semantic index, standalone, manifest, icons and subpath safety
